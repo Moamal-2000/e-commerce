@@ -1,0 +1,13 @@
+@mixin center-x-y {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  -ms-#{$property}: $value;
+  $property: $value;
+}

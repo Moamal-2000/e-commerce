@@ -6,12 +6,16 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "router-dom": "^2.2.11",
+    "sass": "^1.64.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "update": "npx npm-check-updates -u",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
