@@ -5,13 +5,14 @@
 }
 
 .nav ul {
-
+  display: flex;
+  align-items: center;
 }
 
 .nav ul li {
 
   &:not(:last-child) {
-    margin-left: 30px;
+    margin-right: 30px;
   }
 }
 

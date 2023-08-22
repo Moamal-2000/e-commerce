@@ -1,7 +1,14 @@
 @import "../../Sass/mixins";
 
 .header {
-  
+  padding: 10px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 

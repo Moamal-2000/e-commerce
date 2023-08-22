@@ -1,3 +1,4 @@
+import { Route, Routes } from "react-router-dom";
 import FirstHeader from "./Components/Header.js/FirstHeader";
 import Header from "./Components/Header.js/Header";
 import { GlobalContext } from "./Context/GlobalContext";
@@ -12,10 +13,10 @@ function App() {
         <Header />
 
         {/* <Routes>
-          <Route path="" to={<} />
-          <Route path="" to={<} />
-          <Route path="" to={<} />
-          <Route path="" to={<} />
+          <Route path="" to={<Home />} />
+          <Route path="" to={<Contact />} />
+          <Route path="" to={<About />} />
+          <Route path="" to={<SignUp} />
         </Routes> */}
       </GlobalContext.Provider>
     </div>
