@@ -1,0 +1,20 @@
+@import "../../Sass/mixins";
+
+.nav {
+
+}
+
+.nav ul {
+
+}
+
+.nav ul li {
+
+  &:not(:last-child) {
+    margin-left: 30px;
+  }
+}
+
+.nav ul li a {
+
+}
