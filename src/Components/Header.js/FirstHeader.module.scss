@@ -1,0 +1,81 @@
+@import "../../Sass/mixins";
+
+.header {
+  background-color: var(--black);
+  padding: 20px 0;
+  color: white;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  // grid-template-columns: 250px 1fr;
+  grid-template-columns: 20.5% 1fr;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.discount {
+  color: var(--secondary-white);
+
+  a {
+    color: var(--secondary-white);
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 4px;
+    font-weight: bold;
+  }
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+
+.languageSelector .currentOption {
+
+}
+
+.languageSelector>i {
+  margin-left: 8px;
+}
+
+.languageSelector .options {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: red;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.languageSelector .options .option {
+
+}
+
+
+
+
+:root {
+  --black: #000;
+  --primary: #363738;
+  --brown: #504242;
+  --dark-gray: #4C5355;
+  --light-gray: #7D8184;
+  --very-light-gray: #EDEDED;
+  --secondary-white: #FAFAFA;
+  --white: #fff;
+  --red: #DB4444;
+  --tomato: #DB4444;
+  --rose: #E07575;
+  --green: #00FF66;
+  --turquoise: #4AC2E8;
+  --light-blue: #A0BCE0;
+}

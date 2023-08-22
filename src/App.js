@@ -1,3 +1,4 @@
+import FirstHeader from "./Components/Header.js/FirstHeader";
 import Header from "./Components/Header.js/Header";
 import { GlobalContext } from "./Context/GlobalContext";
 
@@ -7,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <GlobalContext.Provider value={globalContextData}>
+        <FirstHeader />
         <Header />
 
         {/* <Routes>
