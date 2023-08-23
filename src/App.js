@@ -2,9 +2,19 @@ import { Route, Routes } from "react-router-dom";
 import FirstHeader from "./Components/Header.js/FirstHeader";
 import Header from "./Components/Header.js/Header";
 import { GlobalContext } from "./Context/GlobalContext";
+import { useState } from "react";
 
 function App() {
-  const globalContextData = {};
+  const [addedProducts, setAddedProducts] = useState(0)
+  const [addedFavorites, setAddedFavorites] = useState(0)
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
+
+  const globalContextData = {
+    addedProducts, setAddedProducts,
+    addedFavorites, setAddedFavorites,
+    isMobileMenuActive, setIsMobileMenuActive,
+    userName: "Lily Watson",
+  };
 
   return (
     <div className="App">

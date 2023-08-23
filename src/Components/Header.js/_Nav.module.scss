@@ -1,7 +1,7 @@
 @import "../../Sass/mixins";
 
 .nav {
-
+  user-select: none;
 }
 
 .nav ul {
@@ -17,9 +17,30 @@
 }
 
 .nav ul li a {
-
+  position: relative;
+  padding: 2px 0;
+  color: var(--black);
 }
 
+.nav ul li a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black);
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.nav ul li a.active::before {
+  opacity: .5;
+}
+
+.nav ul li a:hover::before {
+  opacity: 1;
+}
 
 
 :root {

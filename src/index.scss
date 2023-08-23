@@ -14,6 +14,7 @@ html {
 
 :root {
   --black: #000;
+  --very-dark-gray: #252525;
   --primary: #363738;
   --brown: #504242;
   --dark-gray: #4C5355;
@@ -57,4 +58,9 @@ li {
 
 a {
   text-decoration: none;
+}
+
+i {
+  user-select: none;
+  cursor: pointer;
 }

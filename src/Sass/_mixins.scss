@@ -11,3 +11,27 @@
   -ms-#{$property}: $value;
   $property: $value;
 }
+
+@mixin large {
+  @media (max-width: 1200px) {
+    @content
+  }
+};
+
+@mixin medium {
+  @media (max-width: 992px) {
+    @content
+  }
+};
+
+@mixin small {
+  @media (max-width: 768px) {
+    @content
+  }
+};
+
+@mixin very-small {
+  @media (max-width: 376px) {
+    @content
+  }
+}

@@ -1,5 +1,49 @@
 @import "../../Sass/mixins";
 
+.mobileMenu {
+  background-color: var(--very-dark-gray);
+  position: fixed;
+  right: -110%;
+  top: 0;
+  height: calc(100vh - (100vh - 100%));
+  padding: 50px 20px;
+  transition: right .6s;
+
+  &.active {
+    right: 0;
+  }
+}
+
+.userInfo {
+
+}
+
+.userInfo .img {
+  --size: 70px;
+  min-width: var(--size);
+  min-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 14px;
+
+  & img {
+    border-radius: inherit;
+  }
+}
+
+
+.userInfo p {
+  color: var(--secondary-white);
+  margin: 20px 0;
+}
+
+.userInfo p .userName {
+  display: block;
+  color: var(--white);
+  margin-top: 4px;
+  font-weight: bold;
+}
+
 .nav {
 
 }
@@ -17,4 +61,25 @@
 
 .nav ul li a {
 
+}
+
+
+
+
+:root {
+  --black: #000;
+  --very-dark-gray: #252525;
+  --primary: #363738;
+  --brown: #504242;
+  --dark-gray: #4C5355;
+  --light-gray: #7D8184;
+  --very-light-gray: #EDEDED;
+  --secondary-white: #FAFAFA;
+  --white: #fff;
+  --red: #DB4444;
+  --tomato: #DB4444;
+  --rose: #E07575;
+  --green: #00FF66;
+  --turquoise: #4AC2E8;
+  --light-blue: #A0BCE0;
 }

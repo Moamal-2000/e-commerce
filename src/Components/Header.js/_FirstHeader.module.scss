@@ -2,22 +2,39 @@
 
 .header {
   background-color: var(--black);
-  padding: 20px 0;
+  padding: 16px 0;
   color: white;
 }
 
 .container {
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
   display: grid;
-  // grid-template-columns: 250px 1fr;
-  grid-template-columns: 20.5% 1fr;
+  grid-template-columns: 26% 1fr;
+}
+
+@include large {
+  .container {
+  grid-template-columns: 10% 1fr;
+  }
+}
+
+@include medium {
+  .container {
+    grid-template-columns: 0 1fr;
+  }
 }
 
 .headerContent {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+@include small {
+  .headerContent {
+    justify-content: flex-end;
+  }
 }
 
 .discount {
@@ -29,6 +46,24 @@
     display: inline-block;
     margin-left: 4px;
     font-weight: bold;
+    user-select: none;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+@include medium {
+  .discount {
+    font-size: .9rem;
+  }
+}
+
+@include small {
+  .discount {
+    display: none;
   }
 }
 
@@ -45,7 +80,7 @@
 }
 
 .languageSelector>i {
-  margin-left: 8px;
+  font-size: .6rem;
 }
 
 .languageSelector .options {
@@ -53,6 +88,7 @@
   left: -11px;
   top: 26px;
   background-color: var(--black);
+  z-index: 10;
   opacity: 0;
   pointer-events: none;
 
@@ -65,7 +101,12 @@
 .languageSelector .options .option {
   cursor: pointer;
   padding: 10px;
-  padding-right: 20px;
+  padding-right: 30px;
+  transition: color .2s;
+
+  &:hover {
+    color: var(--very-light-gray);
+  }
 }
 
 
