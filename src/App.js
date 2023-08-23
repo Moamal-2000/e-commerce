@@ -1,24 +1,31 @@
-import { Route, Routes } from "react-router-dom";
+import { useState } from "react";
 import FirstHeader from "./Components/Header.js/FirstHeader";
 import Header from "./Components/Header.js/Header";
+import GlobalOverlay from "./Components/Shared/GlobalOverlay";
 import { GlobalContext } from "./Context/GlobalContext";
-import { useState } from "react";
 
 function App() {
-  const [addedProducts, setAddedProducts] = useState(0)
-  const [addedFavorites, setAddedFavorites] = useState(0)
-  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false)
+  const [addedProducts, setAddedProducts] = useState(0);
+  const [addedFavorites, setAddedFavorites] = useState(0);
+  const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+  const [isOverlayActive, setIsOverlayActive] = useState(false);
 
   const globalContextData = {
-    addedProducts, setAddedProducts,
-    addedFavorites, setAddedFavorites,
-    isMobileMenuActive, setIsMobileMenuActive,
+    addedProducts,
+    setAddedProducts,
+    addedFavorites,
+    setAddedFavorites,
+    isMobileMenuActive,
+    setIsMobileMenuActive,
+    isOverlayActive,
+    setIsOverlayActive,
     userName: "Lily Watson",
   };
 
   return (
-    <div className="App">
-      <GlobalContext.Provider value={globalContextData}>
+    <GlobalContext.Provider value={globalContextData}>
+      <GlobalOverlay />
+      <div className="App">
         <FirstHeader />
         <Header />
 
@@ -28,8 +35,8 @@ function App() {
           <Route path="" to={<About />} />
           <Route path="" to={<SignUp} />
         </Routes> */}
-      </GlobalContext.Provider>
-    </div>
+      </div>
+    </GlobalContext.Provider>
   );
 }
 

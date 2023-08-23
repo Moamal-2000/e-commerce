@@ -2,7 +2,7 @@ import { useGlobalContext } from "../../Context/GlobalContext";
 import styles from "./_MobileNav.module.scss";
 
 const MobileNav = () => {
-  const { userName, isMobileMenuActive, setIsMobileMenuActive } = useGlobalContext();
+  const { userName, isMobileMenuActive } = useGlobalContext();
 
 
   return (
@@ -21,37 +21,37 @@ const MobileNav = () => {
         <ul>
           <li>
             <a href="/#">
-              <i class="fa-regular fa-user"></i>
+              <i className="fa-regular fa-user"></i>
               Profile
             </a>
           </li>
           <li>
             <a href="/#" className={styles.active}>
-              <i class="bi bi-house"></i>
+              <i className="bi bi-house"></i>
               Home Page
             </a>
           </li>
           <li>
             <a href="/#">
-              <i class="fa-regular fa-file-lines"></i>
+              <i className="fa-regular fa-file-lines"></i>
               About
             </a>
           </li>
           <li>
             <a href="/#">
-              <i class="bi bi-bag"></i>
+              <i className="bi bi-bag"></i>
               My Cart
             </a>
           </li>
           <li>
             <a href="/#">
-              <i class="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-heart"></i>
               Favorite
             </a>
           </li>
           <li>
             <a href="/#">
-              <i class="bi bi-bell"></i>
+              <i className="bi bi-bell"></i>
               Notifications
             </a>
           </li>
@@ -61,7 +61,7 @@ const MobileNav = () => {
       <div className={styles.line}></div>
 
       <button className={styles.signOutButton} type="button">
-        <i class="bi bi-box-arrow-right"></i>
+        <i className="bi bi-box-arrow-right"></i>
         Sign Out
       </button>
     </div>

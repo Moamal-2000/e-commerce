@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useGlobalContext } from "../../Context/GlobalContext";
 import NavTools from "../Shared/NavTools";
 import MobileNav from "./MobileNav";
@@ -6,23 +5,17 @@ import Nav from "./Nav";
 import styles from "./_Header.module.scss";
 
 const Header = () => {
-  const { isMobileMenuActive, setIsMobileMenuActive } = useGlobalContext();
+  const { setIsMobileMenuActive, setIsOverlayActive } =
+    useGlobalContext();
 
-  function handleResizeWindow() {
-    if (window.innerWidth > 768 && !isMobileMenuActive) {
-      setIsMobileMenuActive(true)
-    } else {
-      setIsMobileMenuActive(true)
-    }
-  }
+
 
   function openMobileNav() {
-    setIsMobileMenuActive(true)
+    setIsMobileMenuActive(true);
+    setIsOverlayActive(true);
   }
 
-  useEffect(() => {
-    window.addEventListener("resize", () => handleResizeWindow());
-  }, []);
+
 
   return (
     <header className={styles.header}>
@@ -33,17 +26,18 @@ const Header = () => {
           </h1>
         </div>
 
-        {window.innerWidth > 768 ? (
-          <div className={styles.headerContent}>
-            <Nav />
-            <NavTools showUser={false} />
-          </div>
-        ) : (
-          <>
-          <i className="bi bi-list" onClick={() => openMobileNav()}></i>
+        <div className={styles.headerContent}>
+          <Nav />
+          <NavTools showUser={false} />
+        </div>
+
+        <div className={styles.mobileNav}>
+          <i
+            className={`bi bi-list ${styles.openMobileMenu}`}
+            onClick={() => openMobileNav()}
+          ></i>
           <MobileNav />
-          </>
-        )}
+        </div>
       </div>
     </header>
   );

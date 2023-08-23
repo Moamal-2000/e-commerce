@@ -2,20 +2,27 @@
 
 .mobileMenu {
   background-color: var(--very-dark-gray);
+  filter: contrast(1);
+  -webkit-filter: contrast(1.25);
   position: fixed;
-  right: -110%;
+  right: -300%;
   top: 0;
   height: calc(100vh - (100vh - 100%));
-  padding: 50px 20px;
-  transition: right .6s;
+  padding: 40px 20px;
+  padding-right: 140px;
+  z-index: 1001;
+  transition: right .5s;
 
   &.active {
+    transition: right .8s;
     right: 0;
   }
 }
 
-.userInfo {
-
+@include small {
+  .mobileMenu {
+    padding-right: 100px;
+  }
 }
 
 .userInfo .img {
@@ -33,8 +40,8 @@
 
 
 .userInfo p {
-  color: var(--secondary-white);
-  margin: 20px 0;
+  color: var(--medium-light-gray);
+  margin: 20px 0 50px;
 }
 
 .userInfo p .userName {
@@ -45,41 +52,48 @@
 }
 
 .nav {
-
-}
-
-.nav ul {
-
+  position: relative;
+  left: -10px;
 }
 
 .nav ul li {
 
   &:not(:last-child) {
-    margin-left: 30px;
+    margin-top: 14px;
   }
 }
 
-.nav ul li a {
+.nav ul li a,
+.signOutButton {
+  all: unset;
+  color: #cbcbcb;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &.active,
+  &:hover {
+    background-color: rgba(87, 87, 87, .5);
+  }
 
 }
 
+.nav ul li a i {
+  font-size: 1.3rem;
+  padding-right: 20px;
+}
 
+.line {
+  margin: 40px 0;
+  width: 130px;
+  height: 2px;
+  background-color: #939393;
+}
 
-
-:root {
-  --black: #000;
-  --very-dark-gray: #252525;
-  --primary: #363738;
-  --brown: #504242;
-  --dark-gray: #4C5355;
-  --light-gray: #7D8184;
-  --very-light-gray: #EDEDED;
-  --secondary-white: #FAFAFA;
-  --white: #fff;
-  --red: #DB4444;
-  --tomato: #DB4444;
-  --rose: #E07575;
-  --green: #00FF66;
-  --turquoise: #4AC2E8;
-  --light-blue: #A0BCE0;
+.signOutButton i {
+  margin-right: 20px;
+  font-size: 1.5rem;
 }
