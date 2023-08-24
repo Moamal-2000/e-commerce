@@ -31,11 +31,17 @@
 .line {
   width: 1px;
   height: 404px;
-  margin: 0 30px 0 20px;
+  margin: 0 40px 0 30px;
   background-color: var(--medium-light-gray);
   position: relative;
   top: -60px;
   user-select: none;
+}
+
+@include large {
+  .line {
+    display: none;
+  }
 }
 
 

@@ -1,4 +1,4 @@
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
+import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { introductionSliderData } from "../../Data/staticData";
 import styles from "./MainSlider.module.scss";
@@ -12,7 +12,13 @@ function MainSlider() {
   return (
     <Swiper
       className={styles.mainSlider}
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+      loop={true}
+      autoplay={{
+        delay: 6000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      }}
       spaceBetween={0}
       slidesPerView={1}
       pagination={{ clickable: true }}
