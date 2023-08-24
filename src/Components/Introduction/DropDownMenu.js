@@ -5,17 +5,19 @@ const DropDownMenu = ({ nameMenu, children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function handleToggleMenu() {
-    setIsMenuOpen(prevState => !prevState)
+    setIsMenuOpen((prevState) => !prevState);
   }
 
   return (
     <div className={styles.dropDownMenu} onClick={() => handleToggleMenu()}>
-      <span>{nameMenu}</span>
-      <i
-        className={`fa-solid fa-chevron-right ${
-          isMenuOpen ? styles.active : ""
-        }`}
-      ></i>
+      <div className={styles.nameMenu}>
+        <span>{nameMenu}</span>
+        <i
+          className={`fa-solid fa-chevron-right ${
+            isMenuOpen ? styles.active : ""
+          }`}
+        ></i>
+      </div>
       <div className={`${styles.menu} ${isMenuOpen ? styles.active : ""}`}>
         {children}
       </div>
