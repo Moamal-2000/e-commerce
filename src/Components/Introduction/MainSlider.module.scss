@@ -23,9 +23,9 @@
   }
 }
 
-.mainSlider .slide {
+.slide {
   background-color: var(--black);
-  display: flex;
+  display: flex !important;
   justify-content: flex-end;
   padding: 20px 50px;
   position: relative;
