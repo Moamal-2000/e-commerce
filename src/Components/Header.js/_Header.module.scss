@@ -3,11 +3,17 @@
 .header {
   padding: 10px 14px 14px 14px;
   margin-top: 30px;
-  border-bottom: 1px var(--black) solid;
+  border-bottom: 1px var(--medium-light-gray) solid;
+}
+
+@include small {
+  .header {
+    padding: 10px 0 14px 0;
+  }
 }
 
 .container {
-  width: 87%;
+  width: calc(var(--container-width) + 2%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 26% 1fr;
@@ -30,6 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: var(--container-mobile-width);
   }
 }
 

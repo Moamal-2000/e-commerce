@@ -7,10 +7,16 @@
 }
 
 .container {
-  width: 85%;
+  width: var(--container-width);
   margin: 0 auto;
   display: grid;
   grid-template-columns: 26% 1fr;
+}
+
+@include small {
+  .container {
+    width: var(--container-mobile-width);
+  }
 }
 
 @include large {

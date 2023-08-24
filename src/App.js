@@ -1,8 +1,9 @@
 import { useState } from "react";
 import FirstHeader from "./Components/Header.js/FirstHeader";
-import Header from "./Components/Header.js/Header";
 import GlobalOverlay from "./Components/Shared/GlobalOverlay";
 import { GlobalContext } from "./Context/GlobalContext";
+import Home from "./Components/Home/Home";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [addedProducts, setAddedProducts] = useState(0);
@@ -24,17 +25,16 @@ function App() {
 
   return (
     <GlobalContext.Provider value={globalContextData}>
-      <GlobalOverlay />
       <div className="App">
+      <GlobalOverlay />
         <FirstHeader />
-        <Header />
 
-        {/* <Routes>
-          <Route path="" to={<Home />} />
-          <Route path="" to={<Contact />} />
-          <Route path="" to={<About />} />
-          <Route path="" to={<SignUp} />
-        </Routes> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route path="" element={<Contact />} />
+          <Route path="" element={<About />} />
+          <Route path="" element={<SignUp />} /> */}
+        </Routes>
       </div>
     </GlobalContext.Provider>
   );
