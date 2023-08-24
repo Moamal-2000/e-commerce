@@ -1,0 +1,59 @@
+@import "../../Sass/mixins";
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+@include small {
+  .container {
+    width: var(--container-mobile-width);
+  }
+}
+
+.introductionContainer {
+  display: flex;
+  margin-top: 60px;
+}
+
+@include very-small {
+  .introductionContainer {
+    margin-top: 30px;
+  }
+}
+
+@include large {
+  .introductionContainer {
+    flex-direction: column-reverse;
+  }
+}
+
+.line {
+  width: 1px;
+  height: 404px;
+  margin: 0 30px 0 20px;
+  background-color: var(--medium-light-gray);
+  position: relative;
+  top: -60px;
+  user-select: none;
+}
+
+
+:root {
+  --black: #000;
+  --very-dark-gray: #252525;
+  --primary: #363738;
+  --brown: #504242;
+  --dark-gray: #4C5355;
+  --light-gray: #7D8184;
+  --medium-light-gray: #cbcbcb;
+  --very-light-gray: #EDEDED;
+  --secondary-white: #FAFAFA;
+  --white: #fff;
+  --red: #DB4444;
+  --tomato: #DB4444;
+  --rose: #E07575;
+  --green: #00FF66;
+  --turquoise: #4AC2E8;
+  --light-blue: #A0BCE0;
+}
