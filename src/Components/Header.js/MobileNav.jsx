@@ -1,15 +1,20 @@
-import { useGlobalContext } from "../../Context/GlobalContext";
+import { useSelector } from "react-redux";
+import { userImg } from "../../assets/images/Images";
 import styles from "./_MobileNav.module.scss";
 
 const MobileNav = () => {
-  const { userName, isMobileMenuActive } = useGlobalContext();
-
+  const { userName } = useSelector((state) => state.user);
+  const { isMobileMenuActive } = useSelector((state) => state.global);
 
   return (
-    <div className={`${styles.mobileMenu} ${isMobileMenuActive ? styles.active : ""}`}>
+    <div
+      className={`${styles.mobileMenu} ${
+        isMobileMenuActive ? styles.active : ""
+      }`}
+    >
       <div className={styles.userInfo}>
         <div className={styles.img}>
-          <img src={require("../../assets/images/user-image.webp")} alt="" />
+          <img src={userImg} alt="" />
         </div>
 
         <p>

@@ -1,4 +1,4 @@
-import { useGlobalContext } from "../../Context/GlobalContext";
+import { useSelector } from "react-redux";
 import styles from "./_NavTools.module.scss";
 
 const NavTools = ({
@@ -7,7 +7,7 @@ const NavTools = ({
   showUser = true,
   activeUser = false,
 }) => {
-  const { addedProducts, addedFavorites } = useGlobalContext();
+  const { addedProducts, addedFavorites } = useSelector(state => state.products)
 
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
