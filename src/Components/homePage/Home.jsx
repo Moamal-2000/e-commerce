@@ -1,7 +1,8 @@
 import Header from "../Header.js/Header";
-import MainSlider from "../Introduction/MainSlider";
-import SectionsProducts from "../Introduction/SectionsProducts";
 import styles from "./Home.module.scss";
+import MainSlider from "./Introduction/MainSlider";
+import SectionsProducts from "./Introduction/SectionsProducts";
+import ProductsSections from "./ProductsSections/ProductsSections";
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
 
           <MainSlider />
         </div>
+
+        <ProductsSections />
       </div>
     </div>
   );

@@ -1,37 +1,34 @@
-@import "../../Sass/mixins";
+@import "../../../Sass/mixins";
 
-.sectionsProducts {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
+.dropDownMenu {
+
 }
 
-.sectionsProducts>* {
-  color: var(--black);
-  cursor: pointer;
+.nameMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
+.dropDownMenu i {
+  font-size: .8rem;
+  transition: transform .3s;
+
+  &.active {
+    transform: rotate(90deg);
   }
 }
 
-.dropDownMenu li {
-  margin-top: 20px;
+.menu {
+  min-height: 0;
+  height: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  transition: .5s;
+
+  &.active {
+    min-height: 190px;
+  }
 }
-
-.dropDownMenu li a {
-  color: var(--black);
-}
-
-.dropDownMenu li a:not(:last-child) {
-  margin-top: 20px;
-}
-
-
-
 
 
 :root {

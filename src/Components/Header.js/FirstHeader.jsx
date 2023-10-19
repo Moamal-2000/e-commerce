@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./_FirstHeader.module.scss";
 
 const FirstHeader = () => {
@@ -6,16 +6,15 @@ const FirstHeader = () => {
   const optionsEleRef = useRef();
   const currentLangRef = useRef();
 
-  useEffect(() => {}, []);
-
   function handleLanguageMenu(e) {
     const target = e.target;
     const triggeredLanguage = target.textContent;
     const currentLangEle = currentLangRef.current;
-
-    if (isLangMenuActive) currentLangEle.textContent = triggeredLanguage;
+    const isNotSelectedLang = triggeredLanguage === ""
 
     setIsLangMenuActive((prevState) => !prevState);
+    if (isNotSelectedLang) return
+    if (isLangMenuActive) currentLangEle.textContent = triggeredLanguage;
   }
 
   return (

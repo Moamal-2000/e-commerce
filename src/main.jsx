@@ -7,11 +7,11 @@ import "./main.scss";
 import { store } from "./app/store.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  // </React.StrictMode>
     <Provider store={store}>
       <Router>
         <App />
       </Router>
     </Provider>
-  </React.StrictMode>
 );
