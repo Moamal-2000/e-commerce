@@ -1,12 +1,12 @@
 import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { introductionSliderData } from "../../Data/staticData";
 import styles from "./MainSlider.module.scss";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import { introductionSliderData } from "../../../Data/staticData";
 
 function MainSlider() {
   return (

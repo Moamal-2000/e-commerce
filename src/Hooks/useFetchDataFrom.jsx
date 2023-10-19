@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function useFetchDataFrom(url) {
+export default function useFetchDataFrom(options) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const res = await axios.get(url);
+        const res = await axios.request(options);
         setData(res.data);
       } catch (err) {
         console.log(err);
@@ -15,7 +15,7 @@ export default function useFetchDataFrom(url) {
     };
 
     getData();
-  }, [url]);
+  }, [options]);
 
-  return data;
+  return {data, setData};
 }
