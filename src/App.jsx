@@ -1,8 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import FirstHeader from "./Components/Header.js/FirstHeader";
 import GlobalOverlay from "./Components/Shared/GlobalOverlay";
-import ProductCard from "./Components/Shared/ProductsCards/ProductCard";
-import SectionTitle from "./Components/Shared/SectionTitle";
 import Home from "./Components/homePage/Home";
 import EventCounter from "./Components/homePage/ProductsSections/EventCounter";
 
@@ -31,7 +29,7 @@ function App() {
           <Route path="" element={<SignUp />} /> */}
       </Routes>
 
-      <EventCounter />
+      <EventCounter timeEvent="3 23 19 56" eventName="eventTimer" />
     </div>
   );
 }
