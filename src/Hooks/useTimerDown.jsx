@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import useLocalStorage from "./useLocalStorage";
 
+/* Props Example
+  timeEvent="3 24 60 60" Days-Hours-Minutes-Seconds
+  eventName="timerName" localStorage key name
+*/
+
 const useTimerDown = (downTime, { timeResetRequired, stopTimer, timerName }) => {
   if (!timerName) throw new Error("Timer name is invalid")
   if (timeResetRequired) localStorage.removeItem(timerName);
