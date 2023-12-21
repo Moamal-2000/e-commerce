@@ -1,4 +1,4 @@
-import { testImg } from "../../../assets/images/Images";
+import { redJoystick } from "../../../assets/images/Images";
 import RateStars from "../RateStars";
 import styles from "./ProductCard.module.scss";
 
@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className={styles.card}>
       <div className={styles.productImg}>
-        <img src={testImg} />
+        <img src={redJoystick} />
 
         <div className={styles.layerContent}>
           <div className={styles.discount}>-{discount}%</div>
