@@ -1,15 +1,18 @@
 import { testImg } from "../../../assets/images/Images";
-import { RateStars } from "../../../functions/globalFunctions";
+import RateStars from "../RateStars";
 import styles from "./ProductCard.module.scss";
 
-const ProductCard = ({ productData }) => {
+const ProductCard = ({ product }) => {
+  const { name, price, discount, afterDiscount, img, rate, votes, id } =
+    product;
+
   return (
     <div className={styles.card}>
       <div className={styles.productImg}>
         <img src={testImg} />
 
         <div className={styles.layerContent}>
-          <div className={styles.discount}>-40</div>
+          <div className={styles.discount}>-{discount}%</div>
 
           <div className={styles.icons}>
             <a href="#" className={styles.iconHolder}>
@@ -29,19 +32,19 @@ const ProductCard = ({ productData }) => {
 
       <section className={styles.productInfo}>
         <h3 className={styles.productName}>
-          <a href="#">HAVIT HV-G92 Gamepad</a>
+          <a href="#">{name}</a>
         </h3>
         <div className={styles.price}>
-          $120
-          <s className={styles.afterDiscount}>$150</s>
+          ${afterDiscount}
+          <s className={styles.afterDiscount}>${price}</s>
         </div>
 
         <div className={styles.rateContainer}>
           <div className={styles.stars}>
-            <RateStars rate={2} />
-          </div>
+            <RateStars rate={rate} />
+            </div>
 
-          <span className={styles.numOfVotes}>(88)</span>
+          <span className={styles.numOfVotes}>({votes})</span>
         </div>
       </section>
     </div>

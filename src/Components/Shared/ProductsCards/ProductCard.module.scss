@@ -6,7 +6,7 @@
   align-items: flex-start;
   gap: 16px;
   width: 270px;
-  margin: 50px auto;
+  min-width: 270px;
 }
 
 .productImg {
@@ -159,7 +159,8 @@
 }
 
 .productInfo .rateContainer .stars {
-  
+  display: flex;
+  align-items: center;
 }
 
 .productInfo .rateContainer .stars img {
