@@ -1,10 +1,10 @@
-import appleLogo from "./apple-logo.png"
-import canonLogo from "./canon-logo.png"
-import productImg1 from "./introduction-product1.jpg"
-import productImg2 from "./introduction-product2.jpg"
-// import productImg3 from "./introduction-product3.jpg"
+import appleLogo from "./apple-logo.webp"
+import canonLogo from "./canon-logo.webp"
+import productImg1 from "./introduction-product1.webp"
+import productImg2 from "./introduction-product2.webp"
+import productImg3 from "./introduction-product3.webp"
 import userImg from "./user-image.webp"
-import testImg from "./joystick.png"
+import redJoystick from "./red-joystick.webp"
 import coloredStar from "./colored-star.svg"
 import uncoloredStar from "./uncolored-star.svg"
 // import  from "."
@@ -14,9 +14,9 @@ export {
   canonLogo,
   productImg1,
   productImg2,
-  // productImg3,
+  productImg3,
   userImg,
-  testImg,
+  redJoystick,
   coloredStar,
   uncoloredStar
 }
