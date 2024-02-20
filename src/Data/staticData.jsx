@@ -5,7 +5,7 @@ import {
   productImg1,
   productImg2,
   productImg3,
-} from "../assets/images/Images";
+} from "../Assets/Images/Images";
 
 export const introductionSliderData = [
   {

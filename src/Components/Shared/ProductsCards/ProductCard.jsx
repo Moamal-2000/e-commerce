@@ -1,4 +1,4 @@
-import { redJoystick } from "../../../assets/images/Images";
+import { redJoystick } from "../../../Assets/Images/Images";
 import RateStars from "../RateStars";
 import styles from "./ProductCard.module.scss";
 

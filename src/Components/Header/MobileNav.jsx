@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { userImg } from "../../assets/images/Images";
+import { userImg } from "../../Assets/Images/Images";
 import styles from "./MobileNav.module.scss";
 
 const MobileNav = () => {

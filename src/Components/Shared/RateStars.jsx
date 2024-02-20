@@ -1,4 +1,4 @@
-import { coloredStar, uncoloredStar } from "../../assets/images/Images";
+import { coloredStar, uncoloredStar } from "../../Assets/Images/Images";
 import { isDecimalNumber } from "../../functions/helper";
 import styles from "./RateStars.module.scss";
 
