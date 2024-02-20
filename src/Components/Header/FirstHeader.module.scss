@@ -1,0 +1,136 @@
+@import "../../Styles/mixins";
+
+.header {
+  background-color: var(--black);
+  padding: 16px 0;
+  color: white;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 26% 1fr;
+}
+
+@include small {
+  .container {
+    width: var(--container-mobile-width);
+  }
+}
+
+@include large {
+  .container {
+  grid-template-columns: 10% 1fr;
+  }
+}
+
+@include medium {
+  .container {
+    grid-template-columns: 0 1fr;
+  }
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@include small {
+  .headerContent {
+    justify-content: flex-end;
+  }
+}
+
+.discount {
+  color: var(--secondary-white);
+
+  a {
+    color: var(--secondary-white);
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 4px;
+    font-weight: bold;
+    user-select: none;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+@include medium {
+  .discount {
+    font-size: .9rem;
+  }
+}
+
+@include small {
+  .discount {
+    display: none;
+  }
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.languageSelector .currentOption {
+  min-width: 63px;
+}
+
+.languageSelector>i {
+  font-size: .6rem;
+}
+
+.languageSelector .options {
+  position: absolute;
+  left: -11px;
+  top: 26px;
+  background-color: var(--black);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.languageSelector .options .option {
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 30px;
+  transition: color .2s;
+
+  &:hover {
+    color: var(--very-light-gray);
+  }
+}
+
+
+
+
+:root {
+  --black: #000;
+  --primary: #363738;
+  --brown: #504242;
+  --dark-gray: #4C5355;
+  --light-gray: #7D8184;
+  --very-light-gray: #EDEDED;
+  --secondary-white: #FAFAFA;
+  --white: #fff;
+  --red: #DB4444;
+  --tomato: #DB4444;
+  --rose: #E07575;
+  --green: #00FF66;
+  --turquoise: #4AC2E8;
+  --light-blue: #A0BCE0;
+}

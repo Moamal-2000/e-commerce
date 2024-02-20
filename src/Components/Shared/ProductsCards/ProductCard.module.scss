@@ -1,0 +1,200 @@
+@import "../../../Styles/mixins";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  width: 270px;
+  min-width: 270px;
+}
+
+.productImg {
+  border-radius: 4px;
+  background: #F5F5F5;
+  width: 100%;
+  height: 250px;
+  @include center-x-y;
+  position: relative;
+}
+
+.productImg>img {
+  width: 172px;
+  height: 152px;
+  object-fit: contain;
+}
+
+.layerContent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.layerContent .discount {
+  background: var(--tomato);
+  color: var(--secondary-white);
+  width: fit-content;
+  padding: 4px 12px;
+  @include center-x-y;
+  gap: 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  font-size: .75rem;
+  font-weight: 400;
+  user-select: none;
+}
+
+.layerContent .icons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform .4s .1s;
+  transform: translateX(50px);
+}
+
+.card:hover .icons {
+  transform: translateX(0);
+}
+
+.layerContent .icons .iconHolder {
+  width: 34px;
+  height: 34px;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 50%;
+  @include center-x-y;
+  cursor: pointer;
+}
+
+.layerContent .icons .iconHolder i {
+  font-size: .9rem;
+  transition: color .2s;
+}
+
+.layerContent .icons .iconHolder:first-child:hover i {
+  color: var(--tomato);
+}
+
+.layerContent .icons .iconHolder:last-child:hover i {
+  color: var(--turquoise);
+}
+
+.layerContent .addToCartBtn {
+  border: none;
+  outline: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0 0 4px 4px;
+  background: var(--black);
+  color: var(--white);
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  transition: background .2s, transform .4s .1s;
+  transform: translateY(50px);
+
+  &:hover {
+    background: var(--turquoise);
+  }
+}
+
+.card:hover .addToCartBtn {
+  transform: translateY(0);
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productInfo .productName a {
+  color: var(--black);
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color .2s;
+
+  &:hover {
+    color: var(--brown);
+  }
+}
+
+.productInfo .price {
+  color: var(--tomato);
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.productInfo .price .afterDiscount {
+  margin-left: 16px;
+  color: var(--black);
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration-line: strikethrough;
+  opacity: .5;
+}
+
+.productInfo .rateContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.productInfo .rateContainer .stars {
+  display: flex;
+  align-items: center;
+}
+
+.productInfo .rateContainer .stars img {
+  width: 20px;
+  height: 20px;
+}
+
+.productInfo .rateContainer .numOfVotes {
+  color: var(--black);
+  font-family: "Poppins";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 21px;
+  opacity: .5;
+}
+
+
+
+:root {
+  --black: #000;
+  --very-dark-gray: #252525;
+  --primary: #363738;
+  --brown: #504242;
+  --dark-gray: #4C5355;
+  --light-gray: #7D8184;
+  --medium-light-gray: #cbcbcb;
+  --very-light-gray: #EDEDED;
+  --secondary-white: #FAFAFA;
+  --white: #fff;
+  --tomato: #DB4444;
+  --rose: #E07575;
+  --green: #00FF66;
+  --turquoise: #4AC2E8;
+  --light-blue: #A0BCE0;
+  --container-width: 85%;
+  --container-mobile-width: 94%;
+}

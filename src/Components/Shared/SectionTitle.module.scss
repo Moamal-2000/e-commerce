@@ -1,0 +1,31 @@
+@import "../../Styles/mixins";
+
+.sectionTitle .event {
+  color: var(--tomato);
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 36px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.sectionTitle .event::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  background: var(--tomato);
+  border-radius: 4px;
+}
+
+.sectionTitle h3 {
+  color: var(--black);
+  font-family: "Inter";
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+}
