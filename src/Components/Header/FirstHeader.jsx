@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import styles from "./_FirstHeader.module.scss";
+import styles from "./FirstHeader.module.scss";
 
 const FirstHeader = () => {
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);

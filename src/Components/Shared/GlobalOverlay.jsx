@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import styles from "./_GlobalOverlay.module.scss";
+import styles from "./GlobalOverlay.module.scss";
 import { toggleMobileMenu, toggleOverlay } from "../../features/globalSlice";
 
 const GlobalOverlay = () => {

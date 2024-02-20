@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import NavTools from "../Shared/NavTools";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
-import styles from "./_Header.module.scss";
+import styles from "./Header.module.scss";
 import { toggleMobileMenu, toggleOverlay } from "../../features/globalSlice";
 
 const Header = () => {

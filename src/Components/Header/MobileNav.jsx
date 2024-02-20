@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { userImg } from "../../assets/images/Images";
-import styles from "./_MobileNav.module.scss";
+import styles from "./MobileNav.module.scss";
 
 const MobileNav = () => {
   const { userName } = useSelector((state) => state.user);

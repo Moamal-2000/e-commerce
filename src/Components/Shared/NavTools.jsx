@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import styles from "./_NavTools.module.scss";
+import styles from "./NavTools.module.scss";
 
 const NavTools = ({
   showHeart = true,
