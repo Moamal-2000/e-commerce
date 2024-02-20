@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import NavTools from "../Shared/NavTools";
+import NavTools from "../Shared/MidComponents/NavTools";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 import styles from "./Header.module.scss";
@@ -8,14 +8,10 @@ import { toggleMobileMenu, toggleOverlay } from "../../Features/globalSlice";
 const Header = () => {
   const dispatch = useDispatch()
 
-
-
   function openMobileNav() {
     dispatch(toggleMobileMenu(true))
     dispatch(toggleOverlay(true))
   }
-
-
 
   return (
     <header className={styles.header}>

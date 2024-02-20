@@ -1,5 +1,5 @@
 import { redJoystick } from "../../../Assets/Images/Images";
-import RateStars from "../RateStars";
+import RateStars from "../MidComponents/RateStars";
 import styles from "./ProductCard.module.scss";
 
 const ProductCard = ({ product }) => {

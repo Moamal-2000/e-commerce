@@ -1,4 +1,4 @@
-import SectionTitle from "../../Shared/SectionTitle";
+import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import EventCounter from "./EventCounter";
 import ProductsSlider from "./ProductsSlider";
 import styles from "./TodaySection.module.scss"

@@ -5,7 +5,7 @@ import {
   createRoutesFromChildren,
 } from "react-router-dom";
 import RoutesLayout from "./RoutesLayout";
-import NotFoundPage from "../Components/Shared/NotFoundPage";
+import NotFoundPage from "../Components/Shared/NotFoundPage/NotFoundPage";
 import Home from "../Components/Home/Home";
 
 const AppRoutes = () => {
