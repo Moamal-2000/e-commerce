@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className={styles.card}>
       <div className={styles.productImg}>
-        <img src={redJoystick} />
+        <img src={redJoystick} alt="Red joystick" />
 
         <div className={styles.layerContent}>
           <div className={styles.discount}>-{discount}%</div>
@@ -42,7 +42,7 @@ const ProductCard = ({ product }) => {
         <div className={styles.rateContainer}>
           <div className={styles.stars}>
             <RateStars rate={rate} />
-            </div>
+          </div>
 
           <span className={styles.numOfVotes}>({votes})</span>
         </div>
