@@ -20,7 +20,7 @@
     "react-router-dom": "^6.22.1",
     "react-uuid": "^2.0.0",
     "router-dom": "^2.2.11",
-    "Styles": "^1.66.1",
+    "sass": "^1.71.0",
     "swiper": "^11.0.6",
     "uuid": "^9.0.1",
     "web-vitals": "^3.5.2"
