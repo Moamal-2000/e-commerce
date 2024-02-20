@@ -1,22 +1,8 @@
-import { useState } from "react";
-
-const useLocalStorage = (keyName, initialData) => {
+const useLocalStorage = (keyName, data) => {
   const localData = localStorage.getItem(keyName);
-  const [data, setData] = useState(
-    !localData ? initialData : JSON.parse(localData)
-  );
+  if (!data) return JSON.parse(localData);
 
-  function setDataFun(getData) {
-    let stringifyData = JSON.stringify(getData)
-
-    if (stringifyData === "true") stringifyData = true
-    else if (stringifyData === "false") stringifyData = false
-
-    localStorage.setItem(keyName, stringifyData);
-    setData(stringifyData);
-  }
-
-  return [data, setDataFun];
+  localStorage.setItem(keyName, JSON.stringify(data));
+  return JSON.parse(localData);
 };
-
 export default useLocalStorage;
