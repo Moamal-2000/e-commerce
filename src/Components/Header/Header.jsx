@@ -3,7 +3,7 @@ import NavTools from "../Shared/NavTools";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 import styles from "./Header.module.scss";
-import { toggleMobileMenu, toggleOverlay } from "../../features/globalSlice";
+import { toggleMobileMenu, toggleOverlay } from "../../Features/globalSlice";
 
 const Header = () => {
   const dispatch = useDispatch()
