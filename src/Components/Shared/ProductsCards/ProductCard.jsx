@@ -31,9 +31,9 @@ const ProductCard = ({ product }) => {
       </div>
 
       <section className={styles.productInfo}>
-        <h3 className={styles.productName}>
+        <strong className={styles.productName}>
           <a href="#">{name}</a>
-        </h3>
+        </strong>
         <div className={styles.price}>
           ${afterDiscount}
           <s className={styles.afterDiscount}>${price}</s>
