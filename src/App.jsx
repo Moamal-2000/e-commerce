@@ -1,5 +1,5 @@
 import GlobalOverlay from "./Components/Shared/GlobalOverlay";
-import AppRoutes from "./routes/AppRoutes";
+import AppRoutes from "./Routes/AppRoutes";
 
 function App() {
   return (
