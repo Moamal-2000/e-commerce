@@ -3,7 +3,7 @@ import styles from './SectionsProducts.module.scss'
 
 const SectionsProducts = () => {
   return (
-    <nav className={styles.sectionsProducts}>
+    <nav className={styles.sectionsProducts} id='sections-products'>
       <DropDownMenu nameMenu="Woman’s Fashion" >
         <ul className={styles.dropDownMenu}>
           <li><a href="\#">Elegant Evening Dress</a></li>

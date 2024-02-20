@@ -219,4 +219,4 @@ export const productsData = [
   //   votes: 0,
   //   id: uuid(),
   // },
-]
+];
