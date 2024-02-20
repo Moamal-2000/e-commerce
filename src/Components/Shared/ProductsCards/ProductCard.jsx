@@ -15,11 +15,11 @@ const ProductCard = ({ product }) => {
           <div className={styles.discount}>-{discount}%</div>
 
           <div className={styles.icons}>
-            <a href="#" className={styles.iconHolder}>
+            <a href="#" className={styles.iconHolder} title="Add to favorite">
               <i className="fa-regular fa-heart"></i>
             </a>
 
-            <a href="#" className={styles.iconHolder}>
+            <a href="#" className={styles.iconHolder} title="See details">
               <i className="fa-regular fa-eye"></i>
             </a>
           </div>
