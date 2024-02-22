@@ -1,14 +1,14 @@
-import { productsData } from "../../../Data/staticData";
+import { productsData } from "../../../Data/productsData";
 import ProductCard from "../../Shared/ProductsCards/ProductCard";
 import styles from "./ProductsSlider.module.scss";
 
 const ProductsSlider = () => {
   return (
-    <article className={styles.productsSlider}>
+    <section className={styles.productsSlider}>
       {productsData.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}
-    </article>
+    </section>
   );
 };
 export default ProductsSlider;

@@ -20,7 +20,7 @@ const Home = () => {
           <MainSlider />
         </div>
 
-          <TodaySection />
+        <TodaySection />
       </div>
     </div>
   );
