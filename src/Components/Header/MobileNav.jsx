@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { userImg } from "../../Assets/Images/Images";
+import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import styles from "./MobileNav.module.scss";
 
 const MobileNav = () => {
@@ -26,38 +27,38 @@ const MobileNav = () => {
         <ul>
           <li>
             <a href="/#">
-              <i className="fa-regular fa-user"></i>
-              Profile
+              <SvgIcon name="user" />
+              <span>Profile</span>
             </a>
           </li>
           <li>
             <a href="/#" className={styles.active}>
-              <i className="bi bi-house"></i>
-              Home Page
+              <SvgIcon name="home" />
+              <span>Home Page</span>
             </a>
           </li>
           <li>
             <a href="/#">
-              <i className="fa-regular fa-file-lines"></i>
-              About
+              <SvgIcon name="fileLines" />
+              <span>About</span>
             </a>
           </li>
           <li>
             <a href="/#">
-              <i className="bi bi-bag"></i>
-              My Cart
+              <SvgIcon name="bag" />
+              <span>My Cart</span>
             </a>
           </li>
           <li>
             <a href="/#">
-              <i className="fa-regular fa-heart"></i>
-              Favorite
+              <SvgIcon name="love" />
+              <span>Favorite</span>
             </a>
           </li>
           <li>
             <a href="/#">
-              <i className="bi bi-bell"></i>
-              Notifications
+              <SvgIcon name="bell" />
+              <span>Notifications</span>
             </a>
           </li>
         </ul>
@@ -66,8 +67,8 @@ const MobileNav = () => {
       <hr className={styles.line}></hr>
 
       <button className={styles.signOutButton} type="button">
-        <i className="bi bi-box-arrow-right"></i>
-        Sign Out
+        <SvgIcon name="boxArrowRight" />
+        <span>Sign Out</span>
       </button>
     </div>
   );

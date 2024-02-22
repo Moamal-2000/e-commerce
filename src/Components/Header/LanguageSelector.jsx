@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import styles from "./LanguageSelector.module.scss";
 
 const LanguageSelector = () => {
@@ -10,8 +11,10 @@ const LanguageSelector = () => {
     const target = e.target;
     const triggeredLanguage = target.textContent;
     const currentLangEle = currentLangRef.current;
+    const isSvgOrPath = target.tagName === "svg" || target.tagName === "path";
 
-    if (target.tagName === "I") {
+    //! Require fix
+    if (isSvgOrPath) {
       setIsLangMenuActive((prevState) => !prevState);
       return;
     }
@@ -27,7 +30,7 @@ const LanguageSelector = () => {
       <div className={styles.currentOption} ref={currentLangRef}>
         English
       </div>
-      <i className="fa-solid fa-chevron-down"></i>
+      <SvgIcon name="chevronDown" />
 
       <div
         className={`${styles.options} ${isLangMenuActive ? styles.active : ""}`}

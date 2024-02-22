@@ -79,11 +79,10 @@
   }
 }
 
-.openMobileMenu {
-  font-size: 2.2rem;
-}
-
 .mobileNav {
+  background-color: transparent;
+  border: none;
+  outline: none;
   display: none;
   transition: opacity .2s;
 
@@ -96,4 +95,10 @@
   .mobileNav {
     display: block;
   }
+}
+
+.mobileNav>svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }

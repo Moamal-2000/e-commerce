@@ -19,8 +19,10 @@
   min-width: 63px;
 }
 
-.languageSelector>i {
-  font-size: .6rem;
+.languageSelector>svg {
+  width: 12px;
+  height: 12px;
+  fill: #fff;
 }
 
 .languageSelector .options {

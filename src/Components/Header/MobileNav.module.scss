@@ -67,6 +67,7 @@
   all: unset;
   color: #cbcbcb;
   padding: 10px;
+  min-width: 126px;
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -80,9 +81,16 @@
 
 }
 
-.nav ul li a i {
-  font-size: 1.3rem;
-  padding-right: 20px;
+.nav ul li a span,
+.signOutButton span {
+  padding-left: 16px;
+}
+
+.nav ul svg,
+.signOutButton svg {
+  fill: #fff;
+  width: 20px;
+  height: 20px;
 }
 
 .line {
@@ -90,9 +98,4 @@
   width: 130px;
   height: 2px;
   border-color: #939393;
-}
-
-.signOutButton i {
-  margin-right: 20px;
-  font-size: 1.5rem;
 }
