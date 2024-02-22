@@ -3,8 +3,8 @@ import styles from "./EventCounter.module.scss";
 
 const EventCounter = ({ timeEvent, eventName }) => {
   const { timeData } = useTimerDown(timeEvent, {
-    timerName: eventName,
-  }),
+      timerName: eventName,
+    }),
     { days, hours, minutes, seconds } = timeData,
     formattedDays = days?.toString().padStart(2, 0),
     formattedHours = hours?.toString().padStart(2, 0),
@@ -28,17 +28,13 @@ const EventCounter = ({ timeEvent, eventName }) => {
 
         <div className={styles.timeContainer}>
           <div className={styles.typeTime}>Minutes</div>
-          <div className={styles.time}>
-            {formattedMinutes}
-          </div>
+          <div className={styles.time}>{formattedMinutes}</div>
         </div>
         <span>:</span>
 
         <div className={styles.timeContainer}>
           <div className={styles.typeTime}>Seconds</div>
-          <div className={styles.time}>
-            {formattedSeconds}
-          </div>
+          <div className={styles.time}>{formattedSeconds}</div>
         </div>
       </div>
     </>

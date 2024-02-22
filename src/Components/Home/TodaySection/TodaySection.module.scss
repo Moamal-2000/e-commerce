@@ -5,3 +5,10 @@
   gap: 87px;
   margin-bottom: 40px;
 }
+
+@include small {
+  .wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+}

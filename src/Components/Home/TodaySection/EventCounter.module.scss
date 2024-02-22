@@ -6,6 +6,12 @@
   gap: 16px;
 }
 
+@include small {
+  .eventTimer {
+    margin-top: 20px;
+  }
+}
+
 .timeContainer {
   display: flex;
   flex-direction: column;
@@ -19,12 +25,27 @@
   transform: scale(.9);
 }
 
+@include small {
+  .timeContainer .typeTime {
+    transform: scale(.8);
+    position: relative;
+    left: -6px;
+  }
+}
+
 .timeContainer .time {
   color: var(--black);
   font-family: "Inter";
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.3px;
+}
+
+@include small {
+  .timeContainer .time {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
 }
 
 .eventTimer>span {

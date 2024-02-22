@@ -10,6 +10,12 @@
   margin-bottom: 30px;
 }
 
+@include small {
+  .sectionTitle .event {
+    font-size: .9rem;
+  }
+}
+
 .sectionTitle .event::before {
   content: '';
   position: absolute;
@@ -28,4 +34,10 @@
   font-size: 2.25rem;
   font-weight: 600;
   letter-spacing: 1.4px;
+}
+
+@include small {
+  .sectionTitle b {
+    font-size: 1.5rem;
+  }
 }
