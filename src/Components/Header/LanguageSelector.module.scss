@@ -1,0 +1,42 @@
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.languageSelector .currentOption {
+  min-width: 63px;
+}
+
+.languageSelector>i {
+  font-size: .6rem;
+}
+
+.languageSelector .options {
+  position: absolute;
+  left: -11px;
+  top: 26px;
+  background-color: var(--black);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+.languageSelector .options .option {
+  cursor: pointer;
+  padding: 10px;
+  padding-right: 30px;
+  transition: color .2s;
+
+  &:hover {
+    color: var(--very-light-gray);
+  }
+}
