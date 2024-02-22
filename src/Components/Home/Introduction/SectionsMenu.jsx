@@ -17,6 +17,7 @@ const SectionsMenu = () => {
           dispatch(toggleState({ key: "isSectionsMenuActive", value: true }));
           dispatch(toggleState({ key: "isOverlayActive", value: true }));
         }}
+        aria-label="List of sections"
       >
         <SvgIcon name="list" />
       </button>

@@ -10,6 +10,11 @@
   cursor: pointer;
   display: none;
   z-index: 2;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .7;
+  }
 }
 
 @include large {

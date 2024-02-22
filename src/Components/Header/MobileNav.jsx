@@ -63,7 +63,7 @@ const MobileNav = () => {
         </ul>
       </nav>
 
-      <div className={styles.line}></div>
+      <hr className={styles.line}></hr>
 
       <button className={styles.signOutButton} type="button">
         <i className="bi bi-box-arrow-right"></i>

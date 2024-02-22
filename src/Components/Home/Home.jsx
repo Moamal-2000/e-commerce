@@ -1,4 +1,5 @@
 import Header from "../Header/Header";
+import MobileNav from "../Header/MobileNav";
 import styles from "./Home.module.scss";
 import MainSlider from "./Introduction/MainSlider";
 import SectionsMenu from "./Introduction/SectionsMenu";
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <Header />
+      <MobileNav />
 
       <div className={styles.container}>
         <div className={styles.introductionContainer}>

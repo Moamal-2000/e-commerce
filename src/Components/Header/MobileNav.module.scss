@@ -38,7 +38,6 @@
   }
 }
 
-
 .userInfo p {
   color: var(--medium-light-gray);
   margin: 20px 0 50px;
@@ -87,10 +86,10 @@
 }
 
 .line {
-  margin: 40px 0;
+  margin: 30px 0;
   width: 130px;
   height: 2px;
-  background-color: #939393;
+  border-color: #939393;
 }
 
 .signOutButton i {

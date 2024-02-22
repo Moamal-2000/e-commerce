@@ -1,6 +1,5 @@
 import { useDispatch } from "react-redux";
 import NavTools from "../Shared/MidComponents/NavTools";
-import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 import styles from "./Header.module.scss";
 import { toggleState } from "../../Features/globalSlice";
@@ -32,7 +31,6 @@ const Header = () => {
             className={`bi bi-list ${styles.openMobileMenu}`}
             onClick={() => openMobileNav()}
           ></i>
-          <MobileNav />
         </div>
       </div>
     </header>

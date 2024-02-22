@@ -85,6 +85,11 @@
 
 .mobileNav {
   display: none;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .7;
+  }
 }
 
 @include small {

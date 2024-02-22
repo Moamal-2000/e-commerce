@@ -1,10 +1,18 @@
 
+@import "../../Styles/mixins.scss";
+
 .languageSelector {
   display: flex;
   align-items: center;
   user-select: none;
   cursor: pointer;
   position: relative;
+}
+
+@include small {
+  .languageSelector {
+    margin-right: 12px;
+  }
 }
 
 .languageSelector .currentOption {
