@@ -1,7 +1,7 @@
 import Header from "../Header/Header";
 import styles from "./Home.module.scss";
 import MainSlider from "./Introduction/MainSlider";
-import SectionsProducts from "./Introduction/SectionsProducts";
+import SectionsMenu from "./Introduction/SectionsMenu";
 import TodaySection from "./TodaySection/TodaySection";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
 
       <div className={styles.container}>
         <div className={styles.introductionContainer}>
-          <SectionsProducts />
+          <SectionsMenu />
 
           <div className={styles.line}></div>
 

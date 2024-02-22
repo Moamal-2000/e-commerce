@@ -1,0 +1,88 @@
+@import "../../../Styles/mixins";
+
+.sectionsMenuButton {
+  position: absolute;
+  left: 20px;
+  top: 102px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+
+@include large {
+  .sectionsMenuButton {
+    display: block;
+  }
+}
+
+@include small {
+  .sectionsMenuButton {
+    top: 110px;
+  }
+}
+
+.sectionsMenuButton>svg {
+  width: 25px;
+  height: 25px;
+}
+
+.sectionsMenu {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionsMenu::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+.sectionsMenu::-webkit-scrollbar-thumb {
+  background-color: #eaeaea;
+  border-radius: 5px;
+}
+
+@include large {
+  .sectionsMenu {
+    position: fixed;
+    left: -120%;
+    top: 0;
+    height: calc(100vh - (100vh - 100%));
+    background-color: #fff;
+    z-index: 1000;
+    padding: 18px;
+    box-shadow: 0 0 20px -15px black;
+    overflow-y: auto;
+    width: fit-content;
+    transition: left .2s ease;
+
+    &.active {
+      left: 0;
+    }
+  }
+}
+
+.sectionsMenu>* {
+  color: var(--black);
+  cursor: pointer;
+  padding: 10px;
+}
+
+.dropDownMenu {
+  margin-top: 10px;
+}
+
+.dropDownMenu li {
+  padding: 10px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dropDownMenu li a {
+  color: var(--black);
+  margin-top: 20px;
+}

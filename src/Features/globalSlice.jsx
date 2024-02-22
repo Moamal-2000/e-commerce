@@ -1,22 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const initialState = {
   isOverlayActive: false,
   isMobileMenuActive: false,
-}
+  isSectionsMenuActive: false,
+};
 
 const globalSlice = createSlice({
   initialState,
   name: "globalSlice",
   reducers: {
-    toggleOverlay: (state, action) => {
-      return {...state, isOverlayActive: action.payload};
+    toggleState: (state, action) => {
+      const { key, value } = action.payload;
+      state[key] = value;
     },
-    toggleMobileMenu: (state, action) => {
-      return {...state, isMobileMenuActive: action.payload};
-    },
-  }
+  },
 });
 
 // function handleReducers() {
@@ -27,5 +25,5 @@ const globalSlice = createSlice({
 //   };
 // }
 
-export const { toggleOverlay, toggleMobileMenu } = globalSlice.actions;
+export const { toggleState } = globalSlice.actions;
 export default globalSlice.reducer;

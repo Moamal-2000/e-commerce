@@ -3,14 +3,14 @@ import NavTools from "../Shared/MidComponents/NavTools";
 import MobileNav from "./MobileNav";
 import Nav from "./Nav";
 import styles from "./Header.module.scss";
-import { toggleMobileMenu, toggleOverlay } from "../../Features/globalSlice";
+import { toggleState } from "../../Features/globalSlice";
 
 const Header = () => {
   const dispatch = useDispatch()
 
   function openMobileNav() {
-    dispatch(toggleMobileMenu(true))
-    dispatch(toggleOverlay(true))
+    dispatch(toggleState({key: "isMobileMenuActive", value: true}))
+    dispatch(toggleState({ key: "isOverlayActive", value: true }));
   }
 
   return (

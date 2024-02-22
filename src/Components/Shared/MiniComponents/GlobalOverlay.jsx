@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
+import { toggleState } from "../../../Features/globalSlice";
 import styles from "./GlobalOverlay.module.scss";
-import { toggleMobileMenu, toggleOverlay } from "../../../Features/globalSlice";
 
 const GlobalOverlay = () => {
   const { isOverlayActive, isMobileMenuActive } = useSelector(
@@ -8,15 +8,17 @@ const GlobalOverlay = () => {
   );
   const dispatch = useDispatch();
 
-  function handleOverlay() {
-    if (isMobileMenuActive) dispatch(toggleMobileMenu(false));
-    dispatch(toggleOverlay(false));
+  function handleOverlayClick() {
+    if (isMobileMenuActive)
+      dispatch(toggleState({ key: "isMobileMenuActive", value: false }));
+    dispatch(toggleState({ key: "isOverlayActive", value: false }));
+    dispatch(toggleState({ key: "isSectionsMenuActive", value: false }));
   }
 
   return (
     <div
       className={`${styles.overlay} ${isOverlayActive ? styles.active : ""}`}
-      onClick={() => handleOverlay()}
+      onClick={handleOverlayClick}
     ></div>
   );
 };
