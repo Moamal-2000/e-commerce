@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import SvgIcon from "../MiniComponents/SvgIcon";
 import styles from "./NavTools.module.scss";
 
 const NavTools = ({
@@ -7,7 +8,9 @@ const NavTools = ({
   showUser = true,
   activeUser = false,
 }) => {
-  const { addedProducts, addedFavorites } = useSelector(state => state.products)
+  const { addedProducts, addedFavorites } = useSelector(
+    (state) => state.products
+  );
 
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
@@ -22,37 +25,37 @@ const NavTools = ({
           type="text"
           placeholder="What are you looking for?"
         />
-        <i className="fa-solid fa-magnifying-glass"></i>
+        <SvgIcon name="search" />
       </div>
-
 
       <div className={styles.tools}>
         {showHeart && (
-          <div className={styles.addedProducts}>
-            <i className="fa-regular fa-heart"></i>
+          <button type="button" className={styles.addedProducts}>
+            <SvgIcon name="love" />
             {addedProducts > 0 && (
               <span>{addedProducts > 99 ? "99+" : addedProducts}</span>
             )}
-          </div>
+          </button>
         )}
 
         {showCart && (
-          <div className={styles.addedFavorites}>
-            <i className="bi bi-cart3"></i>
+          <button type="button" className={styles.addedFavorites}>
+            <SvgIcon name="cart3" />
             {addedFavorites > 0 && (
               <span>{addedFavorites > 99 ? "99+" : addedFavorites}</span>
             )}
-          </div>
+          </button>
         )}
 
         {showUser && (
-          <div className={styles.userContainer}>
-            <i
-              className={`fa-regular fa-user ${
-                activeUser ? styles.active : ""
-              }`}
-            ></i>
-          </div>
+          <button
+            type="button"
+            className={`${styles.userContainer} ${
+              activeUser ? styles.active : ""
+            }`}
+          >
+            <SvgIcon name="user" />
+          </button>
         )}
       </div>
     </div>
