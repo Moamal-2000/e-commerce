@@ -6,13 +6,21 @@
   justify-content: space-between;
 }
 
-.dropDownMenu i {
-  font-size: .8rem;
+.dropDownMenu button {
+  background-color: transparent;
+  border: none;
+  outline: none;
   transition: transform .3s;
+  cursor: inherit;
 
   &.active {
     transform: rotate(90deg);
   }
+}
+
+.dropDownMenu svg {
+  width: 10px;
+  height: 10px;
 }
 
 .menu {

@@ -1,6 +1,7 @@
 import { SwiperSlide } from "swiper/react";
 import { introductionSliderData } from "../../../Data/staticData";
 import styles from "./IntroductionSlide.module.scss";
+import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 
 const introductionSlides = () => {
   return introductionSliderData.map(
@@ -17,7 +18,7 @@ const introductionSlides = () => {
 
           <button type="button" className={styles.shopNow}>
             <a href="\#">Shop Now</a>
-            <i className="fa-solid fa-arrow-right-long"></i>
+            <SvgIcon name="arrowRightLong" />
           </button>
         </div>
       </SwiperSlide>

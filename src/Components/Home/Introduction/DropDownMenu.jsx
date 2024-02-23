@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import styles from "./DropDownMenu.module.scss";
 
 const DropDownMenu = ({ nameMenu, children }) => {
@@ -12,12 +13,15 @@ const DropDownMenu = ({ nameMenu, children }) => {
     <div className={styles.dropDownMenu} onClick={() => handleToggleMenu()}>
       <div className={styles.nameMenu}>
         <span>{nameMenu}</span>
-        <i
-          className={`fa-solid fa-chevron-right ${
-            isMenuOpen ? styles.active : ""
-          }`}
-        ></i>
+        <button
+          type="button"
+          className={isMenuOpen ? styles.active : ""}
+          aria-label="arrow right"
+        >
+          <SvgIcon name="chevronRight" />
+        </button>
       </div>
+
       <div className={`${styles.menu} ${isMenuOpen ? styles.active : ""}`}>
         {children}
       </div>
