@@ -2,12 +2,10 @@
 
 .sectionTitle .event {
   color: var(--tomato);
-  font-family: "Poppins";
-  font-size: 1rem;
-  font-weight: 600;
   margin-left: 36px;
   position: relative;
   margin-bottom: 30px;
+  font: 600 1rem "Poppins";
 }
 
 @include small {
@@ -30,10 +28,8 @@
 
 .sectionTitle b {
   color: var(--black);
-  font-family: "Inter";
-  font-size: 2.25rem;
-  font-weight: 600;
   letter-spacing: 1.4px;
+  font: 600 2.25rem "Inter";
 }
 
 @include small {

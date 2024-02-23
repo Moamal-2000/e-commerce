@@ -4,8 +4,8 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw - (100vw - 100%));
+  height: calc(100vh - (100vh - 100%));
   background-color: rgba(0, 0, 0, .8);
   z-index: 1000;
   opacity: 0;

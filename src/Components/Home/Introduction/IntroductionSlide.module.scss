@@ -61,14 +61,11 @@
 }
 
 .discount {
-  color: var(--white);
-  font-family: Inter;
-  font-size: 3rem;
-  font-weight: 600;
-  line-height: 60px;
   width: 400px;
-  letter-spacing: 1.92px;
   margin: 20px 0;
+  color: var(--white);
+  letter-spacing: 1.92px;
+  font: 600 3rem/60px "Inter";
 }
 
 @include small {

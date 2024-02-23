@@ -36,7 +36,7 @@ const ProductCard = ({ product }) => {
         </strong>
         <div className={styles.price}>
           ${afterDiscount}
-          <s className={styles.afterDiscount}>${price}</s>
+          <del className={styles.afterDiscount}>${price}</del>
         </div>
 
         <div className={styles.rateContainer}>

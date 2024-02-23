@@ -44,10 +44,8 @@
   @include center-x-y;
   gap: 10px;
   border-radius: 4px;
-  font-family: "Poppins";
-  font-size: .75rem;
-  font-weight: 400;
   user-select: none;
+  font: 400 .75rem "Poppins";
 }
 
 .layerContent .icons {
@@ -94,9 +92,7 @@
   border-radius: 0 0 4px 4px;
   background: var(--black);
   color: var(--white);
-  font-family: "Poppins";
-  font-size: 1rem;
-  font-weight: 500;
+  font: 500 1rem "Poppins";
   width: 100%;
   height: 40px;
   cursor: pointer;
@@ -119,10 +115,8 @@
 }
 
 .productInfo .productName a {
+  font: 500 1rem "Poppins";
   color: var(--black);
-  font-family: "Poppins";
-  font-size: 1rem;
-  font-weight: 500;
   transition: color .2s;
 
   &:hover {
@@ -132,20 +126,13 @@
 
 .productInfo .price {
   color: var(--tomato);
-  font-family: "Poppins";
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 24px;
+  font: 500 1rem/24px "Poppins";
 }
 
 .productInfo .price .afterDiscount {
   margin-left: 16px;
   color: var(--black);
-  font-family: "Poppins";
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 24px;
-  text-decoration-line: strikethrough;
+  font: 500 1rem/24px "Poppins";
   opacity: .5;
 }
 
@@ -167,32 +154,7 @@
 }
 
 .productInfo .rateContainer .numOfVotes {
+  font: 600 .875rem/21px "Poppins";
   color: var(--black);
-  font-family: "Poppins";
-  font-size: .875rem;
-  font-weight: 600;
-  line-height: 21px;
   opacity: .5;
-}
-
-
-
-:root {
-  --black: #000;
-  --very-dark-gray: #252525;
-  --primary: #363738;
-  --brown: #504242;
-  --dark-gray: #4C5355;
-  --light-gray: #7D8184;
-  --medium-light-gray: #cbcbcb;
-  --very-light-gray: #EDEDED;
-  --secondary-white: #FAFAFA;
-  --white: #fff;
-  --tomato: #DB4444;
-  --rose: #E07575;
-  --green: #00FF66;
-  --turquoise: #4AC2E8;
-  --light-blue: #A0BCE0;
-  --container-width: 85%;
-  --container-mobile-width: 94%;
 }
