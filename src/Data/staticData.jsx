@@ -37,3 +37,36 @@ export const introductionSliderData = [
   //   id: uuid(),
   // },
 ];
+
+export const categoriesData = [
+  {
+    iconName: "phone",
+    title: "Phones",
+    id: uuid(),
+  },
+  {
+    iconName: "computer",
+    title: "Computers",
+    id: uuid(),
+  },
+  {
+    iconName: "smartWatch",
+    title: "SmartWatch",
+    id: uuid(),
+  },
+  {
+    iconName: "camera",
+    title: "Camera",
+    id: uuid(),
+  },
+  {
+    iconName: "headphone",
+    title: "HeadPhones",
+    id: uuid(),
+  },
+  {
+    iconName: "gamepad",
+    title: "Gaming",
+    id: uuid(),
+  },
+]

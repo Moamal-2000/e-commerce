@@ -17,15 +17,15 @@
   margin-bottom: 140px;
 }
 
-@include very-small {
-  .introductionContainer {
-    margin-top: 30px;
-  }
-}
-
 @include large {
   .introductionContainer {
     flex-direction: column-reverse;
+  }
+}
+
+@include small {
+  .introductionContainer {
+    margin-bottom: 80px;
   }
 }
 

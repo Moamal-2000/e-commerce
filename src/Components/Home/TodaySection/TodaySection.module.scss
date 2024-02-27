@@ -1,7 +1,13 @@
 @import "../../../Styles/mixins";
 
 .todaysSection {
-  margin-bottom: 100px;
+  margin-bottom: 170px;
+}
+
+@include small {
+  .todaysSection {
+    margin-bottom: 100px;
+  }
 }
 
 .wrapper {
