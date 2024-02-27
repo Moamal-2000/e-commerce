@@ -4,11 +4,11 @@ import styles from "./ProductsSlider.module.scss";
 
 const ProductsSlider = () => {
   return (
-    <section className={styles.productsSlider}>
+    <div className={styles.productsSlider}>
       {productsData.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}
-    </section>
+    </div>
   );
 };
 export default ProductsSlider;

@@ -2,9 +2,9 @@
 
 .productsSlider {
   display: flex;
-  overflow-x: auto;
+  overflow: auto hidden;
   scrollbar-width: none;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   position: relative;
 }
 
