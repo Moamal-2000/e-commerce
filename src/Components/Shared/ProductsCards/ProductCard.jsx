@@ -9,10 +9,16 @@ const ProductCard = ({ product }) => {
   return (
     <div className={styles.card}>
       <div className={styles.productImg}>
-        <img src={redJoystick} alt="Red joystick" />
+        <img src={redJoystick} alt={name} title={name} />
 
         <div className={styles.layerContent}>
-          <div className={styles.discount}>-{discount}%</div>
+          <div
+            className={`${styles.discount} ${
+              discount <= 0 ? styles.hide : ""
+            }`}
+          >
+            -{discount}%
+          </div>
 
           <div className={styles.icons}>
             <a href="#" className={styles.iconHolder} title="Add to favorite">

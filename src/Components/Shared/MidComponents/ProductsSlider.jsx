@@ -1,14 +1,17 @@
 import { productsData } from "../../../Data/productsData";
-import ProductCard from "../../Shared/ProductsCards/ProductCard";
+import ProductCard from "../ProductsCards/ProductCard";
 import styles from "./ProductsSlider.module.scss";
 
-const ProductsSlider = () => {
+const ProductsSlider = ({ filterFun = () => productsData }) => {
+  const filteredProducts = filterFun();
+
   return (
     <div className={styles.productsSlider}>
-      {productsData.map((product) => (
+      {filteredProducts.map((product) => (
         <ProductCard product={product} key={product.id} />
       ))}
     </div>
   );
 };
+
 export default ProductsSlider;

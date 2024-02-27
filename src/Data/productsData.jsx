@@ -9,6 +9,7 @@ export const productsData = [
     img: "",
     rate: 5,
     votes: 88,
+    sold: 105,
     id: uuid(),
   },
   {
@@ -19,6 +20,7 @@ export const productsData = [
     img: "",
     rate: 4,
     votes: 75,
+    sold: 210,
     id: uuid(),
   },
   {
@@ -29,6 +31,7 @@ export const productsData = [
     img: "",
     rate: 5,
     votes: 99,
+    sold: 463,
     id: uuid(),
   },
   {
@@ -39,16 +42,7 @@ export const productsData = [
     img: "",
     rate: 4.5,
     votes: 99,
-    id: uuid(),
-  },
-  {
-    name: "S-Series Comfort Chair ",
-    price: 400,
-    discount: 25,
-    afterDiscount: 375,
-    img: "",
-    rate: 4.5,
-    votes: 122,
+    sold: 211,
     id: uuid(),
   },
   {
@@ -59,6 +53,7 @@ export const productsData = [
     img: "",
     rate: 5,
     votes: 65,
+    sold: 1405,
     id: uuid(),
   },
   {
@@ -69,6 +64,7 @@ export const productsData = [
     img: "",
     rate: 3.5,
     votes: 159,
+    sold: 1533,
     id: uuid(),
   },
   {
@@ -79,6 +75,7 @@ export const productsData = [
     img: "",
     rate: 4.5,
     votes: 190,
+    sold: 2522,
     id: uuid(),
   },
   {
@@ -89,6 +86,7 @@ export const productsData = [
     img: "",
     rate: 5,
     votes: 201,
+    sold: 1872,
     id: uuid(),
   },
   {
@@ -99,6 +97,7 @@ export const productsData = [
     img: "",
     rate: 3,
     votes: 35,
+    sold: 3796,
     id: uuid(),
   },
   {
@@ -109,6 +108,7 @@ export const productsData = [
     img: "",
     rate: 4,
     votes: 94,
+    sold: 1693,
     id: uuid(),
   },
   {
@@ -119,6 +119,7 @@ export const productsData = [
     img: "",
     rate: 0,
     votes: 0,
+    sold: 100,
     id: uuid(),
   },
   {
@@ -129,6 +130,7 @@ export const productsData = [
     img: "",
     rate: 5,
     votes: 325,
+    sold: 100,
     id: uuid(),
   },
   {
@@ -139,6 +141,7 @@ export const productsData = [
     img: "",
     rate: 0,
     votes: 0,
+    sold: 100,
     id: uuid(),
   },
   {
@@ -149,6 +152,7 @@ export const productsData = [
     img: "",
     rate: 4,
     votes: 145,
+    sold: 100,
     id: uuid(),
   },
   {
@@ -159,6 +163,7 @@ export const productsData = [
     img: "",
     rate: 5,
     votes: 64,
+    sold: 100,
     id: uuid(),
   },
   {
@@ -169,6 +174,7 @@ export const productsData = [
     img: "",
     rate: 4.5,
     votes: 55,
+    sold: 100,
     id: uuid(),
   },
   // {
@@ -179,6 +185,7 @@ export const productsData = [
   //   img: "",
   //   rate: 0,
   //   votes: 0,
+  //   sold: 100,
   //   id: uuid(),
   // },
 ];

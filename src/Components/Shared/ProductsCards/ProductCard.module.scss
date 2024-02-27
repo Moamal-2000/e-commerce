@@ -20,6 +20,8 @@
   width: 172px;
   height: 152px;
   object-fit: contain;
+  position: relative;
+  z-index: 2;
 }
 
 .layerContent {
@@ -46,6 +48,12 @@
   border-radius: 4px;
   user-select: none;
   font: 400 .75rem "Poppins";
+}
+
+.layerContent .discount.hide {
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .layerContent .icons {

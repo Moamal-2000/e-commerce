@@ -4,6 +4,7 @@ import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import styles from "./Home.module.scss";
 import MainSlider from "./Introduction/MainSlider";
 import SectionsMenu from "./Introduction/SectionsMenu";
+import ThisMonthSection from "./ThisMonthSection/ThisMonthSection";
 import TodaySection from "./TodaySection/TodaySection";
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
 
         <TodaySection />
         <CategoriesSection />
+        <ThisMonthSection />
       </div>
     </div>
   );
