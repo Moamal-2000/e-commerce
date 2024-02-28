@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import MobileNav from "../Header/MobileNav";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
@@ -32,6 +33,8 @@ const Home = () => {
         <OurProductsSection />
         <FeaturedSection />
       </div>
+
+      <Footer />
     </div>
   );
 };

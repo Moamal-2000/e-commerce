@@ -15,6 +15,9 @@ import perfumeGucci from "./perfume-gucci.png"
 import car from "./car-logo.webp"
 import headphone from "./headphone-logo.webp"
 import correctSign from "./correct-sign-logo.webp"
+import googlePlay from "./google-play-logo.webp"
+import appStore from "./app-store-logo.webp"
+import qrCode from "./qr-code.webp"
 // import  from "."
 
 export {
@@ -35,4 +38,7 @@ export {
   car,
   headphone,
   correctSign,
+  googlePlay,
+  appStore,
+  qrCode,
 }

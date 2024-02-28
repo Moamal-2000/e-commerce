@@ -1,0 +1,46 @@
+@import "../../Styles/mixins.scss";
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 80px;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+@include small {
+  .container {
+    width: var(--container-mobile-width);
+  }
+}
+
+.section1 {
+
+}
+
+.section1>b {
+
+}
+
+.section1>span {
+
+}
+
+.section1>p {
+
+}
+
+.section1 .input {
+
+}
+
+.section1 .input>input {
+
+}
+
+.section1 .input>svg {
+
+}
