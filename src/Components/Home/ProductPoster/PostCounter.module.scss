@@ -1,3 +1,34 @@
 .postCounter {
-  
+  display: flex;
+  align-items: center;
+}
+
+.timeUnit {
+  width: 62px;
+  height: 62px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+  user-select: none;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.timeUnit>span {
+  color: #000;
+}
+
+.timeUnit>span:first-child {
+  font: 600 1rem/20px "Poppins";
+}
+
+.timeUnit>span:last-child {
+  font: 400 .8rem/18px "Poppins";
+  scale: .85;
 }

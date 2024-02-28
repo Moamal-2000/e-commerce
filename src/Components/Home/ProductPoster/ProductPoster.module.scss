@@ -1,17 +1,42 @@
 @import "../../../Styles/mixins.scss";
 
 .productPoster {
-
+  width: 1170px;
+  height: 500px;
+  background-color: #000;
+  padding: 54px 50px;
+  display: flex;
+  margin-bottom: 60px;
 }
 
-.productPoster>span {
+.content {}
 
+.content>span {
+  font: 600 1rem/24px "Poppins";
+  color: #00FF66;
 }
 
-.productPoster>p {
-
+.content>p {
+  font: 600 3rem/60px "Inter";
+  letter-spacing: .04rem;
+  color: #FAFAFA;
+  margin: 30px 0 40px;
 }
 
-.productPoster>button {
-  
+.content>button {
+  padding: 16px 48px 16px 48px;
+  border-radius: 4px;
+  background-color: #00e35b;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.productHolder {}
+
+.productHolder img {
+  width: 600px;
+  height: 420px;
+  padding: 45px 16px 45px 16px;
 }

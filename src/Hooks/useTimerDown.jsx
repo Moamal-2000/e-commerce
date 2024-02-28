@@ -1,4 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import {
+  getFormattedTime,
+  getTimeInMilliseconds,
+  getTimeObj,
+} from "../Functions/helper";
 import useLocalStorage from "./useLocalStorage";
 
 /* Props Example
@@ -6,8 +11,11 @@ import useLocalStorage from "./useLocalStorage";
   eventName="timerName" localStorage key name
 */
 
-const useTimerDown = (downTime, { timeResetRequired, stopTimer, timerName }) => {
-  if (!timerName) throw new Error("Timer name is invalid")
+const useTimerDown = (
+  downTime,
+  { timeResetRequired, stopTimer, timerName, formattedTime }
+) => {
+  if (!timerName) throw new Error("Timer name is invalid");
   if (timeResetRequired) localStorage.removeItem(timerName);
 
   const times = downTime.split(" ");
@@ -18,8 +26,8 @@ const useTimerDown = (downTime, { timeResetRequired, stopTimer, timerName }) => 
   const [time, setTime] = useState(timeOrTimeLocal);
   const [timeData, setTimeData] = useState(getTimeObj(timeOrTimeLocal));
   const [isTimerDone, setIsTimerDone] = useState(false);
+  const isMounted = useRef(false);
   let timerId;
-
 
   function useEffectTimeUpdater() {
     if (time <= -1000) {
@@ -27,9 +35,15 @@ const useTimerDown = (downTime, { timeResetRequired, stopTimer, timerName }) => 
       return;
     }
 
-
     timerId = setTimeout(() => {
       setTime(time - 1000);
+
+      if (formattedTime) {
+        setTimeData(getFormattedTime(getTimeObj(time)));
+        useLocalStorage(timerName, time);
+        return;
+      }
+
       setTimeData(getTimeObj(time));
       useLocalStorage(timerName, time);
     }, 1000);
@@ -39,45 +53,24 @@ const useTimerDown = (downTime, { timeResetRequired, stopTimer, timerName }) => 
     };
   }
 
-
   useEffect(() => {
-    if (!stopTimer) useEffectTimeUpdater()
+    if (!isMounted.current) {
+      isMounted.current = true;
+
+      if (formattedTime) {
+        setTimeData(getFormattedTime(getTimeObj(time)));
+        useLocalStorage(timerName, time);
+        useEffectTimeUpdater()
+        return;
+      }
+    }
+
+    if (stopTimer) return;
+
+    useEffectTimeUpdater();
   }, [time]);
 
   return { timeData, isTimerDone };
 };
 
 export default useTimerDown;
-
-
-export function getTimeObj(milliseconds) {
-  const totalSeconds = Math.floor(milliseconds / 1000),
-    totalMinutes = Math.floor(totalSeconds / 60),
-    totalHours = Math.floor(totalMinutes / 60),
-    days = Math.floor(totalHours / 24),
-    seconds = Math.floor(totalSeconds % 60),
-    minutes = Math.floor(totalMinutes % 60),
-    hours = Math.floor(totalHours % 24),
-    timeObj = {
-      days,
-      hours,
-      minutes,
-      seconds,
-      milliseconds,
-    };
-  return { ...timeObj };
-}
-
-
-export function getTimeInMilliseconds(days, hours, minutes, seconds) {
-  const millisecondsPerSecond = 1000,
-    millisecondsPerMinute = millisecondsPerSecond * 60,
-    millisecondsPerHour = millisecondsPerMinute * 60,
-    millisecondsPerDay = millisecondsPerHour * 24,
-    totalMilliseconds =
-      days * millisecondsPerDay +
-      hours * millisecondsPerHour +
-      minutes * millisecondsPerMinute +
-      seconds * millisecondsPerSecond;
-  return totalMilliseconds;
-}

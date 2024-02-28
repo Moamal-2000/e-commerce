@@ -3,38 +3,34 @@ import styles from "./EventCounter.module.scss";
 
 const EventCounter = ({ timeEvent, eventName }) => {
   const { timeData } = useTimerDown(timeEvent, {
-      timerName: eventName,
-    }),
-    { days, hours, minutes, seconds } = timeData,
-    formattedDays = days?.toString().padStart(2, 0),
-    formattedHours = hours?.toString().padStart(2, 0),
-    formattedMinutes = minutes?.toString().padStart(2, 0),
-    formattedSeconds = seconds?.toString().padStart(2, 0);
+    timerName: eventName,
+    formattedTime: true,
+  });
 
   return (
     <>
       <div className={styles.eventTimer}>
         <div className={styles.timeContainer}>
           <div className={styles.typeTime}>Days</div>
-          <div className={styles.time}>{formattedDays}</div>
+          <div className={styles.time}>{timeData.days}</div>
         </div>
         <span>:</span>
 
         <div className={styles.timeContainer}>
           <div className={styles.typeTime}>Hours</div>
-          <div className={styles.time}>{formattedHours}</div>
+          <div className={styles.time}>{timeData.hours}</div>
         </div>
         <span>:</span>
 
         <div className={styles.timeContainer}>
           <div className={styles.typeTime}>Minutes</div>
-          <div className={styles.time}>{formattedMinutes}</div>
+          <div className={styles.time}>{timeData.minutes}</div>
         </div>
         <span>:</span>
 
         <div className={styles.timeContainer}>
           <div className={styles.typeTime}>Seconds</div>
-          <div className={styles.time}>{formattedSeconds}</div>
+          <div className={styles.time}>{timeData.seconds}</div>
         </div>
       </div>
     </>

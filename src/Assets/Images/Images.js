@@ -7,6 +7,7 @@ import userImg from "./user-image.webp"
 import redJoystick from "./red-joystick.webp"
 import coloredStar from "./colored-star.svg"
 import uncoloredStar from "./uncolored-star.svg"
+import stereo from "./stereo.png"
 // import  from "."
 
 export {
@@ -18,5 +19,6 @@ export {
   userImg,
   redJoystick,
   coloredStar,
-  uncoloredStar
+  uncoloredStar,
+  stereo,
 }
