@@ -1,15 +1,17 @@
 @import "../../../Styles/mixins.scss";
 
-.midPoster {
+.smallPoster {
   background-color: #000;
-  height: 600px;
+  min-width: 270px;
+  min-height: 284px;
+  flex: 1;
   border-radius: 4px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding: 40px 30px 0;
   padding-top: 60px;
   display: flex;
-  justify-content: flex-end;
+  align-items: flex-end;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -17,38 +19,44 @@
 }
 
 @include small {
-  .midPoster {
+  .smallPoster {
     padding-top: 30px;
+    width: 100%;
   }
 }
 
 @include very-small {
-  .midPoster {
+  .smallPoster {
     padding: 20px 20px 0;
   }
 }
 
-@media (max-width: 600px) {
-  .midPoster {
-    height: 500px;
-  }
+.smallPoster::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 50% 50%, #242424, #1d1d1d);
+  z-index: 1;
 }
 
-@media (max-width: 500px) {
-  .midPoster {
-    height: 400px;
-  }
-}
-
-@media (max-width: 400px) {
-  .midPoster {
-    height: 340px;
-  }
+.smallPoster>img {
+  position: absolute;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 2;
+  width: 190px;
+  height: 221px;
 }
 
 .content {
   width: 242px;
   margin-bottom: 30px;
+  z-index: 3;
 }
 
 .content>b {
@@ -58,7 +66,7 @@
 }
 
 .content>p {
-  margin: 14px 0 16px;
+  margin: 4px 0 10px;
   color: #FAFAFA;
   font: 400 .8rem/21px"Poppins";
 }

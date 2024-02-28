@@ -1,6 +1,7 @@
-import { ps5, womanWithHat } from "../../../Assets/Images/Images";
+import { perfumeGucci, ps5, speakers, womanWithHat } from "../../../Assets/Images/Images";
 import HorizontalPoster from "../../Shared/Posters/HorizontalPoster";
 import MediumPoster from "../../Shared/Posters/MediumPoster";
+import SmallPoster from "../../Shared/Posters/SmallPoster";
 import styles from "./FeaturedSectionPosters.module.scss";
 
 const FeaturedSectionPosters = () => {
@@ -19,7 +20,19 @@ const FeaturedSectionPosters = () => {
           posterUrl={womanWithHat}
         />
 
-        <div className={styles.smallerPosters}></div>
+        <div className={styles.smallerPosters}>
+          <SmallPoster
+            title="Speakers"
+            description="Amazon wireless speakers"
+            posterUrl={speakers}
+          />
+
+          <SmallPoster
+            title="Perfume"
+            description="GUCCI INTENSE OUD EDP"
+            posterUrl={perfumeGucci}
+          />
+        </div>
       </div>
     </div>
   );

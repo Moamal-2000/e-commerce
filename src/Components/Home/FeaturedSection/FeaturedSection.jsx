@@ -9,7 +9,7 @@ const FeaturedSection = () => {
       <SectionTitle eventName="Featured" sectionName="New Arrival" />
 
       <FeaturedSectionPosters />
-      {/* <FeaturedSectionFeatures /> */}
+      <FeaturedSectionFeatures />
     </section>
   );
 };

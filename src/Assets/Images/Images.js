@@ -10,6 +10,8 @@ import uncoloredStar from "./uncolored-star.svg"
 import stereo from "./stereo.png"
 import ps5 from "./ps5.png"
 import womanWithHat from "./woman-with-hat.png"
+import speakers from "./speakers.png"
+import perfumeGucci from "./perfume-gucci.png"
 // import  from "."
 
 export {
@@ -25,4 +27,6 @@ export {
   stereo,
   ps5,
   womanWithHat,
+  speakers,
+  perfumeGucci,
 }

@@ -4,22 +4,50 @@
   margin-top: 50px;
   margin-bottom: 100px;
   display: flex;
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .posters {
+    display: block;
+  }
 }
 
 .posters>* {
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
 .smallPosters {
-  margin-bottom: 30px;
   margin-left: 30px;
+}
+
+@media (max-width: 1300px) {
+  .smallPosters {
+    margin: 0;
+    margin-top: 30px;
+  }
 }
 
 .smallerPosters {
   display: flex;
   align-items: center;
+  width: 100%;
+  margin-top: 30px;
+
+  &>*:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.smallerPosters>*:not(:last-child) {
-  margin-right: 30px;
+@include small {
+  .smallerPosters {
+    flex-direction: column;
+
+    &>*:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
 }
