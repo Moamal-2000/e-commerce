@@ -1,3 +1,5 @@
+@import "../../../Styles/mixins.scss";
+
 .postCounter {
   display: flex;
   align-items: center;
@@ -8,15 +10,34 @@
   height: 62px;
   background-color: #fff;
   border-radius: 50%;
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @include center-x-y;
   margin-bottom: 40px;
   user-select: none;
 
   &:not(:last-child) {
     margin-right: 20px;
+  }
+}
+
+@include small {
+  .timeUnit {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include very-small {
+  .timeUnit {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 340px) {
+  .timeUnit {
+    display: none;
   }
 }
 
@@ -26,6 +47,12 @@
 
 .timeUnit>span:first-child {
   font: 600 1rem/20px "Poppins";
+}
+
+@include small {
+  .timeUnit>span:first-child {
+    font-size: .9rem;
+  }
 }
 
 .timeUnit>span:last-child {
