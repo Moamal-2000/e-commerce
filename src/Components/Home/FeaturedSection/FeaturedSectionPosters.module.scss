@@ -3,4 +3,23 @@
 .posters {
   margin-top: 50px;
   margin-bottom: 100px;
+  display: flex;
+}
+
+.posters>* {
+  flex: 1;
+}
+
+.smallPosters {
+  margin-bottom: 30px;
+  margin-left: 30px;
+}
+
+.smallerPosters {
+  display: flex;
+  align-items: center;
+}
+
+.smallerPosters>*:not(:last-child) {
+  margin-right: 30px;
 }

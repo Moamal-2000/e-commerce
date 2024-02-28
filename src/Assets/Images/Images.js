@@ -9,6 +9,7 @@ import coloredStar from "./colored-star.svg"
 import uncoloredStar from "./uncolored-star.svg"
 import stereo from "./stereo.png"
 import ps5 from "./ps5.png"
+import womanWithHat from "./woman-with-hat.png"
 // import  from "."
 
 export {
@@ -23,4 +24,5 @@ export {
   uncoloredStar,
   stereo,
   ps5,
+  womanWithHat,
 }

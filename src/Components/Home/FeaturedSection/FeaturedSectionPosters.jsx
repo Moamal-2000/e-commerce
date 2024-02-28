@@ -1,4 +1,5 @@
-import { ps5 } from "../../../Assets/Images/Images";
+import { ps5, womanWithHat } from "../../../Assets/Images/Images";
+import HorizontalPoster from "../../Shared/Posters/HorizontalPoster";
 import MediumPoster from "../../Shared/Posters/MediumPoster";
 import styles from "./FeaturedSectionPosters.module.scss";
 
@@ -10,6 +11,16 @@ const FeaturedSectionPosters = () => {
         description="Black and White version of the PS5 coming out on sale."
         posterUrl={ps5}
       />
+
+      <div className={styles.smallPosters}>
+        <HorizontalPoster
+          title="Women’s Collections"
+          description="Featured woman collections that give you another vibe."
+          posterUrl={womanWithHat}
+        />
+
+        <div className={styles.smallerPosters}></div>
+      </div>
     </div>
   );
 };
