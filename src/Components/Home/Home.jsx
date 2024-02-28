@@ -1,6 +1,7 @@
 import Header from "../Header/Header";
 import MobileNav from "../Header/MobileNav";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
+import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import styles from "./Home.module.scss";
 import MainSlider from "./Introduction/MainSlider";
 import SectionsMenu from "./Introduction/SectionsMenu";
@@ -29,6 +30,7 @@ const Home = () => {
         <ThisMonthSection />
         <ProductPoster />
         <OurProductsSection />
+        <FeaturedSection />
       </div>
     </div>
   );
