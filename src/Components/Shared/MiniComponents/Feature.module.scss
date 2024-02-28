@@ -1,0 +1,59 @@
+@import "../../../Styles/mixins.scss";
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@include large {
+  .feature:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@include medium {
+  .feature {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin: 0;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.iconHolder {
+  width: 50px;
+  height: 50px;
+  background-color: #000;
+  border-radius: 50%;
+  padding: 8px;
+  position: relative;
+  user-select: none;
+}
+
+.iconHolder::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background-color: #c1c1c1;
+  z-index: -1;
+  border-radius: inherit;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+}
+
+.feature>b {
+  display: inline-block;
+  margin: 26px 0 4px;
+  font: 600 1.25rem/28px "Poppins";
+}
+
+.feature>p {
+  font: 400 .9rem/21px "Poppins";
+}

@@ -12,6 +12,9 @@ import ps5 from "./ps5.png"
 import womanWithHat from "./woman-with-hat.png"
 import speakers from "./speakers.png"
 import perfumeGucci from "./perfume-gucci.png"
+import car from "./car-logo.webp"
+import headphone from "./headphone-logo.webp"
+import correctSign from "./correct-sign-logo.webp"
 // import  from "."
 
 export {
@@ -29,4 +32,7 @@ export {
   womanWithHat,
   speakers,
   perfumeGucci,
+  car,
+  headphone,
+  correctSign,
 }
