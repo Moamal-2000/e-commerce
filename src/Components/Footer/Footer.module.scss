@@ -3,20 +3,42 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 40px 80px;
+  padding: 80px 80px 30px;
 }
 
-.container {
-  width: var(--container-width);
-  margin: 0 auto;
+.sections {
+  width: 100%;
+  display: flex;
+  margin-bottom: 80px;
 }
 
-@include small {
-  .container {
-    width: var(--container-mobile-width);
+.sections>section {
+
+  &:not(:last-child) {
+    margin-right: 60px;
   }
 }
 
+.sections>section>b {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.sections>section>ul {
+
+}
+
+.sections>section>ul>li {
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
+
+
+
+
+// SECTION 1
 .section1 {
 
 }
@@ -42,5 +64,142 @@
 }
 
 .section1 .input>svg {
+
+}
+
+.copyRights {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+
+
+// SECTION 2
+.section2 {
+
+}
+
+.section2>b {
+
+}
+
+.section2>ul {
+
+}
+
+.section2>ul>li {
+
+}
+
+
+
+
+// SECTION 3
+.section3>b {
+
+}
+
+.section3>ul {
+
+}
+
+.section3>ul>li {
+
+}
+
+
+
+
+
+// SECTION 4
+.section4>b {
+
+}
+
+.section4>ul {
+
+}
+
+.section4>ul>li {
+
+}
+
+
+
+
+
+// SECTION 5
+.section5 {
+
+}
+
+.section5>b {
+
+}
+
+.section5>p {
+
+}
+
+.section5 .appInfo {
+  display: flex;
+}
+
+.section5 .qrCode {
+  min-width: 76px;
+  min-height: 76px;
+  max-width: 76px;
+  max-height: 76px;
+  margin-right: 16px;
+}
+
+.section5 .qrCode>img {
+
+}
+
+.section5 .downloadButtons {
+
+}
+
+.downloadButtons>button {
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 104px;
+  height: 30px;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.downloadButtons>button>img {
+  border-radius: inherit;
+  scale: .8;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+}
+
+.socialMedia>a {
+
+}
+
+.socialMedia>a>svg {
+
+}
+
+
+
+
+
+.copyRights {
 
 }
