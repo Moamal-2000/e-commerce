@@ -1,0 +1,53 @@
+@import "../../../Styles/mixins";
+
+.categoriesSlider {
+  display: flex;
+  overflow: auto hidden;
+  scrollbar-width: none;
+  margin-bottom: 180px;
+  position: relative;
+}
+
+@include small {
+  .categoriesSlider {
+    margin-bottom: 100px;
+  }
+}
+
+.categoriesSlider::-webkit-scrollbar {
+  display: none;
+}
+
+.categoriesSlider>* {
+  flex: 0 0 auto;
+  width: calc((100% / 6) - 30px);
+  margin-right: 30px;
+}
+
+@include large {
+  .categoriesSlider>* {
+    width: calc((100% / 4) - 30px);
+  }
+}
+
+@include medium {
+  .categoriesSlider>* {
+    width: calc((100% / 3) - 30px);
+  }
+}
+
+@include medium {
+  .categoriesSlider>* {
+    width: calc((100% / 2) - 30px);
+  }
+}
+
+@media (max-width: 470px) {
+  .categoriesSlider>* {
+    width: calc(100% - 30px);
+  }
+}
+
+.categoriesSlider>*:last-child {
+  margin-right: 0;
+}

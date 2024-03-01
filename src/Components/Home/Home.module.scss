@@ -1,0 +1,46 @@
+@import "../../Styles/mixins";
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+@include small {
+  .container {
+    width: var(--container-mobile-width);
+  }
+}
+
+.introductionContainer {
+  display: flex;
+  margin-top: 60px;
+  margin-bottom: 140px;
+}
+
+@include large {
+  .introductionContainer {
+    flex-direction: column-reverse;
+  }
+}
+
+@include small {
+  .introductionContainer {
+    margin-bottom: 80px;
+  }
+}
+
+.line {
+  width: 1px;
+  height: 404px;
+  margin: 0 40px 0 30px;
+  background-color: var(--medium-light-gray);
+  position: relative;
+  top: -60px;
+  user-select: none;
+}
+
+@include large {
+  .line {
+    display: none;
+  }
+}

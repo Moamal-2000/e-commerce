@@ -1,0 +1,61 @@
+@import "../../../Styles/mixins.scss";
+
+.postCounter {
+  display: flex;
+  align-items: center;
+}
+
+.timeUnit {
+  width: 62px;
+  height: 62px;
+  background-color: #fff;
+  border-radius: 50%;
+  flex-direction: column;
+  @include center-x-y;
+  margin-bottom: 40px;
+  user-select: none;
+
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+@include small {
+  .timeUnit {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@include very-small {
+  .timeUnit {
+    width: 58px;
+    height: 58px;
+  }
+}
+
+@media (max-width: 340px) {
+  .timeUnit {
+    display: none;
+  }
+}
+
+.timeUnit>span {
+  color: #000;
+}
+
+.timeUnit>span:first-child {
+  font: 600 1rem/20px "Poppins";
+}
+
+@include small {
+  .timeUnit>span:first-child {
+    font-size: .9rem;
+  }
+}
+
+.timeUnit>span:last-child {
+  font: 400 .8rem/18px "Poppins";
+  scale: .85;
+}

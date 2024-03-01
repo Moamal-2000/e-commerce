@@ -1,0 +1,35 @@
+@import "../../../Styles/mixins";
+
+.nameMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropDownMenu button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  transition: transform .3s;
+  cursor: inherit;
+
+  &.active {
+    transform: rotate(90deg);
+  }
+}
+
+.dropDownMenu svg {
+  width: 10px;
+  height: 10px;
+}
+
+.menu {
+  min-height: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height .5s;
+
+  &.active {
+    height: 218px;
+  }
+}

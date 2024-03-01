@@ -1,0 +1,109 @@
+@import "../../../Styles/mixins.scss";
+
+.smallPoster {
+  background-color: #000;
+  min-width: 270px;
+  min-height: 284px;
+  flex: 1;
+  border-radius: 4px;
+  position: relative;
+  z-index: 3;
+  padding: 40px 30px 0;
+  padding-top: 60px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-origin: content-box;
+}
+
+@include small {
+  .smallPoster {
+    padding-top: 30px;
+    width: 100%;
+  }
+}
+
+@include very-small {
+  .smallPoster {
+    padding: 20px 20px 0;
+  }
+}
+
+.smallPoster::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 50% 50%, #242424, #1d1d1d);
+  z-index: 1;
+}
+
+.smallPoster>img {
+  position: absolute;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  z-index: 2;
+  width: 190px;
+  height: 221px;
+}
+
+.content {
+  width: 242px;
+  margin-bottom: 30px;
+  z-index: 3;
+}
+
+.content>b {
+  color: #fff;
+  letter-spacing: .03rem;
+  font: 600 1.5rem/24px "Inter";
+}
+
+.content>p {
+  margin: 4px 0 10px;
+  color: #FAFAFA;
+  font: 400 .8rem/21px"Poppins";
+}
+
+.shopNow {
+  all: unset;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 2px;
+
+  &:hover a::before {
+    height: calc(100% + 10px);
+    opacity: .3;
+    transition: height .2s, opacity .2s;
+  }
+}
+
+.shopNow a {
+  color: var(--secondary-white);
+  font-size: 1rem;
+  position: relative;
+}
+
+@include small {
+  .shopNow a {
+    font-size: .9rem;
+  }
+}
+
+.shopNow a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--secondary-white);
+  transition: height .3s, opacity .2s .2s;
+}

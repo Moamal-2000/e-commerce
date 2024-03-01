@@ -1,0 +1,40 @@
+@import "../../../Styles/mixins";
+
+.sectionTitle .event {
+  color: var(--tomato);
+  margin-left: 36px;
+  position: relative;
+  margin-bottom: 30px;
+  font: 600 1rem "Poppins";
+}
+
+@include small {
+  .sectionTitle .event {
+    font-size: .9rem;
+  }
+}
+
+.sectionTitle .event::before {
+  content: '';
+  position: absolute;
+  left: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 40px;
+  background: var(--tomato);
+  border-radius: 4px;
+}
+
+.sectionTitle b {
+  color: var(--black);
+  letter-spacing: 1.4px;
+  font: 600 2.25rem "Inter";
+  text-wrap: nowrap;
+}
+
+@include small {
+  .sectionTitle b {
+    font-size: 1.5rem;
+  }
+}

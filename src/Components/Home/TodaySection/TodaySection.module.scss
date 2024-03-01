@@ -1,0 +1,39 @@
+@import "../../../Styles/mixins";
+
+.todaysSection {
+  margin-bottom: 170px;
+}
+
+@include small {
+  .todaysSection {
+    margin-bottom: 100px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 87px;
+  margin-bottom: 40px;
+}
+
+@include small {
+  .wrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.viewProductsBtn {
+  display: block;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: fit-content;
+  background: var(--red);
+  color: var(--white);
+  padding: 12px 48px 12px 48px;
+  margin: 0 auto;
+  border-radius: 4px;
+  letter-spacing: 0em;
+  font: 500 1rem "Poppins";
+}

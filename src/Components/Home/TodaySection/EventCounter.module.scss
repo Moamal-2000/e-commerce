@@ -1,0 +1,51 @@
+@import "../../../Styles/mixins";
+
+.eventTimer {
+  display: flex;
+  align-items: end;
+  gap: 16px;
+}
+
+@include small {
+  .eventTimer {
+    margin-top: 20px;
+  }
+}
+
+.timeContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.timeContainer .typeTime {
+  color: var(--black);
+  transform: scale(.9);
+  font: 500 .75rem "Poppins";
+}
+
+@include small {
+  .timeContainer .typeTime {
+    transform: scale(.8);
+    position: relative;
+    left: -6px;
+  }
+}
+
+.timeContainer .time {
+  color: var(--black);
+  letter-spacing: 1.3px;
+  font: 700 2rem "Inter";
+}
+
+@include small {
+  .timeContainer .time {
+    letter-spacing: 1px;
+    font-size: 1.4rem;
+  }
+}
+
+.eventTimer>span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--tomato);
+}

@@ -1,0 +1,74 @@
+@import "../../Styles/mixins";
+
+.header {
+  background-color: var(--black);
+  padding: 16px 0;
+  color: #fff;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 26% 1fr;
+}
+
+@include small {
+  .container {
+    width: var(--container-mobile-width);
+  }
+}
+
+@include large {
+  .container {
+    grid-template-columns: 10% 1fr;
+  }
+}
+
+@include medium {
+  .container {
+    grid-template-columns: 0 1fr;
+  }
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@include small {
+  .headerContent {
+    justify-content: flex-end;
+  }
+}
+
+.discount {
+  color: var(--secondary-white);
+
+  a {
+    color: var(--secondary-white);
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 4px;
+    font-weight: bold;
+    user-select: none;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+@include medium {
+  .discount {
+    font-size: .9rem;
+  }
+}
+
+@include small {
+  .discount {
+    display: none;
+  }
+}
