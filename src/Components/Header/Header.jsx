@@ -1,21 +1,17 @@
 import { useDispatch } from "react-redux";
-import NavTools from "../Shared/NavTools";
-import MobileNav from "./MobileNav";
+import { toggleState } from "../../Features/globalSlice";
+import NavTools from "../Shared/MidComponents/NavTools";
+import SvgIcon from "../Shared/MiniComponents/SvgIcon";
+import styles from "./Header.module.scss";
 import Nav from "./Nav";
-import styles from "./_Header.module.scss";
-import { toggleMobileMenu, toggleOverlay } from "../../features/globalSlice";
 
 const Header = () => {
-  const dispatch = useDispatch()
-
-
+  const dispatch = useDispatch();
 
   function openMobileNav() {
-    dispatch(toggleMobileMenu(true))
-    dispatch(toggleOverlay(true))
+    dispatch(toggleState({ key: "isMobileMenuActive", value: true }));
+    dispatch(toggleState({ key: "isOverlayActive", value: true }));
   }
-
-
 
   return (
     <header className={styles.header}>
@@ -31,13 +27,14 @@ const Header = () => {
           <NavTools showUser={false} />
         </div>
 
-        <div className={styles.mobileNav}>
-          <i
-            className={`bi bi-list ${styles.openMobileMenu}`}
-            onClick={() => openMobileNav()}
-          ></i>
-          <MobileNav />
-        </div>
+        <button
+          type="button"
+          className={styles.mobileNav}
+          onClick={() => openMobileNav()}
+          aria-label="Nav menu"
+        >
+          <SvgIcon name="burgerMenu" />
+        </button>
       </div>
     </header>
   );

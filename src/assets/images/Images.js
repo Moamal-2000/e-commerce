@@ -7,6 +7,17 @@ import userImg from "./user-image.webp"
 import redJoystick from "./red-joystick.webp"
 import coloredStar from "./colored-star.svg"
 import uncoloredStar from "./uncolored-star.svg"
+import stereo from "./stereo.png"
+import ps5 from "./ps5.png"
+import womanWithHat from "./woman-with-hat.png"
+import speakers from "./speakers.png"
+import perfumeGucci from "./perfume-gucci.png"
+import car from "./car-logo.webp"
+import headphone from "./headphone-logo.webp"
+import correctSign from "./correct-sign-logo.webp"
+import googlePlay from "./google-play-logo.webp"
+import appStore from "./app-store-logo.webp"
+import qrCode from "./qr-code.webp"
 // import  from "."
 
 export {
@@ -18,5 +29,16 @@ export {
   userImg,
   redJoystick,
   coloredStar,
-  uncoloredStar
+  uncoloredStar,
+  stereo,
+  ps5,
+  womanWithHat,
+  speakers,
+  perfumeGucci,
+  car,
+  headphone,
+  correctSign,
+  googlePlay,
+  appStore,
+  qrCode,
 }

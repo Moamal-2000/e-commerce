@@ -1,5 +1,5 @@
-import { redJoystick } from "../../../assets/images/Images";
-import RateStars from "../RateStars";
+import { redJoystick } from "../../../Assets/Images/Images";
+import RateStars from "../MidComponents/RateStars";
 import styles from "./ProductCard.module.scss";
 
 const ProductCard = ({ product }) => {
@@ -9,17 +9,23 @@ const ProductCard = ({ product }) => {
   return (
     <div className={styles.card}>
       <div className={styles.productImg}>
-        <img src={redJoystick} />
+        <img src={redJoystick} alt={name} title={name} />
 
         <div className={styles.layerContent}>
-          <div className={styles.discount}>-{discount}%</div>
+          <div
+            className={`${styles.discount} ${
+              discount <= 0 ? styles.hide : ""
+            }`}
+          >
+            -{discount}%
+          </div>
 
           <div className={styles.icons}>
-            <a href="#" className={styles.iconHolder}>
+            <a href="#" className={styles.iconHolder} title="Add to favorite">
               <i className="fa-regular fa-heart"></i>
             </a>
 
-            <a href="#" className={styles.iconHolder}>
+            <a href="#" className={styles.iconHolder} title="See details">
               <i className="fa-regular fa-eye"></i>
             </a>
           </div>
@@ -31,18 +37,18 @@ const ProductCard = ({ product }) => {
       </div>
 
       <section className={styles.productInfo}>
-        <h3 className={styles.productName}>
+        <strong className={styles.productName}>
           <a href="#">{name}</a>
-        </h3>
+        </strong>
         <div className={styles.price}>
           ${afterDiscount}
-          <s className={styles.afterDiscount}>${price}</s>
+          <del className={styles.afterDiscount}>${price}</del>
         </div>
 
         <div className={styles.rateContainer}>
           <div className={styles.stars}>
             <RateStars rate={rate} />
-            </div>
+          </div>
 
           <span className={styles.numOfVotes}>({votes})</span>
         </div>
