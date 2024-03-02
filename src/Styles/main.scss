@@ -16,13 +16,13 @@ html {
 }
 
 .container {
-  width: 80%;
-  margin: 0;
+  width: var(--container-width);
+  margin: 0 auto;
 }
 
 @include medium {
   .container {
-    width: 96%;
+    width: var(--container-mobile-width);
   }
 }
 

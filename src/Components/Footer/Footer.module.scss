@@ -3,19 +3,47 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 80px 80px 20px;
+  padding: 80px 0;
+}
+
+@include medium {
+  .footer {
+    padding: 60px 0;
+  }
 }
 
 .sections {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 80px;
+}
+
+@media (max-width: 1300px) {
+  .sections {
+    gap: 40px;
+  }
+}
+
+@include small {
+  .sections {
+    justify-content: center;
+  }
 }
 
 .sections>section {
 
   &:not(:last-child) {
     margin-right: 60px;
+  }
+}
+
+@include small {
+  .sections>section {
+
+    &:not(:last-child) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -102,10 +130,6 @@
   margin-right: 16px;
 }
 
-.section5 .qrCode>img {}
-
-.section5 .downloadButtons {}
-
 .downloadButtons>button {
   display: block;
   background-color: transparent;
@@ -139,13 +163,23 @@
   }
 }
 
-.socialMedia>a>svg {}
-
 .copyRights {
   font: 400 1rem/24px "Poppins";
   color: #f9f9f970;
   display: flex;
   align-items: center;
+}
+
+@include small {
+  .copyRights {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 342px) {
+  .copyRights {
+    align-items: flex-start;
+  }
 }
 
 .copyRights>span {
