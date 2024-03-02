@@ -12,8 +12,10 @@ const Footer = () => {
           <p>Get 10% off your first order</p>
 
           <div className={styles.input}>
-            <input type="email" placeholder="Enter your email" />
-            <SvgIcon name="vector" />
+            <input type="email" placeholder="Enter your email" id="email" />
+            <label htmlFor="email" title="Send">
+              <SvgIcon name="vector" />
+            </label>
           </div>
         </section>
 
@@ -71,13 +73,27 @@ const Footer = () => {
           </div>
 
           <div className={styles.socialMedia}>
-            Facebook, twitter, instagram, linkedin
+            <a href="#" title="facebook">
+              <SvgIcon name="facebook" />
+            </a>
+
+            <a href="#" title="twitter">
+              <SvgIcon name="twitter" />
+            </a>
+
+            <a href="#" title="instagram">
+              <SvgIcon name="instagram" />
+            </a>
+
+            <a href="#" title="linkedin">
+              <SvgIcon name="linkedin" />
+            </a>
           </div>
         </section>
       </div>
 
       <p className={styles.copyRights}>
-        &copy; Copyright Rimel 2022. All right reserved
+        <span>&copy;</span> Copyright Rimel 2022. All right reserved
       </p>
     </footer>
   );

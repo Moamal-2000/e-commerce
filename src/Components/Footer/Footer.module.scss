@@ -3,7 +3,7 @@
 .footer {
   background-color: #000;
   color: #fff;
-  padding: 80px 80px 30px;
+  padding: 80px 80px 20px;
 }
 
 .sections {
@@ -22,10 +22,12 @@
 .sections>section>b {
   display: block;
   margin-bottom: 24px;
+  font-weight: 500;
 }
 
-.sections>section>ul {
-
+.sections>section :where(p, li) {
+  font: 400 1rem/24px "Poppins";
+  color: #f0f0f0;
 }
 
 .sections>section>ul>li {
@@ -34,37 +36,43 @@
   }
 }
 
-
-
-
-
-// SECTION 1
-.section1 {
-
-}
-
-.section1>b {
-
+.sections .section1>b {
+  font: 700 1.5rem/24px "Inter";
+  letter-spacing: .03rem;
 }
 
 .section1>span {
-
+  display: block;
+  font: 500 1.25rem/28px "Poppins";
 }
 
 .section1>p {
-
+  margin: 24px 0 10px;
 }
 
 .section1 .input {
-
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #FAFAFA
 }
 
 .section1 .input>input {
-
+  outline: none;
+  border: none;
+  color: #FAFAFA;
+  background-color: transparent;
+  padding: 12px 0 12px 16px;
 }
 
-.section1 .input>svg {
+.section1 .input>label {
+  cursor: pointer;
+  padding: 10px;
+}
 
+.section1 .input svg {
+  width: 22px;
+  height: 22px;
 }
 
 .copyRights {
@@ -72,78 +80,18 @@
   margin: 0 auto;
 }
 
-
-
-
-// SECTION 2
 .section2 {
-
-}
-
-.section2>b {
-
-}
-
-.section2>ul {
-
-}
-
-.section2>ul>li {
-
-}
-
-
-
-
-// SECTION 3
-.section3>b {
-
-}
-
-.section3>ul {
-
-}
-
-.section3>ul>li {
-
-}
-
-
-
-
-
-// SECTION 4
-.section4>b {
-
-}
-
-.section4>ul {
-
-}
-
-.section4>ul>li {
-
-}
-
-
-
-
-
-// SECTION 5
-.section5 {
-
-}
-
-.section5>b {
-
+  width: 175px;
 }
 
 .section5>p {
-
+  font: 500 .8rem/18px "Poppins";
+  color: #afafaf;
 }
 
 .section5 .appInfo {
   display: flex;
+  margin: 8px 0 20px;
 }
 
 .section5 .qrCode {
@@ -154,13 +102,9 @@
   margin-right: 16px;
 }
 
-.section5 .qrCode>img {
+.section5 .qrCode>img {}
 
-}
-
-.section5 .downloadButtons {
-
-}
+.section5 .downloadButtons {}
 
 .downloadButtons>button {
   display: block;
@@ -190,16 +134,21 @@
 
 .socialMedia>a {
 
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
-.socialMedia>a>svg {
-
-}
-
-
-
-
+.socialMedia>a>svg {}
 
 .copyRights {
+  font: 400 1rem/24px "Poppins";
+  color: #f9f9f970;
+  display: flex;
+  align-items: center;
+}
 
+.copyRights>span {
+  font-size: 1.6rem;
+  margin-right: 6px;
 }
