@@ -1,16 +1,28 @@
-import styles from './Nav.module.scss'
+import { NavLink } from "react-router-dom";
+import styles from "./Nav.module.scss";
 
 const Nav = () => {
   return (
     <nav className={styles.nav}>
       <ul>
-        <li><a href="/#" className={styles.active}>Home</a></li>
-        <li><a href="/#">Contact</a></li>
-        <li><a href="/#">About</a></li>
-        <li><a href="/#">Sign Up</a></li>
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/contact">Contact</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/signup">Sign Up</NavLink>
+        </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

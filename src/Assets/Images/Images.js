@@ -18,6 +18,8 @@ import correctSign from "./correct-sign-logo.webp"
 import googlePlay from "./google-play.png"
 import appStore from "./appstore.png"
 import qrCode from "./qr-code.webp"
+import signUpImg from "./signup-img.jpg"
+import googleIcon from "./google-icon.png"
 // import  from "."
 
 export {
@@ -41,4 +43,6 @@ export {
   googlePlay,
   appStore,
   qrCode,
+  signUpImg,
+  googleIcon,
 }

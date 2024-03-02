@@ -34,7 +34,7 @@
   transition: opacity .3s;
 }
 
-.nav ul li a.active::before {
+.nav ul li a[class=active]::before {
   opacity: .5;
 }
 

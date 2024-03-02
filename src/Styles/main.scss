@@ -54,6 +54,10 @@ svg {
   display: flex;
 }
 
+main {
+  min-height: 100vh;
+}
+
 .skip-content {
   position: absolute;
   left: 0;
