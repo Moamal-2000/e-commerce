@@ -5,11 +5,13 @@ import SignUpForm from "./SignUpForm";
 const SignUp = () => {
   return (
     <main className={styles.signUpPage}>
-      <div className={styles.imgHolder}>
-        <img src={signUpImg} alt="Shopping cart and phone" />
-      </div>
+      <div className={styles.container}>
+        <div className={styles.imgHolder}>
+          <img src={signUpImg} alt="Shopping cart and phone" />
+        </div>
 
-      <SignUpForm />
+        <SignUpForm />
+      </div>
     </main>
   );
 };

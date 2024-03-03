@@ -1,6 +1,28 @@
+@import "../../Styles/mixins.scss";
+
+.form {
+  max-width: 371px;
+  width: 371px;
+  margin: 0 120px;
+}
+
+@include medium {
+  .form {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .form>h2 {
   font: 500 2.25rem/30px "Inter";
   letter-spacing: .04rem;
+  width: max-content;
+}
+
+@include small {
+  .form>h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .form>p {
@@ -30,9 +52,8 @@
 }
 
 .createAccBtn {
-  width: 371px;
-  height: 56px;
-  padding: 16px 122px 16px 122px;
+  width: 100%;
+  padding: 16px;
   border-radius: 4px;
   background-color: var(--tomato);
   color: var(--white);
@@ -42,12 +63,12 @@
 }
 
 .signInBtn {
-  width: 371px;
-  height: 56px;
-  padding: 16px 86px 16px 86px;
+  width: 100%;
+  padding: 16px;
   border-radius: 4px;
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: 1px solid #00000066;
   font: 400 1rem/24px "Poppins";
