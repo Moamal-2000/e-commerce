@@ -1,0 +1,38 @@
+@import "../../Styles/mixins.scss";
+
+.LogInPage {
+  margin-top: 75px;
+  margin-bottom: 120px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+@include large {
+  .container {
+    flex-direction: column-reverse;
+  }
+}
+
+@include medium {
+  .container {
+    width: 94%;
+    margin: 0 auto;
+  }
+}
+
+.imgHolder {
+  max-width: 805px;
+  max-height: 781px;
+  border-radius: 0 4px 4px 0;
+}
+
+@include large {
+  .imgHolder {
+    max-width: 400px;
+    max-height: none;
+    margin-top: 50px;
+  }
+}

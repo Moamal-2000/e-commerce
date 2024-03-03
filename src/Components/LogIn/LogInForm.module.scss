@@ -1,0 +1,74 @@
+@import "../../Styles/mixins.scss";
+
+.form {
+  max-width: 371px;
+  width: 371px;
+  margin: 0 120px;
+}
+
+@include medium {
+  .form {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.form>h2 {
+  font: 500 2.25rem/30px "Inter";
+  letter-spacing: .04rem;
+  width: max-content;
+}
+
+@include small {
+  .form>h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.form>p {
+  margin: 20px 0 30px;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs>input {
+  border: none;
+  outline: none;
+  border-bottom: solid 1px #7f7f7f;
+  padding-bottom: 8px;
+  color: #000;
+  font: 400 1rem/24px "Poppins";
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.inputs>input::placeholder {
+  color: #999999;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 20px;
+}
+
+.loginBtn {
+  width: 143px;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: var(--tomato);
+  color: var(--white);
+  border: none;
+  font: 500 1rem/24px "Poppins";
+}
+
+.buttons>a {
+  color: var(--tomato);
+  font: 400 1rem/24px "Poppins"
+}

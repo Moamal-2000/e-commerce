@@ -17,7 +17,7 @@ const useNavToolsProps = () => {
   const navToolsProps =
     path === "/"
       ? homePageNavTools
-      : path === "/signup"
+      : path === "/signup" || "/login"
       ? signUpPageNavTools
       : defaultNavTools;
 

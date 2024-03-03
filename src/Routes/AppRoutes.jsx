@@ -6,8 +6,9 @@ import {
 } from "react-router-dom";
 import Home from "../Components/Home/Home";
 import NotFoundPage from "../Components/Shared/NotFoundPage/NotFoundPage";
-import RoutesLayout from "./RoutesLayout";
+import LogIn from "../Components/LogIn/LogIn";
 import SignUp from "../Components/SignUp/SignUp";
+import RoutesLayout from "./RoutesLayout";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="*" element={<NotFoundPage />} />
       <Route index element={<Home />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/login" element={<LogIn />} />
       {/* <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} /> */}
     </Route>
