@@ -1,11 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+const userDataLocal = window.localStorage.getItem("usersData");
+
 const initialState = {
   loginInfo: {
     userName: "Lily Watson",
     emailOrPhone: "lily.wastons@gmail.com",
     password: "random-password1234",
   },
+  usersData: [
+    {
+      userName: "Lily Watson",
+      emailOrPhone: "lily.wastons@gmail.com",
+      password: "random-password1234",
+    },
+  ],
 };
 
 const userSlice = createSlice({
@@ -13,7 +22,9 @@ const userSlice = createSlice({
   name: "userSlice",
   reducers: {
     setLoginData: (state, { payload }) => {
-      Object.assign(state.loginInfo, payload);
+      state.loginInfo = { ...state.loginInfo, ...payload };
+      state.usersData = [...state.usersData, payload];
+      window.localStorage.setItem("usersData", JSON.stringify(state.usersData));
     },
   },
 });
