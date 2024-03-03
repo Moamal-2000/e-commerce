@@ -19,7 +19,7 @@ const SignUpForm = () => {
           Create Account
         </button>
 
-        <button type="button" className={styles.signInBtn}>
+        <button type="button" className={styles.signUpBtn}>
           <img src={googleIcon} alt="Colored Google icon" />
           <span>Sign up with Google</span>
         </button>

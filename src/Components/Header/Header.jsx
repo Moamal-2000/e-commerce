@@ -4,9 +4,11 @@ import NavTools from "../Shared/MidComponents/NavTools";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import styles from "./Header.module.scss";
 import Nav from "./Nav";
+import useNavToolsProps from "../../Hooks/useNavToolsProps";
 
 const Header = () => {
   const dispatch = useDispatch();
+  const navToolsProps = useNavToolsProps()
 
   function openMobileNav() {
     dispatch(toggleState({ key: "isMobileMenuActive", value: true }));
@@ -24,7 +26,7 @@ const Header = () => {
 
         <div className={styles.headerContent}>
           <Nav />
-          <NavTools showUser={false} />
+          <NavTools {...navToolsProps} />
         </div>
 
         <button
