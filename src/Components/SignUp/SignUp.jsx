@@ -5,7 +5,7 @@ import SignUpForm from "./SignUpForm";
 const SignUp = () => {
   return (
     <main className={styles.signUpPage}>
-      <div className="imgHolder">
+      <div className={styles.imgHolder}>
         <img src={signUpImg} alt="Shopping cart and phone" />
       </div>
 

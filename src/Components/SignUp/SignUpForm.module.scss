@@ -1,55 +1,99 @@
-.form {
-  
-}
-
 .form>h2 {
-
+  font: 500 2.25rem/30px "Inter";
+  letter-spacing: .04rem;
 }
 
 .form>p {
-
+  margin: 20px 0 30px;
 }
 
 .inputs {
-
+  display: flex;
+  flex-direction: column;
 }
 
 .inputs>input {
+  border: none;
+  outline: none;
+  border-bottom: solid 1px #7f7f7f;
+  padding-bottom: 8px;
+  color: #000;
+  font: 400 1rem/24px "Poppins";
 
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
 }
 
-.buttons {
-
-}
-
-.buttons>button {
-
+.inputs>input::placeholder {
+  color: #999999;
 }
 
 .createAccBtn {
-
+  width: 371px;
+  height: 56px;
+  padding: 16px 122px 16px 122px;
+  border-radius: 4px;
+  background-color: var(--tomato);
+  color: var(--white);
+  border: none;
+  font: 500 1rem/24px "Poppins";
+  margin: 40px 0 20px;
 }
 
 .signInBtn {
-
+  width: 371px;
+  height: 56px;
+  padding: 16px 86px 16px 86px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #00000066;
+  font: 400 1rem/24px "Poppins";
 }
 
 .signInBtn>img {
-
-}
-
-.signInBtn>span {
-
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
 }
 
 .buttons>p {
-
+  font: 400 1rem/24px "Poppins";
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 40px auto 0;
 }
 
 .buttons>p>span {
-  
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .buttons>p>a {
+  color: #4d4d4d;
+  position: relative;
+  top: -2px;
+  transition: color .2s;
 
+  &:hover {
+    color: #000;
+  }
+}
+
+.buttons>p>a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #4d4d4d;
+  transition: background-color .2s;
+}
+
+.buttons>p>a:hover::before {
+  background-color: #000;
 }
