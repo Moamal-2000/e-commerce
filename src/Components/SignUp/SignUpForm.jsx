@@ -1,17 +1,75 @@
-import { NavLink } from "react-router-dom";
+import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
 import { googleIcon } from "../../Assets/Images/Images";
 import styles from "./SignUpForm.module.scss";
+import { setLoginData } from "../../Features/userSlice";
 
 const SignUpForm = () => {
+  const dispatch = useDispatch();
+  const navigateTo = useNavigate()
+  const username = useRef("");
+  const emailOrPhone = useRef("");
+  const password = useRef("");
+
+  function signUp(e) {
+    e.preventDefault();
+    const inputs = e.target.querySelectorAll("input");
+
+    const formDataObj = new FormData(e.target);
+    const formData = {};
+
+    for (let pair of formDataObj.entries()) {
+      formData[pair[0]] = pair[1];
+    }
+
+    const isFormValid = signUpValidation(inputs);
+    if (isFormValid) storeLoginData(formData)
+  }
+
+  function signUpValidation(inputs) {
+    let isFormValid = false;
+
+    inputs.forEach((input) => {
+      const addOrRemoveClass = input.value === "" ? "add" : "remove";
+      input.classList[addOrRemoveClass]("invalid");
+      isFormValid = true;
+
+      if (addOrRemoveClass === "add") isFormValid = false;
+    });
+
+    return isFormValid
+  }
+
+  function storeLoginData(data) {
+    dispatch(setLoginData(data))
+    navigateTo("/")
+  }
+
   return (
-    <form className={styles.form}>
+    <form action="GET" className={styles.form} onSubmit={signUp}>
       <h2>Create an account</h2>
       <p>Enter your details below</p>
 
       <div className={styles.inputs}>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email or Phone Number" />
-        <input type="password" placeholder="Password" />
+        <input
+          type="text"
+          name="username"
+          placeholder="Name"
+          onChange={(e) => (username.current = e.target.value)}
+        />
+        <input
+          type="text"
+          name="emailOrPhone"
+          placeholder="Email or Phone Number"
+          onChange={(e) => (emailOrPhone.current = e.target.value)}
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          onChange={(e) => (password.current = e.target.value)}
+        />
       </div>
 
       <div className={styles.buttons}>

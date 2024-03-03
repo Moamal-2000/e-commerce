@@ -1,14 +1,15 @@
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { toggleState } from "../../Features/globalSlice";
+import useNavToolsProps from "../../Hooks/useNavToolsProps";
 import NavTools from "../Shared/MidComponents/NavTools";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import styles from "./Header.module.scss";
 import Nav from "./Nav";
-import useNavToolsProps from "../../Hooks/useNavToolsProps";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const navToolsProps = useNavToolsProps()
+  const navToolsProps = useNavToolsProps();
 
   function openMobileNav() {
     dispatch(toggleState({ key: "isMobileMenuActive", value: true }));
@@ -18,11 +19,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.space}>
-          <h1>
-            <a href="\#">Exclusive</a>
-          </h1>
-        </div>
+        <h1>
+          <Link to="/">Exclusive</Link>
+        </h1>
 
         <div className={styles.headerContent}>
           <Nav />

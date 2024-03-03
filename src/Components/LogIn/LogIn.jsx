@@ -1,6 +1,6 @@
 import { signUpImg } from "../../Assets/Images/Images";
-import LogInForm from "./LogInForm";
 import styles from "./LogIn.module.scss";
+import LogInForm from "./LogInForm";
 
 const LogIn = () => {
   return (
