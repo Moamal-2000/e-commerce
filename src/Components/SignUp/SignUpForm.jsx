@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { googleIcon } from "../../Assets/Images/Images";
-import { newSignUp } from "../../Features/userSlice";
+import { newSignUp, setLoginData } from "../../Features/userSlice";
 import { checkIsObjExistInArr } from "../../Functions/helper";
 import styles from "./SignUpForm.module.scss";
 
@@ -26,16 +26,12 @@ const SignUpForm = () => {
     }
 
     const isFormValid = signUpValidation(inputs);
+
     if (isFormValid) {
-      // ! Stopped here
-      /*
-       * Check if email or username are exist among data instead of the whole object data
-       */
       const isUserAlreadySignedUp = checkIsObjExistInArr(usersData, formData);
-      if (isUserAlreadySignedUp) {
-        console.log("Yes");
-      } else {
+      if (!isUserAlreadySignedUp) {
         dispatch(newSignUp(formData));
+        dispatch(setLoginData(formData));
         navigateTo("/");
       }
     }
