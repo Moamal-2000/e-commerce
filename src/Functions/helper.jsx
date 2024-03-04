@@ -44,3 +44,18 @@ export function getFormattedTime(time) {
 }
 
 export const padStart = (num) => `${num}`.padStart(2, "0");
+
+export function checkIsObjExistInArr(arr, obj) {
+  for (let i = 0; i < arr.length; i++) {
+    let dataIsEqual = [];
+
+    for (const key in arr[i]) {
+      dataIsEqual.push(arr[i][key] === obj[key]);
+    }
+
+    const isObjExist = dataIsEqual.every((val) => val);
+    if (isObjExist) return true;
+  }
+
+  return false;
+}

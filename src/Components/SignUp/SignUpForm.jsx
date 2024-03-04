@@ -1,13 +1,15 @@
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { googleIcon } from "../../Assets/Images/Images";
+import { newSignUp } from "../../Features/userSlice";
+import { checkIsObjExistInArr } from "../../Functions/helper";
 import styles from "./SignUpForm.module.scss";
-import { setLoginData } from "../../Features/userSlice";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
-  const navigateTo = useNavigate()
+  const navigateTo = useNavigate();
+  const { usersData } = useSelector((state) => state.user);
   const username = useRef("");
   const emailOrPhone = useRef("");
   const password = useRef("");
@@ -24,7 +26,19 @@ const SignUpForm = () => {
     }
 
     const isFormValid = signUpValidation(inputs);
-    if (isFormValid) storeLoginData(formData)
+    if (isFormValid) {
+      // ! Stopped here
+      /*
+       * Check if email or username are exist among data instead of the whole object data
+       */
+      const isUserAlreadySignedUp = checkIsObjExistInArr(usersData, formData);
+      if (isUserAlreadySignedUp) {
+        console.log("Yes");
+      } else {
+        dispatch(newSignUp(formData));
+        navigateTo("/");
+      }
+    }
   }
 
   function signUpValidation(inputs) {
@@ -38,12 +52,7 @@ const SignUpForm = () => {
       if (addOrRemoveClass === "add") isFormValid = false;
     });
 
-    return isFormValid
-  }
-
-  function storeLoginData(data) {
-    dispatch(setLoginData(data))
-    navigateTo("/")
+    return isFormValid;
   }
 
   return (
