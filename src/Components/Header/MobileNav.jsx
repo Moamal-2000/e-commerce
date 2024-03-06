@@ -24,7 +24,7 @@ const MobileNav = () => {
     >
       <div className={styles.userInfo}>
         <div className={styles.img}>
-          <img src={userImg} alt="user's picutre" />
+          <img src={userImg} alt="user's picture" />
         </div>
 
         <p>

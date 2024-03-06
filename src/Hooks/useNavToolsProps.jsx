@@ -1,8 +1,15 @@
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 
 const useNavToolsProps = () => {
+  const { isSignIn } = useSelector((state) => state.user);
   const location = useLocation();
   const path = location.pathname;
+  const signInNavTools = {
+    showHeart: true,
+    showCart: true,
+    showUser: true,
+  };
   const homePageNavTools = {
     showUser: false,
   };
@@ -14,12 +21,13 @@ const useNavToolsProps = () => {
   const defaultNavTools = {
     showUser: true,
   };
-  const navToolsProps =
-    path === "/"
-      ? homePageNavTools
-      : path === "/signup" || "/login"
-      ? signUpPageNavTools
-      : defaultNavTools;
+  const navToolsProps = isSignIn
+    ? signInNavTools
+    : path === "/"
+    ? homePageNavTools
+    : path === "/signup" || "/login"
+    ? signUpPageNavTools
+    : defaultNavTools;
 
   return navToolsProps;
 };
