@@ -102,14 +102,18 @@
   transform: scale(.6);
 }
 
-.userContainer.active {
-  background-color: var(--tomato);
-  fill: var(--white);
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
+.userContainer {
+  position: relative;
+  min-width: 32px;
+  min-height: 32px;
   padding: 10px;
-  @include center-x-y;
+
+  &.active {
+    background-color: var(--tomato);
+    fill: var(--white);
+    border-radius: 50%;
+    @include center-x-y;
+  }
 }
 
 .userContainer svg {

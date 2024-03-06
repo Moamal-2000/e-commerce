@@ -1,0 +1,45 @@
+@import "../../../Styles/mixins.scss";
+
+.userMenu {
+  position: absolute;
+  left: -183px;
+  min-width: 224px;
+  border-radius: 4px;
+  z-index: 5;
+  background: rgb(70 70 70 / 70%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
+  @include prefix(backdrop-filter, blur(24.4px));
+  opacity: 0;
+  pointer-events: none;
+  top: 30px;
+  transition: opacity .3s ease-in-out, top .2s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    top: 44px;
+  }
+}
+
+.userMenu>a {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  padding-bottom: 6px;
+
+  &:last-child {
+    padding-bottom: 16px;
+  }
+}
+
+.userMenu>a>svg {
+  fill: var(--white);
+  width: 20px;
+  height: 20px;
+}
+
+.userMenu>a>span {
+  color: var(--white);
+  font: 400 .85rem/21px "Poppins";
+  margin-left: 8px;
+}

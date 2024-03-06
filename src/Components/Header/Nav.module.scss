@@ -16,6 +16,16 @@
   }
 }
 
+@include medium {
+  .nav ul li {
+
+    &:not(:last-child) {
+      margin-right: 18px;
+      font-size: .9rem;
+    }
+  }
+}
+
 .nav ul li a {
   padding: 2px 0;
   color: var(--black);

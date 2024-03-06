@@ -1,20 +1,16 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { userImg } from "../../Assets/Images/Images";
-import { signOut } from "../../Features/userSlice";
+import useSignOut from "../../Hooks/useSignOut";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import styles from "./MobileNav.module.scss";
 
 const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
   const { loginInfo, isSignIn } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
   const { username } = loginInfo;
   const userText = username === "Guest" ? "There" : username;
-
-  function handleSignOut() {
-    dispatch(signOut());
-  }
+  const handleSignOut = useSignOut();
 
   return (
     <div

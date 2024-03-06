@@ -27,7 +27,7 @@
 
 @include large {
   .container {
-    grid-template-columns: 24% 1fr;
+    grid-template-columns: 19% 1fr;
   }
 }
 
@@ -47,6 +47,7 @@
 }
 
 .container h1 {
+  width: fit-content;
   font-size: 1.5rem;
   color: var(--black);
 

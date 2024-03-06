@@ -1,16 +1,14 @@
 import { useSelector } from "react-redux";
+import useToggle from "../../../Hooks/useToggle";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import styles from "./NavTools.module.scss";
+import UserMenu from "./UserMenu";
 
-const NavTools = ({
-  showHeart = true,
-  showCart = true,
-  showUser = true,
-  activeUser = false,
-}) => {
+const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
   const { addedProducts, addedFavorites } = useSelector(
     (state) => state.products
   );
+  const [isMenuUserActive, toggleMenuUserActive] = useToggle(false);
 
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
@@ -51,10 +49,16 @@ const NavTools = ({
           <button
             type="button"
             className={`${styles.userContainer} ${
-              activeUser ? styles.active : ""
+              isMenuUserActive ? styles.active : ""
             }`}
+            onClick={() => toggleMenuUserActive()}
           >
             <SvgIcon name="user" />
+
+            <UserMenu
+              isActive={isMenuUserActive}
+              toggler={toggleMenuUserActive}
+            />
           </button>
         )}
       </div>
