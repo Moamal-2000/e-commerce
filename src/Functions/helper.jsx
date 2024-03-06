@@ -59,3 +59,12 @@ export function checkIsObjExistInArr(arr, obj) {
 
   return false;
 }
+
+export function uniqueArr(arr) {
+  return [...new Set(arr)]
+}
+
+export function compareDataToObjValue(data, obj, keyName) {
+  const filteredData = data.filter(dataObj => dataObj[keyName] === obj[keyName]);
+  return filteredData.length > 0
+}

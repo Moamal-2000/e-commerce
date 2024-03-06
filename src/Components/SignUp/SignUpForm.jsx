@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { googleIcon } from "../../Assets/Images/Images";
 import { newSignUp, setLoginData } from "../../Features/userSlice";
-import { checkIsObjExistInArr } from "../../Functions/helper";
+import { simpleValidationCheck } from "../../Functions/componentsFunctions";
+import { compareDataToObjValue, uniqueArr } from "../../Functions/helper";
 import styles from "./SignUpForm.module.scss";
 
 const SignUpForm = () => {
@@ -25,30 +26,21 @@ const SignUpForm = () => {
       formData[pair[0]] = pair[1];
     }
 
-    const isFormValid = signUpValidation(inputs);
+    const isFormValid = simpleValidationCheck(inputs);
 
     if (isFormValid) {
-      const isUserAlreadySignedUp = checkIsObjExistInArr(usersData, formData);
-      if (!isUserAlreadySignedUp) {
-        dispatch(newSignUp(formData));
-        dispatch(setLoginData(formData));
-        navigateTo("/");
-      }
+      const isUserAlreadySignedUp = compareDataToObjValue(
+        usersData,
+        formData,
+        "emailOrPhone"
+      );
+      if (isUserAlreadySignedUp) return;
+
+      const uniqueUsersData = uniqueArr([...usersData, formData]);
+      dispatch(newSignUp(uniqueUsersData));
+      dispatch(setLoginData(formData));
+      navigateTo("/");
     }
-  }
-
-  function signUpValidation(inputs) {
-    let isFormValid = false;
-
-    inputs.forEach((input) => {
-      const addOrRemoveClass = input.value === "" ? "add" : "remove";
-      input.classList[addOrRemoveClass]("invalid");
-      isFormValid = true;
-
-      if (addOrRemoveClass === "add") isFormValid = false;
-    });
-
-    return isFormValid;
   }
 
   return (

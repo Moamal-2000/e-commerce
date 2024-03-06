@@ -21,7 +21,7 @@ const userSlice = createSlice({
   name: "userSlice",
   reducers: {
     newSignUp: (state, { payload }) => {
-      state.usersData = [...state.usersData, { ...payload }];
+      state.usersData = payload;
       state.isSignIn = true;
     },
     setLoginData: (state, { payload }) => {

@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { newSignUp } from "../../Features/userSlice";
+import { simpleValidationCheck } from "../../Functions/componentsFunctions";
+import { uniqueArr } from "../../Functions/helper";
 import styles from "./LogInForm.module.scss";
 
 const LogInForm = () => {
@@ -15,12 +17,11 @@ const LogInForm = () => {
     const inputs = e.target.querySelectorAll("input");
     e.preventDefault();
 
-    const isFormValid = loginValidation(inputs);
+    const isFormValid = simpleValidationCheck(inputs);
     if (!isFormValid) return;
 
-    const validationInputs = filterLoginsData();
-    checkFormValidation(inputs, validationInputs);
-    const isCorrectLoginData = checkLoginData(validationInputs);
+    const dataByEmail = filterLoginByEmailOrPhone();
+    const isCorrectLoginData = checkLoginPassword(dataByEmail);
 
     const formDataObj = new FormData(e.target);
     const formData = {};
@@ -30,37 +31,10 @@ const LogInForm = () => {
     }
 
     if (isCorrectLoginData) {
-      console.log("Yes");
-      dispatch(newSignUp(formData));
-      // navigateTo("/");
+      const uniqueUsersData = uniqueArr(usersData);
+      dispatch(newSignUp(uniqueUsersData));
+      navigateTo("/");
     }
-  }
-
-  function loginValidation(inputs) {
-    let isFormValid = false;
-
-    inputs.forEach((input) => {
-      const addOrRemoveClass = input.value === "" ? "add" : "remove";
-      input.classList[addOrRemoveClass]("invalid");
-      isFormValid = true;
-
-      if (addOrRemoveClass === "add") isFormValid = false;
-    });
-
-    return isFormValid;
-  }
-
-  function filterLoginsData() {
-    const dataByEmailOrPhone = filterLoginByEmailOrPhone();
-    const dataByPassword = filterLoginByPassword(dataByEmailOrPhone);
-    return [dataByEmailOrPhone.length !== 0, dataByPassword.length !== 0];
-  }
-
-  function checkFormValidation(inputs, validationData) {
-    inputs.forEach((input, i) => {
-      const addOrRemoveClass = !validationData[i] ? "add" : "remove";
-      input.classList[addOrRemoveClass]("invalid");
-    });
   }
 
   function filterLoginByEmailOrPhone() {
@@ -69,15 +43,9 @@ const LogInForm = () => {
     );
   }
 
-  function filterLoginByPassword(data) {
-    return data?.filter((user) => user.password === password.current);
-  }
-
-  function checkLoginData(validationData) {
-    for (let i = 0; i < validationData.length; i++)
-      if (!validationData[i]) return false;
-
-    return true;
+  function checkLoginPassword(filteredUsersData) {
+    const isPasswordValid = filteredUsersData[0]?.password === password.current;
+    return isPasswordValid;
   }
 
   return (
@@ -90,14 +58,12 @@ const LogInForm = () => {
           type="text"
           name="emailOrPhone"
           placeholder="Email or Phone Number"
-          value={emailOrPhone.current}
           onChange={(e) => (emailOrPhone.current = e.target.value)}
         />
         <input
           type="password"
           name="Password"
           placeholder="Password"
-          value={password.current}
           onChange={(e) => (password.current = e.target.value)}
         />
       </div>
