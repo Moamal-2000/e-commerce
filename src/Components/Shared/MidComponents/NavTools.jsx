@@ -29,7 +29,7 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
       <div className={styles.tools}>
         {showHeart && (
           <button type="button" className={styles.addedProducts}>
-            <SvgIcon name="love" />
+            <SvgIcon name="heart" />
             {addedProducts > 0 && (
               <span>{addedProducts > 99 ? "99+" : addedProducts}</span>
             )}

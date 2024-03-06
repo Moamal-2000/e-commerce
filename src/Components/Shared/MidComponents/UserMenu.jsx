@@ -29,6 +29,11 @@ const UserMenu = ({ isActive, toggler }) => {
         <span>My Reviews</span>
       </Link>
 
+      <Link to="/wishlist">
+        <SvgIcon name="heart" />
+        <span>Wishlist</span>
+      </Link>
+
       <Link onClick={handleSignOut}>
         <SvgIcon name="boxArrowLeft" />
         <span>Logout</span>
