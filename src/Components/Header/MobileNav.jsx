@@ -57,7 +57,7 @@ const MobileNav = () => {
           </li>
           <li>
             <a href="/#">
-              <SvgIcon name="love" />
+              <SvgIcon name="heart" />
               <span>Favorite</span>
             </a>
           </li>

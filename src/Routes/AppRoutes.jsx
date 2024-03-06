@@ -5,10 +5,10 @@ import {
   createRoutesFromChildren,
 } from "react-router-dom";
 import Home from "../Components/Home/Home";
-import NotFoundPage from "../Components/Shared/NotFoundPage/NotFoundPage";
 import LogIn from "../Components/LogIn/LogIn";
 import SignUp from "../Components/SignUp/SignUp";
 import RoutesLayout from "./RoutesLayout";
+import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
