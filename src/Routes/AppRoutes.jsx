@@ -9,6 +9,7 @@ import LogIn from "../Components/LogIn/LogIn";
 import SignUp from "../Components/SignUp/SignUp";
 import RoutesLayout from "./RoutesLayout";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
+import WishList from "../Components/WishList/WishList";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
@@ -17,8 +18,7 @@ const AppRoutes = () => {
       <Route index element={<Home />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<LogIn />} />
-      {/* <Route path="/contact" element={<Contact />} />
-      <Route path="/about" element={<About />} /> */}
+      <Route path="/wishlist" element={<WishList />} />
     </Route>
   );
 

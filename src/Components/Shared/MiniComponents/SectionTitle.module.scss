@@ -8,6 +8,11 @@
   font: 600 1rem "Poppins";
 }
 
+.sectionTitle.type2 .event {
+  color: #000;
+  font-weight: 500;
+}
+
 @include small {
   .sectionTitle .event {
     font-size: .9rem;
