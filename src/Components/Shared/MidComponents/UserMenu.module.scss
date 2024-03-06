@@ -2,7 +2,7 @@
 
 .userMenu {
   position: absolute;
-  left: -183px;
+  left: -191px;
   min-width: 224px;
   border-radius: 4px;
   z-index: 5;
@@ -17,18 +17,17 @@
   &.active {
     opacity: 1;
     pointer-events: all;
-    top: 44px;
+    top: 36px;
   }
 }
 
 .userMenu>a {
   display: flex;
   align-items: center;
-  padding: 16px;
-  padding-bottom: 6px;
+  padding: 12px;
 
-  &:last-child {
-    padding-bottom: 16px;
+  &:hover {
+    background-color: #fff;
   }
 }
 
@@ -38,8 +37,24 @@
   height: 20px;
 }
 
+.userMenu>a:hover svg {
+  fill: #000;
+
+  & path {
+    stroke: #000;
+  }
+
+  & circle {
+    stroke: #000;
+  }
+}
+
 .userMenu>a>span {
   color: var(--white);
   font: 400 .85rem/21px "Poppins";
   margin-left: 8px;
+}
+
+.userMenu>a:hover span {
+  color: #000;
 }

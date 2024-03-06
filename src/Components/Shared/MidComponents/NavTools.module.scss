@@ -104,9 +104,7 @@
 
 .userContainer {
   position: relative;
-  min-width: 32px;
-  min-height: 32px;
-  padding: 10px;
+  padding: 6px;
 
   &.active {
     background-color: var(--tomato);
@@ -116,8 +114,12 @@
   }
 }
 
-.userContainer svg {
+.userContainer>svg {
   width: 20px;
   height: 20px;
   transition: fill .2s;
+}
+
+.userContainer.active>svg {
+  scale: .7;
 }

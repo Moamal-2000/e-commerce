@@ -645,11 +645,6 @@ export const iconsData = [
             strokeWidth="1.5"
           />
         </g>
-        <defs>
-          <clipPath id="clip0_2677_458">
-            <rect width="24" height="24" fill="white" />
-          </clipPath>
-        </defs>
       </svg>
     ),
   },
