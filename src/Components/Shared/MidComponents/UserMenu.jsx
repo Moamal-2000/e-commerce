@@ -14,7 +14,7 @@ const UserMenu = ({ isActive, toggler }) => {
         <span>Manage My Account</span>
       </Link>
 
-      <Link to="/orders">
+      <Link to="/cart">
         <SvgIcon name="cart" />
         <span>My Order</span>
       </Link>

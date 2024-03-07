@@ -10,6 +10,7 @@ import SignUp from "../Components/SignUp/SignUp";
 import RoutesLayout from "./RoutesLayout";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import WishList from "../Components/WishList/WishList";
+import Cart from "../Components/Cart/Cart";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
@@ -19,6 +20,7 @@ const AppRoutes = () => {
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/wishlist" element={<WishList />} />
+      <Route path="/cart" element={<Cart />} />
     </Route>
   );
 
