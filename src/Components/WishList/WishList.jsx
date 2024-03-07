@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
+import ForYouProducts from "./ForYouProducts";
 import styles from "./WishList.module.scss";
 import WishProducts from "./WishProducts";
 
 const WishList = () => {
-  const lengthOfWishList = 4;
+  const { wishList } = useSelector((state) => state.products);
+  const lengthOfWishList = wishList.length;
+
   return (
     <div className="container">
       <main className={styles.wishListPage}>
@@ -24,7 +28,7 @@ const WishList = () => {
             <button type="button">See All</button>
           </header>
 
-          {/* Products here */}
+          <ForYouProducts />
         </section>
       </main>
     </div>

@@ -1,46 +1,46 @@
 @import "../../Styles/mixins.scss";
 
-.wishProducts {
+.forYouProducts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  min-height: 220px;
+  min-height: 351px;
 }
 
 @media (max-width: 1300px) {
-  .wishProducts {
+  .forYouProducts {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
   }
 }
 
 @include large {
-  .wishProducts {
+  .forYouProducts {
     grid-template-columns: repeat(2, 322px);
   }
 }
 
 @include small {
-  .wishProducts {
+  .forYouProducts {
     grid-template-columns: 1fr;
     justify-items: center;
   }
 }
 
 @include large {
-  .wishProducts>* {
+  .forYouProducts>* {
     width: 322px;
   }
 }
 
 @include small {
-  .wishProducts>* {
+  .forYouProducts>* {
     width: 322px;
   }
 }
 
 @include very-small {
-  .wishProducts>* {
+  .forYouProducts>* {
     width: 100%;
   }
 }
