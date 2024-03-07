@@ -50,6 +50,22 @@
   font: 400 .75rem "Poppins";
 }
 
+.layerContent .new {
+  background-color: #00FF66;
+  color: var(--white);
+  width: 51px;
+  height: 26px;
+  padding: 4px 12px 4px 12px;
+  border-radius: 4px;
+  user-select: none;
+  font: 400 .75rem "Poppins";
+
+  &.hide {
+    display: none;
+  }
+}
+
+
 .layerContent .discount.hide {
   opacity: 0;
   pointer-events: none;
@@ -64,11 +80,14 @@
   transform: translateX(50px);
 }
 
-.card:hover .icons {
+.card:hover .icons,
+.card.noHover .icons {
   transform: translateX(0);
 }
 
 .layerContent .icons .iconHolder {
+  outline: none;
+  border: none;
   width: 34px;
   height: 34px;
   background: var(--white);
@@ -78,17 +97,20 @@
   cursor: pointer;
 }
 
-.layerContent .icons .iconHolder i {
+.layerContent .icons .iconHolder svg {
   font-size: .9rem;
-  transition: color .2s;
+  transition: fill .2s;
+  width: 16px;
+  height: 16px;
 }
 
-.layerContent .icons .iconHolder:first-child:hover i {
-  color: var(--tomato);
+.layerContent .icons .iconHolder:last-child:hover svg {
+  fill: var(--turquoise);
 }
 
-.layerContent .icons .iconHolder:last-child:hover i {
-  color: var(--turquoise);
+.layerContent .icons .iconHolder:first-child:hover svg,
+.layerContent .icons button:hover svg {
+  fill: var(--tomato);
 }
 
 .layerContent .addToCartBtn {
@@ -99,11 +121,10 @@
   bottom: 0;
   border-radius: 0 0 4px 4px;
   background: var(--black);
-  color: var(--white);
-  font: 500 1rem "Poppins";
   width: 100%;
   height: 40px;
   cursor: pointer;
+  @include center-x-y;
   transition: background .2s, transform .4s .1s;
   transform: translateY(50px);
 
@@ -112,8 +133,21 @@
   }
 }
 
-.card:hover .addToCartBtn {
+.card:hover .addToCartBtn,
+.card.noHover .addToCartBtn {
   transform: translateY(0);
+}
+
+.layerContent .addToCartBtn>svg {
+  fill: var(--white);
+  margin-right: 6px;
+  width: 19px;
+  height: 19px;
+}
+
+.addToCartBtn>span {
+  color: var(--white);
+  font: 400 1rem "Poppins";
 }
 
 .productInfo {

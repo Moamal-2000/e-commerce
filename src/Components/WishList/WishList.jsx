@@ -1,5 +1,6 @@
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import styles from "./WishList.module.scss";
+import WishProducts from "./WishProducts";
 
 const WishList = () => {
   const lengthOfWishList = 4;
@@ -13,7 +14,7 @@ const WishList = () => {
             <button type="button">Move All To Bag</button>
           </header>
 
-          {/* Products here */}
+          <WishProducts />
         </section>
 
         <section className={styles.forYou}>

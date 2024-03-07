@@ -61,10 +61,19 @@ export function checkIsObjExistInArr(arr, obj) {
 }
 
 export function uniqueArr(arr) {
-  return [...new Set(arr)]
+  return [...new Set(arr)];
 }
 
 export function compareDataToObjValue(data, obj, keyName) {
-  const filteredData = data.filter(dataObj => dataObj[keyName] === obj[keyName]);
-  return filteredData.length > 0
+  const filteredData = data.filter(
+    (dataObj) => dataObj[keyName] === obj[keyName]
+  );
+  return filteredData.length > 0;
+}
+
+export function checkDateBeforeMonthToPresent(getDate) {
+  const monthByMilliSeconds = 2_629_056_000;
+  const currentDate = new Date().getTime();
+  const requitedDate = new Date(getDate).getTime() + monthByMilliSeconds;
+  return currentDate > requitedDate;
 }

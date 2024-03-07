@@ -1,0 +1,13 @@
+@import "../../Styles/mixins.scss";
+
+.wishProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wishProducts>* {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    margin-right: 30px;
+  }
+}
