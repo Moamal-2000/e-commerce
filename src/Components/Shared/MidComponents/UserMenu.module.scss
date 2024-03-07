@@ -6,9 +6,9 @@
   min-width: 224px;
   border-radius: 4px;
   z-index: 5;
-  background: rgb(70 70 70 / 70%);
+  background: rgb(0 0 0 / 34%);
   box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
-  @include prefix(backdrop-filter, blur(24.4px));
+  backdrop-filter: blur(45.4px);
   opacity: 0;
   pointer-events: none;
   top: 30px;

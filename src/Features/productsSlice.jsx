@@ -1,8 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  addedProducts: 0,
-  addedFavorites: 0,
+  favoritesProducts: [],
+  cartProducts: [],
+  wishList: [],
 };
 
 const productsSlice = createSlice({
