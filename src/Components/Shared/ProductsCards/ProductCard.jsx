@@ -1,4 +1,3 @@
-import { redJoystick } from "../../../Assets/Images/Images";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
 import SvgIcon from "../MiniComponents/SvgIcon";
@@ -37,11 +36,12 @@ const ProductCard = ({
   const hideNewClass = checkDateBeforeMonthToPresent(addedDate)
     ? styles.hide
     : "";
+    console.log(img);
 
   return (
     <div className={`${styles.card} ${noHoverClass}`}>
       <div className={styles.productImg}>
-        <img src={redJoystick} alt={name} title={name} />
+        <img src={img} alt={name} title={name} />
 
         <div className={styles.layerContent}>
           {hideNewClass && (

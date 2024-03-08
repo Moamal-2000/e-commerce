@@ -20,6 +20,21 @@ import appStore from "./appstore.png"
 import qrCode from "./qr-code.webp"
 import signUpImg from "./signup-img.jpg"
 import googleIcon from "./google-icon.png"
+import kidsCar from "./kids-electric-car.png"
+import soccerCleats from "./zoom-soccer-cleats.png"
+import usbGamepad from "./usb-gamepad.png"
+import satinJacket from "./quilted-satin-jacket.png"
+import gamingLaptop from "./gaming-laptop.png"
+import canonCamera from "./canon-camera.png"
+import dogFood from "./breed-dry-dog-food.png"
+import bookshelf from "./small-bookshelf.png"
+import cpuCooler from "./rgb-liquid-cpu-cooler.png"
+import gucciBag from "./gucci-duffle-bag.png"
+import northCoat from "./north-coat.png"
+import comfortChair from "./comfort-chair.png"
+import gamingMonitor from "./gaming-monitor.png"
+import wiredKeyboard from "./wired-keyboard.png"
+import curology from "./curology-product-set.png"
 // import  from "."
 
 export {
@@ -45,4 +60,19 @@ export {
   qrCode,
   signUpImg,
   googleIcon,
+  kidsCar,
+  soccerCleats,
+  usbGamepad,
+  satinJacket,
+  gamingLaptop,
+  canonCamera,
+  dogFood,
+  bookshelf,
+  cpuCooler,
+  gucciBag,
+  northCoat,
+  comfortChair,
+  gamingMonitor,
+  wiredKeyboard,
+  curology,
 }
