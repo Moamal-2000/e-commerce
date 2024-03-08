@@ -1,5 +1,6 @@
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import styles from "./Cart.module.scss";
+import CartButtons from "./CartButtons";
 import CartProducts from "./CartProducts";
 
 const Cart = () => {
@@ -10,6 +11,7 @@ const Cart = () => {
 
         <div className={styles.pageComponents}>
           <CartProducts />
+          <CartButtons />
         </div>
       </main>
     </div>
