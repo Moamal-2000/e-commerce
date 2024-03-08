@@ -1,0 +1,41 @@
+.numberInput {
+  padding: 6px 12px 6px 12px;
+  width: fit-content;
+  border-radius: 4px;
+  border: 1.5px solid #00000066;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.numberInput>input {
+  border: none;
+  outline: none;
+  font: 400 1rem "Poppins";
+  max-width: 33px;
+
+  &::-webkit-inner-spin-button {
+    display: none;
+  }
+}
+
+.buttons {
+  margin-left: 2px;
+}
+
+.buttons>button {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 2px;
+}
+
+.buttons>button:last-child {
+  rotate: 180deg;
+  margin-left: .5px;
+}
+
+.buttons>button>svg {
+  width: 10px;
+}

@@ -1,29 +1,45 @@
 @import "../../Styles/mixins.scss";
 
 .cartProducts {
-
+  width: 100%;
 }
 
-.cartProducts thead {
-
-}
+.cartProducts thead {}
 
 .cartProducts thead tr {
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 13px 0 #0000000D;
+  border-radius: 4px;
+  padding: 24px 40px;
+  margin-bottom: 50px;
 }
 
-.cartProducts thead tr td {
+.cartProducts thead tr th {
+  display: inline-block;
+  font: 400 1rem "Poppins";
+  width: 100px;
+  text-align: start;
 
+  &:first-child {
+    width: 260px;
+  }
 }
 
 .cartProducts tbody {
-
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .cartProducts tbody tr {
-
+  box-shadow: 0 1px 13px 0 #0000000D;
+  border-radius: 4px;
+  padding: 24px 40px;
 }
 
 .cartProducts tbody tr td {
-
+  width: 100px;
+  font: 400 1rem "Poppins";
 }

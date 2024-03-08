@@ -36,7 +36,6 @@ const ProductCard = ({
   const hideNewClass = checkDateBeforeMonthToPresent(addedDate)
     ? styles.hide
     : "";
-    console.log(img);
 
   return (
     <div className={`${styles.card} ${noHoverClass}`}>

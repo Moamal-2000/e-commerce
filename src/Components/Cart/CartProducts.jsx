@@ -10,10 +10,10 @@ const CartProducts = () => {
     <table className={styles.cartProducts}>
       <thead>
         <tr>
-          <td>Product</td>
-          <td>Price</td>
-          <td>Quantity</td>
-          <td>Subtotal</td>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
         </tr>
       </thead>
 
