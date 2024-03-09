@@ -1,26 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateState } from "../../Features/productsSlice";
 import CustomNumberInput from "../Shared/MiniComponents/CustomNumberInput";
 import styles from "./CartProduct.module.scss";
 
 const CartProduct = ({ data }) => {
-  const { img, shortName, price } = data;
+  const { img, shortName, price, id } = data;
   const [quantity, setQuantity] = useState(1);
   const subTotal = quantity * price;
-  const { totalOrdersPrice } = useSelector((state) => state.products);
+  const {} = useSelector((state) => state.products);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(
-      updateState({
-        key: "totalOrdersPrice",
-        value: totalOrdersPrice + subTotal,
-      })
-    );
-  }, [quantity]);
-
-  console.log(totalOrdersPrice);
 
   return (
     <tr className={styles.productContainer}>

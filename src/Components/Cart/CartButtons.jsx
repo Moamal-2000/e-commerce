@@ -1,12 +1,13 @@
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import styles from "./CartButtons.module.scss";
 
 const CartButtons = () => {
+  const {} = useSelector((state) => state.products);
   const navigateTo = useNavigate();
+  const dispatch = useDispatch();
 
-  function updateCart() {
-
-  }
+  function updateCart() {}
 
   return (
     <div className={styles.buttons}>
@@ -14,7 +15,9 @@ const CartButtons = () => {
         Return To Shop
       </button>
 
-      <button type="button" onClick={updateCart}>Update Cart</button>
+      <button type="button" onClick={updateCart}>
+        Update Cart
+      </button>
     </div>
   );
 };
