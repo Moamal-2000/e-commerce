@@ -1,0 +1,40 @@
+.link {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  width: fit-content;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.link svg {
+  width: 20px;
+  height: 20px;
+  transition: fill .2s;
+
+  &:hover {
+    fill: var(--tomato);
+  }
+}
+
+.link span {
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  top: -12px;
+  background-color: var(--tomato);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: .6rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transform: scale(.6);
+}

@@ -33,7 +33,6 @@ const initialState = {
     },
   ],
   wishList: [],
-  quantitiesCarts: {},
   totalOrdersPrice: 0,
 };
 
