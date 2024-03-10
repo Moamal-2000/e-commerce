@@ -1,0 +1,23 @@
+.userContainer {
+  position: relative;
+  padding: 6px;
+
+  &.active {
+    background-color: var(--tomato);
+    fill: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.userContainer>svg {
+  width: 20px;
+  height: 20px;
+  transition: fill .2s;
+}
+
+.userContainer.active>svg {
+  scale: .7;
+}

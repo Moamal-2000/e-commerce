@@ -23,25 +23,3 @@
     margin-right: 16px;
   }
 }
-
-.userContainer {
-  position: relative;
-  padding: 6px;
-
-  &.active {
-    background-color: var(--tomato);
-    fill: var(--white);
-    border-radius: 50%;
-    @include center-x-y;
-  }
-}
-
-.userContainer>svg {
-  width: 20px;
-  height: 20px;
-  transition: fill .2s;
-}
-
-.userContainer.active>svg {
-  scale: .7;
-}

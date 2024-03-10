@@ -1,18 +1,13 @@
 import { useSelector } from "react-redux";
-import useToggle from "../../../Hooks/useToggle";
-import SvgIcon from "../MiniComponents/SvgIcon";
 import IconWithCount from "../NavTools/IconWithCount";
 import SearchProductsInput from "../NavTools/SearchProductsInput";
+import UserMenuIcon from "../NavTools/UserMenuIcon";
 import styles from "./NavTools.module.scss";
-import UserMenu from "./UserMenu";
 
 const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
   const { cartProducts, favoritesProducts } = useSelector(
     (state) => state.products
   );
-  const [isMenuUserActive, toggleMenuUserActive] = useToggle(false);
-  const cartProductsLength = cartProducts.length;
-  const favoritesProductsLength = favoritesProducts.length;
 
   return (
     <div className={styles.navTools}>
@@ -23,32 +18,17 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
           visibility={showHeart}
           iconName="heart"
           routePath="/favorites"
-          countLength={favoritesProductsLength}
+          countLength={favoritesProducts.length}
         />
 
         <IconWithCount
           visibility={showCart}
           iconName="cart3"
           routePath="/cart"
-          countLength={cartProductsLength}
+          countLength={cartProducts.length}
         />
 
-        {showUser && (
-          <button
-            type="button"
-            className={`${styles.userContainer} ${
-              isMenuUserActive ? styles.active : ""
-            }`}
-            onClick={() => toggleMenuUserActive()}
-          >
-            <SvgIcon name="user" />
-
-            <UserMenu
-              isActive={isMenuUserActive}
-              toggler={toggleMenuUserActive}
-            />
-          </button>
-        )}
+        <UserMenuIcon visibility={showUser} />
       </div>
     </div>
   );
