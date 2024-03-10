@@ -1,0 +1,63 @@
+@import "../../Styles/mixins.scss";
+
+.menu {
+  border: 1.5px solid #000000;
+  width: 470px;
+  max-width: 470px;
+  min-width: 300px;
+  border-radius: 4px;
+  padding: 30px 20px;
+}
+
+@media (max-width: 650px) {
+  .menu {
+    width: 100%;
+  }
+}
+
+.menu>b {
+  font: 500 1.25rem "Poppins";
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.content .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.content .item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  width: 100%;
+  border-bottom: solid 1px #999999;
+}
+
+.menu>button {
+  display: block;
+  border: none;
+  outline: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  font: 500 1rem "Poppins";
+  background: var(--tomato);
+  color: var(--white);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@include small {
+  .menu>button {
+    font-size: .8rem;
+    padding: 12px 20px;
+  }
+}

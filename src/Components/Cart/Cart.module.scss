@@ -11,4 +11,12 @@
 .wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 }
