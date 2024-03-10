@@ -35,6 +35,7 @@ import comfortChair from "./comfort-chair.png"
 import gamingMonitor from "./gaming-monitor.png"
 import wiredKeyboard from "./wired-keyboard.png"
 import curology from "./curology-product-set.png"
+import womenShopping from "./women-shopping.webp"
 // import  from "."
 
 export {
@@ -75,4 +76,6 @@ export {
   gamingMonitor,
   wiredKeyboard,
   curology,
+  womenShopping,
+  
 }

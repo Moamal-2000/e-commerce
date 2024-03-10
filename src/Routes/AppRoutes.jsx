@@ -11,12 +11,14 @@ import RoutesLayout from "./RoutesLayout";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import WishList from "../Components/WishList/WishList";
 import Cart from "../Components/Cart/Cart";
+import About from "../Components/About/About";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
     <Route path="/" element={<RoutesLayout />}>
       <Route path="*" element={<NotFoundPage />} />
       <Route index element={<Home />} />
+      <Route path="/about" element={<About />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/login" element={<LogIn />} />
       <Route path="/wishlist" element={<WishList />} />
