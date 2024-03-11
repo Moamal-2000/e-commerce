@@ -2,13 +2,9 @@ import { v4 as uuid } from "uuid";
 import {
   appleLogo,
   canonLogo,
-  dollarSign,
-  moneyBag,
   productImg1,
   productImg2,
   productImg3,
-  shopLogo,
-  shoppingBan,
 } from "../Assets/Images/Images";
 
 export const introductionSliderData = [
@@ -77,25 +73,25 @@ export const categoriesData = [
 
 export const aboutCardsInfo = [
   {
-    iconName: shopLogo,
+    iconName: "shop",
     number: "10.5k",
     text: "Sallers active our site",
     id: uuid(),
   },
   {
-    iconName: dollarSign,
+    iconName: "dollarSign",
     number: "33k",
     text: "Mopnthly Produduct Sale",
     id: uuid(),
   },
   {
-    iconName: shoppingBan,
+    iconName: "shoppingBag",
     number: "45.5k",
     text: "Customer active in our site",
     id: uuid(),
   },
   {
-    iconName: moneyBag,
+    iconName: "moneyBag",
     number: "25k",
     text: "Anual gross sale in our site",
     id: uuid(),

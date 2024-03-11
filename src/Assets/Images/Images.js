@@ -36,10 +36,6 @@ import gamingMonitor from "./gaming-monitor.png"
 import wiredKeyboard from "./wired-keyboard.png"
 import curology from "./curology-product-set.png"
 import womenShopping from "./women-shopping.webp"
-import shopLogo from "./shop-logo.webp"
-import shoppingBan from "./shopping-ban-logo.webp"
-import moneyBag from "./money-logo.webp"
-import dollarSign from "./dollar-sign.svg"
 // import  from "."
 
 export {
@@ -81,8 +77,4 @@ export {
   wiredKeyboard,
   curology,
   womenShopping,
-  shopLogo,
-  shoppingBan,
-  moneyBag,
-  dollarSign,
 }

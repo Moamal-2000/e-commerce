@@ -9,11 +9,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: background-color .2s, color .2s;
+  transition: background-color .2s, color .2s, border-color .1s;
+  position: relative;
+  z-index: 1;
 
   &:hover {
     background-color: var(--tomato);
     color: var(--white);
+    border-color: var(--tomato);
   }
 }
 
@@ -24,11 +27,15 @@
 }
 
 .iconHolder {
-  background-color: #000;
+  background-color: var(--black);
   border-radius: 50%;
   padding: 10px;
   @include center-x-y;
   position: relative;
+}
+
+.card:hover .iconHolder {
+  background-color: var(--white);
 }
 
 .iconHolder::before {
@@ -41,9 +48,19 @@
   z-index: -1;
 }
 
-.iconHolder>img {
+.card:hover .iconHolder::before {
+  background-color: var(--white);
+  opacity: .3;
+}
+
+.iconHolder>svg {
   width: 40px;
   height: 40px;
+}
+
+.card:hover .iconHolder>svg {
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 .card>b {

@@ -1,10 +1,11 @@
 import styles from "./InfoCard.module.scss"
+import SvgIcon from "./SvgIcon"
 
 const InfoCard = ({data}) => {
   return (
     <div className={styles.card}>
       <div className={styles.iconHolder}>
-        <img src={data.iconName} alt="" />
+        <SvgIcon name={data.iconName} />
       </div>
 
       <b>{data.number}</b>
