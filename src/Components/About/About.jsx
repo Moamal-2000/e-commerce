@@ -1,6 +1,7 @@
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import styles from "./About.module.scss";
 import AboutHeroSection from "./AboutHeroSection";
+import AboutInfoCards from "./AboutInfoCards";
 
 const About = () => {
   return (
@@ -11,6 +12,10 @@ const About = () => {
 
       <div className={styles.container}>
         <AboutHeroSection />
+      </div>
+
+      <div className="container">
+        <AboutInfoCards />
       </div>
     </main>
   );
