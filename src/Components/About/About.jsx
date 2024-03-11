@@ -4,12 +4,15 @@ import AboutHeroSection from "./AboutHeroSection";
 
 const About = () => {
   return (
-    <div className="container">
-      <main className={styles.aboutPage}>
+    <main className={styles.aboutPage}>
+      <div className="container">
         <PagesHistory history={["/", "About"]} />
+      </div>
+
+      <div className={styles.container}>
         <AboutHeroSection />
-      </main>
-    </div>
+      </div>
+    </main>
   );
 };
 export default About;

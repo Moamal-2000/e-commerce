@@ -3,3 +3,14 @@
 .aboutPage {
   margin: 60px 0;
 }
+
+.container {
+  width: calc(var(--container-width) + 7.5%);
+  margin-left: calc(15% / 2);
+}
+
+@include medium {
+  .container {
+    margin: 0 auto;
+  }
+}
