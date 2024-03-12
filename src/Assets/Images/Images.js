@@ -17,6 +17,10 @@ import headphone from "./headphone-logo.webp";
 import productImg1 from "./introduction-product1.webp";
 import productImg2 from "./introduction-product2.webp";
 import productImg3 from "./introduction-product3.webp";
+import joystickThumbnail1 from "./joystick-thumbnail1.webp";
+import joystickThumbnail2 from "./joystick-thumbnail2.webp";
+import joystickThumbnail3 from "./joystick-thumbnail3.webp";
+import joystickThumbnail4 from "./joystick-thumbnail4.webp";
 import kidsCar from "./kids-electric-car.png";
 import member1Img from "./man.webp";
 import member3Img from "./man2.webp";
@@ -25,7 +29,7 @@ import perfumeGucci from "./perfume-gucci.png";
 import ps5 from "./ps5.png";
 import qrCode from "./qr-code.webp";
 import satinJacket from "./quilted-satin-jacket.png";
-import redJoystick from "./red-joystick.webp";
+import havicGamepad from "./havic-gamepad.png";
 import cpuCooler from "./rgb-liquid-cpu-cooler.png";
 import signUpImg from "./signup-img.jpg";
 import bookshelf from "./small-bookshelf.png";
@@ -59,7 +63,12 @@ export {
   googleIcon,
   googlePlay,
   gucciBag,
+  havicGamepad,
   headphone,
+  joystickThumbnail1,
+  joystickThumbnail2,
+  joystickThumbnail3,
+  joystickThumbnail4,
   kidsCar,
   member1Img,
   member2Img,
@@ -71,7 +80,6 @@ export {
   productImg3,
   ps5,
   qrCode,
-  redJoystick,
   satinJacket,
   signUpImg,
   soccerCleats,

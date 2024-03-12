@@ -3,6 +3,7 @@ import { productsData } from "../../Data/productsData";
 import { capitalize } from "../../Functions/helper";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import styles from "./ProductDetailsPage.module.scss";
+import ProductDetails from "./ProductDetails";
 
 const ProductDetailsPage = () => {
   const [searchParams, _] = useSearchParams();
@@ -17,6 +18,8 @@ const ProductDetailsPage = () => {
     <div className="container">
       <main className={styles.detailsPage}>
         <PagesHistory history={history} />
+
+        <ProductDetails data={PRODUCT_DATA} />
       </main>
     </div>
   );

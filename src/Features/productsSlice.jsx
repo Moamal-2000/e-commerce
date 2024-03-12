@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import uuid from "react-uuid";
-import { redJoystick, wiredKeyboard } from "../Assets/Images/Images";
+import { havicGamepad, wiredKeyboard } from "../Assets/Images/Images";
 
 const initialState = {
   favoritesProducts: [],
@@ -12,7 +12,7 @@ const initialState = {
       discount: 40,
       afterDiscount: 120,
       addedDate: "2024/2/2",
-      img: redJoystick,
+      img: havicGamepad,
       rate: 5,
       votes: 88,
       sold: 105,
