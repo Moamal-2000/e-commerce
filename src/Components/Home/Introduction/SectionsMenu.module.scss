@@ -35,9 +35,20 @@
 }
 
 .sectionsMenu {
-  width: 200px;
+  width: 250px;
+  max-height: 404px;
   display: flex;
   flex-direction: column;
+  padding-right: 10px;
+  overflow-y: auto;
+}
+
+.sectionsMenu::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.sectionsMenu::-webkit-scrollbar-thumb {
+  background-color: #eaeaea6b !important;
 }
 
 .sectionsMenu::-webkit-scrollbar {
