@@ -61,6 +61,9 @@ const ProductDetails = ({ data }) => {
         </section>
 
 
+        <div className={styles.horizontalLine} />
+
+
         <section className={styles.colors}>
           <span>Colours:</span>
           <div className={styles.color} data-color="#a0bce0"></div>

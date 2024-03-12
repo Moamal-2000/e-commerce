@@ -1,27 +1,36 @@
 @import "../../Styles/mixins.scss";
 
 .detailsSection {
-
+  display: flex;
+  gap: 80px;
 }
 
 .images {
-
+  display: flex;
+  gap: 30px;
 }
 
 .otherImages {
-
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .otherImages>img {
-
+  width: 170px;
+  height: 138px;
+  border-radius: 4px
 }
 
 .previewImgHolder {
-
+  width: 500px;
+  height: 600px;
+  border-radius: 4px;
 }
 
 .previewImgHolder>img {
-
+  background-color: #f5f5f5;
+  object-fit: contain;
 }
 
 
@@ -29,97 +38,95 @@
 
 
 
-.details {
+.details {}
 
-}
+.firstInfos {}
 
-.firstInfos {
-
-}
-
-.productName {
-
-}
+.productName {}
 
 .rateAndReviews {
-
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 /* [Stars] */
-.rateAndReviews>* {
+.rateAndReviews>* {}
 
-}
-
-.reviews {
-
-}
+.reviews {}
 
 .verticalLine {
-
+  height: 16px;
+  border: solid 1px #7f7f7f;
+  // background-color: #7f7f7f;
 }
 
-.greenText {
+.greenText {}
 
+.price {}
+
+.description {}
+
+
+
+
+
+.horizontalLine {
+  width: 100%;
+  border: solid 1px #7f7f7f;
 }
-
-.price {
-
-}
-
-.description {
-
-}
-
 
 
 
 
 .colors {
-
+  display: flex;
+  align-items: center;
 }
 
-.colors>span {
+.colors>span {}
 
-}
-
-.colors .color {
-
-}
+.colors .color {}
 
 
 
 
 
 .sizes {
-
+  display: flex;
+  align-items: center;
 }
 
-.sizes .size {
-
-}
+.sizes .size {}
 
 
 
 
 
 .dealing {
-
+  display: flex;
+  align-items: center;
 }
 
-.customNumberInput {
-
-}
+.customNumberInput {}
 
 .dealing>button {
-
+  outline: none;
+  border: none;
+  width: 165px;
+  height: 44px;
+  padding: 10px 48px 10px 48px;
+  border-radius: 4px;
+  background-color: var(--tomato);
+  color: var(--white);
+  font: 500 1rem "Poppins";
 }
 
-.addToFav {
-
-}
+.addToFav {}
 
 .addToFav>svg {
-
+  width: 20px;
+  height: 17.83px;
 }
 
 
@@ -127,25 +134,18 @@
 
 
 .features {
-
+  
 }
 
 .features .feature {
-
+  display: flex;
+  align-items: center;
 }
 
-.features .feature>svg {
+.features .feature>svg {}
 
-}
+.features .feature .content {}
 
-.features .feature .content {
+.features .feature .content>b {}
 
-}
-
-.features .feature .content>b {
-
-}
-
-.features .feature .content>p {
-
-}
+.features .feature .content>p {}

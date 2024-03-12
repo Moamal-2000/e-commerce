@@ -65,7 +65,6 @@
   }
 }
 
-
 .layerContent .discount.hide {
   opacity: 0;
   pointer-events: none;
@@ -183,16 +182,6 @@
   align-items: center;
   gap: 8px;
   user-select: none;
-}
-
-.productInfo .rateContainer .stars {
-  display: flex;
-  align-items: center;
-}
-
-.productInfo .rateContainer .stars img {
-  width: 20px;
-  height: 20px;
 }
 
 .productInfo .rateContainer .numOfVotes {

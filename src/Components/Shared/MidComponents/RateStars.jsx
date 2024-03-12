@@ -25,7 +25,7 @@ const RateStars = ({ rate }) => {
     });
   }
 
-  return getRateStars();
+  return <div className={styles.stars}>{getRateStars()}</div>;
 };
 
 export default RateStars;

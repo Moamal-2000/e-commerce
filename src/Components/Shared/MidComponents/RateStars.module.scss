@@ -1,5 +1,15 @@
 @import "../../../Styles/mixins";
 
+.stars {
+  display: flex;
+  align-items: center;
+}
+
+.stars>img {
+  width: 20px;
+  height: 20px;
+}
+
 .halfStar {
   position: relative;
   width: 20px;

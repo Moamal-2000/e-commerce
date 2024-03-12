@@ -105,9 +105,7 @@ const ProductCard = ({
         </div>
 
         <div className={styles.rateContainer}>
-          <div className={styles.stars}>
-            <RateStars rate={rate} />
-          </div>
+          <RateStars rate={rate} />
 
           <span className={styles.numOfVotes}>({votes})</span>
         </div>
