@@ -1,3 +1,4 @@
+import FeaturedSectionFeatures from "../Home/FeaturedSection/FeaturedSectionFeatures";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import styles from "./About.module.scss";
 import AboutHeroSection from "./AboutHeroSection";
@@ -18,6 +19,7 @@ const About = () => {
       <div className="container">
         <AboutInfoCards />
         <OurMembersSection />
+        <FeaturedSectionFeatures />
       </div>
     </main>
   );
