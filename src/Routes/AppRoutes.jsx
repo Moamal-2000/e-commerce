@@ -12,6 +12,7 @@ import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import WishList from "../Components/WishList/WishList";
 import Cart from "../Components/Cart/Cart";
 import About from "../Components/About/About";
+import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsPage";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
@@ -23,6 +24,7 @@ const AppRoutes = () => {
       <Route path="/login" element={<LogIn />} />
       <Route path="/wishlist" element={<WishList />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/details" element={<ProductDetailsPage />} />
     </Route>
   );
 

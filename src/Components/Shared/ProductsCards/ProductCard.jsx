@@ -1,3 +1,4 @@
+import { Link, useNavigate } from "react-router-dom";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
 import SvgIcon from "../MiniComponents/SvgIcon";
@@ -15,6 +16,7 @@ const ProductCard = ({
   },
 }) => {
   const {
+    shortName,
     name,
     price,
     discount,
@@ -36,11 +38,16 @@ const ProductCard = ({
   const noHoverClass = stopHover ? styles.noHover : "";
   const hideDiscountClass = discount <= 0 || !showDiscount ? styles.hide : "";
   const hideNewClass = shouldHideNewWord();
+  const navigateTo = useNavigate();
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
       ? styles.hide
       : "";
+  }
+
+  function navigateToProductDetails() {
+    navigateTo(`/details/?product=${name.toLowerCase()}`);
   }
 
   return (
@@ -90,7 +97,7 @@ const ProductCard = ({
 
       <section className={styles.productInfo}>
         <strong className={styles.productName}>
-          <a href="#">{name}</a>
+          <Link onClick={() => navigateToProductDetails()}>{name}</Link>
         </strong>
         <div className={styles.price}>
           ${afterDiscount}

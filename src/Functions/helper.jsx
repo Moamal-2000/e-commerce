@@ -77,3 +77,7 @@ export function checkDateBeforeMonthToPresent(getDate) {
   const requitedDate = new Date(getDate).getTime() + monthByMilliSeconds;
   return currentDate > requitedDate;
 }
+
+export function capitalize(str) {
+  return str.slice(0, 1).toUpperCase() + str.slice(1, str.length);
+}
