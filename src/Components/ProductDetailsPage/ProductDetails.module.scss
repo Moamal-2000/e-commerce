@@ -6,9 +6,29 @@
   margin-top: 60px;
 }
 
+@include large {
+  .detailsSection {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@include small {
+  .detailsSection {
+    gap: 40px;
+  }
+}
+
+
 .images {
   display: flex;
   gap: 30px;
+}
+
+@media (max-width: 1400px) {
+  .images {
+    flex-direction: column-reverse;
+  }
 }
 
 .otherImages {
@@ -17,16 +37,55 @@
   gap: 14px;
 }
 
+@media (max-width: 1400px) {
+  .otherImages {
+    max-width: 500px;
+    flex-direction: row;
+  }
+}
+
+@include small {
+  .otherImages {
+    max-width: 100%;
+  }
+}
+
 .otherImages>img {
   width: 170px;
   height: 138px;
   border-radius: 4px
 }
 
+@media (max-width: 1400px) {
+  .otherImages>img {
+    aspect-ratio: 1/1;
+    width: calc((25% - 14px) + (14px / 4));
+    height: auto;
+  }
+}
+
 .previewImgHolder {
   width: 500px;
   height: 600px;
   border-radius: 4px;
+}
+
+@include large {
+  .previewImgHolder {
+    height: 500px;
+  }
+}
+
+@media (max-width: 480px) {
+  .previewImgHolder {
+    height: 410px;
+  }
+}
+
+@include small {
+  .previewImgHolder {
+    width: 100%;
+  }
 }
 
 .previewImgHolder>img {
@@ -43,7 +102,11 @@
   flex: 1;
 }
 
-.firstInfos {}
+@include large {
+  .details {
+    width: 100%;
+  }
+}
 
 .productName {
   font: 600 1.5rem/24px "Inter";
@@ -86,7 +149,13 @@
 
 .description {
   font: 400 .875rem "Poppins";
-  width: 400px;
+  max-width: 400px;
+}
+
+@include large {
+  .description {
+    max-width: 800px;
+  }
 }
 
 
@@ -98,6 +167,12 @@
   min-width: 400px;
   border: solid 1px #7f7f7f;
   margin: 28px 0;
+}
+
+@include small {
+  .horizontalLine {
+    min-width: 100%;
+  }
 }
 
 
@@ -236,7 +311,6 @@
   border: none;
   width: 165px;
   height: 44px;
-  padding: 10px 48px 10px 48px;
   border-radius: 4px;
   background-color: var(--tomato);
   color: var(--white);
@@ -266,6 +340,7 @@
   border: 1px solid #00000080;
   border-radius: 4px;
   padding: 25px 0;
+  max-width: 450px;
 }
 
 .features .feature {
