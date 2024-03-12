@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   joystickThumbnail1,
   joystickThumbnail2,
@@ -23,6 +24,7 @@ const ProductDetails = ({ data }) => {
     sold,
     id,
   } = data;
+  const [quantity, setQuantity] = useState(1);
 
   return (
     <section className={styles.detailsSection}>
@@ -38,7 +40,6 @@ const ProductDetails = ({ data }) => {
           <img src={img} alt={name} />
         </div>
       </section>
-
 
       <section className={styles.details}>
         <section className={styles.firstInfos}>
@@ -60,38 +61,65 @@ const ProductDetails = ({ data }) => {
           </p>
         </section>
 
-
         <div className={styles.horizontalLine} />
-
 
         <section className={styles.colors}>
           <span>Colours:</span>
-          <div className={styles.color} data-color="#a0bce0"></div>
-          <div className={styles.color} data-color="#e07575"></div>
-        </section>
+          <div
+            className={`${styles.color} ${styles.active}`}
+            style={{ backgroundColor: "#a0bce0" }}
+          ></div>
 
+          <div
+            className={styles.color}
+            style={{ backgroundColor: "#e07575" }}
+          ></div>
+        </section>
 
         <section className={styles.sizes}>
-          <div className={styles.size}>XL</div>
-          <div className={styles.size}>S</div>
-          <div className={styles.size}>M</div>
-          <div className={styles.size}>L</div>
-          <div className={styles.size}>XL</div>
+          <span>Size:</span>
+
+          <div className={styles.sizesWrapper}>
+            <div className={styles.size}>XL</div>
+            <div className={styles.size}>S</div>
+            <div className={`${styles.size} ${styles.active}`}>M</div>
+            <div className={styles.size}>L</div>
+            <div className={styles.size}>XL</div>
+          </div>
         </section>
 
-
         <section className={styles.dealing}>
-          <div className={styles.customNumberInput}>- 1 +</div>
+          <div className={styles.customNumberInput}>
+            <button
+              onClick={() => setQuantity((prevNumber) => +prevNumber - 1)}
+              type="button"
+            >
+              -
+            </button>
+            <input
+              type="number"
+              onChange={(e) => setQuantity(e.target.value)}
+              value={quantity}
+              min={1}
+              max={1000}
+            />
+            <button
+              onClick={() => setQuantity((prevNumber) => +prevNumber + 1)}
+              type="button"
+            >
+              +
+            </button>
+          </div>
+
           <button type="button">Buy Now</button>
           <div className={styles.addToFav}>
             <SvgIcon name="heart" />
           </div>
         </section>
 
-
         <section className={styles.features}>
           <div className={styles.feature}>
-            <SvgIcon name="" />
+            <SvgIcon name="truck" />
 
             <div className={styles.content}>
               <b>Free Delivery</b>
@@ -100,7 +128,7 @@ const ProductDetails = ({ data }) => {
           </div>
 
           <div className={styles.feature}>
-            <SvgIcon name="" />
+            <SvgIcon name="infiniteArrows" />
 
             <div className={styles.content}>
               <b>Return Delivery</b>
