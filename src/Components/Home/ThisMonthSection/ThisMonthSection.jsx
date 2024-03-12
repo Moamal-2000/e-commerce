@@ -12,6 +12,13 @@ const ThisMonthSection = () => {
     return filteredProducts;
   }
 
+  const productsCustomizations = {
+    showDiscount: false,
+    showFavIcon: true,
+    showDetailsIcon: true,
+    showNewText: false,
+  };
+
   return (
     <section className={styles.thisMonthSection}>
       <div className={styles.wrapper}>
@@ -25,7 +32,10 @@ const ThisMonthSection = () => {
         </button>
       </div>
 
-      <ProductsSlider filterFun={filterThisMonthProducts} />
+      <ProductsSlider
+        filterFun={filterThisMonthProducts}
+        customization={productsCustomizations}
+      />
     </section>
   );
 };

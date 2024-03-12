@@ -3,6 +3,13 @@ import ExploreProducts from "../ProductPoster/ExploreProducts";
 import styles from "./OurProductsSection.module.scss";
 
 const OurProductsSection = () => {
+  const productsCustomizations = {
+    showDiscount: false,
+    showFavIcon: true,
+    showDetailsIcon: true,
+    showNewText: true,
+  };
+
   return (
     <section className={styles.ourProductsSection}>
       <div className={styles.wrapper}>
@@ -12,7 +19,10 @@ const OurProductsSection = () => {
         />
       </div>
 
-      <ExploreProducts numOfProducts={8} />
+      <ExploreProducts
+        numOfProducts={8}
+        customization={productsCustomizations}
+      />
 
       <button type="button" className={styles.viewProductsBtn}>
         View All Products

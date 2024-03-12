@@ -11,6 +11,7 @@ const ProductCard = ({
     showFavIcon: true,
     showDetailsIcon: true,
     showRemoveIcon: false,
+    showNewText: false,
   },
 }) => {
   const {
@@ -30,12 +31,17 @@ const ProductCard = ({
     showFavIcon,
     showDetailsIcon,
     showRemoveIcon,
+    showNewText,
   } = customization;
   const noHoverClass = stopHover ? styles.noHover : "";
   const hideDiscountClass = discount <= 0 || !showDiscount ? styles.hide : "";
-  const hideNewClass = checkDateBeforeMonthToPresent(addedDate)
-    ? styles.hide
-    : "";
+  const hideNewClass = shouldHideNewWord();
+
+  function shouldHideNewWord() {
+    return checkDateBeforeMonthToPresent(addedDate) || !showNewText
+      ? styles.hide
+      : "";
+  }
 
   return (
     <div className={`${styles.card} ${noHoverClass}`}>
