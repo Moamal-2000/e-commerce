@@ -1,0 +1,44 @@
+@import "../../../Styles/mixins.scss";
+
+.imgHolder {
+  height: 460px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.imgHolder>img {
+  border-radius: inherit;
+}
+
+.info {}
+
+.info>b {
+  font: 500 2rem "Inter";
+  letter-spacing: .04rem;
+}
+
+.info>p {
+  font: 400 1rem "Poppins";
+  margin-bottom: 10px;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialMedia>a>svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--black);
+
+  & path {
+    fill: var(--black);
+  }
+}
+
+.socialMedia>.instagram>svg>path {
+  fill: var(--white);
+  stroke: var(--black);
+}

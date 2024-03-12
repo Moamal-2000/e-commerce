@@ -1,0 +1,45 @@
+@import "../../Styles/mixins.scss";
+
+.slider {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  overflow: scroll hidden;
+  margin-bottom: 100px;
+  padding-bottom: 10px;
+}
+
+@include large {
+  .slider {
+    gap: 20px;
+  }
+}
+
+@include medium {
+  .slider {
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    gap: 40px;
+  }
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider>* {
+  min-width: calc(33.33% - 40px);
+}
+
+@include medium {
+  .slider>* {
+    width: 360px;
+  }
+}
+
+@include very-small {
+  .slider>* {
+    width: 100%;
+  }
+}

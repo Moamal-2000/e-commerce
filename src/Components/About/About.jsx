@@ -2,6 +2,7 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import styles from "./About.module.scss";
 import AboutHeroSection from "./AboutHeroSection";
 import AboutInfoCards from "./AboutInfoCards";
+import OurMembersSection from "./OurMembersSlider";
 
 const About = () => {
   return (
@@ -16,6 +17,7 @@ const About = () => {
 
       <div className="container">
         <AboutInfoCards />
+        <OurMembersSection />
       </div>
     </main>
   );

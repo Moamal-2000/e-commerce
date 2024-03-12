@@ -1,80 +1,86 @@
-import appleLogo from "./apple-logo.webp"
-import canonLogo from "./canon-logo.webp"
-import productImg1 from "./introduction-product1.webp"
-import productImg2 from "./introduction-product2.webp"
-import productImg3 from "./introduction-product3.webp"
-import userImg from "./user-image.webp"
-import redJoystick from "./red-joystick.webp"
-import coloredStar from "./colored-star.svg"
-import uncoloredStar from "./uncolored-star.svg"
-import stereo from "./stereo.png"
-import ps5 from "./ps5.png"
-import womanWithHat from "./woman-with-hat.png"
-import speakers from "./speakers.png"
-import perfumeGucci from "./perfume-gucci.png"
-import car from "./car-logo.webp"
-import headphone from "./headphone-logo.webp"
-import correctSign from "./correct-sign-logo.webp"
-import googlePlay from "./google-play.png"
-import appStore from "./appstore.png"
-import qrCode from "./qr-code.webp"
-import signUpImg from "./signup-img.jpg"
-import googleIcon from "./google-icon.png"
-import kidsCar from "./kids-electric-car.png"
-import soccerCleats from "./zoom-soccer-cleats.png"
-import usbGamepad from "./usb-gamepad.png"
-import satinJacket from "./quilted-satin-jacket.png"
-import gamingLaptop from "./gaming-laptop.png"
-import canonCamera from "./canon-camera.png"
-import dogFood from "./breed-dry-dog-food.png"
-import bookshelf from "./small-bookshelf.png"
-import cpuCooler from "./rgb-liquid-cpu-cooler.png"
-import gucciBag from "./gucci-duffle-bag.png"
-import northCoat from "./north-coat.png"
-import comfortChair from "./comfort-chair.png"
-import gamingMonitor from "./gaming-monitor.png"
-import wiredKeyboard from "./wired-keyboard.png"
-import curology from "./curology-product-set.png"
-import womenShopping from "./women-shopping.webp"
+import appleLogo from "./apple-logo.webp";
+import appStore from "./appstore.png";
+import dogFood from "./breed-dry-dog-food.png";
+import canonCamera from "./canon-camera.png";
+import canonLogo from "./canon-logo.webp";
+import car from "./car-logo.webp";
+import coloredStar from "./colored-star.svg";
+import comfortChair from "./comfort-chair.png";
+import correctSign from "./correct-sign-logo.webp";
+import curology from "./curology-product-set.png";
+import gamingLaptop from "./gaming-laptop.png";
+import gamingMonitor from "./gaming-monitor.png";
+import googleIcon from "./google-icon.png";
+import googlePlay from "./google-play.png";
+import gucciBag from "./gucci-duffle-bag.png";
+import headphone from "./headphone-logo.webp";
+import productImg1 from "./introduction-product1.webp";
+import productImg2 from "./introduction-product2.webp";
+import productImg3 from "./introduction-product3.webp";
+import kidsCar from "./kids-electric-car.png";
+import member1Img from "./man.webp";
+import member3Img from "./man2.webp";
+import northCoat from "./north-coat.png";
+import perfumeGucci from "./perfume-gucci.png";
+import ps5 from "./ps5.png";
+import qrCode from "./qr-code.webp";
+import satinJacket from "./quilted-satin-jacket.png";
+import redJoystick from "./red-joystick.webp";
+import cpuCooler from "./rgb-liquid-cpu-cooler.png";
+import signUpImg from "./signup-img.jpg";
+import bookshelf from "./small-bookshelf.png";
+import speakers from "./speakers.png";
+import stereo from "./stereo.png";
+import uncoloredStar from "./uncolored-star.svg";
+import usbGamepad from "./usb-gamepad.png";
+import userImg from "./user-image.webp";
+import wiredKeyboard from "./wired-keyboard.png";
+import womanWithHat from "./woman-with-hat.png";
+import member2Img from "./woman.webp";
+import womenShopping from "./women-shopping.webp";
+import soccerCleats from "./zoom-soccer-cleats.png";
 // import  from "."
 
 export {
+  appStore,
   appleLogo,
+  bookshelf,
+  canonCamera,
   canonLogo,
+  car,
+  coloredStar,
+  comfortChair,
+  correctSign,
+  cpuCooler,
+  curology,
+  dogFood,
+  gamingLaptop,
+  gamingMonitor,
+  googleIcon,
+  googlePlay,
+  gucciBag,
+  headphone,
+  kidsCar,
+  member1Img,
+  member2Img,
+  member3Img,
+  northCoat,
+  perfumeGucci,
   productImg1,
   productImg2,
   productImg3,
-  userImg,
-  redJoystick,
-  coloredStar,
-  uncoloredStar,
-  stereo,
   ps5,
-  womanWithHat,
-  speakers,
-  perfumeGucci,
-  car,
-  headphone,
-  correctSign,
-  googlePlay,
-  appStore,
   qrCode,
-  signUpImg,
-  googleIcon,
-  kidsCar,
-  soccerCleats,
-  usbGamepad,
+  redJoystick,
   satinJacket,
-  gamingLaptop,
-  canonCamera,
-  dogFood,
-  bookshelf,
-  cpuCooler,
-  gucciBag,
-  northCoat,
-  comfortChair,
-  gamingMonitor,
+  signUpImg,
+  soccerCleats,
+  speakers,
+  stereo,
+  uncoloredStar,
+  usbGamepad,
+  userImg,
   wiredKeyboard,
-  curology,
+  womanWithHat,
   womenShopping,
-}
+};

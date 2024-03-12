@@ -2,6 +2,9 @@ import { v4 as uuid } from "uuid";
 import {
   appleLogo,
   canonLogo,
+  member1Img,
+  member2Img,
+  member3Img,
   productImg1,
   productImg2,
   productImg3,
@@ -94,6 +97,44 @@ export const aboutCardsInfo = [
     iconName: "moneyBag",
     number: "25k",
     text: "Anual gross sale in our site",
+    id: uuid(),
+  },
+];
+
+export const ourMembersData = [
+  {
+    name: "Tom Cruise",
+    jobTitle: "Founder & Chairman",
+    img: member1Img,
+    socialMedia: {
+      twitter: "https://twitter.com/",
+      instagram: "https://www.instagram.com/",
+      linkedin: "https://www.linkedin.com/",
+    },
+    id: uuid(),
+  },
+
+  {
+    name: "Emma Watson",
+    jobTitle: "Managing Director",
+    img: member2Img,
+    socialMedia: {
+      twitter: "https://twitter.com/",
+      instagram: "https://www.instagram.com/",
+      linkedin: "https://www.linkedin.com/",
+    },
+    id: uuid(),
+  },
+
+  {
+    name: "Will Smith",
+    jobTitle: "Product Designer",
+    img: member3Img,
+    socialMedia: {
+      twitter: "https://twitter.com/",
+      instagram: "https://www.instagram.com/",
+      linkedin: "https://www.linkedin.com/",
+    },
     id: uuid(),
   },
 ];
