@@ -7,6 +7,8 @@ import comfortChair from "./comfort-chair/comfort-chair.png";
 import curology from "./curology-product-set/curology-product-set.png";
 import gamingLaptop from "./gaming-laptop/gaming-laptop.png";
 import gamingMonitor from "./gaming-monitor/gaming-monitor.png";
+import gamingMonitorThum1 from "./gaming-monitor/gaming-monitor-thum1.png";
+import gamingMonitorThum2 from "./gaming-monitor/gaming-monitor-thum2.png";
 import gucciBag from "./gucci-duffle-bag/gucci-duffle-bag.png";
 import kidsCar from "./kids-electric-car/kids-electric-car.png";
 import northCoat from "./north-coat/north-coat.png";
@@ -30,6 +32,8 @@ import soccerCleats from "./zoom-soccer-cleats/zoom-soccer-cleats.png";
 // import  from "."
 
 export {
+  gamingMonitorThum1,
+  gamingMonitorThum2,
   bookshelf,
   canonCamera,
   canonCameraThum1,
