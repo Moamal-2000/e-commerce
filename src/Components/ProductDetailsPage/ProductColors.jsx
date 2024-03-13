@@ -30,12 +30,12 @@ const Colors = ({ colors }) => {
   }
 
   return colors.map(({ color }, i) => {
-    const firstItemActiveClass = i === activeColorIndex ? s.active : "";
+    const activeClass = i === activeColorIndex ? s.active : "";
 
     return (
       <div
         key={"color-" + i}
-        className={`${s.color} ${firstItemActiveClass}`}
+        className={`${s.color} ${activeClass}`}
         style={{ backgroundColor: color }}
         onClick={(e) => choiceProductColor(e, i)}
       ></div>
