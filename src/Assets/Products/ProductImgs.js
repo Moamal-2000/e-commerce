@@ -17,6 +17,9 @@ import cpuCooler from "./rgb-liquid-cpu-cooler/rgb-liquid-cpu-cooler.png";
 import bookshelf from "./small-bookshelf/small-bookshelf.png";
 import usbGamepad from "./usb-gamepad/usb-gamepad.png";
 import wiredKeyboard from "./wired-keyboard/wired-keyboard.png";
+import soccerCleatsThum1 from "./zoom-soccer-cleats/zoom-soccer-cleats-thum1.png";
+import soccerCleatsThum2 from "./zoom-soccer-cleats/zoom-soccer-cleats-thum2.png";
+import soccerCleatsThum3 from "./zoom-soccer-cleats/zoom-soccer-cleats-thum3.png";
 import soccerCleats from "./zoom-soccer-cleats/zoom-soccer-cleats.png";
 // import  from "."
 
@@ -39,6 +42,9 @@ export {
   ps5GamepadThum4,
   satinJacket,
   soccerCleats,
+  soccerCleatsThum1,
+  soccerCleatsThum2,
+  soccerCleatsThum3,
   usbGamepad,
   wiredKeyboard,
 };

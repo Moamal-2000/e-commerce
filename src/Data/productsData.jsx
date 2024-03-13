@@ -18,6 +18,9 @@ import {
   ps5GamepadThum4,
   satinJacket,
   soccerCleats,
+  soccerCleatsThum1,
+  soccerCleatsThum2,
+  soccerCleatsThum3,
   usbGamepad,
   wiredKeyboard,
 } from "../Assets/Products/ProductImgs";
@@ -220,6 +223,7 @@ export const productsData = [
     afterDiscount: 500,
     addedDate: "2024/3/7",
     img: soccerCleats,
+    otherImages: [soccerCleatsThum1, soccerCleatsThum2, soccerCleatsThum3],
     rate: 4,
     votes: 145,
     sold: 100,

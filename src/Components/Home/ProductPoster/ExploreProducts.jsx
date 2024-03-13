@@ -3,7 +3,10 @@ import ProductCard from "../../Shared/ProductsCards/ProductCard";
 import s from "./ExploreProducts.module.scss";
 
 const ExploreProducts = ({ numOfProducts, customization }) => {
-  const filteredProducts = productsData.filter((_, i) => i < numOfProducts);
+  const PRODUCTS_SHOULD_START_FROM = 3;
+  const filteredProducts = productsData.filter(
+    (_, i) => i > PRODUCTS_SHOULD_START_FROM
+  );
 
   return (
     <div className={s.products}>

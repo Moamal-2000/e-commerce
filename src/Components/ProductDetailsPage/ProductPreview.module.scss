@@ -31,25 +31,36 @@
   }
 }
 
-.otherImages>img {
+.otherImages .imgHolder {
+  background-color: #f5f5f5;
+  @include center-x-y;
+  aspect-ratio: 1/1;
   width: 170px;
-  height: 138px;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 @media (max-width: 1400px) {
-  .otherImages>img {
-    aspect-ratio: 1/1;
+  .otherImages .imgHolder {
     width: calc((25% - 14px) + (14px / 4));
     height: auto;
   }
 }
 
+.otherImages .imgHolder img {
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .otherImages .imgHolder img {
+    width: 80%;
+    height: 80%;
+  }
+}
+
 .previewImgHolder {
   width: 500px;
-  height: 600px;
   border-radius: 4px;
+  flex: 1;
 }
 
 @include large {

@@ -9,7 +9,9 @@ const ProductPreview = ({ data }) => {
       {hasOtherImages && (
         <div className={s.otherImages}>
           {otherImages.map((img, i) => (
-            <img key={i} src={img} alt="product's image" />
+            <div key={i} className={s.imgHolder}>
+              <img src={img} alt="product's image" />
+            </div>
           ))}
         </div>
       )}
