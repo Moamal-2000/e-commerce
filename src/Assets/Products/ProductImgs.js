@@ -1,4 +1,7 @@
 import dogFood from "./breed-dry-dog-food/breed-dry-dog-food.png";
+import canonCameraThum1 from "./canon-camera/canon-camera-thum1.png";
+import canonCameraThum2 from "./canon-camera/canon-camera-thum2.png";
+import canonCameraThum3 from "./canon-camera/canon-camera-thum3.png";
 import canonCamera from "./canon-camera/canon-camera.png";
 import comfortChair from "./comfort-chair/comfort-chair.png";
 import curology from "./curology-product-set/curology-product-set.png";
@@ -29,6 +32,9 @@ import soccerCleats from "./zoom-soccer-cleats/zoom-soccer-cleats.png";
 export {
   bookshelf,
   canonCamera,
+  canonCameraThum1,
+  canonCameraThum2,
+  canonCameraThum3,
   comfortChair,
   cpuCooler,
   curology,
