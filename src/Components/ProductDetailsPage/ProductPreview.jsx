@@ -1,7 +1,9 @@
+import { useState } from "react";
 import s from "./ProductPreview.module.scss";
 
 const ProductPreview = ({ data }) => {
   const { img, name, otherImages } = data;
+  const [previewImg, setPreviewImg] = useState(img);
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
 
   return (
@@ -9,7 +11,11 @@ const ProductPreview = ({ data }) => {
       {hasOtherImages && (
         <div className={s.otherImages}>
           {otherImages.map((img, i) => (
-            <div key={i} className={s.imgHolder}>
+            <div
+              key={i}
+              className={s.imgHolder}
+              onClick={() => setPreviewImg(img)}
+            >
               <img src={img} alt="product's image" />
             </div>
           ))}
@@ -17,7 +23,7 @@ const ProductPreview = ({ data }) => {
       )}
 
       <div className={s.previewImgHolder}>
-        <img src={img} alt={name} />
+        <img src={previewImg} alt={name} />
       </div>
     </section>
   );

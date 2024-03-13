@@ -1,8 +1,16 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import { appStore, googlePlay, qrCode } from "../../Assets/Images/Images";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./Footer.module.scss";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  function sendEmail(e) {
+    e.preventDefault();
+    setEmail("")
+  }
+
   return (
     <footer className={s.footer}>
       <div className="container">
@@ -12,12 +20,18 @@ const Footer = () => {
             <span>Subscribe</span>
             <p>Get 10% off your first order</p>
 
-            <div className={s.input}>
-              <input type="email" placeholder="Enter your email" id="email" />
+            <form className={s.input} onSubmit={(e) => sendEmail(e)}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <label htmlFor="email" title="Send">
                 <SvgIcon name="vector" />
               </label>
-            </div>
+            </form>
           </section>
 
           <section className={s.section2}>
@@ -25,8 +39,12 @@ const Footer = () => {
 
             <ul>
               <li>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
-              <li>exclusive@gmail.com</li>
-              <li>+88015-88888-9999</li>
+              <li>
+                <a href="mailto:exclusive@gmail.com">exclusive@gmail.com</a>
+              </li>
+              <li>
+                <a href="tel:+88015-88888-9999">+88015-88888-9999</a>
+              </li>
             </ul>
           </section>
 
@@ -34,11 +52,21 @@ const Footer = () => {
             <b>Account</b>
 
             <ul>
-              <li>My Account</li>
-              <li>Login / Register</li>
-              <li>Cart</li>
-              <li>Wishlist</li>
-              <li>Shop</li>
+              <li>
+                <Link to="/account">My Account</Link>
+              </li>
+              <li>
+                <Link to="/signup">Login / Register</Link>
+              </li>
+              <li>
+                <Link to="/cart">Cart</Link>
+              </li>
+              <li>
+                <Link to="/wishlist">Wishlist</Link>
+              </li>
+              <li>
+                <Link to="/">Shop</Link>
+              </li>
             </ul>
           </section>
 
@@ -46,10 +74,18 @@ const Footer = () => {
             <b>Quick Link</b>
 
             <ul>
-              <li>Privacy Policy</li>
-              <li>Terms Of Use</li>
-              <li>FAQ</li>
-              <li>Contact</li>
+              <li>
+                <Link to="/">Privacy Policy</Link>
+              </li>
+              <li>
+                <Link to="/">Terms Of Use</Link>
+              </li>
+              <li>
+                <Link to="/">FAQ</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
             </ul>
           </section>
 
@@ -74,19 +110,35 @@ const Footer = () => {
             </div>
 
             <div className={s.socialMedia}>
-              <a href="#" title="facebook">
+              <a
+                href="https://www.facebook.com/MoamalAlaa109"
+                target="_blank"
+                title="facebook"
+              >
                 <SvgIcon name="facebook" />
               </a>
 
-              <a href="#" title="twitter">
+              <a
+                href="https://twitter.com/MoamalAlaa7"
+                target="_blank"
+                title="twitter"
+              >
                 <SvgIcon name="twitter" />
               </a>
 
-              <a href="#" title="instagram">
+              <a
+                href="https://www.instagram.com/kubislav23/"
+                target="_blank"
+                title="instagram"
+              >
                 <SvgIcon name="instagram" />
               </a>
 
-              <a href="#" title="linkedin">
+              <a
+                href="https://www.linkedin.com/in/moamal-alaa-a4bb15237/"
+                target="_blank"
+                title="linkedin"
+              >
                 <SvgIcon name="linkedin" />
               </a>
             </div>

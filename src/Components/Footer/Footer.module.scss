@@ -53,7 +53,7 @@
   font-weight: 500;
 }
 
-.sections>section :where(p, li) {
+.sections>section :where(p, li, a) {
   font: 400 1rem/24px "Poppins";
   color: #f0f0f0;
 }
