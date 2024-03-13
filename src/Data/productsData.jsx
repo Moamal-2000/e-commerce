@@ -23,6 +23,9 @@ import {
   soccerCleatsThum3,
   usbGamepad,
   wiredKeyboard,
+  wiredKeyboardThum1,
+  wiredKeyboardThum2,
+  wiredKeyboardThum3,
 } from "../Assets/Products/ProductImgs";
 
 export const productsData = [
@@ -55,6 +58,11 @@ export const productsData = [
     afterDiscount: 960,
     addedDate: "2024/2/7",
     img: wiredKeyboard,
+    otherImages: [
+      wiredKeyboardThum1,
+      wiredKeyboardThum2,
+      wiredKeyboardThum3,
+    ],
     rate: 4,
     votes: 75,
     sold: 210,
