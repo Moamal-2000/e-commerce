@@ -1,10 +1,10 @@
 import { aboutCardsInfo } from "../../Data/staticData";
 import InfoCard from "../Shared/MiniComponents/InfoCard";
-import styles from "./AboutInfoCards.module.scss";
+import s from "./AboutInfoCards.module.scss";
 
 const AboutInfoCards = () => {
   return (
-    <section className={styles.infoCardsSection}>
+    <section className={s.infoCardsSection}>
       {aboutCardsInfo.map((cardInfo) => (
         <InfoCard key={cardInfo.id} data={cardInfo} />
       ))}

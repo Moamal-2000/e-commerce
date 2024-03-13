@@ -1,7 +1,7 @@
 import { productsData } from "../../../Data/productsData";
 import ProductsSlider from "../../Shared/MidComponents/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
-import styles from "./ThisMonthSection.module.scss";
+import s from "./ThisMonthSection.module.scss";
 
 const ThisMonthSection = () => {
   function filterThisMonthProducts() {
@@ -20,14 +20,14 @@ const ThisMonthSection = () => {
   };
 
   return (
-    <section className={styles.thisMonthSection}>
-      <div className={styles.wrapper}>
+    <section className={s.thisMonthSection}>
+      <div className={s.wrapper}>
         <SectionTitle
           eventName="This Month"
           sectionName="Best Selling Products"
         />
 
-        <button type="button" className={styles.viewAllBtn}>
+        <button type="button" className={s.viewAllBtn}>
           View All
         </button>
       </div>

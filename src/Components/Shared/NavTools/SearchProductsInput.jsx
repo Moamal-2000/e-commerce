@@ -1,5 +1,5 @@
 import SvgIcon from "../MiniComponents/SvgIcon";
-import styles from "./SearchProductsInput.module.scss";
+import s from "./SearchProductsInput.module.scss";
 
 const SearchProductsInput = () => {
   function focusInput(e) {
@@ -8,7 +8,7 @@ const SearchProductsInput = () => {
   }
 
   return (
-    <div className={styles.searchContainer} onClick={(e) => focusInput(e)}>
+    <div className={s.searchContainer} onClick={(e) => focusInput(e)}>
       <input
         id="search-input"
         type="text"

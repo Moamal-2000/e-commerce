@@ -1,10 +1,10 @@
 import { womenShopping } from "../../Assets/Images/Images";
-import styles from "./AboutHeroSection.module.scss";
+import s from "./AboutHeroSection.module.scss";
 
 const AboutHeroSection = () => {
   return (
-    <section className={styles.heroSection}>
-      <div className={styles.content}>
+    <section className={s.heroSection}>
+      <div className={s.content}>
         <h2>Our Story</h2>
 
         <p>
@@ -22,7 +22,7 @@ const AboutHeroSection = () => {
         </p>
       </div>
 
-      <div className={styles.imgHolder}>
+      <div className={s.imgHolder}>
         <img src={womenShopping} alt="two young women happy with shopping" />
       </div>
     </section>

@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
-import styles from "./WishProducts.module.scss";
+import s from "./WishProducts.module.scss";
 
 const WishProducts = () => {
   const { wishList } = useSelector((state) => state.products);
@@ -13,7 +13,7 @@ const WishProducts = () => {
   };
 
   return (
-    <div className={styles.wishProducts}>
+    <div className={s.wishProducts}>
       {wishList.map((product) => (
         <ProductCard
           key={product.id}

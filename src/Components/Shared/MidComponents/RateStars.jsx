@@ -1,6 +1,6 @@
 import { coloredStar, uncoloredStar } from "../../../Assets/Images/Images";
 import { isDecimalNumber } from "../../../Functions/helper";
-import styles from "./RateStars.module.scss";
+import s from "./RateStars.module.scss";
 
 const RateStars = ({ rate }) => {
   if (!rate && rate !== 0) throw new Error("Rate value is undefined");
@@ -25,21 +25,21 @@ const RateStars = ({ rate }) => {
     });
   }
 
-  return <div className={styles.stars}>{getRateStars()}</div>;
+  return <div className={s.stars}>{getRateStars()}</div>;
 };
 
 export default RateStars;
 
 const HalfStar = () => {
   return (
-    <div className={styles.halfStar}>
-      <div className={styles.hideBox}>
-        <div className={styles.uncoloredStar}>
+    <div className={s.halfStar}>
+      <div className={s.hideBox}>
+        <div className={s.uncoloredStar}>
           <img src={uncoloredStar} alt="star" />
         </div>
       </div>
 
-      <div className={styles.coloredStar}>
+      <div className={s.coloredStar}>
         <img src={coloredStar} alt="star" />
       </div>
     </div>

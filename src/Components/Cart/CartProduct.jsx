@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import CustomNumberInput from "../Shared/MiniComponents/CustomNumberInput";
-import styles from "./CartProduct.module.scss";
+import s from "./CartProduct.module.scss";
 
 const CartProduct = ({ data }) => {
   const { img, shortName, price, id } = data;
@@ -11,13 +11,13 @@ const CartProduct = ({ data }) => {
   const dispatch = useDispatch();
 
   return (
-    <tr className={styles.productContainer}>
-      <td className={styles.product}>
+    <tr className={s.productContainer}>
+      <td className={s.product}>
         <img src={img} alt="" />
         <span>{shortName}</span>
       </td>
 
-      <td className={styles.price}>${price}</td>
+      <td className={s.price}>${price}</td>
 
       <td>
         <CustomNumberInput number={quantity} setNumber={setQuantity} />

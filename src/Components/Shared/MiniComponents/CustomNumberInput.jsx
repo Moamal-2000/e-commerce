@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import styles from "./CustomNumberInput.module.scss";
+import s from "./CustomNumberInput.module.scss";
 import SvgIcon from "./SvgIcon";
 
 const CustomNumberInput = ({ number, setNumber }) => {
@@ -40,7 +40,7 @@ const CustomNumberInput = ({ number, setNumber }) => {
   }
 
   return (
-    <div className={styles.numberInput}>
+    <div className={s.numberInput}>
       <input
         type="number"
         value={number}
@@ -49,7 +49,7 @@ const CustomNumberInput = ({ number, setNumber }) => {
         max={999}
       />
 
-      <div className={styles.buttons}>
+      <div className={s.buttons}>
         <button
           type="button"
           onMouseDown={() => handleMouseDown("up")}

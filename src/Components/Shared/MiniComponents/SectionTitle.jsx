@@ -1,11 +1,11 @@
-import styles from "./SectionTitle.module.scss";
+import s from "./SectionTitle.module.scss";
 
 const SectionTitle = ({ eventName, sectionName, type = 1 }) => {
-  const type2Class = type === 2 ? styles.type2 : "";
+  const type2Class = type === 2 ? s.type2 : "";
 
   return (
-    <div className={`${styles.sectionTitle} ${type2Class}`}>
-      <div className={styles.event}>{eventName}</div>
+    <div className={`${s.sectionTitle} ${type2Class}`}>
+      <div className={s.event}>{eventName}</div>
       <b>{sectionName}</b>
     </div>
   );

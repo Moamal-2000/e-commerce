@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import styles from "./HorizontalPoster.module.scss";
+import s from "./HorizontalPoster.module.scss";
 
 const HorizontalPoster = ({ title, description, posterUrl }) => {
   const horPosterRef = useRef();
@@ -9,11 +9,11 @@ const HorizontalPoster = ({ title, description, posterUrl }) => {
   });
 
   return (
-    <div className={styles.HorPoster} ref={horPosterRef}>
-      <div className={styles.content}>
+    <div className={s.HorPoster} ref={horPosterRef}>
+      <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>
-        <button type="button" className={styles.shopNow}>
+        <button type="button" className={s.shopNow}>
           <a href="\#">Shop Now</a>
         </button>
       </div>

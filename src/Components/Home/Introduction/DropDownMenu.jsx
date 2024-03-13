@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
-import styles from "./DropDownMenu.module.scss";
+import s from "./DropDownMenu.module.scss";
 
 const DropDownMenu = ({ nameMenu, children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,19 +10,19 @@ const DropDownMenu = ({ nameMenu, children }) => {
   }
 
   return (
-    <div className={styles.dropDownMenu} onClick={() => handleToggleMenu()}>
-      <div className={styles.nameMenu}>
+    <div className={s.dropDownMenu} onClick={() => handleToggleMenu()}>
+      <div className={s.nameMenu}>
         <span>{nameMenu}</span>
         <button
           type="button"
-          className={isMenuOpen ? styles.active : ""}
+          className={isMenuOpen ? s.active : ""}
           aria-label="arrow right"
         >
           <SvgIcon name="chevronRight" />
         </button>
       </div>
 
-      <div className={`${styles.menu} ${isMenuOpen ? styles.active : ""}`}>
+      <div className={`${s.menu} ${isMenuOpen ? s.active : ""}`}>
         {children}
       </div>
     </div>

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import IconWithCount from "../NavTools/IconWithCount";
 import SearchProductsInput from "../NavTools/SearchProductsInput";
 import UserMenuIcon from "../NavTools/UserMenuIcon";
-import styles from "./NavTools.module.scss";
+import s from "./NavTools.module.scss";
 
 const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
   const { cartProducts, favoritesProducts } = useSelector(
@@ -10,10 +10,10 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
   );
 
   return (
-    <div className={styles.navTools}>
+    <div className={s.navTools}>
       <SearchProductsInput />
 
-      <div className={styles.tools}>
+      <div className={s.tools}>
         <IconWithCount
           visibility={showHeart}
           iconName="heart"

@@ -4,7 +4,7 @@ import { toggleState } from "../../Features/globalSlice";
 import useNavToolsProps from "../../Hooks/useNavToolsProps";
 import NavTools from "../Shared/MidComponents/NavTools";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
-import styles from "./Header.module.scss";
+import s from "./Header.module.scss";
 import Nav from "./Nav";
 
 const Header = () => {
@@ -17,20 +17,20 @@ const Header = () => {
   }
 
   return (
-    <header className={styles.header}>
-      <div className={styles.container}>
+    <header className={s.header}>
+      <div className={s.container}>
         <h1>
           <Link to="/">Exclusive</Link>
         </h1>
 
-        <div className={styles.headerContent}>
+        <div className={s.headerContent}>
           <Nav />
           <NavTools {...navToolsProps} />
         </div>
 
         <button
           type="button"
-          className={styles.mobileNav}
+          className={s.mobileNav}
           onClick={() => openMobileNav()}
           aria-label="Nav menu"
         >

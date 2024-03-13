@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleState } from "../../../Features/globalSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import DropDownMenu from "./DropDownMenu";
-import styles from "./SectionsMenu.module.scss";
+import s from "./SectionsMenu.module.scss";
 
 const SectionsMenu = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const SectionsMenu = () => {
     <>
       <button
         type="button"
-        className={styles.sectionsMenuButton}
+        className={s.sectionsMenuButton}
         onClick={() => {
           dispatch(toggleState({ key: "isSectionsMenuActive", value: true }));
           dispatch(toggleState({ key: "isOverlayActive", value: true }));
@@ -23,13 +23,11 @@ const SectionsMenu = () => {
       </button>
 
       <nav
-        className={`${styles.sectionsMenu} ${
-          isSectionsMenuActive ? styles.active : ""
-        }`}
+        className={`${s.sectionsMenu} ${isSectionsMenuActive ? s.active : ""}`}
         id="sections-products"
       >
         <DropDownMenu nameMenu="Woman’s Fashion">
-          <ul className={styles.dropDownMenu}>
+          <ul className={s.dropDownMenu}>
             <li>
               <a href="\#">Elegant Evening Dress</a>
             </li>
@@ -49,7 +47,7 @@ const SectionsMenu = () => {
         </DropDownMenu>
 
         <DropDownMenu nameMenu="Men’s Fashion">
-          <ul className={styles.dropDownMenu}>
+          <ul className={s.dropDownMenu}>
             <li>
               <a href="\#">Tailored Suit</a>
             </li>

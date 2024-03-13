@@ -5,7 +5,7 @@ import { googleIcon } from "../../Assets/Images/Images";
 import { newSignUp, setLoginData } from "../../Features/userSlice";
 import { simpleValidationCheck } from "../../Functions/componentsFunctions";
 import { compareDataToObjValue, uniqueArr } from "../../Functions/helper";
-import styles from "./SignUpForm.module.scss";
+import s from "./SignUpForm.module.scss";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
@@ -44,11 +44,11 @@ const SignUpForm = () => {
   }
 
   return (
-    <form action="GET" className={styles.form} onSubmit={signUp}>
+    <form action="GET" className={s.form} onSubmit={signUp}>
       <h2>Create an account</h2>
       <p>Enter your details below</p>
 
-      <div className={styles.inputs}>
+      <div className={s.inputs}>
         <input
           type="text"
           name="username"
@@ -69,12 +69,12 @@ const SignUpForm = () => {
         />
       </div>
 
-      <div className={styles.buttons}>
-        <button type="submit" className={styles.createAccBtn}>
+      <div className={s.buttons}>
+        <button type="submit" className={s.createAccBtn}>
           Create Account
         </button>
 
-        <button type="button" className={styles.signUpBtn}>
+        <button type="button" className={s.signUpBtn}>
           <img src={googleIcon} alt="Colored Google icon" />
           <span>Sign up with Google</span>
         </button>

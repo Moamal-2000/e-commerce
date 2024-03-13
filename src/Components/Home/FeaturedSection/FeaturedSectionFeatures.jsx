@@ -1,10 +1,10 @@
 import { car, correctSign, headphone } from "../../../Assets/Images/Images";
 import Feature from "../../Shared/MiniComponents/Feature";
-import styles from "./FeaturedSectionFeatures.module.scss";
+import s from "./FeaturedSectionFeatures.module.scss";
 
 const FeaturedSectionFeatures = () => {
   return (
-    <div className={styles.features}>
+    <div className={s.features}>
       <Feature
         iconImg={car}
         iconAlt="Car"

@@ -1,18 +1,15 @@
-import styles from "./ProductColors.module.scss";
+import s from "./ProductColors.module.scss";
 
 const ProductColors = ({ data }) => {
   return (
-    <section className={styles.colors}>
+    <section className={s.colors}>
       <span>Colours:</span>
       <div
-        className={`${styles.color} ${styles.active}`}
+        className={`${s.color} ${s.active}`}
         style={{ backgroundColor: "#a0bce0" }}
       ></div>
 
-      <div
-        className={styles.color}
-        style={{ backgroundColor: "#e07575" }}
-      ></div>
+      <div className={s.color} style={{ backgroundColor: "#e07575" }}></div>
     </section>
   );
 };

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { newSignUp } from "../../Features/userSlice";
 import { simpleValidationCheck } from "../../Functions/componentsFunctions";
 import { uniqueArr } from "../../Functions/helper";
-import styles from "./LogInForm.module.scss";
+import s from "./LogInForm.module.scss";
 
 const LogInForm = () => {
   const navigateTo = useNavigate();
@@ -49,11 +49,11 @@ const LogInForm = () => {
   }
 
   return (
-    <form className={styles.form} onSubmit={login}>
+    <form className={s.form} onSubmit={login}>
       <h2>Log in to Exclusive</h2>
       <p>Enter your details below</p>
 
-      <div className={styles.inputs}>
+      <div className={s.inputs}>
         <input
           type="text"
           name="emailOrPhone"
@@ -68,8 +68,8 @@ const LogInForm = () => {
         />
       </div>
 
-      <div className={styles.buttons}>
-        <button type="submit" className={styles.loginBtn}>
+      <div className={s.buttons}>
+        <button type="submit" className={s.loginBtn}>
           Log In
         </button>
 

@@ -1,9 +1,9 @@
-import styles from "./Feature.module.scss";
+import s from "./Feature.module.scss";
 
 const Feature = ({ iconImg, iconAlt, title, description }) => {
   return (
-    <div className={styles.feature}>
-      <div className={styles.iconHolder}>
+    <div className={s.feature}>
+      <div className={s.iconHolder}>
         <img src={iconImg} alt={iconAlt} />
       </div>
 

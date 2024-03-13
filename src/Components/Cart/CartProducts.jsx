@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import CartProduct from "./CartProduct";
-import styles from "./CartProducts.module.scss";
+import s from "./CartProducts.module.scss";
 
 const CartProducts = () => {
   const { cartProducts } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
   return (
-    <table className={styles.cartProducts}>
+    <table className={s.cartProducts}>
       <thead>
         <tr>
           <th>Product</th>

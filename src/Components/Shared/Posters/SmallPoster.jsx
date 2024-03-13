@@ -1,13 +1,13 @@
-import styles from "./SmallPoster.module.scss";
+import s from "./SmallPoster.module.scss";
 
 const SmallPoster = ({ title, description, posterUrl }) => {
   return (
-    <div className={styles.smallPoster}>
+    <div className={s.smallPoster}>
       <img src={posterUrl} alt="product's poster" />
-      <div className={styles.content}>
+      <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>
-        <button type="button" className={styles.shopNow}>
+        <button type="button" className={s.shopNow}>
           <a href="\#">Shop Now</a>
         </button>
       </div>

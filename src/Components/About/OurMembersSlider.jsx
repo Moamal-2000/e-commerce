@@ -1,10 +1,10 @@
 import { ourMembersData } from "../../Data/staticData";
 import MemberCard from "../Shared/MidComponents/MemberCard";
-import styles from "./OurMembersSection.module.scss";
+import s from "./OurMembersSection.module.scss";
 
 const OurMembersSection = () => {
   return (
-    <section className={styles.slider}>
+    <section className={s.slider}>
       {ourMembersData.map((member) => (
         <MemberCard key={member.id} data={member} />
       ))}

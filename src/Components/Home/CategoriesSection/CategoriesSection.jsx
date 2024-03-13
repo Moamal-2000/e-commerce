@@ -1,11 +1,11 @@
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
-import styles from "./CategoriesSection.module.scss";
+import s from "./CategoriesSection.module.scss";
 import CategoriesSlider from "./CategoriesSlider";
 
 const CategoriesSection = () => {
   return (
-    <section className={styles.categoriesSection}>
-      <div className={styles.wrapper}>
+    <section className={s.categoriesSection}>
+      <div className={s.wrapper}>
         <SectionTitle eventName="Categories" sectionName="Browse By Category" />
       </div>
 

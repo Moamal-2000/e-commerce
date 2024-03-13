@@ -1,18 +1,18 @@
 import FeaturedSectionFeatures from "../Home/FeaturedSection/FeaturedSectionFeatures";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
-import styles from "./About.module.scss";
+import s from "./About.module.scss";
 import AboutHeroSection from "./AboutHeroSection";
 import AboutInfoCards from "./AboutInfoCards";
 import OurMembersSection from "./OurMembersSlider";
 
 const About = () => {
   return (
-    <main className={styles.aboutPage}>
+    <main className={s.aboutPage}>
       <div className="container">
         <PagesHistory history={["/", "About"]} />
       </div>
 
-      <div className={styles.container}>
+      <div className={s.container}>
         <AboutHeroSection />
       </div>
 

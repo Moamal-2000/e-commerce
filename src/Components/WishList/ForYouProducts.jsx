@@ -1,6 +1,6 @@
 import { productsData } from "../../Data/productsData";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
-import styles from "./ForYouProducts.module.scss";
+import s from "./ForYouProducts.module.scss";
 
 const ForYouProducts = () => {
   const forYouProducts = productsData.filter((_, i) => i < 4);
@@ -14,7 +14,7 @@ const ForYouProducts = () => {
   };
 
   return (
-    <div className={styles.forYouProducts}>
+    <div className={s.forYouProducts}>
       {forYouProducts.map((product) => (
         <ProductCard
           key={product.id}

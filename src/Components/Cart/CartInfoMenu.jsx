@@ -1,25 +1,25 @@
-import styles from "./CartInfoMenu.module.scss";
+import s from "./CartInfoMenu.module.scss";
 
 const CartInfoMenu = () => {
   const subTotal = 1750;
   const totalAfterCoupon = subTotal;
 
   return (
-    <div className={styles.menu}>
+    <div className={s.menu}>
       <b>Cart Total</b>
 
-      <div className={styles.content}>
-        <div className={styles.item}>
+      <div className={s.content}>
+        <div className={s.item}>
           <span>subTotal:</span>
           <span>${subTotal}</span>
         </div>
 
-        <div className={styles.item}>
+        <div className={s.item}>
           <span>Shipping:</span>
           <span>Free</span>
         </div>
 
-        <div className={styles.item}>
+        <div className={s.item}>
           <span>Total:</span>
           <span>${totalAfterCoupon}</span>
         </div>

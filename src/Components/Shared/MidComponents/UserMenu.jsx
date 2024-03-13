@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import useSignOut from "../../../Hooks/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
-import styles from "./UserMenu.module.scss";
+import s from "./UserMenu.module.scss";
 
 const UserMenu = ({ isActive, toggler }) => {
-  const activeClass = isActive ? styles.active : "";
+  const activeClass = isActive ? s.active : "";
   const handleSignOut = useSignOut();
 
   return (
-    <div className={`${styles.userMenu} ${activeClass}`}>
+    <div className={`${s.userMenu} ${activeClass}`}>
       <Link to="/profile">
         <SvgIcon name="user" />
         <span>Manage My Account</span>

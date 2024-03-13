@@ -2,8 +2,8 @@ import { useSearchParams } from "react-router-dom";
 import { productsData } from "../../Data/productsData";
 import { capitalize } from "../../Functions/helper";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
-import styles from "./ProductDetailsPage.module.scss";
 import ProductDetails from "./ProductDetails";
+import s from "./ProductDetailsPage.module.scss";
 
 const ProductDetailsPage = () => {
   const [searchParams, _] = useSearchParams();
@@ -16,7 +16,7 @@ const ProductDetailsPage = () => {
 
   return (
     <div className="container">
-      <main className={styles.detailsPage}>
+      <main className={s.detailsPage}>
         <PagesHistory history={history} />
 
         <ProductDetails data={PRODUCT_DATA} />

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import styles from "./MediumPoster.module.scss";
+import s from "./MediumPoster.module.scss";
 
 const MediumPoster = ({ title, description, posterUrl }) => {
   const midPosterRef = useRef();
@@ -9,11 +9,11 @@ const MediumPoster = ({ title, description, posterUrl }) => {
   });
 
   return (
-    <div className={styles.midPoster} ref={midPosterRef}>
-      <div className={styles.content}>
+    <div className={s.midPoster} ref={midPosterRef}>
+      <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>
-        <button type="button" className={styles.shopNow}>
+        <button type="button" className={s.shopNow}>
           <a href="\#">Shop Now</a>
         </button>
       </div>

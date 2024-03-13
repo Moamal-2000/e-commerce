@@ -1,26 +1,31 @@
-import { perfumeGucci, ps5, speakers, womanWithHat } from "../../../Assets/Images/Images";
+import {
+  perfumeGucci,
+  ps5,
+  speakers,
+  womanWithHat,
+} from "../../../Assets/Images/Images";
 import HorizontalPoster from "../../Shared/Posters/HorizontalPoster";
 import MediumPoster from "../../Shared/Posters/MediumPoster";
 import SmallPoster from "../../Shared/Posters/SmallPoster";
-import styles from "./FeaturedSectionPosters.module.scss";
+import s from "./FeaturedSectionPosters.module.scss";
 
 const FeaturedSectionPosters = () => {
   return (
-    <div className={styles.posters}>
+    <div className={s.posters}>
       <MediumPoster
         title="PlayStation 5"
         description="Black and White version of the PS5 coming out on sale."
         posterUrl={ps5}
       />
 
-      <div className={styles.smallPosters}>
+      <div className={s.smallPosters}>
         <HorizontalPoster
           title="Women’s Collections"
           description="Featured woman collections that give you another vibe."
           posterUrl={womanWithHat}
         />
 
-        <div className={styles.smallerPosters}>
+        <div className={s.smallerPosters}>
           <SmallPoster
             title="Speakers"
             description="Amazon wireless speakers"

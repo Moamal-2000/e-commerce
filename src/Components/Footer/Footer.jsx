@@ -1,18 +1,18 @@
 import { appStore, googlePlay, qrCode } from "../../Assets/Images/Images";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
-import styles from "./Footer.module.scss";
+import s from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={s.footer}>
       <div className="container">
-        <div className={styles.sections}>
-          <section className={styles.section1}>
+        <div className={s.sections}>
+          <section className={s.section1}>
             <b>Exclusive</b>
             <span>Subscribe</span>
             <p>Get 10% off your first order</p>
 
-            <div className={styles.input}>
+            <div className={s.input}>
               <input type="email" placeholder="Enter your email" id="email" />
               <label htmlFor="email" title="Send">
                 <SvgIcon name="vector" />
@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
           </section>
 
-          <section className={styles.section2}>
+          <section className={s.section2}>
             <b>Support</b>
 
             <ul>
@@ -30,7 +30,7 @@ const Footer = () => {
             </ul>
           </section>
 
-          <section className={styles.section3}>
+          <section className={s.section3}>
             <b>Account</b>
 
             <ul>
@@ -42,7 +42,7 @@ const Footer = () => {
             </ul>
           </section>
 
-          <section className={styles.section4}>
+          <section className={s.section4}>
             <b>Quick Link</b>
 
             <ul>
@@ -53,16 +53,16 @@ const Footer = () => {
             </ul>
           </section>
 
-          <section className={styles.section5}>
+          <section className={s.section5}>
             <b>Download App</b>
             <p>Save $3 with App New User Only</p>
 
-            <div className={styles.appInfo}>
-              <div className={styles.qrCode}>
+            <div className={s.appInfo}>
+              <div className={s.qrCode}>
                 <img src={qrCode} alt="QR Code" />
               </div>
 
-              <div className={styles.downloadButtons}>
+              <div className={s.downloadButtons}>
                 <button type="button">
                   <img src={googlePlay} alt="Download app at Google play" />
                 </button>
@@ -73,7 +73,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className={styles.socialMedia}>
+            <div className={s.socialMedia}>
               <a href="#" title="facebook">
                 <SvgIcon name="facebook" />
               </a>
@@ -93,7 +93,7 @@ const Footer = () => {
           </section>
         </div>
 
-        <p className={styles.copyRights}>
+        <p className={s.copyRights}>
           <span>&copy;</span> Copyright Rimel 2022. All right reserved
         </p>
       </div>

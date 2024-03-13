@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
-import styles from "./ProductDealingControls.module.scss";
+import s from "./ProductDealingControls.module.scss";
 
 const ProductDealingControls = () => {
   const [quantity, setQuantity] = useState(1);
@@ -14,8 +14,8 @@ const ProductDealingControls = () => {
   }
 
   return (
-    <section className={styles.dealing}>
-      <div className={styles.customNumberInput}>
+    <section className={s.dealing}>
+      <div className={s.customNumberInput}>
         <button onClick={decreaseQuantity} type="button">
           -
         </button>
@@ -34,7 +34,7 @@ const ProductDealingControls = () => {
       </div>
 
       <button type="button">Buy Now</button>
-      <div className={styles.addToFav}>
+      <div className={s.addToFav}>
         <SvgIcon name="heart" />
       </div>
     </section>

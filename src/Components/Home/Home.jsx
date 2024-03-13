@@ -1,6 +1,6 @@
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
-import styles from "./Home.module.scss";
+import s from "./Home.module.scss";
 import MainSlider from "./Introduction/MainSlider";
 import SectionsMenu from "./Introduction/SectionsMenu";
 import OurProductsSection from "./OurProductsSection/OurProductsSection";
@@ -10,12 +10,12 @@ import TodaySection from "./TodaySection/TodaySection";
 
 const Home = () => {
   return (
-    <div className={styles.home}>
-      <div className={styles.container}>
-        <div className={styles.introductionContainer}>
+    <div className={s.home}>
+      <div className={s.container}>
+        <div className={s.introductionContainer}>
           <SectionsMenu />
 
-          <div className={styles.line}></div>
+          <div className={s.line}></div>
 
           <MainSlider />
         </div>

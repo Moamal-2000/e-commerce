@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
 import SvgIcon from "../MiniComponents/SvgIcon";
-import styles from "./ProductCard.module.scss";
+import s from "./ProductCard.module.scss";
 
 const ProductCard = ({
   product,
@@ -35,14 +35,14 @@ const ProductCard = ({
     showRemoveIcon,
     showNewText,
   } = customization;
-  const noHoverClass = stopHover ? styles.noHover : "";
-  const hideDiscountClass = discount <= 0 || !showDiscount ? styles.hide : "";
+  const noHoverClass = stopHover ? s.noHover : "";
+  const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
   const hideNewClass = shouldHideNewWord();
   const navigateTo = useNavigate();
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
-      ? styles.hide
+      ? s.hide
       : "";
   }
 
@@ -51,63 +51,59 @@ const ProductCard = ({
   }
 
   return (
-    <div className={`${styles.card} ${noHoverClass}`}>
-      <div className={styles.productImg}>
+    <div className={`${s.card} ${noHoverClass}`}>
+      <div className={s.productImg}>
         <img src={img} alt={name} title={name} />
 
-        <div className={styles.layerContent}>
+        <div className={s.layerContent}>
           {hideNewClass && (
-            <div className={`${styles.discount} ${hideDiscountClass}`}>
+            <div className={`${s.discount} ${hideDiscountClass}`}>
               -{discount}%
             </div>
           )}
 
-          <div className={`${styles.new} ${hideNewClass}`}>New</div>
+          <div className={`${s.new} ${hideNewClass}`}>New</div>
 
-          <div className={styles.icons}>
+          <div className={s.icons}>
             {showFavIcon && (
-              <a href="#" className={styles.iconHolder} title="Favorite">
+              <a href="#" className={s.iconHolder} title="Favorite">
                 <SvgIcon name="heart" />
               </a>
             )}
 
             {showDetailsIcon && (
-              <a href="#" className={styles.iconHolder} title="Details">
+              <a href="#" className={s.iconHolder} title="Details">
                 <SvgIcon name="eye" />
               </a>
             )}
 
             {showRemoveIcon && (
-              <button
-                type="button"
-                className={styles.iconHolder}
-                title="Remove"
-              >
+              <button type="button" className={s.iconHolder} title="Remove">
                 <SvgIcon name="trashCan" />
               </button>
             )}
           </div>
 
-          <button type="button" className={styles.addToCartBtn}>
+          <button type="button" className={s.addToCartBtn}>
             <SvgIcon name="cart3" />
             <span>Add to cart</span>
           </button>
         </div>
       </div>
 
-      <section className={styles.productInfo}>
-        <strong className={styles.productName}>
+      <section className={s.productInfo}>
+        <strong className={s.productName}>
           <Link onClick={() => navigateToProductDetails()}>{name}</Link>
         </strong>
-        <div className={styles.price}>
+        <div className={s.price}>
           ${afterDiscount}
-          <del className={styles.afterDiscount}>${price}</del>
+          <del className={s.afterDiscount}>${price}</del>
         </div>
 
-        <div className={styles.rateContainer}>
+        <div className={s.rateContainer}>
           <RateStars rate={rate} />
 
-          <span className={styles.numOfVotes}>({votes})</span>
+          <span className={s.numOfVotes}>({votes})</span>
         </div>
       </section>
     </div>

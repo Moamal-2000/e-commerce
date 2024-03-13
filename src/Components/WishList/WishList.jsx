@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import ForYouProducts from "./ForYouProducts";
-import styles from "./WishList.module.scss";
+import s from "./WishList.module.scss";
 import WishProducts from "./WishProducts";
 
 const WishList = () => {
@@ -10,8 +10,8 @@ const WishList = () => {
 
   return (
     <div className="container">
-      <main className={styles.wishListPage}>
-        <section className={styles.wishList}>
+      <main className={s.wishListPage}>
+        <section className={s.wishList}>
           <header>
             <label htmlFor="wishlist">WishList ({lengthOfWishList})</label>
 
@@ -21,7 +21,7 @@ const WishList = () => {
           <WishProducts />
         </section>
 
-        <section className={styles.forYou}>
+        <section className={s.forYou}>
           <header>
             <SectionTitle eventName="Just For You" type={2} />
 

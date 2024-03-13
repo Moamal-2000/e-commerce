@@ -1,18 +1,18 @@
 import { stereo } from "../../../Assets/Images/Images";
 import PostCounter from "./PostCounter";
-import styles from "./ProductPoster.module.scss";
+import s from "./ProductPoster.module.scss";
 
 const ProductPoster = () => {
   return (
-    <section className={styles.productPoster}>
-      <div className={styles.content}>
+    <section className={s.productPoster}>
+      <div className={s.content}>
         <span>Categories</span>
         <p>Enhance Your Music Experience</p>
         <PostCounter />
         <button type="button">Buy Now!</button>
       </div>
 
-      <div className={styles.productHolder}>
+      <div className={s.productHolder}>
         <img src={stereo} alt="Stereo" />
       </div>
     </section>

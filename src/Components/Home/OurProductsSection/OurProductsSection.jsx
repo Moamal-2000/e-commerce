@@ -1,6 +1,6 @@
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import ExploreProducts from "../ProductPoster/ExploreProducts";
-import styles from "./OurProductsSection.module.scss";
+import s from "./OurProductsSection.module.scss";
 
 const OurProductsSection = () => {
   const productsCustomizations = {
@@ -11,8 +11,8 @@ const OurProductsSection = () => {
   };
 
   return (
-    <section className={styles.ourProductsSection}>
-      <div className={styles.wrapper}>
+    <section className={s.ourProductsSection}>
+      <div className={s.wrapper}>
         <SectionTitle
           eventName="Our Products"
           sectionName="Explore Our Products"
@@ -24,7 +24,7 @@ const OurProductsSection = () => {
         customization={productsCustomizations}
       />
 
-      <button type="button" className={styles.viewProductsBtn}>
+      <button type="button" className={s.viewProductsBtn}>
         View All Products
       </button>
     </section>

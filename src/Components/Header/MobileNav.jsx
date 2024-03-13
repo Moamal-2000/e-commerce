@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { userImg } from "../../Assets/Images/Images";
 import useSignOut from "../../Hooks/useSignOut";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
-import styles from "./MobileNav.module.scss";
+import s from "./MobileNav.module.scss";
 
 const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
@@ -13,23 +13,19 @@ const MobileNav = () => {
   const handleSignOut = useSignOut();
 
   return (
-    <div
-      className={`${styles.mobileMenu} ${
-        isMobileMenuActive ? styles.active : ""
-      }`}
-    >
-      <div className={styles.userInfo}>
-        <div className={styles.img}>
+    <div className={`${s.mobileMenu} ${isMobileMenuActive ? s.active : ""}`}>
+      <div className={s.userInfo}>
+        <div className={s.img}>
           <img src={userImg} alt="user's picture" />
         </div>
 
         <p>
           Hey 🖐️
-          <span className={styles.userName}>{userText}</span>
+          <span className={s.userName}>{userText}</span>
         </p>
       </div>
 
-      <nav className={styles.nav}>
+      <nav className={s.nav}>
         <ul>
           <li>
             <a href="/#">
@@ -70,11 +66,11 @@ const MobileNav = () => {
         </ul>
       </nav>
 
-      <hr className={styles.line}></hr>
+      <hr className={s.line}></hr>
 
       {isSignIn ? (
         <button
-          className={styles.signOutButton}
+          className={s.signOutButton}
           type="button"
           onClick={handleSignOut}
         >
@@ -82,7 +78,7 @@ const MobileNav = () => {
           <span>Sign Out</span>
         </button>
       ) : (
-        <Link to="/signup" className={styles.signOutButton}>
+        <Link to="/signup" className={s.signOutButton}>
           <SvgIcon name="boxArrowRight" />
           <span>Sign In</span>
         </Link>

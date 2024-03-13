@@ -1,20 +1,20 @@
 import SvgIcon from "../MiniComponents/SvgIcon";
-import styles from "./MemberCard.module.scss";
+import s from "./MemberCard.module.scss";
 
 const MemberCard = ({ data }) => {
   const { name, jobTitle, img, socialMedia, id } = data;
 
   return (
-    <div className={styles.card}>
-      <div className={styles.imgHolder}>
+    <div className={s.card}>
+      <div className={s.imgHolder}>
         <img src={img} alt={name} />
       </div>
 
-      <div className={styles.info}>
+      <div className={s.info}>
         <b>{name}</b>
         <p>{jobTitle}</p>
 
-        <div className={styles.socialMedia}>
+        <div className={s.socialMedia}>
           <SocialMedia socialMedia={socialMedia} />
         </div>
       </div>
@@ -27,7 +27,7 @@ const SocialMedia = ({ socialMedia }) => {
   const socialMediaNames = Object.keys(socialMedia);
 
   return socialMediaNames?.map((mediaName, i) => {
-    const instagramClass = mediaName === "instagram" ? styles.instagram : "";
+    const instagramClass = mediaName === "instagram" ? s.instagram : "";
 
     return (
       <a

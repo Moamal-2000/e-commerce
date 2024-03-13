@@ -1,11 +1,11 @@
 import { useRef } from "react";
-import styles from "./AddCoupon.module.scss";
+import s from "./AddCoupon.module.scss";
 
 const AddCoupon = () => {
   const couponInputRef = useRef("");
 
   return (
-    <div className={styles.couponContainer}>
+    <div className={s.couponContainer}>
       <input
         type="text"
         placeholder="Example SAVE20"

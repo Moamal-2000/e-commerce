@@ -1,3 +1,7 @@
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import {
   A11y,
   Autoplay,
@@ -6,18 +10,13 @@ import {
   Scrollbar,
 } from "swiper/modules";
 import { Swiper } from "swiper/react";
-import styles from "./MainSlider.module.scss";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import introductionSlides from "./introductionSlides";
+import s from "./MainSlider.module.scss";
+import introductionSlides from "./IntroductionSlides";
 
 function MainSlider() {
   return (
     <Swiper
-      className={styles.mainSlider}
+      className={s.mainSlider}
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       loop={true}
       autoplay={{

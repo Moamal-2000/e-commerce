@@ -1,16 +1,16 @@
-import styles from "./ProductSizes.module.scss";
+import s from "./ProductSizes.module.scss";
 
 const ProductSizes = () => {
   return (
-    <section className={styles.sizes}>
+    <section className={s.sizes}>
       <span>Size:</span>
 
-      <div className={styles.sizesWrapper}>
-        <div className={styles.size}>XL</div>
-        <div className={styles.size}>S</div>
-        <div className={`${styles.size} ${styles.active}`}>M</div>
-        <div className={styles.size}>L</div>
-        <div className={styles.size}>XL</div>
+      <div className={s.sizesWrapper}>
+        <div className={s.size}>XL</div>
+        <div className={s.size}>S</div>
+        <div className={`${s.size} ${s.active}`}>M</div>
+        <div className={s.size}>L</div>
+        <div className={s.size}>XL</div>
       </div>
     </section>
   );
