@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import uuid from "react-uuid";
-import { havicGamepad, wiredKeyboard } from "../Assets/Images/Images";
+import { ps5Gamepad, wiredKeyboard } from "../Assets/Products/ProductImgs";
 
 const initialState = {
   favoritesProducts: [],
@@ -12,7 +12,7 @@ const initialState = {
       discount: 40,
       afterDiscount: 120,
       addedDate: "2024/2/2",
-      img: havicGamepad,
+      img: ps5Gamepad,
       rate: 5,
       votes: 88,
       sold: 105,

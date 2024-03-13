@@ -9,14 +9,14 @@ import {
   gamingLaptop,
   gamingMonitor,
   gucciBag,
-  havicGamepad,
   kidsCar,
   northCoat,
+  ps5Gamepad,
   satinJacket,
   soccerCleats,
   usbGamepad,
   wiredKeyboard,
-} from "../Assets/Images/Images";
+} from "../Assets/Products/ProductImgs";
 
 export const productsData = [
   {
@@ -27,7 +27,7 @@ export const productsData = [
     discount: 40,
     afterDiscount: 120,
     addedDate: "2024/2/2",
-    img: havicGamepad,
+    img: ps5Gamepad,
     rate: 5,
     votes: 88,
     sold: 105,
