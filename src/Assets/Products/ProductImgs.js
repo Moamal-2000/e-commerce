@@ -7,6 +7,10 @@ import gamingMonitor from "./gaming-monitor/gaming-monitor.png";
 import gucciBag from "./gucci-duffle-bag/gucci-duffle-bag.png";
 import kidsCar from "./kids-electric-car/kids-electric-car.png";
 import northCoat from "./north-coat/north-coat.png";
+import ps5GamepadThum1 from "./ps5-gamepad/ps5-gamepad-thum1.webp";
+import ps5GamepadThum2 from "./ps5-gamepad/ps5-gamepad-thum2.webp";
+import ps5GamepadThum3 from "./ps5-gamepad/ps5-gamepad-thum3.webp";
+import ps5GamepadThum4 from "./ps5-gamepad/ps5-gamepad-thum4.webp";
 import ps5Gamepad from "./ps5-gamepad/ps5-gamepad.png";
 import satinJacket from "./quilted-satin-jacket/quilted-satin-jacket.png";
 import cpuCooler from "./rgb-liquid-cpu-cooler/rgb-liquid-cpu-cooler.png";
@@ -29,6 +33,10 @@ export {
   kidsCar,
   northCoat,
   ps5Gamepad,
+  ps5GamepadThum1,
+  ps5GamepadThum2,
+  ps5GamepadThum3,
+  ps5GamepadThum4,
   satinJacket,
   soccerCleats,
   usbGamepad,

@@ -30,14 +30,14 @@
 }
 
 .horizontalLine {
-  max-width: 100%;
   min-width: 400px;
+  max-width: 500px;
   border: solid 1px #7f7f7f;
   margin: 28px 0;
 }
 
-@include small {
+@include large {
   .horizontalLine {
-    min-width: 100%;
+    max-width: 100%;
   }
 }

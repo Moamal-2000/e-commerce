@@ -12,6 +12,10 @@ import {
   kidsCar,
   northCoat,
   ps5Gamepad,
+  ps5GamepadThum1,
+  ps5GamepadThum2,
+  ps5GamepadThum3,
+  ps5GamepadThum4,
   satinJacket,
   soccerCleats,
   usbGamepad,
@@ -20,14 +24,20 @@ import {
 
 export const productsData = [
   {
-    shortName: "HI Gamepad",
-    name: "HAVIT HV-G92 Gamepad",
+    shortName: "PS5 Gamepad",
+    name: "PS5 Gamepad",
     type: "gaming",
     price: 160,
     discount: 40,
     afterDiscount: 120,
     addedDate: "2024/2/2",
     img: ps5Gamepad,
+    otherImages: [
+      ps5GamepadThum1,
+      ps5GamepadThum2,
+      ps5GamepadThum3,
+      ps5GamepadThum4,
+    ],
     rate: 5,
     votes: 88,
     sold: 105,

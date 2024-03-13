@@ -34,7 +34,8 @@
 .otherImages>img {
   width: 170px;
   height: 138px;
-  border-radius: 4px
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 @media (max-width: 1400px) {
