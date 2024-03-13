@@ -1,0 +1,41 @@
+@import "../../Styles/mixins.scss";
+
+.features {
+  border: 1px solid #00000080;
+  border-radius: 4px;
+  padding: 25px 0;
+  max-width: 450px;
+}
+
+.features .feature {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid #00000080;
+    padding-bottom: 20px;
+  }
+
+  &:last-child {
+    padding-top: 20px;
+  }
+}
+
+.features .feature>svg {
+  width: 40px;
+  height: 40px;
+}
+
+.features .feature .content {
+  margin-left: 20px;
+}
+
+.features .feature .content>b {
+  font: 500 1rem "Poppins";
+}
+
+.features .feature .content>p {
+  font: 500 .75rem "Poppins";
+  margin-top: 6px;
+}

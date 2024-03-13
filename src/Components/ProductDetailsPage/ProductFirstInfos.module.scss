@@ -1,0 +1,52 @@
+@import "../../Styles/mixins.scss";
+
+
+.productName {
+  font: 600 1.5rem/24px "Inter";
+  letter-spacing: .03rem;
+}
+
+.rateAndReviews {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+/* [Stars] */
+.rateAndReviews>* {
+  gap: 6px;
+}
+
+.reviews {
+  font: 400 .875rem "Poppins";
+  color: #7f7f7f;
+}
+
+.verticalLine {
+  height: 16px;
+  border-right: solid 2px #7f7f7f;
+}
+
+.greenText {
+  font: 400 .875rem "Poppins";
+  color: #00FF66;
+}
+
+.price {
+  display: block;
+  font: 400 1.5rem "Inter";
+  letter-spacing: .03rem;
+  margin-bottom: 20px;
+}
+
+.description {
+  font: 400 .875rem "Poppins";
+  max-width: 400px;
+}
+
+@include large {
+  .description {
+    max-width: 800px;
+  }
+}

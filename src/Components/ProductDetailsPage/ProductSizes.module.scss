@@ -1,0 +1,39 @@
+@import "../../Styles/mixins.scss";
+
+.sizes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sizes>span {
+  display: block;
+  font: 400 1.25rem "Inter";
+  letter-spacing: .03rem;
+  margin-right: 10px;
+}
+
+.sizes .sizesWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sizes .sizesWrapper .size {
+  font: 500 .875rem "Poppins";
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #00000080;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  user-select: none;
+  cursor: pointer;
+  @include center-x-y;
+
+  &.active {
+    border-color: var(--tomato);
+    background-color: var(--tomato);
+    color: var(--white);
+  }
+}
