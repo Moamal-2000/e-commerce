@@ -38,6 +38,7 @@
   aspect-ratio: 1/1;
   width: 170px;
   height: calc((25% - 14px) + (14px / 4));
+  cursor: pointer;
 }
 
 @media (max-width: 1400px) {
@@ -52,7 +53,6 @@
   width: 80%;
   object-fit: contain;
   border-radius: 4px;
-  cursor: pointer;
 }
 
 @media (max-width: 1400px) {
