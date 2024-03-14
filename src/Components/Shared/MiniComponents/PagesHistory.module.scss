@@ -10,6 +10,7 @@
 
 .page>a {
   color: #7f7f7f;
+  user-select: none;
   transition: color .1s;
 
   &:hover {
@@ -19,6 +20,7 @@
 
 .page>span {
   margin: 0 8px;
+  user-select: none;
 }
 
 .currentPage {

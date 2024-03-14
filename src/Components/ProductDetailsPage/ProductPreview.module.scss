@@ -4,6 +4,7 @@
 .images {
   display: flex;
   gap: 30px;
+  user-select: none;
 }
 
 @media (max-width: 1400px) {
@@ -36,6 +37,7 @@
   @include center-x-y;
   aspect-ratio: 1/1;
   width: 170px;
+  height: calc((25% - 14px) + (14px / 4));
 }
 
 @media (max-width: 1400px) {
@@ -47,6 +49,7 @@
 
 .otherImages .imgHolder img {
   aspect-ratio: 1/1;
+  width: 80%;
   object-fit: contain;
   border-radius: 4px;
   cursor: pointer;
