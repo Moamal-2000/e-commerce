@@ -4,6 +4,7 @@ import { capitalize } from "../../Functions/helper";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import ProductDetails from "./ProductDetails";
 import s from "./ProductDetailsPage.module.scss";
+import RelatedItemsSection from "./RelatedItemsSection";
 
 const ProductDetailsPage = () => {
   const [searchParams, _] = useSearchParams();
@@ -18,8 +19,8 @@ const ProductDetailsPage = () => {
     <div className="container">
       <main className={s.detailsPage}>
         <PagesHistory history={history} />
-
         <ProductDetails data={PRODUCT_DATA} />
+        <RelatedItemsSection productType={type} currentProduct={PRODUCT_DATA} />
       </main>
     </div>
   );

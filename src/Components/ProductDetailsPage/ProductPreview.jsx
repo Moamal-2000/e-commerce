@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import s from "./ProductPreview.module.scss";
 
 const ProductPreview = ({ data }) => {
   const { img, name, otherImages } = data;
   const [previewImg, setPreviewImg] = useState(img);
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
+  const [searchParams, _] = useSearchParams();
+
+  useEffect(() => {
+    setPreviewImg(img);
+  }, [searchParams]);
 
   return (
     <section className={s.images}>

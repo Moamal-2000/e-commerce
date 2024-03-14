@@ -5,7 +5,9 @@ const SectionTitle = ({ eventName, sectionName, type = 1 }) => {
 
   return (
     <div className={`${s.sectionTitle} ${type2Class}`}>
-      <div className={s.event}>{eventName}</div>
+      <div className={s.event} data-event-name={eventName}>
+        {eventName}
+      </div>
       <b>{sectionName}</b>
     </div>
   );
