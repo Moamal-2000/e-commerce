@@ -5,6 +5,7 @@ import SkipContentLink from "../Components/Shared/MiniComponents/SkipContentLink
 import Header from "../Components/Header/Header";
 import MobileNav from "../Components/Header/MobileNav";
 import Footer from "../Components/Footer/Footer";
+import ScrollToTop from "../Components/Shared/MiniComponents/ScrollToTop";
 
 const RoutesLayout = () => {
   return (
@@ -15,6 +16,7 @@ const RoutesLayout = () => {
       <MobileNav />
       <GlobalOverlay />
       <Outlet />
+      <ScrollToTop />
       <Footer />
     </>
   );
