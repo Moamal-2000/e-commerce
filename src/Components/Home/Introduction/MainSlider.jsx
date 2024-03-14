@@ -10,8 +10,8 @@ import {
   Scrollbar,
 } from "swiper/modules";
 import { Swiper } from "swiper/react";
-import s from "./MainSlider.module.scss";
 import IntroductionSlides from "./IntroductionSlides";
+import s from "./MainSlider.module.scss";
 
 function MainSlider() {
   return (
