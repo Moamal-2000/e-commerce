@@ -11,7 +11,7 @@ import {
 } from "swiper/modules";
 import { Swiper } from "swiper/react";
 import s from "./MainSlider.module.scss";
-import introductionSlides from "./IntroductionSlides";
+import IntroductionSlides from "./IntroductionSlides";
 
 function MainSlider() {
   return (
@@ -28,7 +28,7 @@ function MainSlider() {
       slidesPerView={1}
       pagination={{ clickable: true }}
     >
-      {introductionSlides()}
+      {IntroductionSlides()}
     </Swiper>
   );
 }
