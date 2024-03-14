@@ -8,6 +8,7 @@
 .stars>img {
   width: 20px;
   height: 20px;
+  object-fit: contain;
 }
 
 .halfStar {
@@ -19,24 +20,25 @@
 
 .uncoloredStar {
   position: absolute;
-  height: fit-content;
-  left: -10px;
+  height: 100%;
+  left: -9px;
+  top: 1px;
 }
 
 .coloredStar {
   position: absolute;
   left: 0;
-  top: 0;
-  width: 100%;
-  height: 24px;
+  top: 1px;
+  width: 20px;
+  height: 20px;
 }
 
 .hideBox {
   position: absolute;
-  left: 10px;
+  left: 10.5px;
   top: 0;
   width: 10px;
-  height: 24px;
+  height: 21px;
   overflow: hidden;
   z-index: 2;
 }

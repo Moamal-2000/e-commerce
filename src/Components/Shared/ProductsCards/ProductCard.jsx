@@ -16,7 +16,6 @@ const ProductCard = ({
   },
 }) => {
   const {
-    shortName,
     name,
     price,
     discount,
@@ -97,7 +96,7 @@ const ProductCard = ({
         </strong>
         <div className={s.price}>
           ${afterDiscount}
-          <del className={s.afterDiscount}>${price}</del>
+          {discount > 0 && <del className={s.afterDiscount}>${price}</del>}
         </div>
 
         <div className={s.rateContainer}>
