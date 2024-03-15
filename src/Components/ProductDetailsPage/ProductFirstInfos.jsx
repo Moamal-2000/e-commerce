@@ -2,7 +2,7 @@ import RateStars from "../Shared/MidComponents/RateStars";
 import s from "./ProductFirstInfos.module.scss";
 
 const ProductFirstInfos = ({ data }) => {
-  const { name, price, votes, rate } = data;
+  const { name, price, votes, rate, description } = data;
 
   return (
     <section className={s.firstInfos}>
@@ -17,11 +17,7 @@ const ProductFirstInfos = ({ data }) => {
 
       <span className={s.price}>${price}</span>
 
-      <p className={s.description}>
-        PlayStation 5 Controller Skin High quality vinyl with air channel
-        adhesive for easy bubble free install & mess free removal Pressure
-        sensitive.
-      </p>
+      <p className={s.description}>{description}</p>
     </section>
   );
 };
