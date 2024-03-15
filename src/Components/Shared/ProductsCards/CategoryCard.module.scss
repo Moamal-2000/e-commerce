@@ -11,8 +11,8 @@
 }
 
 .card:hover {
-  background-color: #DB4444;
-  border-color: #DB4444;
+  background-color: var(--red);
+  border-color: var(--red);
 }
 
 .card svg {

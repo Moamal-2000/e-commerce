@@ -19,3 +19,19 @@ const ProductPoster = () => {
   );
 };
 export default ProductPoster;
+
+
+let nums = [2, 12, 11, 5, 10, 1, 99];
+
+let result = nums.reduce((acc, current) => {
+  if (current % 2 === 1) {
+    console.log(current);
+    return acc + current;
+  } else {
+    console.log(acc);
+    console.log(current);
+    return acc * current;
+  }
+}, 1); 
+
+console.log(result); // 500

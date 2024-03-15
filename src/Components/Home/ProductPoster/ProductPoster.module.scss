@@ -19,8 +19,6 @@
   }
 }
 
-.content {}
-
 .content>span {
   font: 600 1rem/24px "Poppins";
   color: #00FF66;
@@ -50,7 +48,7 @@
 .content>button {
   padding: 16px 48px 16px 48px;
   border-radius: 4px;
-  background-color: #00e35b;
+  background-color: var(--green);
   color: #fff;
   cursor: pointer;
   outline: none;

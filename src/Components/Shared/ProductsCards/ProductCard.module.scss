@@ -51,7 +51,7 @@
 }
 
 .layerContent .new {
-  background-color: #00FF66;
+  background-color: var(--green);
   color: var(--white);
   width: 51px;
   height: 26px;
@@ -172,9 +172,8 @@
 
 .productInfo .price .afterDiscount {
   margin-left: 16px;
-  color: var(--black);
+  color: #595959;
   font: 500 1rem/24px "Poppins";
-  opacity: .5;
 }
 
 .productInfo .rateContainer {
@@ -186,6 +185,5 @@
 
 .productInfo .rateContainer .numOfVotes {
   font: 600 .875rem/21px "Poppins";
-  color: var(--black);
-  opacity: .5;
+  color: #595959;
 }
