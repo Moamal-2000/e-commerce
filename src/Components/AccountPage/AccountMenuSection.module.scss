@@ -1,7 +1,14 @@
 @import "../../Styles/mixins.scss";
 
-.section {
-  width: 300px;
+.menuSection {
+  max-width: 300px;
+  min-width: 250px;
+}
+
+@include small {
+  .menuSection {
+    display: none;
+  }
 }
 
 .section>h2 {

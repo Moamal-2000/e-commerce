@@ -3,11 +3,22 @@
 .profileForm {
   box-shadow: 0 1px 13px 0 #0000000D;
   width: 920px;
-  height: 630px;
   border-radius: 4px;
   padding: 40px 70px 30px 70px;
   display: flex;
   flex-direction: column;
+}
+
+@include medium {
+  .profileForm {
+    padding: 30px;
+  }
+}
+
+@include small {
+  .profileForm {
+    padding: 20px;
+  }
 }
 
 .profileForm>h2 {
@@ -73,6 +84,12 @@
   margin-right: 16px;
 }
 
+@include small {
+  .cancelButton {
+    font-size: .9rem;
+  }
+}
+
 .submitButton {
   outline: none;
   border: none;
@@ -81,4 +98,11 @@
   background-color: var(--tomato);
   color: var(--white);
   font: 500 1rem "Poppins";
+}
+
+@include medium {
+  .submitButton {
+    padding: 12px 34px;
+    font-size: .9rem;
+  }
 }

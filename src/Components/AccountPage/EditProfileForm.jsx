@@ -2,7 +2,7 @@ import s from "./EditProfileForm.module.scss";
 
 const EditProfileForm = () => {
   function handleSubmit(e) {
-    e.preventDefault()
+    e.preventDefault();
   }
 
   return (
@@ -22,8 +22,12 @@ const EditProfileForm = () => {
           </div>
 
           <div className={s.input}>
-            <label htmlFor="email">Email</label>
-            <input type="text" id="email" placeholder="rimel1111@gmail.com" />
+            <label htmlFor="changeEmail">Email</label>
+            <input
+              type="text"
+              id="changeEmail"
+              placeholder="rimel1111@gmail.com"
+            />
           </div>
 
           <div className={s.input}>
