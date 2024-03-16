@@ -14,6 +14,7 @@ import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsP
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 import RoutesLayout from "./RoutesLayout";
+import AccountPage from "../Components/AccountPage/AccountPage";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
@@ -27,6 +28,7 @@ const AppRoutes = () => {
       <Route path="/wishlist" element={<WishList />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/details" element={<ProductDetailsPage />} />
+      <Route path="/profile" element={<AccountPage />} />
     </Route>
   );
 
