@@ -1,7 +1,7 @@
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./Contact.module.scss";
 import ContactForm from "./ContactForm";
-import ContactInfo from "./ContactInfo";
+import ContactInfoCard from "./ContactInfoCard";
 
 const Contact = () => {
   return (
@@ -10,7 +10,7 @@ const Contact = () => {
         <PagesHistory history={["/", "Contact"]} />
 
         <div className={s.contactContent}>
-          <ContactInfo />
+          <ContactInfoCard />
           <ContactForm />
         </div>
       </main>

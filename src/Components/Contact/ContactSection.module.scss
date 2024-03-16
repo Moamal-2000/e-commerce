@@ -1,0 +1,42 @@
+@import "../../Styles/mixins.scss";
+
+.section {}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.iconHolder {
+  width: 40px;
+  height: 40px;
+  background-color: var(--tomato);
+  @include center-x-y;
+  border-radius: 50%;
+}
+
+.iconHolder>svg {
+  width: 20px;
+  height: 20px;
+}
+
+.headerContent>b {
+  font: 500 1rem "Poppins";
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content>p {
+  font: 400 .875rem "Poppins";
+  color: var(--black);
+}
+
+.content>p>a {
+  color: var(--black);
+}
