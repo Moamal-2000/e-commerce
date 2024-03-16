@@ -1,7 +1,5 @@
 @import "../../Styles/mixins.scss";
 
-.section {}
-
 .headerContent {
   display: flex;
   align-items: center;
@@ -39,4 +37,8 @@
 
 .content>p>a {
   color: var(--black);
+
+  &:hover {
+    text-decoration: underline;
+  }
 }

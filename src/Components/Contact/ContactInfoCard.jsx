@@ -16,11 +16,11 @@ const ContactInfoCard = () => {
       <ContactSection iconName="email2" title="Write To Us">
         <p>Fill out our form and we will contact you within 24 hours.</p>
         <p>
-          Emails:
+          Emails:{" "}
           <a href="mailto:customer@exclusive.com">customer@exclusive.com</a>
         </p>
         <p>
-          Emails:
+          Emails:{" "}
           <a href="mailto:support@exclusive.com">support@exclusive.com</a>
         </p>
       </ContactSection>
