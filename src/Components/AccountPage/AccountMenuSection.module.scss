@@ -1,15 +1,11 @@
 @import "../../Styles/mixins.scss";
 
-.menuSection {
-
-}
-
 .section {
-
+  width: 300px;
 }
 
 .section>h2 {
-font: 500 1rem "Poppins";
+  font: 500 1rem "Poppins";
 }
 
 .section>ul {
@@ -17,10 +13,6 @@ font: 500 1rem "Poppins";
   flex-direction: column;
   gap: 6px;
   margin: 20px 0;
-}
-
-.section>ul>li {
-
 }
 
 .section>ul>li>a {

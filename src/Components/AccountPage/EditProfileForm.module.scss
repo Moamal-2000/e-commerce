@@ -1,2 +1,84 @@
 @import "../../Styles/mixins.scss";
 
+.profileForm {
+  box-shadow: 0 1px 13px 0 #0000000D;
+  width: 920px;
+  height: 630px;
+  border-radius: 4px;
+  padding: 40px 70px 30px 70px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileForm>h2 {
+  color: #DB4444;
+  font: 500 1.25rem "Poppins";
+  margin-bottom: 20px;
+}
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+}
+
+.inputs .input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.inputs .input>label {
+  font: 400 1rem "Poppins";
+  cursor: pointer;
+}
+
+.inputs .input>input {
+  border: none;
+  outline: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 13px 16px;
+  font: 400 1rem "Poppins";
+}
+
+.inputs .input>input::placeholder {
+  color: #7a7a7a;
+}
+
+.passwordInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.buttons {
+  align-self: flex-end;
+}
+
+.cancelButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 4px;
+  font: 400 1rem "Poppins";
+  margin-right: 16px;
+}
+
+.submitButton {
+  outline: none;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  background-color: var(--tomato);
+  color: var(--white);
+  font: 500 1rem "Poppins";
+}
