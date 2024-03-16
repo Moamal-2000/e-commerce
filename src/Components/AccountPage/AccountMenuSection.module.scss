@@ -1,3 +1,33 @@
 @import "../../Styles/mixins.scss";
 
-;
+.menuSection {
+
+}
+
+.section {
+
+}
+
+.section>h2 {
+font: 500 1rem "Poppins";
+}
+
+.section>ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 20px 0;
+}
+
+.section>ul>li {
+
+}
+
+.section>ul>li>a {
+  font: 400 1rem "Poppins";
+  color: #7f7f7f;
+
+  &[class=active] {
+    color: #DB4444 !important;
+  }
+}
