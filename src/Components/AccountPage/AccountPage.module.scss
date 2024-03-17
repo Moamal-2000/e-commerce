@@ -4,6 +4,20 @@
   margin: 60px 0;
 }
 
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.welcomeMessage {
+  font: 400 .875rem "Poppins";
+}
+
+.welcomeMessage>a {
+  color: var(--tomato);
+}
+
 .accountPageContent {
   margin-top: 60px;
   display: flex;

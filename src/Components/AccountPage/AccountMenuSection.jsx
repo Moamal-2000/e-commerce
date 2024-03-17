@@ -8,10 +8,10 @@ import s from "./AccountMenuSection.module.scss";
 const AccountMenuSection = () => {
   const { isProfileMenuActive } = useSelector((state) => state.global);
   const { width: windowWidth } = useGetResizeWindow();
+  const dispatch = useDispatch();
   const isMobileDevice = windowWidth < 768;
   const mobileClass = isMobileDevice ? s.mobile : "";
   const activeClass = isProfileMenuActive ? s.active : "";
-  const dispatch = useDispatch();
 
   function openProfileMenu() {
     dispatch(toggleState({ key: "isProfileMenuActive", value: true }));

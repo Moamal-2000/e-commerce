@@ -90,6 +90,10 @@
   }
 }
 
+.cancelButton>a {
+  color: var(--black);
+}
+
 .submitButton {
   outline: none;
   border: none;

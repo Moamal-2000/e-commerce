@@ -18,13 +18,5 @@ const globalSlice = createSlice({
   },
 });
 
-// function handleReducers() {
-//   return {
-//     toggleOverlay: (state) => {
-//       return state;
-//     },
-//   };
-// }
-
 export const { toggleState } = globalSlice.actions;
 export default globalSlice.reducer;
