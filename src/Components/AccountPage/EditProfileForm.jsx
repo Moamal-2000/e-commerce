@@ -76,6 +76,8 @@ const EditProfileForm = () => {
       emailOrPhone: inputs[2].value,
       password: inputs[3].value,
     };
+
+    //! I stopped here
   }
 
   function checkIsInputsValid(inputs) {

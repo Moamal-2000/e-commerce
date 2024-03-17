@@ -3,41 +3,47 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 
 const useNavToolsProps = () => {
+  const [navToolsProps, setNavToolsProps] = useState({});
   const { isSignIn } = useSelector((state) => state.user);
   const location = useLocation();
   const path = location.pathname;
-  const [navToolsProps, setNavToolsProps] = useState("");
-  const signInNavTools = {
-    showHeart: true,
-    showCart: true,
-    showUser: true,
+  const navProps = {
+    signIn: {
+      showHeart: true,
+      showCart: true,
+      showUser: true,
+    },
+    notSignIn: {
+      showHeart: false,
+      showCart: false,
+      showUser: false,
+    },
+    signUpPage: {
+      showHeart: false,
+      showCart: false,
+      showUser: false,
+    },
   };
-  const homePageNavTools = {
-    showHeart: true,
-    showCart: true,
-    showUser: false,
-  };
-  const signUpPageNavTools = {
-    showHeart: false,
-    showCart: false,
-    showUser: false,
-  };
-  const defaultNavTools = {
-    showUser: true,
+
+  const setSelectedNavProps = () => {
+    let selectedNavProps = navProps.default;
+
+    if (!isSignIn) {
+      selectedNavProps = navProps.notSignIn;
+    } else if (path === "/signup" || path === "/login") {
+      selectedNavProps = navProps.signUpPage;
+    } else if (isSignIn) {
+      selectedNavProps = navProps.signIn;
+    }
+
+    setNavToolsProps(selectedNavProps);
   };
 
   useEffect(() => {
-    const navPropsDependingOnConditions = isSignIn
-      ? signInNavTools
-      : path === "/"
-      ? homePageNavTools
-      : path === "/signup" || "/login"
-      ? signUpPageNavTools
-      : defaultNavTools;
-
-    setNavToolsProps(navPropsDependingOnConditions);
-  }, [isSignIn]);
+    setSelectedNavProps();
+  }, [isSignIn, path]);
 
   return navToolsProps;
 };
+
 export default useNavToolsProps;
