@@ -10,15 +10,15 @@ const EditProfileForm = () => {
   const [firstName, setFirstName] = useState(firstLastUserName[0]);
   const [lastName, setLastName] = useState(firstLastUserName[1]);
   const [emailOrPhoneState, setEmailOrPhoneState] = useState(emailOrPhone);
-  const currPasswordRef = useRef("");
-  const newPasswordRef = useRef("");
-  const confirmPasswordRef = useRef("");
+  const [newPassword, setNewPassword] = useState("");
   const formRef = useRef();
 
   function handleSubmit(e) {
     e.preventDefault();
-    checkPasswordInputs();
     checkEmptyInputs();
+    checkEmailValidation();
+    checkPasswordInputs();
+    updateUserInfo();
   }
 
   function checkPasswordInputs() {
@@ -51,8 +51,36 @@ const EditProfileForm = () => {
 
     inputs.forEach((input) => {
       const inputClassListMethod = input.value.length > 2 ? "remove" : "add";
-      input.classList[inputClassListMethod]("invalid")
+      input.classList[inputClassListMethod]("invalid");
     });
+  }
+
+  function checkEmailValidation() {
+    const emailInput = document.querySelector("#changeEmail");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
+    const isEmailValid = emailRegex.test(emailInput.value);
+    const emailClassListMethod = isEmailValid ? "remove" : "add";
+
+    emailInput.classList[emailClassListMethod]("invalid");
+  }
+
+  function updateUserInfo() {
+    const formEle = formRef.current;
+    const inputs = formEle.querySelectorAll("input");
+    const isFormValid = checkIsInputsValid(inputs);
+
+    if (!isFormValid) return;
+
+    const userInfo = {
+      userName: `${inputs[0].value}  ${inputs[1].value}`,
+      emailOrPhone: inputs[2].value,
+      password: inputs[3].value,
+    };
+  }
+
+  function checkIsInputsValid(inputs) {
+    inputs = [...inputs];
+    return inputs.every((input) => input.classList.contains("valid"));
   }
 
   return (
@@ -121,7 +149,6 @@ const EditProfileForm = () => {
               name="currentPass"
               id="currentPass"
               placeholder="Current Password"
-              onChange={(e) => (currPasswordRef.current = e.target.value)}
             />
           </div>
 
@@ -131,7 +158,8 @@ const EditProfileForm = () => {
               name="newPass"
               id="newPass"
               placeholder="New Password"
-              onChange={(e) => (newPasswordRef.current = e.target.value)}
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
             />
           </div>
 
@@ -141,7 +169,6 @@ const EditProfileForm = () => {
               name="confirmPass"
               id="confirmPass"
               placeholder="Confirm New Password"
-              onChange={(e) => (confirmPasswordRef.current = e.target.value)}
             />
           </div>
         </section>
