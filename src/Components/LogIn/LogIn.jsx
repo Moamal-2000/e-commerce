@@ -4,7 +4,7 @@ import LogInForm from "./LogInForm";
 
 const LogIn = () => {
   return (
-    <main className={s.LogInPage}>
+    <main className={s.LogInPage} id="login-page">
       <div className={s.container}>
         <div className={s.imgHolder}>
           <img src={signUpImg} alt="Shopping cart and phone" />

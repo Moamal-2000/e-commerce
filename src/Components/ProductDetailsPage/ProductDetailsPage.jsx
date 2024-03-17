@@ -17,7 +17,7 @@ const ProductDetailsPage = () => {
 
   return (
     <div className="container">
-      <main className={s.detailsPage}>
+      <main className={s.detailsPage} id="details-page">
         <PagesHistory history={history} />
         <ProductDetails data={PRODUCT_DATA} />
         <RelatedItemsSection productType={type} currentProduct={PRODUCT_DATA} />

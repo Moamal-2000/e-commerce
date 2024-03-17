@@ -6,7 +6,7 @@ import ContactInfoCard from "./ContactInfoCard";
 const Contact = () => {
   return (
     <div className="container">
-      <main className={s.contactPage}>
+      <main className={s.contactPage} id="contact-page">
         <PagesHistory history={["/", "Contact"]} />
 
         <div className={s.contactContent}>

@@ -7,7 +7,7 @@ import OurMembersSection from "./OurMembersSlider";
 
 const About = () => {
   return (
-    <main className={s.aboutPage}>
+    <main className={s.aboutPage} id="about-page">
       <div className="container">
         <PagesHistory history={["/", "About"]} />
       </div>

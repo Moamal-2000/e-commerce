@@ -24,7 +24,6 @@ const SectionsMenu = () => {
 
       <nav
         className={`${s.sectionsMenu} ${isSectionsMenuActive ? s.active : ""}`}
-        id="sections-products"
       >
         <DropDownMenu nameMenu="Woman’s Fashion">
           <ul className={s.dropDownMenu}>

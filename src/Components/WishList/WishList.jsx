@@ -10,7 +10,7 @@ const WishList = () => {
 
   return (
     <div className="container">
-      <main className={s.wishListPage}>
+      <main className={s.wishListPage} id="wishlist-page">
         <section className={s.wishList}>
           <header>
             <label htmlFor="wishlist">WishList ({lengthOfWishList})</label>

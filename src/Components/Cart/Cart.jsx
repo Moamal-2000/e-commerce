@@ -8,7 +8,7 @@ import CartProducts from "./CartProducts";
 const Cart = () => {
   return (
     <div className="container">
-      <main className={s.cartPage}>
+      <main className={s.cartPage} id="cart-page">
         <PagesHistory history={["/", "Cart"]} />
 
         <div className={s.pageComponents}>

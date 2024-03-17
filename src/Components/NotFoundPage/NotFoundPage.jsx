@@ -5,7 +5,7 @@ import s from "./NotFoundPage.module.scss";
 const NotFoundPage = () => {
   return (
     <div className="container">
-      <main className={s.notFoundPage}>
+      <main className={s.notFoundPage} id="notfound-page">
         <PagesHistory history={["/", "404 Error"]} />
 
         <div className={s.wrapper}>

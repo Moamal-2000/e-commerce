@@ -9,7 +9,7 @@ const TodaySection = () => {
     productsData.filter((productData) => productData.sold > 100);
 
   return (
-    <section className={s.todaysSection}>
+    <section className={s.todaysSection} id="todays-section">
       <div className={s.wrapper}>
         <SectionTitle eventName="Today's" sectionName="Flash Sales" />
         <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />

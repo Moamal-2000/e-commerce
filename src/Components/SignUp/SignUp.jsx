@@ -4,7 +4,7 @@ import SignUpForm from "./SignUpForm";
 
 const SignUp = () => {
   return (
-    <main className={s.signUpPage}>
+    <main className={s.signUpPage} id="signup-page">
       <div className={s.container}>
         <div className={s.imgHolder}>
           <img src={signUpImg} alt="Shopping cart and phone" />

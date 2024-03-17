@@ -12,7 +12,7 @@ const AccountPage = () => {
 
   return (
     <div className="container">
-      <main className={s.accountPage}>
+      <main className={s.accountPage} id="account-page">
         <div className={s.wrapper}>
           <PagesHistory history={["/", "My Account"]} />
 
