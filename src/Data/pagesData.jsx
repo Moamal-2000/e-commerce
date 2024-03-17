@@ -36,6 +36,10 @@ export const PAGE_SECTIONS_ID = [
     pagePath: "/contact",
   },
   {
+    sectionId: "checkout-page",
+    pagePath: "/checkout",
+  },
+  {
     sectionId: "notfound-page",
   },
 ];
