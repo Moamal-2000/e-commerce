@@ -1,14 +1,57 @@
 @import "../../Styles/mixins.scss";
 
-.menuSection {
-  max-width: 300px;
-  min-width: 250px;
+.profileSectionsButton {
+  position: absolute;
+  left: 20px;
+  top: 102px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .7;
+  }
 }
 
 @include small {
-  .menuSection {
-    display: none;
+  .profileSectionsButton {
+    display: block;
   }
+}
+
+@include very-small {
+  .profileSectionsButton {
+    left: 10px;
+  }
+}
+
+.profileSectionsButton>svg {
+  width: 25px;
+  height: 25px;
+}
+
+.menuSection {
+  max-width: 300px;
+  min-width: 250px;
+  left: -200%;
+  transition: left .5s ease;
+
+  &.active {
+    left: 0;
+  }
+}
+
+.menuSection.mobile {
+  position: fixed;
+  top: 0;
+  background-color: var(--white);
+  height: calc(100vh - (100vh - 100%));
+  padding: 20px;
+  z-index: 1000;
 }
 
 .section>h2 {

@@ -3,14 +3,16 @@ import { toggleState } from "../../../Features/globalSlice";
 import s from "./GlobalOverlay.module.scss";
 
 const GlobalOverlay = () => {
-  const { isOverlayActive, isMobileMenuActive } = useSelector(
-    (state) => state.global
-  );
+  const { isOverlayActive, isMobileMenuActive, isProfileMenuActive } =
+    useSelector((state) => state.global);
   const dispatch = useDispatch();
 
   function handleOverlayClick() {
     if (isMobileMenuActive)
       dispatch(toggleState({ key: "isMobileMenuActive", value: false }));
+    if (isProfileMenuActive)
+      dispatch(toggleState({ key: "isProfileMenuActive", value: false }));
+
     dispatch(toggleState({ key: "isOverlayActive", value: false }));
     dispatch(toggleState({ key: "isSectionsMenuActive", value: false }));
   }
