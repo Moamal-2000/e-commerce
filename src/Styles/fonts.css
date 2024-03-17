@@ -1,0 +1,90 @@
+/* Poppins */
+@font-face {
+  font-family: "Poppins";
+  src: url("../Fonts/Poppins/Poppins-Light.ttf"), format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../Fonts/Poppins/Poppins-Regular.ttf"), format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../Fonts/Poppins/Poppins-Medium.ttf"), format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../Fonts/Poppins/Poppins-SemiBold.ttf"), format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../Fonts/Poppins/Poppins-Bold.ttf"), format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../Fonts/Poppins/Poppins-ExtraBold.ttf"), format("ttf");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Inter */
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter/Inter-Light.ttf"), format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter/Inter-Regular.ttf"), format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter/Inter-Medium.ttf"), format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter/Inter-SemiBold.ttf"), format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../Fonts/Inter/Inter-Bold.ttf"), format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
