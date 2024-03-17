@@ -25,6 +25,7 @@
 }
 
 .userInfo .img {
+  display: block;
   --size: 70px;
   min-width: var(--size);
   min-height: var(--size);

@@ -67,6 +67,7 @@
     left: -200%;
     top: 0;
     height: calc(100vh - (100vh - 100%));
+    max-height: none;
     background-color: #fff;
     z-index: 1000;
     padding: 18px;

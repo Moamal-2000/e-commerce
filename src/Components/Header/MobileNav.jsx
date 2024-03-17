@@ -15,9 +15,9 @@ const MobileNav = () => {
   return (
     <div className={`${s.mobileMenu} ${isMobileMenuActive ? s.active : ""}`}>
       <div className={s.userInfo}>
-        <div className={s.img}>
+        <Link to="/profile" title="Profile" className={s.img}>
           <img src={userImg} alt="user's picture" />
-        </div>
+        </Link>
 
         <p>
           Hey 🖐️
@@ -28,10 +28,10 @@ const MobileNav = () => {
       <nav className={s.nav}>
         <ul>
           <li>
-            <a href="/#">
+            <NavLink to="/profile">
               <SvgIcon name="user" />
               <span>Profile</span>
-            </a>
+            </NavLink>
           </li>
           <li>
             <NavLink to="/">
@@ -46,22 +46,22 @@ const MobileNav = () => {
             </NavLink>
           </li>
           <li>
-            <a href="/#">
+            <NavLink to="/cart">
               <SvgIcon name="bag" />
               <span>My Cart</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#">
+            <NavLink to="/favorite">
               <SvgIcon name="heart" />
               <span>Favorite</span>
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a href="/#">
+            <NavLink to="/notifications">
               <SvgIcon name="bell" />
               <span>Notifications</span>
-            </a>
+            </NavLink>
           </li>
         </ul>
       </nav>
