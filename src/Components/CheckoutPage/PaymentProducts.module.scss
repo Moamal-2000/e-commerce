@@ -1,21 +1,29 @@
-.product {
+.products {
+  margin-bottom: 30px;
+}
 
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .wrapper {
-
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 .wrapper>img {
   width: 54px;
-height: 54px;
-object-fit: contain;
+  height: 54px;
+  object-fit: contain;
 }
 
 .wrapper>span {
-
+  font: 400 1rem "Poppins";
 }
 
 .price {
-
+  font: 400 1rem "Poppins";
 }

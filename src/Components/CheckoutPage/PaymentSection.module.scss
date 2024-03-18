@@ -1,28 +1,3 @@
 @import "../../Styles/mixins.scss";
 
-.paymentSection {
-
-}
-
-.calculationInfo  {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin: 20px 0;
-}
-
-.calculationInfo .item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
-.calculationInfo .item:not(:last-child)::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  width: 100%;
-  border-bottom: solid 1px #999999;
-}
+.paymentSection {}
