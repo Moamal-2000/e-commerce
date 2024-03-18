@@ -1,6 +1,8 @@
 .pageHistory {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
 }
 
 .page {

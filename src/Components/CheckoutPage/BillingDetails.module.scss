@@ -1,7 +1,27 @@
 @import "../../Styles/mixins.scss";
 
 .billingDetailsSection {
-  width: 470px;
+  max-width: 470px;
+}
+
+@include medium {
+  .billingDetailsSection {
+    max-width: 360px;
+  }
+}
+
+@include medium {
+  .billingDetailsSection {
+    max-width: 80vw;
+    width: 80vw;
+  }
+}
+
+@include small {
+  .billingDetailsSection {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .billingDetailsSection>h2 {
@@ -21,4 +41,10 @@
   cursor: pointer;
   padding-left: 10px;
   font: 400 1rem "Poppins";
+}
+
+@include small {
+  .billingDetailsSection>footer>label {
+    font-size: .8rem;
+  }
 }
