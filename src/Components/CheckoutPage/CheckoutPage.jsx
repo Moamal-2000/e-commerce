@@ -2,6 +2,7 @@ import useFormData from "../../Hooks/useFormData";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import BillingDetails from "./BillingDetails";
 import s from "./CheckoutPage.module.scss";
+import PaymentSection from "./PaymentSection";
 
 const CheckoutPage = () => {
   const { values, handleChange } = useFormData({
@@ -32,11 +33,12 @@ const CheckoutPage = () => {
   return (
     <div className="container">
       <main className={s.checkoutPage} id="checkout-page">
-        <form method="POST">
-          <PagesHistory history={PAGE_HISTORY} />
+        <PagesHistory history={PAGE_HISTORY} />
 
+        <form method="POST">
           <section className={s.checkoutPageContent}>
             <BillingDetails inputsData={{ values, handleChange }} />
+            <PaymentSection />
           </section>
         </form>
       </main>
