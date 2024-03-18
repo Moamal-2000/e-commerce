@@ -18,7 +18,9 @@ const BillingDetails = ({ inputsData: { values, handleChange } }) => {
             id: "save-info",
           }}
         />
-        <label htmlFor="save-info">Save this information for next time</label>
+        <label htmlFor="save-info">
+          Save this information for faster check-out next time
+        </label>
       </footer>
     </section>
   );

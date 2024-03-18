@@ -1,6 +1,6 @@
 import s from "./PaymentProducts.module.scss";
 
-const PaymentProducts = ({data}) => {
+const PaymentProducts = ({ data }) => {
   return data.map(({ img, shortName, price, id }) => (
     <div key={id} className={s.product}>
       <div className={s.wrapper}>

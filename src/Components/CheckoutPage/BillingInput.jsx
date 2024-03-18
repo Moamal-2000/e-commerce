@@ -11,9 +11,14 @@ const BillingInput = ({
     onchange,
   },
 }) => {
+  const redStar = isRequired && <span className={s.redStar}>*</span>;
+
   return (
     <div className={s.input}>
-      <label htmlFor={name}>{label}</label>
+      <label htmlFor={name}>
+        {label}
+        {redStar}
+      </label>
       <input
         id={name}
         name={name}

@@ -1,3 +1,23 @@
 .input {
-  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input>label {
+  font: 400 1rem "Poppins";
+  color: #999999;
+}
+
+.redStar {
+  color: #ff0000;
+}
+
+.input>input {
+  outline: none;
+  border: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  padding: 14px 12px;
+  font: 400 1rem "Poppins";
 }
