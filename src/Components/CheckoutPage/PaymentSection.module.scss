@@ -1,3 +1,14 @@
 @import "../../Styles/mixins.scss";
 
 .paymentSection {}
+
+.submitPaymentButton {
+  border: none;
+  outline: none;
+  background-color: var(--tomato);
+  color: var(--white);
+  font: 500 1rem "Poppins";
+  padding: 16px 48px 16px 48px;
+  border-radius: 4px;
+  margin-top: 34px;
+}

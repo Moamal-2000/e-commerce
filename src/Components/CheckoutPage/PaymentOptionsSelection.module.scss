@@ -1,0 +1,28 @@
+.paymentOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+:where(.input, .wrapper) {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  justify-content: space-between;
+}
+
+.input input {
+  accent-color: var(--black);
+  min-width: 24px;
+  min-height: 24px;
+  cursor: pointer;
+}
+
+.input label {
+  cursor: pointer;
+  user-select: none;
+  padding-left: 10px;
+}

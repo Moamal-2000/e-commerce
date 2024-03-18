@@ -1,0 +1,11 @@
+.images {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.images>img {
+  width: 42px;
+  height: 28px;
+  object-fit: contain;
+}

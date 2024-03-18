@@ -1,13 +1,17 @@
 import { v4 as uuid } from "uuid";
 import {
   appleLogo,
+  bkashCard,
   canonLogo,
+  mastercard,
   member1Img,
   member2Img,
   member3Img,
+  nagadCard,
   productImg1,
   productImg2,
   productImg3,
+  visaCard,
 } from "../Assets/Images/Images";
 
 export const introductionSliderData = [
@@ -135,6 +139,33 @@ export const ourMembersData = [
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",
     },
+    id: uuid(),
+  },
+];
+
+export const paymentCards = [
+  {
+    img: bkashCard,
+    alt: "Bkash card",
+    link: "https://www.bkash.com/en/products-services/visa-card-to-bkash",
+    id: uuid(),
+  },
+  {
+    img: visaCard,
+    alt: "Visa card",
+    link: "https://usa.visa.com/pay-with-visa/find-card/apply-credit-card",
+    id: uuid(),
+  },
+  {
+    img: mastercard,
+    alt: "Mastercard",
+    link: "https://www.mastercard.us/en-us.html",
+    id: uuid(),
+  },
+  {
+    img: nagadCard,
+    alt: "Nagad card",
+    link: "https://www.nagad.com.bd/services/?service=add-money-from-card",
     id: uuid(),
   },
 ];

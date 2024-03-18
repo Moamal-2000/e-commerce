@@ -1,5 +1,8 @@
 .products {
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .product {
