@@ -1,0 +1,27 @@
+@import "../../../Styles/mixins.scss";
+
+.colors {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 15px;
+}
+
+.colors>span {
+  display: block;
+  font: 400 1.25rem "Inter";
+  letter-spacing: .03rem;
+  margin-right: 10px;
+}
+
+.colors .color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &.active {
+    border: solid 3px var(--white);
+    outline: solid 2px var(--black);
+  }
+}

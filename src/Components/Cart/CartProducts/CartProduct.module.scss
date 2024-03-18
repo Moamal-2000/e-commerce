@@ -1,0 +1,28 @@
+@import "../../../Styles/mixins.scss";
+
+.productContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  width: 260px !important;
+}
+
+.product>img {
+  width: 54px;
+  margin-right: 20px;
+}
+
+.product>span {
+
+}
+
+.price {
+
+}
+

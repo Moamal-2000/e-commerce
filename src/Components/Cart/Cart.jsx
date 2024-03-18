@@ -1,9 +1,9 @@
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
-import AddCoupon from "./AddCoupon";
 import s from "./Cart.module.scss";
-import CartButtons from "./CartButtons";
-import CartInfoMenu from "./CartInfoMenu";
-import CartProducts from "./CartProducts";
+import AddCoupon from "./CartInfo/AddCoupon";
+import CartInfoMenu from "./CartInfo/CartInfoMenu";
+import CartButtons from "./CartProducts/CartButtons";
+import CartProducts from "./CartProducts/CartProducts";
 
 const Cart = () => {
   return (

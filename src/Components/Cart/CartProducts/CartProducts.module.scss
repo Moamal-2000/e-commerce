@@ -1,0 +1,84 @@
+@import "../../../Styles/mixins.scss";
+
+.cartProducts {
+  width: 100%;
+}
+
+.cartProducts tr {
+  box-shadow: 0 1px 13px 0 #0000000D;
+  border-radius: 4px;
+  padding: 24px 40px;
+}
+
+@include small {
+  .cartProducts tr {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+}
+
+@include small {
+  .cartProducts thead {
+    display: none;
+  }
+}
+
+.cartProducts thead tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.cartProducts thead tr th {
+  display: inline-block;
+  font: 400 1rem "Poppins";
+  width: 100px;
+  text-align: start;
+
+  &:first-child {
+    width: 260px;
+  }
+}
+
+.cartProducts tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@include small {
+  .cartProducts tbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@include small {
+  .cartProducts tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 310px;
+    width: calc(50% - 20px);
+  }
+}
+
+.cartProducts tbody tr td {
+  width: 100px;
+  font: 400 1rem "Poppins";
+}
+
+@include small {
+  .cartProducts tbody tr td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

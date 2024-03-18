@@ -1,9 +1,9 @@
 import FeaturedSectionFeatures from "../Home/FeaturedSection/FeaturedSectionFeatures";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./About.module.scss";
-import AboutHeroSection from "./AboutHeroSection";
-import AboutInfoCards from "./AboutInfoCards";
-import OurMembersSection from "./OurMembersSlider";
+import AboutHeroSection from "./HeroSection/AboutHeroSection";
+import AboutInfoCards from "./InfoCards/AboutInfoCards";
+import OurMembersSection from "./OurMemebers/OurMembersSlider";
 
 const About = () => {
   return (

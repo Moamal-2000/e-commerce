@@ -2,9 +2,9 @@ import { useSearchParams } from "react-router-dom";
 import { productsData } from "../../Data/productsData";
 import { capitalize } from "../../Functions/helper";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
-import ProductDetails from "./ProductDetails";
+import ProductDetails from "./ProductDetails/ProductDetails";
 import s from "./ProductDetailsPage.module.scss";
-import RelatedItemsSection from "./RelatedItemsSection";
+import RelatedItemsSection from "./RelatedItemsSection/RelatedItemsSection";
 
 const ProductDetailsPage = () => {
   const [searchParams, _] = useSearchParams();

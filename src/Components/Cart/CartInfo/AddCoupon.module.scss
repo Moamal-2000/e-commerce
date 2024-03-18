@@ -1,0 +1,70 @@
+@import "../../../Styles/mixins.scss";
+
+.couponContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@include large {
+  .couponContainer {
+    width: 300px;
+    flex-direction: column;
+  }
+}
+
+@include small {
+  .couponContainer {
+    width: 100%;
+  }
+}
+
+.couponContainer>input {
+  display: block;
+  height: 56px;
+  padding: 16px 24px;
+  border-radius: 4px;
+  border: 1px solid #000000;
+  font: 400 1rem "Poppins";
+}
+
+@include large {
+  .couponContainer>input {
+    width: 100%;
+  }
+}
+
+@include small {
+  .couponContainer>input {
+    font-size: .8rem;
+    padding: 12px 20px;
+    height: 45px;
+  }
+}
+
+.couponContainer>input::placeholder {
+  color: #7f7f7f;
+}
+
+.couponContainer>button {
+  border: none;
+  outline: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  font: 500 1rem "Poppins";
+  background: var(--tomato);
+  color: var(--white);
+}
+
+@include large {
+  .couponContainer>button {
+    width: 100%;
+  }
+}
+
+@include small {
+  .couponContainer>button {
+    font-size: .8rem;
+    padding: 12px 20px;
+  }
+}

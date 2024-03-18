@@ -1,0 +1,68 @@
+@import "../../../Styles/mixins.scss";
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+@include medium {
+  .heroSection {
+    flex-direction: column;
+  }
+}
+
+.content {
+  width: 525px;
+}
+
+@include small {
+  .content {
+    width: 100%;
+  }
+}
+
+.content>h2 {
+  font: 600 3.375rem "Inter";
+  letter-spacing: .06rem;
+  margin-bottom: 40px;
+}
+
+@include large {
+  .content>h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+}
+
+@include small {
+  .content>h2 {
+    font-size: 2rem;
+  }
+}
+
+.content>p {
+  font: 400 1rem "Poppins";
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+@include small {
+  .content>p {
+    font-size: .9rem;
+    text-wrap: balance;
+  }
+}
+
+.imgHolder {
+  flex-grow: 1;
+}
+
+@include medium {
+  .imgHolder {
+    max-width: 400px;
+  }
+}

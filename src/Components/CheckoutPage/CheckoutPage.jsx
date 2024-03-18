@@ -1,8 +1,8 @@
 import useFormData from "../../Hooks/useFormData";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
-import BillingDetails from "./BillingDetails";
+import BillingDetails from "./BillingDetails/BillingDetails";
 import s from "./CheckoutPage.module.scss";
-import PaymentSection from "./PaymentSection";
+import PaymentSection from "./PaymentSection/PaymentSection";
 
 const CheckoutPage = () => {
   const { values, handleChange } = useFormData({
