@@ -17,7 +17,7 @@ const ProductDealingControls = () => {
     <section className={s.dealing}>
       <div className={s.customNumberInput}>
         <button onClick={decreaseQuantity} type="button">
-          -
+          <label htmlFor="quantity-input">-</label>
         </button>
 
         <input
@@ -26,10 +26,11 @@ const ProductDealingControls = () => {
           value={quantity}
           min={1}
           max={1000}
+          id="quantity-input"
         />
 
         <button onClick={increaseQuantity} type="button">
-          +
+          <label htmlFor="quantity-input">+</label>
         </button>
       </div>
 

@@ -2,7 +2,7 @@ import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./MemberCard.module.scss";
 
 const MemberCard = ({ data }) => {
-  const { name, jobTitle, img, socialMedia, id } = data;
+  const { name, jobTitle, img, socialMedia } = data;
 
   return (
     <div className={s.card}>
@@ -35,6 +35,7 @@ const SocialMedia = ({ socialMedia }) => {
         href={socialMedia[mediaName]}
         target="_blank"
         className={instagramClass}
+        title={mediaName}
       >
         <SvgIcon name={mediaName} />
       </a>

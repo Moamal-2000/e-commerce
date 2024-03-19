@@ -13,6 +13,7 @@ const UserMenuIcon = ({ visibility }) => {
         type="button"
         className={`${s.userContainer} ${activeClass}`}
         onClick={() => toggleMenuUserActive()}
+        title="user menu"
       >
         <SvgIcon name="user" />
 

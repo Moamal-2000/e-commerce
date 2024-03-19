@@ -19,6 +19,7 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
           iconName="heart"
           routePath="/favorites"
           countLength={favoritesProducts.length}
+          title="favorite"
         />
 
         <IconWithCount
@@ -26,6 +27,7 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
           iconName="cart3"
           routePath="/cart"
           countLength={cartProducts.length}
+          title="cart"
         />
 
         <UserMenuIcon visibility={showUser} />
