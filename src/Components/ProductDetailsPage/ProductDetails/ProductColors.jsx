@@ -1,21 +1,10 @@
 import { useState } from "react";
 import s from "./ProductColors.module.scss";
 
-const ProductColors = ({ data }) => {
-  const colors = [
-    {
-      name: "light-blue",
-      color: "#a0bce0",
-    },
-    {
-      name: "light-red",
-      color: "#e07575",
-    },
-  ];
-
+const ProductColors = ({ data: { colors } }) => {
   return (
     <section className={s.colors}>
-      <span>Colours:</span>
+      <span>Colors:</span>
       <Colors colors={colors} />
     </section>
   );
@@ -24,12 +13,15 @@ export default ProductColors;
 
 const Colors = ({ colors }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);
+  const hasColors = colors?.length > 1 && colors;
 
   function choiceProductColor(e, i) {
     setActiveColorIndex(i);
   }
 
-  return colors.map(({ color }, i) => {
+  if (!hasColors) return null;
+
+  return colors.map(({ color, name }, i) => {
     const firstItemActiveClass = i === activeColorIndex ? s.active : "";
 
     return (
@@ -38,6 +30,7 @@ const Colors = ({ colors }) => {
         className={`${s.color} ${firstItemActiveClass}`}
         style={{ backgroundColor: color }}
         onClick={(e) => choiceProductColor(e, i)}
+        title={name + " color"}
       ></div>
     );
   });

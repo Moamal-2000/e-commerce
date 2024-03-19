@@ -85,6 +85,16 @@ export const productsData = [
       ps5GamepadThum2,
       ps5GamepadThum3,
     ],
+    colors: [
+      {
+        name: "ice blue",
+        color: "#dcdfea",
+      },
+      {
+        name: "black",
+        color: "#27292d",
+      },
+    ],
     rate: 5,
     votes: 88,
     sold: 105,
@@ -110,6 +120,16 @@ export const productsData = [
       wiredKeyboardThum1,
       wiredKeyboardThum2,
       wiredKeyboardThum3,
+    ],
+    colors: [
+      {
+        name: "white",
+        color: "#e4e4e4",
+      },
+      {
+        name: "black",
+        color: "#03040f",
+      },
     ],
     rate: 4,
     votes: 75,
@@ -137,6 +157,12 @@ export const productsData = [
       gamingMonitorThum2,
       gamingMonitorThum3,
     ],
+    colors: [
+      {
+        name: "black",
+        color: "#151515",
+      },
+    ],
     rate: 5,
     votes: 99,
     sold: 463,
@@ -162,6 +188,24 @@ export const productsData = [
       comfortChairThum2,
       comfortChairThum3,
     ],
+    colors: [
+      {
+        name: "ice blue",
+        color: "#d3d7dc",
+      },
+      {
+        name: "gray",
+        color: "#858080",
+      },
+      {
+        name: "brown",
+        color: "#433636",
+      },
+      {
+        name: "custom",
+        color: "#b4a9a8",
+      },
+    ],
     rate: 4.5,
     votes: 99,
     sold: 211,
@@ -182,6 +226,20 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: northCoat,
     otherImages: [northCoat, northCoatThum1, northCoatThum2, northCoatThum3],
+    colors: [
+      {
+        name: "pink",
+        color: "#fa6a96",
+      },
+      {
+        name: "light pink",
+        color: "#ffb0ab",
+      },
+      {
+        name: "dark blue",
+        color: "#29518a",
+      },
+    ],
     rate: 5,
     votes: 65,
     sold: 1405,
@@ -202,6 +260,20 @@ export const productsData = [
     addedDate: "2022/9/15",
     img: gucciBag,
     otherImages: [gucciBag, gucciBagThum2, gucciBagThum3, gucciBagThum4],
+    colors: [
+      {
+        name: "Tan",
+        color: "#ae9c89",
+      },
+      {
+        name: "light grayish",
+        color: "#c1bab1",
+      },
+      {
+        name: "brown",
+        color: "#987553",
+      },
+    ],
     rate: 3.5,
     votes: 159,
     sold: 1533,
@@ -223,6 +295,16 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: cpuCooler,
     otherImages: [cpuCooler, cpuCoolerThum1, cpuCoolerThum2, cpuCoolerThum3],
+    colors: [
+      {
+        name: "gray",
+        color: "#8e8e8e",
+      },
+      {
+        name: "black",
+        color: "#0e0e0e",
+      },
+    ],
     rate: 4.5,
     votes: 190,
     sold: 2522,
@@ -243,6 +325,16 @@ export const productsData = [
     addedDate: "2023/12/22",
     img: bookshelf,
     otherImages: [bookshelf, bookshelfThum1, bookshelfThum2, bookshelfThum3],
+    colors: [
+      {
+        name: "tan",
+        color: "#c08e56",
+      },
+      {
+        name: "light yellow",
+        color: "#ffdd9e",
+      },
+    ],
     rate: 5,
     votes: 201,
     sold: 1602,
@@ -263,6 +355,20 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: dogFood,
     otherImages: [dogFood, dogFoodThum1, dogFoodThum2, dogFoodThum3],
+    colors: [
+      {
+        name: "purple",
+        color: "#c212ad",
+      },
+      {
+        name: "yellow",
+        color: "#f59501",
+      },
+      {
+        name: "red",
+        color: "#d61421",
+      },
+    ],
     rate: 3,
     votes: 35,
     sold: 59,
@@ -287,6 +393,12 @@ export const productsData = [
       canonCameraThum1,
       canonCameraThum2,
       canonCameraThum3,
+    ],
+    colors: [
+      {
+        name: "black",
+        color: "#000201",
+      },
     ],
     rate: 4,
     votes: 94,
@@ -313,6 +425,12 @@ export const productsData = [
       gamingLaptopThum2,
       gamingLaptopThum3,
     ],
+    colors: [
+      {
+        name: "black",
+        color: "#0c0c0c",
+      },
+    ],
     rate: 4.5,
     votes: 1049,
     sold: 1792,
@@ -333,6 +451,16 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: curology,
     otherImages: [curology, curologyThum1, curologyThum2, curologyThum4],
+    colors: [
+      {
+        name: "dark blue",
+        color: "#000a2d",
+      },
+      {
+        name: "white",
+        color: "#def1f8",
+      },
+    ],
     rate: 5,
     votes: 325,
     sold: 100,
@@ -353,6 +481,20 @@ export const productsData = [
     addedDate: "2024/3/7",
     img: kidsCar,
     otherImages: [kidsCar, kidsCarThum1, kidsCarThum2, kidsCarThum3],
+    colors: [
+      {
+        name: "red",
+        color: "#ff6066",
+      },
+      {
+        name: "black",
+        color: "#000201",
+      },
+      {
+        name: "white",
+        color: "#dcdcdc",
+      },
+    ],
     rate: 3,
     votes: 22,
     sold: 100,
@@ -377,6 +519,16 @@ export const productsData = [
       soccerCleatsThum1,
       soccerCleatsThum2,
       soccerCleatsThum3,
+    ],
+    colors: [
+      {
+        name: "yellow",
+        color: "#edfe7c",
+      },
+      {
+        name: "black",
+        color: "#131615",
+      },
     ],
     rate: 4,
     votes: 145,
@@ -403,6 +555,12 @@ export const productsData = [
       usbGamepadThum2,
       usbGamepadThum3,
     ],
+    colors: [
+      {
+        name: "black",
+        color: "#242424",
+      },
+    ],
     rate: 5,
     votes: 64,
     sold: 100,
@@ -427,6 +585,24 @@ export const productsData = [
       satinJacketThum1,
       satinJacketThum2,
       satinJacketThum3,
+    ],
+    colors: [
+      {
+        name: "blue gray",
+        color: "#4a5274",
+      },
+      {
+        name: "black",
+        color: "#272429",
+      },
+      {
+        name: "brown",
+        color: "#6b6957",
+      },
+      {
+        name: "dark green",
+        color: "#203734",
+      },
     ],
     rate: 4.5,
     votes: 55,
