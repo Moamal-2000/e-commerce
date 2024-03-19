@@ -7,7 +7,7 @@ const MemberCard = ({ data }) => {
   return (
     <div className={s.card}>
       <div className={s.imgHolder}>
-        <img src={img} alt={name} />
+        <img src={img} alt={name} loading="lazy" />
       </div>
 
       <div className={s.info}>

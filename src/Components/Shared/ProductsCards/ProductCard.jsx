@@ -15,6 +15,7 @@ const ProductCard = ({
     showDetailsIcon: true,
     showRemoveIcon: false,
     showNewText: false,
+    lazyLoading: false,
   },
 }) => {
   const {
@@ -35,6 +36,7 @@ const ProductCard = ({
     showDetailsIcon,
     showRemoveIcon,
     showNewText,
+    lazyLoading,
   } = customization;
   const noHoverClass = stopHover ? s.noHover : "";
   const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
@@ -68,6 +70,7 @@ const ProductCard = ({
           alt={name}
           title={name}
           onClick={navigateToProductDetails}
+          loading={lazyLoading ? "lazy" : "eager"}
         />
 
         <div className={s.layerContent}>

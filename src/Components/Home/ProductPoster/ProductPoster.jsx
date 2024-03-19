@@ -13,7 +13,7 @@ const ProductPoster = () => {
       </div>
 
       <div className={s.productHolder}>
-        <img src={stereo} alt="Stereo" />
+        <img src={stereo} alt="Stereo" loading="lazy" />
       </div>
     </section>
   );
