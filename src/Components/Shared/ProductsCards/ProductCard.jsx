@@ -1,4 +1,6 @@
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { addToCart } from "../../../Features/productsSlice";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
 import SvgIcon from "../MiniComponents/SvgIcon";
@@ -38,6 +40,8 @@ const ProductCard = ({
   const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
   const hideNewClass = shouldHideNewWord();
   const navigateTo = useNavigate();
+  const dispatch = useDispatch();
+  const { cartProducts } = useSelector((state) => state.products);
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -49,10 +53,22 @@ const ProductCard = ({
     navigateTo(`/details/?product=${name.toLowerCase()}`);
   }
 
+  function addProductToCart() {
+    const isProductAlreadyExist = cartProducts.includes(product)
+    if (isProductAlreadyExist) return
+
+    dispatch(addToCart({ product }));
+  }
+
   return (
     <div className={`${s.card} ${noHoverClass}`}>
       <div className={s.productImg}>
-        <img src={img} alt={name} title={name} />
+        <img
+          src={img}
+          alt={name}
+          title={name}
+          onClick={navigateToProductDetails}
+        />
 
         <div className={s.layerContent}>
           {hideNewClass && (
@@ -71,9 +87,13 @@ const ProductCard = ({
             )}
 
             {showDetailsIcon && (
-              <a href="#" className={s.iconHolder} title="Details">
+              <Link
+                onClick={navigateToProductDetails}
+                className={s.iconHolder}
+                title="Details"
+              >
                 <SvgIcon name="eye" />
-              </a>
+              </Link>
             )}
 
             {showRemoveIcon && (
@@ -83,7 +103,11 @@ const ProductCard = ({
             )}
           </div>
 
-          <button type="button" className={s.addToCartBtn}>
+          <button
+            type="button"
+            className={s.addToCartBtn}
+            onClick={addProductToCart}
+          >
             <SvgIcon name="cart3" />
             <span>Add to cart</span>
           </button>
