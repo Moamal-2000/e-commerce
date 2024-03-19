@@ -110,11 +110,6 @@
   height: 22px;
 }
 
-.copyRights {
-  width: fit-content;
-  margin: 0 auto;
-}
-
 .section2 {
   width: 175px;
 }
@@ -171,10 +166,9 @@
 }
 
 .copyRights {
+  width: fit-content;
+  margin: 0 auto;
   font: 400 1rem/24px "Poppins";
-  color: #F9F9F999;
-  display: flex;
-  align-items: center;
 }
 
 @include small {
@@ -190,6 +184,15 @@
 }
 
 .copyRights>span {
-  font-size: 1.6rem;
-  margin-right: 6px;
+  color: #F9F9F999;
+}
+
+.copyRights>a {
+  text-decoration: underline;
+  color: #F9F9F999;
+  margin: 0 4px;
+
+  &:hover {
+    color: var(--white);
+  }
 }

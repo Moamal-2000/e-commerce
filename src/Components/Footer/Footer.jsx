@@ -8,7 +8,7 @@ const Footer = () => {
   const [email, setEmail] = useState("");
   function sendEmail(e) {
     e.preventDefault();
-    setEmail("")
+    setEmail("");
   }
 
   return (
@@ -146,7 +146,18 @@ const Footer = () => {
         </div>
 
         <p className={s.copyRights}>
-          <span>&copy;</span> Copyright Rimel 2022. All right reserved
+          <span>Website designed by</span>
+          <a href="https://dribbble.com/mdrimel15" target="_blank">
+            Rimel
+          </a>
+
+          <span>and coded by</span>
+          <a
+            href="https://www.linkedin.com/in/moamal-alaa-a4bb15237/"
+            target="_blank"
+          >
+            Moamal Alaa
+          </a>
         </p>
       </div>
     </footer>
