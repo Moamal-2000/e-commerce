@@ -5,15 +5,6 @@ import s from "./RelatedItemsSection.module.scss";
 
 const RelatedItemsSection = ({ productType, currentProduct }) => {
   const hasRelatedProducts = getProductsByRelatedType().length > 0;
-  const relatedProductsCustomization = {
-    stopHover: false,
-    showDiscount: true,
-    showFavIcon: true,
-    showDetailsIcon: true,
-    showRemoveIcon: false,
-    showNewText: false,
-    lazyLoading: true,
-  };
 
   function getProductsByRelatedType() {
     return productsData.filter((product) => {
@@ -29,10 +20,7 @@ const RelatedItemsSection = ({ productType, currentProduct }) => {
 
       {!hasRelatedProducts && <p>No related items were found.</p>}
 
-      <ProductsSlider
-        filterFun={getProductsByRelatedType}
-        customization={relatedProductsCustomization}
-      />
+      <ProductsSlider filterFun={getProductsByRelatedType} />
     </section>
   );
 };

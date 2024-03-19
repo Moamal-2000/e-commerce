@@ -17,7 +17,6 @@ const ThisMonthSection = () => {
     showFavIcon: true,
     showDetailsIcon: true,
     showNewText: false,
-    lazyLoading: true,
   };
 
   return (

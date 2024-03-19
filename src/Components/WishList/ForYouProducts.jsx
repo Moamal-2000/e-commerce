@@ -11,7 +11,6 @@ const ForYouProducts = () => {
     showDetailsIcon: true,
     showRemoveIcon: false,
     showNewText: true,
-    lazyLoading: true,
   };
 
   return (

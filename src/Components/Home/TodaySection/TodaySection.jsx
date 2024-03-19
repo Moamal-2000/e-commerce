@@ -7,15 +7,6 @@ import s from "./TodaySection.module.scss";
 const TodaySection = () => {
   const filterFlashSalesProducts = () =>
     productsData.filter((productData) => productData.sold > 100);
-  const todaysProductsCustomization = {
-    stopHover: false,
-    showDiscount: true,
-    showFavIcon: true,
-    showDetailsIcon: true,
-    showRemoveIcon: false,
-    showNewText: false,
-    lazyLoading: true,
-  };
 
   return (
     <section className={s.todaysSection} id="todays-section">
@@ -24,10 +15,7 @@ const TodaySection = () => {
         <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />
       </div>
 
-      <ProductsSlider
-        filterFun={filterFlashSalesProducts}
-        customization={todaysProductsCustomization}
-      />
+      <ProductsSlider filterFun={filterFlashSalesProducts} />
 
       <button type="button" className={s.viewProductsBtn}>
         View All Products

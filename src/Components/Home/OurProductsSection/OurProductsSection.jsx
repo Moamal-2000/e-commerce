@@ -8,7 +8,6 @@ const OurProductsSection = () => {
     showFavIcon: true,
     showDetailsIcon: true,
     showNewText: true,
-    lazyLoading: true,
   };
 
   return (
