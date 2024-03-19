@@ -1,7 +1,7 @@
 @import "../../../Styles/mixins.scss";
 
 .midPoster {
-  background-color: #000;
+  background-color: var(--black);
   height: 600px;
   border-radius: 4px;
   position: relative;
@@ -52,14 +52,14 @@
 }
 
 .content>b {
-  color: #fff;
+  color: var(--white);
   letter-spacing: .03rem;
   font: 600 1.5rem/24px "Inter";
 }
 
 .content>p {
   margin: 14px 0 16px;
-  color: #FAFAFA;
+  color: var(--secondary-white);
   font: 400 .8rem/21px"Poppins";
 }
 

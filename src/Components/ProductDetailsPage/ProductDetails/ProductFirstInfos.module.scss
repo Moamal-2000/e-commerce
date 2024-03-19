@@ -20,12 +20,12 @@
 
 .reviews {
   font: 400 .875rem "Poppins";
-  color: #7f7f7f;
+  color: var(--dark-gray);
 }
 
 .verticalLine {
   height: 16px;
-  border-right: solid 2px #7f7f7f;
+  border-right: solid 2px var(--dark-gray);
 }
 
 .greenText {

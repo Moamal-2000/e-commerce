@@ -37,9 +37,9 @@
 .inputs>input {
   border: none;
   outline: none;
-  border-bottom: solid 1px #7f7f7f;
+  border-bottom: solid 1px var(--dark-gray);
   padding-bottom: 8px;
-  color: #000;
+  color: var(--black);
   font: 400 1rem/24px "Poppins";
 
   &:not(:last-child) {
@@ -47,20 +47,20 @@
   }
 
   &[class=invalid] {
-    border-bottom-color: var(--tomato);
+    border-bottom-color: var(--dark-tomato);
 
     &::placeholder {
-      color: var(--tomato);
+      color: var(--dark-tomato);
     }
   }
 
   &:not(:placeholder-shown) {
-    border-bottom-color: #7f7f7f;
+    border-bottom-color: var(--dark-gray);
   }
 }
 
 .inputs>input::placeholder {
-  color: #999999;
+  color: var(--regular-light-gray);
 }
 
 .buttons {
@@ -74,13 +74,13 @@
   width: 143px;
   padding: 16px;
   border-radius: 4px;
-  background-color: var(--tomato);
+  background-color: var(--dark-tomato);
   color: var(--white);
   border: none;
   font: 500 1rem/24px "Poppins";
 }
 
 .buttons>a {
-  color: var(--tomato);
+  color: var(--dark-tomato);
   font: 400 1rem/24px "Poppins"
 }

@@ -32,8 +32,8 @@
   @include center-x-y;
 
   &.active {
-    border-color: var(--tomato);
-    background-color: var(--tomato);
+    border-color: var(--dark-tomato);
+    background-color: var(--dark-tomato);
     color: var(--white);
   }
 }

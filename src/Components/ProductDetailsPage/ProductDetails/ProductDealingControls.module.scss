@@ -3,13 +3,13 @@
 .dealing {
   display: flex;
   gap: 20px;
-  margin: 18px 0 34px;
+  margin: 18px 0 54px;
 }
 
 .customNumberInput {
   display: flex;
   align-items: center;
-  color: #000;
+  color: var(--black);
   height: 44px;
   border-radius: 4px;
 }
@@ -24,8 +24,8 @@
   font: 200 2rem "Poppins";
 
   &:hover {
-    background-color: var(--tomato);
-    border-color: var(--tomato) !important;
+    background-color: var(--dark-tomato);
+    border-color: var(--dark-tomato) !important;
     color: var(--white);
   }
 }
@@ -63,7 +63,7 @@
   width: 165px;
   height: 44px;
   border-radius: 4px;
-  background-color: var(--tomato);
+  background-color: var(--dark-tomato);
   color: var(--white);
   font: 500 1rem "Poppins";
 }

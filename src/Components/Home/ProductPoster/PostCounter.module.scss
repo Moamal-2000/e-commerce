@@ -8,7 +8,7 @@
 .timeUnit {
   width: 62px;
   height: 62px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 50%;
   flex-direction: column;
   @include center-x-y;
@@ -42,7 +42,7 @@
 }
 
 .timeUnit>span {
-  color: #000;
+  color: var(--black);
 }
 
 .timeUnit>span:first-child {

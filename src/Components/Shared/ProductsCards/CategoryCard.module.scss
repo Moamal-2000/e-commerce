@@ -11,8 +11,8 @@
 }
 
 .card:hover {
-  background-color: var(--red);
-  border-color: var(--red);
+  background-color: var(--dark-red);
+  border-color: var(--dark-red);
 }
 
 .card svg {
@@ -29,16 +29,16 @@
   fill: transparent;
 
   & :where(path, line) {
-    stroke: #fff;
+    stroke: var(--white);
   }
 }
 
 .card span {
   font: 400 1rem/24px "Poppins";
   margin-top: 26px;
-  color: #000;
+  color: var(--black);
 }
 
 .card:hover span {
-  color: #fff;
+  color: var(--white);
 }

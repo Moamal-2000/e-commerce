@@ -5,18 +5,23 @@
   --brown: #504242;
   --dark-gray: #4C5355;
   --light-gray: #7D8184;
+  --regular-light-gray: #999999;
   --medium-light-gray: #cbcbcb;
   --very-light-gray: #EDEDED;
+  --very-light-gray2: #f5f5f5;
   --secondary-white: #FAFAFA;
   --white: #fff;
-  --red: #A22F2F;
-  --tomato: #B40404;
+  --dark-red: #A22F2F;
+  --dark-tomato: #B40404;
+  --tomato: "";
+  --red: #ff0000;
   --rose: #E07575;
   --green: #078639;
   --turquoise: #4AC2E8;
   --light-blue: #A0BCE0;
   --container-width: 85%;
   --container-mobile-width: 94%;
+  --page-margin: 60px 0 100px;
 }
 
 .dark-mode:root {}

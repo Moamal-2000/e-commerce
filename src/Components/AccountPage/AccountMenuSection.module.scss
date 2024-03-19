@@ -67,9 +67,9 @@
 
 .section>ul>li>a {
   font: 400 1rem "Poppins";
-  color: #7f7f7f;
+  color: var(--dark-gray);
 
   &[class=active] {
-    color: #DB4444 !important;
+    color: var(--dark-tomato);
   }
 }

@@ -1,7 +1,7 @@
 @import "../../../Styles/mixins";
 
 .sectionTitle .event {
-  color: var(--tomato);
+  color: var(--dark-tomato);
   margin-left: 36px;
   position: relative;
   margin-bottom: 30px;
@@ -9,7 +9,7 @@
 }
 
 .sectionTitle.type2 .event {
-  color: #000;
+  color: var(--black);
   font-weight: 500;
 }
 
@@ -27,7 +27,7 @@
   transform: translateY(-50%);
   width: 20px;
   height: 40px;
-  background: var(--tomato);
+  background: var(--dark-tomato);
   border-radius: 4px;
 }
 

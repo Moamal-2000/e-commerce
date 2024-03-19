@@ -24,7 +24,7 @@
   height: 56px;
   padding: 16px 24px;
   border-radius: 4px;
-  border: 1px solid #000000;
+  border: 1px solid var(--black);
   font: 400 1rem "Poppins";
 }
 
@@ -43,7 +43,7 @@
 }
 
 .couponContainer>input::placeholder {
-  color: #7f7f7f;
+  color: var(--dark-gray);
 }
 
 .couponContainer>button {
@@ -52,7 +52,7 @@
   padding: 16px 48px;
   border-radius: 4px;
   font: 500 1rem "Poppins";
-  background: var(--tomato);
+  background: var(--dark-tomato);
   color: var(--white);
 }
 

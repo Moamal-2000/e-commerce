@@ -1,7 +1,7 @@
 @import "../../../Styles/mixins.scss";
 
 .menu {
-  border: 1.5px solid #000000;
+  border: 1px solid var(--black);
   width: 470px;
   max-width: 470px;
   min-width: 300px;
@@ -39,7 +39,7 @@
   left: 0;
   bottom: -15px;
   width: 100%;
-  border-bottom: solid 1px #999999;
+  border-bottom: solid 1px var(--regular-light-gray);
 }
 
 .menu>button {
@@ -49,7 +49,7 @@
   padding: 16px 48px;
   border-radius: 4px;
   font: 500 1rem "Poppins";
-  background: var(--tomato);
+  background: var(--dark-tomato);
   color: var(--white);
   width: fit-content;
   margin: 0 auto;

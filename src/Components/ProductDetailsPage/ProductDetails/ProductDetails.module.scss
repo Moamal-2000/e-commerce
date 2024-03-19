@@ -3,7 +3,7 @@
 .detailsSection {
   display: flex;
   gap: 80px;
-  margin: 60px 0 130px;
+  margin: var(--page-margin);
 }
 
 @include large {
@@ -32,7 +32,7 @@
 .horizontalLine {
   min-width: 400px;
   max-width: 500px;
-  border: solid 1px #7f7f7f;
+  border: solid 1px var(--dark-gray);
   margin: 28px 0;
 }
 

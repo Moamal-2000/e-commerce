@@ -37,9 +37,9 @@
 .inputs>input {
   border: none;
   outline: none;
-  border-bottom: solid 1px #7f7f7f;
+  border-bottom: solid 1px var(--dark-gray);
   padding-bottom: 8px;
-  color: #000;
+  color: var(--black);
   font: 400 1rem/24px "Poppins";
 
   &:not(:last-child) {
@@ -47,27 +47,27 @@
   }
 
   &[class=invalid] {
-    border-bottom-color: var(--tomato);
+    border-bottom-color: var(--dark-tomato);
 
     &::placeholder {
-      color: var(--tomato);
+      color: var(--dark-tomato);
     }
   }
 
   &:not(:placeholder-shown) {
-    border-bottom-color: #7f7f7f;
+    border-bottom-color: var(--dark-gray);
   }
 }
 
 .inputs>input::placeholder {
-  color: #999999;
+  color: var(--regular-light-gray);
 }
 
 .createAccBtn {
   width: 100%;
   padding: 16px;
   border-radius: 4px;
-  background-color: var(--tomato);
+  background-color: var(--dark-tomato);
   color: var(--white);
   border: none;
   font: 500 1rem/24px "Poppins";
@@ -78,9 +78,7 @@
   width: 100%;
   padding: 16px;
   border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include center-x-y;
   background-color: transparent;
   border: 1px solid #00000066;
   font: 400 1rem/24px "Poppins";
@@ -106,13 +104,13 @@
 }
 
 .buttons>p>a {
-  color: #4d4d4d;
+  color: var(--primary);
   position: relative;
   top: -2px;
   transition: color .2s;
 
   &:hover {
-    color: #000;
+    color: var(--black);
   }
 }
 
@@ -123,10 +121,10 @@
   bottom: -3px;
   width: 100%;
   height: 1px;
-  background-color: #4d4d4d;
+  background-color: var(--primary);
   transition: background-color .2s;
 }
 
 .buttons>p>a:hover::before {
-  background-color: #000;
+  background-color: var(--black);
 }

@@ -15,13 +15,13 @@
 }
 
 .welcomeMessage>a {
-  color: var(--tomato);
+  color: var(--dark-tomato);
 }
 
 .accountPageContent {
-  margin-top: 60px;
   display: flex;
   justify-content: space-between;
+  margin: var(--page-margin);
   gap: 30px;
 }
 
@@ -30,4 +30,3 @@
     gap: 0;
   }
 }
-

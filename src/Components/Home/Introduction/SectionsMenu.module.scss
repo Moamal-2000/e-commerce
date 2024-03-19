@@ -52,8 +52,8 @@
 }
 
 .sectionsMenu::-webkit-scrollbar {
-  width: 8px;
   background-color: transparent;
+  width: 8px;
 }
 
 .sectionsMenu::-webkit-scrollbar-thumb {
@@ -68,10 +68,10 @@
     top: 0;
     height: calc(100vh - (100vh - 100%));
     max-height: none;
-    background-color: #fff;
+    background-color: var(--white);
     z-index: 1000;
     padding: 18px;
-    box-shadow: 0 0 20px -15px black;
+    box-shadow: 0 0 20px -15px var(--black);
     overflow-y: auto;
     width: fit-content;
     transition: left .2s ease;

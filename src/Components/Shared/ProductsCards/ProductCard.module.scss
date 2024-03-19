@@ -9,7 +9,7 @@
 
 .productImg {
   border-radius: 4px;
-  background: #F5F5F5;
+  background: var(--very-light-gray2);
   width: 100%;
   height: 250px;
   @include center-x-y;
@@ -40,7 +40,7 @@
 }
 
 .layerContent .discount {
-  background: var(--tomato);
+  background: var(--dark-tomato);
   color: var(--secondary-white);
   width: fit-content;
   padding: 4px 12px;
@@ -56,7 +56,7 @@
   color: var(--white);
   width: 51px;
   height: 26px;
-  padding: 4px 12px 4px 12px;
+  padding: 4px 12px;
   border-radius: 4px;
   user-select: none;
   font: 400 .75rem "Poppins";
@@ -110,7 +110,7 @@
 
 .layerContent .icons .iconHolder:first-child:hover svg,
 .layerContent .icons button:hover svg {
-  fill: var(--tomato);
+  fill: var(--dark-tomato);
 }
 
 .layerContent .addToCartBtn {
@@ -167,13 +167,13 @@
 }
 
 .productInfo .price {
-  color: var(--tomato);
+  color: var(--dark-tomato);
   font: 500 1rem/24px "Poppins";
 }
 
 .productInfo .price .afterDiscount {
   margin-left: 16px;
-  color: #595959;
+  color: var(--primary);
   font: 500 1rem/24px "Poppins";
 }
 
@@ -186,5 +186,5 @@
 
 .productInfo .rateContainer .numOfVotes {
   font: 600 .875rem/21px "Poppins";
-  color: #595959;
+  color: var(--primary);
 }

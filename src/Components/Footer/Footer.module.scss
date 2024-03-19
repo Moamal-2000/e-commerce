@@ -1,8 +1,8 @@
 @import "../../Styles/mixins.scss";
 
 .footer {
-  background-color: #000;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
   padding: 80px 0;
 }
 
@@ -55,7 +55,7 @@
 
 .sections>section :where(p, li, a) {
   font: 400 1rem/24px "Poppins";
-  color: #f0f0f0;
+  color: var(--secondary-white);
 }
 
 .sections>section>ul>li {
@@ -82,7 +82,7 @@
   display: flex;
   align-items: center;
   border-radius: 4px;
-  border: 1px solid #FAFAFA;
+  border: 1px solid var(--secondary-white);
   width: 222px;
 }
 
@@ -95,7 +95,7 @@
 .section1 .input>input {
   outline: none;
   border: none;
-  color: #FAFAFA;
+  color: var(--secondary-white);
   background-color: transparent;
   padding: 12px 0 12px 16px;
 }
@@ -116,7 +116,7 @@
 
 .section5>p {
   font: 500 .8rem/18px "Poppins";
-  color: #afafaf;
+  color: var(--medium-light-gray);
 }
 
 .section5 .appInfo {

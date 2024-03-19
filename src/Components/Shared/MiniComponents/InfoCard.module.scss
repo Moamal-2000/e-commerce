@@ -14,9 +14,9 @@
   z-index: 1;
 
   &:hover {
-    background-color: var(--tomato);
+    background-color: var(--dark-tomato);
     color: var(--white);
-    border-color: var(--tomato);
+    border-color: var(--dark-tomato);
   }
 }
 
@@ -41,7 +41,7 @@
 .iconHolder::before {
   content: '';
   position: absolute;
-  background-color: #c1c1c1;
+  background-color: var(--medium-light-gray);
   width: calc(100% + 22px);
   height: calc(100% + 22px);
   border-radius: inherit;

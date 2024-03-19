@@ -7,16 +7,16 @@
 
 .page {
   font: 400 .875rem "Poppins";
-  color: #7f7f7f;
+  color: var(--dark-gray);
 }
 
 .page>a {
-  color: #7f7f7f;
+  color: var(--dark-gray);
   user-select: none;
   transition: color .1s;
 
   &:hover {
-    color: #000;
+    color: var(--black);
   }
 }
 
@@ -27,5 +27,5 @@
 
 .currentPage {
   font: 400 .875rem "Poppins";
-  color: #000;
+  color: var(--black);
 }

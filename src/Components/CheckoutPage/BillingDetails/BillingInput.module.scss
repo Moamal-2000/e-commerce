@@ -6,17 +6,17 @@
 
 .input>label {
   font: 400 1rem "Poppins";
-  color: #999999;
+  color: var(--regular-light-gray);
 }
 
 .redStar {
-  color: #ff0000;
+  color: var(--red);
 }
 
 .input>input {
   outline: none;
   border: none;
-  background-color: #f5f5f5;
+  background-color: var(--very-light-gray2);
   border-radius: 4px;
   padding: 14px 12px;
   font: 400 1rem "Poppins";

@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.product {
+tbody>tr>.product {
   display: flex;
   align-items: center;
   width: 260px !important;
@@ -17,12 +17,3 @@
   width: 54px;
   margin-right: 20px;
 }
-
-.product>span {
-
-}
-
-.price {
-
-}
-

@@ -15,7 +15,7 @@ const PaymentOptionsSelection = () => {
 
       <div className={s.input}>
         <div className={s.wrapper}>
-          <input type="radio" name="payment" id="cash-option" />
+          <input type="radio" name="payment" id="cash-option" checked />
           <label htmlFor="cash-option">Cash on delivery</label>
         </div>
       </div>

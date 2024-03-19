@@ -26,11 +26,8 @@
 
 .userInfo .img {
   display: block;
-  --size: 70px;
-  min-width: var(--size);
-  min-height: var(--size);
-  width: var(--size);
-  height: var(--size);
+  width: 70px;
+  height: 70px;
   border-radius: 14px;
 
   & img {
@@ -65,7 +62,7 @@
 .nav ul li a,
 .signOutButton {
   all: unset;
-  color: #cbcbcb;
+  color: var(--medium-light-gray);
   padding: 10px;
   min-width: 126px;
   display: flex;
@@ -88,14 +85,14 @@
 
 .nav ul svg,
 .signOutButton svg {
-  fill: #fff;
+  fill: var(--white);
   width: 20px;
   height: 20px;
 }
 
 .line {
-  margin: 30px 0;
   width: 130px;
   height: 2px;
-  border-color: #939393;
+  margin: 30px 0;
+  border-color: var(--regular-light-gray);
 }

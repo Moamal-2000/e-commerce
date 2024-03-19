@@ -1,11 +1,10 @@
-
 @import "../../Styles/mixins.scss";
 
 .languageSelector {
   display: flex;
   align-items: center;
-  user-select: none;
   cursor: pointer;
+  user-select: none;
   position: relative;
 }
 
@@ -22,7 +21,7 @@
 .languageSelector>svg {
   width: 12px;
   height: 12px;
-  fill: #fff;
+  fill: var(--white);
 }
 
 .languageSelector .options {

@@ -1,6 +1,5 @@
 @import "../../../Styles/mixins.scss";
 
-
 .images {
   display: flex;
   gap: 30px;
@@ -33,7 +32,7 @@
 }
 
 .otherImages .imgHolder {
-  background-color: #f5f5f5;
+  background-color: var(--very-light-gray2);
   @include center-x-y;
   aspect-ratio: 1/1;
   width: 170px;
@@ -87,6 +86,6 @@
 }
 
 .previewImgHolder>img {
-  background-color: #f5f5f5;
+  background-color: var(--very-light-gray2);
   object-fit: contain;
 }

@@ -104,7 +104,7 @@
 }
 
 .shopNow::before {
-  background-color: red;
+  background-color: var(--red);
   content: '';
   position: absolute;
   left: 0;

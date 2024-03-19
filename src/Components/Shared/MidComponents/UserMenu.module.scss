@@ -27,7 +27,7 @@
   padding: 12px;
 
   &:hover {
-    background-color: #fff;
+    background-color: var(--white);
   }
 }
 
@@ -38,14 +38,14 @@
 }
 
 .userMenu>a:hover svg {
-  fill: #000;
+  fill: var(--black);
 
   & path {
-    stroke: #000;
+    stroke: var(--black);
   }
 
   & circle {
-    stroke: #000;
+    stroke: var(--black);
   }
 }
 
@@ -56,5 +56,5 @@
 }
 
 .userMenu>a:hover span {
-  color: #000;
+  color: var(--black);
 }

@@ -1,5 +1,4 @@
 .link {
-  background-color: transparent;
   border: none;
   outline: none;
   position: relative;
@@ -17,7 +16,7 @@
   transition: fill .2s;
 
   &:hover {
-    fill: var(--tomato);
+    fill: var(--dark-tomato);
   }
 }
 
@@ -26,7 +25,7 @@
   position: absolute;
   left: 4px;
   top: -12px;
-  background-color: var(--tomato);
+  background-color: var(--dark-tomato);
   color: var(--white);
   border-radius: 50%;
   font-size: .6rem;

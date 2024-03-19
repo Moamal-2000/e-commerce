@@ -3,9 +3,8 @@
 .contactForm {
   flex: 1;
   width: 800px;
-  height: 457px;
-  box-shadow: 0 1px 13px 0px #0000000D;
-  padding: 40px 32px 40px 31px;
+  box-shadow: 0 1px 13px 0 #0000000D;
+  padding: 40px 32px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -45,13 +44,13 @@
   height: 50px;
   border-radius: 4px;
   font: 400 1rem "Poppins";
-  background-color: #f5f5f5;
+  background-color: var(--very-light-gray2);
   padding: 10px;
   width: 100%;
 }
 
 .input>input::placeholder {
-  color: #7a7a7a;
+  color: var(--dark-gray);
 }
 
 .input:has([required]) {
@@ -76,7 +75,7 @@
   }
 }
 
-.input:has([required])>input:not(:placeholder-shown) + .star {
+.input:has([required])>input:not(:placeholder-shown)+.star {
   display: none;
 }
 
@@ -90,7 +89,7 @@
   border: none;
   padding: 16px 48px;
   border-radius: 4px;
-  background-color: var(--tomato);
+  background-color: var(--dark-tomato);
   color: var(--white);
   font: 500 1rem "Poppins";
   align-self: flex-end;

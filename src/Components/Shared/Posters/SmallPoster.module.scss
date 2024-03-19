@@ -1,7 +1,7 @@
 @import "../../../Styles/mixins.scss";
 
 .smallPoster {
-  background-color: #000;
+  background-color: var(--black);
   min-width: 270px;
   min-height: 284px;
   flex: 1;
@@ -60,14 +60,14 @@
 }
 
 .content>b {
-  color: #fff;
+  color: var(--white);
   letter-spacing: .03rem;
   font: 600 1.5rem/24px "Inter";
 }
 
 .content>p {
   margin: 4px 0 10px;
-  color: #FAFAFA;
+  color: var(--secondary-white);
   font: 400 .8rem/21px"Poppins";
 }
 
