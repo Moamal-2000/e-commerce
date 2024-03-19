@@ -38,32 +38,29 @@
 }
 
 .shopNow {
-  all: unset;
   display: flex;
   align-items: center;
   cursor: pointer;
   padding: 2px;
+  color: var(--secondary-white);
+  font-size: 1rem;
+  width: fit-content;
+  position: relative;
 
-  &:hover a::before {
+  &:hover::before {
     height: calc(100% + 10px);
     opacity: .3;
     transition: height .2s, opacity .2s;
   }
 }
 
-.shopNow a {
-  color: var(--secondary-white);
-  font-size: 1rem;
-  position: relative;
-}
-
 @include small {
-  .shopNow a {
+  .shopNow {
     font-size: .9rem;
   }
 }
 
-.shopNow a::before {
+.shopNow::before {
   content: '';
   position: absolute;
   left: 0;

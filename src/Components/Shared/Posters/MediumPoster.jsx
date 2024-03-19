@@ -13,9 +13,9 @@ const MediumPoster = ({ title, description, posterUrl }) => {
       <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>
-        <button type="button" className={s.shopNow}>
-          <a href="\#">Shop Now</a>
-        </button>
+        <a href="\#" className={s.shopNow}>
+          Shop Now
+        </a>
       </div>
     </div>
   );

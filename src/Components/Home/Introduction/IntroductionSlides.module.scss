@@ -81,43 +81,41 @@
 }
 
 .shopNow {
-  all: unset;
   display: flex;
   align-items: center;
   cursor: pointer;
   padding: 2px;
+  font-size: 1rem;
+  color: var(--secondary-white);
+  width: fit-content;
+  position: relative;
 
-  &:hover a::before {
+  &:hover::before {
     height: calc(100% + 10px);
     opacity: .3;
     transition: height .2s, opacity .2s;
   }
 }
 
-.shopNow a {
-  color: var(--secondary-white);
-  font-size: 1rem;
-  position: relative;
-}
-
 @include small {
-  .shopNow a {
+  .shopNow {
     font-size: .9rem;
   }
 }
 
-.shopNow a::before {
+.shopNow::before {
+  background-color: red;
   content: '';
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: 100%;
+  width: calc(100% - 20px - 12px);
   height: 2px;
   background-color: var(--secondary-white);
   transition: height .3s, opacity .2s .2s;
 }
 
-.shopNow svg {
+.shopNow>svg {
   fill: var(--secondary-white);
   width: 20px;
   height: 20px;
@@ -127,7 +125,7 @@
 }
 
 @include small {
-  .shopNow svg {
+  .shopNow>svg {
     margin-left: 6px;
     transform: scaleY(1);
   }

@@ -16,10 +16,10 @@ const IntroductionSlides = () => {
 
           <h2 className={s.discount}>{discountText}</h2>
 
-          <button type="button" className={s.shopNow}>
-            <a href="\#">Shop Now</a>
+          <a href="\#" className={s.shopNow}>
+            <span>Shop Now</span>
             <SvgIcon name="arrowRightLong" />
-          </button>
+          </a>
         </div>
       </SwiperSlide>
     )

@@ -177,9 +177,7 @@ const EditProfileForm = () => {
       </section>
 
       <div className={s.buttons}>
-        <button type="reset" className={s.cancelButton}>
-          <Link to="/">Cancel</Link>
-        </button>
+        <Link className={s.cancelLink} to="/">Cancel</Link>
         <button type="submit" className={s.submitButton}>
           Save Changes
         </button>
