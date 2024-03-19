@@ -16,7 +16,13 @@
 }
 
 .card svg {
+  width: 56px;
+  height: 56px;
   transition: fill .2s .1s;
+
+  & :where(path, line) {
+    stroke: var(--black);
+  }
 }
 
 .card:hover svg {

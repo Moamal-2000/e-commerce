@@ -47,7 +47,7 @@ export const introductionSliderData = [
 
 export const categoriesData = [
   {
-    iconName: "phone",
+    iconName: "mobile",
     title: "Phones",
     id: uuid(),
   },
