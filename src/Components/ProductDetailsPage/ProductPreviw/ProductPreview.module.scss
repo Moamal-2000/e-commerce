@@ -16,6 +16,13 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
+  height: 540px;
+}
+
+@media (max-width: 1400px) {
+  .otherImages {
+    height: auto;
+  }
 }
 
 @media (max-width: 1400px) {
@@ -35,8 +42,7 @@
   background-color: var(--very-light-gray2);
   @include center-x-y;
   aspect-ratio: 1/1;
-  width: 170px;
-  height: calc((25% - 14px) + (14px / 4));
+  width: 125px;
   cursor: pointer;
 }
 
@@ -63,19 +69,28 @@
 
 .previewImgHolder {
   width: 500px;
+  height: 540px;
+  max-height: 540px;
+  min-height: 540px;
   border-radius: 4px;
   flex: 1;
+  background-color: var(--very-light-gray2);
 }
 
 @include large {
   .previewImgHolder {
     height: 500px;
+    max-height: 500px;
+    min-height: 500px;
+    @include center-x-y;
   }
 }
 
 @media (max-width: 480px) {
   .previewImgHolder {
     height: 410px;
+    max-height: 410px;
+    min-height: 410px;
   }
 }
 
