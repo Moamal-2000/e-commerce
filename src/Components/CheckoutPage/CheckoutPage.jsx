@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import useFormData from "../../Hooks/useFormData";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import BillingDetails from "./BillingDetails/BillingDetails";
@@ -31,18 +32,24 @@ const CheckoutPage = () => {
   }
 
   return (
-    <div className="container">
-      <main className={s.checkoutPage} id="checkout-page">
-        <PagesHistory history={PAGE_HISTORY} />
+    <>
+      <Helmet>
+        <title>Checkout</title>
+      </Helmet>
 
-        <form method="POST">
-          <section className={s.checkoutPageContent}>
-            <BillingDetails inputsData={{ values, handleChange }} />
-            <PaymentSection />
-          </section>
-        </form>
-      </main>
-    </div>
+      <div className="container">
+        <main className={s.checkoutPage} id="checkout-page">
+          <PagesHistory history={PAGE_HISTORY} />
+
+          <form method="POST">
+            <section className={s.checkoutPageContent}>
+              <BillingDetails inputsData={{ values, handleChange }} />
+              <PaymentSection />
+            </section>
+          </form>
+        </main>
+      </div>
+    </>
   );
 };
 export default CheckoutPage;

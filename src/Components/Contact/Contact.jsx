@@ -1,20 +1,27 @@
+import { Helmet } from "react-helmet-async";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./Contact.module.scss";
-import ContactForm from "./ContactForm/ContactForm";
 import ContactCardInfo from "./ContactCardSection/ContactCardInfo";
+import ContactForm from "./ContactForm/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="container">
-      <main className={s.contactPage} id="contact-page">
-        <PagesHistory history={["/", "Contact"]} />
+    <>
+      <Helmet>
+        <title>Contact</title>
+      </Helmet>
 
-        <div className={s.contactContent}>
-          <ContactCardInfo />
-          <ContactForm />
-        </div>
-      </main>
-    </div>
+      <div className="container">
+        <main className={s.contactPage} id="contact-page">
+          <PagesHistory history={["/", "Contact"]} />
+
+          <div className={s.contactContent}>
+            <ContactCardInfo />
+            <ContactForm />
+          </div>
+        </main>
+      </div>
+    </>
   );
 };
 export default Contact;

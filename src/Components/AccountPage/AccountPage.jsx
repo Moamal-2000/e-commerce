@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
@@ -11,22 +12,28 @@ const AccountPage = () => {
   } = useSelector((state) => state.user);
 
   return (
-    <div className="container">
-      <main className={s.accountPage} id="account-page">
-        <div className={s.wrapper}>
-          <PagesHistory history={["/", "My Account"]} />
+    <>
+      <Helmet>
+        <title>Profile</title>
+      </Helmet>
 
-          <p className={s.welcomeMessage}>
-            Welcome! <Link to="/profile">{username}</Link>
-          </p>
-        </div>
+      <div className="container">
+        <main className={s.accountPage} id="account-page">
+          <div className={s.wrapper}>
+            <PagesHistory history={["/", "My Account"]} />
 
-        <div className={s.accountPageContent}>
-          <AccountMenuSection />
-          <EditProfileForm />
-        </div>
-      </main>
-    </div>
+            <p className={s.welcomeMessage}>
+              Welcome! <Link to="/profile">{username}</Link>
+            </p>
+          </div>
+
+          <div className={s.accountPageContent}>
+            <AccountMenuSection />
+            <EditProfileForm />
+          </div>
+        </main>
+      </div>
+    </>
   );
 };
 export default AccountPage;

@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+import { womenShopping } from "../../Assets/Images/Images";
 import FeaturedSectionFeatures from "../Home/FeaturedSection/FeaturedSectionFeatures";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./About.module.scss";
@@ -7,21 +9,28 @@ import OurMembersSection from "./OurMemebers/OurMembersSlider";
 
 const About = () => {
   return (
-    <main className={s.aboutPage} id="about-page">
-      <div className="container">
-        <PagesHistory history={["/", "About"]} />
-      </div>
+    <>
+      <Helmet>
+        <link rel="preload" href={womenShopping} as="image" />
+        <title>About</title>
+      </Helmet>
 
-      <div className={s.container}>
-        <AboutHeroSection />
-      </div>
+      <main className={s.aboutPage} id="about-page">
+        <div className="container">
+          <PagesHistory history={["/", "About"]} />
+        </div>
 
-      <div className="container">
-        <AboutInfoCards />
-        <OurMembersSection />
-        <FeaturedSectionFeatures />
-      </div>
-    </main>
+        <div className={s.container}>
+          <AboutHeroSection />
+        </div>
+
+        <div className="container">
+          <AboutInfoCards />
+          <OurMembersSection />
+          <FeaturedSectionFeatures />
+        </div>
+      </main>
+    </>
   );
 };
 export default About;

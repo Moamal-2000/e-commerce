@@ -1,3 +1,9 @@
+import { Helmet } from "react-helmet-async";
+import {
+  productImg1,
+  productImg2,
+  productImg3,
+} from "../../Assets/Images/Images";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import s from "./Home.module.scss";
@@ -10,24 +16,33 @@ import TodaySection from "./TodaySection/TodaySection";
 
 const Home = () => {
   return (
-    <div className={s.home}>
-      <div className={s.container}>
-        <div className={s.introductionContainer}>
-          <SectionsMenu />
+    <>
+      <Helmet>
+        <link rel="preload" href={productImg1} as="image" />
+        <link rel="preload" href={productImg2} as="image" />
+        <link rel="preload" href={productImg3} as="image" />
+        <title>E-Commercew</title>
+      </Helmet>
 
-          <div className={s.line}></div>
+      <div className={s.home}>
+        <div className={s.container}>
+          <div className={s.introductionContainer}>
+            <SectionsMenu />
 
-          <MainSlider />
+            <div className={s.line}></div>
+
+            <MainSlider />
+          </div>
+
+          <TodaySection />
+          <CategoriesSection />
+          <ThisMonthSection />
+          <ProductPoster />
+          <OurProductsSection />
+          <FeaturedSection />
         </div>
-
-        <TodaySection />
-        <CategoriesSection />
-        <ThisMonthSection />
-        <ProductPoster />
-        <OurProductsSection />
-        <FeaturedSection />
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./Cart.module.scss";
 import AddCoupon from "./CartInfo/AddCoupon";
@@ -7,21 +8,27 @@ import CartProducts from "./CartProducts/CartProducts";
 
 const Cart = () => {
   return (
-    <div className="container">
-      <main className={s.cartPage} id="cart-page">
-        <PagesHistory history={["/", "Cart"]} />
+    <>
+      <Helmet>
+        <title>Cart</title>
+      </Helmet>
 
-        <div className={s.pageComponents}>
-          <CartProducts />
-          <CartButtons />
+      <div className="container">
+        <main className={s.cartPage} id="cart-page">
+          <PagesHistory history={["/", "Cart"]} />
 
-          <div className={s.wrapper}>
-            <AddCoupon />
-            <CartInfoMenu />
+          <div className={s.pageComponents}>
+            <CartProducts />
+            <CartButtons />
+
+            <div className={s.wrapper}>
+              <AddCoupon />
+              <CartInfoMenu />
+            </div>
           </div>
-        </div>
-      </main>
-    </div>
+        </main>
+      </div>
+    </>
   );
 };
 export default Cart;

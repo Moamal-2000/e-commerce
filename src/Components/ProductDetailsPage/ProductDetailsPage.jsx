@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useSearchParams } from "react-router-dom";
 import { productsData } from "../../Data/productsData";
 import { capitalize } from "../../Functions/helper";
@@ -12,17 +13,26 @@ const ProductDetailsPage = () => {
   const PRODUCT_DATA = productsData.filter(
     (product) => product.name.toLowerCase() === PRODUCT_NAME
   )?.[0];
-  const { name, type } = PRODUCT_DATA;
+  const { name, type, shortName } = PRODUCT_DATA;
   const history = ["Account", capitalize(type), name.toUpperCase()];
 
   return (
-    <div className="container">
-      <main className={s.detailsPage} id="details-page">
-        <PagesHistory history={history} />
-        <ProductDetails data={PRODUCT_DATA} />
-        <RelatedItemsSection productType={type} currentProduct={PRODUCT_DATA} />
-      </main>
-    </div>
+    <>
+      <Helmet>
+        <title>{shortName}</title>
+      </Helmet>
+
+      <div className="container">
+        <main className={s.detailsPage} id="details-page">
+          <PagesHistory history={history} />
+          <ProductDetails data={PRODUCT_DATA} />
+          <RelatedItemsSection
+            productType={type}
+            currentProduct={PRODUCT_DATA}
+          />
+        </main>
+      </div>
+    </>
   );
 };
 export default ProductDetailsPage;

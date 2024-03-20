@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import ForYouProducts from "./ForYouProducts";
@@ -9,29 +10,35 @@ const WishList = () => {
   const lengthOfWishList = wishList.length;
 
   return (
-    <div className="container">
-      <main className={s.wishListPage} id="wishlist-page">
-        <section className={s.wishList}>
-          <header>
-            <label htmlFor="wishlist">WishList ({lengthOfWishList})</label>
+    <>
+      <Helmet>
+        <title>Wishlist</title>
+      </Helmet>
 
-            <button type="button">Move All To Bag</button>
-          </header>
+      <div className="container">
+        <main className={s.wishListPage} id="wishlist-page">
+          <section className={s.wishList}>
+            <header>
+              <label htmlFor="wishlist">WishList ({lengthOfWishList})</label>
 
-          <WishProducts />
-        </section>
+              <button type="button">Move All To Bag</button>
+            </header>
 
-        <section className={s.forYou}>
-          <header>
-            <SectionTitle eventName="Just For You" type={2} />
+            <WishProducts />
+          </section>
 
-            <button type="button">See All</button>
-          </header>
+          <section className={s.forYou}>
+            <header>
+              <SectionTitle eventName="Just For You" type={2} />
 
-          <ForYouProducts />
-        </section>
-      </main>
-    </div>
+              <button type="button">See All</button>
+            </header>
+
+            <ForYouProducts />
+          </section>
+        </main>
+      </div>
+    </>
   );
 };
 export default WishList;

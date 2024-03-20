@@ -1,14 +1,19 @@
-import { useSearchParams } from "react-router-dom"
-import s from "./ProductsCategory.module.scss"
+import { Helmet } from "react-helmet-async";
+import { useSearchParams } from "react-router-dom";
+import s from "./ProductsCategory.module.scss";
 
 const ProductsCategory = () => {
-  const [searchParams, setSearchParams] = useSearchParams()
-  const categoryType = searchParams.get("type")
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryType = searchParams.get("type");
 
   return (
-    <main className={s.categoryPage}>
+    <>
+      <Helmet>
+        <title>{categoryType}</title>
+      </Helmet>
 
-    </main>
-  )
-}
-export default ProductsCategory
+      <main className={s.categoryPage}></main>
+    </>
+  );
+};
+export default ProductsCategory;
