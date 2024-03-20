@@ -20,11 +20,13 @@ const productsSlice = createSlice({
     },
 
     removeFromCart: (state, { payload: { id } }) => {
-      const updatedCartProducts = state.cartProducts.filter(product => product.id !== id)
+      const updatedCartProducts = state.cartProducts.filter(
+        (product) => product.id !== id
+      );
       return {
         ...state,
-        cartProducts: updatedCartProducts
-      }
+        cartProducts: updatedCartProducts,
+      };
     },
   },
 });

@@ -1,6 +1,5 @@
 import { useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { updateState } from "../../../Features/globalSlice";
+import { useSelector } from "react-redux";
 import ProductPreview from "../ProductPreviw/ProductPreview";
 import ProductColors from "./ProductColors";
 import ProductDealingControls from "./ProductDealingControls";

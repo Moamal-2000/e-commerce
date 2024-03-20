@@ -116,7 +116,7 @@ const ProductCard = ({
 
       <section className={s.productInfo}>
         <strong className={s.productName}>
-          <Link onClick={() => navigateToProductDetails()}>{name}</Link>
+          <Link onClick={navigateToProductDetails}>{name}</Link>
         </strong>
         <div className={s.price}>
           ${afterDiscount}
