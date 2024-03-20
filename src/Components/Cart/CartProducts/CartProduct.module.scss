@@ -7,10 +7,31 @@
   width: 100%;
 }
 
-tbody>tr>.product {
+.product {
   display: flex;
   align-items: center;
   width: 260px !important;
+  position: relative;
+}
+
+.product .removeButton {
+  border: none;
+  outline: none;
+  background-color: #db4444;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  @include center-x-y;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.removeButton>svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--white)
 }
 
 .product>img {

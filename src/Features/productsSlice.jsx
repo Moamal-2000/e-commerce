@@ -11,9 +11,6 @@ const productsSlice = createSlice({
   initialState,
   name: "productsSlice",
   reducers: {
-    addProduct: (state, action) => {
-      return { ...state };
-    },
     updateState: (state, { payload }) => {
       const { key, value } = payload;
       return { ...state, [key]: value };
@@ -21,8 +18,16 @@ const productsSlice = createSlice({
     addToCart: ({ cartProducts }, { payload: { product } }) => {
       cartProducts.push(product);
     },
+
+    removeFromCart: (state, { payload: { id } }) => {
+      const updatedCartProducts = state.cartProducts.filter(product => product.id !== id)
+      return {
+        ...state,
+        cartProducts: updatedCartProducts
+      }
+    },
   },
 });
 
-export const { addProduct, updateState, addToCart } = productsSlice.actions;
+export const { updateState, addToCart, removeFromCart } = productsSlice.actions;
 export default productsSlice.reducer;
