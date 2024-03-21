@@ -54,8 +54,8 @@ const ProductCard = ({
   }
 
   function addProductToCart() {
-    const isProductAlreadyExist = cartProducts.includes(product)
-    if (isProductAlreadyExist) return
+    const isProductAlreadyExist = cartProducts.includes(product);
+    if (isProductAlreadyExist) return;
 
     dispatch(addToCart({ product }));
   }

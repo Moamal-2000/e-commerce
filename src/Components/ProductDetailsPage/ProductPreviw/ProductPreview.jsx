@@ -1,22 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { updateState } from "../../../Features/globalSlice";
-import useEventListener from "../../../Hooks/useEventListener";
 import s from "./ProductPreview.module.scss";
 
 const ProductPreview = ({ data, handleZoomInEffect }) => {
-  const { previewImg, isZoomInPreviewActive } = useSelector(
-    (state) => state.global
-  );
+  const { previewImg } = useSelector((state) => state.global);
   const dispatch = useDispatch();
   const { img, name, otherImages } = data;
   const [searchParams, _] = useSearchParams();
-  const previewImgRef = useRef();
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
-  useEventListener(previewImgRef, "mousemove", handleZoomInEffect);
-  useEventListener(previewImgRef, "mouseenter", () => setZoomInPreview(true));
-  useEventListener(previewImgRef, "mouseout", () => setZoomInPreview(false));
 
   function setZoomInPreview(value = false) {
     dispatch(updateState({ key: "isZoomInPreviewActive", value: value }));
@@ -47,7 +40,13 @@ const ProductPreview = ({ data, handleZoomInEffect }) => {
       )}
 
       <div className={s.previewImgHolder}>
-        <img src={previewImg} alt={name} ref={previewImgRef} />
+        <img
+          src={previewImg}
+          alt={name}
+          onMouseMove={handleZoomInEffect}
+          onMouseEnter={() => setZoomInPreview(true)}
+          onMouseLeave={() => setZoomInPreview(false)}
+        />
       </div>
     </section>
   );

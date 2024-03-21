@@ -16,18 +16,18 @@ const ProductDetails = ({ data }) => {
   const activeClass = isZoomInPreviewActive ? s.active : "";
 
   function handleZoomInEffect(e) {
-    zoomInImgRef.current.style.cssText = `
-      transform: translate(-${e.offsetX * 2}px, -${e.offsetY * 2}px)
-    `;
+    const imgRect = e.target.getClientRects()[0];
+    const xPosition = e.clientX - imgRect.left;
+    const yPosition = e.clientY - imgRect.top;
+
+    zoomInImgRef.current.style.transform = `translate(-${xPosition * 2}px, -${
+      yPosition * 2
+    }px)`;
   }
 
   return (
     <section className={s.detailsSection}>
-      <ProductPreview
-        data={data}
-        zoomInImgRef={zoomInImgRef}
-        handleZoomInEffect={handleZoomInEffect}
-      />
+      <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
       <section className={s.details}>
         <div className={`${s.zoomInPreview} ${activeClass}`}>
