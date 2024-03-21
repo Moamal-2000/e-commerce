@@ -1,0 +1,58 @@
+.repoStarsForks {
+  text-decoration: none;
+  position: absolute;
+  bottom: 12px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+
+  &:focus-visible {
+    outline: solid 2px var(--yellow);
+
+    &:hover {
+      outline-color: var(--light-green2);
+    }
+  }
+}
+
+.repoStarsForks .wrapper {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.repoStarsForks svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--medium-light-gray);
+  margin-right: 4px;
+  transition: .1s color;
+}
+
+.repoStarsForks span {
+  display: inline-block;
+  color: var(--medium-light-gray);
+  font-size: 1.1rem;
+  transition: .1s color;
+}
+
+.repoStarsForks .wrapper:nth-child(2) svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--medium-light-gray);
+  margin-right: 4px;
+}
+
+.repoStarsForks .wrapper:nth-child(2) span {
+  fill: var(--medium-light-gray);
+}
+
+.repoStarsForks:hover :where(svg, span) {
+  color: var(--turquoise) !important;
+  fill: var(--turquoise) !important;
+}

@@ -114,3 +114,7 @@ export function checkPasswordInputs(passwordInputs) {
   updateClassOnCondition(newPassInp, isNewPassValid);
   updateClassOnCondition(confirmPassInput, isCurrPassEqualsNew);
 }
+
+export function getSpecificRepo(repos, id) {
+  return repos?.find(repo => repo.id === id)
+}

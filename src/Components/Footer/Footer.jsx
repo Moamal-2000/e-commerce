@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { appStore, googlePlay, qrCode } from "../../Assets/Images/Images";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./Footer.module.scss";
+import RepoStarsForks from "./RepoStarsForks";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -160,6 +161,8 @@ const Footer = () => {
           </a>
         </p>
       </div>
+
+      <RepoStarsForks />
     </footer>
   );
 };
