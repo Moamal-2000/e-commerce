@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { womenShopping } from "../../Assets/Images/Images";
 import FeaturedSectionFeatures from "../Home/FeaturedSection/FeaturedSectionFeatures";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./About.module.scss";
@@ -8,10 +7,10 @@ import AboutInfoCards from "./InfoCards/AboutInfoCards";
 import OurMembersSection from "./OurMemebers/OurMembersSlider";
 
 const About = () => {
+
   return (
     <>
       <Helmet>
-        <link rel="preload" href={womenShopping} as="image" />
         <title>About</title>
       </Helmet>
 

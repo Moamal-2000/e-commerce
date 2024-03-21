@@ -1,9 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import {
-  productImg1,
-  productImg2,
-  productImg3,
-} from "../../Assets/Images/Images";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import s from "./Home.module.scss";
@@ -18,9 +13,6 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <link rel="preload" href={productImg1} as="image" />
-        <link rel="preload" href={productImg2} as="image" />
-        <link rel="preload" href={productImg3} as="image" />
         <title>E-Commercew</title>
       </Helmet>
 

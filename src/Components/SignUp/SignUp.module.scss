@@ -26,6 +26,8 @@
 .imgHolder {
   max-width: 805px;
   max-height: 781px;
+  width: 805px;
+  height: 781px;
   border-radius: 0 4px 4px 0;
 }
 
@@ -33,6 +35,8 @@
   .imgHolder {
     max-width: 400px;
     max-height: none;
+    width: 400px;
+    height: auto;
     margin-top: 50px;
   }
 }

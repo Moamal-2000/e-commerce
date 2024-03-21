@@ -59,10 +59,13 @@
 
 .imgHolder {
   flex-grow: 1;
+  width: 700px;
+  height: 708px;
 }
 
 @include medium {
   .imgHolder {
     max-width: 400px;
+    height: auto;
   }
 }
