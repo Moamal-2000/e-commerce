@@ -3,24 +3,30 @@
   outline: none;
   position: relative;
   cursor: pointer;
-  width: fit-content;
+  width: 20px;
+  height: 20px;
 
   &:not(:last-child) {
     margin-right: 16px;
   }
 }
 
-.link svg {
-  width: 20px;
-  height: 20px;
-  transition: fill .2s;
-
-  &:hover {
-    fill: var(--dark-tomato);
-  }
+.link:has(:hover) svg {
+  fill: var(--dark-tomato);
 }
 
-.link span {
+.wrapper {
+  width: inherit;
+  height: inherit;
+}
+
+.link svg {
+  width: inherit;
+  height: inherit;
+  transition: fill .2s;
+}
+
+.count {
   display: inline-block;
   position: absolute;
   left: 4px;

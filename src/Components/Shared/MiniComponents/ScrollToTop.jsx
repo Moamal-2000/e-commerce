@@ -2,6 +2,7 @@ import { useRef } from "react";
 import useEventListener from "../../../Hooks/useEventListener";
 import s from "./ScrollToTop.module.scss";
 import SvgIcon from "./SvgIcon";
+import ToolTip from "./ToolTip";
 
 const ScrollToTop = () => {
   const scrollTopButtonRef = useRef();
@@ -24,9 +25,10 @@ const ScrollToTop = () => {
       type="button"
       className={`${s.scrollTopButton}`}
       onClick={scrollToTop}
-      title="Scroll to top"
+      aria-label="Scroll to top"
     >
       <SvgIcon name="arrowUp2" />
+      <ToolTip top="50%" left="-55px" content="Scroll to top" />
     </button>
   );
 };

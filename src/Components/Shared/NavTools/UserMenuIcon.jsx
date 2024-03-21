@@ -1,6 +1,7 @@
 import useToggle from "../../../Hooks/useToggle";
 import UserMenu from "../MidComponents/UserMenu";
 import SvgIcon from "../MiniComponents/SvgIcon";
+import ToolTip from "../MiniComponents/ToolTip";
 import s from "./UserMenuIcon.module.scss";
 
 const UserMenuIcon = ({ visibility }) => {
@@ -16,6 +17,7 @@ const UserMenuIcon = ({ visibility }) => {
         title="user menu"
       >
         <SvgIcon name="user" />
+        <ToolTip top="44px" left="50%" content="user menu" />
 
         <UserMenu isActive={isMenuUserActive} toggler={toggleMenuUserActive} />
       </button>

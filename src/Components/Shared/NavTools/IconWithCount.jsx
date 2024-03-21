@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import SvgIcon from "../MiniComponents/SvgIcon";
+import ToolTip from "../MiniComponents/ToolTip";
 import s from "./IconWithCount.module.scss";
 
 const IconWithCount = ({
@@ -13,9 +14,13 @@ const IconWithCount = ({
 
   return (
     visibility && (
-      <Link to={routePath} className={s.link} title={title}>
-        <SvgIcon name={iconName} />
-        {countLength > 0 && <span>{countNoun}</span>}
+      <Link to={routePath} className={s.link} aria-label={title}>
+        <div className={s.wrapper}>
+          <SvgIcon name={iconName} />
+          {countLength > 0 && <span className={s.count}>{countNoun}</span>}
+        </div>
+        
+        <ToolTip top="38px" left="50%" content={title} />
       </Link>
     )
   );

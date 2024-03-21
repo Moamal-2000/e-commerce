@@ -1,4 +1,5 @@
 import SvgIcon from "../MiniComponents/SvgIcon";
+import ToolTip from "../MiniComponents/ToolTip";
 import s from "./MemberCard.module.scss";
 
 const MemberCard = ({ data }) => {
@@ -38,6 +39,7 @@ const SocialMedia = ({ socialMedia }) => {
         title={mediaName}
       >
         <SvgIcon name={mediaName} />
+        <ToolTip top="40px" left="50%" content={mediaName} />
       </a>
     );
   });

@@ -16,13 +16,21 @@
   position: relative;
 }
 
-.productImg>img {
+.imgHolder {
+  position: relative;
+  z-index: 6;
+  transition: .3s ease scale;
+}
+
+.productImg:hover .imgHolder {
+  scale: 1.1;
+}
+
+.imgHolder img {
   width: 172px;
   height: 152px;
   object-fit: contain;
-  position: relative;
   cursor: pointer;
-  z-index: 3;
 }
 
 .layerContent {
@@ -31,7 +39,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 2;
   padding: 14px;
   display: flex;
   justify-content: space-between;
@@ -78,6 +85,8 @@
   gap: 8px;
   transition: transform .4s .1s;
   transform: translateX(50px);
+  position: relative;
+  z-index: 10;
 }
 
 .card:hover .icons,

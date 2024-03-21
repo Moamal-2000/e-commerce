@@ -4,7 +4,10 @@ import { addToCart } from "../../../Features/productsSlice";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
 import SvgIcon from "../MiniComponents/SvgIcon";
+import ToolTip from "../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";
+
+// ! make custom position for tooltips in the card
 
 const ProductCard = ({
   product,
@@ -63,12 +66,14 @@ const ProductCard = ({
   return (
     <div className={`${s.card} ${noHoverClass}`}>
       <div className={s.productImg}>
-        <img
-          src={img}
-          alt={name}
-          title={name}
-          onClick={navigateToProductDetails}
-        />
+        <div className={s.imgHolder}>
+          <img
+            src={img}
+            alt={name}
+            aria-label={name}
+            onClick={navigateToProductDetails}
+          />
+        </div>
 
         <div className={s.layerContent}>
           {hideNewClass && (
@@ -81,8 +86,9 @@ const ProductCard = ({
 
           <div className={s.icons}>
             {showFavIcon && (
-              <a href="#" className={s.iconHolder} title="Favorite">
+              <a href="#" className={s.iconHolder} aria-label="Favorite">
                 <SvgIcon name="heart" />
+                <ToolTip top="18px" left="-40px" content="Favorite" />
               </a>
             )}
 
@@ -90,9 +96,10 @@ const ProductCard = ({
               <Link
                 onClick={navigateToProductDetails}
                 className={s.iconHolder}
-                title="Details"
+                aria-label="Details"
               >
                 <SvgIcon name="eye" />
+                <ToolTip top="60px" left="-40px" content="Details" />
               </Link>
             )}
 
