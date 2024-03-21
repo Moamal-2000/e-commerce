@@ -81,3 +81,36 @@ export function checkDateBeforeMonthToPresent(getDate) {
 export function capitalize(str) {
   return str.slice(0, 1).toUpperCase() + str.slice(1, str.length);
 }
+
+export function updateClassOnCondition(
+  input,
+  condition,
+  className = "invalid"
+) {
+  const methodName = condition ? "remove" : "add";
+  input.classList[methodName](className);
+}
+
+export function checkIsInputsValid(inputs) {
+  return [...inputs].every((input) => !input.classList.contains("invalid"));
+}
+
+export function checkEmailValidation(emailInput) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
+  const isEmailValid = emailRegex.test(emailInput.value);
+  updateClassOnCondition(emailInput, isEmailValid);
+}
+
+export function checkPasswordInputs(passwordInputs) {
+  const currPassInp = passwordInputs[0];
+  const newPassInp = passwordInputs[1];
+  const confirmPassInput = passwordInputs[2];
+
+  const isCurrPassCorrect = isCurrentPassValid(currPassInp, password);
+  const isNewPassValid = isNewPasswordValid(newPassInp);
+  const isCurrPassEqualsNew = confirmPassInput.value === newPassInp.value;
+
+  updateClassOnCondition(currPassInp, isCurrPassCorrect);
+  updateClassOnCondition(newPassInp, isNewPassValid);
+  updateClassOnCondition(confirmPassInput, isCurrPassEqualsNew);
+}

@@ -7,8 +7,8 @@ import s from "./ProductPreview.module.scss";
 const ProductPreview = ({ data, handleZoomInEffect }) => {
   const { previewImg } = useSelector((state) => state.global);
   const dispatch = useDispatch();
+  const [searchParams] = useSearchParams();
   const { img, name, otherImages } = data;
-  const [searchParams, _] = useSearchParams();
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
 
   function setZoomInPreview(value = false) {
@@ -26,17 +26,7 @@ const ProductPreview = ({ data, handleZoomInEffect }) => {
   return (
     <section className={s.images}>
       {hasOtherImages && (
-        <div className={s.otherImages}>
-          {otherImages.map((img, i) => (
-            <div
-              key={i}
-              className={s.imgHolder}
-              onClick={() => setPreviewImg(otherImages[i])}
-            >
-              <img src={img} alt="product's image" />
-            </div>
-          ))}
-        </div>
+        <PreviewImages data={otherImages} setPreviewImg={setPreviewImg} />
       )}
 
       <div className={s.previewImgHolder}>
@@ -52,3 +42,19 @@ const ProductPreview = ({ data, handleZoomInEffect }) => {
   );
 };
 export default ProductPreview;
+
+const PreviewImages = ({ data, setPreviewImg }) => {
+  return (
+    <div className={s.otherImages}>
+      {data.map((img, i) => (
+        <div
+          key={i}
+          className={s.imgHolder}
+          onClick={() => setPreviewImg(data[i])}
+        >
+          <img src={img} alt="product's image" />
+        </div>
+      ))}
+    </div>
+  );
+};

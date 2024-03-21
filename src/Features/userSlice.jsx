@@ -36,8 +36,12 @@ const userSlice = createSlice({
       };
       state.isSignIn = false;
     },
+    updateUserData: ({ loginInfo }, { payload }) => {
+      Object.assign(loginInfo, payload.updatedUserData);
+    },
   },
 });
 
-export const { newSignUp, setLoginData, signOut } = userSlice.actions;
+export const { newSignUp, setLoginData, signOut, updateUserData } =
+  userSlice.actions;
 export default userSlice.reducer;

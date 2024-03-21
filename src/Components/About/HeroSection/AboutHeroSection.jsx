@@ -4,7 +4,7 @@ import s from "./AboutHeroSection.module.scss";
 const AboutHeroSection = () => {
   return (
     <section className={s.heroSection}>
-      <div className={s.content}>
+      <section className={s.content}>
         <h2>Our Story</h2>
 
         <p>
@@ -20,7 +20,7 @@ const AboutHeroSection = () => {
           fast. Exclusive offers a diverse assotment in categories ranging from
           consumer.
         </p>
-      </div>
+      </section>
 
       <div className={s.imgHolder}>
         <img src={womenShopping} alt="two young women happy with shopping" />

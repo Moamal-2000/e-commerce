@@ -4,11 +4,12 @@ import { toggleState } from "../../Features/globalSlice";
 import useGetResizeWindow from "../../Hooks/useGetResizeWindow";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./AccountMenuSection.module.scss";
+import { useEffect } from "react";
 
 const AccountMenuSection = () => {
   const { isProfileMenuActive } = useSelector((state) => state.global);
-  const { width: windowWidth } = useGetResizeWindow();
   const dispatch = useDispatch();
+  const { width: windowWidth } = useGetResizeWindow();
   const isMobileDevice = windowWidth < 768;
   const mobileClass = isMobileDevice ? s.mobile : "";
   const activeClass = isProfileMenuActive ? s.active : "";
@@ -24,6 +25,7 @@ const AccountMenuSection = () => {
         type="button"
         className={s.profileSectionsButton}
         aria-label="List of Profile sections"
+        title="Sections list"
         onClick={openProfileMenu}
       >
         <SvgIcon name="list" />

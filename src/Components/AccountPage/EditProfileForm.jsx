@@ -1,10 +1,18 @@
 import { useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { updateUserData } from "../../Features/userSlice";
+import {
+  checkEmailValidation,
+  checkIsInputsValid,
+  checkPasswordInputs,
+  updateClassOnCondition,
+} from "../../Functions/helper";
 import s from "./EditProfileForm.module.scss";
 
 const EditProfileForm = () => {
   const { loginInfo } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
   const { username, emailOrPhone, password } = loginInfo;
   const firstLastUserName = username.split(" ");
   const [firstName, setFirstName] = useState(firstLastUserName[0]);
@@ -14,54 +22,29 @@ const EditProfileForm = () => {
   const formRef = useRef();
 
   function handleSubmit(e) {
+    const emailInput = document.querySelector("#changeEmail");
+    const passwordInputs = formRef.current.querySelectorAll(
+      "input[type=password]"
+    );
+
     e.preventDefault();
-    checkEmptyInputs();
-    checkEmailValidation();
-    checkPasswordInputs();
+    checkEmptyInputs({
+      exceptions: ["address", "currentPass", "newPass", "confirmPass"],
+    });
+    checkEmailValidation(emailInput);
+    checkPasswordInputs(passwordInputs);
     updateUserInfo();
   }
 
-  function checkPasswordInputs() {
-    const formEle = formRef.current;
-    const passwordInputs = formEle.querySelectorAll("input[type=password]");
-
-    const currentPassInput = passwordInputs[0];
-    const newPassInput = passwordInputs[1];
-    const confirmPassInput = passwordInputs[2];
-
-    const isCurrentPassCorrect = currentPassInput.value === password;
-    const isNewPassValid = newPassInput.value.length >= 8;
-    const isConfirmPassEqualToNewPass =
-      confirmPassInput.value === newPassInput.value;
-
-    const currentPassClassListMethod = isCurrentPassCorrect ? "remove" : "add";
-    const newPassClassListMethod = isNewPassValid ? "remove" : "add";
-    const confirmPassClassListMethod = isConfirmPassEqualToNewPass
-      ? "remove"
-      : "add";
-
-    currentPassInput.classList[currentPassClassListMethod]("invalid");
-    newPassInput.classList[newPassClassListMethod]("invalid");
-    confirmPassInput.classList[confirmPassClassListMethod]("invalid");
-  }
-
-  function checkEmptyInputs() {
+  function checkEmptyInputs({ exceptions }) {
     const formEle = formRef.current;
     const inputs = formEle.querySelectorAll("input");
 
     inputs.forEach((input) => {
-      const inputClassListMethod = input.value.length > 2 ? "remove" : "add";
-      input.classList[inputClassListMethod]("invalid");
+      const isExceptionInput = exceptions.includes(input.name);
+      const isGraterThan = input.value.length > 2;
+      updateClassOnCondition(input, isExceptionInput || isGraterThan);
     });
-  }
-
-  function checkEmailValidation() {
-    const emailInput = document.querySelector("#changeEmail");
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
-    const isEmailValid = emailRegex.test(emailInput.value);
-    const emailClassListMethod = isEmailValid ? "remove" : "add";
-
-    emailInput.classList[emailClassListMethod]("invalid");
   }
 
   function updateUserInfo() {
@@ -71,18 +54,14 @@ const EditProfileForm = () => {
 
     if (!isFormValid) return;
 
-    const userInfo = {
-      userName: `${inputs[0].value}  ${inputs[1].value}`,
+    const updatedUserData = {
+      username: `${inputs[0].value} ${inputs[1].value}`,
       emailOrPhone: inputs[2].value,
-      password: inputs[3].value,
+      password: inputs[5].value,
     };
 
-    //! I stopped here
-  }
-
-  function checkIsInputsValid(inputs) {
-    inputs = [...inputs];
-    return inputs.every((input) => input.classList.contains("valid"));
+    if (updatedUserData.password === "") delete updatedUserData.password;
+    dispatch(updateUserData({ userInfo: updatedUserData }));
   }
 
   return (
@@ -177,7 +156,9 @@ const EditProfileForm = () => {
       </section>
 
       <div className={s.buttons}>
-        <Link className={s.cancelLink} to="/">Cancel</Link>
+        <Link className={s.cancelLink} to="/">
+          Cancel
+        </Link>
         <button type="submit" className={s.submitButton}>
           Save Changes
         </button>
