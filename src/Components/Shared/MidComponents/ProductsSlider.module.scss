@@ -2,10 +2,12 @@
 
 .productsSlider {
   display: flex;
+  gap: 30px;
   overflow: auto hidden;
   scrollbar-width: none;
   margin-bottom: 50px;
   position: relative;
+  border: solid;
 }
 
 .productsSlider::-webkit-scrollbar {
@@ -14,25 +16,24 @@
 
 .productsSlider>* {
   flex: 0 0 auto;
-  width: calc(25% - 30px);
-  margin-right: 30px;
+  width: calc((100% / 4 - 30px) + (30px / 4));
 }
 
-@include large {
+@media (max-width: 1300px) {
   .productsSlider>* {
-    width: calc(33.33% - 30px);
+    width: calc((100% / 3 - 30px) + (30px / 3));
   }
 }
 
 @include medium {
   .productsSlider>* {
-    width: calc(50% - 30px);
+    width: calc((100% / 2 - 30px) + (30px / 2));
   }
 }
 
 @media (max-width: 600px) {
   .productsSlider>* {
-    width: calc(100% - 30px);
+    width: 100%;
   }
 }
 

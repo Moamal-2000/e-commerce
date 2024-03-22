@@ -21,43 +21,37 @@
 // [Category Cards]
 .categoriesSlider>* {
   flex: 0 0 auto;
-  width: calc((100% / 6) - 30px);
+  width: calc(((100% / 6) - 30px) + (30px / 6));
   margin-right: 30px;
 }
 
 @media (max-width: 1500px) {
   .categoriesSlider>* {
-    width: calc((100% / 5) - 30px);
+    width: calc(((100% / 5) - 30px) + (30px / 5));
   }
 }
 
 @include large {
   .categoriesSlider>* {
-    width: calc((100% / 4) - 30px);
+    width: calc(((100% / 4) - 30px) + (30px / 4));
   }
 }
 
 @include medium {
   .categoriesSlider>* {
-    width: calc((100% / 3) - 30px);
-  }
-}
-
-@include medium {
-  .categoriesSlider>* {
-    width: calc((100% / 3) - 30px);
+    width: calc(((100% / 3) - 30px) + (30px / 3));
   }
 }
 
 @media (max-width: 760px) {
   .categoriesSlider>* {
-    width: calc((100% / 2) - 30px);
+    width: calc(((100% / 2) - 30px) + (30px / 2));
   }
 }
 
 @media (max-width: 470px) {
   .categoriesSlider>* {
-    width: calc(100% - 30px);
+    width: 100%;
   }
 }
 
