@@ -40,3 +40,10 @@
     margin-top: 50px;
   }
 }
+
+@media (max-width: 500px) {
+  .imgHolder {
+    width: 100%;
+    max-width: none;
+  }
+}
