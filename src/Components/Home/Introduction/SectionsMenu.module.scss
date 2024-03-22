@@ -44,27 +44,23 @@
 }
 
 .sectionsMenu::-webkit-scrollbar {
-  width: 6px !important;
-}
-
-.sectionsMenu::-webkit-scrollbar-thumb {
-  background-color: #eaeaea6b !important;
-}
-
-.sectionsMenu::-webkit-scrollbar {
   background-color: transparent;
-  width: 8px;
+  width: 8px !important;
 }
 
 .sectionsMenu::-webkit-scrollbar-thumb {
-  background-color: #eaeaea;
+  background-color: #e1e1e1;
   border-radius: 5px;
+
+  &:hover {
+    background-color: #c5c5c5;
+  }
 }
 
 @include large {
   .sectionsMenu {
     position: fixed;
-    left: -200%;
+    left: -250%;
     top: 0;
     height: calc(100vh - (100vh - 100%));
     max-height: none;

@@ -18,10 +18,17 @@
   display: none;
 }
 
+// [Category Cards]
 .categoriesSlider>* {
   flex: 0 0 auto;
   width: calc((100% / 6) - 30px);
   margin-right: 30px;
+}
+
+@media (max-width: 1500px) {
+  .categoriesSlider>* {
+    width: calc((100% / 5) - 30px);
+  }
 }
 
 @include large {
@@ -37,6 +44,12 @@
 }
 
 @include medium {
+  .categoriesSlider>* {
+    width: calc((100% / 3) - 30px);
+  }
+}
+
+@media (max-width: 760px) {
   .categoriesSlider>* {
     width: calc((100% / 2) - 30px);
   }

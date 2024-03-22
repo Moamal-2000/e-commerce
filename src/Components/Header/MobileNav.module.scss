@@ -24,6 +24,12 @@
   }
 }
 
+// @include very-small {
+//   .mobileMenu {
+//     width: calc(100vw - (100vw - 100%));
+//   }
+// }
+
 .userInfo .img {
   display: block;
   width: 70px;
