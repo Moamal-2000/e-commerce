@@ -15,6 +15,19 @@
 
 .content {
   width: 525px;
+  min-width: 500px;
+}
+
+@include large {
+  .content {
+    min-width: auto;
+  }
+}
+
+@include medium {
+  .content {
+    width: 630px;
+  }
 }
 
 @include small {
@@ -53,7 +66,6 @@
 @include small {
   .content>p {
     font-size: .9rem;
-    text-wrap: balance;
   }
 }
 
@@ -65,7 +77,13 @@
 
 @include medium {
   .imgHolder {
-    max-width: 400px;
+    max-width: 630px;
     height: auto;
+  }
+}
+
+@include small {
+  .imgHolder {
+    max-width: 100%;
   }
 }

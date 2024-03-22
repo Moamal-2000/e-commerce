@@ -20,6 +20,12 @@
 
 @include small {
   .infoCardsSection {
+    grid-template-columns: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .infoCardsSection {
     grid-template-columns: 100%;
   }
 }

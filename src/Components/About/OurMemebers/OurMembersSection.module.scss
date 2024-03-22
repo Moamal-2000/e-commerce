@@ -27,8 +27,9 @@
   display: none;
 }
 
+// [Member Cards]
 .slider>* {
-  min-width: calc(33.33% - 40px);
+  min-width: calc((100% / 3 - 40px) + (40px / 3));
 }
 
 @include medium {
@@ -37,8 +38,8 @@
   }
 }
 
-@include very-small {
+@media (max-width: 500px) {
   .slider>* {
-    width: 100%;
+    min-width: 100%;
   }
 }
