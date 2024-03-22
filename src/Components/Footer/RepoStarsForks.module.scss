@@ -6,14 +6,17 @@
   display: flex;
   align-items: center;
   padding: 4px 10px;
-  border-radius: 4px;
-
+  outline-offset: -2px;
+  transition: outline-offset .2s, outline-color .2s .1s;
+  
   &:focus-visible {
-    outline: solid 2px var(--yellow);
+    outline: dashed 3px var(--gray-blue);
+    outline-color: var(--blue);
+    outline-offset: 0;
+  }
 
-    &:hover {
-      outline-color: var(--light-green2);
-    }
+  &:hover {
+    outline-color: var(--blue);
   }
 }
 
@@ -29,14 +32,14 @@
 .repoStarsForks svg {
   width: 20px;
   height: 20px;
-  fill: var(--medium-light-gray);
+  fill: var(--gray-blue);
   margin-right: 4px;
   transition: .1s color;
 }
 
 .repoStarsForks span {
   display: inline-block;
-  color: var(--medium-light-gray);
+  color: var(--gray-blue);
   font-size: 1.1rem;
   transition: .1s color;
 }
@@ -44,15 +47,15 @@
 .repoStarsForks .wrapper:nth-child(2) svg {
   width: 15px;
   height: 15px;
-  fill: var(--medium-light-gray);
+  fill: var(--gray-blue);
   margin-right: 4px;
 }
 
 .repoStarsForks .wrapper:nth-child(2) span {
-  fill: var(--medium-light-gray);
+  fill: var(--gray-blue);
 }
 
 .repoStarsForks:hover :where(svg, span) {
-  color: var(--turquoise) !important;
-  fill: var(--turquoise) !important;
+  color: var(--blue) !important;
+  fill: var(--blue) !important;
 }
