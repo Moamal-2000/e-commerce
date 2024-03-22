@@ -1,10 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { toggleState } from "../../Features/globalSlice";
-import useGetResizeWindow from "../../Hooks/useGetResizeWindow";
+import useGetResizeWindow from "../../Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./AccountMenuSection.module.scss";
-import { useEffect } from "react";
 
 const AccountMenuSection = () => {
   const { isProfileMenuActive } = useSelector((state) => state.global);

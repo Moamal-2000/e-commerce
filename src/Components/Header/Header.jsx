@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleState } from "../../Features/globalSlice";
-import useNavToolsProps from "../../Hooks/useNavToolsProps";
+import useNavToolsProps from "../../Hooks/App/useNavToolsProps";
 import NavTools from "../Shared/MidComponents/NavTools";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./Header.module.scss";

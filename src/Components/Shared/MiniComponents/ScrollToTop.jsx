@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useEventListener from "../../../Hooks/useEventListener";
+import useEventListener from "../../../Hooks/Helper/useEventListener";
 import s from "./ScrollToTop.module.scss";
 import SvgIcon from "./SvgIcon";
 import ToolTip from "./ToolTip";

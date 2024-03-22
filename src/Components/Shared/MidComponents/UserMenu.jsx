@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import useSignOut from "../../../Hooks/useSignOut";
+import useSignOut from "../../../Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./UserMenu.module.scss";
 

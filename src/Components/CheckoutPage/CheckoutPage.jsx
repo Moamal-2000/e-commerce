@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import useFormData from "../../Hooks/useFormData";
+import useFormData from "../../Hooks/Helper/useFormData";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import BillingDetails from "./BillingDetails/BillingDetails";
 import s from "./CheckoutPage.module.scss";

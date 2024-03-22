@@ -1,4 +1,4 @@
-import useTimerDown from "../../../Hooks/useTimerDown";
+import useTimerDown from "../../../Hooks/App/useTimerDown";
 import s from "./PostCounter.module.scss";
 
 const PostCounter = () => {

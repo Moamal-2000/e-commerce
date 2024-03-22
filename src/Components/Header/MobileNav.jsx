@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { userImg } from "../../Assets/Images/Images";
-import useSignOut from "../../Hooks/useSignOut";
+import useSignOut from "../../Hooks/App/useSignOut";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
 

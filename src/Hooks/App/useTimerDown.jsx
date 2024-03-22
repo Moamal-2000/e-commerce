@@ -3,8 +3,8 @@ import {
   getFormattedTime,
   getTimeInMilliseconds,
   getTimeObj,
-} from "../Functions/helper";
-import useLocalStorage from "./useLocalStorage";
+} from "../../Functions/helper";
+import useLocalStorage from "../Helper/useLocalStorage";
 
 /* Props Example
   timeEvent="3 24 60 60" Days-Hours-Minutes-Seconds
@@ -60,7 +60,7 @@ const useTimerDown = (
       if (formattedTime) {
         setTimeData(getFormattedTime(getTimeObj(time)));
         useLocalStorage(timerName, time);
-        useEffectTimeUpdater()
+        useEffectTimeUpdater();
         return;
       }
     }
