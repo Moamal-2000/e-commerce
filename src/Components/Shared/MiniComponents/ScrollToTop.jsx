@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { scrollToTop } from "../../../Functions/helper";
 import useEventListener from "../../../Hooks/Helper/useEventListener";
 import s from "./ScrollToTop.module.scss";
 import SvgIcon from "./SvgIcon";
@@ -13,17 +14,13 @@ const ScrollToTop = () => {
     scrollTopButtonRef.current.classList[classListMethod](s.hide);
   }
 
-  function scrollToTop() {
-    window.scrollTo({ top: 0 });
-  }
-
   useEventListener(window, "scroll", handleScrollTopVisibility, []);
 
   return (
     <button
       ref={scrollTopButtonRef}
       type="button"
-      className={`${s.scrollTopButton}`}
+      className={`${`${s.scrollTopButton} ${s.hide}`}`}
       onClick={scrollToTop}
       aria-label="Scroll to top"
     >

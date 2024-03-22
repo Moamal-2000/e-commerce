@@ -116,5 +116,7 @@ export function checkPasswordInputs(passwordInputs) {
 }
 
 export function getSpecificRepo(repos, id) {
-  return repos?.find(repo => repo.id === id)
+  return repos?.find((repo) => repo.id === id);
 }
+
+export const scrollToTop = () => window.scrollTo({ top: 0 });
