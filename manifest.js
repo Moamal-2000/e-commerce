@@ -3,7 +3,11 @@ export const manifestForPlugin = {
   manifest: {
     name: "E-Commerecew",
     short_name: "E-Commerecew",
-    description: ``,
+    description: `Your ultimate destination for effortless online shopping.
+    Discover curated collections, easily add items to your cart and wishlist,
+    and enjoy detailed product descriptions with captivating previews.
+    Experience convenience like never before with our intuitive interface.
+    Shop smarter with us today.`,
     icons: [
       {
         src: "/android-chrome-192x192.webp",
@@ -51,7 +55,7 @@ export const manifestForPlugin = {
     background_color: "#181818",
     display: "standalone",
     scope: "/",
-    start_url: "",
+    start_url: "https://e-commercew.netlify.app/",
     orientation: "portrait",
   },
 };
