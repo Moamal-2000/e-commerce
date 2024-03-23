@@ -1,0 +1,12 @@
+@import "../../Styles/mixins.scss";
+
+.categoryPage {
+  margin: var(--page-margin);
+}
+
+.categoryContent {
+  margin: var(--page-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

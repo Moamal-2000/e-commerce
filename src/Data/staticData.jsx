@@ -76,6 +76,26 @@ export const categoriesData = [
     title: "Gaming",
     id: uuid(),
   },
+  {
+    iconName: "",
+    title: "Furniture",
+    id: uuid(),
+  },
+  {
+    iconName: "",
+    title: "Clothes",
+    id: uuid(),
+  },
+  {
+    iconName: "",
+    title: "Animal",
+    id: uuid(),
+  },
+  {
+    iconName: "",
+    title: "Curologies",
+    id: uuid(),
+  },
 ];
 
 export const aboutCardsInfo = [

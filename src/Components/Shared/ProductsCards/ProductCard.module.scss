@@ -1,4 +1,4 @@
-@import "../../../Styles/mixins";
+@import "../../../Styles/mixins.scss";
 
 .card {
   display: flex;
@@ -13,6 +13,7 @@
   width: 100%;
   height: 250px;
   @include center-x-y;
+  user-select: none;
   position: relative;
 }
 
@@ -23,7 +24,7 @@
 }
 
 .productImg:hover .imgHolder {
-  scale: 1.1;
+  scale: 1.02;
 }
 
 .imgHolder img {

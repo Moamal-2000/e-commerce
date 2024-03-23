@@ -7,8 +7,6 @@ import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";
 
-// ! make custom position for tooltips in the card
-
 const ProductCard = ({
   product,
   customization = {

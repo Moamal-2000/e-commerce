@@ -1,5 +1,35 @@
 @import "../../Styles/mixins.scss";
 
-.categoryPage {
-  margin: var(--page-margin);
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1300px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include medium {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+}
+
+.notFoundMessage>p {
+  line-height: 28px;
+}
+
+.notFoundMessage>p>a {
+  color: var(--black);
+  text-decoration: underline;
 }
