@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "e-commerecew-v1";
+const CACHE_NAME = "e-commerce-v1";
 const assets = ["/", "/index.html"];
 
 async function caching() {
