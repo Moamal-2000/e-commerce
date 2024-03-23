@@ -1,13 +1,10 @@
 export const manifestForPlugin = {
   registerType: "prompt",
   manifest: {
-    name: "E-Commerecew",
-    short_name: "E-Commerecew",
-    description: `Your ultimate destination for effortless online shopping.
-    Discover curated collections, easily add items to your cart and wishlist,
-    and enjoy detailed product descriptions with captivating previews.
-    Experience convenience like never before with our intuitive interface.
-    Shop smarter with us today.`,
+    name: "E-Commerce",
+    short_name: "E-Commerce",
+    description:
+      "Your ultimate destination for effortless online shopping. Discover curated collections, easily add items to your cart and wishlist, and enjoy detailed product descriptions with captivating previews. Experience convenience like never before with our intuitive interface. Shop smarter with us today.",
     icons: [
       {
         src: "/android-chrome-192x192.webp",
