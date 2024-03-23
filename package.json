@@ -24,6 +24,7 @@
     "sass": "^1.71.0",
     "swiper": "^11.0.6",
     "uuid": "^9.0.1",
+    "vite-plugin-pwa": "^0.19.7",
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
