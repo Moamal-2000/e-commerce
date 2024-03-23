@@ -32,21 +32,6 @@ export const manifestForPlugin = {
         sizes: "512x512",
         type: "image/png",
       },
-      {
-        src: "/favicon-16x16.webp",
-        sizes: "16x16",
-        type: "image/webp",
-      },
-      {
-        src: "/favicon.ico",
-        sizes: "64x64 32x32 24x24 16x16",
-        type: "image/x-icon",
-      },
-      {
-        src: "/favicon-32x32.webp",
-        sizes: "32x32",
-        type: "image/webp",
-      },
     ],
     theme_color: "#181818",
     background_color: "#181818",

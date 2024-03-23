@@ -1,7 +1,9 @@
 "use strict";
 
-const CACHE_NAME = "e-commerce-v1";
-const assets = ["/", "/index.html"];
+const CACHE_NAME = "e-commerce-v2";
+const assets = ["/", "/index.html",
+"/src/Assets/Images/introduction-product1.web"
+];
 
 async function caching() {
   const cache = await caches.open(CACHE_NAME);
