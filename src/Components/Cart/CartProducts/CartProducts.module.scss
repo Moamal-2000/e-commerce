@@ -70,6 +70,13 @@
   }
 }
 
+@include very-small {
+  .cartProducts tbody tr {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
 .cartProducts tbody>tr>td {
   width: 100px;
 }

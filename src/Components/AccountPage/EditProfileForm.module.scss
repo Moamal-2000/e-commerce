@@ -41,6 +41,12 @@
   gap: 20px 40px;
 }
 
+@include large {
+  .wrapper {
+    gap: 20px;
+  }
+}
+
 .inputs .input {
   display: flex;
   flex-direction: column;

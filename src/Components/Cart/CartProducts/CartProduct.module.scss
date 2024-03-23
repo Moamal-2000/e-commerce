@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
   width: 260px !important;
-  position: relative;
 }
 
 .product .removeButton {
@@ -34,7 +33,13 @@
   fill: var(--white)
 }
 
-.product>img {
+.imgHolder {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.product img {
   width: 54px;
   margin-right: 20px;
 }

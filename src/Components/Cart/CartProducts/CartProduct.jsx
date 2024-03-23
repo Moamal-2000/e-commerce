@@ -14,15 +14,17 @@ const CartProduct = ({ data }) => {
   return (
     <tr className={s.productContainer}>
       <td className={s.product}>
-        <button
-          type="button"
-          className={s.removeButton}
-          onClick={() => dispatch(removeFromCart({ id }))}
-        >
-          <SvgIcon name="xMark" />
-        </button>
+        <div className={s.imgHolder}>
+          <img src={img} alt={shortName} />
 
-        <img src={img} alt={shortName} />
+          <button
+            type="button"
+            className={s.removeButton}
+            onClick={() => dispatch(removeFromCart({ id }))}
+          >
+            <SvgIcon name="xMark" />
+          </button>
+        </div>
         <span>{shortName}</span>
       </td>
 
