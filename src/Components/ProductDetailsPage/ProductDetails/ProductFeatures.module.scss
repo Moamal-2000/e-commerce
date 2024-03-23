@@ -32,10 +32,11 @@
 }
 
 .features .feature .content>b {
-  font: 500 1rem "Poppins";
+  font-weight: 500;
 }
 
 .features .feature .content>p {
-  font: 500 .75rem "Poppins";
+  font-weight: 500;
+  font-size: .75rem;
   margin-top: 6px;
 }

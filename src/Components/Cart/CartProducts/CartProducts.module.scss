@@ -36,7 +36,6 @@
 
 .cartProducts thead tr th {
   display: inline-block;
-  font: 400 1rem "Poppins";
   width: 100px;
   text-align: start;
 
@@ -73,7 +72,6 @@
 
 .cartProducts tbody>tr>td {
   width: 100px;
-  font: 400 1rem "Poppins";
 }
 
 @include small {

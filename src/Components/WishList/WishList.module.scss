@@ -16,7 +16,7 @@
 }
 
 .wishList>header>label {
-  font: 400 1.25rem "Poppins";
+  font-size: 1.25rem;
 }
 
 @include small {
@@ -28,10 +28,10 @@
 .wishList>header>button {
   background-color: transparent;
   outline: none;
-  padding: 16px 48px 16px 48px;
+  padding: 16px 48px;
   border-radius: 4px;
   border: 1px solid #00000080;
-  font: 500 1rem "Poppins";
+  font-weight: 500;
 }
 
 @include small {
@@ -57,10 +57,10 @@
 .forYou>header>button {
   background-color: transparent;
   outline: none;
-  padding: 16px 48px 16px 48px;
+  padding: 16px 48px;
   border-radius: 4px;
   border: 1px solid #00000080;
-  font: 500 1rem "Poppins";
+  font-weight: 500;
 }
 
 @include small {

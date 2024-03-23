@@ -20,12 +20,12 @@
 }
 
 .content>span {
-  font: 600 1rem/24px "Poppins";
+  font-weight: 600;
   color: #00FF66;
 }
 
 .content>p {
-  font: 600 3rem/60px "Inter";
+  font: 600 3rem/60px "Inter", sans-serif;
   letter-spacing: .04rem;
   color: var(--secondary-white);
   margin: 30px 0 40px;
@@ -46,7 +46,7 @@
 }
 
 .content>button {
-  padding: 16px 48px 16px 48px;
+  padding: 16px 48px;
   border-radius: 4px;
   background-color: var(--green);
   color: var(--white);

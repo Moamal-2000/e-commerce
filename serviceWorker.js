@@ -1,17 +1,7 @@
 "use strict";
 
-const CACHE_NAME = "e-commerce-v3";
-const assets = [
-  "/",
-  "/index.html",
-  "/src/Assets/Images/favicon.png",
-  "/assets/Poppins-Regular-CTKNfV9P.ttf",
-  "/assets/Poppins-Bold-qTAUjFF7.ttf",
-  "/assets/Poppins-SemiBold-B_fPDAUb.ttf",
-  "/assets/Inter-SemiBold-XVCL1Lno.ttf",
-  "/Poppins-Medium-Cxde2ZoM.ttf",
-  "/assets/Inter-Bold-zdiomvYZ.ttf",
-];
+const CACHE_NAME = "e-commerce-v4";
+const assets = ["/", "/index.html"];
 
 async function caching() {
   const cache = await caches.open(CACHE_NAME);

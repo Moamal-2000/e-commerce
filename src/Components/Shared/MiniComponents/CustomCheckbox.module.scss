@@ -13,8 +13,8 @@
 }
 
 .customInput:has(:checked) {
-  background-color: #db4444;
-  border: solid 1px #db4444;
+  background-color: var(--tomato);
+  border: solid 1px var(--tomato);
 }
 
 .customInput>input {

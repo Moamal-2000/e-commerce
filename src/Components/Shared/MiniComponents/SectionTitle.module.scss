@@ -5,7 +5,7 @@
   margin-left: 36px;
   position: relative;
   margin-bottom: 30px;
-  font: 600 1rem "Poppins";
+  font-weight: 600;
 }
 
 .sectionTitle.type2 .event {
@@ -34,7 +34,7 @@
 .sectionTitle b {
   color: var(--black);
   letter-spacing: 1.4px;
-  font: 600 2.25rem "Inter";
+  font: 600 2.25rem "Inter", sans-serif;
   text-wrap: nowrap;
 }
 

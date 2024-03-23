@@ -62,13 +62,14 @@
 .content>b {
   color: var(--white);
   letter-spacing: .03rem;
-  font: 600 1.5rem/24px "Inter";
+  font: 600 1.5rem/24px "Inter", sans-serif;
 }
 
 .content>p {
   margin: 4px 0 10px;
   color: var(--secondary-white);
-  font: 400 .8rem/21px"Poppins";
+  font-size: .8rem;
+  line-height: 21px;
 }
 
 .shopNow {

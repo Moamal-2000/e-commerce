@@ -55,8 +55,8 @@
 }
 
 .sections>section :where(p, li, a) {
-  font: 400 1rem/24px "Poppins";
   color: var(--secondary-white);
+  line-height: 24px;
 }
 
 .sections>section>ul>li {
@@ -66,13 +66,14 @@
 }
 
 .sections .section1>b {
-  font: 700 1.5rem/24px "Inter";
+  font: 700 1.5rem/24px "Inter", sans-serif;
   letter-spacing: .03rem;
 }
 
 .section1>span {
   display: block;
-  font: 500 1.25rem/28px "Poppins";
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 .section1>p {
@@ -116,7 +117,9 @@
 }
 
 .section5>p {
-  font: 500 .8rem/18px "Poppins";
+  font-weight: 500;
+  font-size: .8rem;
+  line-height: 18px;
   color: var(--medium-light-gray);
 }
 
@@ -169,7 +172,7 @@
 .copyRights {
   width: fit-content;
   margin: 0 auto;
-  font: 400 1rem/24px "Poppins";
+  line-height: 24px;
 }
 
 @include small {

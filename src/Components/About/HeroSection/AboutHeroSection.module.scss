@@ -37,7 +37,7 @@
 }
 
 .content>h2 {
-  font: 600 3.375rem "Inter";
+  font: 600 3.375rem "Inter", sans-serif;
   letter-spacing: .06rem;
   margin-bottom: 40px;
 }
@@ -56,8 +56,6 @@
 }
 
 .content>p {
-  font: 400 1rem "Poppins";
-
   &:not(:last-child) {
     margin-bottom: 20px;
   }

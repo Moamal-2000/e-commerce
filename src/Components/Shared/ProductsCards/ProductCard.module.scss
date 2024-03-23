@@ -55,7 +55,7 @@
   gap: 10px;
   border-radius: 4px;
   user-select: none;
-  font: 400 .75rem "Poppins";
+  font-size: .75rem;
 }
 
 .layerContent .new {
@@ -66,7 +66,7 @@
   padding: 4px 12px;
   border-radius: 4px;
   user-select: none;
-  font: 400 .75rem "Poppins";
+  font-size: .75rem;
 
   &.hide {
     display: none;
@@ -156,7 +156,6 @@
 
 .addToCartBtn>span {
   color: var(--white);
-  font: 400 1rem "Poppins";
 }
 
 .productInfo {
@@ -166,7 +165,7 @@
 }
 
 .productInfo .productName a {
-  font: 500 1rem "Poppins";
+  font-weight: 500;
   color: var(--black);
   transition: color .2s;
 
@@ -177,13 +176,13 @@
 
 .productInfo .price {
   color: var(--dark-tomato);
-  font: 500 1rem/24px "Poppins";
+  font-weight: 500;
 }
 
 .productInfo .price .afterDiscount {
   margin-left: 16px;
   color: var(--primary);
-  font: 500 1rem/24px "Poppins";
+  font-weight: 500;
 }
 
 .productInfo .rateContainer {
@@ -194,6 +193,7 @@
 }
 
 .productInfo .rateContainer .numOfVotes {
-  font: 600 .875rem/21px "Poppins";
+  font-weight: 600;
+  font-size: .875rem;
   color: var(--primary);
 }

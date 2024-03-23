@@ -21,7 +21,7 @@
 }
 
 .headerContent>b {
-  font: 500 1rem "Poppins";
+  font-weight: 500;
 }
 
 .content {
@@ -31,7 +31,7 @@
 }
 
 .content>p {
-  font: 400 .875rem "Poppins";
+  font-size: .875rem;
   color: var(--black);
 }
 

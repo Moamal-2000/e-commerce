@@ -45,15 +45,29 @@
 
 .sectionsMenu::-webkit-scrollbar {
   background-color: transparent;
-  width: 8px !important;
+  width: 6px !important;
 }
 
 .sectionsMenu::-webkit-scrollbar-thumb {
-  background-color: #e1e1e1;
+  background-color: #f2f2f2;
   border-radius: 5px;
 
   &:hover {
-    background-color: #c5c5c5;
+    background-color: #e6e6e6;
+  }
+}
+
+@include large {
+  .sectionsMenu::-webkit-scrollbar {
+    width: 8px !important;
+  }
+  .sectionsMenu::-webkit-scrollbar-thumb {
+    background-color: #d0d0d0;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: #bdbdbd;
+    }
   }
 }
 

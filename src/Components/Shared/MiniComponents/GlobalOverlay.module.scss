@@ -10,7 +10,7 @@
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
-  @include prefix(transition, opacity .3s);
+  transition: opacity .3s;
 
   &.active {
     opacity: 1;

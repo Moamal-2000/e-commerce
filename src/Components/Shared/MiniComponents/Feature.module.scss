@@ -51,9 +51,11 @@
 .feature>b {
   display: inline-block;
   margin: 26px 0 4px;
-  font: 600 1.25rem/28px "Poppins";
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
 .feature>p {
-  font: 400 .9rem/21px "Poppins";
+  font-size: .9rem;
+  line-height: 21px;
 }

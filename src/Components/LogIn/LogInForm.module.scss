@@ -20,7 +20,7 @@
 }
 
 .form>h2 {
-  font: 500 2.25rem/30px "Inter";
+  font: 500 2.25rem/30px "Inter", sans-serif;
   letter-spacing: .04rem;
   width: max-content;
 }
@@ -46,7 +46,6 @@
   border-bottom: solid 1px var(--dark-gray);
   padding-bottom: 8px;
   color: var(--black);
-  font: 400 1rem/24px "Poppins";
 
   &:not(:last-child) {
     margin-bottom: 40px;
@@ -83,10 +82,9 @@
   background-color: var(--dark-tomato);
   color: var(--white);
   border: none;
-  font: 500 1rem/24px "Poppins";
+  font-weight: 500;
 }
 
 .buttons>a {
   color: var(--dark-tomato);
-  font: 400 1rem/24px "Poppins"
 }

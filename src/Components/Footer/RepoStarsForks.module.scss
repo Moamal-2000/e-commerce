@@ -8,7 +8,7 @@
   padding: 4px 10px;
   outline-offset: -2px;
   transition: outline-offset .2s, outline-color .2s .1s;
-  
+
   &:focus-visible {
     outline: dashed 3px var(--gray-blue);
     outline-color: var(--blue);

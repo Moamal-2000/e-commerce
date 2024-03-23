@@ -55,7 +55,8 @@
 }
 
 .section>h2 {
-  font: 500 1rem "Poppins";
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .section>ul {
@@ -66,7 +67,6 @@
 }
 
 .section>ul>li>a {
-  font: 400 1rem "Poppins";
   color: var(--dark-gray);
 
   &[class=active] {

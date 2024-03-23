@@ -20,7 +20,8 @@
 .timeContainer .typeTime {
   color: var(--black);
   transform: scale(.9);
-  font: 500 .75rem "Poppins";
+  font-weight: 500;
+  font-size: .75rem;
 }
 
 @include small {
@@ -34,7 +35,7 @@
 .timeContainer .time {
   color: var(--black);
   letter-spacing: 1.3px;
-  font: 700 2rem "Inter";
+  font: 700 2rem "Inter", sans-serif;
 }
 
 @include small {

@@ -26,7 +26,7 @@
 
 .billingDetailsSection>h2 {
   font-family: Inter;
-  font: 500 2.25rem "Inter";
+  font: 500 2.25rem "Inter", sans-serif;
   letter-spacing: .04rem;
   margin-bottom: 30px;
 }
@@ -40,7 +40,6 @@
 .billingDetailsSection>footer>label {
   cursor: pointer;
   padding-left: 10px;
-  font: 400 1rem "Poppins";
 }
 
 @include small {

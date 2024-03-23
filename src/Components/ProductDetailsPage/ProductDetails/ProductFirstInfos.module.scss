@@ -2,7 +2,7 @@
 
 
 .productName {
-  font: 600 1.5rem/24px "Inter";
+  font: 600 1.5rem/24px "Inter", sans-serif;
   letter-spacing: .03rem;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .reviews {
-  font: 400 .875rem "Poppins";
+  font-size: .875rem;
   color: var(--dark-gray);
 }
 
@@ -29,19 +29,19 @@
 }
 
 .greenText {
-  font: 400 .875rem "Poppins";
+  font-size: .875rem;
   color: var(--green);
 }
 
 .price {
   display: block;
-  font: 400 1.5rem "Inter";
+  font: 400 1.5rem "Inter", sans-serif;
   letter-spacing: .03rem;
   margin-bottom: 20px;
 }
 
 .description {
-  font: 400 .875rem "Poppins";
+  font-size: .875rem;
   max-width: 400px;
 }
 

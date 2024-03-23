@@ -46,7 +46,7 @@
 }
 
 .timeUnit>span:first-child {
-  font: 600 1rem/20px "Poppins";
+  font-weight: 600;
 }
 
 @include small {
@@ -56,6 +56,6 @@
 }
 
 .timeUnit>span:last-child {
-  font: 400 .8rem/18px "Poppins";
+  font-size: .8rem;
   scale: .85;
 }

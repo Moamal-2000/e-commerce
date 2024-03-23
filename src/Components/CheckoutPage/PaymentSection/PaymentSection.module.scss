@@ -24,8 +24,9 @@
   outline: none;
   background-color: var(--dark-tomato);
   color: var(--white);
-  font: 500 1rem "Poppins";
-  padding: 16px 48px 16px 48px;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 16px 48px;
   border-radius: 4px;
   margin-top: 34px;
 }
