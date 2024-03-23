@@ -1,12 +1,21 @@
+import { useState } from "react";
 import PaymentCards from "./PaymentCards";
 import s from "./PaymentOptionsSelection.module.scss";
 
 const PaymentOptionsSelection = () => {
+  const [paymentType, setPaymentType] = useState("cash");
+
   return (
     <div className={s.paymentOptions}>
       <div className={s.input}>
         <div className={s.wrapper}>
-          <input type="radio" name="payment" id="bank-option" />
+          <input
+            type="radio"
+            name="payment"
+            id="bank-option"
+            value="bank"
+            onChange={(e) => setPaymentType(e.target.value)}
+          />
           <label htmlFor="bank-option">Bank</label>
         </div>
 
@@ -15,7 +24,13 @@ const PaymentOptionsSelection = () => {
 
       <div className={s.input}>
         <div className={s.wrapper}>
-          <input type="radio" name="payment" id="cash-option" checked />
+          <input
+            type="radio"
+            name="payment"
+            id="cash-option"
+            value="cash"
+            onChange={(e) => setPaymentType(e.target.value)}
+          />
           <label htmlFor="cash-option">Cash on delivery</label>
         </div>
       </div>

@@ -2,9 +2,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
+  top: 3px;
 }
 
-.images>img {
+.images img {
   width: 42px;
   height: 28px;
   object-fit: contain;
