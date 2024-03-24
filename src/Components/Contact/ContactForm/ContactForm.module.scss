@@ -43,10 +43,15 @@
   width: 235px;
   height: 50px;
   border-radius: 4px;
-
-  background-color: var(--very-light-gray2);
   padding: 10px;
   width: 100%;
+  background-color: var(--very-light-gray2);
+  border: solid 2px var(--very-light-gray2);
+
+  &:hover,
+  &:focus {
+    border-color: var(--medium-light-gray);
+  }
 }
 
 .input>input::placeholder {
@@ -71,6 +76,7 @@
       position: absolute;
       top: 50%;
       translate: 0 calc(-50% + 3px);
+      left: -16px;
     }
   }
 }
@@ -93,6 +99,11 @@
   color: var(--white);
   font-weight: 500;
   align-self: flex-end;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: var(--tomato);
+  }
 }
 
 @include medium {

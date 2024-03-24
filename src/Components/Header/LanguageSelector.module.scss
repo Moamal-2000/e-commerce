@@ -24,10 +24,10 @@
   fill: var(--white);
 }
 
-.languageSelector .options {
+.languageSelector .menu {
   position: absolute;
   left: -11px;
-  top: 26px;
+  top: 40px;
   background-color: var(--black);
   z-index: 10;
   opacity: 0;
@@ -39,7 +39,7 @@
   }
 }
 
-.languageSelector .options .option {
+.languageSelector .menu .option {
   cursor: pointer;
   padding: 8px 10px;
   display: flex;

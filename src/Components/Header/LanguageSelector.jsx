@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
+import { LANGUAGES } from "../../Data/staticData";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./LanguageSelector.module.scss";
-import { LANGUAGES } from "../../Data/staticData";
 
 const LanguageSelector = () => {
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);
@@ -24,7 +24,7 @@ const LanguageSelector = () => {
       </div>
       <SvgIcon name="chevronDown" />
 
-      <div className={`${s.options} ${isLangMenuActive ? s.active : ""}`}>
+      <div className={`${s.menu} ${isLangMenuActive ? s.active : ""}`}>
         {LANGUAGES.map(({ lang, flag }, i) => (
           <div key={i} className={s.option} onClick={() => selectLanguage(i)}>
             <span>{lang}</span>
