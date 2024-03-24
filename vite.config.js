@@ -8,7 +8,7 @@ import { manifestForPlugin } from "./manifest";
 export default defineConfig({
   plugins: [
     react(),
-    VitePWA({ injectRegister: false }, manifestForPlugin),
+    VitePWA({ mode: "none", injectRegister: false }, manifestForPlugin),
     postcss({
       plugins: [autoprefixer],
       config: "./postcss.config.cjs",
