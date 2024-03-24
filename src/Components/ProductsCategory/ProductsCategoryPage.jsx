@@ -1,12 +1,13 @@
 import { Helmet } from "react-helmet-async";
+import { capitalize } from "../../Functions/helper";
+import useGetSearchParam from "../../Hooks/Helper/useGetSearchParam";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import ProductsCategory from "./ProductsCategory";
 import s from "./ProductsCategoryPage.module.scss";
-import useGetSearchParam from "../../Hooks/Helper/useGetSearchParam";
 
 const ProductsCategoryPage = () => {
-  const categoryType = useGetSearchParam("type")
+  const categoryType = useGetSearchParam("type");
   const productsCustomizations = {
     showDiscount: true,
     showFavIcon: true,
@@ -22,7 +23,7 @@ const ProductsCategoryPage = () => {
 
       <div className="container">
         <main className={s.categoryPage}>
-          <PagesHistory history={["/", categoryType]} />
+          <PagesHistory history={["/", capitalize(categoryType)]} />
 
           <section className={s.categoryContent}>
             <ProductsCategory

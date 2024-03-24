@@ -70,7 +70,6 @@ export const productsData = [
   {
     shortName: "PS5 Gamepad",
     name: "PS5 Gamepad",
-    type: "gaming",
     category: "gaming",
     price: 160,
     discount: 40,
@@ -104,7 +103,6 @@ export const productsData = [
   {
     shortName: "AK-9000 Keyboard",
     name: "AK-900 Wired Keyboard",
-    type: "gaming",
     category: "gaming",
     price: 1160,
     discount: 35,
@@ -141,7 +139,6 @@ export const productsData = [
   {
     shortName: "LCD Monitor",
     name: "IPS LCD Gaming Monitor",
-    type: "gaming",
     category: "gaming",
     price: 400,
     discount: 30,
@@ -174,7 +171,6 @@ export const productsData = [
   {
     shortName: "S-Series Chair",
     name: "S-Series Comfort Chair",
-    type: "furniture",
     category: "furniture",
     price: 400,
     discount: 25,
@@ -218,7 +214,6 @@ export const productsData = [
   {
     shortName: "North Coat",
     name: "The north coat",
-    type: "clothes",
     category: "clothes",
     price: 360,
     discount: 40,
@@ -253,8 +248,7 @@ export const productsData = [
   {
     shortName: "Gucci Bag",
     name: "Gucci duffle bag",
-    category: "clothes",
-    type: "backpack",
+    category: "backpack",
     price: 1100,
     discount: 10,
     afterDiscount: 1000,
@@ -288,7 +282,6 @@ export const productsData = [
   {
     shortName: "CPU Cooler",
     name: "RGB liquid CPU Cooler",
-    type: "electronics",
     category: "gaming",
     price: 170,
     discount: 30,
@@ -321,7 +314,6 @@ export const productsData = [
     shortName: "BookShelf",
     name: "Small BookShelf",
     category: "furniture",
-    type: "furniture",
     price: 360,
     discount: 15,
     afterDiscount: 320,
@@ -352,7 +344,6 @@ export const productsData = [
     shortName: "Dog Food",
     name: "Breed Dry Dog Food",
     category: "animal",
-    type: "animal food",
     price: 100,
     discount: 0,
     afterDiscount: 100,
@@ -386,7 +377,6 @@ export const productsData = [
   {
     shortName: "Cannon Camera",
     name: "CANON EOS DSLR Camera",
-    type: "electronics",
     category: "camera",
     price: 360,
     discount: 0,
@@ -418,7 +408,6 @@ export const productsData = [
   {
     shortName: "FHD Laptop",
     name: "ASUS FHD Gaming Laptop",
-    type: "computers",
     category: "computers",
     price: 1499,
     discount: 5,
@@ -450,7 +439,6 @@ export const productsData = [
   {
     shortName: "Curology",
     name: "Curology Product Set",
-    type: "makeup",
     category: "makeup",
     price: 700,
     discount: 0,
@@ -481,7 +469,6 @@ export const productsData = [
   {
     shortName: "Electric Car",
     name: "Kids Electric Car",
-    type: "electronics",
     category: "gaming",
     price: 1529,
     discount: 0,
@@ -516,7 +503,6 @@ export const productsData = [
   {
     shortName: "Soccer Cleats",
     name: "Jr. Zoom Soccer Cleats",
-    type: "shoes",
     category: "clothes",
     price: 500,
     discount: 0,
@@ -552,7 +538,6 @@ export const productsData = [
   {
     shortName: "GP11 Gamepad",
     name: "GP11 Shooter USB Gamepad",
-    type: "gaming",
     category: "gaming",
     price: 960,
     discount: 0,
@@ -584,7 +569,6 @@ export const productsData = [
   {
     shortName: "Satin Jacket",
     name: "Quilted Satin Jacket",
-    type: "clothes",
     category: "clothes",
     price: 650,
     discount: 0,

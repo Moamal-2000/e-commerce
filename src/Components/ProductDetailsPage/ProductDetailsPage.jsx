@@ -12,8 +12,14 @@ const ProductDetailsPage = () => {
   const PRODUCT_DATA = productsData.filter(
     (product) => product.name.toLowerCase() === PRODUCT_NAME
   )?.[0];
-  const { name, type, shortName } = PRODUCT_DATA;
-  const history = ["Account", capitalize(type), name.toUpperCase()];
+  const { name, category, shortName } = PRODUCT_DATA;
+  const history = ["Account", capitalize(category), name.toUpperCase()];
+  const paramsHistory = [
+    {
+      index: 1,
+      link: `category/?type=${category}`,
+    },
+  ];
 
   return (
     <>
@@ -23,10 +29,10 @@ const ProductDetailsPage = () => {
 
       <div className="container">
         <main className={s.detailsPage} id="details-page">
-          <PagesHistory history={history} />
+          <PagesHistory history={history} paramsHistory={paramsHistory} />
           <ProductDetails data={PRODUCT_DATA} />
           <RelatedItemsSection
-            productType={type}
+            productType={category}
             currentProduct={PRODUCT_DATA}
           />
         </main>

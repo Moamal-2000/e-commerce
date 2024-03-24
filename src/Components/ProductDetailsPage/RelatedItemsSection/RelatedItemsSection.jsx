@@ -8,7 +8,7 @@ const RelatedItemsSection = ({ productType, currentProduct }) => {
 
   function getProductsByRelatedType() {
     return productsData.filter((product) => {
-      const isSameType = product.type === productType;
+      const isSameType = product.category === productType;
       const isCurrentProduct = product === currentProduct;
       return isSameType && !isCurrentProduct;
     });
