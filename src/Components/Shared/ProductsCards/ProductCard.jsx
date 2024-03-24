@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { addToCart } from "../../../Features/productsSlice";
+import { addToArray } from "../../../Features/productsSlice";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
 import SvgIcon from "../MiniComponents/SvgIcon";
@@ -16,6 +16,7 @@ const ProductCard = ({
     showDetailsIcon: true,
     showRemoveIcon: false,
     showNewText: false,
+    showWishList: true,
   },
 }) => {
   const {
@@ -36,13 +37,14 @@ const ProductCard = ({
     showDetailsIcon,
     showRemoveIcon,
     showNewText,
+    showWishList,
   } = customization;
   const noHoverClass = stopHover ? s.noHover : "";
   const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
   const hideNewClass = shouldHideNewWord();
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
-  const { cartProducts } = useSelector((state) => state.products);
+  const { cartProducts, wishList } = useSelector((state) => state.products);
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -58,7 +60,14 @@ const ProductCard = ({
     const isProductAlreadyExist = cartProducts.includes(product);
     if (isProductAlreadyExist) return;
 
-    dispatch(addToCart({ product }));
+    dispatch(addToArray({ key: "cartProducts", value: product }));
+  }
+
+  function addProductToWishList() {
+    const isProductAlreadyExist = wishList.includes(product);
+    if (isProductAlreadyExist) return;
+
+    dispatch(addToArray({ key: "wishList", value: product }));
   }
 
   return (
@@ -102,8 +111,25 @@ const ProductCard = ({
             )}
 
             {showRemoveIcon && (
-              <button type="button" className={s.iconHolder} title="Remove">
+              <button
+                type="button"
+                className={s.iconHolder}
+                aria-label="Remove from wishlist"
+              >
                 <SvgIcon name="trashCan" />
+                <ToolTip top="18px" left="-40px" content="Remove" />
+              </button>
+            )}
+
+            {showWishList && (
+              <button
+                type="button"
+                className={s.iconHolder}
+                onClick={addProductToWishList}
+                aria-label="Add to wishlist"
+              >
+                <SvgIcon name="save" />
+                <ToolTip top="100px" left="-40px" content="Wishlist" />
               </button>
             )}
           </div>
@@ -112,6 +138,7 @@ const ProductCard = ({
             type="button"
             className={s.addToCartBtn}
             onClick={addProductToCart}
+            aria-label="Add to cart"
           >
             <SvgIcon name="cart3" />
             <span>Add to cart</span>

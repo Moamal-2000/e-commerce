@@ -15,10 +15,6 @@ const productsSlice = createSlice({
       const { key, value } = payload;
       return { ...state, [key]: value };
     },
-    addToCart: ({ cartProducts }, { payload: { product } }) => {
-      cartProducts.push(product);
-    },
-
     removeFromCart: (state, { payload: { id } }) => {
       const updatedCartProducts = state.cartProducts.filter(
         (product) => product.id !== id
@@ -28,8 +24,12 @@ const productsSlice = createSlice({
         cartProducts: updatedCartProducts,
       };
     },
+    addToArray: (state, { payload: { key, value } }) => {
+      state[key].push(value);
+    },
   },
 });
 
-export const { updateState, addToCart, removeFromCart } = productsSlice.actions;
+export const { updateState, removeFromCart, addToArray } =
+  productsSlice.actions;
 export default productsSlice.reducer;
