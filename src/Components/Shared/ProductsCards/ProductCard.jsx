@@ -45,6 +45,7 @@ const ProductCard = ({
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const { cartProducts, wishList } = useSelector((state) => state.products);
+  const { isSignIn } = useSelector((state) => state.user);
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -92,7 +93,7 @@ const ProductCard = ({
           <div className={`${s.new} ${hideNewClass}`}>New</div>
 
           <div className={s.icons}>
-            {showFavIcon && (
+            {showFavIcon && isSignIn && (
               <a href="#" className={s.iconHolder} aria-label="Favorite">
                 <SvgIcon name="heart" />
                 <ToolTip top="18px" left="-40px" content="Favorite" />
@@ -122,7 +123,7 @@ const ProductCard = ({
               </button>
             )}
 
-            {showWishList && (
+            {showWishList && isSignIn && (
               <button
                 type="button"
                 className={s.iconHolder}
@@ -134,16 +135,17 @@ const ProductCard = ({
               </button>
             )}
           </div>
-
-          <button
-            type="button"
-            className={s.addToCartBtn}
-            onClick={addProductToCart}
-            aria-label="Add to cart"
-          >
-            <SvgIcon name="cart3" />
-            <span>Add to cart</span>
-          </button>
+          {isSignIn && (
+            <button
+              type="button"
+              className={s.addToCartBtn}
+              onClick={addProductToCart}
+              aria-label="Add to cart"
+            >
+              <SvgIcon name="cart3" />
+              <span>Add to cart</span>
+            </button>
+          )}
         </div>
       </div>
 
