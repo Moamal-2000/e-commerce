@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { addToArray } from "../../../Features/productsSlice";
+import { addToArray, removeById } from "../../../Features/productsSlice";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
 import SvgIcon from "../MiniComponents/SvgIcon";
@@ -115,6 +115,7 @@ const ProductCard = ({
                 type="button"
                 className={s.iconHolder}
                 aria-label="Remove from wishlist"
+                onClick={() => dispatch(removeById({ key: "wishList", id }))}
               >
                 <SvgIcon name="trashCan" />
                 <ToolTip top="18px" left="-40px" content="Remove" />

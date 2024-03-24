@@ -15,21 +15,17 @@ const productsSlice = createSlice({
       const { key, value } = payload;
       return { ...state, [key]: value };
     },
-    removeFromCart: (state, { payload: { id } }) => {
-      const updatedCartProducts = state.cartProducts.filter(
-        (product) => product.id !== id
-      );
-      return {
-        ...state,
-        cartProducts: updatedCartProducts,
-      };
-    },
     addToArray: (state, { payload: { key, value } }) => {
       state[key].push(value);
+    },
+    removeById: (state, { payload: { key, id } }) => {
+      const updatedCartProducts = state[key].filter(
+        (product) => product.id !== id
+      );
+      state[key] = updatedCartProducts;
     },
   },
 });
 
-export const { updateState, removeFromCart, addToArray } =
-  productsSlice.actions;
+export const { updateState, addToArray, removeById } = productsSlice.actions;
 export default productsSlice.reducer;

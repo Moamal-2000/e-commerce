@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { removeFromCart } from "../../../Features/productsSlice";
+import { removeById } from "../../../Features/productsSlice";
 import CustomNumberInput from "../../Shared/MiniComponents/CustomNumberInput";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import s from "./CartProduct.module.scss";
@@ -20,7 +20,7 @@ const CartProduct = ({ data }) => {
           <button
             type="button"
             className={s.removeButton}
-            onClick={() => dispatch(removeFromCart({ id }))}
+            onClick={() => dispatch(removeById({ key: "cartProducts", id }))}
           >
             <SvgIcon name="xMark" />
           </button>
