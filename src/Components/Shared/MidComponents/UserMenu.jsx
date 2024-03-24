@@ -30,7 +30,7 @@ const UserMenu = ({ isActive, toggler }) => {
       </Link>
 
       <Link to="/wishlist">
-        <SvgIcon name="heart" />
+        <SvgIcon name="save" />
         <span>Wishlist</span>
       </Link>
 

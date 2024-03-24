@@ -10,6 +10,7 @@
   padding: 40px 20px;
   padding-right: 140px;
   z-index: 1001;
+  overflow-y: auto;
   transition: right .5s;
 
   &.active {
@@ -22,6 +23,16 @@
   .mobileMenu {
     padding-right: 100px;
   }
+}
+
+.mobileMenu::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+}
+
+.mobileMenu::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, .3);
+  border-radius: 2px;
 }
 
 .userInfo .img {
@@ -47,19 +58,18 @@
   font-weight: bold;
 }
 
-.nav {
+.navLinks {
   position: relative;
   left: -10px;
 }
 
-.nav ul li {
-
-  &:not(:last-child) {
-    margin-top: 14px;
-  }
+.navLinks ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.nav ul li a,
+.navLinks ul li a,
 .signOutButton {
   all: unset;
   color: var(--medium-light-gray);
@@ -78,12 +88,12 @@
 
 }
 
-.nav ul li a span,
+.navLinks ul li a span,
 .signOutButton span {
   padding-left: 16px;
 }
 
-.nav ul svg,
+.navLinks ul svg,
 .signOutButton svg {
   fill: var(--white);
   width: 20px;

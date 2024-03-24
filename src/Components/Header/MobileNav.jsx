@@ -25,7 +25,7 @@ const MobileNav = () => {
         </p>
       </div>
 
-      <nav className={s.nav}>
+      <nav className={s.navLinks}>
         <ul>
           <li>
             <NavLink to="/profile">
@@ -55,6 +55,12 @@ const MobileNav = () => {
             <NavLink to="/favorite">
               <SvgIcon name="heart" />
               <span>Favorite</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/wishlist">
+              <SvgIcon name="save" />
+              <span>Wishlist</span>
             </NavLink>
           </li>
           <li>
