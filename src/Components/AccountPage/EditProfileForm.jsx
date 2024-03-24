@@ -32,7 +32,7 @@ const EditProfileForm = () => {
       exceptions: ["address", "currentPass", "newPass", "confirmPass"],
     });
     checkEmailValidation(emailInput);
-    checkPasswordInputs(passwordInputs);
+    checkPasswordInputs(passwordInputs, password);
     updateUserInfo();
   }
 

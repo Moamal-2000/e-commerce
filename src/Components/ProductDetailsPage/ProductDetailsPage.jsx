@@ -16,6 +16,10 @@ const ProductDetailsPage = () => {
   const history = ["Account", capitalize(category), name.toUpperCase()];
   const paramsHistory = [
     {
+      index: 0,
+      link: "profile",
+    },
+    {
       index: 1,
       link: `category/?type=${category}`,
     },

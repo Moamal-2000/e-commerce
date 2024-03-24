@@ -1,3 +1,5 @@
+import { isCurrentPassValid, isNewPasswordValid } from "./conditions";
+
 export function isDecimalNumber(number) {
   let singleNumber = Math.floor(number);
   return singleNumber !== number;
@@ -101,7 +103,7 @@ export function checkEmailValidation(emailInput) {
   updateClassOnCondition(emailInput, isEmailValid);
 }
 
-export function checkPasswordInputs(passwordInputs) {
+export function checkPasswordInputs(passwordInputs, password) {
   const currPassInp = passwordInputs[0];
   const newPassInp = passwordInputs[1];
   const confirmPassInput = passwordInputs[2];
