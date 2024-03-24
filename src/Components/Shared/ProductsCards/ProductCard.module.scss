@@ -105,6 +105,7 @@
   border-radius: 50%;
   @include center-x-y;
   cursor: pointer;
+  position: relative;
 }
 
 .layerContent .icons .iconHolder svg {
@@ -114,13 +115,16 @@
   height: 16px;
 }
 
-.layerContent .icons .iconHolder:last-child:hover svg {
+.detailsIcon:hover svg {
   fill: var(--turquoise);
 }
 
-.layerContent .icons .iconHolder:first-child:hover svg,
-.layerContent .icons button:hover svg {
-  fill: var(--dark-tomato);
+:where(.favIcon, .removeIcon):hover svg {
+  fill: var(--tomato);
+}
+
+.wishListIcon:hover svg {
+  fill: #00bb00;
 }
 
 .layerContent .addToCartBtn {

@@ -94,44 +94,44 @@ const ProductCard = ({
 
           <div className={s.icons}>
             {showFavIcon && isSignIn && (
-              <a href="#" className={s.iconHolder} aria-label="Favorite">
+              <a href="#" className={`${s.iconHolder} ${s.favIcon}`} aria-label="Favorite">
                 <SvgIcon name="heart" />
-                <ToolTip top="18px" left="-40px" content="Favorite" />
+                <ToolTip top="18px" left="-44px" content="Favorite" />
               </a>
             )}
 
             {showDetailsIcon && (
               <Link
                 onClick={navigateToProductDetails}
-                className={s.iconHolder}
+                className={`${s.iconHolder} ${s.detailsIcon}`}
                 aria-label="Details"
               >
                 <SvgIcon name="eye" />
-                <ToolTip top="60px" left="-40px" content="Details" />
+                <ToolTip top="18px" left="-39px" content="Details" />
               </Link>
             )}
 
             {showRemoveIcon && (
               <button
                 type="button"
-                className={s.iconHolder}
+                className={`${s.iconHolder} ${s.removeIcon}`}
                 aria-label="Remove from wishlist"
                 onClick={() => dispatch(removeById({ key: "wishList", id }))}
               >
                 <SvgIcon name="trashCan" />
-                <ToolTip top="18px" left="-40px" content="Remove" />
+                <ToolTip top="18px" left="-41px" content="Remove" />
               </button>
             )}
 
             {showWishList && isSignIn && (
               <button
                 type="button"
-                className={s.iconHolder}
+                className={`${s.iconHolder} ${s.wishListIcon}`}
                 onClick={addProductToWishList}
                 aria-label="Add to wishlist"
               >
                 <SvgIcon name="save" />
-                <ToolTip top="100px" left="-40px" content="Wishlist" />
+                <ToolTip top="18px" left="-40px" content="Wishlist" />
               </button>
             )}
           </div>

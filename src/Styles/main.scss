@@ -97,7 +97,8 @@ main {
   transition: opacity .1s ease;
 }
 
-*:hover+[data-is-tooltip=true] {
+*:hover+[data-is-tooltip=true],
+*:hover>[data-is-tooltip=true] {
   opacity: 1;
   pointer-events: all;
 }

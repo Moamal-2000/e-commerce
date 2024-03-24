@@ -14,10 +14,10 @@ const UserMenuIcon = ({ visibility }) => {
         type="button"
         className={`${s.userContainer} ${activeClass}`}
         onClick={() => toggleMenuUserActive()}
-        title="user menu"
+        aria-label="User menu"
       >
         <SvgIcon name="user" />
-        <ToolTip top="44px" left="50%" content="user menu" />
+        <ToolTip top="48px" left="50%" content="user menu" />
 
         <UserMenu isActive={isMenuUserActive} toggler={toggleMenuUserActive} />
       </button>
