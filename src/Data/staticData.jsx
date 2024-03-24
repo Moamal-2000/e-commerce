@@ -77,23 +77,23 @@ export const categoriesData = [
     id: uuid(),
   },
   {
-    iconName: "",
+    iconName: "furniture",
     title: "Furniture",
     id: uuid(),
   },
   {
-    iconName: "",
+    iconName: "shirt",
     title: "Clothes",
     id: uuid(),
   },
   {
-    iconName: "",
+    iconName: "dogHand",
     title: "Animal",
     id: uuid(),
   },
   {
-    iconName: "",
-    title: "Curologies",
+    iconName: "makeup",
+    title: "makeup",
     id: uuid(),
   },
 ];

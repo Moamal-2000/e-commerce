@@ -450,8 +450,8 @@ export const productsData = [
   {
     shortName: "Curology",
     name: "Curology Product Set",
-    type: "curology",
-    category: "curologies",
+    type: "makeup",
+    category: "makeup",
     price: 700,
     discount: 0,
     afterDiscount: 700,

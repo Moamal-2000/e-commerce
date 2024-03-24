@@ -25,6 +25,14 @@
   }
 }
 
+.card svg[data-fill-hover] {
+  transition: fill .2s;
+}
+
+.card:hover svg[data-fill-hover] {
+  fill: var(--white);
+}
+
 .card:hover svg {
   fill: transparent;
 
