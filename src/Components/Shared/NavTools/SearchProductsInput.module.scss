@@ -10,26 +10,16 @@
   user-select: none;
   cursor: pointer;
   position: relative;
-}
+  border: solid 1px var(--secondary-white);
+  transition: border-color .1s;
 
-.searchContainer::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: inherit;
-  width: 98%;
-  height: 94%;
-  border: solid 1px var(--turquoise);
-  background-color: rgba(74, 195, 232, 0.1);
-  z-index: -1;
-  opacity: .4;
-  transition: transform .2s;
-}
+  &:hover {
+    border-color: var(--black);
+  }
 
-.searchContainer:hover:before {
-  transform: translate(-50%, -50%) scale(1.05, 1.3);
+  &:has(:focus) {
+    border-color: var(--turquoise);
+  }
 }
 
 .searchContainer input {
@@ -43,9 +33,4 @@
 .searchContainer svg {
   width: 18px;
   height: 18px;
-  transition: fill .2s;
-
-  &:hover {
-    fill: var(--turquoise);
-  }
 }
