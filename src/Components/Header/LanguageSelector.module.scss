@@ -10,7 +10,7 @@
 
 @include small {
   .languageSelector {
-    margin-right: 12px;
+    margin-right: 37px;
   }
 }
 
@@ -41,11 +41,22 @@
 
 .languageSelector .options .option {
   cursor: pointer;
-  padding: 10px;
-  padding-right: 30px;
-  transition: color .2s;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   &:hover {
-    color: var(--very-light-gray);
+    color: var(--black);
+    background-color: var(--white);
   }
+}
+
+.option>span {
+  width: 70px;
+}
+
+.option>img {
+  width: 22px;
+  object-fit: contain;
 }

@@ -11,6 +11,9 @@ import {
   productImg1,
   productImg2,
   productImg3,
+  russiaFlag,
+  saudiFlag,
+  usaFlag,
   visaCard,
 } from "../Assets/Images/Images";
 
@@ -187,5 +190,20 @@ export const paymentCards = [
     alt: "Nagad card",
     link: "https://www.nagad.com.bd/services/?service=add-money-from-card",
     id: uuid(),
+  },
+];
+
+export const LANGUAGES = [
+  {
+    lang: "English",
+    flag: usaFlag,
+  },
+  {
+    lang: "Russian",
+    flag: russiaFlag,
+  },
+  {
+    lang: "Arabic",
+    flag: saudiFlag,
   },
 ];

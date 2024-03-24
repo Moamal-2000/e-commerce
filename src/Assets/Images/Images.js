@@ -27,9 +27,15 @@ import visaCard from "./visa.webp";
 import womanWithHat from "./woman-with-hat.webp";
 import member2Img from "./woman.webp";
 import womenShopping from "./women-shopping.webp";
+import usaFlag from "./usa-flag.png"
+import russiaFlag from "./russia-flag.png"
+import saudiFlag from "./saudi-flag.png"
 // import  from "."
 
 export {
+  usaFlag,
+  russiaFlag,
+  saudiFlag,
   appStore,
   appleLogo,
   bkashCard,
