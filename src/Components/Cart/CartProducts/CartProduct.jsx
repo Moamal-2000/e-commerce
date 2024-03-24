@@ -3,8 +3,8 @@ import { useDispatch } from "react-redux";
 import { removeById } from "../../../Features/productsSlice";
 import CustomNumberInput from "../../Shared/MiniComponents/CustomNumberInput";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
-import s from "./CartProduct.module.scss";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
+import s from "./CartProduct.module.scss";
 
 const CartProduct = ({ data }) => {
   const { img, shortName, price, id } = data;
@@ -24,8 +24,7 @@ const CartProduct = ({ data }) => {
             onClick={() => dispatch(removeById({ key: "cartProducts", id }))}
           >
             <SvgIcon name="xMark" />
-        <ToolTip top="50%" left="-44px" content="remove" />
-
+            <ToolTip top="50%" left="-44px" content="remove" />
           </button>
         </div>
         <span>{shortName}</span>
