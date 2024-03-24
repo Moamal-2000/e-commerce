@@ -19,6 +19,7 @@
 
   &:has(:focus) {
     border-color: var(--turquoise);
+    background-color: var(--white);
   }
 }
 

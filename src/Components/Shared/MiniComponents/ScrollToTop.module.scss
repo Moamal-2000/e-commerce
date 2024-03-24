@@ -13,11 +13,15 @@
   bottom: 30px;
   right: 30px;
   pointer-events: all;
-  transition: opacity .25s ease;
+  transition: opacity .25s ease, background-color .25s;
 
   &.hide {
     opacity: 0;
     pointer-events: none;
+  }
+
+  &:hover {
+    background-color: #ff4d3d;
   }
 }
 

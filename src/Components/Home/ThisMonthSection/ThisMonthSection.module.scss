@@ -38,4 +38,9 @@
   letter-spacing: 0em;
   font-weight: 500;
   text-wrap: nowrap;
+  transition: background .2s;
+
+  &:hover {
+    background: var(--tomato);
+  }
 }

@@ -51,6 +51,20 @@
   z-index: 2;
   width: 190px;
   height: 221px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  transition: filter .2s;
+}
+
+.smallPoster:hover>img {
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  -moz-filter: grayscale(0);
 }
 
 .content {
