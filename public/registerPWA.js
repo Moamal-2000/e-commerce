@@ -1,11 +1,9 @@
 export async function register() {
   if ("serviceWorker" in navigator) {
     try {
-      const registration = await navigator.serviceWorker.register(
-        "/sw.js"
-      );
+      const registration = await navigator.serviceWorker.register("./sw.js");
 
-      console.log("registered", registration);
+      console.log("registered", registration.scope);
     } catch (e) {
       console.log("failed to register", e);
     }
