@@ -3,7 +3,7 @@ import PaymentCards from "./PaymentCards";
 import s from "./PaymentOptionsSelection.module.scss";
 
 const PaymentOptionsSelection = () => {
-  const [paymentType, setPaymentType] = useState("cash");
+  const [paymentType, setPaymentType] = useState("bank");
 
   return (
     <div className={s.paymentOptions}>
@@ -14,6 +14,7 @@ const PaymentOptionsSelection = () => {
             name="payment"
             id="bank-option"
             value="bank"
+            checked
             onChange={(e) => setPaymentType(e.target.value)}
           />
           <label htmlFor="bank-option">Bank</label>

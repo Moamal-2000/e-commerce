@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { appStore, googlePlay, qrCode } from "../../Assets/Images/Images";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
+import ToolTip from "../Shared/MiniComponents/ToolTip";
 import s from "./Footer.module.scss";
 import RepoStarsForks from "./RepoStarsForks";
 
@@ -29,8 +30,9 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <label htmlFor="email" title="Send">
+              <label htmlFor="email" aria-label="Send mail">
                 <SvgIcon name="vector" />
+                <ToolTip left="70px" top="50%" content="Send" />
               </label>
             </form>
           </section>
@@ -117,6 +119,7 @@ const Footer = () => {
                 title="facebook"
               >
                 <SvgIcon name="facebook" />
+                <ToolTip left="50%" top="40px" content="facebook" />
               </a>
 
               <a
@@ -125,6 +128,7 @@ const Footer = () => {
                 title="twitter"
               >
                 <SvgIcon name="twitter" />
+                <ToolTip left="50%" top="40px" content="twitter" />
               </a>
 
               <a
@@ -133,6 +137,7 @@ const Footer = () => {
                 title="instagram"
               >
                 <SvgIcon name="instagram" />
+                <ToolTip left="50%" top="40px" content="instagram" />
               </a>
 
               <a
@@ -141,6 +146,7 @@ const Footer = () => {
                 title="linkedin"
               >
                 <SvgIcon name="linkedin" />
+                <ToolTip left="50%" top="40px" content="linkedin" />
               </a>
             </div>
           </section>

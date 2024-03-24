@@ -68,7 +68,7 @@
   }
 }
 
-.dealing>button {
+.buyButton {
   outline: none;
   border: none;
   width: 165px;
@@ -87,6 +87,7 @@
   border: 1px solid #00000080;
   @include center-x-y;
   cursor: pointer;
+  position: relative;
 }
 
 .addToFav>svg {

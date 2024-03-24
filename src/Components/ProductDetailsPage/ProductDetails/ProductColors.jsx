@@ -1,5 +1,6 @@
 import { useState } from "react";
 import s from "./ProductColors.module.scss";
+import ToolTip from "../../Shared/MiniComponents/ToolTip";
 
 const ProductColors = ({ data: { colors } }) => {
   return (
@@ -30,8 +31,10 @@ const Colors = ({ colors }) => {
         className={`${s.color} ${firstItemActiveClass}`}
         style={{ backgroundColor: color }}
         onClick={(e) => choiceProductColor(e, i)}
-        title={name + " color"}
-      ></div>
+        aria-label={name + " color"}
+      >
+        <ToolTip left="50%" top="40px" content={name + " color"} />
+      </div>
     );
   });
 };

@@ -20,11 +20,11 @@
 .imgHolder {
   position: relative;
   z-index: 6;
-  transition: .3s ease scale;
+  transition: .4s scale;
 }
 
 .productImg:hover .imgHolder {
-  scale: 1.02;
+  scale: 1.1;
 }
 
 .imgHolder img {

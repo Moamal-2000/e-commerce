@@ -14,10 +14,6 @@
     outline-color: var(--blue);
     outline-offset: 0;
   }
-
-  &:hover {
-    outline-color: var(--blue);
-  }
 }
 
 .repoStarsForks .wrapper {
@@ -29,6 +25,10 @@
   }
 }
 
+.repoStarsForks:hover .wrapper {
+  outline-color: var(--blue);
+}
+
 .repoStarsForks svg {
   width: 20px;
   height: 20px;
@@ -37,7 +37,7 @@
   transition: .1s color;
 }
 
-.repoStarsForks span {
+.number {
   display: inline-block;
   color: var(--gray-blue);
   font-size: 1.1rem;
@@ -48,14 +48,9 @@
   width: 15px;
   height: 15px;
   fill: var(--gray-blue);
-  margin-right: 4px;
 }
 
-.repoStarsForks .wrapper:nth-child(2) span {
-  fill: var(--gray-blue);
-}
-
-.repoStarsForks:hover :where(svg, span) {
+.repoStarsForks:hover :where(svg, .number) {
   color: var(--blue) !important;
   fill: var(--blue) !important;
 }

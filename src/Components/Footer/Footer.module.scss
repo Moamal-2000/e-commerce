@@ -105,6 +105,7 @@
 .section1 .input>label {
   cursor: pointer;
   padding: 10px;
+  position: relative;
 }
 
 .section1 .input svg {
@@ -163,6 +164,7 @@
 }
 
 .socialMedia>a {
+  position: relative;
 
   &:not(:last-child) {
     margin-right: 30px;

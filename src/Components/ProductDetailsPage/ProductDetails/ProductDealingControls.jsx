@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
+import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ProductDealingControls.module.scss";
 
 const ProductDealingControls = () => {
@@ -34,10 +35,14 @@ const ProductDealingControls = () => {
         </button>
       </div>
 
-      <button type="button">Buy Now</button>
-      <div className={s.addToFav}>
+      <button type="button" className={s.buyButton}>
+        Buy Now
+      </button>
+
+      <button type="button" className={s.addToFav} aria-label="Add to favorite">
         <SvgIcon name="heart" />
-      </div>
+        <ToolTip left="50%" top="60px" content="Add to favorite" />
+      </button>
     </section>
   );
 };
