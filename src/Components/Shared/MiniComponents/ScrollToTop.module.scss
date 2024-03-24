@@ -1,17 +1,19 @@
 .scrollTopButton {
-  outline: none;
-  border: none;
   position: fixed;
-  z-index: 5;
-  right: 30px;
-  bottom: 50px;
+  bottom: 20px;
+  right: 20px;
+  background: #ff6e61;
+  font-size: 20px;
+  padding: 10px;
+  border: 4px solid var(--white);
   border-radius: 50%;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity .2s ease-in-out;
+  z-index: 2;
+  padding: 15px;
+  border-width: 6px;
+  bottom: 30px;
+  right: 30px;
+  pointer-events: all;
+  transition: opacity .25s ease;
 
   &.hide {
     opacity: 0;
@@ -22,4 +24,5 @@
 .scrollTopButton>svg {
   width: 20px;
   height: 20px;
+  fill: var(--white);
 }
