@@ -37,7 +37,7 @@ export const manifestForPlugin = {
     background_color: "#181818",
     display: "standalone",
     scope: "/",
-    start_url: "https://e-commercew.netlify.app/",
+    start_url: "https://main--e-commercew.netlify.app/",
     orientation: "portrait",
   },
 };
