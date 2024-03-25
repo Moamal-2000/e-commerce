@@ -207,3 +207,38 @@ export const LANGUAGES = [
     flag: saudiFlag,
   },
 ];
+
+export const categoryProductsCustomizations = {
+  showDiscount: true,
+  showFavIcon: true,
+  showDetailsIcon: true,
+  showNewText: true,
+  showWishList: true,
+};
+
+export const allProductsCustomizations = {
+  showDiscount: true,
+  showFavIcon: true,
+  showDetailsIcon: true,
+  showNewText: true,
+  showWishList: true,
+};
+
+export const wishListProductsCustomization = {
+  showDiscount: true,
+  showFavIcon: false,
+  stopHover: true,
+  showDetailsIcon: false,
+  showRemoveIcon: true,
+};
+
+export const ourProductsCustomizations = {
+  showDiscount: true,
+  showFavIcon: true,
+  stopHover: false,
+  showDetailsIcon: true,
+  showRemoveIcon: false,
+  showNewText: true,
+  showWishList: true,
+  showColors: true,
+};

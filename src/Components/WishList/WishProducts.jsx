@@ -1,16 +1,10 @@
 import { useSelector } from "react-redux";
+import { wishListProductsCustomization } from "../../Data/staticData";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
 import s from "./WishProducts.module.scss";
 
 const WishProducts = () => {
   const { wishList } = useSelector((state) => state.products);
-  const customizationCard = {
-    stopHover: true,
-    showDiscount: true,
-    showFavIcon: false,
-    showDetailsIcon: false,
-    showRemoveIcon: true,
-  };
 
   return (
     <div className={s.wishProducts}>
@@ -18,7 +12,7 @@ const WishProducts = () => {
         <ProductCard
           key={product.id}
           product={product}
-          customization={customizationCard}
+          customization={wishListProductsCustomization}
         />
       ))}
     </div>

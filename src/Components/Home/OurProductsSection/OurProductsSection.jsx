@@ -1,19 +1,9 @@
+import { ourProductsCustomizations } from "../../../Data/staticData";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import ExploreProducts from "../ProductPoster/ExploreProducts";
 import s from "./OurProductsSection.module.scss";
 
 const OurProductsSection = () => {
-  const productsCustomizations = {
-    stopHover: false,
-    showDiscount: true,
-    showFavIcon: true,
-    showDetailsIcon: true,
-    showRemoveIcon: false,
-    showNewText: true,
-    showWishList: true,
-    showColors: true,
-  };
-
   return (
     <section className={s.ourProductsSection}>
       <div className={s.wrapper}>
@@ -25,7 +15,7 @@ const OurProductsSection = () => {
 
       <ExploreProducts
         numOfProducts={7}
-        customization={productsCustomizations}
+        customization={ourProductsCustomizations}
       />
 
       <button type="button" className={s.viewProductsBtn}>

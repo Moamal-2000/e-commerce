@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { categoryProductsCustomizations } from "../../Data/staticData";
 import { capitalize } from "../../Functions/helper";
 import useGetSearchParam from "../../Hooks/Helper/useGetSearchParam";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
@@ -8,12 +9,6 @@ import s from "./ProductsCategoryPage.module.scss";
 
 const ProductsCategoryPage = () => {
   const categoryType = useGetSearchParam("type");
-  const productsCustomizations = {
-    showDiscount: true,
-    showFavIcon: true,
-    showDetailsIcon: true,
-    showNewText: true,
-  };
 
   return (
     <>
@@ -28,7 +23,7 @@ const ProductsCategoryPage = () => {
           <section className={s.categoryContent}>
             <ProductsCategory
               categoryName={categoryType}
-              customization={productsCustomizations}
+              customization={categoryProductsCustomizations}
             />
           </section>
 
