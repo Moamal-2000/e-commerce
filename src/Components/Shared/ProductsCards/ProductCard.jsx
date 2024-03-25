@@ -172,9 +172,11 @@ const ProductCard = ({
           <span className={s.numOfVotes}>({votes})</span>
         </div>
 
-        <div className={s.colors}>
-          <ProductColors colors={colors} />
-        </div>
+        {showColors && (
+          <div className={s.colors}>
+            <ProductColors colors={colors} />
+          </div>
+        )}
       </section>
     </div>
   );

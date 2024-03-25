@@ -4,10 +4,14 @@ import s from "./OurProductsSection.module.scss";
 
 const OurProductsSection = () => {
   const productsCustomizations = {
-    showDiscount: false,
+    stopHover: false,
+    showDiscount: true,
     showFavIcon: true,
     showDetailsIcon: true,
+    showRemoveIcon: false,
     showNewText: true,
+    showWishList: true,
+    showColors: true,
   };
 
   return (
