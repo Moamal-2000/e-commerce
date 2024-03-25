@@ -17,6 +17,26 @@
 
 .welcomeMessage>a {
   color: var(--dark-tomato);
+  position: relative;
+
+  &:hover {
+    color: var(--tomato);
+  }
+}
+
+.welcomeMessage>a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 1px;
+  background-color: var(--tomato);
+  transition: width .3s;
+}
+
+.welcomeMessage>a:hover::before {
+  width: 100%;
 }
 
 .accountPageContent {

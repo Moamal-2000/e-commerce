@@ -65,6 +65,12 @@
   border: solid 2px var(--very-light-gray2);
   border-radius: 4px;
   padding: 13px 16px;
+  transition: border-color .2s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--medium-light-gray);
+  }
 
   &[class=invalid] {
     background-color: #ffdada;
@@ -97,6 +103,10 @@
   padding: 4px;
   margin-right: 16px;
   color: var(--black);
+
+  &:hover {
+    color: var(--dark-tomato);
+  }
 }
 
 @include small {
@@ -114,6 +124,11 @@
   color: var(--white);
   font-weight: 500;
   font-size: 1rem;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: var(--tomato);
+  }
 }
 
 @include medium {

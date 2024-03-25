@@ -69,7 +69,15 @@
 .section>ul>li>a {
   color: var(--dark-gray);
 
+  &:hover {
+    color: var(--dark-tomato);
+  }
+
   &[class=active] {
     color: var(--dark-tomato);
+
+    &:hover {
+      color: var(--tomato);
+    }
   }
 }
