@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { addToArray, removeById } from "../../../Features/productsSlice";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
 import RateStars from "../MidComponents/RateStars";
+import ProductColors from "../MiniComponents/ProductColors";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";
@@ -17,6 +18,7 @@ const ProductCard = ({
     showRemoveIcon: false,
     showNewText: false,
     showWishList: true,
+    showColors: false,
   },
 }) => {
   const {
@@ -29,6 +31,7 @@ const ProductCard = ({
     votes,
     id,
     addedDate,
+    colors,
   } = product;
   const {
     stopHover,
@@ -38,6 +41,7 @@ const ProductCard = ({
     showRemoveIcon,
     showNewText,
     showWishList,
+    showColors,
   } = customization;
   const noHoverClass = stopHover ? s.noHover : "";
   const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
@@ -94,7 +98,11 @@ const ProductCard = ({
 
           <div className={s.icons}>
             {showFavIcon && isSignIn && (
-              <a href="#" className={`${s.iconHolder} ${s.favIcon}`} aria-label="Favorite">
+              <a
+                href="#"
+                className={`${s.iconHolder} ${s.favIcon}`}
+                aria-label="Favorite"
+              >
                 <SvgIcon name="heart" />
                 <ToolTip top="18px" left="-44px" content="Favorite" />
               </a>
@@ -162,6 +170,10 @@ const ProductCard = ({
           <RateStars rate={rate} />
 
           <span className={s.numOfVotes}>({votes})</span>
+        </div>
+
+        <div className={s.colors}>
+          <ProductColors colors={colors} />
         </div>
       </section>
     </div>

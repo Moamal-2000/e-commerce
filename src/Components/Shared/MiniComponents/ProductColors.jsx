@@ -1,22 +1,8 @@
 import { useState } from "react";
 import s from "./ProductColors.module.scss";
-import ToolTip from "../../Shared/MiniComponents/ToolTip";
+import ToolTip from "./ToolTip";
 
-const ProductColors = ({ data: { colors } }) => {
-  const hasColors = colors?.length > 0 && colors;
-
-  if (!hasColors) return null;
-
-  return (
-    <section className={s.colors}>
-      <span>Colors:</span>
-      <Colors colors={colors} />
-    </section>
-  );
-};
-export default ProductColors;
-
-const Colors = ({ colors }) => {
+const ProductColors = ({ colors, showToolTip = false }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);
 
   function choiceProductColor(e, i) {
@@ -34,8 +20,12 @@ const Colors = ({ colors }) => {
         onClick={(e) => choiceProductColor(e, i)}
         aria-label={name + " color"}
       >
-        <ToolTip left="50%" top="40px" content={name + " color"} />
+        {showToolTip && (
+          <ToolTip left="50%" top="40px" content={name + " color"} />
+        )}
       </div>
     );
   });
 };
+
+export default ProductColors;

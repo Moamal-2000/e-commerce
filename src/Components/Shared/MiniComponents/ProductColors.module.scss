@@ -1,0 +1,14 @@
+@import "../../../Styles/mixins.scss";
+
+.color {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+
+  &.active {
+    border: solid 3px var(--white);
+    outline: solid 2px var(--black);
+  }
+}

@@ -20,7 +20,7 @@ const OurProductsSection = () => {
       </div>
 
       <ExploreProducts
-        numOfProducts={8}
+        numOfProducts={7}
         customization={productsCustomizations}
       />
 

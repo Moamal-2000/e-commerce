@@ -205,3 +205,13 @@
   font-size: .875rem;
   color: var(--primary);
 }
+
+.productInfo .colors {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 15px;
+  margin-top: 10px;
+  margin-left: 3px;
+}
+

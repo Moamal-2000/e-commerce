@@ -2,11 +2,8 @@ import { productsData } from "../../../Data/productsData";
 import ProductCard from "../../Shared/ProductsCards/ProductCard";
 import s from "./ExploreProducts.module.scss";
 
-const ExploreProducts = ({ numOfProducts, customization }) => {
-  const PRODUCTS_SHOULD_START_FROM = 3;
-  const filteredProducts = productsData.filter(
-    (_, i) => i > PRODUCTS_SHOULD_START_FROM
-  );
+const ExploreProducts = ({ numOfProducts = -1, customization }) => {
+  const filteredProducts = productsData.filter((_, i) => i > numOfProducts);
 
   return (
     <div className={s.products}>

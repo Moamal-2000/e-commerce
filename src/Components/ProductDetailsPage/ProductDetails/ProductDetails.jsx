@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { useSelector } from "react-redux";
 import ProductPreview from "../ProductPreviw/ProductPreview";
-import ProductColors from "./ProductColors";
 import ProductDealingControls from "./ProductDealingControls";
 import s from "./ProductDetails.module.scss";
 import ProductFeatures from "./ProductFeatures";
 import ProductFirstInfos from "./ProductFirstInfos";
 import ProductSizes from "./ProductSizes";
+import ProductColorsSection from "./ProductColorsSection";
 
 const ProductDetails = ({ data }) => {
   const { previewImg, isZoomInPreviewActive } = useSelector(
@@ -38,7 +38,7 @@ const ProductDetails = ({ data }) => {
 
         <div className={s.horizontalLine} />
 
-        <ProductColors data={data} />
+        <ProductColorsSection data={data} />
         <ProductSizes data={data} />
         <ProductDealingControls />
         <ProductFeatures />

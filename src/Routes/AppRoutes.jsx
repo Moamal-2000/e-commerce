@@ -5,18 +5,19 @@ import {
   createRoutesFromChildren,
 } from "react-router-dom";
 import About from "../Components/About/About";
+import AccountPage from "../Components/AccountPage/AccountPage";
 import Cart from "../Components/Cart/Cart";
+import CheckoutPage from "../Components/CheckoutPage/CheckoutPage";
 import Contact from "../Components/Contact/Contact";
 import Home from "../Components/Home/Home";
 import LogIn from "../Components/LogIn/LogIn";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsPage";
+import ProductsCategoryPage from "../Components/ProductsCategory/ProductsCategoryPage";
+import ProductsPage from "../Components/ProductsPage/ProductsPage";
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 import RoutesLayout from "./RoutesLayout";
-import AccountPage from "../Components/AccountPage/AccountPage";
-import CheckoutPage from "../Components/CheckoutPage/CheckoutPage";
-import ProductsCategoryPage from "../Components/ProductsCategory/ProductsCategoryPage";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
@@ -33,6 +34,7 @@ const AppRoutes = () => {
       <Route path="/profile" element={<AccountPage />} />
       <Route path="/checkout" element={<CheckoutPage />} />
       <Route path="/category" element={<ProductsCategoryPage />} />
+      <Route path="/products" element={<ProductsPage />} />
     </Route>
   );
 
