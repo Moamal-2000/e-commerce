@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ourProductsCustomizations } from "../../../Data/staticData";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import ExploreProducts from "../ProductPoster/ExploreProducts";
@@ -18,9 +19,9 @@ const OurProductsSection = () => {
         customization={ourProductsCustomizations}
       />
 
-      <button type="button" className={s.viewProductsBtn}>
+      <Link to="/products" className={s.viewProductsBtn}>
         View All Products
-      </button>
+      </Link>
     </section>
   );
 };

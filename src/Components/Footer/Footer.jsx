@@ -68,7 +68,7 @@ const Footer = () => {
                 <Link to="/wishlist">Wishlist</Link>
               </li>
               <li>
-                <Link to="/">Shop</Link>
+                <Link to="/products">Shop</Link>
               </li>
             </ul>
           </section>

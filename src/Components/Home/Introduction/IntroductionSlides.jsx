@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { SwiperSlide } from "swiper/react";
 import { introductionSliderData } from "../../../Data/staticData";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
@@ -16,10 +17,10 @@ const IntroductionSlides = () => {
 
             <h2 className={s.discount}>{discountText}</h2>
 
-            <a href="\#" className={s.shopNow}>
+            <Link to="/products" className={s.shopNow}>
               <span>Shop Now</span>
               <SvgIcon name="arrowRightLong" />
-            </a>
+            </Link>
           </div>
         </SwiperSlide>
       );

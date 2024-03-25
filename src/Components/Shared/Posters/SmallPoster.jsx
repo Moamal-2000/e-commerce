@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import s from "./SmallPoster.module.scss";
 
 const SmallPoster = ({ title, description, posterUrl }) => {
@@ -7,9 +8,9 @@ const SmallPoster = ({ title, description, posterUrl }) => {
       <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>
-        <a href="\#" className={s.shopNow}>
+        <Link to="/products" className={s.shopNow}>
           Shop Now
-        </a>
+        </Link>
       </div>
     </div>
   );

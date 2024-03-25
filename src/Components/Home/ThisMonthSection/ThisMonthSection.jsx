@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { productsData } from "../../../Data/productsData";
 import ProductsSlider from "../../Shared/MidComponents/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
@@ -20,9 +21,9 @@ const ThisMonthSection = () => {
           sectionName="Best Selling Products"
         />
 
-        <button type="button" className={s.viewAllBtn}>
+        <Link to="/products" className={s.viewAllBtn}>
           View All
-        </button>
+        </Link>
       </div>
 
       <ProductsSlider filterFun={filterThisMonthProducts} />

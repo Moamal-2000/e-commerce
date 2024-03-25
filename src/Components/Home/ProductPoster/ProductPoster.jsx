@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { stereo } from "../../../Assets/Images/Images";
 import PostCounter from "./PostCounter";
 import s from "./ProductPoster.module.scss";
@@ -9,7 +10,7 @@ const ProductPoster = () => {
         <span>Categories</span>
         <p>Enhance Your Music Experience</p>
         <PostCounter />
-        <button type="button">Buy Now!</button>
+        <Link to="/products">Buy Now!</Link>
       </div>
 
       <div className={s.productHolder}>

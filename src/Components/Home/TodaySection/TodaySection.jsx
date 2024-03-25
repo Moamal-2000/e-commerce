@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { productsData } from "../../../Data/productsData";
 import ProductsSlider from "../../Shared/MidComponents/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
@@ -17,9 +18,9 @@ const TodaySection = () => {
 
       <ProductsSlider filterFun={filterFlashSalesProducts} />
 
-      <button type="button" className={s.viewProductsBtn}>
+      <Link to="/products" className={s.viewProductsBtn}>
         View All Products
-      </button>
+      </Link>
     </section>
   );
 };

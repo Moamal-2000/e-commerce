@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import ForYouProducts from "./ForYouProducts";
 import s from "./WishList.module.scss";
@@ -31,7 +32,7 @@ const WishList = () => {
             <header>
               <SectionTitle eventName="Just For You" type={2} />
 
-              <button type="button">See All</button>
+              <Link to="/products">See All</Link>
             </header>
 
             <ForYouProducts />

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import s from "./HorizontalPoster.module.scss";
 
 const HorizontalPoster = ({ title, description, posterUrl }) => {
@@ -13,9 +14,9 @@ const HorizontalPoster = ({ title, description, posterUrl }) => {
       <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>
-        <a href="\#" className={s.shopNow}>
+        <Link to="/products" className={s.shopNow}>
           Shop Now
-        </a>
+        </Link>
       </div>
     </div>
   );

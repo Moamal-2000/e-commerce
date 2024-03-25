@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import s from "./FirstHeader.module.scss";
 import LanguageSelector from "./LanguageSelector";
 
@@ -10,7 +11,7 @@ const FirstHeader = () => {
         <div className={s.headerContent}>
           <p className={s.discount}>
             Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
-            <a href="/#">ShopNow</a>
+            <Link to="/products">ShopNow</Link>
           </p>
 
           <LanguageSelector />

@@ -54,17 +54,18 @@
   }
 }
 
-.forYou>header>button {
+.forYou>header>a {
   background-color: transparent;
   outline: none;
   padding: 16px 48px;
   border-radius: 4px;
   border: 1px solid #00000080;
   font-weight: 500;
+  color: var(--black);
 }
 
 @include small {
-  .forYou>header>button {
+  .forYou>header>a {
     padding: 12px 30px;
     font-size: .9rem;
   }
