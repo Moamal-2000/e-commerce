@@ -3,6 +3,10 @@ import s from "./ProductColors.module.scss";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 
 const ProductColors = ({ data: { colors } }) => {
+  const hasColors = colors?.length > 0 && colors;
+
+  if (!hasColors) return null;
+
   return (
     <section className={s.colors}>
       <span>Colors:</span>
@@ -14,13 +18,10 @@ export default ProductColors;
 
 const Colors = ({ colors }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);
-  const hasColors = colors?.length > 1 && colors;
 
   function choiceProductColor(e, i) {
     setActiveColorIndex(i);
   }
-
-  if (!hasColors) return null;
 
   return colors.map(({ color, name }, i) => {
     const firstItemActiveClass = i === activeColorIndex ? s.active : "";

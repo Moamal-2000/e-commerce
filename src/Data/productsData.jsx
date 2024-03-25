@@ -397,7 +397,7 @@ export const productsData = [
     colors: [
       {
         name: "black",
-        color: "var(--black)201",
+        color: "#000201",
       },
     ],
     rate: 4,
@@ -454,7 +454,7 @@ export const productsData = [
     colors: [
       {
         name: "dark blue",
-        color: "var(--black)a2d",
+        color: "#000a2d",
       },
       {
         name: "white",
@@ -488,7 +488,7 @@ export const productsData = [
       },
       {
         name: "black",
-        color: "var(--black)201",
+        color: "#000201",
       },
       {
         name: "white",
