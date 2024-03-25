@@ -14,7 +14,7 @@ const CategoryCard = ({ categoryData }) => {
   return (
     <Link
       className={s.card}
-      title={title + "category"}
+      title={title + " category"}
       onClick={() => navigateToCategory(categoryType)}
     >
       <SvgIcon name={iconName} />
