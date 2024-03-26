@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ProductDealingControls.module.scss";
 
 const ProductDealingControls = () => {
+  const { isSignIn } = useSelector((state) => state.user);
+  const navigateTo = useNavigate();
   const [quantity, setQuantity] = useState(1);
 
   function increaseQuantity() {
@@ -12,6 +16,10 @@ const ProductDealingControls = () => {
 
   function decreaseQuantity() {
     setQuantity((prevNumber) => +prevNumber - 1);
+  }
+
+  function handleBuyProduct() {
+    if (!isSignIn) navigateTo("/signup");
   }
 
   return (
@@ -35,7 +43,7 @@ const ProductDealingControls = () => {
         </button>
       </div>
 
-      <button type="button" className={s.buyButton}>
+      <button type="button" className={s.buyButton} onClick={handleBuyProduct}>
         Buy Now
       </button>
 

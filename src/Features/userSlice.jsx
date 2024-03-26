@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   loginInfo: {
-    username: "Lily Watson",
-    emailOrPhone: "lily.wastons@gmail.com",
-    password: "random-password1234",
+    username: "",
+    emailOrPhone: "",
+    password: "",
   },
-  isSignIn: true,
+  isSignIn: false,
   usersData: [
     {
       username: "Lily Watson",
