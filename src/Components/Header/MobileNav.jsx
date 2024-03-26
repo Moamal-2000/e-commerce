@@ -27,12 +27,14 @@ const MobileNav = () => {
 
       <nav className={s.navLinks}>
         <ul>
-          <li>
-            <NavLink to="/profile">
-              <SvgIcon name="user" />
-              <span>Profile</span>
-            </NavLink>
-          </li>
+          {isSignIn && (
+            <li>
+              <NavLink to="/profile">
+                <SvgIcon name="user" />
+                <span>Profile</span>
+              </NavLink>
+            </li>
+          )}
           <li>
             <NavLink to="/">
               <SvgIcon name="home" />
@@ -45,24 +47,28 @@ const MobileNav = () => {
               <span>About</span>
             </NavLink>
           </li>
-          <li>
-            <NavLink to="/cart">
-              <SvgIcon name="bag" />
-              <span>My Cart</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/favorite">
-              <SvgIcon name="heart" />
-              <span>Favorite</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/wishlist">
-              <SvgIcon name="save" />
-              <span>Wishlist</span>
-            </NavLink>
-          </li>
+          {isSignIn && (
+            <>
+              <li>
+                <NavLink to="/cart">
+                  <SvgIcon name="bag" />
+                  <span>My Cart</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/favorite">
+                  <SvgIcon name="heart" />
+                  <span>Favorite</span>
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/wishlist">
+                  <SvgIcon name="save" />
+                  <span>Wishlist</span>
+                </NavLink>
+              </li>
+            </>
+          )}
           <li>
             <NavLink to="/notifications">
               <SvgIcon name="bell" />

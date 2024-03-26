@@ -39,7 +39,7 @@ const SignUpForm = () => {
       const uniqueUsersData = uniqueArr([...usersData, formData]);
       dispatch(newSignUp(uniqueUsersData));
       dispatch(setLoginData(formData));
-      navigateTo("/");
+      navigateTo("/", { replace: true });
     }
   }
 

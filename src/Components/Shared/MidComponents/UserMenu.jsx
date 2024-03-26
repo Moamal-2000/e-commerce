@@ -1,11 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useSignOut from "../../../Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./UserMenu.module.scss";
 
 const UserMenu = ({ isActive, toggler }) => {
   const activeClass = isActive ? s.active : "";
-  const handleSignOut = useSignOut();
+  const navigateTo = useNavigate();
+  const signOut = useSignOut();
+
+  function handleSignOut() {
+    signOut();
+    navigateTo("/", { replace: true });
+  }
 
   return (
     <div className={`${s.userMenu} ${activeClass}`}>

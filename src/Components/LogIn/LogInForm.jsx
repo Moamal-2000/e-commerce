@@ -33,7 +33,7 @@ const LogInForm = () => {
     if (isCorrectLoginData) {
       const uniqueUsersData = uniqueArr(usersData);
       dispatch(newSignUp(uniqueUsersData));
-      navigateTo("/");
+      navigateTo("/", { replace: true });
     }
   }
 
