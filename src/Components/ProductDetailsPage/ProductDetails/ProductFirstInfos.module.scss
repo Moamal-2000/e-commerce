@@ -13,6 +13,12 @@
   margin: 10px 0;
 }
 
+@include very-small {
+  .rateAndReviews {
+    flex-direction: column;
+  }
+}
+
 /* [Stars] */
 .rateAndReviews>* {
   gap: 6px;
@@ -26,6 +32,12 @@
 .verticalLine {
   height: 16px;
   border-right: solid 2px var(--dark-gray);
+}
+
+@include very-small {
+  .verticalLine {
+    display: none;
+  }
 }
 
 .greenText {

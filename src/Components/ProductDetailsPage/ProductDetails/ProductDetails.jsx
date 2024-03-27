@@ -1,12 +1,12 @@
 import { useRef } from "react";
 import { useSelector } from "react-redux";
 import ProductPreview from "../ProductPreviw/ProductPreview";
+import ProductColorsSection from "./ProductColorsSection";
 import ProductDealingControls from "./ProductDealingControls";
 import s from "./ProductDetails.module.scss";
 import ProductFeatures from "./ProductFeatures";
 import ProductFirstInfos from "./ProductFirstInfos";
 import ProductSizes from "./ProductSizes";
-import ProductColorsSection from "./ProductColorsSection";
 
 const ProductDetails = ({ data }) => {
   const { previewImg, isZoomInPreviewActive } = useSelector(

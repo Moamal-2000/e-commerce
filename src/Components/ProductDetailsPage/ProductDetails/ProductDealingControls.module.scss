@@ -6,6 +6,12 @@
   margin: 18px 0 54px;
 }
 
+@media (max-width: 480px) {
+  .dealing {
+    flex-direction: column;
+  }
+}
+
 .customNumberInput {
   display: flex;
   align-items: center;
@@ -66,6 +72,12 @@
   &::-webkit-outer-spin-button {
     display: none;
   }
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .buyButton {

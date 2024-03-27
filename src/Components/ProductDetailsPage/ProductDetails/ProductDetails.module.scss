@@ -9,6 +9,7 @@
 
 @include large {
   .detailsSection {
+    height: auto;
     flex-direction: column;
     align-items: center;
   }
@@ -89,5 +90,6 @@
 @include large {
   .horizontalLine {
     max-width: 100%;
+    min-width: auto;
   }
 }

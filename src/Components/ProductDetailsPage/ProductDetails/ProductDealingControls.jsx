@@ -43,14 +43,24 @@ const ProductDealingControls = () => {
         </button>
       </div>
 
-      <button type="button" className={s.buyButton} onClick={handleBuyProduct}>
-        Buy Now
-      </button>
+      <div className={s.wrapper}>
+        <button
+          type="button"
+          className={s.buyButton}
+          onClick={handleBuyProduct}
+        >
+          Buy Now
+        </button>
 
-      <button type="button" className={s.addToFav} aria-label="Add to favorite">
-        <SvgIcon name="heart" />
-        <ToolTip left="50%" top="60px" content="Add to favorite" />
-      </button>
+        <button
+          type="button"
+          className={s.addToFav}
+          aria-label="Add to favorite"
+        >
+          <SvgIcon name="heart" />
+          <ToolTip left="50%" top="60px" content="Add to favorite" />
+        </button>
+      </div>
     </section>
   );
 };
