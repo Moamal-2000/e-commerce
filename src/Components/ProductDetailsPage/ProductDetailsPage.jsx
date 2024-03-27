@@ -16,14 +16,14 @@ const ProductDetailsPage = () => {
   )?.[0];
   const { name, category, shortName } = PRODUCT_DATA;
   const history = ["Account", capitalize(category), name.toUpperCase()];
-  const paramsHistory = [
+  const historyPaths = [
     {
       index: 0,
-      link: "profile",
+      link: "/profile",
     },
     {
       index: 1,
-      link: `category/?type=${category}`,
+      link: `/category/?type=${category}`,
     },
   ];
 
@@ -35,7 +35,7 @@ const ProductDetailsPage = () => {
 
       <div className="container">
         <main className={s.detailsPage} id="details-page">
-          <PagesHistory history={history} paramsHistory={paramsHistory} />
+          <PagesHistory history={history} historyPaths={historyPaths} />
           <ProductDetails data={PRODUCT_DATA} />
           <RelatedItemsSection
             productType={category}

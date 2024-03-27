@@ -1,25 +1,30 @@
 import { useNavigate } from "react-router-dom";
 import s from "./PagesHistory.module.scss";
 
-const PagesHistory = ({ history, paramsHistory }) => {
+const PagesHistory = ({ history, historyPaths }) => {
   const previousPages = history.slice(0, history.length - 1);
   const currentPage = history[history.length - 1];
   const navigateTo = useNavigate();
 
-  function navigateToPage(pageindex) {
-    if (paramsHistory?.length > 0) navigateTo("/");
-    navigateTo(`${history[pageindex].toLowerCase()}`);
+  function navigateToPage(pageIndex) {
+    const clickedParam = historyPaths?.[pageIndex];
+
+    if (clickedParam) {
+      navigateTo(clickedParam.link);
+      return;
+    }
+
+    navigateTo(`${history[pageIndex].toLowerCase()}`);
   }
 
   return (
     <div className={s.pageHistory}>
       {previousPages.map((page, i) => {
-        paramsHistory?.forEach((param) => (history[param.index] = param.link));
-
+        const pageName = page === "/" ? "Home" : page;
         return (
           <div className={s.page} key={i}>
             <a href="#" onClick={() => navigateToPage(i)}>
-              {page === "/" ? "Home" : page}
+              {pageName}
             </a>
             <span>/</span>
           </div>
