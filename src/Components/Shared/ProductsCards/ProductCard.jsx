@@ -7,6 +7,7 @@ import ProductColors from "../MiniComponents/ProductColors";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";
+import AddToCartButton from "./ProductCardComponents/AddToCartButton";
 
 const ProductCard = ({
   product,
@@ -63,14 +64,6 @@ const ProductCard = ({
 
   function navigateToProductDetails() {
     navigateTo(`/details/?product=${name.toLowerCase()}`);
-  }
-
-  function addProductToCart() {
-    const isProductAlreadyExist = cartProducts.includes(product);
-    if (!isSignIn) navigateTo("/signup");
-    if (isProductAlreadyExist) return;
-
-    dispatch(addToArray({ key: "cartProducts", value: product }));
   }
 
   function addProductToWishList() {
@@ -150,15 +143,8 @@ const ProductCard = ({
               </button>
             )}
           </div>
-          <button
-            type="button"
-            className={s.addToCartBtn}
-            onClick={addProductToCart}
-            aria-label="Add to cart"
-          >
-            <SvgIcon name="cart3" />
-            <span>Add to cart</span>
-          </button>
+
+          <AddToCartButton hoverDataAttribute={true} product={product} />
         </div>
       </div>
 
