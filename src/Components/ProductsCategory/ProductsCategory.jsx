@@ -1,13 +1,16 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { productsData } from "../../Data/productsData";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
 import s from "./ProductsCategory.module.scss";
+import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 
 const ProductsCategory = ({ categoryName, customization }) => {
   const categoryProducts = productsData.filter(
     (product) => product.category === categoryName
   );
-  const hasNoProducts = categoryProducts.length === 0
+  const hasNoProducts = categoryProducts.length === 0;
+  useScrollOnMount(200)
 
   if (hasNoProducts)
     return (

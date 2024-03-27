@@ -18,7 +18,9 @@ const Footer = () => {
       <div className="container">
         <div className={s.sections}>
           <section className={s.section1}>
-            <b>Exclusive</b>
+            <b>
+              <Link to="/">Exclusive</Link>
+            </b>
             <span>Subscribe</span>
             <p>Get 10% off your first order</p>
 
@@ -56,7 +58,7 @@ const Footer = () => {
 
             <ul>
               <li>
-                <Link to="/account">My Account</Link>
+                <Link to="/profile">My Account</Link>
               </li>
               <li>
                 <Link to="/signup">Login / Register</Link>
@@ -78,13 +80,13 @@ const Footer = () => {
 
             <ul>
               <li>
-                <Link to="/">Privacy Policy</Link>
+                <Link to="/privacy">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/">Terms Of Use</Link>
+                <Link to="/terms">Terms Of Use</Link>
               </li>
               <li>
-                <Link to="/">FAQ</Link>
+                <Link to="/faq">FAQ</Link>
               </li>
               <li>
                 <Link to="/contact">Contact</Link>

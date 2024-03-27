@@ -121,4 +121,4 @@ export function getSpecificRepo(repos, id) {
   return repos?.find((repo) => repo.id === id);
 }
 
-export const scrollToTop = () => window.scrollTo({ top: 0 });
+export const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });

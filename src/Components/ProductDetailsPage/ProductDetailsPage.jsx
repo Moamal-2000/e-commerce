@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { productsData } from "../../Data/productsData";
 import { capitalize } from "../../Functions/helper";
+import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 import useGetSearchParam from "../../Hooks/Helper/useGetSearchParam";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import ProductDetails from "./ProductDetails/ProductDetails";
@@ -8,6 +9,7 @@ import s from "./ProductDetailsPage.module.scss";
 import RelatedItemsSection from "./RelatedItemsSection/RelatedItemsSection";
 
 const ProductDetailsPage = () => {
+  useScrollOnMount(200);
   const PRODUCT_NAME = useGetSearchParam("product");
   const PRODUCT_DATA = productsData.filter(
     (product) => product.name.toLowerCase() === PRODUCT_NAME

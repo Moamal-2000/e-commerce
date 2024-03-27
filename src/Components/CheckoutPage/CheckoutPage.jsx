@@ -4,8 +4,10 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import BillingDetails from "./BillingDetails/BillingDetails";
 import s from "./CheckoutPage.module.scss";
 import PaymentSection from "./PaymentSection/PaymentSection";
+import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 
 const CheckoutPage = () => {
+  useScrollOnMount(160)
   const { values, handleChange } = useFormData({
     initialValues: {
       firstName: "",
