@@ -57,12 +57,17 @@ const ProductCard = ({
       : "";
   }
 
+  function addProductToFavorite() {
+    if (!isSignIn) navigateTo("/signup");
+  }
+
   function navigateToProductDetails() {
     navigateTo(`/details/?product=${name.toLowerCase()}`);
   }
 
   function addProductToCart() {
     const isProductAlreadyExist = cartProducts.includes(product);
+    if (!isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) return;
 
     dispatch(addToArray({ key: "cartProducts", value: product }));
@@ -70,6 +75,7 @@ const ProductCard = ({
 
   function addProductToWishList() {
     const isProductAlreadyExist = wishList.includes(product);
+    if (!isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) return;
 
     dispatch(addToArray({ key: "wishList", value: product }));
@@ -97,10 +103,11 @@ const ProductCard = ({
           <div className={`${s.new} ${hideNewClass}`}>New</div>
 
           <div className={s.icons}>
-            {showFavIcon && isSignIn && (
+            {showFavIcon && (
               <a
                 href="#"
                 className={`${s.iconHolder} ${s.favIcon}`}
+                onClick={addProductToFavorite}
                 aria-label="Favorite"
               >
                 <SvgIcon name="heart" />
@@ -131,7 +138,7 @@ const ProductCard = ({
               </button>
             )}
 
-            {showWishList && isSignIn && (
+            {showWishList && (
               <button
                 type="button"
                 className={`${s.iconHolder} ${s.wishListIcon}`}
@@ -143,17 +150,15 @@ const ProductCard = ({
               </button>
             )}
           </div>
-          {isSignIn && (
-            <button
-              type="button"
-              className={s.addToCartBtn}
-              onClick={addProductToCart}
-              aria-label="Add to cart"
-            >
-              <SvgIcon name="cart3" />
-              <span>Add to cart</span>
-            </button>
-          )}
+          <button
+            type="button"
+            className={s.addToCartBtn}
+            onClick={addProductToCart}
+            aria-label="Add to cart"
+          >
+            <SvgIcon name="cart3" />
+            <span>Add to cart</span>
+          </button>
         </div>
       </div>
 
