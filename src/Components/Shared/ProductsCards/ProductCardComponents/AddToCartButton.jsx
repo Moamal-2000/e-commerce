@@ -24,7 +24,7 @@ const AddToCartButton = ({ product }) => {
       className={`${s.addToCartBtn} ${s.addToCartButton}`}
       onClick={addProductToCart}
       aria-label="Add to cart"
-      data-addToCartButton
+      data-add-to-cart-button
     >
       <SvgIcon name="cart3" />
       <span>Add to cart</span>

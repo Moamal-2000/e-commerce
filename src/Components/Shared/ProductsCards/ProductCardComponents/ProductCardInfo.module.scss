@@ -1,0 +1,51 @@
+@import "../../../../Styles/mixins.scss";
+
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.productInfo .productName a {
+  font-weight: 500;
+  color: var(--black);
+  transition: color .2s;
+
+  &:hover {
+    color: var(--brown);
+  }
+}
+
+.productInfo .price {
+  color: var(--dark-tomato);
+  font-weight: 500;
+}
+
+.productInfo .price .afterDiscount {
+  margin-left: 16px;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.productInfo .rateContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+.productInfo .rateContainer .numOfVotes {
+  font-weight: 600;
+  font-size: .875rem;
+  color: var(--primary);
+}
+
+.productInfo .colors {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 15px;
+  margin-top: 10px;
+  margin-left: 3px;
+}

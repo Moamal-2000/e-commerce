@@ -2,12 +2,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { addToArray, removeById } from "../../../Features/productsSlice";
 import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
-import RateStars from "../MidComponents/RateStars";
-import ProductColors from "../MiniComponents/ProductColors";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";
 import AddToCartButton from "./ProductCardComponents/AddToCartButton";
+import ProductCardInfo from "./ProductCardComponents/ProductCardInfo";
 
 const ProductCard = ({
   product,
@@ -49,7 +48,7 @@ const ProductCard = ({
   const hideNewClass = shouldHideNewWord();
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
-  const { cartProducts, wishList } = useSelector((state) => state.products);
+  const { wishList } = useSelector((state) => state.products);
   const { isSignIn } = useSelector((state) => state.user);
 
   function shouldHideNewWord() {
@@ -148,27 +147,11 @@ const ProductCard = ({
         </div>
       </div>
 
-      <section className={s.productInfo}>
-        <strong className={s.productName}>
-          <Link onClick={navigateToProductDetails}>{name}</Link>
-        </strong>
-        <div className={s.price}>
-          ${afterDiscount}
-          {discount > 0 && <del className={s.afterDiscount}>${price}</del>}
-        </div>
-
-        <div className={s.rateContainer}>
-          <RateStars rate={rate} />
-
-          <span className={s.numOfVotes}>({votes})</span>
-        </div>
-
-        {showColors && (
-          <div className={s.colors}>
-            <ProductColors colors={colors} />
-          </div>
-        )}
-      </section>
+      <ProductCardInfo
+        product={product}
+        showColors={showColors}
+        navigateToProductDetails={navigateToProductDetails}
+      />
     </div>
   );
 };
