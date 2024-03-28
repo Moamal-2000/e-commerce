@@ -21,6 +21,23 @@
 <body>
   <div id="root"></div>
   <script type="module" src="src/main.jsx"></script>
+
+  <script>
+    async function register() {
+      if ("serviceWorker" in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.register(
+            "./public/sw.js"
+          );
+
+          console.log("registered", registration);
+        } catch (e) {
+          console.log("failed to register", e);
+        }
+      }
+    }
+    register()
+  </script>
 </body>
 
 </html>
