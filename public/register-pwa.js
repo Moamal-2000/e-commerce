@@ -2,7 +2,7 @@ export async function register() {
   if ("serviceWorker" in navigator) {
     try {
       const registration = await navigator.serviceWorker.register(
-        "../public/sw.js"
+        "./sw.js"
       );
 
       console.log("registered", registration.scope);
