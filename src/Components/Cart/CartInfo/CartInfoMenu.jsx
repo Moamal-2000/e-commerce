@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import s from "./CartInfoMenu.module.scss";
 
 const CartInfoMenu = () => {
@@ -25,7 +26,7 @@ const CartInfoMenu = () => {
         </div>
       </div>
 
-      <button type="button">Process to checkout</button>
+      <Link to="/checkout">Process to checkout</Link>
     </div>
   );
 };

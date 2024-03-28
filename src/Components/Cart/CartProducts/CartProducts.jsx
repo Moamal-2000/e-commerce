@@ -6,6 +6,12 @@ const CartProducts = () => {
   const { cartProducts } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
+  /*
+  ToDo Add controlled inputs to calculate total price 
+  ?    save total in  products slice
+  ?    clear total when if any input's value changes
+  */
+
   return (
     <table className={s.cartProducts}>
       <thead>

@@ -32,11 +32,10 @@
         "type": "image/png"
       }
     ],
-    "theme_color": "#181818",
-    "background_color": "#181818",
+    "start_url": ".",
+    "orientation": "portrait",
     "display": "standalone",
-    "scope": "/",
-    "start_url": "https://main--e-commercew.netlify.app/",
-    "orientation": "portrait"
+    "theme_color": "#181818",
+    "background_color": "#181818"
   }
 }

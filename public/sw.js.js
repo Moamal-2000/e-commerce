@@ -2,6 +2,7 @@
 
 const CACHE_NAME = "e-commerce-v5";
 const assets = ["/", "/index.html"];
+const self = this
 
 async function caching() {
   const cache = await caches.open(CACHE_NAME);
