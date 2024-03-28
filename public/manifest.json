@@ -1,4 +1,5 @@
 {
+  "registerType": "prompt",
   "name": "E-Commerce",
   "short_name": "E-Commerce",
   "description": "Your ultimate destination for effortless online shopping. Discover curated collections, easily add items to your cart and wishlist, and enjoy detailed product descriptions with captivating previews. Experience convenience like never before with our intuitive interface. Shop smarter with us today.",
@@ -30,8 +31,10 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#181818",
-  "background_color": "#181818",
+  "start_url": ".",
+  "scope": "/",
   "display": "standalone",
-  "start_url": "."
+  "orientation": "portrait",
+  "theme_color": "#181818",
+  "background_color": "#181818"
 }
