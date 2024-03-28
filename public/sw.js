@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_NAME = "e-commerce-v5";
+const CACHE_NAME = "e-commerce-v6";
 const assets = ["/", "/index.html"];
 const self = this
 
@@ -11,14 +11,17 @@ async function caching() {
 
 async function respondFetch(request) {
   const cacheResponse = await caches.match(request);
+
   const networkResponse = fetch(request.url).then((networkRes) => {
     return caches.open(CACHE_NAME).then((cache) => {
       const skipPutResInCache = networkRes.url.includes("chrome-extension");
+
       if (skipPutResInCache) return networkRes;
+
       cache.put(request, networkRes.clone());
       return networkRes;
     });
-  });
+  }).catch(err => {});
 
   return cacheResponse || networkResponse;
 }
