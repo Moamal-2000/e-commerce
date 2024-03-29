@@ -118,6 +118,46 @@
   height: 16px;
 }
 
+.favIcon {
+  --heart-color: var(--tomato);
+}
+
+.favIcon.active {
+  fill: var(--tomato);
+
+  & .heartBackground {
+    opacity: 1;
+  }
+}
+
+.favIcon .heartBackground {
+  position: absolute;
+  top: 17px;
+  border-style: solid;
+  border-color: var(--heart-color) transparent transparent transparent;
+  border-width: 7px;
+  opacity: 0;
+}
+
+.favIcon .heartBackground::before,
+.favIcon .heartBackground::after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  background-color: var(--heart-color);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.favIcon .heartBackground::before {
+  left: -7.5px;
+}
+
+.favIcon .heartBackground::after {
+  right: -7px;
+}
+
 .detailsIcon:hover svg {
   fill: var(--turquoise);
 }
@@ -126,8 +166,12 @@
   fill: var(--tomato);
 }
 
-.wishListIcon:hover svg {
-  fill: #00bb00;
+.wishListIcon svg {
+  fill: var(--black);
+}
+
+.wishListIcon.active svg path {
+  fill-rule: nonzero;
 }
 
 .card:hover [data-add-to-cart-button],

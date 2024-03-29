@@ -48,8 +48,16 @@ const ProductCard = ({
   const hideNewClass = shouldHideNewWord();
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
-  const { wishList } = useSelector((state) => state.products);
+  const { favoritesProducts, wishList } = useSelector(
+    (state) => state.products
+  );
   const { isSignIn } = useSelector((state) => state.user);
+  const isAddedToWishList = wishList?.find(
+    (wishProduct) => wishProduct.id === id
+  );
+  const isAddedToFavorites = favoritesProducts?.find(
+    (favProduct) => favProduct.id === id
+  );
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -58,7 +66,14 @@ const ProductCard = ({
   }
 
   function addProductToFavorite() {
+    const isProductAlreadyExist = favoritesProducts.includes(product);
     if (!isSignIn) navigateTo("/signup");
+    if (isProductAlreadyExist) {
+      dispatch(removeById({ key: "favoritesProducts", id: product.id }));
+      return;
+    }
+
+    dispatch(addToArray({ key: "favoritesProducts", value: product }));
   }
 
   function navigateToProductDetails() {
@@ -68,7 +83,10 @@ const ProductCard = ({
   function addProductToWishList() {
     const isProductAlreadyExist = wishList.includes(product);
     if (!isSignIn) navigateTo("/signup");
-    if (isProductAlreadyExist) return;
+    if (isProductAlreadyExist) {
+      dispatch(removeById({ key: "wishList", id: product.id }));
+      return;
+    }
 
     dispatch(addToArray({ key: "wishList", value: product }));
   }
@@ -96,15 +114,18 @@ const ProductCard = ({
 
           <div className={s.icons}>
             {showFavIcon && (
-              <a
-                href="#"
-                className={`${s.iconHolder} ${s.favIcon}`}
+              <button
+                type="button"
+                className={`${s.iconHolder} ${s.favIcon} ${
+                  isAddedToFavorites ? s.active : ""
+                }`}
                 onClick={addProductToFavorite}
                 aria-label="Favorite"
               >
+                <div className={s.heartBackground}></div>
                 <SvgIcon name="heart" />
                 <ToolTip top="18px" left="-44px" content="Favorite" />
-              </a>
+              </button>
             )}
 
             {showDetailsIcon && (
@@ -133,7 +154,9 @@ const ProductCard = ({
             {showWishList && (
               <button
                 type="button"
-                className={`${s.iconHolder} ${s.wishListIcon}`}
+                className={`${s.iconHolder} ${s.wishListIcon} ${
+                  isAddedToWishList ? s.active : ""
+                }`}
                 onClick={addProductToWishList}
                 aria-label="Add to wishlist"
               >
