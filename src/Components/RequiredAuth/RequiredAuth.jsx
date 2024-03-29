@@ -2,32 +2,28 @@ import { useSelector } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
 
 const RequiredAuth = ({ children }) => {
+  const userState = useSelector((state) => state.user);
   const {
     loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
+  } = userState;
   const location = useLocation();
+  const pathName = location.pathname;
+  const isLoginOrSignUpPage = pathName === "/login" || pathName === "/signup";
+  const pagesRequireSignIn = [
+    "/favorites",
+    "/checkout",
+    "/profile",
+    "/wishlist",
+    "/cart",
+  ];
 
-  console.log('isSignIn', isSignIn);
+  const isPageRequiringSignIn = (isPage) =>
+    pagesRequireSignIn.includes(isPage) && !isSignIn;
 
-  // console.log("profile", location.pathname === "/profile" && !isSignIn);
-  if (location.pathname === "/profile" && !isSignIn) {
-    return <Navigate to="/signup" />;
-  }
-
-  // console.log("login", location.pathname === "/login", isSignIn);
-  if (location.pathname === "/login" && isSignIn) {
-    return <Navigate to="/" />;
-  }
-
-  if (location.pathname === "/signup" && isSignIn) {
-    return <Navigate to="/" />;
-  }
-
-  if (location.pathname === "/checkout" && !isSignIn) {
-    console.log("Yes");
-    return <Navigate to="/login" />;
-  }
+  if (isLoginOrSignUpPage && isSignIn) return <Navigate to="/" />;
+  if (isPageRequiringSignIn(pathName)) return <Navigate to="/signup" />;
 
   return children;
 };
+
 export default RequiredAuth;

@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Route,
   RouterProvider,
@@ -21,59 +22,38 @@ import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 import RoutesLayout from "./RoutesLayout";
 
+const ROUTES_CONFIG = [
+  { path: "/", element: <Home /> },
+  { path: "/contact", element: <Contact /> },
+  { path: "/about", element: <About /> },
+  { path: "/details", element: <ProductDetailsPage /> },
+  { path: "/category", element: <ProductsCategoryPage /> },
+  { path: "/products", element: <ProductsPage /> },
+  { path: "/favorites", element: <FavoritePage /> },
+  { path: "/wishlist", element: <WishList /> },
+  { path: "/cart", element: <Cart /> },
+  { path: "/checkout", element: <CheckoutPage /> },
+  { path: "/signup", element: <SignUp /> },
+  { path: "/login", element: <LogIn /> },
+  { path: "/profile", element: <AccountPage /> },
+  { path: "*", element: <NotFoundPage /> },
+];
+
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
     <Route path="/" element={<RoutesLayout />}>
-      <Route path="*" element={<NotFoundPage />} />
-      <Route index element={<Home />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/wishlist" element={<WishList />} />
-      <Route path="/favorites" element={<FavoritePage />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/details" element={<ProductDetailsPage />} />
-      <Route path="/category" element={<ProductsCategoryPage />} />
-      <Route path="/products" element={<ProductsPage />} />
-
-      <Route
-        path="/checkout"
-        element={
-          <RequiredAuth>
-            <CheckoutPage />
-          </RequiredAuth>
-        }
-      />
-
-      <Route
-        path="/signup"
-        element={
-          <RequiredAuth>
-            <SignUp />
-          </RequiredAuth>
-        }
-      />
-
-      <Route
-        path="/login"
-        element={
-          <RequiredAuth>
-            <LogIn />
-          </RequiredAuth>
-        }
-      />
-
-      <Route
-        path="/profile"
-        element={
-          <RequiredAuth>
-            <AccountPage />
-          </RequiredAuth>
-        }
-      />
+      {ROUTES_CONFIG.map(({ path, element }, index) => (
+        <Route
+          key={index}
+          path={path}
+          element={<RequiredAuth>{element}</RequiredAuth>}
+        />
+      ))}
     </Route>
   );
 
   const router = createBrowserRouter(routes);
   return <RouterProvider router={router} />;
 };
+
 export default AppRoutes;
