@@ -18,11 +18,11 @@ const ProductDetailsPage = () => {
   const history = ["Account", capitalize(category), name.toUpperCase()];
   const historyPaths = [
     {
-      index: 0,
+      path: 0,
       link: "/profile",
     },
     {
-      index: 1,
+      path: 1,
       link: `/category/?type=${category}`,
     },
   ];

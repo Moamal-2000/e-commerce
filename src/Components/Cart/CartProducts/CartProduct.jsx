@@ -9,7 +9,7 @@ import s from "./CartProduct.module.scss";
 const CartProduct = ({ data }) => {
   const { img, shortName, price, id } = data;
   const [quantity, setQuantity] = useState(1);
-  const subTotal = quantity * price;
+  const subTotal = (quantity * price).toFixed(2);
   const dispatch = useDispatch();
 
   return (

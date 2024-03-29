@@ -10,7 +10,7 @@ const PagesHistory = ({ history, historyPaths }) => {
     const clickedParam = historyPaths?.[pageIndex];
 
     if (clickedParam) {
-      navigateTo(clickedParam.link);
+      navigateTo(clickedParam.path);
       return;
     }
 

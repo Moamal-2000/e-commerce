@@ -7,6 +7,8 @@ const RequiredAuth = ({ children }) => {
   } = useSelector((state) => state.user);
   const location = useLocation();
 
+  console.log('isSignIn', isSignIn);
+
   // console.log("profile", location.pathname === "/profile" && !isSignIn);
   if (location.pathname === "/profile" && !isSignIn) {
     return <Navigate to="/signup" />;
@@ -21,7 +23,7 @@ const RequiredAuth = ({ children }) => {
     return <Navigate to="/" />;
   }
 
-  if (location.pathname === "/wishlist" && !isSignIn) {
+  if (location.pathname === "/checkout" && !isSignIn) {
     console.log("Yes");
     return <Navigate to="/login" />;
   }
