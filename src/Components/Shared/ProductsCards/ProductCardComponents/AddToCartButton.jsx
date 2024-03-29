@@ -1,14 +1,16 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { addToArray } from "../../../../Features/productsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
-import { addToArray } from "../../../../Features/productsSlice";
 
 const AddToCartButton = ({ product }) => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const { cartProducts } = useSelector((state) => state.products);
-  const { isSignIn } = useSelector((state) => state.user);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
 
   function addProductToCart() {
     const isProductAlreadyExist = cartProducts.includes(product);

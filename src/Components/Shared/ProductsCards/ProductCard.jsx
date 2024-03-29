@@ -52,7 +52,9 @@ const ProductCard = ({
   const { favoritesProducts, wishList } = useSelector(
     (state) => state.products
   );
-  const { isSignIn } = useSelector((state) => state.user);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const isAddedToWishList = wishList?.find(
     (wishProduct) => wishProduct.id === id
   );

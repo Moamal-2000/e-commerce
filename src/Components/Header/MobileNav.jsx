@@ -7,8 +7,8 @@ import s from "./MobileNav.module.scss";
 
 const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
-  const { loginInfo, isSignIn } = useSelector((state) => state.user);
-  const { username } = loginInfo;
+  const { loginInfo } = useSelector((state) => state.user);
+  const { username, isSignIn } = loginInfo;
   const userText = username === "Guest" ? "There" : username;
   const handleSignOut = useSignOut();
 

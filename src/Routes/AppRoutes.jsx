@@ -9,6 +9,7 @@ import AccountPage from "../Components/AccountPage/AccountPage";
 import Cart from "../Components/Cart/Cart";
 import CheckoutPage from "../Components/CheckoutPage/CheckoutPage";
 import Contact from "../Components/Contact/Contact";
+import FavoritePage from "../Components/FavoritePage/FavoritePage";
 import Home from "../Components/Home/Home";
 import LogIn from "../Components/LogIn/LogIn";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
@@ -19,7 +20,6 @@ import RequiredAuth from "../Components/RequiredAuth/RequiredAuth";
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 import RoutesLayout from "./RoutesLayout";
-import FavoritePage from "../Components/FavoritePage/FavoritePage";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(
@@ -32,9 +32,17 @@ const AppRoutes = () => {
       <Route path="/favorites" element={<FavoritePage />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/details" element={<ProductDetailsPage />} />
-      <Route path="/checkout" element={<CheckoutPage />} />
       <Route path="/category" element={<ProductsCategoryPage />} />
       <Route path="/products" element={<ProductsPage />} />
+
+      <Route
+        path="/checkout"
+        element={
+          <RequiredAuth>
+            <CheckoutPage />
+          </RequiredAuth>
+        }
+      />
 
       <Route
         path="/signup"

@@ -6,7 +6,9 @@ import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ProductDealingControls.module.scss";
 
 const ProductDealingControls = () => {
-  const { isSignIn } = useSelector((state) => state.user);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const navigateTo = useNavigate();
   const [quantity, setQuantity] = useState(1);
 

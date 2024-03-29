@@ -3,7 +3,9 @@ import { NavLink } from "react-router-dom";
 import s from "./Nav.module.scss";
 
 const Nav = () => {
-  const { isSignIn } = useSelector((state) => state.user);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
 
   return (
     <nav className={s.nav}>

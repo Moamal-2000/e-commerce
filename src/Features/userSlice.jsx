@@ -1,20 +1,24 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  loginInfo: {
-    username: "Moamal Alaa",
-    emailOrPhone: "moamalalaapro1@gmail.com",
-    password: "moamalalaapro1",
-  },
-  isSignIn: true,
-  usersData: [
-    {
-      username: "Lily Watson",
-      emailOrPhone: "lily.wastons@gmail.com",
-      password: "random-password1234",
-    },
-  ],
-};
+const initialStateLocal = localStorage.getItem("userData");
+
+const initialState = initialStateLocal
+  ? JSON.parse(initialStateLocal)
+  : {
+      loginInfo: {
+        username: "",
+        emailOrPhone: "",
+        password: "",
+        isSignIn: false,
+      },
+      usersData: [
+        {
+          username: "Lily Watson",
+          emailOrPhone: "lily.wastons@gmail.com",
+          password: "random-password1234",
+        },
+      ],
+    };
 
 const userSlice = createSlice({
   initialState,
@@ -22,11 +26,11 @@ const userSlice = createSlice({
   reducers: {
     newSignUp: (state, { payload }) => {
       state.usersData = payload;
-      state.isSignIn = true;
+      state.loginInfo.isSignIn = true;
     },
     setLoginData: (state, { payload }) => {
       state.loginInfo = { ...payload };
-      state.isSignIn = true;
+      state.loginInfo.isSignIn = true;
     },
     signOut: (state, _) => {
       state.loginInfo = {
@@ -34,7 +38,7 @@ const userSlice = createSlice({
         emailOrPhone: "",
         password: "",
       };
-      state.isSignIn = false;
+      state.loginInfo.isSignIn = false;
     },
     updateUserData: ({ loginInfo }, { payload }) => {
       Object.assign(loginInfo, payload.updatedUserData);

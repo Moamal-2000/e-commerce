@@ -4,7 +4,9 @@ import { useLocation } from "react-router-dom";
 
 const useNavToolsProps = () => {
   const [navToolsProps, setNavToolsProps] = useState({});
-  const { isSignIn } = useSelector((state) => state.user);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const location = useLocation();
   const path = location.pathname;
   const navProps = {
