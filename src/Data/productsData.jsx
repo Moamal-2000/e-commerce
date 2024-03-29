@@ -65,15 +65,15 @@ import {
   wiredKeyboardThum2,
   wiredKeyboardThum3,
 } from "../Assets/Products/ProductImgs";
+import { setAfterDiscountKey, setFormattedPrice } from "../Functions/helper";
 
 export const productsData = [
   {
     shortName: "PS5 Gamepad",
     name: "PS5 Gamepad",
     category: "gaming",
-    price: 160,
+    price: 69.99,
     discount: 40,
-    afterDiscount: 120,
     description: `
     PlayStation 5 Controller Skin High quality vinyl with air channel adhesive
     for easy bubble free install & mess free removal Pressure sensitive.`,
@@ -104,9 +104,8 @@ export const productsData = [
     shortName: "AK-9000 Keyboard",
     name: "AK-900 Wired Keyboard",
     category: "gaming",
-    price: 1160,
+    price: 8.66,
     discount: 35,
-    afterDiscount: 960,
     description: `
     Elevate your gaming experience with the AK-900 Wired Keyboard. Designed for
     precision and durability, this keyboard boasts high responsiveness and tactile
@@ -140,9 +139,8 @@ export const productsData = [
     shortName: "LCD Monitor",
     name: "IPS LCD Gaming Monitor",
     category: "gaming",
-    price: 400,
+    price: 244.8,
     discount: 30,
-    afterDiscount: 370,
     description: `
     Immerse yourself in the world of gaming with the IPS LCD Gaming Monitor. Featuring
     stunning visuals and ultra-smooth gameplay, this monitor delivers an unparalleled
@@ -172,9 +170,8 @@ export const productsData = [
     shortName: "S-Series Chair",
     name: "S-Series Comfort Chair",
     category: "furniture",
-    price: 400,
+    price: 39.99,
     discount: 25,
-    afterDiscount: 375,
     description: `
     Experience comfort like never before with the S-Series Comfort Chair. Crafted with plush
     padding and ergonomic design, this chair provides exceptional support during long gaming
@@ -215,9 +212,8 @@ export const productsData = [
     shortName: "North Coat",
     name: "The north coat",
     category: "clothes",
-    price: 360,
+    price: 89.99,
     discount: 40,
-    afterDiscount: 260,
     description: `
     Stay warm and stylish with The North Coat. Made from premium materials and expert craftsmanship,
     this coat is designed to withstand the elements while keeping you cozy. Its timeless design
@@ -249,9 +245,8 @@ export const productsData = [
     shortName: "Gucci Bag",
     name: "Gucci duffle bag",
     category: "backpack",
-    price: 1100,
+    price: 2980,
     discount: 10,
-    afterDiscount: 1000,
     description: `
     Make a statement with the Gucci Duffle Bag. Crafted from luxurious materials and adorned with iconic
     branding, this bag exudes sophistication and style. With its spacious interior and multiple
@@ -283,9 +278,8 @@ export const productsData = [
     shortName: "CPU Cooler",
     name: "RGB liquid CPU Cooler",
     category: "gaming",
-    price: 170,
+    price: 139,
     discount: 30,
-    afterDiscount: 135,
     description: `
     Keep your CPU running cool and quiet with the RGB Liquid CPU Cooler. Featuring advanced cooling
     technology and customizable RGB lighting, this cooler not only keeps temperatures low but also adds
@@ -314,9 +308,8 @@ export const productsData = [
     shortName: "BookShelf",
     name: "Small BookShelf",
     category: "furniture",
-    price: 360,
+    price: 45.99,
     discount: 15,
-    afterDiscount: 320,
     description: `
     Organize your library in style with the Small Bookshelf. Crafted from durable materials and featuring
     a compact design, this bookshelf maximizes storage space without sacrificing aesthetics. Whether you're
@@ -344,9 +337,8 @@ export const productsData = [
     shortName: "Dog Food",
     name: "Breed Dry Dog Food",
     category: "animal",
-    price: 100,
+    price: 17.99,
     discount: 0,
-    afterDiscount: 100,
     description: `
     Treat your furry friend to the best with Breed Dry Dog Food. Formulated with premium ingredients and essential
     nutrients, this dog food provides complete and balanced nutrition for dogs of all ages and breeds. Its delicious
@@ -378,9 +370,8 @@ export const productsData = [
     shortName: "Cannon Camera",
     name: "CANON EOS DSLR Camera",
     category: "camera",
-    price: 360,
+    price: 6499,
     discount: 0,
-    afterDiscount: 360,
     description: `
     Capture life's precious moments with the CANON EOS DSLR Camera. Whether you're a professional photographer or an
     amateur enthusiast, this camera delivers stunning image quality and performance. With its advanced features and
@@ -409,9 +400,8 @@ export const productsData = [
     shortName: "FHD Laptop",
     name: "ASUS FHD Gaming Laptop",
     category: "computers",
-    price: 1499,
+    price: 767.99,
     discount: 5,
-    afterDiscount: 1335,
     description: `
     Experience unparalleled gaming performance with the ASUS FHD Gaming Laptop. Powered by cutting-edge hardware and
     featuring a stunning Full HD display, this laptop is built to handle even the most demanding games with ease.
@@ -440,9 +430,8 @@ export const productsData = [
     shortName: "Curology",
     name: "Curology Product Set",
     category: "makeup",
-    price: 700,
+    price: 24.99,
     discount: 0,
-    afterDiscount: 700,
     description: `
     Transform your skincare routine with the Curology Product Set. Formulated by dermatologists and tailored to
     your unique skin needs, this set includes everything you need to achieve clear, radiant skin. From cleansers
@@ -470,9 +459,8 @@ export const productsData = [
     shortName: "Electric Car",
     name: "Kids Electric Car",
     category: "gaming",
-    price: 1529,
+    price: 399.99,
     discount: 0,
-    afterDiscount: 1529,
     description: `
     Spark your child's imagination with the Kids Electric Car. Designed for fun and excitement, this car features
     realistic details and effortless controls that make every ride an adventure. Whether they're cruising around
@@ -504,9 +492,8 @@ export const productsData = [
     shortName: "Soccer Cleats",
     name: "Jr. Zoom Soccer Cleats",
     category: "clothes",
-    price: 500,
+    price: 44.99,
     discount: 0,
-    afterDiscount: 500,
     description: `
     Take your game to the next level with Jr. Zoom Soccer Cleats. Engineered for speed and agility, these cleats
     deliver exceptional traction and stability on the field. With their lightweight design and responsive cushioning,
@@ -539,9 +526,8 @@ export const productsData = [
     shortName: "GP11 Gamepad",
     name: "GP11 Shooter USB Gamepad",
     category: "gaming",
-    price: 960,
+    price: 13.86,
     discount: 0,
-    afterDiscount: 960,
     description: `
     Dominate the competition with the GP11 Shooter USB Gamepad. Designed for precision and comfort, this gamepad
     delivers an immersive gaming experience with every press and swipe. Whether you're battling enemies or racing
@@ -570,9 +556,8 @@ export const productsData = [
     shortName: "Satin Jacket",
     name: "Quilted Satin Jacket",
     category: "clothes",
-    price: 650,
+    price: 105,
     discount: 0,
-    afterDiscount: 650,
     description: `
     Elevate your outerwear collection with the Quilted Satin Jacket. Crafted from premium satin fabric and featuring a
     quilted design, this jacket combines style and functionality with ease. Whether you're braving the elements or
@@ -610,3 +595,8 @@ export const productsData = [
     id: uuid(),
   },
 ];
+
+productsData.forEach((product) => {
+  setAfterDiscountKey(product);
+  setFormattedPrice(product);
+});

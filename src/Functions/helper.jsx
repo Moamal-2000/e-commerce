@@ -121,4 +121,25 @@ export function getSpecificRepo(repos, id) {
   return repos?.find((repo) => repo.id === id);
 }
 
-export const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+export const scrollToTop = () =>
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+export function getDiscountedPrice(originalPrice, discountPercentage) {
+  const discountAmount = (originalPrice * discountPercentage) / 100;
+  const discountedPrice = originalPrice - discountAmount;
+  return discountedPrice.toFixed(2);
+}
+
+export const formateNumber = (price) =>
+  `${price}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+export function setAfterDiscountKey(product) {
+  const discountedPrice = getDiscountedPrice(product.price, product.discount);
+  const formattedDiscountedPrice = formateNumber(discountedPrice);
+  product.afterDiscount = formattedDiscountedPrice
+}
+
+export function setFormattedPrice(product) {
+  const formattedPrice = formateNumber(product.price)
+  product.price = formattedPrice
+}
