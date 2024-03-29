@@ -1,0 +1,72 @@
+@import "../../Styles/mixins.scss";
+
+.favoritePage {
+  margin: var(--page-margin);
+}
+
+.favoritePageContent {
+  margin-bottom: 80px;
+}
+
+.favoritePageContent>header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.favoritePageContent>header>label {
+  font-size: 1.25rem;
+}
+
+@include small {
+  .favoritePageContent>header>label {
+    font-size: 1rem;
+  }
+}
+
+.favoritePageContent>header>button {
+  background-color: transparent;
+  outline: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  border: 1px solid #00000080;
+  font-weight: 500;
+}
+
+@include small {
+  .favoritePageContent>header>button {
+    padding: 12px 30px;
+    font-size: .9rem;
+  }
+}
+
+.forYou>header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  &>div>* {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+  }
+}
+
+.forYou>header>a {
+  background-color: transparent;
+  outline: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  border: 1px solid #00000080;
+  font-weight: 500;
+  color: var(--black);
+}
+
+@include small {
+  .forYou>header>a {
+    padding: 12px 30px;
+    font-size: .9rem;
+  }
+}

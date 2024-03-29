@@ -20,6 +20,7 @@ const ProductCard = ({
     showWishList: true,
     showColors: false,
   },
+  removeFrom,
 }) => {
   const {
     name,
@@ -143,8 +144,8 @@ const ProductCard = ({
               <button
                 type="button"
                 className={`${s.iconHolder} ${s.removeIcon}`}
-                aria-label="Remove from wishlist"
-                onClick={() => dispatch(removeById({ key: "wishList", id }))}
+                aria-label={`Remove from ${removeFrom}`}
+                onClick={() => dispatch(removeById({ key: removeFrom, id }))}
               >
                 <SvgIcon name="trashCan" />
                 <ToolTip top="18px" left="-41px" content="Remove" />

@@ -40,6 +40,10 @@ export const PAGE_SECTIONS_ID = [
     pagePath: "/checkout",
   },
   {
+    sectionId: "favorite-page",
+    pagePath: "/favorites",
+  },
+  {
     sectionId: "notfound-page",
   },
 ];

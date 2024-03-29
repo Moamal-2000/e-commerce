@@ -2,23 +2,25 @@ import { useSelector } from "react-redux";
 import { wishListProductsCustomization } from "../../Data/staticData";
 import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
-import s from "./WishProducts.module.scss";
+import s from "./FavoriteProducts.module.scss";
 
-const WishProducts = () => {
-  const { wishList } = useSelector((state) => state.products);
+const FavoriteProducts = () => {
+  const { favoritesProducts } = useSelector(
+    (state) => state.products
+  );
   useScrollOnMount(160);
 
   return (
     <div className={s.wishProducts}>
-      {wishList.map((product) => (
+      {favoritesProducts.map((product) => (
         <ProductCard
           key={product.id}
           product={product}
           customization={wishListProductsCustomization}
-          removeFrom="wishList"
+          removeFrom="favoritesProducts"
         />
       ))}
     </div>
   );
 };
-export default WishProducts;
+export default FavoriteProducts;
