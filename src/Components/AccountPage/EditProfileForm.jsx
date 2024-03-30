@@ -81,7 +81,6 @@ const EditProfileForm = () => {
               type="text"
               name="firstName"
               id="firstName"
-              placeholder="Md"
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
             />
@@ -93,7 +92,6 @@ const EditProfileForm = () => {
               type="text"
               name="lastName"
               id="lastName"
-              placeholder="Rimel"
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
             />
@@ -105,7 +103,7 @@ const EditProfileForm = () => {
               type="text"
               name="emailOrPhone"
               id="changeEmail"
-              placeholder="rimel1111@gmail.com"
+              placeholder="example@gmail.com"
               value={emailOrPhoneState}
               onChange={(e) => setEmailOrPhoneState(e.target.value)}
             />
@@ -117,7 +115,7 @@ const EditProfileForm = () => {
               type="text"
               name="address"
               id="address"
-              placeholder="Kingston, 5236, United State"
+              placeholder="EX Kingston, 5236, United State"
             />
           </div>
         </section>

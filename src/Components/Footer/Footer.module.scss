@@ -52,7 +52,7 @@
   position: relative;
 }
 
-.sections>section a::before {
+.sections>section a:not(:has(svg)):before {
   content: '';
   position: absolute;
   left: 0;
