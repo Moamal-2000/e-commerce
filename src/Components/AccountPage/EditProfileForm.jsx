@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { updateUserData } from "../../Features/userSlice";
 import {
   checkEmailValidation,
+  checkEmptyInputs,
   checkIsInputsValid,
   checkPasswordInputs,
-  updateClassOnCondition,
 } from "../../Functions/helper";
 import s from "./EditProfileForm.module.scss";
 
@@ -30,21 +30,11 @@ const EditProfileForm = () => {
     e.preventDefault();
     checkEmptyInputs({
       exceptions: ["address", "currentPass", "newPass", "confirmPass"],
+      formRef: formRef,
     });
     checkEmailValidation(emailInput);
     checkPasswordInputs(passwordInputs, password);
     updateUserInfo();
-  }
-
-  function checkEmptyInputs({ exceptions }) {
-    const formEle = formRef.current;
-    const inputs = formEle.querySelectorAll("input");
-
-    inputs.forEach((input) => {
-      const isExceptionInput = exceptions.includes(input.name);
-      const isGraterThan = input.value.length > 2;
-      updateClassOnCondition(input, isExceptionInput || isGraterThan);
-    });
   }
 
   function updateUserInfo() {

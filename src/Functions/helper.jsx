@@ -95,6 +95,17 @@ export function updateClassOnCondition(
   input.classList[methodName](className);
 }
 
+export function checkEmptyInputs({ exceptions, formRef }) {
+  const formEle = formRef.current;
+  const inputs = formEle.querySelectorAll("input");
+
+  inputs.forEach((input) => {
+    const isExceptionInput = exceptions.includes(input.name);
+    const isGraterThan2 = input.value.length > 2;
+    updateClassOnCondition(input, isExceptionInput || isGraterThan2);
+  });
+}
+
 export function checkIsInputsValid(inputs) {
   return [...inputs].every((input) => !input.classList.contains("invalid"));
 }

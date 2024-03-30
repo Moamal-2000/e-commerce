@@ -2,7 +2,10 @@ import s from "./ContactForm.module.scss";
 
 const ContactForm = () => {
   function handleSubmit(e) {
+    const resetButton = e.target.querySelector("button[type=reset]");
+
     e.preventDefault();
+    resetButton?.click();
   }
 
   return (
@@ -20,7 +23,12 @@ const ContactForm = () => {
           </div>
 
           <div className={s.input}>
-            <input type="text" placeholder="Your Email" name="email" required />
+            <input
+              type="email"
+              placeholder="Your Email"
+              name="email"
+              required
+            />
             <div className={s.star} style={{ left: "97px" }} />
           </div>
 
@@ -34,6 +42,9 @@ const ContactForm = () => {
       </div>
 
       <button type="submit">Send Message</button>
+      <button type="reset" hidden>
+        Reset
+      </button>
     </form>
   );
 };
