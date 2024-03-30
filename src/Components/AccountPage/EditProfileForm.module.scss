@@ -121,13 +121,15 @@
   padding: 16px 48px;
   border-radius: 4px;
   background-color: var(--dark-tomato);
+  border: solid 2px var(--dark-tomato);
   color: var(--white);
   font-weight: 500;
   font-size: 1rem;
-  transition: background-color .2s;
+  transition: background-color .1s, color .1s;
 
   &:hover {
-    background-color: var(--tomato);
+    background-color: var(--white);
+    color: var(--dark-tomato);
   }
 }
 

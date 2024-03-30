@@ -32,6 +32,13 @@
   border-radius: 4px;
   border: 1px solid #00000080;
   font-weight: 500;
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    color: var(--white);
+    border-color: var(--very-dark-gray);
+    background-color: var(--very-dark-gray);
+  }
 }
 
 @include small {
@@ -62,6 +69,13 @@
   border: 1px solid #00000080;
   font-weight: 500;
   color: var(--black);
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    color: var(--white);
+    border-color: var(--very-dark-gray);
+    background-color: var(--very-dark-gray);
+  }
 }
 
 @include small {
