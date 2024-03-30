@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { removeById } from "../../../Features/productsSlice";
 import CustomNumberInput from "../../Shared/MiniComponents/CustomNumberInput";
@@ -7,9 +6,8 @@ import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CartProduct.module.scss";
 
 const CartProduct = ({ data }) => {
-  const { img, shortName, price, id } = data;
-  const [quantity, setQuantity] = useState(1);
-  const subTotal = (quantity * price).toFixed(2);
+  const { img, shortName, afterDiscount, quantity, id } = data;
+  const subTotal = (quantity * afterDiscount).toFixed(2);
   const dispatch = useDispatch();
 
   return (
@@ -30,10 +28,10 @@ const CartProduct = ({ data }) => {
         <span>{shortName}</span>
       </td>
 
-      <td className={s.price}>${price}</td>
+      <td className={s.price}>${afterDiscount}</td>
 
       <td>
-        <CustomNumberInput number={quantity} setNumber={setQuantity} />
+        <CustomNumberInput product={data} quantity={quantity} />
       </td>
 
       <td>${subTotal}</td>

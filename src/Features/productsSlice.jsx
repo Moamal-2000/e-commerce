@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  favoritesProducts: [],
-  cartProducts: [],
-  wishList: [],
-  totalOrdersPrice: 0,
-};
+const productsDataLocal = localStorage.getItem("productsSliceData");
+
+const initialState = productsDataLocal
+  ? JSON.parse(productsDataLocal)
+  : {
+      favoritesProducts: [],
+      cartProducts: [],
+      wishList: [],
+    };
 
 const productsSlice = createSlice({
   initialState,

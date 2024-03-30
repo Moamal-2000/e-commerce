@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialStateLocal = localStorage.getItem("userData");
+const initialStateLocal = localStorage.getItem("userSliceData");
 
 const initialState = initialStateLocal
   ? JSON.parse(initialStateLocal)
@@ -9,7 +9,7 @@ const initialState = initialStateLocal
         username: "",
         emailOrPhone: "",
         password: "",
-        isSignIn: false,
+        isSignIn: true,
       },
       usersData: [
         {

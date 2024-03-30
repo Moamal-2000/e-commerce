@@ -1,70 +1,83 @@
-import { useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  MAXIMUM_QUANTITY,
+  MINIMUM_QUANTITY,
+} from "../../../Data/globalVariables";
+import { updateState } from "../../../Features/productsSlice";
 import s from "./CustomNumberInput.module.scss";
 import SvgIcon from "./SvgIcon";
 
-const CustomNumberInput = ({ number, setNumber }) => {
-  const holdTimer = useRef();
-  const holdDuration = useRef(300);
-  number = handleNumberValue();
+const CustomNumberInput = ({ product, quantity }) => {
+  const { cartProducts } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
-  function increase() {
-    setNumber((prevNumber) => +prevNumber + 1);
+  function handleUpdateQuantity(state) {
+    const isDecrease = state === "decrease";
+    const updatedProduct = { ...product };
+    const isBelowMinimum = quantity <= MINIMUM_QUANTITY && isDecrease;
+    const isAboveMaximum = quantity >= MAXIMUM_QUANTITY && !isDecrease;
+
+    if (isBelowMinimum || isAboveMaximum) return;
+
+    updatedProduct.quantity += isDecrease ? -1 : 1;
+    updateProductQuantity(updatedProduct);
   }
 
-  function decrease() {
-    setNumber((prevNumber) => (prevNumber > 1 ? +prevNumber - 1 : 1));
+  function handleChangeQuantityInput(e) {
+    const inputValue = parseInt(e.target.value);
+    const updatedProduct = { ...product };
+
+    if (isNaN(inputValue)) return;
+
+    const isBelowMinimum = inputValue < MINIMUM_QUANTITY;
+    const isAboveMaximum = inputValue > MAXIMUM_QUANTITY;
+
+    if (isBelowMinimum) {
+      updatedProduct.quantity = MINIMUM_QUANTITY;
+    } else if (isAboveMaximum) {
+      updatedProduct.quantity = MAXIMUM_QUANTITY;
+    } else {
+      updatedProduct.quantity = inputValue;
+    }
+
+    updateProductQuantity(updatedProduct);
+    return updatedProduct.quantity;
   }
 
-  function handleChangeNumber(e) {
-    const value = e.target.value;
-    if (value === "0") return;
-    setNumber(value);
-  }
-
-  function handleMouseDown(direction) {
-    holdTimer.current = setInterval(
-      () => onHold(direction),
-      holdDuration.current
+  function updateProductQuantity(updatedProduct) {
+    const indexToUpdate = cartProducts.findIndex(
+      (item) => item.id == updatedProduct.id
     );
-  }
 
-  function onHold(duration) {
-    if (duration === "up") setNumber((prevNumber) => +prevNumber + 1);
-    else setNumber((prevNumber) => (prevNumber > 1 ? +prevNumber - 1 : 1));
-  }
+    if (indexToUpdate === -1) return;
 
-  function handleNumberValue() {
-    const formattedNumber = `${number}`;
-    if (formattedNumber === "0") return "1";
-    return formattedNumber;
+    const updatedCartProducts = [...cartProducts];
+    updatedCartProducts[indexToUpdate] = updatedProduct;
+
+    dispatch(
+      updateState({
+        key: "cartProducts",
+        value: updatedCartProducts,
+      })
+    );
   }
 
   return (
     <div className={s.numberInput}>
       <input
         type="number"
-        value={number}
-        onChange={(e) => handleChangeNumber(e)}
-        min={1}
-        max={999}
+        value={quantity}
+        onChange={(e) => handleChangeQuantityInput(e)}
+        min={MINIMUM_QUANTITY}
+        max={MAXIMUM_QUANTITY}
       />
 
       <div className={s.buttons}>
-        <button
-          type="button"
-          onMouseDown={() => handleMouseDown("up")}
-          onMouseUp={() => clearInterval(holdTimer.current)}
-          onClick={increase}
-        >
+        <button type="button" onClick={() => handleUpdateQuantity("increase")}>
           <SvgIcon name="arrowUp" />
         </button>
 
-        <button
-          type="button"
-          onMouseDown={() => handleMouseDown("down")}
-          onMouseUp={() => clearInterval(holdTimer.current)}
-          onClick={decrease}
-        >
+        <button type="button" onClick={() => handleUpdateQuantity("decrease")}>
           <SvgIcon name="arrowUp" />
         </button>
       </div>

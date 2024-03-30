@@ -1,9 +1,11 @@
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { getSubTotal } from "../../../Functions/helper";
 import s from "./CartInfoMenu.module.scss";
 
 const CartInfoMenu = () => {
-  const subTotal = 1750;
-  const totalAfterCoupon = subTotal;
+  const { cartProducts } = useSelector((state) => state.products);
+  const subTotal = getSubTotal(cartProducts);
 
   return (
     <div className={s.menu}>
@@ -22,7 +24,7 @@ const CartInfoMenu = () => {
 
         <div className={s.item}>
           <span>Total:</span>
-          <span>${totalAfterCoupon}</span>
+          <span>${subTotal}</span>
         </div>
       </div>
 

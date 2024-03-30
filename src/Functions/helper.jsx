@@ -81,7 +81,9 @@ export function checkDateBeforeMonthToPresent(getDate) {
 }
 
 export function capitalize(str) {
-  return str?.slice(0, 1).toUpperCase() + str?.slice(1, str.length);
+  const firstCapitalLetter = str?.slice(0, 1).toUpperCase();
+  const restSmallLetters = str?.slice(1, str.length).toLowerCase();
+  return firstCapitalLetter + restSmallLetters;
 }
 
 export function updateClassOnCondition(
@@ -136,10 +138,27 @@ export const formateNumber = (price) =>
 export function setAfterDiscountKey(product) {
   const discountedPrice = getDiscountedPrice(product.price, product.discount);
   const formattedDiscountedPrice = formateNumber(discountedPrice);
-  product.afterDiscount = formattedDiscountedPrice
+  product.afterDiscount = formattedDiscountedPrice;
 }
 
 export function setFormattedPrice(product) {
-  const formattedPrice = formateNumber(product.price)
-  product.price = formattedPrice
+  const formattedPrice = formateNumber(product.price);
+  product.price = formattedPrice;
+}
+
+export function convertToObjKey(str) {
+  const words = str.split(" ");
+  const firstWord = words[0].toLowerCase();
+  const restWords = words.slice(1);
+  const capitalizedWords = restWords.map((word) => capitalize(word));
+  const formattedKey = firstWord + capitalizedWords.join("");
+  return formattedKey;
+}
+
+export function getSubTotal(cartProducts, key = "quantity") {
+  const total = cartProducts?.reduce((acc, product) => {
+    const quantityPrice = product?.[key] * +product?.afterDiscount;
+    return (acc += quantityPrice);
+  }, 0);
+  return total.toFixed(2);
 }

@@ -1,8 +1,10 @@
+import { useSelector } from "react-redux";
 import s from "./PaymentCalculation.module.scss";
+import { getSubTotal } from "../../../Functions/helper";
 
 const PaymentCalculation = () => {
-  const subTotal = 1750;
-  const totalAfterCoupon = subTotal;
+  const { cartProducts } = useSelector((state) => state.products);
+  const subTotal = getSubTotal(cartProducts);
 
   return (
     <div className={s.calculationInfo}>
@@ -18,7 +20,7 @@ const PaymentCalculation = () => {
 
       <div className={s.item}>
         <span>Total:</span>
-        <span>${totalAfterCoupon}</span>
+        <span>${subTotal}</span>
       </div>
     </div>
   );

@@ -7,7 +7,8 @@ const useStoreWebsiteDataToLocalStorage = () => {
   const globalData = useSelector(state => state.global)
 
   useEffect(() => {
-    localStorage.setItem("userData", JSON.stringify(userData))
-  }, [userData])
+    localStorage.setItem("userSliceData", JSON.stringify(userData))
+    localStorage.setItem("productsSliceData", JSON.stringify(productsData))
+  }, [userData, productsData])
 }
 export default useStoreWebsiteDataToLocalStorage

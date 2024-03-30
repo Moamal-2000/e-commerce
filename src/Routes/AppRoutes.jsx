@@ -17,9 +17,9 @@ import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsPage";
 import ProductsCategoryPage from "../Components/ProductsCategory/ProductsCategoryPage";
 import ProductsPage from "../Components/ProductsPage/ProductsPage";
-import RequiredAuth from "../Components/RequiredAuth/RequiredAuth";
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
+import RequiredAuth from "./RequiredAuth";
 import RoutesLayout from "./RoutesLayout";
 
 const ROUTES_CONFIG = [

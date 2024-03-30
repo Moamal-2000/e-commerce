@@ -97,9 +97,11 @@ export const productsData = [
     ],
     rate: 5,
     votes: 88,
+    quantity: 1,
     sold: 105,
     id: uuid(),
   },
+
   {
     shortName: "AK-9000 Keyboard",
     name: "AK-900 Wired Keyboard",
@@ -132,9 +134,11 @@ export const productsData = [
     ],
     rate: 4,
     votes: 75,
+    quantity: 1,
     sold: 210,
     id: uuid(),
   },
+
   {
     shortName: "LCD Monitor",
     name: "IPS LCD Gaming Monitor",
@@ -162,10 +166,12 @@ export const productsData = [
       },
     ],
     rate: 5,
+    quantity: 1,
     votes: 99,
     sold: 463,
     id: uuid(),
   },
+
   {
     shortName: "S-Series Chair",
     name: "S-Series Comfort Chair",
@@ -205,9 +211,11 @@ export const productsData = [
     ],
     rate: 4.5,
     votes: 99,
+    quantity: 1,
     sold: 211,
     id: uuid(),
   },
+
   {
     shortName: "North Coat",
     name: "The north coat",
@@ -238,9 +246,11 @@ export const productsData = [
     ],
     rate: 5,
     votes: 65,
+    quantity: 1,
     sold: 1405,
     id: uuid(),
   },
+
   {
     shortName: "Gucci Bag",
     name: "Gucci duffle bag",
@@ -271,9 +281,11 @@ export const productsData = [
     ],
     rate: 3.5,
     votes: 159,
+    quantity: 1,
     sold: 1533,
     id: uuid(),
   },
+
   {
     shortName: "CPU Cooler",
     name: "RGB liquid CPU Cooler",
@@ -301,9 +313,11 @@ export const productsData = [
     ],
     rate: 4.5,
     votes: 190,
+    quantity: 1,
     sold: 2522,
     id: uuid(),
   },
+
   {
     shortName: "BookShelf",
     name: "Small BookShelf",
@@ -330,9 +344,11 @@ export const productsData = [
     ],
     rate: 5,
     votes: 201,
+    quantity: 1,
     sold: 1602,
     id: uuid(),
   },
+
   {
     shortName: "Dog Food",
     name: "Breed Dry Dog Food",
@@ -363,9 +379,11 @@ export const productsData = [
     ],
     rate: 3,
     votes: 35,
+    quantity: 1,
     sold: 59,
     id: uuid(),
   },
+
   {
     shortName: "Cannon Camera",
     name: "CANON EOS DSLR Camera",
@@ -393,9 +411,11 @@ export const productsData = [
     ],
     rate: 4,
     votes: 94,
+    quantity: 1,
     sold: 83,
     id: uuid(),
   },
+
   {
     shortName: "FHD Laptop",
     name: "ASUS FHD Gaming Laptop",
@@ -423,9 +443,11 @@ export const productsData = [
     ],
     rate: 4.5,
     votes: 1049,
+    quantity: 1,
     sold: 1792,
     id: uuid(),
   },
+
   {
     shortName: "Curology",
     name: "Curology Product Set",
@@ -452,9 +474,11 @@ export const productsData = [
     ],
     rate: 5,
     votes: 325,
+    quantity: 1,
     sold: 100,
     id: uuid(),
   },
+
   {
     shortName: "Electric Car",
     name: "Kids Electric Car",
@@ -485,9 +509,11 @@ export const productsData = [
     ],
     rate: 3,
     votes: 22,
+    quantity: 1,
     sold: 100,
     id: uuid(),
   },
+
   {
     shortName: "Soccer Cleats",
     name: "Jr. Zoom Soccer Cleats",
@@ -519,9 +545,11 @@ export const productsData = [
     ],
     rate: 4,
     votes: 145,
+    quantity: 1,
     sold: 100,
     id: uuid(),
   },
+
   {
     shortName: "GP11 Gamepad",
     name: "GP11 Shooter USB Gamepad",
@@ -549,9 +577,11 @@ export const productsData = [
     ],
     rate: 5,
     votes: 64,
+    quantity: 1,
     sold: 100,
     id: uuid(),
   },
+
   {
     shortName: "Satin Jacket",
     name: "Quilted Satin Jacket",
@@ -591,6 +621,7 @@ export const productsData = [
     ],
     rate: 4.5,
     votes: 55,
+    quantity: 1,
     sold: 100,
     id: uuid(),
   },
