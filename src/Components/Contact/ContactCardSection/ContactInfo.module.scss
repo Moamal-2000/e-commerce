@@ -37,8 +37,25 @@
 
 .content>p>a {
   color: var(--black);
+  position: relative;
+}
 
-  &:hover {
-    text-decoration: underline;
+.content>p>a:hover {
+  color: var(--black);
+
+  &::before {
+    color: var(--black);
+    opacity: 1;
   }
+}
+
+.content>p>a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 100%;
+  background-color: var(--black);
+  opacity: .5;
 }
