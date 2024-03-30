@@ -1,7 +1,7 @@
 import BillingInput from "./BillingInput";
 import s from "./BillingInputs.module.scss";
 
-const BillingInputs = ({ inputsData: { values, handleChange } }) => {
+const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
   const {
     firstName,
     companyName,
@@ -10,7 +10,7 @@ const BillingInputs = ({ inputsData: { values, handleChange } }) => {
     city,
     phoneNumber,
     email,
-  } = values;
+  } = billingValues;
 
   return (
     <div className={s.inputs}>

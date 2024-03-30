@@ -1,16 +1,37 @@
 import { useState } from "react";
 
-const useFormData = ({ initialValues, onSubmit }) => {
-  const [values, setValues] = useState(initialValues);
+const useFormData = ({
+  initialValues,
+  onSubmit,
+  storeInLocalStorage,
+  localStorageKey,
+}) => {
+  const valuesLocal = localStorage.getItem(localStorageKey);
+  const setValuesFromLocal = valuesLocal && storeInLocalStorage;
 
-  const handleChange = (event) => {
+  const [values, setValues] = useState(
+    setValuesFromLocal ? JSON.parse(valuesLocal) : initialValues
+  );
+
+  function handleChange(event) {
     const { name, value } = event.target;
 
-    setValues((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
-  };
+    const updateValues = (prevValues) => {
+      const updatedValues = {
+        ...prevValues,
+        [name]: value,
+      };
+
+      if (storeInLocalStorage) storeValuesToLocalStorage(updatedValues);
+      return updatedValues;
+    };
+
+    setValues(updateValues);
+  }
+
+  function storeValuesToLocalStorage(getValues) {
+    localStorage.setItem(localStorageKey, JSON.stringify(getValues));
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();

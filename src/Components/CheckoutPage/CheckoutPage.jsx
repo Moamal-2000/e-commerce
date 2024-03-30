@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useSelector } from "react-redux";
 import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 import useFormData from "../../Hooks/Helper/useFormData";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
@@ -7,8 +8,8 @@ import s from "./CheckoutPage.module.scss";
 import PaymentSection from "./PaymentSection/PaymentSection";
 
 const CheckoutPage = () => {
-  useScrollOnMount(160);
-  const { values, handleChange } = useFormData({
+  const { saveBillingInfoToLocal } = useSelector((state) => state.products);
+  const { values: billingValues, handleChange } = useFormData({
     initialValues: {
       firstName: "",
       companyName: "",
@@ -18,7 +19,9 @@ const CheckoutPage = () => {
       phoneNumber: "",
       email: "",
     },
-    onSubmit: handleSubmit,
+    onSubmit: handleSubmitPayment,
+    storeInLocalStorage: saveBillingInfoToLocal,
+    localStorageKey: "billingInfo"
   });
 
   const PAGE_HISTORY = ["Account", "CheckOut"];
@@ -29,9 +32,14 @@ const CheckoutPage = () => {
     },
   ];
 
-  function handleSubmit(e) {
+  function handleSubmitPayment(e) {
     e.preventDefault();
+
+    if (!saveBillingInfoToLocal)
+    localStorage.removeItem("billingInfo");
   }
+
+  useScrollOnMount(160);
 
   return (
     <>
@@ -43,9 +51,9 @@ const CheckoutPage = () => {
         <main className={s.checkoutPage} id="checkout-page">
           <PagesHistory history={PAGE_HISTORY} historyPaths={HISTORY_PATHS} />
 
-          <form method="POST">
+          <form method="POST" onSubmit={handleSubmitPayment}>
             <section className={s.checkoutPageContent}>
-              <BillingDetails inputsData={{ values, handleChange }} />
+              <BillingDetails inputsData={{ billingValues, handleChange }} />
               <PaymentSection />
             </section>
           </form>

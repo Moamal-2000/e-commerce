@@ -8,6 +8,7 @@ const initialState = productsDataLocal
       favoritesProducts: [],
       cartProducts: [],
       wishList: [],
+      saveBillingInfoToLocal: false,
     };
 
 const productsSlice = createSlice({
