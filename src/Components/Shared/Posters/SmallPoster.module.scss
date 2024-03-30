@@ -51,6 +51,7 @@
   z-index: 2;
   width: 190px;
   height: 221px;
+  user-select: none;
   filter: grayscale(1);
   -webkit-filter: grayscale(1);
   -ms-filter: grayscale(1);
@@ -118,4 +119,9 @@
   height: 2px;
   background-color: var(--secondary-white);
   transition: height .3s, opacity .2s .2s;
+}
+
+.content :where(b, p)::selection,
+.shopNow::selection {
+  background-color: var(--white) !important;
 }

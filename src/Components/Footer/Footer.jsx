@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className={s.footer}>
       <div className="container">
-        <div className={s.sections}>
+        <section className={s.sections}>
           <section className={s.section1}>
             <b>
               <Link to="/">Exclusive</Link>
@@ -152,7 +152,7 @@ const Footer = () => {
               </a>
             </div>
           </section>
-        </div>
+        </section>
 
         <p className={s.copyRights}>
           <span>Website designed by</span>

@@ -9,6 +9,11 @@
   font-family: "Poppins";
 }
 
+::selection {
+  color: var(--black);
+  background-color: rgba(255, 255, 0, .8);
+}
+
 html {
   scroll-behavior: smooth;
 }

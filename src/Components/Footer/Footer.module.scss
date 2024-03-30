@@ -177,6 +177,7 @@
   max-width: 76px;
   max-height: 76px;
   margin-right: 16px;
+  user-select: none;
 }
 
 .downloadButtons>button {
@@ -243,4 +244,10 @@
   &:hover {
     color: var(--white);
   }
+}
+
+.sections>section :where(span, b, p, li, a)::selection,
+.copyRights:where(span, a)::selection,
+.section1 .input>input::selection {
+  background-color: var(--white) !important;
 }

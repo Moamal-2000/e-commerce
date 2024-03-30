@@ -5,6 +5,7 @@
   left: 4px;
   display: flex;
   align-items: center;
+  user-select: none;
   padding: 4px 10px;
   outline-offset: -2px;
   transition: outline-offset .2s, outline-color .2s .1s;

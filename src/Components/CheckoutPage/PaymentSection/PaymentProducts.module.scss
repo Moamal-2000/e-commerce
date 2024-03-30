@@ -20,5 +20,6 @@
 .wrapper>img {
   width: 54px;
   height: 54px;
+  user-select: none;
   object-fit: contain;
 }
