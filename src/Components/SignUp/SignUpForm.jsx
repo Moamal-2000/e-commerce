@@ -6,6 +6,8 @@ import { newSignUp, setLoginData } from "../../Features/userSlice";
 import { simpleValidationCheck } from "../../Functions/componentsFunctions";
 import { compareDataToObjValue, uniqueArr } from "../../Functions/helper";
 import s from "./SignUpForm.module.scss";
+import "./SignUpWithGoogle/SignUpWithGoogle.css";
+import { openSignWithGooglePopUp } from "./SignUpWithGoogle/SignUpWithGooglePopup";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
@@ -14,6 +16,7 @@ const SignUpForm = () => {
   const username = useRef("");
   const emailOrPhone = useRef("");
   const password = useRef("");
+  let isSignUpWithGooglePressed = false;
 
   function signUp(e) {
     e.preventDefault();
@@ -41,6 +44,30 @@ const SignUpForm = () => {
       dispatch(setLoginData(formData));
       navigateTo("/", { replace: true });
     }
+  }
+
+  function handleSignUpWithGoogle() {
+    if (isSignUpWithGooglePressed) return;
+    isSignUpWithGooglePressed = true;
+
+    openSignWithGooglePopUp();
+    setDefaultSignUpData();
+  }
+
+  function setDefaultSignUpData() {
+    const defaultLoginData = {
+      username: "Lily Watson",
+      emailOrPhone: "lily.wastons@gmail.com",
+      password: "random-password1234",
+      isSignIn: true,
+    };
+
+    setTimeout(() => {
+      navigateTo("/");
+      isSignUpWithGooglePressed = false;
+
+      setTimeout(() => dispatch(setLoginData(defaultLoginData)), 500);
+    }, 2500);
   }
 
   return (
@@ -74,7 +101,11 @@ const SignUpForm = () => {
           Create Account
         </button>
 
-        <button type="button" className={s.signUpBtn}>
+        <button
+          type="button"
+          className={s.signUpBtn}
+          onClick={handleSignUpWithGoogle}
+        >
           <img src={googleIcon} alt="Colored Google icon" />
           <span>Sign up with Google</span>
         </button>

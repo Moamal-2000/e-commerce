@@ -1,75 +1,81 @@
 @import "../../../Styles/mixins.scss";
 
-.signUp {
+#popup-root {
+  background-color: red;
+}
+
+#popup-root .signUp {
   width: 358px;
   margin: 60px auto;
   border: solid 2px #dadce0;
   border-radius: 10px;
 }
 
-.signUp>header {
+#popup-root .signUp>header {
   border-bottom: solid 2px #dadce0;
   padding: 8px 16px;
   display: flex;
   align-items: center;
 }
 
-.signUp>header>img {
+#popup-root .signUp>header>img {
   width: 14px;
   height: 14px;
   user-select: none;
 }
 
-.signUp>header>p {
+#popup-root .signUp>header>p {
   color: #5F6368;
   font-size: .9rem;
   margin-left: 10px;
 }
 
-.content {
+#popup-root .content {
   margin: 34px 0;
   padding: 0 40px;
 }
 
-.firstContent {
+#popup-root .firstContent {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 24px;
 }
 
-.icon {
+#popup-root .icon {
   padding: 20px;
   background-color: #fff0f0;
   border-radius: 6px;
   width: 37px;
   height: 37px;
-  @include center-x-y;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
 }
 
-.firstContent>h2 {
+#popup-root .firstContent>h2 {
   margin-bottom: 8px;
   color: #202124;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
-.firstContent>p {
+#popup-root .firstContent>p {
   color: #202124;
   font-weight: 400;
 }
 
-.firstContent>p>span {
+#popup-root .firstContent>p>span {
   color: #1A73E8;
   font-weight: 500;
 }
 
-.choiceAccount {
+#popup-root .choiceAccount {
   margin-bottom: 32px;
 }
 
-.account {
+#popup-root .account {
   display: flex;
   align-items: center;
   padding: 14px 0;
@@ -77,10 +83,12 @@
   cursor: pointer;
 }
 
-.avatar {
+#popup-root .avatar {
   background-color: #7B1FA2;
   color: var(--white);
-  @include center-x-y;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   font-size: .9rem;
   user-select: none;
@@ -88,59 +96,59 @@
   height: 28px;
 }
 
-.avatar:has(svg, img) {
+#popup-root .avatar:has(svg, img) {
   background-color: transparent;
 }
 
-.account .info {
+#popup-root .account .info {
   margin-left: 10px;
 }
 
-.account .info>h3 {
+#popup-root .account .info>h3 {
   color: #3C4043;
   font-size: .9rem;
   font-weight: 500;
 }
 
-.account .info>p {
+#popup-root .account .info>p {
   color: #5F6368;
   font-size: .8rem;
   font-weight: 400;
 }
 
-.content .description {
+#popup-root .content .description {
   font-size: .8rem;
   padding: 9px 0;
 }
 
-.content .description>a {
+#popup-root .content .description>a {
   color: #1A73E8;
   font-weight: 500;
 }
 
-.signUp>footer {
+#popup-root .signUp>footer {
   display: flex;
   align-items: center;
   padding: 7px;
 }
 
-.signUp>footer>select {
+#popup-root .signUp>footer>select {
   border: none;
   outline: none;
   font-size: .7rem;
   cursor: pointer;
 }
 
-.signUp>footer ul {
+#popup-root .signUp>footer ul {
   display: flex;
   align-items: center;
 }
 
-.signUp>footer ul li {
+#popup-root .signUp>footer ul li {
   scale: .9;
 }
 
-.signUp>footer ul li a {
+#popup-root .signUp>footer ul li a {
   color: #757575;
   font-size: .7rem;
   font-weight: 500;
