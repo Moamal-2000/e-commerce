@@ -18,15 +18,13 @@ const SignUpForm = () => {
   let isSignUpWithGooglePressed = false;
 
   function signUp(e) {
-    e.preventDefault();
     const inputs = e.target.querySelectorAll("input");
-
     const formDataObj = new FormData(e.target);
     const formData = {};
 
-    for (let pair of formDataObj.entries()) {
-      formData[pair[0]] = pair[1];
-    }
+    // Set keys and values from formDataObj to formData
+    for (let pair of formDataObj.entries()) formData[pair[0]] = pair[1];
+    e.preventDefault();
 
     const isFormValid = simpleValidationCheck(inputs);
 
@@ -78,20 +76,23 @@ const SignUpForm = () => {
         <input
           type="text"
           name="username"
-          placeholder="Name"
+          placeholder="Full Name"
           onChange={(e) => (username.current = e.target.value)}
+          required
         />
         <input
           type="text"
           name="emailOrPhone"
           placeholder="Email or Phone Number"
           onChange={(e) => (emailOrPhone.current = e.target.value)}
+          required
         />
         <input
           type="password"
           name="password"
           placeholder="Password"
           onChange={(e) => (password.current = e.target.value)}
+          required
         />
       </div>
 
