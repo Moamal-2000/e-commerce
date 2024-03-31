@@ -23,7 +23,7 @@ const ProductDetailsPage = () => {
     },
     {
       index: 1,
-      path: `/category/?type=${category}`,
+      path: `/category?type=${category}`,
     },
   ];
 

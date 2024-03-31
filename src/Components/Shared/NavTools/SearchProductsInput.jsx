@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "../../../Data/productsData";
@@ -49,10 +49,6 @@ const SearchProductsInput = () => {
     dispatch(action);
     navigateTo("/search?query=" + searchQuery);
   }
-
-  useEffect(() => {
-    updateSearchProducts("useEffect");
-  }, []);
 
   return (
     <form

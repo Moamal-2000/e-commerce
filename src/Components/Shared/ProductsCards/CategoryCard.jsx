@@ -8,7 +8,7 @@ const CategoryCard = ({ categoryData }) => {
   const navigateTo = useNavigate();
 
   function navigateToCategory() {
-    navigateTo(`/category/?type=${categoryType}`);
+    navigateTo(`/category?type=${categoryType}`);
   }
 
   return (

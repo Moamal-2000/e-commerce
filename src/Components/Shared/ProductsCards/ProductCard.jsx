@@ -80,7 +80,7 @@ const ProductCard = ({
   }
 
   function navigateToProductDetails() {
-    navigateTo(`/details/?product=${name.toLowerCase()}`);
+    navigateTo(`/details?product=${name.toLowerCase()}`);
   }
 
   function addProductToWishList() {
