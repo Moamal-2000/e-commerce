@@ -6,7 +6,6 @@ import { newSignUp, setLoginData } from "../../Features/userSlice";
 import { simpleValidationCheck } from "../../Functions/componentsFunctions";
 import { compareDataToObjValue, uniqueArr } from "../../Functions/helper";
 import s from "./SignUpForm.module.scss";
-import "./SignUpWithGoogle/SignUpWithGoogle.css";
 import { openSignWithGooglePopUp } from "./SignUpWithGoogle/SignUpWithGooglePopup";
 
 const SignUpForm = () => {

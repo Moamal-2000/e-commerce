@@ -2,7 +2,6 @@ import { googleIcon } from "../../../Assets/Images/Images";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 
 const SignUpWithGoogle = () => {
-
   return (
     <div className="signUp">
       <header>
@@ -56,9 +55,7 @@ const SignUpWithGoogle = () => {
 
       <footer>
         <select defaultValue="english" name="lang">
-          <option value="english" selected>
-            English (United States)
-          </option>
+          <option value="english">English (United States)</option>
           <option value="russia">Russian</option>
           <option value="arabic">Arabic</option>
         </select>

@@ -1,13 +1,10 @@
 import ReactDOM from "react-dom/client";
 import SignUpWithGoogle from "./SignUpWithGoogle";
-import "./SignUpWithGoogle.css";
 
 export function openSignWithGooglePopUp() {
-  const popupWindow = window.open(
-    "",
-    "_blank",
-    "width=400,height=500,left=300,top=120"
-  );
+  const popupFeatures = "width=400,height=500,left=300,top=120";
+  const popupWindow = window.open("", "_blank", popupFeatures);
+
   popupWindow.document.documentElement.innerHTML = popupStyles;
   popupWindow.document.body.innerHTML = `<div id="popup-root"></div>`;
 
@@ -111,9 +108,13 @@ a {
 #popup-root .account {
   display: flex;
   align-items: center;
-  padding: 14px 0;
+  padding: 14px 10px;
   border-bottom: solid 2px #dadce0;
   cursor: pointer;
+}
+
+#popup-root .account:hover {
+  background-color: #E8F0FE;
 }
 
 #popup-root .avatar {
