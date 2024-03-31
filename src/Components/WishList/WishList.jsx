@@ -1,14 +1,23 @@
 import { Helmet } from "react-helmet-async";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { updateState } from "../../Features/productsSlice";
+import { uniqueArr } from "../../Functions/helper";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import ForYouProducts from "./ForYouProducts";
 import s from "./WishList.module.scss";
 import WishProducts from "./WishProducts";
 
 const WishList = () => {
-  const { wishList } = useSelector((state) => state.products);
+  const { wishList, cartProducts } = useSelector((state) => state.products);
   const lengthOfWishList = wishList.length;
+  const dispatch = useDispatch();
+
+  function moveAllToCart() {
+    const uniqueCartProducts = uniqueArr([...cartProducts, ...wishList]);
+    dispatch(updateState({ key: "cartProducts", value: uniqueCartProducts }));
+    dispatch(updateState({ key: "wishList", value: [] }));
+  }
 
   return (
     <>
@@ -22,7 +31,9 @@ const WishList = () => {
             <header>
               <label htmlFor="wishlist">WishList ({lengthOfWishList})</label>
 
-              <button type="button">Move All To Bag</button>
+              <button type="button" onClick={moveAllToCart}>
+                Move All To Bag
+              </button>
             </header>
 
             <WishProducts />
