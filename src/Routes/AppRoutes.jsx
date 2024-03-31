@@ -21,6 +21,7 @@ import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 import RequiredAuth from "./RequiredAuth";
 import RoutesLayout from "./RoutesLayout";
+import SignUpWithGoogle from "../Components/SignUp/SignUpWithGoogle/SignUpWithGoogle";
 
 const ROUTES_CONFIG = [
   { path: "/", element: <Home /> },
@@ -37,6 +38,7 @@ const ROUTES_CONFIG = [
   { path: "/login", element: <LogIn /> },
   { path: "/profile", element: <AccountPage /> },
   { path: "*", element: <NotFoundPage /> },
+  { path: "/google", element: <SignUpWithGoogle /> },
 ];
 
 const AppRoutes = () => {

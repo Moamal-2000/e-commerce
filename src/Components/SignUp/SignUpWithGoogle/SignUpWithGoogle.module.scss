@@ -1,0 +1,148 @@
+@import "../../../Styles/mixins.scss";
+
+.signUp {
+  width: 358px;
+  margin: 60px auto;
+  border: solid 2px #dadce0;
+  border-radius: 10px;
+}
+
+.signUp>header {
+  border-bottom: solid 2px #dadce0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.signUp>header>img {
+  width: 14px;
+  height: 14px;
+  user-select: none;
+}
+
+.signUp>header>p {
+  color: #5F6368;
+  font-size: .9rem;
+  margin-left: 10px;
+}
+
+.content {
+  margin: 34px 0;
+  padding: 0 40px;
+}
+
+.firstContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.icon {
+  padding: 20px;
+  background-color: #fff0f0;
+  border-radius: 6px;
+  width: 37px;
+  height: 37px;
+  @include center-x-y;
+  margin-bottom: 16px;
+}
+
+.firstContent>h2 {
+  margin-bottom: 8px;
+  color: #202124;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.firstContent>p {
+  color: #202124;
+  font-weight: 400;
+}
+
+.firstContent>p>span {
+  color: #1A73E8;
+  font-weight: 500;
+}
+
+.choiceAccount {
+  margin-bottom: 32px;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: solid 2px #dadce0;
+  cursor: pointer;
+}
+
+.avatar {
+  background-color: #7B1FA2;
+  color: var(--white);
+  @include center-x-y;
+  border-radius: 50%;
+  font-size: .9rem;
+  user-select: none;
+  width: 28px;
+  height: 28px;
+}
+
+.avatar:has(svg, img) {
+  background-color: transparent;
+}
+
+.account .info {
+  margin-left: 10px;
+}
+
+.account .info>h3 {
+  color: #3C4043;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.account .info>p {
+  color: #5F6368;
+  font-size: .8rem;
+  font-weight: 400;
+}
+
+.content .description {
+  font-size: .8rem;
+  padding: 9px 0;
+}
+
+.content .description>a {
+  color: #1A73E8;
+  font-weight: 500;
+}
+
+.signUp>footer {
+  display: flex;
+  align-items: center;
+  padding: 7px;
+}
+
+.signUp>footer>select {
+  border: none;
+  outline: none;
+  font-size: .7rem;
+  cursor: pointer;
+}
+
+.signUp>footer ul {
+  display: flex;
+  align-items: center;
+}
+
+.signUp>footer ul li {
+  scale: .9;
+}
+
+.signUp>footer ul li a {
+  color: #757575;
+  font-size: .7rem;
+  font-weight: 500;
+  padding: 10px;
+}

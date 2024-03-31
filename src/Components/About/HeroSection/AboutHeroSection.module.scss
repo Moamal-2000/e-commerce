@@ -71,6 +71,7 @@
   flex-grow: 1;
   width: 700px;
   height: 708px;
+  user-select: none;
 }
 
 @include medium {
