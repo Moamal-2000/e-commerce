@@ -164,7 +164,7 @@ const ProductCard = ({
                 aria-label="Add to wishlist"
               >
                 <SvgIcon name="save" />
-                <ToolTip top="18px" left="-40px" content="Wishlist" />
+                <ToolTip top="18px" left="-41px" content="Wishlist" />
               </button>
             )}
           </div>
