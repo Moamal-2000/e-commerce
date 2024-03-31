@@ -173,3 +173,7 @@ export function getSubTotal(cartProducts, key = "quantity") {
   }, 0);
   return total.toFixed(2);
 }
+
+export function searchByObjKey({ data, key, query }) {
+  return data.filter((item) => item[key].includes(query));
+}

@@ -23,7 +23,7 @@
   }
 }
 
-.searchContainer input {
+.searchContainer>input {
   all: unset;
   font-size: .75rem;
   font-weight: 400;
@@ -31,7 +31,11 @@
   width: 100%;
 }
 
-.searchContainer svg {
+.searchContainer>button {
+  all: unset;
+}
+
+.searchContainer>button>svg {
   width: 18px;
   height: 18px;
 }
