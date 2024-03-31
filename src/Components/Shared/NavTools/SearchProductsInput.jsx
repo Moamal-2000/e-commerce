@@ -1,9 +1,9 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "../../../Data/productsData";
 import { updateState } from "../../../Features/productsSlice";
-import { searchByObjKey } from "../../../Functions/helper";
+import { searchByObjectKey } from "../../../Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./SearchProductsInput.module.scss";
 
@@ -11,6 +11,7 @@ const SearchProductsInput = () => {
   const searchRef = useRef("");
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
+  const [searchParams] = useSearchParams();
 
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
@@ -23,31 +24,35 @@ const SearchProductsInput = () => {
     const isEmptyQuery = searchRef.current.length === 0;
     if (isEmptyQuery) return;
 
-    updateSearchProducts();
+    updateSearchProducts("event");
   }
 
-  function updateSearchProducts() {
-    const searchQuery = searchRef.current;
+  function updateSearchProducts(calledFrom) {
+    const queryParam = searchParams.get("query");
+    const searchQuery = calledFrom === "event" ? searchRef.current : queryParam;
 
-    let productsFound = searchByObjKey({
+    let productsFound = searchByObjectKey({
       data: productsData,
-      key: "name",
+      key: "shortName",
       query: searchQuery,
     });
 
     if (productsFound.length === 0) {
-      productsFound = searchByObjKey({
+      productsFound = searchByObjectKey({
         data: productsData,
         key: "category",
         query: searchQuery,
       });
     }
 
-    if (productsFound.length > 0) {
-      dispatch(updateState({ key: "searchProducts", value: productsFound }));
-      navigateTo("/search?query=" + searchQuery);
-    }
+    const action = updateState({ key: "searchProducts", value: productsFound });
+    dispatch(action);
+    navigateTo("/search?query=" + searchQuery);
   }
+
+  useEffect(() => {
+    updateSearchProducts("useEffect");
+  }, []);
 
   return (
     <form

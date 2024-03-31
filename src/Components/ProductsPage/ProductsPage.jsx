@@ -5,7 +5,8 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./ProductsPage.module.scss";
 
 const ProductsPage = () => {
-  useScrollOnMount(200)
+  useScrollOnMount(200);
+
   return (
     <div className="container">
       <main className={s.productsPage}>

@@ -6,7 +6,7 @@ const initialState = productsDataLocal
   ? JSON.parse(productsDataLocal)
   : {
       favoritesProducts: [],
-      searchProduct: [],
+      searchProducts: [],
       cartProducts: [],
       wishList: [],
       saveBillingInfoToLocal: false,

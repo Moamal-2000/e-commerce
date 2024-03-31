@@ -10,6 +10,7 @@ import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
 import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsPage";
 import ProductsCategoryPage from "../Components/ProductsCategory/ProductsCategoryPage";
 import ProductsPage from "../Components/ProductsPage/ProductsPage";
+import SearchPage from "../Components/Search/SearchPage";
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
 
@@ -27,5 +28,6 @@ export const ROUTES_CONFIG = [
   { path: "/signup", element: <SignUp /> },
   { path: "/login", element: <LogIn /> },
   { path: "/profile", element: <AccountPage /> },
+  { path: "/search", element: <SearchPage /> },
   { path: "*", element: <NotFoundPage /> },
 ];
