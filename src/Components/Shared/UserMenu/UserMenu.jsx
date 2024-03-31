@@ -1,9 +1,13 @@
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import useSignOut from "../../../Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./UserMenu.module.scss";
+import UserMenuItemWithCount from "./UserMenuItemWithCount";
 
-const UserMenu = ({ isActive, toggler }) => {
+const UserMenu = ({ isActive }) => {
+  const { wishList } = useSelector((state) => state.products);
+  const wishListLength = wishList.length;
   const activeClass = isActive ? s.active : "";
   const navigateTo = useNavigate();
   const signOut = useSignOut();
@@ -36,8 +40,13 @@ const UserMenu = ({ isActive, toggler }) => {
       </Link>
 
       <Link to="/wishlist">
-        <SvgIcon name="save" />
-        <span>Wishlist</span>
+        <UserMenuItemWithCount
+          props={{
+            iconName: "save",
+            title: "Wishlist",
+            countLength: wishListLength,
+          }}
+        />
       </Link>
 
       <Link onClick={handleSignOut}>

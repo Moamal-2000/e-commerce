@@ -15,19 +15,22 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
 
       <div className={s.tools}>
         <IconWithCount
-          visibility={showHeart}
-          iconName="heart"
-          routePath="/favorites"
-          countLength={favoritesProducts.length}
-          title="favorite"
+          props={{
+            visibility: showHeart,
+            iconName: "heart",
+            routePath: "/favorites",
+            countLength: favoritesProducts.length,
+            title: "favorite",
+          }}
         />
-
         <IconWithCount
-          visibility={showCart}
-          iconName="cart3"
-          routePath="/cart"
-          countLength={cartProducts.length}
-          title="cart"
+          props={{
+            visibility: showCart,
+            iconName: "cart3",
+            routePath: "/cart",
+            countLength: cartProducts.length,
+            title: "cart",
+          }}
         />
 
         <UserMenuIcon visibility={showUser} />

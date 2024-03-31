@@ -1,0 +1,50 @@
+.link {
+  border: none;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.wrapper {
+  width: inherit;
+  height: inherit;
+}
+
+.link svg {
+  width: inherit;
+  height: inherit;
+  fill: var(--white);
+}
+
+.count {
+  display: inline-block;
+  position: absolute;
+  right: 4px;
+  top: -12px;
+  background-color: var(--dark-tomato);
+  color: var(--white) !important;
+  border-radius: 50%;
+  font-size: .6rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 2;
+  transform: scale(.6);
+}
+
+.link .title {
+  color: var(--white);
+  font-size: .85rem;
+  margin-left: 8px;
+}

@@ -4,11 +4,7 @@ import ToolTip from "../MiniComponents/ToolTip";
 import s from "./IconWithCount.module.scss";
 
 const IconWithCount = ({
-  iconName,
-  visibility,
-  routePath,
-  countLength,
-  title,
+  props: { iconName, visibility, routePath, countLength, title },
 }) => {
   const countNoun = countLength > 99 ? "99+" : countLength;
 

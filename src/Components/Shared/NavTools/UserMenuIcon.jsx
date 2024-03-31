@@ -1,7 +1,7 @@
 import useToggle from "../../../Hooks/Helper/useToggle";
-import UserMenu from "../MidComponents/UserMenu";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
+import UserMenu from "../UserMenu/UserMenu";
 import s from "./UserMenuIcon.module.scss";
 
 const UserMenuIcon = ({ visibility }) => {
