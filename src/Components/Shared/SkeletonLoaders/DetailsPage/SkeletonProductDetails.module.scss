@@ -1,0 +1,139 @@
+@import "../../../../Styles/mixins.scss";
+
+.skeletonDetailsSection {
+  user-select: none;
+  display: flex;
+  gap: 80px;
+  margin: var(--page-margin);
+  height: 750px;
+  width: 100%;
+  border: solid;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+
+@include large {
+  .skeletonDetailsSection {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@include small {
+  .skeletonDetailsSection {
+    gap: 40px;
+  }
+}
+
+.skeletonDetailsSection *:empty {
+  background: var(--skeleton-color1);
+  background-position: -500px 0;
+  animation: skeletonShine 1s linear 0s infinite normal forwards;
+  background-image: linear-gradient(135deg, var(--skeleton-color1) 0%, var(--skeleton-color2) 20%, var(--skeleton-color1) 40%, var(--skeleton-color1) 100%);
+  background-repeat: no-repeat;
+  background-size: 1000px 100%;
+}
+
+.skeletonDetailsSection .details {
+  margin-top: 19px;
+  position: relative;
+  left: -2px;
+}
+
+@include large {
+  .skeletonDetailsSection .details {
+    width: 100%;
+  }
+}
+
+.productOptions {
+  margin-top: 60px;
+}
+
+.colorsSection {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.colorText {
+  width: 70px;
+  height: 16px;
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.colors .color {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.sizesSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.sizeText {
+  width: 45px;
+  height: 16px;
+  margin-right: 32px;
+}
+
+.sizes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sizes .size {
+  width: 32px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 40px;
+}
+
+.customInput {
+  width: 160px;
+  height: 45px;
+  border-radius: 5px;
+}
+
+.buyNowButton {
+  border: none;
+  cursor: auto;
+  width: 164px;
+  height: 45px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.favButton {
+  border: none;
+  cursor: auto;
+  width: 45px;
+  height: 45px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+@keyframes skeletonShine {
+  to {
+    background-position: 500px 0;
+  }
+}
