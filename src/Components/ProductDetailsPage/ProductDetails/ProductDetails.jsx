@@ -8,6 +8,7 @@ import ProductFeatures from "./ProductFeatures";
 import ProductFirstInfos from "./ProductFirstInfos";
 import ProductSizes from "./ProductSizes";
 import SkeletonProductPreview from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductPreview";
+import SkeletonProductFirstInfos from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductFirstInfos";
 
 const ProductDetails = ({ data }) => {
   const { previewImg, isZoomInPreviewActive } = useSelector(
@@ -49,6 +50,16 @@ const ProductDetails = ({ data }) => {
 
       <section className={s.skeletonDetailsSection}>
         <SkeletonProductPreview />
+
+        <section className={s.details}>
+          <SkeletonProductFirstInfos />
+
+          {/* 
+          <ProductColorsSection data={data} />
+          <ProductSizes data={data} />
+          <ProductDealingControls />
+          <ProductFeatures /> */}
+        </section>
       </section>
     </>
   );

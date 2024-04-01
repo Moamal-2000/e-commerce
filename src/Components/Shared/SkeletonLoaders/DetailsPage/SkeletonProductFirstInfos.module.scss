@@ -1,0 +1,69 @@
+@import "../../../../Styles/mixins.scss";
+
+.productName {
+  display: block;
+  width: 350px;
+  height: 20px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.rateAndReviews {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+@include very-small {
+  .rateAndReviews {
+    flex-direction: column;
+  }
+}
+
+.rateAndReviews .stars {
+  display: flex;
+  align-items: center;
+  gap: 7.1px;
+}
+
+.stars .star {
+  width: 19px;
+  height: 22px;
+  border-radius: 50%;
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.reviews {
+  width: 190px;
+  height: 16px;
+}
+
+.price {
+  display: block;
+  margin-bottom: 27px;
+  width: 100px;
+  height: 24px;
+}
+
+.description {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.description>p {
+  width: 100%;
+  height: 16px;
+
+  &:last-child {
+    width: 80%;
+  }
+}
+
+@include large {
+  .description {
+    max-width: 800px;
+  }
+}
