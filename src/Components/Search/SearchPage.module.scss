@@ -5,5 +5,27 @@
 }
 
 .products {
-  margin: var(--page-margin);
+  width: 100%;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 60px 0 50px;
+}
+
+@media (max-width: 1300px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include medium {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
 }

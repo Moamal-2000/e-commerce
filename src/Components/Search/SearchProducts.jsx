@@ -7,14 +7,14 @@ const SearchProducts = () => {
   const isFoundResults = searchProducts.length > 0;
 
   return (
-    <div className={s.products}>
+    <>
       {isFoundResults &&
         searchProducts.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
 
-        {!isFoundResults && <p>No results found.</p>}
-    </div>
+      {!isFoundResults && <p className={s.message}>No results found.</p>}
+    </>
   );
 };
 export default SearchProducts;

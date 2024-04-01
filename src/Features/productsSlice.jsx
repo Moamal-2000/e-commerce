@@ -10,6 +10,7 @@ const initialState = productsDataLocal
       cartProducts: [],
       wishList: [],
       saveBillingInfoToLocal: false,
+      loadingSearchProducts: true,
     };
 
 const productsSlice = createSlice({

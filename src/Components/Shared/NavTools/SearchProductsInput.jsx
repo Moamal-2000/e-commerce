@@ -45,6 +45,10 @@ const SearchProductsInput = () => {
       });
     }
 
+    if (productsFound.length > 0) {
+      dispatch(updateState({ key: "loadingSearchProducts", value: true }));
+    }
+
     const action = updateState({ key: "searchProducts", value: productsFound });
     dispatch(action);
     navigateTo("/search?query=" + searchQuery);

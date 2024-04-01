@@ -188,3 +188,7 @@ export function isQueryContainedInItem(query, item) {
 export function searchByObjectKey({ data, key, query }) {
   return data.filter((item) => isQueryContainedInItem(query, item?.[key]));
 }
+
+export function random(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
