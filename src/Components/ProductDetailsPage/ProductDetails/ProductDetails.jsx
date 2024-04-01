@@ -7,6 +7,7 @@ import s from "./ProductDetails.module.scss";
 import ProductFeatures from "./ProductFeatures";
 import ProductFirstInfos from "./ProductFirstInfos";
 import ProductSizes from "./ProductSizes";
+import SkeletonProductPreview from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductPreview";
 
 const ProductDetails = ({ data }) => {
   const { previewImg, isZoomInPreviewActive } = useSelector(
@@ -26,24 +27,30 @@ const ProductDetails = ({ data }) => {
   }
 
   return (
-    <section className={s.detailsSection}>
-      <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
+    <>
+      <section className={s.detailsSection}>
+        <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
-      <section className={s.details}>
-        <div className={`${s.zoomInPreview} ${activeClass}`}>
-          <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
-        </div>
+        <section className={s.details}>
+          <div className={`${s.zoomInPreview} ${activeClass}`}>
+            <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
+          </div>
 
-        <ProductFirstInfos data={data} />
+          <ProductFirstInfos data={data} />
 
-        <div className={s.horizontalLine} />
+          <div className={s.horizontalLine} />
 
-        <ProductColorsSection data={data} />
-        <ProductSizes data={data} />
-        <ProductDealingControls />
-        <ProductFeatures />
+          <ProductColorsSection data={data} />
+          <ProductSizes data={data} />
+          <ProductDealingControls />
+          <ProductFeatures />
+        </section>
       </section>
-    </section>
+
+      <section className={s.skeletonDetailsSection}>
+        <SkeletonProductPreview />
+      </section>
+    </>
   );
 };
 export default ProductDetails;

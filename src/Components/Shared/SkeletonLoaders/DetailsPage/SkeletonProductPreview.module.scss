@@ -1,0 +1,91 @@
+@import "../../../../Styles/mixins.scss";
+
+.images {
+  display: flex;
+  gap: 30px;
+  user-select: none;
+}
+
+@media (max-width: 1400px) {
+  .images {
+    flex-direction: column-reverse;
+  }
+}
+
+@include small {
+  .images {
+    width: 100%;
+  }
+}
+
+.otherImages {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 540px;
+}
+
+@media (max-width: 1400px) {
+  .otherImages {
+    height: auto;
+  }
+}
+
+@media (max-width: 1400px) {
+  .otherImages {
+    max-width: 500px;
+    flex-direction: row;
+  }
+}
+
+@include small {
+  .otherImages {
+    max-width: 100%;
+  }
+}
+
+.otherImages .image {
+  @include center-x-y;
+  aspect-ratio: 1/1;
+  width: 125px;
+  cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .otherImages .image {
+    width: calc((25% - 14px) + (14px / 4));
+    height: auto;
+  }
+}
+
+.previewImgHolder {
+  width: 500px;
+  height: 540px;
+  max-height: 540px;
+  min-height: 540px;
+  border-radius: 4px;
+  flex: 1;
+}
+
+@include large {
+  .previewImgHolder {
+    height: 500px;
+    max-height: 500px;
+    min-height: 500px;
+    @include center-x-y;
+  }
+}
+
+@media (max-width: 480px) {
+  .previewImgHolder {
+    height: 410px;
+    max-height: 410px;
+    min-height: 410px;
+  }
+}
+
+@include small {
+  .previewImgHolder {
+    width: 100%;
+  }
+}
