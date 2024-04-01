@@ -1,0 +1,145 @@
+@import "../Styles/mixins.scss";
+
+.workPage {
+  width: 100%;
+  margin: 100px auto;
+  position: relative;
+}
+
+.cardHolder,
+.skeletonContainer {
+  display: flex;
+  gap: 30px;
+  overflow: auto hidden;
+  scrollbar-width: none;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.cardHolder {
+  opacity: .0;
+}
+
+.skeletonContainer {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
+
+.cardHolder>*,
+.skeletonContainer>* {
+  flex: 0 0 auto;
+  width: calc((100% / 4 - 30px) + (30px / 4));
+}
+
+@media (max-width: 1300px) {
+
+  .cardHolder>*,
+  .skeletonContainer>* {
+    width: calc((100% / 3 - 30px) + (30px / 3));
+  }
+}
+
+@include medium {
+
+  .cardHolder>*,
+  .skeletonContainer>* {
+    width: calc((100% / 2 - 30px) + (30px / 2));
+  }
+}
+
+@media (max-width: 600px) {
+
+  .cardHolder>*,
+  .skeletonContainer>* {
+    width: 100%;
+  }
+}
+
+.cardHolder>*:last-child,
+.skeletonContainer>*:last-child {
+  margin-right: 0;
+}
+
+
+
+
+
+.skeletonCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 256px;
+  height: 350px;
+  // border: solid 1px;
+}
+
+.skeletonCard *:empty {
+  background: var(--skeleton-color1);
+  background-position: -500px 0;
+  animation: skeletonShine 1s linear 0s infinite normal forwards;
+  background-image: linear-gradient(135deg, var(--skeleton-color1) 0%, var(--skeleton-color2) 20%, var(--skeleton-color1) 40%, var(--skeleton-color1) 100%);
+  background-repeat: no-repeat;
+  background-size: 1000px 100%;
+}
+
+.imgHolder {
+  height: 250px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.productInfo {
+  margin-top: 5px;
+  width: 100%;
+  height: 10px;
+}
+
+.productInfo .title {
+  width: 140px;
+  height: 16px;
+  border-radius: 2px;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.priceContainer .price {
+  width: 50px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.priceContainer .afterDiscount {
+  width: 60px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.rate {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  margin-top: 14px;
+  position: relative;
+}
+
+.rate .star {
+  width: 19px;
+  height: 22px;
+  border-radius: 50%;
+  clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+@keyframes skeletonShine {
+  to {
+    background-position: 500px 0;
+  }
+}

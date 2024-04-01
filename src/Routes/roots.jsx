@@ -13,6 +13,7 @@ import ProductsPage from "../Components/ProductsPage/ProductsPage";
 import SearchPage from "../Components/Search/SearchPage";
 import SignUp from "../Components/SignUp/SignUp";
 import WishList from "../Components/WishList/WishList";
+import WorkSpace from "../Components/WorkSpace";
 
 export const ROUTES_CONFIG = [
   { path: "/", element: <Home /> },
@@ -30,4 +31,5 @@ export const ROUTES_CONFIG = [
   { path: "/profile", element: <AccountPage /> },
   { path: "/search", element: <SearchPage /> },
   { path: "*", element: <NotFoundPage /> },
+  { path: "/work", element: <WorkSpace /> },
 ];
