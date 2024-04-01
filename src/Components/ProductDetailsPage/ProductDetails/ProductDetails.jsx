@@ -1,5 +1,8 @@
-import { useRef } from "react";
-import { useSelector } from "react-redux";
+import { useEffect, useRef } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { DELAYS } from "../../../Data/globalVariables";
+import { updateState } from "../../../Features/globalSlice";
+import { random } from "../../../Functions/helper";
 import SkeletonProductDetails from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductDetails";
 import ProductPreview from "../ProductPreviw/ProductPreview";
 import ProductColorsSection from "./ProductColorsSection";
@@ -10,11 +13,12 @@ import ProductFirstInfos from "./ProductFirstInfos";
 import ProductSizes from "./ProductSizes";
 
 const ProductDetails = ({ data }) => {
-  const { previewImg, isZoomInPreviewActive } = useSelector(
-    (state) => state.global
-  );
+  const { previewImg, isZoomInPreviewActive, loadingProductDetails } =
+    useSelector((state) => state.global);
   const zoomInImgRef = useRef();
+  const dispatch = useDispatch();
   const activeClass = isZoomInPreviewActive ? s.active : "";
+  let randomDelay = random(DELAYS);
 
   function handleZoomInEffect(e) {
     const imgRect = e.target.getClientRects()[0];
@@ -26,28 +30,48 @@ const ProductDetails = ({ data }) => {
     }px)`;
   }
 
+  function updateLoadingState() {
+    let timerId;
+
+    if (loadingProductDetails) {
+      timerId = setTimeout(() => {
+        dispatch(updateState({ key: "loadingProductDetails", value: false }));
+      }, randomDelay);
+
+      randomDelay = random(DELAYS);
+    }
+
+    return () => clearTimeout(timerId);
+  }
+
+  // useEffect(() => {
+  //   updateLoadingState();
+  // }, []);
+
   return (
     <>
-      <section className={s.detailsSection}>
-        <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
+      {!loadingProductDetails && (
+        <section className={s.detailsSection}>
+          <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
-        <section className={s.details}>
-          <div className={`${s.zoomInPreview} ${activeClass}`}>
-            <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
-          </div>
+          <section className={s.details}>
+            <div className={`${s.zoomInPreview} ${activeClass}`}>
+              <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
+            </div>
 
-          <ProductFirstInfos data={data} />
+            <ProductFirstInfos data={data} />
 
-          <div className={s.horizontalLine} />
+            <div className={s.horizontalLine} />
 
-          <ProductColorsSection data={data} />
-          <ProductSizes data={data} />
-          <ProductDealingControls />
-          <ProductFeatures />
+            <ProductColorsSection data={data} />
+            <ProductSizes data={data} />
+            <ProductDealingControls />
+            <ProductFeatures />
+          </section>
         </section>
-      </section>
+      )}
 
-      <SkeletonProductDetails data={data} />
+      {loadingProductDetails && <SkeletonProductDetails />}
     </>
   );
 };

@@ -2,9 +2,7 @@ import s from "./SkeletonProductDetails.module.scss";
 import SkeletonProductFirstInfos from "./SkeletonProductFirstInfos";
 import SkeletonProductPreview from "./SkeletonProductPreview";
 
-const SkeletonProductDetails = ({ data }) => {
-  const { description } = data;
-
+const SkeletonProductDetails = () => {
   return (
     <section className={s.skeletonDetailsSection}>
       <SkeletonProductPreview />

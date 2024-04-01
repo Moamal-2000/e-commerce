@@ -6,6 +6,7 @@ const initialState = {
   isProfileMenuActive: false,
   isSectionsMenuActive: false,
   isZoomInPreviewActive: false,
+  loadingProductDetails: false,
   previewImg: null,
 };
 
