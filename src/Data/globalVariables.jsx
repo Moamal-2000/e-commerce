@@ -10,3 +10,4 @@ export const UN_BUILT_PAGES = [
   "terms",
   "privacy",
 ];
+

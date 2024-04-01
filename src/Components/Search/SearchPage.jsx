@@ -35,7 +35,7 @@ const SearchPage = () => {
 
   return (
     <div className="container">
-      <main className={s.searchPage}>
+      <main className={s.searchPage} id="search-page">
         <PagesHistory history={["/", "Results"]} />
 
         <section className={s.products}>

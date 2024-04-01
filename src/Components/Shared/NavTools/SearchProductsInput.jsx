@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "../../../Data/productsData";
 import { updateState } from "../../../Features/productsSlice";
@@ -12,6 +12,7 @@ const SearchProductsInput = () => {
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
   const [searchParams] = useSearchParams();
+  const { loadingSearchProducts } = useSelector((state) => state.products);
 
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
@@ -28,6 +29,7 @@ const SearchProductsInput = () => {
   }
 
   function updateSearchProducts(calledFrom) {
+    if (loadingSearchProducts) return;
     const queryParam = searchParams.get("query");
     const searchQuery = calledFrom === "event" ? searchRef.current : queryParam;
 
@@ -45,9 +47,7 @@ const SearchProductsInput = () => {
       });
     }
 
-    if (productsFound.length > 0) {
-      dispatch(updateState({ key: "loadingSearchProducts", value: true }));
-    }
+    dispatch(updateState({ key: "loadingSearchProducts", value: true }));
 
     const action = updateState({ key: "searchProducts", value: productsFound });
     dispatch(action);

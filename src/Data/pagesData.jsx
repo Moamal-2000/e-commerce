@@ -44,6 +44,10 @@ export const PAGE_SECTIONS_ID = [
     pagePath: "/favorites",
   },
   {
+    sectionId: "search-page",
+    pagePath: "/search",
+  },
+  {
     sectionId: "notfound-page",
   },
 ];
