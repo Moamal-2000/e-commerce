@@ -1,8 +1,6 @@
-import { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { DELAYS } from "../../../Data/globalVariables";
-import { updateState } from "../../../Features/globalSlice";
-import { random } from "../../../Functions/helper";
+import { useRef } from "react";
+import { useSelector } from "react-redux";
+import useOnlineStatus from "../../../Hooks/Helper/useOnlineStatus";
 import SkeletonProductDetails from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductDetails";
 import ProductPreview from "../ProductPreviw/ProductPreview";
 import ProductColorsSection from "./ProductColorsSection";
@@ -15,10 +13,9 @@ import ProductSizes from "./ProductSizes";
 const ProductDetails = ({ data }) => {
   const { previewImg, isZoomInPreviewActive, loadingProductDetails } =
     useSelector((state) => state.global);
-  const zoomInImgRef = useRef();
-  const dispatch = useDispatch();
   const activeClass = isZoomInPreviewActive ? s.active : "";
-  let randomDelay = random(DELAYS);
+  const zoomInImgRef = useRef();
+  const isWebsiteOnline = useOnlineStatus();
 
   function handleZoomInEffect(e) {
     const imgRect = e.target.getClientRects()[0];
@@ -30,27 +27,9 @@ const ProductDetails = ({ data }) => {
     }px)`;
   }
 
-  function updateLoadingState() {
-    let timerId;
-
-    if (loadingProductDetails) {
-      timerId = setTimeout(() => {
-        dispatch(updateState({ key: "loadingProductDetails", value: false }));
-      }, randomDelay);
-
-      randomDelay = random(DELAYS);
-    }
-
-    return () => clearTimeout(timerId);
-  }
-
-  // useEffect(() => {
-  //   updateLoadingState();
-  // }, []);
-
   return (
     <>
-      {!loadingProductDetails && (
+      {!loadingProductDetails && isWebsiteOnline && (
         <section className={s.detailsSection}>
           <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
@@ -71,7 +50,9 @@ const ProductDetails = ({ data }) => {
         </section>
       )}
 
-      {loadingProductDetails && <SkeletonProductDetails />}
+      {(loadingProductDetails || !isWebsiteOnline) && (
+        <SkeletonProductDetails />
+      )}
     </>
   );
 };

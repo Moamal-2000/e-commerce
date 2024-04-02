@@ -1,0 +1,30 @@
+.labelBody {
+  width: calc(100vw - (100% - 100vw));
+  background-color: #212121;
+  color: var(--white);
+  text-align: center;
+  font-size: .85rem;
+  padding: 4px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+}
+
+.labelBody.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.labelBody.active {
+  background-color: #2ba640;
+  animation: hideLabelAnimation 1s 2s 1 forwards;
+}
+
+@keyframes hideLabelAnimation {
+  to {
+    bottom: -60px;
+  }
+}

@@ -3,8 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { DELAYS } from "../../Data/globalVariables";
 import { updateState } from "../../Features/productsSlice";
 import { random } from "../../Functions/helper";
+import useOnlineStatus from "../../Hooks/Helper/useOnlineStatus";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
-import SkeletonCards from "../Shared/SkeletonLoaders/SkeletonCards";
+import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./SearchPage.module.scss";
 import SearchProducts from "./SearchProducts";
 
@@ -12,6 +13,7 @@ const SearchPage = () => {
   const { searchProducts, loadingSearchProducts } = useSelector(
     (state) => state.products
   );
+  const isWebsiteOnline = useOnlineStatus();
   let randomDelay = random(DELAYS);
   const dispatch = useDispatch();
 
@@ -25,7 +27,6 @@ const SearchPage = () => {
 
       randomDelay = random(DELAYS);
     }
-
     return () => clearTimeout(timerId);
   }
 
@@ -39,8 +40,8 @@ const SearchPage = () => {
         <PagesHistory history={["/", "Results"]} />
 
         <section className={s.products}>
-          {loadingSearchProducts && <SkeletonCards />}
-          {!loadingSearchProducts && <SearchProducts />}
+          {(loadingSearchProducts || !isWebsiteOnline) && <SkeletonCards />}
+          {!loadingSearchProducts && isWebsiteOnline && <SearchProducts />}
         </section>
       </main>
     </div>
