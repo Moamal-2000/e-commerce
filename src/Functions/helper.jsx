@@ -183,3 +183,7 @@ export function searchByObjectKey({ data, key, query }) {
 export function random(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
+
+export function isItemFound(data, getItem, key) {
+  return data.find((item) => item[key] === getItem[key]);
+}

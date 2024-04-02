@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addToArray } from "../../../../Features/productsSlice";
+import { isItemFound } from "../../../../Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 
@@ -13,9 +14,7 @@ const AddToCartButton = ({ product }) => {
   } = useSelector((state) => state.user);
 
   function addProductToCart() {
-    const isProductAlreadyExist = cartProducts.find(
-      (item) => item.id === product.id
-    );
+    const isProductAlreadyExist = isItemFound(cartProducts, product, "id");
 
     if (!isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) return;

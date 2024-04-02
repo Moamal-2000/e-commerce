@@ -1,7 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { addToArray, removeById } from "../../../Features/productsSlice";
-import { checkDateBeforeMonthToPresent } from "../../../Functions/helper";
+import {
+  checkDateBeforeMonthToPresent,
+  isItemFound,
+} from "../../../Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";
@@ -69,7 +72,7 @@ const ProductCard = ({
   }
 
   function addProductToFavorite() {
-    const isProductAlreadyExist = favoritesProducts.includes(product);
+    const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
     if (!isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) {
       dispatch(removeById({ key: "favoritesProducts", id: product.id }));
@@ -84,7 +87,7 @@ const ProductCard = ({
   }
 
   function addProductToWishList() {
-    const isProductAlreadyExist = wishList.includes(product);
+    const isProductAlreadyExist = isItemFound(wishList, product, "id");
     if (!isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) {
       dispatch(removeById({ key: "wishList", id: product.id }));
