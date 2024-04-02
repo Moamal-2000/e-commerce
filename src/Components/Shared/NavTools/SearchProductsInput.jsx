@@ -29,6 +29,7 @@ const SearchProductsInput = () => {
   }
 
   function updateSearchProducts(calledFrom) {
+    console.log(loadingSearchProducts);
     if (loadingSearchProducts) return;
     const queryParam = searchParams.get("query");
     const searchQuery = calledFrom === "event" ? searchRef.current : queryParam;

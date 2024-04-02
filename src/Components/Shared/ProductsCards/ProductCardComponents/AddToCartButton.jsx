@@ -13,7 +13,10 @@ const AddToCartButton = ({ product }) => {
   } = useSelector((state) => state.user);
 
   function addProductToCart() {
-    const isProductAlreadyExist = cartProducts.includes(product);
+    const isProductAlreadyExist = cartProducts.find(
+      (item) => item.id === product.id
+    );
+
     if (!isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) return;
 

@@ -157,15 +157,6 @@ export function setFormattedPrice(product) {
   product.price = formattedPrice;
 }
 
-export function convertToObjKey(str) {
-  const words = str.split(" ");
-  const firstWord = words[0].toLowerCase();
-  const restWords = words.slice(1);
-  const capitalizedWords = restWords.map((word) => capitalize(word));
-  const formattedKey = firstWord + capitalizedWords.join("");
-  return formattedKey;
-}
-
 export function getSubTotal(cartProducts, key = "quantity") {
   const total = cartProducts?.reduce((acc, product) => {
     const quantityPrice = product?.[key] * +product?.afterDiscount;
