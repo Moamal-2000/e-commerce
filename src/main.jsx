@@ -4,6 +4,7 @@ import { Provider } from "react-redux";
 import App from "./App.jsx";
 import { store } from "./App/store.jsx";
 import "./Styles/main.scss";
+import * as servicerWorker from "../public/register-pwa.js"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
