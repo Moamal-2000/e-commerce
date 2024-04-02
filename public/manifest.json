@@ -2,7 +2,7 @@
   "registerType": "prompt",
   "name": "E-Commerce",
   "short_name": "E-Commerce",
-  "description": "Your ultimate destination for effortless online shopping. Discover curated collections, easily add items to your cart and wishlist, and enjoy detailed product descriptions with captivating previews. Experience convenience like never before with our intuitive interface. Shop smarter with us today.",
+  "description": "Effortless online shopping: curated collections, easy cart & wishlist, detailed descriptions, intuitive interface. Shop smarter today.",
   "icons": [
     {
       "src": "/android-chrome-192x192.webp",
@@ -29,6 +29,22 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/install-pwa-image.webp",
+      "sizes": "1897x861",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Wonder Widgets"
+    },
+    {
+      "src": "/install-pwa-mobile.webp",
+      "sizes": "462x728",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Wonder Widgets"
     }
   ],
   "start_url": ".",
