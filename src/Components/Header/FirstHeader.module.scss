@@ -4,6 +4,7 @@
   background-color: var(--black);
   padding: 16px 0;
   color: var(--white);
+  position: relative;
 }
 
 .container {
@@ -71,6 +72,35 @@
   .discount {
     display: none;
   }
+}
+
+.darkModeBtn {
+  all: unset;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+}
+
+@include small {
+  .darkModeBtn {
+    right: 0;
+    left: 20px;
+  }
+}
+
+@include very-small {
+  .darkModeBtn {
+    right: 0;
+    left: 12px;
+  }
+}
+
+.darkModeBtn>svg {
+  fill: #fff;
+  width: 18px;
+  height: 18px;
+  translate: 0 -50%;
+  cursor: pointer;
 }
 
 .discount::selection {
