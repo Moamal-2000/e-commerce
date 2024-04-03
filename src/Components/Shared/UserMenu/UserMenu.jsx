@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import useSignOut from "../../../Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./UserMenu.module.scss";
@@ -19,27 +19,27 @@ const UserMenu = ({ isActive }) => {
 
   return (
     <div className={`${s.userMenu} ${activeClass}`}>
-      <Link to="/profile">
+      <NavLink to="/profile">
         <SvgIcon name="user" />
         <span>Manage My Account</span>
-      </Link>
+      </NavLink>
 
-      <Link to="/cart">
+      <NavLink to="/cart">
         <SvgIcon name="cart" />
         <span>My Order</span>
-      </Link>
+      </NavLink>
 
-      <Link to="/cancellations">
+      <NavLink to="/cancellations">
         <SvgIcon name="cancel" />
         <span>My Cancellations</span>
-      </Link>
+      </NavLink>
 
-      <Link to="/reviews">
+      <NavLink to="/reviews">
         <SvgIcon name="solidStar" />
         <span>My Reviews</span>
-      </Link>
+      </NavLink>
 
-      <Link to="/wishlist">
+      <NavLink to="/wishlist">
         <UserMenuItemWithCount
           props={{
             iconName: "save",
@@ -47,12 +47,12 @@ const UserMenu = ({ isActive }) => {
             countLength: wishListLength,
           }}
         />
-      </Link>
+      </NavLink>
 
-      <Link onClick={handleSignOut}>
+      <button type="button" onClick={handleSignOut}>
         <SvgIcon name="boxArrowLeft" />
         <span>Logout</span>
-      </Link>
+      </button>
     </div>
   );
 };

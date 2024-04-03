@@ -6,7 +6,7 @@
   min-width: 224px;
   border-radius: 4px;
   z-index: 20;
-  background: rgb(0 0 0 / 34%);
+  background: rgba(0, 0, 0, .34);
   box-shadow: 0 4px 30px rgba(0, 0, 0, .1);
   backdrop-filter: blur(45.4px);
   opacity: 0;
@@ -21,7 +21,15 @@
   }
 }
 
-.userMenu>a {
+.userMenu>button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  width: 100%;
+}
+
+.userMenu :where(a, button) {
   display: flex;
   align-items: center;
   padding: 12px;
@@ -31,13 +39,13 @@
   }
 }
 
-.userMenu>a>svg {
+.userMenu>:where(a, button)>svg {
   fill: var(--white);
   width: 20px;
   height: 20px;
 }
 
-.userMenu>a:hover svg {
+.userMenu>:where(a, button):hover svg {
   fill: var(--black);
 
   & path {
@@ -49,12 +57,12 @@
   }
 }
 
-.userMenu>a>span {
+.userMenu>:where(a, button)>span {
   color: var(--white);
   font-size: .85rem;
   margin-left: 8px;
 }
 
-.userMenu>a:hover span {
+.userMenu>:where(a, button):hover span {
   color: var(--black);
 }
