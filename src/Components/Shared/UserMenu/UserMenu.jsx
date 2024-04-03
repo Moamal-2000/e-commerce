@@ -49,10 +49,10 @@ const UserMenu = ({ isActive }) => {
         />
       </NavLink>
 
-      <button type="button" onClick={handleSignOut}>
+      <a href="#" onClick={handleSignOut}>
         <SvgIcon name="boxArrowLeft" />
         <span>Logout</span>
-      </button>
+      </a>
     </div>
   );
 };

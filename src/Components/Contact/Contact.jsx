@@ -12,10 +12,10 @@ const Contact = () => {
       </Helmet>
 
       <div className="container">
-        <main className={s.contactPage} id="contact-page">
+        <main className={s.contactPage}>
           <PagesHistory history={["/", "Contact"]} />
 
-          <div className={s.contactContent}>
+          <div className={s.contactContent} id="contact-page">
             <ContactCardInfo />
             <ContactForm />
           </div>

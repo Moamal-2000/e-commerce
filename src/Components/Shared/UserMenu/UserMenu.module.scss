@@ -21,15 +21,7 @@
   }
 }
 
-.userMenu>button {
-  all: unset;
-  display: flex;
-  align-items: center;
-  padding: 12px;
-  width: 100%;
-}
-
-.userMenu :where(a, button) {
+.userMenu>a {
   display: flex;
   align-items: center;
   padding: 12px;
@@ -39,13 +31,13 @@
   }
 }
 
-.userMenu>:where(a, button)>svg {
+.userMenu>a>svg {
   fill: var(--white);
   width: 20px;
   height: 20px;
 }
 
-.userMenu>:where(a, button):hover svg {
+.userMenu>a:hover svg {
   fill: var(--black);
 
   & path {
@@ -57,12 +49,12 @@
   }
 }
 
-.userMenu>:where(a, button)>span {
+.userMenu>a>span {
   color: var(--white);
   font-size: .85rem;
   margin-left: 8px;
 }
 
-.userMenu>:where(a, button):hover span {
+.userMenu>a:hover span {
   color: var(--black);
 }

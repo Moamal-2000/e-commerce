@@ -20,10 +20,10 @@ const NotFoundPage = () => {
       </Helmet>
 
       <div className="container">
-        <main className={s.notFoundPage} id="notfound-page">
+        <main className={s.notFoundPage}>
           <PagesHistory history={["/", "404 Error"]} />
 
-          <div className={s.wrapper}>
+          <div className={s.wrapper} id="notfound-page">
             <b>404 Not Found</b>
             <p>{descriptionText}</p>
             <Link to="/">Back to home page</Link>

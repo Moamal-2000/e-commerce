@@ -36,10 +36,10 @@ const SearchPage = () => {
 
   return (
     <div className="container">
-      <main className={s.searchPage} id="search-page">
+      <main className={s.searchPage}>
         <PagesHistory history={["/", "Results"]} />
 
-        <section className={s.products}>
+        <section className={s.products} id="search-page">
           {(loadingSearchProducts || !isWebsiteOnline) && <SkeletonCards />}
           {!loadingSearchProducts && isWebsiteOnline && <SearchProducts />}
         </section>

@@ -7,19 +7,18 @@ import AboutInfoCards from "./InfoCards/AboutInfoCards";
 import OurMembersSection from "./OurMemebers/OurMembersSlider";
 
 const About = () => {
-
   return (
     <>
       <Helmet>
         <title>About</title>
       </Helmet>
 
-      <main className={s.aboutPage} id="about-page">
+      <main className={s.aboutPage}>
         <div className="container">
           <PagesHistory history={["/", "About"]} />
         </div>
 
-        <div className={s.container}>
+        <div className={s.container} id="about-page">
           <AboutHeroSection />
         </div>
 

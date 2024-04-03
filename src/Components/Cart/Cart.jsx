@@ -14,10 +14,10 @@ const Cart = () => {
       </Helmet>
 
       <div className="container">
-        <main className={s.cartPage} id="cart-page">
+        <main className={s.cartPage}>
           <PagesHistory history={["/", "Cart"]} />
 
-          <div className={s.pageComponents}>
+          <div className={s.pageComponents} id="cart-page">
             <CartProducts />
             <CartButtons />
 

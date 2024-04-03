@@ -73,16 +73,17 @@ main {
 
 .skip-content {
   position: absolute;
-  left: 0;
-  top: -100px;
+  left: -150%;
+  top: 0;
   color: var(--white);
   background-color: var(--turquoise);
-  padding: 10px;
+  padding: 16px;
   outline: none;
   z-index: 100;
+  transition: left .4s ease;
 
   &:focus {
-    top: 0;
+    left: 0;
   }
 }
 
