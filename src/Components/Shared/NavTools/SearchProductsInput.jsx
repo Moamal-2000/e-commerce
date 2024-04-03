@@ -1,6 +1,6 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "../../../Data/productsData";
 import { updateState } from "../../../Features/productsSlice";
 import { searchByObjectKey } from "../../../Functions/helper";
@@ -9,14 +9,22 @@ import s from "./SearchProductsInput.module.scss";
 
 const SearchProductsInput = () => {
   const searchRef = useRef("");
+  const location = useLocation();
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
-  const [searchParams] = useSearchParams();
+  const pathName = location.pathname;
+  const [searchParams, setSearchParams] = useSearchParams();
   const { loadingSearchProducts } = useSelector((state) => state.products);
 
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
     searchInput.focus();
+  }
+
+  function handleSearchOnChange(e) {
+    const inputValue = e.target.value;
+    searchRef.current = inputValue?.trim()?.toLowerCase();
+    setSearchParams({ query: inputValue });
   }
 
   function handleSearchProducts(e) {
@@ -25,34 +33,36 @@ const SearchProductsInput = () => {
     const isEmptyQuery = searchRef.current.length === 0;
     if (isEmptyQuery) return;
 
-    updateSearchProducts("event");
+    updateSearchProducts();
   }
 
-  function updateSearchProducts(calledFrom) {
+  function updateSearchProducts() {
     if (loadingSearchProducts) return;
-    const queryParam = searchParams.get("query");
-    const searchQuery = calledFrom === "event" ? searchRef.current : queryParam;
+    const queryValue = searchParams.get("query");
 
     let productsFound = searchByObjectKey({
       data: productsData,
       key: "shortName",
-      query: searchQuery,
+      query: queryValue,
     });
 
     if (productsFound.length === 0) {
       productsFound = searchByObjectKey({
         data: productsData,
         key: "category",
-        query: searchQuery,
+        query: queryValue,
       });
     }
 
     dispatch(updateState({ key: "loadingSearchProducts", value: true }));
-
-    const action = updateState({ key: "searchProducts", value: productsFound });
-    dispatch(action);
-    navigateTo("/search?query=" + searchQuery);
+    dispatch(updateState({ key: "searchProducts", value: productsFound }));
+    navigateTo("/search?query=" + queryValue);
   }
+
+  useEffect(() => {
+    const isSearchPage = pathName === "/search";
+    if (isSearchPage) updateSearchProducts();
+  }, []);
 
   return (
     <form
@@ -64,9 +74,7 @@ const SearchProductsInput = () => {
         id="search-input"
         type="text"
         placeholder="What are you looking for?"
-        onChange={(e) =>
-          (searchRef.current = e.target.value?.trim().toLowerCase())
-        }
+        onChange={(e) => handleSearchOnChange(e)}
       />
       <button type="button">
         <SvgIcon name="search" />
