@@ -3,13 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { newSignUp } from "../../Features/userSlice";
 import { simpleValidationCheck } from "../../Functions/componentsFunctions";
-import { uniqueArr } from "../../Functions/helper";
+import { getUniqueArrayByObjectKey } from "../../Functions/helper";
 import s from "./LogInForm.module.scss";
 
 const LogInForm = () => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
-  const { usersData } = useSelector((state) => state.user);
+  const { signedUpUsers } = useSelector((state) => state.user);
   const emailOrPhone = useRef("moamalalaapro1@gmail.com");
   const password = useRef("moamalalaapro123");
 
@@ -30,15 +30,15 @@ const LogInForm = () => {
       formData[pair[0]] = pair[1];
     }
 
-    if (isCorrectLoginData) {
-      const uniqueUsersData = uniqueArr(usersData);
-      dispatch(newSignUp(uniqueUsersData));
-      navigateTo("/", { replace: true });
-    }
+    // if (isCorrectLoginData) {
+    //   const uniqueUsersData = getUniqueArrayByObjectKey(signedUpUsers);
+    //   dispatch(newSignUp(uniqueUsersData));
+    //   navigateTo("/", { replace: true });
+    // }
   }
 
   function filterLoginByEmailOrPhone() {
-    return usersData?.filter(
+    return signedUpUsers?.filter(
       (user) => user.emailOrPhone === emailOrPhone.current
     );
   }

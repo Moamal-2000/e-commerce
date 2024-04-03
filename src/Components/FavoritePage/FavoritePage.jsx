@@ -1,14 +1,31 @@
 import { Helmet } from "react-helmet-async";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { updateState } from "../../Features/productsSlice";
+import { getUniqueArrayByObjectKey } from "../../Functions/helper";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import ForYouProducts from "../WishList/ForYouProducts";
 import s from "./FavoritePage.module.scss";
 import FavoriteProducts from "./FavoriteProducts";
 
 const FavoritePage = () => {
-  const { favoritesProducts } = useSelector((state) => state.products);
+  const { favoritesProducts, cartProducts } = useSelector(
+    (state) => state.products
+  );
   const lengthOfFavorites = favoritesProducts.length;
+  const dispatch = useDispatch();
+
+  function moveAllToCart() {
+    const uniqueCartProducts = getUniqueArrayByObjectKey({
+      arr: cartProducts,
+      newArr: favoritesProducts,
+      key: "shortName",
+    });
+    console.log(uniqueCartProducts);
+
+    dispatch(updateState({ key: "favoritesProducts", value: [] }));
+    dispatch(updateState({ key: "cartProducts", value: uniqueCartProducts }));
+  }
 
   return (
     <>
@@ -22,7 +39,9 @@ const FavoritePage = () => {
             <header>
               <label htmlFor="wishlist">Favorite ({lengthOfFavorites})</label>
 
-              <button type="button">Move All To Bag</button>
+              <button type="button" onClick={moveAllToCart}>
+                Move All To Bag
+              </button>
             </header>
 
             <FavoriteProducts />

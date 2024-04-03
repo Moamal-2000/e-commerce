@@ -6,12 +6,12 @@ const initialState = initialStateLocal
   ? JSON.parse(initialStateLocal)
   : {
       loginInfo: {
-        username: "",
-        emailOrPhone: "",
-        password: "",
+        username: "Lily Watson",
+        emailOrPhone: "lily.wastons@gmail.com",
+        password: "random-password1234",
         isSignIn: true,
       },
-      usersData: [
+      signedUpUsers: [
         {
           username: "Lily Watson",
           emailOrPhone: "lily.wastons@gmail.com",
@@ -25,23 +25,24 @@ const userSlice = createSlice({
   name: "userSlice",
   reducers: {
     newSignUp: (state, { payload }) => {
-      state.usersData = payload;
+      state.signedUpUsers = payload;
       state.loginInfo.isSignIn = true;
     },
     setLoginData: (state, { payload }) => {
       state.loginInfo = { ...payload };
       state.loginInfo.isSignIn = true;
     },
-    signOut: (state, _) => {
-      state.loginInfo = {
+    signOut: (state) => {
+      const guestData = {
         username: "Guest",
         emailOrPhone: "",
         password: "",
       };
+      state.loginInfo = guestData;
       state.loginInfo.isSignIn = false;
     },
-    updateUserData: ({ loginInfo }, { payload }) => {
-      Object.assign(loginInfo, payload.updatedUserData);
+    updateUserData: (state, { payload }) => {
+      Object.assign(state.loginInfo, payload.updatedUserData);
     },
   },
 });

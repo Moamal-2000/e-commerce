@@ -62,14 +62,8 @@ export function checkIsObjExistInArr(arr, obj) {
   return false;
 }
 
-export function uniqueArr(arr) {
-  return [...new Set(arr)];
-}
-
-export function compareDataToObjValue(data, obj, keyName) {
-  const filteredData = data.filter(
-    (dataObj) => dataObj[keyName] === obj[keyName]
-  );
+export function compareDataToObjValue(data, obj, key) {
+  const filteredData = data.filter((dataObj) => dataObj[key] === obj[key]);
   return filteredData.length > 0;
 }
 
@@ -186,4 +180,15 @@ export function random(arr) {
 
 export function isItemFound(data, getItem, key) {
   return data.find((item) => item[key] === getItem[key]);
+}
+
+export function getUniqueArrayByObjectKey({ arr, newArr, key }) {
+  const updatedArr = arr;
+
+  newArr.forEach((item) => {
+    const isItemExist = !!isItemFound(arr, item, key);
+    if (!isItemExist) updatedArr.push(item);
+  });
+
+  return updatedArr;
 }

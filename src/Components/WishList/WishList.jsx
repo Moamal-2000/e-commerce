@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { updateState } from "../../Features/productsSlice";
-import { uniqueArr } from "../../Functions/helper";
+import { getUniqueArrayByObjectKey } from "../../Functions/helper";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import ForYouProducts from "./ForYouProducts";
 import s from "./WishList.module.scss";
@@ -14,7 +14,11 @@ const WishList = () => {
   const dispatch = useDispatch();
 
   function moveAllToCart() {
-    const uniqueCartProducts = uniqueArr([...cartProducts, ...wishList]);
+    const uniqueCartProducts = getUniqueArrayByObjectKey({
+      arr: cartProducts,
+      newArr: wishList,
+      key: "shortName",
+    });
     dispatch(updateState({ key: "cartProducts", value: uniqueCartProducts }));
     dispatch(updateState({ key: "wishList", value: [] }));
   }

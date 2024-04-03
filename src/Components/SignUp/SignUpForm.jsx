@@ -4,14 +4,17 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { googleIcon } from "../../Assets/Images/Images";
 import { newSignUp, setLoginData } from "../../Features/userSlice";
 import { simpleValidationCheck } from "../../Functions/componentsFunctions";
-import { compareDataToObjValue, uniqueArr } from "../../Functions/helper";
+import {
+  compareDataToObjValue,
+  getUniqueArrayByObjectKey,
+} from "../../Functions/helper";
 import s from "./SignUpForm.module.scss";
 import { openSignWithGooglePopUp } from "./SignUpWithGoogle/SignUpWithGooglePopup";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
-  const { usersData } = useSelector((state) => state.user);
+  const { signedUpUsers } = useSelector((state) => state.user);
   const username = useRef("");
   const emailOrPhone = useRef("");
   const password = useRef("");
@@ -30,14 +33,17 @@ const SignUpForm = () => {
 
     if (isFormValid) {
       const isUserAlreadySignedUp = compareDataToObjValue(
-        usersData,
+        signedUpUsers,
         formData,
         "emailOrPhone"
       );
       if (isUserAlreadySignedUp) return;
 
-      const uniqueUsersData = uniqueArr([...usersData, formData]);
-      dispatch(newSignUp(uniqueUsersData));
+      const uniqueSignedUpUsers = getUniqueArrayByObjectKey([
+        ...signedUpUsers,
+        formData,
+      ]);
+      dispatch(newSignUp(uniqueSignedUpUsers));
       dispatch(setLoginData(formData));
       navigateTo("/", { replace: true });
     }

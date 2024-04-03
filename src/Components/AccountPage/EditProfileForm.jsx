@@ -51,7 +51,7 @@ const EditProfileForm = () => {
     };
 
     if (updatedUserData.password === "") delete updatedUserData.password;
-    dispatch(updateUserData({ userInfo: updatedUserData }));
+    dispatch(updateUserData({ updatedUserData }));
   }
 
   return (
