@@ -3,6 +3,7 @@ import { SwiperSlide } from "swiper/react";
 import { introductionSliderData } from "../../../Data/staticData";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import s from "./IntroductionSlides.module.scss";
+
 const IntroductionSlides = () => {
   return introductionSliderData.map(
     ({ productName, productImg, logoImg, discountText, id }) => {

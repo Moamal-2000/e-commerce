@@ -19,6 +19,7 @@
 .link svg {
   width: inherit;
   height: inherit;
+  fill: var(--black);
   transition: fill .2s;
 }
 
@@ -28,7 +29,7 @@
   left: 4px;
   top: -12px;
   background-color: var(--dark-tomato);
-  color: var(--white);
+  color: #fff;
   border-radius: 50%;
   font-size: .6rem;
   width: 28px;

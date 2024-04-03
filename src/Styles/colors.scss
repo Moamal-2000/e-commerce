@@ -15,6 +15,7 @@
   --secondary-white: #FAFAFA;
   --skeleton-color1: #f6f7f8;
   --skeleton-color2: #edeef1;
+  --website-bg: #fdfdfd;
   --white: #fff;
   --dark-red: #A22F2F;
   --dark-tomato: #B40404;
@@ -29,6 +30,11 @@
   --page-margin: 60px 0 100px;
 }
 
-.dark-mode:root {
-  --white: #000,
+// Main slider customizations
+:root {
+  --swiper-pagination-bullet-inactive-opacity: .6;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-color: var(--tomato);
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-bullet-inactive-color: var(--very-light-gray);
 }

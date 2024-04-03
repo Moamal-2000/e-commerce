@@ -2,7 +2,6 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isOverlayActive: false,
-  isDarkModeActive: false,
   isMobileMenuActive: false,
   isProfileMenuActive: false,
   isSectionsMenuActive: false,

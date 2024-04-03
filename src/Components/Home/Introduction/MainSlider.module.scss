@@ -4,11 +4,6 @@
   width: 82%;
   height: 344px;
   user-select: none;
-  --swiper-pagination-color: var(--tomato);
-  --swiper-pagination-bullet-size: 10px;
-  --swiper-pagination-bullet-horizontal-gap: 6px;
-  --swiper-pagination-bullet-inactive-color: var(--very-light-gray);
-  --swiper-pagination-bullet-inactive-opacity: .6;
 }
 
 @include large {
