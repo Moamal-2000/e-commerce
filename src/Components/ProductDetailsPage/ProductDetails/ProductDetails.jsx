@@ -30,7 +30,7 @@ const ProductDetails = ({ data }) => {
   return (
     <>
       {!loadingProductDetails && isWebsiteOnline && (
-        <section className={s.detailsSection}>
+        <section className={s.detailsSection} id="details-section">
           <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
           <section className={s.details}>

@@ -61,7 +61,7 @@ const ProductDetailsPage = () => {
       </Helmet>
 
       <div className="container">
-        <main className={s.detailsPage} id="details-page">
+        <main className={s.detailsPage}>
           <PagesHistory history={history} historyPaths={historyPaths} />
           <ProductDetails data={PRODUCT_DATA} />
           <RelatedItemsSection

@@ -79,6 +79,7 @@ main {
   background-color: var(--turquoise);
   padding: 10px;
   outline: none;
+  z-index: 100;
 
   &:focus {
     top: 0;
