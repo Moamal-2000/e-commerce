@@ -39,10 +39,12 @@ const SignUpForm = () => {
       );
       if (isUserAlreadySignedUp) return;
 
-      const uniqueSignedUpUsers = getUniqueArrayByObjectKey([
-        ...signedUpUsers,
-        formData,
-      ]);
+      const uniqueSignedUpUsers = getUniqueArrayByObjectKey({
+        arr: signedUpUsers,
+        newArr: [formData],
+        key: "emailOrPhone",
+      });
+
       dispatch(newSignUp(uniqueSignedUpUsers));
       dispatch(setLoginData(formData));
       navigateTo("/", { replace: true });

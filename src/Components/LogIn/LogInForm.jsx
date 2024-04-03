@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { newSignUp } from "../../Features/userSlice";
 import { simpleValidationCheck } from "../../Functions/componentsFunctions";
-import { getUniqueArrayByObjectKey } from "../../Functions/helper";
 import s from "./LogInForm.module.scss";
 
 const LogInForm = () => {
@@ -30,11 +29,10 @@ const LogInForm = () => {
       formData[pair[0]] = pair[1];
     }
 
-    // if (isCorrectLoginData) {
-    //   const uniqueUsersData = getUniqueArrayByObjectKey(signedUpUsers);
-    //   dispatch(newSignUp(uniqueUsersData));
-    //   navigateTo("/", { replace: true });
-    // }
+    if (isCorrectLoginData) {
+      dispatch(newSignUp(signedUpUsers));
+      navigateTo("/", { replace: true });
+    }
   }
 
   function filterLoginByEmailOrPhone() {

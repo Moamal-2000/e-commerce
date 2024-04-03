@@ -21,7 +21,6 @@ const FavoritePage = () => {
       newArr: favoritesProducts,
       key: "shortName",
     });
-    console.log(uniqueCartProducts);
 
     dispatch(updateState({ key: "favoritesProducts", value: [] }));
     dispatch(updateState({ key: "cartProducts", value: uniqueCartProducts }));

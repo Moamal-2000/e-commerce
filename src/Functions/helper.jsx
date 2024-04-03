@@ -183,7 +183,7 @@ export function isItemFound(data, getItem, key) {
 }
 
 export function getUniqueArrayByObjectKey({ arr, newArr, key }) {
-  const updatedArr = arr;
+  const updatedArr = [...arr];
 
   newArr.forEach((item) => {
     const isItemExist = !!isItemFound(arr, item, key);
