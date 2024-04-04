@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { userImg } from "src/Assets/Images/Images";
+import { mobileNavData } from "src/Data/staticData";
 import useSignOut from "src/Hooks/App/useSignOut";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
@@ -9,7 +10,7 @@ const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
   const { loginInfo } = useSelector((state) => state.user);
   const { username, isSignIn } = loginInfo;
-  const userText = username === "Guest" ? "There" : username;
+  const usernameText = username === "Guest" ? "There" : username;
   const handleSignOut = useSignOut();
 
   return (
@@ -21,66 +22,31 @@ const MobileNav = () => {
 
         <p>
           Hey 🖐️
-          <span className={s.userName}>{userText}</span>
+          <span className={s.userName}>{usernameText}</span>
         </p>
       </div>
 
       <nav className={s.navLinks}>
         <ul>
-          {isSignIn && (
-            <li>
-              <NavLink to="/profile">
-                <SvgIcon name="user" />
-                <span>Profile</span>
-              </NavLink>
-            </li>
-          )}
-          <li>
-            <NavLink to="/">
-              <SvgIcon name="home" />
-              <span>Home Page</span>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">
-              <SvgIcon name="fileLines" />
-              <span>About</span>
-            </NavLink>
-          </li>
-          {isSignIn && (
-            <>
-              <li>
-                <NavLink to="/cart">
-                  <SvgIcon name="bag" />
-                  <span>My Cart</span>
+          {mobileNavData.map(({ name, link, icon, requiteSignIn }, index) => {
+            const shouldShow = requiteSignIn ? isSignIn : true;
+            if (!shouldShow) return null;
+
+            return (
+              <li key={"mobile-nav-link-" + index}>
+                <NavLink to={link}>
+                  <SvgIcon name={icon} />
+                  <span>{name}</span>
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/favorites">
-                  <SvgIcon name="heart" />
-                  <span>Favorite</span>
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/wishlist">
-                  <SvgIcon name="save" />
-                  <span>Wishlist</span>
-                </NavLink>
-              </li>
-            </>
-          )}
-          <li>
-            <NavLink to="/notifications">
-              <SvgIcon name="bell" />
-              <span>Notifications</span>
-            </NavLink>
-          </li>
+            );
+          })}
         </ul>
       </nav>
 
       <hr className={s.line}></hr>
 
-      {isSignIn ? (
+      {isSignIn && (
         <button
           className={s.signOutButton}
           type="button"
@@ -89,7 +55,9 @@ const MobileNav = () => {
           <SvgIcon name="boxArrowRight" />
           <span>Sign Out</span>
         </button>
-      ) : (
+      )}
+
+      {!isSignIn && (
         <Link to="/signup" className={s.signOutButton}>
           <SvgIcon name="boxArrowRight" />
           <span>Sign In</span>

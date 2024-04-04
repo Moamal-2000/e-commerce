@@ -242,3 +242,48 @@ export const ourProductsCustomizations = {
   showWishList: true,
   showColors: true,
 };
+
+export const mobileNavData = [
+  {
+    name: "Home",
+    link: "/",
+    icon: "home",
+    requiteSignIn: false,
+  },
+  {
+    name: "About",
+    link: "/about",
+    icon: "filePaper",
+    requiteSignIn: false,
+  },
+  {
+    name: "Profile",
+    link: "/profile",
+    icon: "user",
+    requiteSignIn: true,
+  },
+  {
+    name: "My Cart",
+    link: "/cart",
+    icon: "bag",
+    requiteSignIn: true,
+  },
+  {
+    name: "Favorite",
+    link: "/favorites",
+    icon: "heart",
+    requiteSignIn: true,
+  },
+  {
+    name: "wishlist",
+    link: "/wishlist",
+    icon: "heart",
+    requiteSignIn: true,
+  },
+  {
+    name: "notification",
+    link: "/notification",
+    icon: "bell",
+    requiteSignIn: false,
+  },
+];
