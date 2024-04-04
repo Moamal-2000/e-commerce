@@ -1,25 +1,45 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addToArray } from "../../../../Features/productsSlice";
+import {
+  addToArray,
+  removeByKeyName,
+} from "../../../../Features/productsSlice";
 import { isItemFound } from "../../../../Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 
 const AddToCartButton = ({ product }) => {
+  const { cartProducts } = useSelector((state) => state.products);
+  const { loginInfo } = useSelector((state) => state.user);
+  const isProductAlreadyExist = isItemFound(cartProducts, product, "shortName");
+  const iconName = isProductAlreadyExist ? "trashCan" : "cart3";
+  const buttonText = isProductAlreadyExist ? "Remove from cart" : "Add to cart";
+  const [iconNameState, setIconName] = useState(iconName);
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
-  const { cartProducts } = useSelector((state) => state.products);
-  const {
-    loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
 
   function addProductToCart() {
-    const isProductAlreadyExist = isItemFound(cartProducts, product, "id");
+    if (!loginInfo.isSignIn) {
+      navigateTo("/signup");
+      return;
+    }
 
-    if (!isSignIn) navigateTo("/signup");
-    if (isProductAlreadyExist) return;
+    if (isProductAlreadyExist) {
+      const removeAction = removeByKeyName({
+        dataKey: "cartProducts",
+        itemKey: "shortName",
+        keyValue: product.shortName,
+      });
 
-    dispatch(addToArray({ key: "cartProducts", value: product }));
+      dispatch(removeAction);
+      setIconName("cart3");
+      return;
+    }
+
+    const addAction = addToArray({ key: "cartProducts", value: product });
+    dispatch(addAction);
+    setIconName("trashCan");
   }
 
   return (
@@ -27,11 +47,11 @@ const AddToCartButton = ({ product }) => {
       type="button"
       className={`${s.addToCartBtn} ${s.addToCartButton}`}
       onClick={addProductToCart}
-      aria-label="Add to cart"
+      aria-label={buttonText}
       data-add-to-cart-button
     >
-      <SvgIcon name="cart3" />
-      <span>Add to cart</span>
+      <SvgIcon name={iconNameState} />
+      <span>{buttonText}</span>
     </button>
   );
 };

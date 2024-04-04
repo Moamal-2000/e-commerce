@@ -24,8 +24,14 @@ const productsSlice = createSlice({
       state[key].push(value);
     },
     removeById: (state, { payload: { key, id } }) => {
-      const updatedState = state[key].filter((product) => product.id !== id);
+      const updatedState = state[key].filter((item) => item.id !== id);
       state[key] = updatedState;
+    },
+    removeByKeyName: (state, { payload: { dataKey, itemKey, keyValue } }) => {
+      const updatedState = state[dataKey].filter(
+        (item) => item[itemKey] !== keyValue
+      );
+      state[dataKey] = updatedState;
     },
     setEmptyArrays: (state, { payload: { keys } }) => {
       for (let i = 0; i < keys.length; i++) state[keys[i]] = [];
@@ -33,6 +39,11 @@ const productsSlice = createSlice({
   },
 });
 
-export const { updateState, addToArray, removeById, setEmptyArrays } =
-  productsSlice.actions;
+export const {
+  updateState,
+  addToArray,
+  removeById,
+  removeByKeyName,
+  setEmptyArrays,
+} = productsSlice.actions;
 export default productsSlice.reducer;
