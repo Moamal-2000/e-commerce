@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { getSubTotal } from "../../../Functions/helper";
+import { getSubTotal } from "src/Functions/helper";
 import s from "./CartInfoMenu.module.scss";
 
 const CartInfoMenu = () => {

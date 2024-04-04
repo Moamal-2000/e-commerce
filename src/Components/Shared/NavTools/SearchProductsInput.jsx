@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import { productsData } from "../../../Data/productsData";
-import { updateState } from "../../../Features/productsSlice";
-import { searchByObjectKey } from "../../../Functions/helper";
+import { productsData } from "src/Data/productsData";
+import { updateState } from "src/Features/productsSlice";
+import { searchByObjectKey } from "src/Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./SearchProductsInput.module.scss";
 

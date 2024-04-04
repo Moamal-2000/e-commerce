@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { newSignUp } from "../../Features/userSlice";
-import { simpleValidationCheck } from "../../Functions/componentsFunctions";
+import { newSignUp } from "src/Features/userSlice";
+import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import s from "./LogInForm.module.scss";
 
 const LogInForm = () => {

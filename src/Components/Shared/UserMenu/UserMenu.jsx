@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import useSignOut from "../../../Hooks/App/useSignOut";
+import useSignOut from "src/Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./UserMenu.module.scss";
 import UserMenuItemWithCount from "./UserMenuItemWithCount";

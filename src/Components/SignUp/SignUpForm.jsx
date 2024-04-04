@@ -1,13 +1,13 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
-import { googleIcon } from "../../Assets/Images/Images";
-import { newSignUp, setLoginData } from "../../Features/userSlice";
-import { simpleValidationCheck } from "../../Functions/componentsFunctions";
+import { googleIcon } from "src/Assets/Images/Images";
+import { newSignUp, setLoginData } from "src/Features/userSlice";
+import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import {
   compareDataToObjValue,
   getUniqueArrayByObjectKey,
-} from "../../Functions/helper";
+} from "src/Functions/helper";
 import s from "./SignUpForm.module.scss";
 import { openSignWithGooglePopUp } from "./SignUpWithGoogle/SignUpWithGooglePopup";
 

@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import { scrollToTop } from "../../../Functions/helper";
-import useEventListener from "../../../Hooks/Helper/useEventListener";
+import { scrollToTop } from "src/Functions/helper";
+import useEventListener from "src/Hooks/Helper/useEventListener";
 import s from "./ScrollToTop.module.scss";
 import SvgIcon from "./SvgIcon";
 import ToolTip from "./ToolTip";

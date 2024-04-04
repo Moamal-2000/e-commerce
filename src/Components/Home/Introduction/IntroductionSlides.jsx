@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
+import { introductionSliderData } from "src/Data/staticData";
 import { SwiperSlide } from "swiper/react";
-import { introductionSliderData } from "../../../Data/staticData";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import s from "./IntroductionSlides.module.scss";
 

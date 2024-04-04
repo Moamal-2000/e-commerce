@@ -1,6 +1,6 @@
-import { MY_REPOS_URL, WEBSITE_REPO_ID } from "../../Data/globalVariables";
-import { getSpecificRepo } from "../../Functions/helper";
-import useAsync from "../../Hooks/Helper/useAsync";
+import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/globalVariables";
+import { getSpecificRepo } from "src/Functions/helper";
+import useAsync from "src/Hooks/Helper/useAsync";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../Shared/MiniComponents/ToolTip";
 import s from "./RepoStarsForks.module.scss";

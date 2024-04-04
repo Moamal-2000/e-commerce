@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
-import { categoryProductsCustomizations } from "../../Data/staticData";
-import { capitalize } from "../../Functions/helper";
-import useGetSearchParam from "../../Hooks/Helper/useGetSearchParam";
+import { categoryProductsCustomizations } from "src/Data/staticData";
+import { capitalize } from "src/Functions/helper";
+import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import ProductsCategory from "./ProductsCategory";

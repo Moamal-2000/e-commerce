@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DELAYS } from "../../Data/globalVariables";
-import { updateState } from "../../Features/productsSlice";
-import { random } from "../../Functions/helper";
-import useOnlineStatus from "../../Hooks/Helper/useOnlineStatus";
+import { DELAYS } from "src/Data/globalVariables";
+import { updateState } from "src/Features/productsSlice";
+import { random } from "src/Functions/helper";
+import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./SearchPage.module.scss";

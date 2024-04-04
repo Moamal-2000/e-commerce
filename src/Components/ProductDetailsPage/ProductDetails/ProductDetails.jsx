@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { useSelector } from "react-redux";
-import useOnlineStatus from "../../../Hooks/Helper/useOnlineStatus";
+import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import SkeletonProductDetails from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductDetails";
-import ProductPreview from "../ProductPreviw/ProductPreview";
+import ProductPreview from "../ProductPreview/ProductPreview";
 import ProductColorsSection from "./ProductColorsSection";
 import ProductDealingControls from "./ProductDealingControls";
 import s from "./ProductDetails.module.scss";

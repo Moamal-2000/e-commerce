@@ -1,5 +1,5 @@
-import { coloredStar, uncoloredStar } from "../../../Assets/Images/Images";
-import { isDecimalNumber } from "../../../Functions/helper";
+import { coloredStar, uncoloredStar } from "src/Assets/Images/Images";
+import { isDecimalNumber } from "src/Functions/helper";
 import s from "./RateStars.module.scss";
 
 const RateStars = ({ rate }) => {

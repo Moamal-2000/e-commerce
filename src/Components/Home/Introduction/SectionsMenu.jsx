@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { toggleState } from "../../../Features/globalSlice";
+import { toggleState } from "src/Features/globalSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import DropDownMenu from "./DropDownMenu";
 import s from "./SectionsMenu.module.scss";

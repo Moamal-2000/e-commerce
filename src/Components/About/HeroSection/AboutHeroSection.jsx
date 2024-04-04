@@ -1,4 +1,4 @@
-import { womenShopping } from "../../../Assets/Images/Images";
+import { womenShopping } from "src/Assets/Images/Images";
 import s from "./AboutHeroSection.module.scss";
 
 const AboutHeroSection = () => {

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ourProductsCustomizations } from "../../../Data/staticData";
+import { ourProductsCustomizations } from "src/Data/staticData";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import ExploreProducts from "../ProductPoster/ExploreProducts";
 import s from "./OurProductsSection.module.scss";

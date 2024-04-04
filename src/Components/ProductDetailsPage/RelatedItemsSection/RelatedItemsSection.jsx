@@ -1,4 +1,4 @@
-import { productsData } from "../../../Data/productsData";
+import { productsData } from "src/Data/productsData";
 import ProductsSlider from "../../Shared/MidComponents/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import s from "./RelatedItemsSection.module.scss";

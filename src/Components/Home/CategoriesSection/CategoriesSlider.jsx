@@ -1,4 +1,4 @@
-import { categoriesData } from "../../../Data/staticData";
+import { categoriesData } from "src/Data/staticData";
 import CategoryCard from "../../Shared/ProductsCards/CategoryCard";
 import s from "./CategoriesSlider.module.scss";
 

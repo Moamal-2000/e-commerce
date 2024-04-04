@@ -18,24 +18,21 @@ import nagadCard from "./nagad.webp";
 import perfumeGucci from "./perfume-gucci.webp";
 import ps5 from "./ps5.webp";
 import qrCode from "./qr-code.webp";
+import russiaFlag from "./russia-flag.png";
+import saudiFlag from "./saudi-flag.png";
 import signUpImg from "./signup-img.webp";
 import speakers from "./speakers.webp";
 import stereo from "./stereo.webp";
 import uncoloredStar from "./uncolored-star.svg";
+import usaFlag from "./usa-flag.png";
 import userImg from "./user-image.webp";
 import visaCard from "./visa.webp";
 import womanWithHat from "./woman-with-hat.webp";
 import member2Img from "./woman.webp";
 import womenShopping from "./women-shopping.webp";
-import usaFlag from "./usa-flag.png"
-import russiaFlag from "./russia-flag.png"
-import saudiFlag from "./saudi-flag.png"
 // import  from "."
 
 export {
-  usaFlag,
-  russiaFlag,
-  saudiFlag,
   appStore,
   appleLogo,
   bkashCard,
@@ -57,10 +54,13 @@ export {
   productImg3,
   ps5,
   qrCode,
+  russiaFlag,
+  saudiFlag,
   signUpImg,
   speakers,
   stereo,
   uncoloredStar,
+  usaFlag,
   userImg,
   visaCard,
   womanWithHat,

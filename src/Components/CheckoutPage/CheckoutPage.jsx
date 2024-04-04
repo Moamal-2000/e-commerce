@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
-import useFormData from "../../Hooks/Helper/useFormData";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
+import useFormData from "src/Hooks/Helper/useFormData";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import BillingDetails from "./BillingDetails/BillingDetails";
 import s from "./CheckoutPage.module.scss";
@@ -21,7 +21,7 @@ const CheckoutPage = () => {
     },
     onSubmit: handleSubmitPayment,
     storeInLocalStorage: saveBillingInfoToLocal,
-    localStorageKey: "billingInfo"
+    localStorageKey: "billingInfo",
   });
 
   const PAGE_HISTORY = ["Account", "CheckOut"];
@@ -35,8 +35,7 @@ const CheckoutPage = () => {
   function handleSubmitPayment(e) {
     e.preventDefault();
 
-    if (!saveBillingInfoToLocal)
-    localStorage.removeItem("billingInfo");
+    if (!saveBillingInfoToLocal) localStorage.removeItem("billingInfo");
   }
 
   useScrollOnMount(160);

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { stereo } from "../../../Assets/Images/Images";
+import { stereo } from "src/Assets/Images/Images";
 import PostCounter from "./PostCounter";
 import s from "./ProductPoster.module.scss";
 

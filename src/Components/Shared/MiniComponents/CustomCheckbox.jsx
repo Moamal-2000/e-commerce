@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateState } from "../../../Features/productsSlice";
+import { updateState } from "src/Features/productsSlice";
 import s from "./CustomCheckbox.module.scss";
 import SvgIcon from "./SvgIcon";
 

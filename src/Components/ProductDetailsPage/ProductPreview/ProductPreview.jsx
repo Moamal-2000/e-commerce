@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { updateState } from "../../../Features/globalSlice";
+import { updateState } from "src/Features/globalSlice";
 import s from "./ProductPreview.module.scss";
 
 const ProductPreview = ({ data, handleZoomInEffect }) => {

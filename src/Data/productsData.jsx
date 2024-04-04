@@ -1,4 +1,3 @@
-import { v4 as uuid } from "uuid";
 import {
   bookshelf,
   bookshelfThum1,
@@ -64,8 +63,9 @@ import {
   wiredKeyboardThum1,
   wiredKeyboardThum2,
   wiredKeyboardThum3,
-} from "../Assets/Products/ProductImgs";
-import { setAfterDiscountKey, setFormattedPrice } from "../Functions/helper";
+} from "src/Assets/Products/ProductImgs";
+import { setAfterDiscountKey, setFormattedPrice } from "src/Functions/helper";
+import { v4 as uuid } from "uuid";
 
 export const productsData = [
   {

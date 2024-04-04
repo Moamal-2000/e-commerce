@@ -1,4 +1,3 @@
-import { v4 as uuid } from "uuid";
 import {
   appleLogo,
   bkashCard,
@@ -15,7 +14,8 @@ import {
   saudiFlag,
   usaFlag,
   visaCard,
-} from "../Assets/Images/Images";
+} from "src/Assets/Images/Images";
+import { v4 as uuid } from "uuid";
 
 export const introductionSliderData = [
   {

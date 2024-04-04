@@ -1,13 +1,13 @@
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateUserData } from "../../Features/userSlice";
+import { updateUserData } from "src/Features/userSlice";
 import {
   checkEmailValidation,
   checkEmptyInputs,
   checkIsInputsValid,
   checkPasswordInputs,
-} from "../../Functions/helper";
+} from "src/Functions/helper";
 import s from "./EditProfileForm.module.scss";
 
 const EditProfileForm = () => {

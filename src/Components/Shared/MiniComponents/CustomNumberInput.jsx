@@ -1,9 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import {
-  MAXIMUM_QUANTITY,
-  MINIMUM_QUANTITY,
-} from "../../../Data/globalVariables";
-import { updateState } from "../../../Features/productsSlice";
+import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
+import { updateState } from "src/Features/productsSlice";
 import s from "./CustomNumberInput.module.scss";
 import SvgIcon from "./SvgIcon";
 

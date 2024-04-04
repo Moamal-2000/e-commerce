@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { appStore, googlePlay, qrCode } from "../../Assets/Images/Images";
+import { appStore, googlePlay, qrCode } from "src/Assets/Images/Images";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../Shared/MiniComponents/ToolTip";
 import s from "./Footer.module.scss";

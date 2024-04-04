@@ -1,5 +1,5 @@
-import { allProductsCustomizations } from "../../Data/staticData";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
+import { allProductsCustomizations } from "src/Data/staticData";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import ExploreProducts from "../Home/ProductPoster/ExploreProducts";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./ProductsPage.module.scss";

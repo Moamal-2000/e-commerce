@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
+import { getSubTotal } from "src/Functions/helper";
 import s from "./PaymentCalculation.module.scss";
-import { getSubTotal } from "../../../Functions/helper";
 
 const PaymentCalculation = () => {
   const { cartProducts } = useSelector((state) => state.products);

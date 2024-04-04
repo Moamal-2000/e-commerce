@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { signUpImg } from "../../Assets/Images/Images";
+import { signUpImg } from "src/Assets/Images/Images";
 import s from "./LogIn.module.scss";
 import LogInForm from "./LogInForm";
 

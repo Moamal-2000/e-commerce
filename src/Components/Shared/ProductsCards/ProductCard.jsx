@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { addToArray, removeById } from "../../../Features/productsSlice";
+import { addToArray, removeById } from "src/Features/productsSlice";
 import {
   checkDateBeforeMonthToPresent,
   isItemFound,
-} from "../../../Functions/helper";
+} from "src/Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";

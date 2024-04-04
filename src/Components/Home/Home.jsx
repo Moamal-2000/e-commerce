@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import s from "./Home.module.scss";
@@ -8,10 +9,9 @@ import OurProductsSection from "./OurProductsSection/OurProductsSection";
 import ProductPoster from "./ProductPoster/ProductPoster";
 import ThisMonthSection from "./ThisMonthSection/ThisMonthSection";
 import TodaySection from "./TodaySection/TodaySection";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 
 const Home = () => {
-  useScrollOnMount(0)
+  useScrollOnMount(0);
 
   return (
     <>

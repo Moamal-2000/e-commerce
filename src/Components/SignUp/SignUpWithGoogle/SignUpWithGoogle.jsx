@@ -1,4 +1,4 @@
-import { googleIcon } from "../../../Assets/Images/Images";
+import { googleIcon } from "src/Assets/Images/Images";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 
 const SignUpWithGoogle = () => {

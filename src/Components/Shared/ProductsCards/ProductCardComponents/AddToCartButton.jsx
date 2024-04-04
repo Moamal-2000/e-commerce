@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {
-  addToArray,
-  removeByKeyName,
-} from "../../../../Features/productsSlice";
-import { isItemFound } from "../../../../Functions/helper";
+import { addToArray, removeByKeyName } from "src/Features/productsSlice";
+import { isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 

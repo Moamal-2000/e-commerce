@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { LANGUAGES } from "../../Data/staticData";
+import { LANGUAGES } from "src/Data/staticData";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./LanguageSelector.module.scss";
 

@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
-import { SIMPLE_DELAYS } from "../../Data/globalVariables";
-import { productsData } from "../../Data/productsData";
-import { updateState } from "../../Features/globalSlice";
-import { capitalize, random } from "../../Functions/helper";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
-import useGetSearchParam from "../../Hooks/Helper/useGetSearchParam";
+import { SIMPLE_DELAYS } from "src/Data/globalVariables";
+import { productsData } from "src/Data/productsData";
+import { updateState } from "src/Features/globalSlice";
+import { capitalize, random } from "src/Functions/helper";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
+import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import s from "./ProductDetailsPage.module.scss";
@@ -18,7 +18,6 @@ const ProductDetailsPage = () => {
   const PRODUCT_DATA = productsData.filter(
     (product) => product.name.toLowerCase() === PRODUCT_NAME.toLowerCase()
   )?.[0];
-  console.log(PRODUCT_NAME);
   const { name, category, shortName } = PRODUCT_DATA;
   const history = ["Account", capitalize(category), name.toUpperCase()];
   const { loadingProductDetails } = useSelector((state) => state.global);

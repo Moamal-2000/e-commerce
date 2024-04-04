@@ -1,4 +1,4 @@
-import useToggle from "../../../Hooks/Helper/useToggle";
+import useToggle from "src/Hooks/Helper/useToggle";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
 import UserMenu from "../UserMenu/UserMenu";

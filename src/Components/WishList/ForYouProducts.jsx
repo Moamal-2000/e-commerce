@@ -1,4 +1,4 @@
-import { productsData } from "../../Data/productsData";
+import { productsData } from "src/Data/productsData";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
 import s from "./ForYouProducts.module.scss";
 

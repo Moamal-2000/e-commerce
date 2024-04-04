@@ -3,7 +3,7 @@ import {
   ps5,
   speakers,
   womanWithHat,
-} from "../../../Assets/Images/Images";
+} from "src/Assets/Images/Images";
 import HorizontalPoster from "../../Shared/Posters/HorizontalPoster";
 import MediumPoster from "../../Shared/Posters/MediumPoster";
 import SmallPoster from "../../Shared/Posters/SmallPoster";

@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
-import { signUpImg } from "../../Assets/Images/Images";
+import { signUpImg } from "src/Assets/Images/Images";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import s from "./SignUp.module.scss";
 import SignUpForm from "./SignUpForm";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 
 const SignUp = () => {
-  useScrollOnMount(240)
+  useScrollOnMount(240);
 
   return (
     <>

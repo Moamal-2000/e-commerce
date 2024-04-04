@@ -1,4 +1,4 @@
-import { car, correctSign, headphone } from "../../../Assets/Images/Images";
+import { car, correctSign, headphone } from "src/Assets/Images/Images";
 import Feature from "../../Shared/MiniComponents/Feature";
 import s from "./FeaturedSectionFeatures.module.scss";
 

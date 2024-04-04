@@ -4,7 +4,7 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./About.module.scss";
 import AboutHeroSection from "./HeroSection/AboutHeroSection";
 import AboutInfoCards from "./InfoCards/AboutInfoCards";
-import OurMembersSection from "./OurMemebers/OurMembersSlider";
+import OurMembersSection from "./OurMembers/OurMembers";
 
 const About = () => {
   return (

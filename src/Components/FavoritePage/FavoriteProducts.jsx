@@ -1,13 +1,11 @@
 import { useSelector } from "react-redux";
-import { wishListProductsCustomization } from "../../Data/staticData";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
+import { wishListProductsCustomization } from "src/Data/staticData";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
 import s from "./FavoriteProducts.module.scss";
 
 const FavoriteProducts = () => {
-  const { favoritesProducts } = useSelector(
-    (state) => state.products
-  );
+  const { favoritesProducts } = useSelector((state) => state.products);
   useScrollOnMount(160);
 
   return (

@@ -1,4 +1,4 @@
-import { paymentCards } from "../../../Data/staticData";
+import { paymentCards } from "src/Data/staticData";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./PaymentCards.module.scss";
 
