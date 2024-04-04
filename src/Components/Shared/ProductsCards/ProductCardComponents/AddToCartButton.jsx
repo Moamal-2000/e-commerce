@@ -19,34 +19,36 @@ const AddToCartButton = ({ product }) => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
 
-  function addProductToCart() {
+  function handleCartButton() {
     if (!loginInfo.isSignIn) {
       navigateTo("/signup");
       return;
     }
+    isProductAlreadyExist ? removeFromCart() : addToCart();
+  }
 
-    if (isProductAlreadyExist) {
-      const removeAction = removeByKeyName({
-        dataKey: "cartProducts",
-        itemKey: "shortName",
-        keyValue: product.shortName,
-      });
-
-      dispatch(removeAction);
-      setIconName("cart3");
-      return;
-    }
-
+  function addToCart() {
     const addAction = addToArray({ key: "cartProducts", value: product });
     dispatch(addAction);
     setIconName("trashCan");
+  }
+
+  function removeFromCart() {
+    const removeAction = removeByKeyName({
+      dataKey: "cartProducts",
+      itemKey: "shortName",
+      keyValue: product.shortName,
+    });
+
+    dispatch(removeAction);
+    setIconName("cart3");
   }
 
   return (
     <button
       type="button"
       className={`${s.addToCartBtn} ${s.addToCartButton}`}
-      onClick={addProductToCart}
+      onClick={handleCartButton}
       aria-label={buttonText}
       data-add-to-cart-button
     >
