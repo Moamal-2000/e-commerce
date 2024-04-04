@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { categoryProductsCustomizations } from "src/Data/staticData";
+import { productCardCustomizations } from "src/Data/staticData";
 import { capitalize } from "src/Functions/helper";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
@@ -23,7 +23,7 @@ const ProductsCategoryPage = () => {
           <section className={s.categoryContent}>
             <ProductsCategory
               categoryName={categoryType}
-              customization={categoryProductsCustomizations}
+              customization={productCardCustomizations.categoryProducts}
             />
           </section>
 

@@ -1,5 +1,5 @@
-import { allProductsCustomizations } from "src/Data/staticData";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
+import { productCardCustomizations } from "../../Data/staticData";
 import ExploreProducts from "../Home/ProductPoster/ExploreProducts";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./ProductsPage.module.scss";
@@ -13,7 +13,9 @@ const ProductsPage = () => {
         <PagesHistory history={["/", "Products"]} />
 
         <section className={s.products}>
-          <ExploreProducts customization={allProductsCustomizations} />
+          <ExploreProducts
+            customization={productCardCustomizations.allProducts}
+          />
         </section>
       </main>
     </div>
