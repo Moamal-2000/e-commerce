@@ -7,17 +7,30 @@
   margin: 20px 0 100px;
 }
 
-.buttons>button {
+.buttons>:where(a, button) {
   outline: none;
   padding: 16px 48px;
   border-radius: 4px;
+  color: var(--black);
   background-color: transparent;
   border: 1px solid #00000080;
+  font-size: 1rem;
   font-weight: 500;
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    color: var(--white);
+    border-color: var(--very-dark-gray);
+    background-color: var(--very-dark-gray);
+  }
+
+  &:active {
+    scale: var(--button-active-scale);
+  }
 }
 
 @include small {
-  .buttons>button {
+  .buttons>:where(a, button) {
     padding: 12px 30px;
     font-size: .9rem;
   }

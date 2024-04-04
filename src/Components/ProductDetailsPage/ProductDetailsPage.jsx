@@ -16,8 +16,9 @@ const ProductDetailsPage = () => {
   useScrollOnMount(200);
   const PRODUCT_NAME = useGetSearchParam("product");
   const PRODUCT_DATA = productsData.filter(
-    (product) => product.name.toLowerCase() === PRODUCT_NAME
+    (product) => product.name.toLowerCase() === PRODUCT_NAME.toLowerCase()
   )?.[0];
+  console.log(PRODUCT_NAME);
   const { name, category, shortName } = PRODUCT_DATA;
   const history = ["Account", capitalize(category), name.toUpperCase()];
   const { loadingProductDetails } = useSelector((state) => state.global);

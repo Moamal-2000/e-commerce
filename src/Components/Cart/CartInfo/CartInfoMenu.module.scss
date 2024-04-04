@@ -54,6 +54,15 @@
   color: var(--white);
   width: fit-content;
   margin: 0 auto;
+  transition: background .2s;
+
+  &:hover {
+    background: var(--tomato);
+  }
+
+  &:active {
+    scale: var(--button-active-scale);
+  }
 }
 
 @include small {

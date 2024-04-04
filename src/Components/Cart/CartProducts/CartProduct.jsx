@@ -4,9 +4,10 @@ import CustomNumberInput from "../../Shared/MiniComponents/CustomNumberInput";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CartProduct.module.scss";
+import { Link } from "react-router-dom";
 
 const CartProduct = ({ data }) => {
-  const { img, shortName, afterDiscount, quantity, id } = data;
+  const { img, name, shortName, afterDiscount, quantity, id } = data;
   const subTotal = (quantity * afterDiscount).toFixed(2);
   const dispatch = useDispatch();
 
@@ -25,7 +26,8 @@ const CartProduct = ({ data }) => {
             <ToolTip top="50%" left="-44px" content="remove" />
           </button>
         </div>
-        <span>{shortName}</span>
+
+        <Link to={`/details?product=${name}`}>{shortName}</Link>
       </td>
 
       <td className={s.price}>${afterDiscount}</td>
