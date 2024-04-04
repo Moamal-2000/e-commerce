@@ -1,0 +1,1 @@
+export const testVariable = "this is test from public folder"
