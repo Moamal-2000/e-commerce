@@ -1,4 +1,3 @@
-
 .addToCartBtn {
   border: none;
   outline: none;
@@ -17,7 +16,7 @@
   transform: translateY(50px);
 
   &:hover {
-    background: var(--turquoise);
+    background-color: #303030;
   }
 }
 
@@ -26,8 +25,18 @@
   margin-right: 6px;
   width: 19px;
   height: 19px;
+  transition: fill .2s .05s;
+}
+
+.addToCartBtn:hover>svg {
+  fill: var(--yellow);
 }
 
 .addToCartBtn>span {
   color: var(--white);
+  transition: color .2s .05s;
+}
+
+.addToCartBtn:hover>span {
+  color: var(--yellow);
 }

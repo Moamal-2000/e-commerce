@@ -161,6 +161,8 @@
 
 .detailsIcon:hover svg {
   fill: var(--turquoise);
+  fill: var(--yellow);
+  fill: #6f6f6f;
 }
 
 :where(.favIcon, .removeIcon):hover svg {
@@ -169,6 +171,10 @@
 
 .wishListIcon svg {
   fill: var(--black);
+}
+
+.wishListIcon:hover svg {
+  fill: #6f6f6f;
 }
 
 .wishListIcon.active svg path {
