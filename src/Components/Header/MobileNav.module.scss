@@ -11,6 +11,7 @@
   padding-right: 140px;
   z-index: 1001;
   overflow-y: auto;
+  margin-right: 4px;
   transition: right .5s;
 
   &.active {
@@ -27,7 +28,7 @@
 
 .mobileMenu::-webkit-scrollbar {
   background-color: transparent;
-  width: 6px;
+  width: 8px;
 }
 
 .mobileMenu::-webkit-scrollbar-thumb {
@@ -39,10 +40,17 @@
   display: block;
   width: 70px;
   height: 70px;
-  border-radius: 14px;
+  border-radius: 5px;
+  display: flex;
+  outline: solid 3px #54577a;
+  transition: outline-color .3s;
 
   & img {
     border-radius: inherit;
+  }
+
+  &:hover {
+    outline-color: #787db0;
   }
 }
 
@@ -67,7 +75,7 @@
 .navLinks ul {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 8px;
 }
 
 .navLinks ul li a,
@@ -87,6 +95,9 @@
     background-color: rgba(87, 87, 87, .5);
   }
 
+  &[class=active]:hover {
+    background-color: rgba(87, 87, 87, .8);
+  }
 }
 
 .navLinks ul li a span,

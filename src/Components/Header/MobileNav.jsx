@@ -56,7 +56,7 @@ const MobileNav = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/favorite">
+                <NavLink to="/favorites">
                   <SvgIcon name="heart" />
                   <span>Favorite</span>
                 </NavLink>
