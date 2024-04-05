@@ -46,6 +46,15 @@
   border-bottom: solid 1px var(--dark-gray);
   padding-bottom: 8px;
   color: var(--black);
+  transition: border-color .1s;
+
+  &:focus {
+    border-block-color: var(--black);
+  }
+
+  &::placeholder {
+    transition: color .1s;
+  }
 
   &:not(:last-child) {
     margin-bottom: 40px;
@@ -61,6 +70,10 @@
 
   &:not(:placeholder-shown) {
     border-bottom-color: var(--dark-gray);
+  }
+
+  &:focus::placeholder {
+    color: var(--black) !important;
   }
 }
 
@@ -80,11 +93,22 @@
   padding: 16px;
   border-radius: 4px;
   background-color: var(--dark-tomato);
+  border: solid 2px var(--dark-tomato);
+  transition: background-color .1s, color .1s;
   color: var(--white);
-  border: none;
   font-weight: 500;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--dark-tomato);
+  }
 }
 
 .buttons>a {
   color: var(--dark-tomato);
+  transition: color .2s;
+
+  &:hover {
+    color: var(--tomato);
+  }
 }

@@ -21,13 +21,13 @@ const SignUpForm = () => {
   let isSignUpWithGooglePressed = false;
 
   function signUp(e) {
+    e.preventDefault();
     const inputs = e.target.querySelectorAll("input");
     const formDataObj = new FormData(e.target);
     const formData = {};
 
     // Set keys and values from formDataObj to formData
     for (let pair of formDataObj.entries()) formData[pair[0]] = pair[1];
-    e.preventDefault();
 
     const isFormValid = simpleValidationCheck(inputs);
 

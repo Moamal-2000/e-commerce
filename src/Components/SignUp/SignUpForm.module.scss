@@ -46,6 +46,15 @@
   border-bottom: solid 1px var(--dark-gray);
   padding-bottom: 8px;
   color: var(--black);
+  transition: border-color .1s;
+
+  &:focus {
+    border-block-color: var(--black);
+  }
+
+  &::placeholder {
+    transition: color .1s;
+  }
 
   &:not(:last-child) {
     margin-bottom: 40px;
@@ -59,6 +68,10 @@
       color: var(--dark-tomato);
     }
   }
+
+  &:focus::placeholder {
+    color: var(--black) !important;
+  }
 }
 
 .inputs>input::placeholder {
@@ -70,10 +83,17 @@
   padding: 16px;
   border-radius: 4px;
   background-color: var(--dark-tomato);
+  border: solid 2px var(--dark-tomato);
   color: var(--white);
-  border: none;
   font-weight: 500;
   margin: 40px 0 20px;
+  height: 57.6px;
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--dark-tomato);
+  }
 }
 
 .signUpBtn {
@@ -83,7 +103,13 @@
   color: var(--black);
   @include center-x-y;
   background-color: transparent;
-  border: 1px solid #00000066;
+  border: 2px solid #00000066;
+  height: 57.6px;
+  transition: border-color .2s;
+
+  &:hover {
+    border-color: #000;
+  }
 }
 
 .signUpBtn>img {
