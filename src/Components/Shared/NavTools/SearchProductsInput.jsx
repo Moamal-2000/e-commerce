@@ -28,6 +28,7 @@ const SearchProductsInput = () => {
   }
 
   function handleSearchProducts(e) {
+    setSearchParams({ query: searchRef.current });
     e.preventDefault();
 
     const isEmptyQuery = searchRef.current.length === 0;
@@ -38,7 +39,7 @@ const SearchProductsInput = () => {
 
   function updateSearchProducts() {
     if (loadingSearchProducts) return;
-    const queryValue = searchParams.get("query");
+    const queryValue = searchParams.get("query") || searchRef.current;
 
     let productsFound = searchByObjectKey({
       data: productsData,

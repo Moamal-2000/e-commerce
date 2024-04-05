@@ -1,9 +1,7 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { DELAYS } from "src/Data/globalVariables";
-import { updateState } from "src/Features/productsSlice";
-import { random } from "src/Functions/helper";
+import { useSelector } from "react-redux";
+import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
+import useUpdateLoadingState from "../../Hooks/App/useUpdateLoadingState";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./SearchPage.module.scss";
@@ -13,26 +11,13 @@ const SearchPage = () => {
   const { searchProducts, loadingSearchProducts } = useSelector(
     (state) => state.products
   );
+  useUpdateLoadingState({
+    loadingState: loadingSearchProducts,
+    loadingKey: "loadingSearchProducts",
+    delays: SIMPLE_DELAYS,
+    dependencies: [searchProducts],
+  });
   const isWebsiteOnline = useOnlineStatus();
-  let randomDelay = random(DELAYS);
-  const dispatch = useDispatch();
-
-  function updateLoadingState() {
-    let timerId;
-
-    if (loadingSearchProducts) {
-      timerId = setTimeout(() => {
-        dispatch(updateState({ key: "loadingSearchProducts", value: false }));
-      }, randomDelay);
-
-      randomDelay = random(DELAYS);
-    }
-    return () => clearTimeout(timerId);
-  }
-
-  useEffect(() => {
-    updateLoadingState();
-  }, [searchProducts]);
 
   return (
     <div className="container">
