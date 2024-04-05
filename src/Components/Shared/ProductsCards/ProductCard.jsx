@@ -50,20 +50,19 @@ const ProductCard = ({
   const noHoverClass = stopHover ? s.noHover : "";
   const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
   const hideNewClass = shouldHideNewWord();
-  const navigateTo = useNavigate();
-  const dispatch = useDispatch();
+  const { loadingProductDetails } = useSelector((state) => state.global);
+  const { loginInfo } = useSelector((state) => state.user);
   const { favoritesProducts, wishList } = useSelector(
     (state) => state.products
   );
-  const {
-    loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
   const isAddedToWishList = wishList?.find(
     (wishProduct) => wishProduct.id === id
   );
   const isAddedToFavorites = favoritesProducts?.find(
     (favProduct) => favProduct.id === id
   );
+  const navigateTo = useNavigate();
+  const dispatch = useDispatch();
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -73,7 +72,7 @@ const ProductCard = ({
 
   function addProductToFavorite() {
     const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
-    if (!isSignIn) navigateTo("/signup");
+    if (!loginInfo.isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) {
       dispatch(removeById({ key: "favoritesProducts", id: product.id }));
       return;
@@ -83,12 +82,13 @@ const ProductCard = ({
   }
 
   function navigateToProductDetails() {
+    if (loadingProductDetails) return;
     navigateTo(`/details?product=${name.toLowerCase()}`);
   }
 
   function addProductToWishList() {
     const isProductAlreadyExist = isItemFound(wishList, product, "id");
-    if (!isSignIn) navigateTo("/signup");
+    if (!loginInfo.isSignIn) navigateTo("/signup");
     if (isProductAlreadyExist) {
       dispatch(removeById({ key: "wishList", id: product.id }));
       return;

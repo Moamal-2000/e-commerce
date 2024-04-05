@@ -22,7 +22,6 @@ const ProductDetailsPage = () => {
   const history = ["Account", capitalize(category), name.toUpperCase()];
   const { loadingProductDetails } = useSelector((state) => state.global);
   const dispatch = useDispatch();
-  let randomDelay = random(SIMPLE_DELAYS);
   const historyPaths = [
     {
       index: 0,
@@ -33,11 +32,11 @@ const ProductDetailsPage = () => {
       path: `/category?type=${category}`,
     },
   ];
+  let randomDelay = random(SIMPLE_DELAYS);
+  let timerId;
 
   function updateLoadingState() {
     dispatch(updateState({ key: "loadingProductDetails", value: true }));
-
-    let timerId;
 
     if (!loadingProductDetails) {
       timerId = setTimeout(() => {
@@ -46,12 +45,14 @@ const ProductDetailsPage = () => {
 
       randomDelay = random(SIMPLE_DELAYS);
     }
-
-    return () => clearTimeout(timerId);
   }
 
   useEffect(() => {
     updateLoadingState();
+
+    return () => {
+      clearTimeout(timerId);
+    };
   }, [PRODUCT_NAME]);
 
   return (
