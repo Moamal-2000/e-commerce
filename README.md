@@ -1,5 +1,4 @@
 ![preview](https://github.com/Moamal-2000/e-commerce/assets/103026211/935f9fd0-1cfa-4164-9947-3ce38a8f1484)
-
 <h1 align=center>E-Commerce website</h1>
 
 <p align=center>https://e-commercew.netlify.app</p>
@@ -24,7 +23,7 @@
    ```bash
    npm run dev
    ```
-
+  
 
 ## 2. Features
 - User authentication and account management
@@ -32,7 +31,7 @@
 - Store all the changes in local storage
 - Shopping cart and checkout process
 - Order tracking and history
-
+  
 
 ## 3. Technologies Used
 - [React js](https://react.dev) for better development
@@ -43,11 +42,11 @@
 - [Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
 - [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
 - [react helmet async](https://www.npmjs.com/package/react-helmet-async) for better SEO
-
+  
 
 ## 4. Contributing
 Contributions are welcome! Please fork the repository and submit pull requests.
-
+  
 
 ## 5. Style helper
 
@@ -89,5 +88,5 @@ Contributions are welcome! Please fork the repository and submit pull requests.
 ```
 
 #### 2. Fonts
-[Inter](https://fonts.google.com/specimen/Poppins) [Light, Medium, Regular, Bold, SemiBold]  
+[Inter](https://fonts.google.com/specimen/Poppins)   [Light, Medium, Regular, Bold, SemiBold]  
 [Poppins](https://fonts.google.com/specimen/Inter) [Light, Medium, Regular, Bold, SemiBold]  
