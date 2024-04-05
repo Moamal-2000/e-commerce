@@ -10,8 +10,47 @@
 </p>
 
 
-## Style helper
+## 1. Installation
 
+### 1. Clone the repository:
+   ```bash
+   git clone git@github.com:Moamal-2000/e-commerce.git
+   ```
+### 2. Install dependencies:
+   ```bash
+   npm install
+   ```
+### 3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+
+## 2. Features
+- User authentication and account management
+- Product catalog with search and filtering
+- Shopping cart and checkout process
+- Order tracking and history
+
+
+## 3. Technologies Used
+- [React js](https://react.dev) for better development
+- [React Router Dom v6](https://reactrouter.com) for SPA
+- [CSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) with SASS for styling
+- [Redux/Toolkit](https://redux-toolkit.js.org) for state management
+- [Swiper](https://swiperjs.com/react) for carousel slider
+- [Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
+- [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
+- [react helmet async](https://www.npmjs.com/package/react-helmet-async) for better SEO
+
+
+## 4. Contributing
+Contributions are welcome! Please fork the repository and submit pull requests.
+
+
+## 5.Style helper
+
+### Colors
 ```css
 :root {
   --black: #000;
@@ -47,3 +86,7 @@
   --button-active-scale: .991;
 }
 ```
+
+### Fonts
+[Inter](https://fonts.google.com/specimen/Poppins) [Light, Medium, Regular, Bold, SemiBold]
+[Poppins](https://fonts.google.com/specimen/Inter) [Light, Medium, Regular, Bold, SemiBold]
