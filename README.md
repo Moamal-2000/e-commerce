@@ -12,15 +12,15 @@
 
 ## 1. Installation
 
-### 1. Clone the repository:
+#### 1. Clone the repository:
    ```bash
    git clone git@github.com:Moamal-2000/e-commerce.git
    ```
-### 2. Install dependencies:
+#### 2. Install dependencies:
    ```bash
    npm install
    ```
-### 3. Start the development server:
+#### 3. Start the development server:
    ```bash
    npm run dev
    ```
@@ -29,6 +29,7 @@
 ## 2. Features
 - User authentication and account management
 - Product catalog with search and filtering
+- Store all the changes in local storage
 - Shopping cart and checkout process
 - Order tracking and history
 
@@ -48,9 +49,9 @@
 Contributions are welcome! Please fork the repository and submit pull requests.
 
 
-## 5.Style helper
+## 5. Style helper
 
-### Colors
+#### 1. Colors
 ```css
 :root {
   --black: #000;
@@ -87,6 +88,6 @@ Contributions are welcome! Please fork the repository and submit pull requests.
 }
 ```
 
-### Fonts
-[Inter](https://fonts.google.com/specimen/Poppins) [Light, Medium, Regular, Bold, SemiBold]
-[Poppins](https://fonts.google.com/specimen/Inter) [Light, Medium, Regular, Bold, SemiBold]
+#### 2. Fonts
+[Inter](https://fonts.google.com/specimen/Poppins) [Light, Medium, Regular, Bold, SemiBold]  
+[Poppins](https://fonts.google.com/specimen/Inter) [Light, Medium, Regular, Bold, SemiBold]  
