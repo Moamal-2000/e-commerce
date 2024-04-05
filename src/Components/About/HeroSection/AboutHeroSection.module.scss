@@ -56,6 +56,8 @@
 }
 
 .content>p {
+  text-wrap: pretty;
+
   &:not(:last-child) {
     margin-bottom: 20px;
   }

@@ -27,12 +27,16 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 
 .content>p {
   font-size: .875rem;
   color: var(--black);
+}
+
+.content>p:first-child {
+  margin-bottom: 10px;
 }
 
 .content>p>a {
@@ -54,8 +58,7 @@
   position: absolute;
   left: 0;
   bottom: -1px;
-  height: 1px;
   width: 100%;
-  background-color: var(--black);
+  border-bottom: solid 1px var(--black);
   opacity: .5;
 }
