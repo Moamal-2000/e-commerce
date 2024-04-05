@@ -34,14 +34,14 @@
   
 
 ## 3. Technologies Used
-- [React js](https://react.dev) for better development
-- [React Router Dom v6](https://reactrouter.com) for SPA
-- [CSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) with SASS for styling
-- [Redux/Toolkit](https://redux-toolkit.js.org) for state management
-- [Swiper](https://swiperjs.com/react) for carousel slider
 - [Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
 - [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
+- [CSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) with [SASS](https://sass-lang.com/documentation) for styling
+- [Redux/Toolkit](https://redux-toolkit.js.org) for state management
+- [React js](https://react.dev) for better development
+- [React Router Dom v6](https://reactrouter.com) for SPA
 - [react helmet async](https://www.npmjs.com/package/react-helmet-async) for better SEO
+- [Swiper](https://swiperjs.com/react) for carousel slider
   
 
 ## 4. Contributing
