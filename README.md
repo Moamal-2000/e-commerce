@@ -1,4 +1,4 @@
-[preview](https://github.com/Moamal-2000/e-commerce/assets/103026211/935f9fd0-1cfa-4164-9947-3ce38a8f1484)
+![preview](https://github.com/Moamal-2000/e-commerce/assets/103026211/935f9fd0-1cfa-4164-9947-3ce38a8f1484)
 
 Designed by: [mdrimel15](https://dribbble.com/mdrimel15)  
 Desgin url: [figma desgin](https://www.figma.com/file/bwhp2Q5jdzJDIw5YIsBlXe/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=34%3A213&mode=design)  
@@ -7,9 +7,8 @@ Desgin url: [figma desgin](https://www.figma.com/file/bwhp2Q5jdzJDIw5YIsBlXe/Ful
 ## Style helper
 
 ```css
-
 :root {
-  --black: `#000`;
+  --black: #000;
   --very-dark-gray: #252525;
   --tooltip-bg-color: #2d2d2d;
   --primary: #363738;
@@ -42,3 +41,5 @@ Desgin url: [figma desgin](https://www.figma.com/file/bwhp2Q5jdzJDIw5YIsBlXe/Ful
   --button-active-scale: .991;
 }
 ```
+
+test color: `#fff` and `#000`
