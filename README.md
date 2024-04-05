@@ -42,4 +42,14 @@ Desgin url: [figma desgin](https://www.figma.com/file/bwhp2Q5jdzJDIw5YIsBlXe/Ful
 }
 ```
 
-test color: `#fff` and `#000`
+## Main colors
+black![#000](https://via.placeholder.com/10/#000?text=+) `#000`
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
+![](https://via.placeholder.com/10/?text=+) ``
