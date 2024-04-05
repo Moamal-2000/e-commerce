@@ -5,12 +5,13 @@ const productsDataLocal = localStorage.getItem("productsSliceData");
 const initialState = productsDataLocal
   ? JSON.parse(productsDataLocal)
   : {
+      saveBillingInfoToLocal: false,
+      loadingSearchProducts: false,
+      loadingProductsPage: true,
       favoritesProducts: [],
       searchProducts: [],
       cartProducts: [],
       wishList: [],
-      saveBillingInfoToLocal: false,
-      loadingSearchProducts: false,
     };
 
 const productsSlice = createSlice({
