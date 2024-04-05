@@ -10,7 +10,6 @@
 @media (max-width: 1300px) {
   .forYouProducts {
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
   }
 }
 
@@ -23,7 +22,6 @@
 @include small {
   .forYouProducts {
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 }
 
@@ -39,7 +37,7 @@
   }
 }
 
-@include very-small {
+@media (max-width: 520px) {
   .forYouProducts>* {
     width: 100%;
   }

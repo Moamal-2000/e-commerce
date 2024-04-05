@@ -1,6 +1,6 @@
 @import "../../Styles/mixins.scss";
 
-.wishProducts {
+.favProducts {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
@@ -8,39 +8,37 @@
 }
 
 @media (max-width: 1300px) {
-  .wishProducts {
+  .favProducts {
     grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
   }
 }
 
 @include large {
-  .wishProducts {
+  .favProducts {
     grid-template-columns: repeat(2, 322px);
   }
 }
 
 @include small {
-  .wishProducts {
+  .favProducts {
     grid-template-columns: 1fr;
-    justify-items: center;
   }
 }
 
 @include large {
-  .wishProducts>* {
+  .favProducts>* {
     width: 322px;
   }
 }
 
 @include small {
-  .wishProducts>* {
+  .favProducts>* {
     width: 322px;
   }
 }
 
-@include very-small {
-  .wishProducts>* {
+@media (max-width: 520px) {
+  .favProducts>* {
     width: 100%;
   }
 }

@@ -9,7 +9,7 @@ const FavoriteProducts = () => {
   useScrollOnMount(160);
 
   return (
-    <div className={s.wishProducts}>
+    <div className={s.favProducts}>
       {favoritesProducts.map((product) => (
         <ProductCard
           key={product.id}
