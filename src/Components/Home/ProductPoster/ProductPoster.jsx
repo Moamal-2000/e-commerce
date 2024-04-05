@@ -8,7 +8,7 @@ const ProductPoster = () => {
     <section className={s.productPoster}>
       <div className={s.content}>
         <span>Categories</span>
-        <p>Enhance Your Music Experience</p>
+        <h2>Enhance Your Music Experience</h2>
         <PostCounter />
         <Link to="/products">Buy Now!</Link>
       </div>

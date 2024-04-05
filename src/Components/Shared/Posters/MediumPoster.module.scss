@@ -53,15 +53,14 @@
 
 .content>b {
   color: var(--white);
-  letter-spacing: .03rem;
   font: 600 1.5rem/24px "Inter", sans-serif;
 }
 
 .content>p {
-  margin: 14px 0 16px;
+  margin: 6px 0 12px;
   color: var(--secondary-white);
   font-size: .8rem;
-  line-height: 21px;
+  line-height: 18px;
 }
 
 .shopNow {
@@ -69,9 +68,9 @@
   align-items: center;
   cursor: pointer;
   padding: 2px;
-  width: fit-content;
   color: var(--secondary-white);
   font-size: 1rem;
+  width: fit-content;
   position: relative;
 
   &:hover::before {
