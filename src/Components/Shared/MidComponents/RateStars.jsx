@@ -1,27 +1,31 @@
 import { coloredStar, uncoloredStar } from "src/Assets/Images/Images";
 import { isDecimalNumber } from "src/Functions/helper";
+import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./RateStars.module.scss";
 
 const RateStars = ({ rate }) => {
-  if (!rate && rate !== 0) throw new Error("Rate value is undefined");
-
+  const isRateFound = rate !== undefined || rate !== null;
   const fixedRate = Math.floor(rate);
   const maxNumberOfRate = 5;
+
+  if (!isRateFound) throw new Error("Rate value is undefined or null");
 
   function getRateStars() {
     let isHalfStarRendered = false;
 
     return Array.from({ length: maxNumberOfRate }, (_, i) => {
-      const randomKey = Math.random();
+      const key = `star-${i}`;
 
-      if (fixedRate > i) return <img key={i} src={coloredStar} alt="star" />;
+      if (fixedRate > i) {
+        return <img key={key} src={coloredStar} alt="star" />;
+      }
 
       if (isDecimalNumber(rate) && !isHalfStarRendered) {
         isHalfStarRendered = true;
-        return <HalfStar key={randomKey} />;
+        return <SvgIcon name="halfStar" key={key} />;
       }
 
-      return <img key={i} src={uncoloredStar} alt="star" />;
+      return <img key={key} src={uncoloredStar} alt="star" />;
     });
   }
 
@@ -29,19 +33,3 @@ const RateStars = ({ rate }) => {
 };
 
 export default RateStars;
-
-const HalfStar = () => {
-  return (
-    <div className={s.halfStar}>
-      <div className={s.hideBox}>
-        <div className={s.uncoloredStar}>
-          <img src={uncoloredStar} alt="star" />
-        </div>
-      </div>
-
-      <div className={s.coloredStar}>
-        <img src={coloredStar} alt="star" />
-      </div>
-    </div>
-  );
-};

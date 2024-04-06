@@ -11,36 +11,3 @@
   height: 20px;
   object-fit: contain;
 }
-
-.halfStar {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  top: -1px;
-  scale: .9;
-}
-
-.uncoloredStar {
-  position: absolute;
-  height: 100%;
-  left: -9px;
-  top: 1px;
-}
-
-.coloredStar {
-  position: absolute;
-  left: 0;
-  top: 1px;
-  width: 20px;
-  height: 20px;
-}
-
-.hideBox {
-  position: absolute;
-  left: 10.5px;
-  top: 0;
-  width: 10px;
-  height: 21px;
-  overflow: hidden;
-  z-index: 2;
-}
