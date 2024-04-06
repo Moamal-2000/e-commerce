@@ -31,7 +31,7 @@ npm run dev
 
 ## 2. Features
 
-- <h4>User Authentication and Account Management: <p>Secure user registration and login functionalities.</p></h4>
+- <h4>User Authentication and Account Management: <p style="font-weight: 300;">Secure user registration and login functionalities.</p></h4>
 
 - <h4>Local Storage for Changes:</h4>
   <p>All user actions and changes are stored locally to ensure seamless browsing and continuity.</p>
