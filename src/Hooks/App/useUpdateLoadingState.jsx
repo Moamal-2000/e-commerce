@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { updateState } from "src/Features/productsSlice";
 import { random } from "src/Functions/helper";
 
 const useUpdateLoadingState = ({
@@ -9,6 +8,7 @@ const useUpdateLoadingState = ({
   cleanFunction,
   delays,
   dependencies = [],
+  actionMethod,
 }) => {
   const dispatch = useDispatch();
   const timerId = useRef(null);
@@ -18,7 +18,7 @@ const useUpdateLoadingState = ({
     if (!loadingState) return;
 
     timerId.current = setTimeout(() => {
-      dispatch(updateState({ key: loadingKey, value: false }));
+      dispatch(actionMethod({ key: loadingKey, value: false }));
     }, randomDelay);
 
     randomDelay = random(delays);

@@ -6,8 +6,6 @@ const initialState = productsDataLocal
   ? JSON.parse(productsDataLocal)
   : {
       saveBillingInfoToLocal: false,
-      loadingSearchProducts: false,
-      loadingProductsPage: true,
       favoritesProducts: [],
       searchProducts: [],
       cartProducts: [],
@@ -18,7 +16,7 @@ const productsSlice = createSlice({
   initialState,
   name: "productsSlice",
   reducers: {
-    updateState: (state, { payload: { key, value } }) => {
+    updateProductsState: (state, { payload: { key, value } }) => {
       state[key] = value;
     },
     addToArray: (state, { payload: { key, value } }) => {
@@ -41,7 +39,7 @@ const productsSlice = createSlice({
 });
 
 export const {
-  updateState,
+  updateProductsState,
   addToArray,
   removeById,
   removeByKeyName,

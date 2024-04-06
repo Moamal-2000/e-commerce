@@ -7,6 +7,8 @@ const initialState = {
   isSectionsMenuActive: false,
   isZoomInPreviewActive: false,
   loadingProductDetails: false,
+  loadingSearchProducts: true,
+  loadingProductsPage: true,
   previewImg: null,
 };
 
@@ -18,7 +20,7 @@ const globalSlice = createSlice({
       const { key, value } = action.payload;
       state[key] = value;
     },
-    updateState: (state, { payload }) => {
+    updateGlobalState: (state, { payload }) => {
       return {
         ...state,
         [payload.key]: payload.value,
@@ -27,5 +29,5 @@ const globalSlice = createSlice({
   },
 });
 
-export const { toggleState, updateState } = globalSlice.actions;
+export const { toggleState, updateGlobalState } = globalSlice.actions;
 export default globalSlice.reducer;

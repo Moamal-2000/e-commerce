@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { updateState } from "src/Features/globalSlice";
 import s from "./ProductPreview.module.scss";
+import { updateGlobalState } from "../../../Features/globalSlice";
 
 const ProductPreview = ({ data, handleZoomInEffect }) => {
   const { previewImg } = useSelector((state) => state.global);
@@ -12,11 +12,11 @@ const ProductPreview = ({ data, handleZoomInEffect }) => {
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
 
   function setZoomInPreview(value = false) {
-    dispatch(updateState({ key: "isZoomInPreviewActive", value: value }));
+    dispatch(updateGlobalState({ key: "isZoomInPreviewActive", value: value }));
   }
 
   function setPreviewImg(img) {
-    dispatch(updateState({ key: "previewImg", value: img }));
+    dispatch(updateGlobalState({ key: "previewImg", value: img }));
   }
 
   useEffect(() => {

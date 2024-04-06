@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateState } from "src/Features/productsSlice";
+import { updateProductsState } from "../../../Features/productsSlice";
 import s from "./CustomCheckbox.module.scss";
 import SvgIcon from "./SvgIcon";
 
@@ -11,7 +11,10 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
     const isInputChecked = e.target.checked;
 
     dispatch(
-      updateState({ key: "saveBillingInfoToLocal", value: isInputChecked })
+      updateProductsState({
+        key: "saveBillingInfoToLocal",
+        value: isInputChecked,
+      })
     );
   }
 

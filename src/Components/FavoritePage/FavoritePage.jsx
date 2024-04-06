@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateState } from "../../Features/productsSlice";
+import { updateProductsState } from "../../Features/productsSlice";
 import { getUniqueArrayByObjectKey } from "../../Functions/helper";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import ForYouProducts from "../WishList/ForYouProducts";
@@ -22,8 +22,10 @@ const FavoritePage = () => {
       key: "shortName",
     });
 
-    dispatch(updateState({ key: "favoritesProducts", value: [] }));
-    dispatch(updateState({ key: "cartProducts", value: uniqueCartProducts }));
+    dispatch(updateProductsState({ key: "favoritesProducts", value: [] }));
+    dispatch(
+      updateProductsState({ key: "cartProducts", value: uniqueCartProducts })
+    );
   }
 
   return (

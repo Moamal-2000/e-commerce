@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
-import { updateState } from "src/Features/productsSlice";
+import { updateProductsState } from "../../../Features/productsSlice";
 import s from "./CustomNumberInput.module.scss";
 import SvgIcon from "./SvgIcon";
 
@@ -52,7 +52,7 @@ const CustomNumberInput = ({ product, quantity }) => {
     updatedCartProducts[indexToUpdate] = updatedProduct;
 
     dispatch(
-      updateState({
+      updateProductsState({
         key: "cartProducts",
         value: updatedCartProducts,
       })

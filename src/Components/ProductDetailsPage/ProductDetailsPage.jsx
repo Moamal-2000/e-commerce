@@ -3,10 +3,10 @@ import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productsData } from "src/Data/productsData";
-import { updateState } from "src/Features/globalSlice";
 import { capitalize, random } from "src/Functions/helper";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
+import { updateGlobalState } from "../../Features/globalSlice";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import s from "./ProductDetailsPage.module.scss";
@@ -36,11 +36,13 @@ const ProductDetailsPage = () => {
   let timerId;
 
   function updateLoadingState() {
-    dispatch(updateState({ key: "loadingProductDetails", value: true }));
+    dispatch(updateGlobalState({ key: "loadingProductDetails", value: true }));
 
     if (!loadingProductDetails) {
       timerId = setTimeout(() => {
-        dispatch(updateState({ key: "loadingProductDetails", value: false }));
+        dispatch(
+          updateGlobalState({ key: "loadingProductDetails", value: false })
+        );
       }, randomDelay);
 
       randomDelay = random(SIMPLE_DELAYS);
