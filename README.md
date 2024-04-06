@@ -1,4 +1,5 @@
 ![preview](https://github.com/Moamal-2000/e-commerce/assets/103026211/935f9fd0-1cfa-4164-9947-3ce38a8f1484)
+
 <h1 align=center>E-Commerce website</h1>
 
 <p align=center>https://e-commercew.netlify.app</p>
@@ -8,36 +9,39 @@
   Design on <a href="https://www.figma.com/file/bwhp2Q5jdzJDIw5YIsBlXe/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=34%3A213&mode=design" target="_blank">Figma</a>
 </p>
 
-
 ## 1. Installation
 
 #### 1. Clone the repository:
-   ```bash
-   git clone git@github.com:Moamal-2000/e-commerce.git
-   ```
+
+```bash
+git clone git@github.com:Moamal-2000/e-commerce.git
+```
+
 #### 2. Install dependencies:
-   ```bash
-   npm install
-   ```
+
+```bash
+npm install
+```
+
 #### 3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-  
+
+```bash
+npm run dev
+```
 
 ## 2. Features
+
+- ### User Authentication and Account Management:
+Secure user registration and login functionalities.
+
 - User authentication and account management
+- Product catalog with search and filtering
 - Store all the changes in local storage
 - Shopping cart and checkout process
 - Order tracking and history
-- Product details page with zoom-in feature
-- Search by input or a category or show all products
-- Save your products to your favorite/wishlist/cart pocket
-- Fully responsive website with all devices
-
-  
 
 ## 3. Technologies Used
+
 - [Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
 - [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
 - [CSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) with [SASS](https://sass-lang.com/documentation) for styling
@@ -46,11 +50,11 @@
 - [React Router Dom v6](https://reactrouter.com) for SPA
 - [react helmet async](https://www.npmjs.com/package/react-helmet-async) for better SEO
 - [Swiper](https://swiperjs.com/react) for carousel slider
-  
 
 ## 4. Style helper
 
 #### 1. Colors
+
 ```css
 :root {
   --black: #000;
@@ -58,35 +62,36 @@
   --tooltip-bg-color: #2d2d2d;
   --primary: #363738;
   --brown: #504242;
-  --dark-gray: #4C5355;
-  --light-gray: #7D8184;
+  --dark-gray: #4c5355;
+  --light-gray: #7d8184;
   --regular-light-gray: #999999;
   --gray-blue: #848d97;
-  --light-blue: #A0BCE0;
+  --light-blue: #a0bce0;
   --medium-light-gray: #cbcbcb;
-  --very-light-gray: #EDEDED;
+  --very-light-gray: #ededed;
   --very-light-gray2: #f5f5f5;
-  --secondary-white: #FAFAFA;
+  --secondary-white: #fafafa;
   --skeleton-color1: #f6f7f8;
   --skeleton-color2: #edeef1;
   --website-bg: #fdfdfd;
   --white: #fff;
-  --dark-red: #A22F2F;
-  --dark-tomato: #B40404;
+  --dark-red: #a22f2f;
+  --dark-tomato: #b40404;
   --tomato: #db4444;
   --red: #ff0000;
-  --rose: #E07575;
+  --rose: #e07575;
   --green: #078639;
   --blue: #4493f8;
-  --turquoise: #4AC2E8;
+  --turquoise: #4ac2e8;
   --yellow: #fffb19;
   --container-width: 85%;
   --container-mobile-width: 94%;
   --page-margin: 60px 0 100px;
-  --button-active-scale: .991;
+  --button-active-scale: 0.991;
 }
 ```
 
 #### 2. Fonts
-[Inter](https://fonts.google.com/specimen/Poppins)   [Light, Medium, Regular, Bold, SemiBold]  
-[Poppins](https://fonts.google.com/specimen/Inter) [Light, Medium, Regular, Bold, SemiBold]  
+
+[Inter](https://fonts.google.com/specimen/Poppins) [Light, Medium, Regular, Bold, SemiBold]  
+[Poppins](https://fonts.google.com/specimen/Inter) [Light, Medium, Regular, Bold, SemiBold]
