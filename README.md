@@ -27,10 +27,14 @@
 
 ## 2. Features
 - User authentication and account management
-- Product catalog with search and filtering
 - Store all the changes in local storage
 - Shopping cart and checkout process
 - Order tracking and history
+- Product details page with zoom-in feature
+- Search by input or a category or show all products
+- Save your products to your favorite/wishlist/cart pocket
+- Fully responsive website with all devices
+
   
 
 ## 3. Technologies Used
@@ -44,11 +48,7 @@
 - [Swiper](https://swiperjs.com/react) for carousel slider
   
 
-## 4. Contributing
-Contributions are welcome! Please fork the repository and submit pull requests.
-  
-
-## 5. Style helper
+## 4. Style helper
 
 #### 1. Colors
 ```css
