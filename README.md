@@ -31,13 +31,29 @@ npm run dev
 
 ## 2. Features
 
-- <h3>User Authentication and Account Management:</h3> <p style="display: inline">Secure user registration and login functionalities.</p>
+- <h4 style="display: inline">User Authentication and Account Management:</h4>
+  <p style="display: inline">Secure user registration and login functionalities.</p>
 
-- User authentication and account management
-- Product catalog with search and filtering
-- Store all the changes in local storage
-- Shopping cart and checkout process
-- Order tracking and history
+- <h4 style="display: inline">Local Storage for Changes:</h4>
+  <p style="display: inline">All user actions and changes are stored locally to ensure seamless browsing and continuity.</p>
+
+- <h4 style="display: inline">Shopping Cart and Checkout Process:</h4>
+  <p style="display: inline">Easily add items to your cart and proceed through a streamlined checkout process.</p>
+
+- <h4 style="display: inline">Order Tracking and History:</h4>
+  <p style="display: inline">Track the status of your orders and view past order history.</p>
+
+- <h4 style="display: inline">Product Details Page with Zoom-In Feature:</h4>
+  <p style="display: inline">View detailed product information with the ability to zoom in on product images.</p>
+
+- <h4 style="display: inline">Search Functionality:</h4>
+  <p style="display: inline">Search for products by name, category, or browse all available products.</p>
+
+- <h4 style="display: inline">Save to Favorites/Wishlist/Cart:</h4>
+  <p style="display: inline">Save products to your preferred list for future reference or purchase.</p>
+
+- <h4 style="display: inline">Fully Responsive Design:</h4>
+  <p style="display: inline">Enjoy a responsive and user-friendly experience across all devices, including desktops, tablets, and mobile phones.</p>
 
 ## 3. Technologies Used
 
