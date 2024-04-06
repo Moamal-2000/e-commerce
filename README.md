@@ -31,7 +31,7 @@ npm run dev
 
 ## 2. Features
 
-- <h3>User Authentication and Account Management:</h3> Secure user registration and login functionalities.
+- <h3 style="display: inline">User Authentication and Account Management:</h3> Secure user registration and login functionalities.
 
 - User authentication and account management
 - Product catalog with search and filtering
