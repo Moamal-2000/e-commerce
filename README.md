@@ -29,32 +29,7 @@ npm install
 npm run dev
 ```
 
-## 2. Features
-
-- <h4>User Authentication and Account Management:</h4>Secure user registration and login functionalities.
-
-- <h4>Local Storage for Changes:</h4>
-  <p>All user actions and changes are stored locally to ensure seamless browsing and continuity.</p>
-
-- <h4>Shopping Cart and Checkout Process:</h4>
-  <p>Easily add items to your cart and proceed through a streamlined checkout process.</p>
-
-- <h4>Order Tracking and History:</h4>
-  <p>Track the status of your orders and view past order history.</p>
-
-- <h4>Product Details Page with Zoom-In Feature:</h4>
-  <p>View detailed product information with the ability to zoom in on product images.</p>
-
-- <h4>Search Functionality:</h4>
-  <p>Search for products by name, category, or browse all available products.</p>
-
-- <h4>Save to Favorites/Wishlist/Cart:</h4>
-  <p>Save products to your preferred list for future reference or purchase.</p>
-
-- <h4>Fully Responsive Design:</h4>
-  <p>Enjoy a responsive and user-friendly experience across all devices, including desktops, tablets, and mobile phones.</p>
-
-## 3. Technologies Used
+## 2. Technologies Used
 
 - [Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
 - [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
@@ -64,6 +39,32 @@ npm run dev
 - [React Router Dom v6](https://reactrouter.com) for SPA
 - [react helmet async](https://www.npmjs.com/package/react-helmet-async) for better SEO
 - [Swiper](https://swiperjs.com/react) for carousel slider
+
+## 3. Features
+
+1. **User Authentication and Account Management:**
+   Secure user registration and login functionalities.
+
+2. **Local Storage for Changes:**
+   All user actions and changes are stored locally to ensure seamless browsing and continuity.
+
+3. **Shopping Cart and Checkout Process:**
+   Easily add items to your cart and proceed through a streamlined checkout process.
+
+4. **Order Tracking and History:**
+   Track the status of your orders and view past order history.
+
+5. **Product Details Page with Zoom-In Feature:**
+   View detailed product information with the ability to zoom in on product images.
+
+6. **Search Functionality:**
+   Search for products by name, category, or browse all available products.
+
+7. **Save to Favorites/Wishlist/Cart:**
+   Save products to your preferred list for future reference or purchase.
+
+8. **Fully Responsive Design:**
+   Enjoy a responsive and user-friendly experience across all devices, including desktops, tablets, and mobile phones.
 
 ## 4. Style helper
 
@@ -107,5 +108,7 @@ npm run dev
 
 #### 2. Fonts
 
-[Inter](https://fonts.google.com/specimen/Poppins) [Light, Medium, Regular, Bold, SemiBold]  
-[Poppins](https://fonts.google.com/specimen/Inter) [Light, Medium, Regular, Bold, SemiBold]
+| Font                                                 | Weights                                |
+| ---------------------------------------------------- | -------------------------------------- |
+| [Inter](https://fonts.google.com/specimen/Inter)     | Light, Medium, Regular, Bold, SemiBold |
+| [Poppins](https://fonts.google.com/specimen/Poppins) | Light, Medium, Regular, Bold, SemiBold |
