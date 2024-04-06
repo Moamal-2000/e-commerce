@@ -1,29 +1,33 @@
-![preview](https://github.com/Moamal-2000/e-commerce/assets/103026211/935f9fd0-1cfa-4164-9947-3ce38a8f1484)
+<p align="center">
+  <img src="https://github.com/Moamal-2000/e-commerce/assets/103026211/935f9fd0-1cfa-4164-9947-3ce38a8f1484" alt="E-Commerce Website Preview">
+</p>
 
-<h1 align=center>E-Commerce website</h1>
+<h1 align="center">E-Commerce Website</h1>
 
-<p align=center>https://e-commercew.netlify.app</p>
-
-<p align=center>
+<p align="center">
   Designed by: <a href="https://dribbble.com/mdrimel15" target="_blank">mdrimel15</a>, 
   Design on <a href="https://www.figma.com/file/bwhp2Q5jdzJDIw5YIsBlXe/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=34%3A213&mode=design" target="_blank">Figma</a>
 </p>
 
+<p align="center">
+  Visit the website: <a href="https://e-commercew.netlify.app" target="_blank">E-Commerce Website</a>
+</p>
+
 ## 1. Installation
 
-#### 1. Clone the repository:
+**1. Clone the repository:**
 
 ```bash
 git clone git@github.com:Moamal-2000/e-commerce.git
 ```
 
-#### 2. Install dependencies:
+**2. Install dependencies:**
 
 ```bash
 npm install
 ```
 
-#### 3. Start the development server:
+**3. Start the development server:**
 
 ```bash
 npm run dev
