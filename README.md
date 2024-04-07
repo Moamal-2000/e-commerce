@@ -37,7 +37,7 @@ npm run dev
 
 
 
-- ![pwa](https://github.com/Moamal-2000/e-commerce/assets/103026211/a6118b1d-ee01-4df6-beff-efde137846c8)[Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
+- [Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
 - [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
 - [CSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) with [SASS](https://sass-lang.com/documentation) for styling
 - [Redux/Toolkit](https://redux-toolkit.js.org) for state management
