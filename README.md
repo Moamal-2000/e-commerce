@@ -36,7 +36,7 @@ npm run dev
 ## 2. Technologies Used
 
 
-- ![pwa-logo](https://github.com/Moamal-2000/e-commerce/assets/103026211/c9c97ab4-fbf5-41f6-b524-5609da79b6ed)[Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
+- ![application](https://github.com/Moamal-2000/e-commerce/assets/103026211/4568ca21-2278-4353-ae0e-4e8d912f5122)[Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
 - [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
 - [CSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) with [SASS](https://sass-lang.com/documentation) for styling
 - [Redux/Toolkit](https://redux-toolkit.js.org) for state management
