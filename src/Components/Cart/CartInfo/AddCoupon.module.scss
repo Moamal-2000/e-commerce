@@ -29,7 +29,7 @@
   transition: border-color .1s, background-color .1s .05s;
 
   &:focus {
-    outline-color: rgb(255, 123, 0);
+    outline-color: #ff7b00;
     background-color: rgba(255, 166, 0, .08);
   }
 }

@@ -3,8 +3,11 @@
 .features {
   border: 1px solid #00000080;
   border-radius: 4px;
-  padding: 25px 0;
   max-width: 450px;
+
+  &:hover {
+    border-color: #ff7b00;
+  }
 }
 
 .features .feature {
@@ -17,8 +20,13 @@
     padding-bottom: 20px;
   }
 
+  &:first-child {
+    padding-top: 25px;
+  }
+
   &:last-child {
     padding-top: 20px;
+    padding-bottom: 25px;
   }
 }
 

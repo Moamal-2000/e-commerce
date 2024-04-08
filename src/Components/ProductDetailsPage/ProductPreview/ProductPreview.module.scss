@@ -44,6 +44,12 @@
   aspect-ratio: 1/1;
   width: 125px;
   cursor: pointer;
+  border: solid 1px var(--very-light-gray);
+
+  &:hover {
+    border-color: #ff7b00;
+    background-color: rgba(255, 166, 0, .08);
+  }
 }
 
 @media (max-width: 1400px) {
@@ -75,6 +81,11 @@
   border-radius: 4px;
   flex: 1;
   background-color: var(--very-light-gray2);
+  border: solid 1px var(--very-light-gray);
+
+  &:hover {
+    border-color: #ff7b00;
+  }
 }
 
 @include large {

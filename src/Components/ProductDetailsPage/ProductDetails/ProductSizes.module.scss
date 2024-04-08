@@ -32,6 +32,12 @@
   cursor: pointer;
   @include center-x-y;
 
+  &:not(.active):hover {
+    background-color: rgba(180, 4, 4, .85);
+    border-color: rgba(180, 4, 4, .85);
+    color: var(--white);
+  }
+
   &.active {
     border-color: var(--dark-tomato);
     background-color: var(--dark-tomato);

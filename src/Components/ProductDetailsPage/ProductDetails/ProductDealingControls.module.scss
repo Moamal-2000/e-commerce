@@ -87,8 +87,15 @@
   height: 44px;
   border-radius: 4px;
   background-color: var(--dark-tomato);
+  border: solid 2px var(--dark-tomato);
   color: var(--white);
   font-weight: 500;
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--dark-tomato);
+  }
 }
 
 .addToFav {
@@ -101,6 +108,10 @@
   @include center-x-y;
   cursor: pointer;
   position: relative;
+
+  &:hover {
+    border-color: var(--tomato);
+  }
 }
 
 .addToFav>svg {

@@ -16,7 +16,7 @@ const ProductColors = ({ colors, showToolTip = false }) => {
       <div
         key={"color-" + i}
         className={`${s.color} ${firstItemActiveClass}`}
-        style={{ backgroundColor: color }}
+        style={{ backgroundColor: color, border: `solid 3px ${color}` }}
         onClick={(e) => choiceProductColor(e, i)}
         aria-label={name + " color"}
       >
