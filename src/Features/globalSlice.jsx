@@ -4,6 +4,7 @@ const initialState = {
   isOverlayActive: false,
   isMobileMenuActive: false,
   isProfileMenuActive: false,
+  loadingCategoryPage: false,
   isSectionsMenuActive: false,
   isZoomInPreviewActive: false,
   loadingProductDetails: false,

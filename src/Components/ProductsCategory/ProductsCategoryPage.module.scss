@@ -11,3 +11,28 @@
   gap: 20px;
   min-height: 430px;
 }
+
+.skeletonCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1300px) {
+  .skeletonCards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@include medium {
+  .skeletonCards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skeletonCards {
+    grid-template-columns: 1fr;
+  }
+}

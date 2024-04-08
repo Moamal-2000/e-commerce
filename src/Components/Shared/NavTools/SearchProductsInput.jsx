@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
 import { searchByObjectKey } from "src/Functions/helper";
@@ -15,7 +15,6 @@ const SearchProductsInput = () => {
   const navigateTo = useNavigate();
   const pathName = location.pathname;
   const [searchParams, setSearchParams] = useSearchParams();
-  const { loadingSearchProducts } = useSelector((state) => state.global);
 
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
@@ -32,7 +31,7 @@ const SearchProductsInput = () => {
     setSearchParams({ query: searchRef.current });
     e.preventDefault();
 
-    const isEmptyQuery = searchRef.current.trim().length === 0;
+    const isEmptyQuery = searchRef.current?.trim()?.length === 0;
     if (isEmptyQuery) return;
 
     updateSearchProducts();
@@ -42,7 +41,7 @@ const SearchProductsInput = () => {
     dispatch(updateGlobalState({ key: "loadingSearchProducts", value: true }));
 
     const queryValue = searchParams.get("query") || searchRef.current;
-    const isEmptyQuery = queryValue.trim().length === 0;
+    const isEmptyQuery = queryValue?.trim()?.length === 0;
 
     if (isEmptyQuery) {
       dispatch(updateProductsState({ key: "searchProducts", value: [] }));
