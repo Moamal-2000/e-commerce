@@ -22,7 +22,7 @@ const Home = () => {
         <title>E-Commercew</title>
         {/* {pathname === "/" && (
         )} */}
-        <link rel="preload" as="image" href={productImg1} />
+        {/* <link rel="preload" as="image" href={productImg1} /> */}
       </Helmet>
 
       <div className={s.home}>
