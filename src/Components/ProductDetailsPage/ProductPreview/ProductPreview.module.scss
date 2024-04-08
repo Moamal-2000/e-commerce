@@ -46,7 +46,8 @@
   cursor: pointer;
   border: solid 1px var(--very-light-gray);
 
-  &:hover {
+  &:hover,
+  &.active {
     border-color: #ff7b00;
     background-color: rgba(255, 166, 0, .08);
   }

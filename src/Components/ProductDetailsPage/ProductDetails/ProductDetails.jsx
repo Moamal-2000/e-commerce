@@ -44,7 +44,7 @@ const ProductDetails = ({ data }) => {
 
             <ProductColorsSection data={data} />
             <ProductSizes data={data} />
-            <ProductDealingControls />
+            <ProductDealingControls data={data} />
             <ProductFeatures />
           </section>
         </section>

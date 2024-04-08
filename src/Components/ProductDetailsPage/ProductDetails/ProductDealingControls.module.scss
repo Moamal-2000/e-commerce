@@ -112,6 +112,46 @@
   &:hover {
     border-color: var(--tomato);
   }
+
+  &.active>svg {
+    fill: var(--tomato);
+  }
+}
+
+.addToFav .heartBackground {
+  --heart-color: var(--tomato);
+
+  position: absolute;
+  top: calc(50% + 8px);
+  left: 50%;
+  translate: -50% -50%;
+  border-style: solid;
+  border-color: var(--heart-color) transparent transparent transparent;
+  border-width: 10px;
+  opacity: 0;
+}
+
+.addToFav.active .heartBackground {
+  opacity: 1;
+}
+
+.addToFav .heartBackground::before,
+.addToFav .heartBackground::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  background-color: var(--heart-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.addToFav .heartBackground::before {
+  left: -9px;
+}
+
+.addToFav .heartBackground::after {
+  right: -9px;
 }
 
 .addToFav>svg {

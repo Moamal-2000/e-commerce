@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import s from "./ProductPreview.module.scss";
 import { updateGlobalState } from "../../../Features/globalSlice";
+import s from "./ProductPreview.module.scss";
 
 const ProductPreview = ({ data, handleZoomInEffect }) => {
   const { previewImg } = useSelector((state) => state.global);
-  const dispatch = useDispatch();
   const [searchParams] = useSearchParams();
+  const dispatch = useDispatch();
   const { img, name, otherImages } = data;
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
 
@@ -26,7 +26,11 @@ const ProductPreview = ({ data, handleZoomInEffect }) => {
   return (
     <section className={s.images}>
       {hasOtherImages && (
-        <PreviewImages data={otherImages} setPreviewImg={setPreviewImg} />
+        <PreviewImages
+          data={otherImages}
+          previewImg={previewImg}
+          setPreviewImg={setPreviewImg}
+        />
       )}
 
       <div className={s.previewImgHolder}>
@@ -43,13 +47,13 @@ const ProductPreview = ({ data, handleZoomInEffect }) => {
 };
 export default ProductPreview;
 
-const PreviewImages = ({ data, setPreviewImg }) => {
+const PreviewImages = ({ data, previewImg, setPreviewImg }) => {
   return (
     <div className={s.otherImages}>
       {data.map((img, i) => (
         <div
           key={i}
-          className={s.imgHolder}
+          className={`${s.imgHolder} ${previewImg === img ? s.active : ""}`}
           onClick={() => setPreviewImg(data[i])}
         >
           <img src={img} alt="product's image" />

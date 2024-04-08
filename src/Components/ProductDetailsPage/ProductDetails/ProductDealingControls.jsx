@@ -1,16 +1,21 @@
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { addToArray, removeByKeyName } from "src/Features/productsSlice";
+import { isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ProductDealingControls.module.scss";
 
-const ProductDealingControls = () => {
-  const {
-    loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
+const ProductDealingControls = ({ data }) => {
+  const { favoritesProducts } = useSelector((state) => state.products);
+  const { loginInfo } = useSelector((state) => state.user);
   const navigateTo = useNavigate();
+  const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
+  const isFavoriteProduct =
+    favoritesProducts.filter((product) => product.shortName === data.shortName)
+      .length !== 0;
 
   function increaseQuantity() {
     setQuantity((prevNumber) => +prevNumber + 1);
@@ -21,7 +26,29 @@ const ProductDealingControls = () => {
   }
 
   function handleBuyProduct() {
-    if (!isSignIn) navigateTo("/signup");
+    if (!loginInfo.isSignIn) navigateTo("/signup");
+  }
+
+  function addProductToFavorite() {
+    const isProductAlreadyExist = isItemFound(
+      favoritesProducts,
+      data,
+      "shortName"
+    );
+
+    if (!loginInfo.isSignIn) navigateTo("/signup");
+    if (isProductAlreadyExist) {
+      dispatch(
+        removeByKeyName({
+          dataKey: "favoritesProducts",
+          itemKey: "shortName",
+          keyValue: data.shortName,
+        })
+      );
+      return;
+    }
+
+    dispatch(addToArray({ key: "favoritesProducts", value: data }));
   }
 
   return (
@@ -56,9 +83,11 @@ const ProductDealingControls = () => {
 
         <button
           type="button"
-          className={s.addToFav}
+          className={`${s.addToFav} ${isFavoriteProduct ? s.active : ""}`}
           aria-label="Add to favorite"
+          onClick={addProductToFavorite}
         >
+          <div className={s.heartBackground} />
           <SvgIcon name="heart" />
           <ToolTip left="50%" top="60px" content="Add to favorite" />
         </button>
