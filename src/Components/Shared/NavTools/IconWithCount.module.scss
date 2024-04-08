@@ -23,6 +23,10 @@
   transition: fill .2s;
 }
 
+.link:hover svg {
+  fill: #6f6f6f;
+}
+
 .count {
   display: inline-block;
   position: absolute;

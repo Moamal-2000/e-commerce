@@ -3,23 +3,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 230px;
+  width: 250px;
   padding: 10px 12px 10px 20px;
   border-radius: 4px;
   margin-right: 24px;
   user-select: none;
   cursor: pointer;
   position: relative;
-  border: solid 1px var(--secondary-white);
-  transition: border-color .1s;
+  outline: solid 1px var(--black);
+  border: 6px solid var(--secondary-white);
+  transition: border-color .1s, outline-color .1s, background-color .1s .05s;
 
   &:hover {
-    border-color: var(--black);
+    outline-color: var(--turquoise);
   }
 
   &:has(:focus) {
-    border-color: var(--turquoise);
-    background-color: var(--white);
+    outline-color: var(--turquoise);
+    border-color: var(--white);
+    background-color: rgba(74, 195, 232, .07);
   }
 }
 
@@ -33,9 +35,33 @@
 
 .searchContainer>button {
   all: unset;
+  position: relative;
+}
+
+.searchContainer>button::before {
+  content: '';
+  position: absolute;
+  left: 2.3px;
+  top: 2.7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 .searchContainer>button>svg {
   width: 18px;
   height: 18px;
+  transition: fill .1s;
+}
+
+.searchContainer:has(:focus)>button>svg {
+  fill: #757575;
+}
+
+.searchContainer>button:active svg {
+  fill: var(--black);
+}
+
+.searchContainer>button:active::before {
+  background-color: var(--white);
 }

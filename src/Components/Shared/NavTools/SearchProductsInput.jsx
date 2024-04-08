@@ -92,7 +92,7 @@ const SearchProductsInput = () => {
         placeholder="What are you looking for?"
         onChange={(e) => handleSearchOnChange(e)}
       />
-      <button type="button">
+      <button type="submit">
         <SvgIcon name="search" />
       </button>
     </form>

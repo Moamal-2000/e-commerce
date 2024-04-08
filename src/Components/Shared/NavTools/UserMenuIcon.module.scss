@@ -18,6 +18,10 @@
   transition: fill .2s;
 }
 
+.userContainer:not(.active):hover>svg {
+  fill: #6f6f6f;
+}
+
 .userContainer.active>svg {
   scale: .7;
 }

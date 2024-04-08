@@ -108,7 +108,7 @@
   transition: border-color .2s;
 
   &:hover {
-    border-color: #000;
+    border-color: var(--dark-gray);
   }
 }
 

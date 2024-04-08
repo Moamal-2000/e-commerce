@@ -64,6 +64,8 @@
   color: var(--white);
   margin-top: 4px;
   font-weight: bold;
+  cursor: pointer;
+  user-select: none;
 }
 
 .navLinks {
@@ -117,4 +119,10 @@
   height: 2px;
   margin: 30px 0;
   border-color: var(--regular-light-gray);
+}
+
+.userInfo p::selection,
+.navLinks ul li a span::selection,
+.mobileMenu button span::selection {
+  background-color: var(--white) !important;
 }

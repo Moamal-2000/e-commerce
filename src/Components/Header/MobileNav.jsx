@@ -22,7 +22,9 @@ const MobileNav = () => {
 
         <p>
           Hey 🖐️
-          <span className={s.userName}>{usernameText}</span>
+          <Link to="/profile" title="Profile" className={s.userName}>
+            {usernameText}
+          </Link>
         </p>
       </div>
 
