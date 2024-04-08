@@ -32,10 +32,10 @@
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
     "@vitejs/plugin-react-swc": "^3.6.0",
-    "eslint": "^9.0.0",
-    "eslint-plugin-react": "^7.34.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
+    "eslint-plugin-react-refresh": "^0.4.5",
     "gh-pages": "^6.1.1",
     "vite": "^5.2.8"
   }
