@@ -19,16 +19,21 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
   }
 
   return (
-    <div className={s.customInput}>
-      <input
-        type="checkbox"
-        name={name}
-        checked={saveBillingInfoToLocal}
-        onChange={handleCheckboxChange}
-        id={id}
-        required={isRequired}
-      />
-      <SvgIcon name="checked" />
+    <div className={s.checkboxContainer}>
+      <div className={s.customInput}>
+        <input
+          type="checkbox"
+          name={name}
+          checked={saveBillingInfoToLocal}
+          onChange={handleCheckboxChange}
+          id={id}
+          required={isRequired}
+        />
+        <SvgIcon name="checked" />
+      </div>
+      <label htmlFor="save-info">
+        Save this information for faster check-out next time
+      </label>
     </div>
   );
 };

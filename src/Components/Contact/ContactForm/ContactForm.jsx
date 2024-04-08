@@ -15,6 +15,7 @@ const ContactForm = () => {
           <div className={s.input}>
             <input
               type="text"
+              autoComplete="off"
               placeholder="Your Name"
               name="username"
               required
@@ -25,6 +26,7 @@ const ContactForm = () => {
           <div className={s.input}>
             <input
               type="email"
+              autoComplete="off"
               placeholder="Your Email"
               name="email"
               required
@@ -38,7 +40,11 @@ const ContactForm = () => {
           </div>
         </div>
 
-        <textarea name="message" placeholder="Your Message"></textarea>
+        <textarea
+          name="message"
+          autoComplete="off"
+          placeholder="Your Message"
+        ></textarea>
       </div>
 
       <button type="submit">Send Message</button>

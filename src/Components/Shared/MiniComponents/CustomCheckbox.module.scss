@@ -1,3 +1,5 @@
+@import "src/Styles/mixins.scss";
+
 .customInput {
   display: inline-block;
   width: 22px;
@@ -6,10 +8,15 @@
   border: solid 1px var(--black);
   position: relative;
   cursor: pointer;
+  transition: border-color .2s, opacity .2s;
+}
 
-  &:hover {
-    border-color: var(--very-dark-gray);
-  }
+.checkboxContainer:not(:has(:checked)):hover .customInput {
+  border-color: var(--primary);
+}
+
+.checkboxContainer:has(:checked):hover .customInput {
+  opacity: .8;
 }
 
 .customInput:has(:checked) {
@@ -39,4 +46,21 @@
 
 .customInput:has(:checked)>svg {
   opacity: 1;
+}
+
+.checkboxContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checkboxContainer>label {
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+@include small {
+  .checkboxContainer>label {
+    font-size: .8rem;
+  }
 }

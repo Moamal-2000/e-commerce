@@ -247,7 +247,7 @@
 }
 
 .sections>section :where(span, b, p, li, a)::selection,
-.copyRights:where(span, a)::selection,
+.copyRights>*::selection,
 .section1 .input>input::selection {
   background-color: var(--white) !important;
 }

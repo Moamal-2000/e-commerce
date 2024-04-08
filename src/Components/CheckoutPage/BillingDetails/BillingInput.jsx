@@ -9,6 +9,7 @@ const BillingInput = ({
     type = "text",
     value,
     onchange,
+    autoComplete = false,
   },
 }) => {
   const redStar = isRequired && <span className={s.redStar}>*</span>;
@@ -27,6 +28,7 @@ const BillingInput = ({
         required={isRequired}
         value={value}
         onChange={onchange}
+        autoComplete={autoComplete ? "on" : "off"}
       />
     </div>
   );

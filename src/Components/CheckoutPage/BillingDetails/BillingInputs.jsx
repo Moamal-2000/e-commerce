@@ -40,6 +40,7 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
           isRequired: true,
           value: streetAddress,
           onchange: handleChange,
+          autoComplete: true,
         }}
       />
 
@@ -49,6 +50,7 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
           name: "address",
           value: address,
           onchange: handleChange,
+          autoComplete: true,
         }}
       />
 
@@ -59,6 +61,7 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
           isRequired: true,
           value: city,
           onchange: handleChange,
+          autoComplete: true,
         }}
       />
 
@@ -70,6 +73,7 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
           value: phoneNumber,
           type: "tel",
           onchange: handleChange,
+          autoComplete: true,
         }}
       />
 
@@ -81,6 +85,7 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
           value: email,
           type: "email",
           onchange: handleChange,
+          autoComplete: true,
         }}
       />
     </div>

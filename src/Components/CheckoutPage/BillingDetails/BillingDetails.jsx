@@ -9,19 +9,14 @@ const BillingDetails = ({ inputsData: { billingValues, handleChange } }) => {
 
       <BillingInputs inputsData={{ billingValues, handleChange }} />
 
-      <footer>
-        <CustomCheckbox
-          inputData={{
-            name: "saveInfo",
-            value: billingValues.saveInfo,
-            onchange: handleChange,
-            id: "save-info",
-          }}
-        />
-        <label htmlFor="save-info">
-          Save this information for faster check-out next time
-        </label>
-      </footer>
+      <CustomCheckbox
+        inputData={{
+          name: "saveInfo",
+          value: billingValues.saveInfo,
+          onchange: handleChange,
+          id: "save-info",
+        }}
+      />
     </section>
   );
 };

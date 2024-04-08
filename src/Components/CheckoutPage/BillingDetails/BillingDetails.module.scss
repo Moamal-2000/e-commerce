@@ -30,20 +30,3 @@
   letter-spacing: .04rem;
   margin-bottom: 30px;
 }
-
-.billingDetailsSection>footer {
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.billingDetailsSection>footer>label {
-  cursor: pointer;
-  padding-left: 10px;
-}
-
-@include small {
-  .billingDetailsSection>footer>label {
-    font-size: .8rem;
-  }
-}

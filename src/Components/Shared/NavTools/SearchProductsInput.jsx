@@ -86,8 +86,9 @@ const SearchProductsInput = () => {
       onClick={(e) => focusInput(e)}
     >
       <input
-        id="search-input"
         type="text"
+        id="search-input"
+        autoComplete="off"
         placeholder="What are you looking for?"
         onChange={(e) => handleSearchOnChange(e)}
       />

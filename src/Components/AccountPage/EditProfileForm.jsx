@@ -72,6 +72,7 @@ const EditProfileForm = () => {
               name="firstName"
               id="firstName"
               value={firstName}
+              autoComplete="off"
               onChange={(e) => setFirstName(e.target.value)}
             />
           </div>
@@ -83,6 +84,7 @@ const EditProfileForm = () => {
               name="lastName"
               id="lastName"
               value={lastName}
+              autoComplete="off"
               onChange={(e) => setLastName(e.target.value)}
             />
           </div>
