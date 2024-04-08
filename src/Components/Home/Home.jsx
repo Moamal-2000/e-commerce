@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
+import { productImg1 } from "src/Assets/Images/Images";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
-import { productImg1 } from "../../Assets/Images/Images";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import s from "./Home.module.scss";
@@ -20,9 +20,9 @@ const Home = () => {
     <>
       <Helmet>
         <title>E-Commercew</title>
-        {pathname === "/" && (
-          <link rel="preload" as="image" href={productImg1} />
-        )}
+        {/* {pathname === "/" && (
+        )} */}
+        <link rel="preload" as="image" href={productImg1} />
       </Helmet>
 
       <div className={s.home}>
