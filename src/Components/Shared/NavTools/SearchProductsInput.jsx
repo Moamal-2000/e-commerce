@@ -24,7 +24,6 @@ const SearchProductsInput = () => {
   function handleSearchOnChange(e) {
     const inputValue = e.target.value;
     searchRef.current = inputValue?.trim()?.toLowerCase();
-    setSearchParams({ query: inputValue });
   }
 
   function handleSearchProducts(e) {
@@ -40,7 +39,7 @@ const SearchProductsInput = () => {
   function updateSearchProducts() {
     dispatch(updateGlobalState({ key: "loadingSearchProducts", value: true }));
 
-    const queryValue = searchParams.get("query") || searchRef.current;
+    const queryValue = searchRef.current || searchParams.get("query");
     const isEmptyQuery = queryValue?.trim()?.length === 0;
 
     if (isEmptyQuery) {

@@ -15,10 +15,13 @@ const ProductDetailsPage = () => {
   useScrollOnMount(200);
   const PRODUCT_NAME = useGetSearchParam("product");
   const PRODUCT_DATA = productsData.filter(
-    (product) => product.name.toLowerCase() === PRODUCT_NAME.toLowerCase()
+    (product) => product?.name?.toLowerCase() === PRODUCT_NAME?.toLowerCase()
   )?.[0];
-  const { name, category, shortName } = PRODUCT_DATA;
-  const history = ["Account", capitalize(category), name.toUpperCase()];
+  const history = [
+    "Account",
+    capitalize(PRODUCT_DATA?.category),
+    PRODUCT_DATA?.name.toUpperCase(),
+  ];
   const historyPaths = [
     {
       index: 0,
@@ -26,7 +29,7 @@ const ProductDetailsPage = () => {
     },
     {
       index: 1,
-      path: `/category?type=${category}`,
+      path: `/category?type=${PRODUCT_DATA?.category}`,
     },
   ];
   useUpdateLoadingOnSamePage({
@@ -39,7 +42,7 @@ const ProductDetailsPage = () => {
   return (
     <>
       <Helmet>
-        <title>{shortName}</title>
+        <title>{PRODUCT_DATA?.shortName}</title>
       </Helmet>
 
       <div className="container">
@@ -47,7 +50,7 @@ const ProductDetailsPage = () => {
           <PagesHistory history={history} historyPaths={historyPaths} />
           <ProductDetails data={PRODUCT_DATA} />
           <RelatedItemsSection
-            productType={category}
+            productType={PRODUCT_DATA?.category}
             currentProduct={PRODUCT_DATA}
           />
         </main>
