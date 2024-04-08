@@ -16,6 +16,22 @@
 
 .languageSelector .currentOption {
   min-width: 63px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.currentOption>span {
+}
+
+.languageSelector .currentOption {
+  padding-right: 10px;
+}
+
+.currentOption>img {
+  width: 22px;
+  min-width: 22px;
+  object-fit: contain;
 }
 
 .languageSelector>svg {
