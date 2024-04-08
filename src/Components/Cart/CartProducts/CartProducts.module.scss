@@ -2,7 +2,13 @@
 
 .cartProducts {
   width: 100%;
-  min-height: 300px;
+  min-height: 370px;
+}
+
+@include small {
+  .cartProducts {
+    min-height: 270px;
+  }
 }
 
 .cartProducts tr {

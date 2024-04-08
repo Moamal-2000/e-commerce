@@ -38,8 +38,6 @@ const SkeletonProductDetails = () => {
             <button className={s.favButton}></button>
           </section>
         </section>
-
-        {/* <ProductFeatures /> */}
       </section>
     </section>
   );

@@ -6,15 +6,19 @@ import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
 import { SIMPLE_DELAYS } from "../../Data/globalVariables";
 import { updateGlobalState } from "../../Features/globalSlice";
 import useUpdateLoadingOnSamePage from "../../Hooks/App/useUpdateLoadingOnSamePage";
+import useOnlineStatus from "../../Hooks/Helper/useOnlineStatus";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import ProductsCategory from "./ProductsCategory";
 import s from "./ProductsCategoryPage.module.scss";
+import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 
 const ProductsCategoryPage = () => {
   const { loadingCategoryPage } = useSelector((state) => state.global);
   const categoryType = useGetSearchParam("type");
+  const isWebsiteOnline = useOnlineStatus();
+  useScrollOnMount(200);
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingCategoryPage",
     actionMethod: updateGlobalState,
@@ -33,16 +37,18 @@ const ProductsCategoryPage = () => {
           <PagesHistory history={["/", capitalize(categoryType)]} />
 
           <section className={s.categoryContent}>
-            {!loadingCategoryPage && (
+            {!loadingCategoryPage && isWebsiteOnline && (
               <ProductsCategory
                 categoryName={categoryType}
                 customization={productCardCustomizations.categoryProducts}
               />
             )}
 
-            <div className={s.skeletonCards}>
-              {loadingCategoryPage && <SkeletonCards numberOfCards={4} />}
-            </div>
+            {(loadingCategoryPage || !isWebsiteOnline) && (
+              <div className={s.skeletonCards}>
+                <SkeletonCards numberOfCards={4} />
+              </div>
+            )}
           </section>
 
           <CategoriesSection />

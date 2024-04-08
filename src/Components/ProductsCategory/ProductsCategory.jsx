@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
-import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import ProductCard from "../Shared/ProductsCards/ProductCard";
 import s from "./ProductsCategory.module.scss";
 
@@ -9,7 +8,6 @@ const ProductsCategory = ({ categoryName, customization }) => {
     (product) => product.category === categoryName
   );
   const hasNoProducts = categoryProducts.length === 0;
-  useScrollOnMount(200);
 
   if (hasNoProducts)
     return (
