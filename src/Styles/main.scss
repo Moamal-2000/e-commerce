@@ -1,3 +1,4 @@
+@import "./vatiables.scss";
 @import "./colors.scss";
 @import "./mixins.scss";
 @import "./fonts.css";
@@ -76,9 +77,10 @@ main {
   left: -150%;
   top: 0;
   color: var(--white);
-  background-color: var(--turquoise);
-  padding: 16px;
+  background-color: var(--blue);
+  padding: 15px 30px;
   outline: none;
+  border-radius: 6px;
   z-index: 100;
   transition: left .4s ease;
 

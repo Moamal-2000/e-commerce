@@ -1,7 +1,7 @@
 const SkipContentLink = ({ scrollTo }) => {
   return (
     <a href={`#${scrollTo}`} className="skip-content">
-      Skip to main content
+      Skip to content
     </a>
   );
 };

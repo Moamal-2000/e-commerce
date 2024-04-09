@@ -1,0 +1,15 @@
+:root {
+  --container-width: 85%;
+  --container-mobile-width: 94%;
+  --page-margin: 60px 0 100px;
+  --button-active-scale: .991;
+  --outline-transition: outline .25s cubic-bezier(.645, .045, .355, 1);
+}
+
+:root {
+  --swiper-pagination-bullet-inactive-opacity: .6;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-color: var(--tomato);
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-bullet-inactive-color: var(--very-light-gray);
+}
