@@ -6,6 +6,22 @@
   cursor: pointer;
   user-select: none;
   position: relative;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: -2px;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition);
+    outline: 2px dashed #ff8d23;
+    outline-offset: 0;
+
+    .currentOption span {
+      color: #ff8d23;
+    }
+
+    &>svg {
+      fill: #ff8d23;
+    }
+  }
 }
 
 @include small {
@@ -18,14 +34,14 @@
   min-width: 63px;
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
+  padding: 8px 11px;
+  background-color: transparent;
+  padding-right: 10px;
 }
 
 .currentOption>span {
-}
-
-.languageSelector .currentOption {
-  padding-right: 10px;
+  width: 67.4px;
 }
 
 .currentOption>img {
@@ -42,8 +58,8 @@
 
 .languageSelector .menu {
   position: absolute;
-  left: -11px;
-  top: 40px;
+  left: -1.6px;
+  top: 41.8px;
   background-color: var(--black);
   z-index: 10;
   opacity: 0;
@@ -56,11 +72,26 @@
 }
 
 .languageSelector .menu .option {
+  border: none;
   cursor: pointer;
-  padding: 8px 10px;
+  background-color: transparent;
+  color: var(--white);
   display: flex;
   align-items: center;
   gap: 10px;
+  padding: 8px 11px;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: -4px;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition);
+    outline: 2px dashed #ff8d23;
+    outline-offset: -2px;
+
+    &>span {
+      color: #ff8d23;
+    }
+  }
 
   &:hover {
     color: var(--black);
