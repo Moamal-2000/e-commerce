@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import RequiredAuth from "./RequiredAuth";
 import RoutesLayout from "./RoutesLayout";
-import { ROUTES_CONFIG } from "./roots";
+import { ROUTES_CONFIG } from "./routes";
 
 const AppRoutes = () => {
   const routes = createRoutesFromChildren(

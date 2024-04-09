@@ -114,5 +114,6 @@
 
 .previewImgHolder>img {
   background-color: var(--very-light-gray2);
+  border-radius: inherit;
   object-fit: contain;
 }
