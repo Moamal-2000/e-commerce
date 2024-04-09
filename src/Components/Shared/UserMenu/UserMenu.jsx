@@ -5,7 +5,7 @@ import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./UserMenu.module.scss";
 import UserMenuItemWithCount from "./UserMenuItemWithCount";
 
-const UserMenu = ({ isActive }) => {
+const UserMenu = ({ isActive, toggler }) => {
   const { wishList } = useSelector((state) => state.products);
   const wishListLength = wishList.length;
   const activeClass = isActive ? s.active : "";
@@ -49,7 +49,7 @@ const UserMenu = ({ isActive }) => {
         />
       </NavLink>
 
-      <a href="#" onClick={handleSignOut}>
+      <a href="#" onClick={handleSignOut} onBlur={() => toggler()}>
         <SvgIcon name="boxArrowLeft" />
         <span>Logout</span>
       </a>

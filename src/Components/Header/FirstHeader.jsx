@@ -6,7 +6,7 @@ const FirstHeader = () => {
   return (
     <div className={s.header}>
       <div className={s.container}>
-        <div className={s.space}></div>
+        <div className={s.space} />
 
         <div className={s.headerContent}>
           <p className={s.discount}>

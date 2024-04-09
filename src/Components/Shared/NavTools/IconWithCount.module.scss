@@ -5,6 +5,15 @@
   cursor: pointer;
   width: 20px;
   height: 20px;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: 0;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition);
+    outline: 2px dashed var(--very-dark-gray);
+    outline-offset: 3px;
+    color: var(--very-dark-gray);
+  }
 
   &:not(:last-child) {
     margin-right: 16px;

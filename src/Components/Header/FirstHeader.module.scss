@@ -11,24 +11,24 @@
   width: var(--container-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 26% 1fr;
-}
-
-@include small {
-  .container {
-    width: var(--container-mobile-width);
-  }
+  grid-template-columns: 22% 1fr;
 }
 
 @include large {
   .container {
-    grid-template-columns: 10% 1fr;
+    grid-template-columns: 0 1fr;
   }
 }
 
 @include medium {
   .container {
     grid-template-columns: 0 1fr;
+  }
+}
+
+@include small {
+  .container {
+    width: var(--container-mobile-width);
   }
 }
 
@@ -75,9 +75,9 @@
 
   &:focus-visible {
     transition: opacity .3s, var(--outline-transition);
-    outline: 2px dashed #ff8d23;
+    outline: 2px dashed var(--orange-degree2);
     outline-offset: 3px;
-    color: #ff8d23;
+    color: var(--orange-degree2);
   }
 
   &:hover {

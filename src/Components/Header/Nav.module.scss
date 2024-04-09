@@ -7,29 +7,41 @@
 .nav ul {
   display: flex;
   align-items: center;
-}
-
-.nav ul li {
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
+  gap: 30px;
 }
 
 @include medium {
-  .nav ul li {
+  .nav ul {
+    gap: 18px;
 
-    &:not(:last-child) {
-      margin-right: 18px;
+    & li {
       font-size: .9rem;
     }
   }
 }
 
 .nav ul li a {
+  outline: none;
   padding: 2px 0;
   color: var(--black);
   position: relative;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: 0;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition);
+    outline: 2px dashed var(--very-dark-gray);
+    outline-offset: 3px;
+    color: var(--very-dark-gray);
+  }
+
+  &[class=active]::before {
+    opacity: .5;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 }
 
 .nav ul li a::before {
@@ -44,10 +56,6 @@
   transition: opacity .3s;
 }
 
-.nav ul li a[class=active]::before {
-  opacity: .5;
-}
-
-.nav ul li a:hover::before {
-  opacity: 1;
+.nav ul li a:focus::before {
+  background-color: transparent;
 }

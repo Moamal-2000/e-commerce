@@ -3,9 +3,7 @@ import { NavLink } from "react-router-dom";
 import s from "./Nav.module.scss";
 
 const Nav = () => {
-  const {
-    loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
+  const { loginInfo } = useSelector((state) => state.user);
 
   return (
     <nav className={s.nav}>
@@ -23,7 +21,7 @@ const Nav = () => {
         </li>
 
         <li>
-          {isSignIn ? (
+          {loginInfo.isSignIn ? (
             <NavLink to="/profile">Profile</NavLink>
           ) : (
             <NavLink to="/signup">Sign Up</NavLink>

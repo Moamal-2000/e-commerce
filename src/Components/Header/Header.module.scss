@@ -1,7 +1,7 @@
 @import "../../Styles/mixins";
 
 .header {
-  padding: 10px 14px 14px 14px;
+  padding: 4px 14px 18px 14px;
   margin-top: 30px;
   border-bottom: 1px var(--medium-light-gray) solid;
 }
@@ -22,16 +22,11 @@
   width: calc(var(--container-width) + 2%);
   margin: 0 auto;
   display: grid;
+  align-items: center;
   grid-template-columns: 26% 1fr;
 }
 
 @include large {
-  .container {
-    grid-template-columns: 17.5% 1fr;
-  }
-}
-
-@include medium {
   .container {
     grid-template-columns: unset;
   }
@@ -49,11 +44,35 @@
 .container h1 {
   width: fit-content;
   font-size: 1.5rem;
-  color: var(--black);
+}
 
-  & a {
-    color: var(--black);
-  }
+.container h1>a {
+  outline: none;
+  color: var(--black);
+  position: relative;
+}
+
+.container>h1::first-letter {
+  transition: color .2s;
+}
+
+.container>h1:has(:focus)::first-letter {
+  color: var(--orange-degree2);
+}
+
+.container h1>a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--orange-degree2);
+  transition: width .3s .1s;
+}
+
+.container h1:has(:focus)>a::before {
+  width: 100%;
 }
 
 .headerContent {
@@ -93,7 +112,7 @@
 }
 
 .mobileNav>svg {
-  width: 30px;
-  height: 30px;
+  width: 27px;
+  height: 27px;
   cursor: pointer;
 }

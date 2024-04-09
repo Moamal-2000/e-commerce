@@ -65,3 +65,7 @@
 .searchContainer>button:active::before {
   background-color: var(--white);
 }
+
+.searchContainer>button:focus svg {
+  fill: var(--black)
+}

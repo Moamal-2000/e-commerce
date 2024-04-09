@@ -22,11 +22,14 @@
 }
 
 .userMenu>a {
+  outline: none;
+  border: none;
   display: flex;
   align-items: center;
   padding: 12px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: var(--white);
   }
 }
@@ -37,7 +40,8 @@
   height: 20px;
 }
 
-.userMenu>a:hover svg {
+.userMenu>a:hover svg,
+.userMenu>a:focus svg {
   fill: var(--black);
 
   & path {
@@ -55,6 +59,7 @@
   margin-left: 8px;
 }
 
-.userMenu>a:hover span {
+.userMenu>a:hover span,
+.userMenu>a:focus span {
   color: var(--black);
 }

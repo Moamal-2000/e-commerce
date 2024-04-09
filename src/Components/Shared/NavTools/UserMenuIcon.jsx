@@ -8,12 +8,17 @@ const UserMenuIcon = ({ visibility }) => {
   const [isMenuUserActive, toggleMenuUserActive] = useToggle(false);
   const activeClass = isMenuUserActive ? s.active : "";
 
+  function openMenu() {
+    toggleMenuUserActive(true);
+  }
+
   return (
     visibility && (
       <button
         type="button"
         className={`${s.userContainer} ${activeClass}`}
-        onClick={() => toggleMenuUserActive()}
+        onClick={toggleMenuUserActive}
+        onFocus={openMenu}
         aria-label="User menu"
       >
         <SvgIcon name="user" />

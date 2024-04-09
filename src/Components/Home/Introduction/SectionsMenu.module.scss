@@ -3,7 +3,7 @@
 .sectionsMenuButton {
   position: absolute;
   left: 20px;
-  top: 102px;
+  top: 112px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -20,6 +20,12 @@
 @include large {
   .sectionsMenuButton {
     display: block;
+  }
+}
+
+@include medium {
+  .sectionsMenuButton {
+    top: 118px;
   }
 }
 

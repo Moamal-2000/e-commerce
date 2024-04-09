@@ -11,15 +11,15 @@
 
   &:focus-visible {
     transition: opacity .3s, var(--outline-transition);
-    outline: 2px dashed #ff8d23;
+    outline: 2px dashed var(--orange-degree2);
     outline-offset: 0;
 
     .currentOption span {
-      color: #ff8d23;
+      color: var(--orange-degree2);
     }
 
     &>svg {
-      fill: #ff8d23;
+      fill: var(--orange-degree2);
     }
   }
 }
@@ -85,11 +85,11 @@
 
   &:focus-visible {
     transition: opacity .3s, var(--outline-transition);
-    outline: 2px dashed #ff8d23;
+    outline: 2px dashed var(--orange-degree2);
     outline-offset: -2px;
 
     &>span {
-      color: #ff8d23;
+      color: var(--orange-degree2);
     }
   }
 
