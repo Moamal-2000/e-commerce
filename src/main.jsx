@@ -17,4 +17,4 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   </StrictMode>
 );
 
-// servicerWorker.register();
+servicerWorker.register();
