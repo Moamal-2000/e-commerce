@@ -13,6 +13,9 @@ async function respondFetch(request) {
 
   const networkResponse = fetch(request)
     .then(async (networkRes) => {
+      const skipPutResInCache = networkRes.url.includes("chrome-extension");
+
+      if (skipPutResInCache) return networkRes;
       if (networkRes.ok) {
         const cache = await caches.open(CACHE_NAME);
         await cache.put(request, networkRes.clone());
