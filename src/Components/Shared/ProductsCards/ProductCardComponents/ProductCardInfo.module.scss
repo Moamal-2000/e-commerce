@@ -7,12 +7,19 @@
 }
 
 .productInfo .productName a {
+  outline: none;
+  border-bottom: solid 2px var(--website-bg);
   font-weight: 500;
   color: var(--black);
   transition: color .2s;
 
   &:hover {
     color: var(--brown);
+  }
+
+  &:focus {
+    border-bottom: solid 2px var(--orange-degree2);
+    color: var(--orange-degree2);
   }
 }
 

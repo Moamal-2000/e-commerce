@@ -12,11 +12,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background .2s, transform .4s .1s;
   transform: translateY(50px);
+  transition: background .2s, transform .4s .1s;
 
   &:hover {
     background-color: #303030;
+  }
+
+  &:focus-visible {
+    transform: translateY(0);
+    background-color: #303030;
+    transition: opacity .3s, var(--outline-transition), background .2s, transform 0;
+    outline: 2px solid var(--yellow);
+    outline-offset: -2px;
+    color: var(--yellow);
   }
 }
 
@@ -28,7 +37,8 @@
   transition: fill .2s .05s;
 }
 
-.addToCartBtn:hover>svg {
+.addToCartBtn:hover>svg,
+.addToCartBtn:focus-visible>svg {
   fill: var(--yellow);
 }
 
@@ -37,6 +47,7 @@
   transition: color .2s .05s;
 }
 
-.addToCartBtn:hover>span {
+.addToCartBtn:hover>span,
+.addToCartBtn:focus-visible>span {
   color: var(--yellow);
 }

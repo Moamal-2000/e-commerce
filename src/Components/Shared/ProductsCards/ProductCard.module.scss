@@ -89,7 +89,6 @@
   z-index: 10;
   opacity: 0;
   transform: translateX(50px);
-  transition: transform .4s .1s, opacity .2s .1s;
 }
 
 .card:hover .icons,
@@ -97,6 +96,12 @@
   opacity: 1;
   transform: translateX(0);
   transition: transform .4s .1s, opacity .2s .2s;
+}
+
+.card:has(:focus-visible) .icons {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0, opacity 0;
 }
 
 .layerContent .icons .iconHolder {
@@ -110,6 +115,13 @@
   @include center-x-y;
   cursor: pointer;
   position: relative;
+
+  &:focus-visible {
+    background-color: #303030;
+    transition: opacity .3s, var(--outline-transition), background .2s, transform 0;
+    outline: 2px solid var(--yellow);
+    outline-offset: -2px;
+  }
 }
 
 .layerContent .icons .iconHolder svg {
@@ -119,8 +131,16 @@
   height: 16px;
 }
 
+.iconHolder:focus-visible svg {
+  fill: var(--yellow);
+}
+
 .favIcon {
   --heart-color: var(--tomato);
+
+  &:focus-visible {
+    --heart-color: var(--yellow);
+  }
 }
 
 .favIcon.active {
@@ -159,9 +179,7 @@
   right: -7px;
 }
 
-.detailsIcon:hover svg {
-  fill: var(--turquoise);
-  fill: var(--yellow);
+.detailsIcon:not(:focus-visible):hover svg {
   fill: #6f6f6f;
 }
 
@@ -173,7 +191,7 @@
   fill: var(--black);
 }
 
-.wishListIcon:hover svg {
+.wishListIcon:not(:focus-visible):hover svg {
   fill: #6f6f6f;
 }
 

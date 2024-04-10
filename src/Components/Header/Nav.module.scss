@@ -56,6 +56,6 @@
   transition: opacity .3s;
 }
 
-.nav ul li a:focus::before {
+.nav ul li a:focus-visible::before {
   background-color: transparent;
 }
