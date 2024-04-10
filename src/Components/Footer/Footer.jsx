@@ -100,7 +100,7 @@ const Footer = () => {
 
             <div className={s.appInfo}>
               <div className={s.qrCode}>
-                <img src={qrCode} alt="QR Code" />
+                <img src={qrCode} alt="QR Code" title="qr code" tabIndex="0" />
               </div>
 
               <div className={s.downloadButtons}>
@@ -121,7 +121,7 @@ const Footer = () => {
                 title="facebook"
               >
                 <SvgIcon name="facebook" />
-                <ToolTip left="50%" top="40px" content="facebook" />
+                <ToolTip left="50%" top="48px" content="facebook" />
               </a>
 
               <a
@@ -130,7 +130,7 @@ const Footer = () => {
                 title="twitter"
               >
                 <SvgIcon name="twitter" />
-                <ToolTip left="50%" top="40px" content="twitter" />
+                <ToolTip left="50%" top="48px" content="twitter" />
               </a>
 
               <a
@@ -139,7 +139,7 @@ const Footer = () => {
                 title="instagram"
               >
                 <SvgIcon name="instagram" />
-                <ToolTip left="50%" top="40px" content="instagram" />
+                <ToolTip left="50%" top="48px" content="instagram" />
               </a>
 
               <a
@@ -148,7 +148,7 @@ const Footer = () => {
                 title="linkedin"
               >
                 <SvgIcon name="linkedin" />
-                <ToolTip left="50%" top="40px" content="linkedin" />
+                <ToolTip left="50%" top="48px" content="linkedin" />
               </a>
             </div>
           </section>

@@ -51,7 +51,15 @@
   fill: var(--gray-blue);
 }
 
+.repoStarsForks:focus-visible svg {
+  fill: var(--blue) !important;
+}
+
 .repoStarsForks:hover :where(svg, .number) {
   color: var(--blue) !important;
   fill: var(--blue) !important;
+}
+
+.repoStarsForks:focus-visible .number {
+  color: var(--blue);
 }

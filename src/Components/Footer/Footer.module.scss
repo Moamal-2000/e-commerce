@@ -32,24 +32,42 @@
   }
 }
 
-.sections>section {
-
-  &:not(:last-child) {
-    margin-right: 60px;
-  }
+.sections>section:not(:last-child) {
+  margin-right: 60px;
 }
 
 @include small {
-  .sections>section {
-
-    &:not(:last-child) {
-      margin-right: 0;
-    }
+  .sections>section:not(:last-child) {
+    margin-right: 0;
   }
 }
 
 .sections>section a {
   position: relative;
+  outline: none;
+
+  &:hover {
+    color: var(--white);
+  }
+
+  &:focus-visible {
+    color: var(--orange-degree2);
+  }
+}
+
+.sections>section a:not(:has(svg))::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: var(--orange-degree2);
+  transition: width .3s .1s;
+}
+
+.sections>section a:focus-visible::after {
+  width: 100%;
 }
 
 .sections>section a:not(:has(svg)):before {
@@ -63,19 +81,16 @@
   opacity: .5;
 }
 
-.sections>section a:hover {
+.sections>section a:hover::before {
   color: var(--white);
-
-  &::before {
-    color: var(--white);
-    opacity: 1;
-  }
+  opacity: 1;
 }
 
 .sections>section>b {
   display: block;
   margin-bottom: 24px;
   font-weight: 500;
+  position: relative;
 }
 
 .sections>section :where(p, li, a) {
@@ -180,6 +195,10 @@
   user-select: none;
 }
 
+.section5 .qrCode img:focus-visible {
+  outline: solid 2px var(--orange-degree2);
+}
+
 .downloadButtons>button {
   display: block;
   background-color: transparent;
@@ -194,6 +213,10 @@
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+
+  &:focus-visible {
+    border-color: var(--orange-degree2);
+  }
 }
 
 .downloadButtons>button>img {
@@ -204,13 +227,34 @@
 .socialMedia {
   display: flex;
   align-items: center;
+  gap: 30px;
 }
 
 .socialMedia>a {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  filter: grayscale(1);
+  @include center-x-y;
   position: relative;
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  &:focus-visible {
+    transition: opacity .3s, filter .3s .2s;
+    outline: solid 2px var(--orange-degree2);
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+
+.socialMedia>a:not([title=instagram]):focus-visible svg {
+  fill: var(--orange-degree2);
+}
+
+.socialMedia>a[title=instagram]:focus-visible svg {
+  stroke: var(--orange-degree2);
+
+  & path {
+    stroke: var(--orange-degree2);
   }
 }
 
@@ -237,11 +281,13 @@
 }
 
 .copyRights>a {
+  outline: none;
   text-decoration: underline;
   color: #F9F9F999;
   margin: 0 4px;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: var(--white);
   }
 }

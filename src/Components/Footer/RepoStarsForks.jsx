@@ -21,7 +21,8 @@ const RepoStarsForks = () => {
         aria-label="Website's repository"
       >
         <div className={s.wrapper}>
-          <SvgIcon name="star" /> <span className={s.number}>{repoStars}</span>
+          <SvgIcon name="star" />
+          <span className={s.number}>{repoStars}</span>
         </div>
 
         <div className={s.wrapper}>
