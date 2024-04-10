@@ -99,6 +99,13 @@
   align-self: flex-end;
   transition: background-color .1s, color .1s;
 
+  &:focus-visible {
+    transition: background-color .1s, color .1s, var(--outline-transition);
+    border: 2px dashed var(--dark-tomato);
+    background-color: var(--white);
+    color: var(--dark-tomato);
+  }
+
   &:hover {
     background-color: var(--white);
     color: var(--dark-tomato);

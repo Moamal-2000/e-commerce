@@ -40,6 +40,8 @@
 }
 
 .content>p>a {
+  outline: none;
+  border: none;
   color: var(--black);
   position: relative;
 }
@@ -61,4 +63,11 @@
   width: 100%;
   border-bottom: solid 1px var(--black);
   opacity: .5;
+  transition: border .2s, opacity .2s;
+}
+
+.content>p>a:focus::before {
+  border-color: var(--orange-degree2);
+  border-width: 2px;
+  opacity: 1;
 }
