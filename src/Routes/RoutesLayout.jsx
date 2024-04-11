@@ -21,8 +21,8 @@ const RoutesLayout = () => {
       <Header />
       <MobileNav />
       <GlobalOverlay />
-      <Outlet />
       <ScrollToTop />
+      <Outlet />
       <Footer />
       <ConnectionLabelAlert
         isOnline={isWebsiteOnline}

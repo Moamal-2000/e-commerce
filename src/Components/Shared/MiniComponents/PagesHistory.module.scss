@@ -11,12 +11,18 @@
 }
 
 .page>a {
-  color: var(--dark-gray);
+  outline: none;
   user-select: none;
+  color: var(--dark-gray);
   transition: color .1s;
 
   &:hover {
     color: var(--black);
+  }
+
+  &:focus-visible {
+    color: var(--orange-degree2);
+    text-decoration: underline;
   }
 }
 

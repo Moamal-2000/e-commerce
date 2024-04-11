@@ -13,11 +13,16 @@
   bottom: 30px;
   right: 30px;
   pointer-events: all;
-  transition: opacity .25s ease, background-color .25s;
+  transition: opacity .25s ease, background-color .25s, border-radius .25s .1s;
 
-  &.hide {
+  &.hide:not(:focus-visible) {
     opacity: 0;
     pointer-events: none;
+  }
+
+  &:focus-visible {
+    background-color: #ff4d3d;
+    border-radius: 20%;
   }
 
   &:hover {
