@@ -59,3 +59,14 @@
   font-size: .9rem;
   line-height: 21px;
 }
+
+.feature>:where(p, b) {
+  outline: dashed 0 transparent;
+  outline-offset: 0;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition), outline-offset .25s .05s;
+    outline: 2px dashed var(--black);
+    outline-offset: 2px;
+  }
+}

@@ -6,6 +6,7 @@
   padding: 30px;
   border-radius: 4px;
   border: 1px solid #0000004D;
+  outline: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +14,8 @@
   position: relative;
   z-index: 1;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: var(--dark-tomato);
     color: var(--white);
     border-color: var(--dark-tomato);
@@ -34,7 +36,8 @@
   position: relative;
 }
 
-.card:hover .iconHolder {
+.card:hover .iconHolder,
+.card:focus-visible .iconHolder {
   background-color: var(--white);
 }
 
@@ -48,7 +51,8 @@
   z-index: -1;
 }
 
-.card:hover .iconHolder::before {
+.card:hover .iconHolder::before,
+.card:focus-visible .iconHolder::before {
   background-color: var(--white);
   opacity: .3;
 }
@@ -58,7 +62,8 @@
   height: 40px;
 }
 
-.card:hover .iconHolder>svg {
+.card:hover .iconHolder>svg,
+.card:focus-visible .iconHolder>svg {
   filter: invert(1);
   -webkit-filter: invert(1);
   -moz-filter: invert(1);

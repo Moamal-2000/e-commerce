@@ -12,8 +12,8 @@ const MemberCard = ({ data }) => {
       </div>
 
       <div className={s.info}>
-        <b>{name}</b>
-        <p>{jobTitle}</p>
+        <b tabIndex="0">{name}</b>
+        <p tabIndex="0">{jobTitle}</p>
 
         <div className={s.socialMedia}>
           <SocialMedia socialMedia={socialMedia} />

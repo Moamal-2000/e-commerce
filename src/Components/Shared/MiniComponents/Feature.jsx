@@ -7,8 +7,8 @@ const Feature = ({ iconImg, iconAlt, title, description }) => {
         <img src={iconImg} alt={iconAlt} />
       </div>
 
-      <b>{title}</b>
-      <p>{description}</p>
+      <b tabIndex="0">{title}</b>
+      <p tabIndex="0">{description}</p>
     </div>
   );
 };

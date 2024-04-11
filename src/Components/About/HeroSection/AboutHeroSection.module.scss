@@ -39,7 +39,16 @@
 .content>h2 {
   font: 600 3.375rem "Inter", sans-serif;
   letter-spacing: .06rem;
+  width: fit-content;
   margin-bottom: 40px;
+  outline: dashed 0 transparent;
+  outline-offset: 0;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition), outline-offset .25s .05s;
+    outline: 2px dashed var(--black);
+    outline-offset: 8px;
+  }
 }
 
 @include large {
@@ -57,6 +66,14 @@
 
 .content>p {
   text-wrap: pretty;
+  outline: dashed 0 transparent;
+  outline-offset: 0;
+
+  &:focus-visible {
+    transition: opacity .3s, var(--outline-transition), outline-offset .25s .05s;
+    outline: 2px dashed var(--black);
+    outline-offset: 8px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 20px;

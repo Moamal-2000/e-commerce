@@ -5,9 +5,9 @@ const AboutHeroSection = () => {
   return (
     <section className={s.heroSection}>
       <section className={s.content}>
-        <h2>Our Story</h2>
+        <h2 tabIndex="0">Our Story</h2>
 
-        <p>
+        <p tabIndex="0">
           Launched in 2015, Exclusive is South Asia’s premier online shopping
           marketplace with an active presence in Bangladesh. Supported by a wide
           range of tailored marketing, data, and service solutions, Exclusive
@@ -15,7 +15,7 @@ const AboutHeroSection = () => {
           across the region.
         </p>
 
-        <p>
+        <p tabIndex="0">
           Exclusive has more than 1 Million products to offer, growing very
           fast. Exclusive offers a diverse assortment in categories ranging from
           consumer.

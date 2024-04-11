@@ -3,7 +3,7 @@ import SvgIcon from "./SvgIcon";
 
 const InfoCard = ({ data }) => {
   return (
-    <div className={s.card}>
+    <div className={s.card} tabIndex="0">
       <div className={s.iconHolder}>
         <SvgIcon name={data.iconName} />
       </div>
