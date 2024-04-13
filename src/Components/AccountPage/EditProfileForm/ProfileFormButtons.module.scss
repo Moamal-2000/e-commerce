@@ -1,0 +1,49 @@
+@import "src/Styles/mixins";
+
+.buttons {
+  align-self: flex-end;
+}
+
+.buttons>a {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 4px;
+  margin-right: 16px;
+  color: var(--black);
+
+  &:hover {
+    color: var(--dark-tomato);
+  }
+}
+
+@include small {
+  .buttons>a {
+    font-size: .9rem;
+  }
+}
+
+.buttons>button {
+  outline: none;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  background-color: var(--dark-tomato);
+  border: solid 2px var(--dark-tomato);
+  color: var(--white);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--dark-tomato);
+  }
+}
+
+@include medium {
+  .buttons>button {
+    padding: 12px 34px;
+    font-size: .9rem;
+  }
+}

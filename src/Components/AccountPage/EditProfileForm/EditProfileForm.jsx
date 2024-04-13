@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { updateUserData } from "src/Features/userSlice";
 import {
   checkEmailValidation,
@@ -9,6 +8,7 @@ import {
   checkPasswordInputs,
 } from "src/Functions/helper";
 import s from "./EditProfileForm.module.scss";
+import ProfileFormButtons from "./ProfileFormButtons";
 
 const EditProfileForm = () => {
   const { loginInfo } = useSelector((state) => state.user);
@@ -145,14 +145,7 @@ const EditProfileForm = () => {
         </section>
       </section>
 
-      <div className={s.buttons}>
-        <Link className={s.cancelLink} to="/">
-          Cancel
-        </Link>
-        <button type="submit" className={s.submitButton}>
-          Save Changes
-        </button>
-      </div>
+      <ProfileFormButtons />
     </form>
   );
 };
