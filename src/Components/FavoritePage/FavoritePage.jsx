@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { updateProductsState } from "../../Features/productsSlice";
 import { getUniqueArrayByObjectKey } from "../../Functions/helper";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
-import ForYouProducts from "../WishList/ForYouProducts";
 import s from "./FavoritePage.module.scss";
-import FavoriteProducts from "./FavoriteProducts";
+import FavoriteProducts from "./FavoriteProducts/FavoriteProducts";
+import ForYouProducts from "../WishList/ForYouProducts/ForYouProducts";
 
 const FavoritePage = () => {
   const { favoritesProducts, cartProducts } = useSelector(

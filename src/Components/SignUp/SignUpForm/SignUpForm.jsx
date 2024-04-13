@@ -9,7 +9,7 @@ import {
   getUniqueArrayByObjectKey,
 } from "src/Functions/helper";
 import s from "./SignUpForm.module.scss";
-import { openSignWithGooglePopUp } from "./SignUpWithGoogle/SignUpWithGooglePopup";
+import { openSignWithGooglePopUp } from "../SignUpWithGoogle/SignUpWithGooglePopup";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();

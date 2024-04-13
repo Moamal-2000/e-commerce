@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { userImg } from "src/Assets/Images/Images";
 import { mobileNavData } from "src/Data/staticData";
 import useSignOut from "src/Hooks/App/useSignOut";
-import SvgIcon from "../Shared/MiniComponents/SvgIcon";
+import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
 
 const MobileNav = () => {

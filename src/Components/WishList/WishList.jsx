@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getUniqueArrayByObjectKey } from "src/Functions/helper";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle";
-import ForYouProducts from "./ForYouProducts";
 import s from "./WishList.module.scss";
-import WishProducts from "./WishProducts";
 import { updateProductsState } from "../../Features/productsSlice";
+import WishProducts from "./WishProducts/WishProducts";
+import ForYouProducts from "./ForYouProducts/ForYouProducts";
 
 const WishList = () => {
   const { wishList, cartProducts } = useSelector((state) => state.products);

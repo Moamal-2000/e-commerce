@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../Components/Footer/Footer";
-import FirstHeader from "../Components/Header/FirstHeader";
+import FirstHeader from "../Components/Header/FirstHeader/FirstHeader";
 import Header from "../Components/Header/Header";
-import MobileNav from "../Components/Header/MobileNav";
 import ConnectionLabelAlert from "../Components/Shared/MiniComponents/ConnectionLabelAlert";
 import GlobalOverlay from "../Components/Shared/MiniComponents/GlobalOverlay";
 import ScrollToTop from "../Components/Shared/MiniComponents/ScrollToTop";
 import SkipContentLink from "../Components/Shared/MiniComponents/SkipContentLink";
+import MobileNav from "../Components/Shared/MobileNav/MobileNav";
 import useCurrentSkipLinkId from "../Hooks/App/useCurrentSkipLinkId";
 import useOnlineStatus from "../Hooks/Helper/useOnlineStatus";
 

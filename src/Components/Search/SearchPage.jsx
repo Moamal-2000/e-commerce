@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
@@ -7,7 +6,6 @@ import useUpdateLoadingState from "../../Hooks/App/useUpdateLoadingState";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./SearchPage.module.scss";
-import SearchProducts from "./SearchProducts";
 
 const SearchPage = () => {
   const { loadingSearchProducts } = useSelector((state) => state.global);
@@ -28,7 +26,7 @@ const SearchPage = () => {
 
         <section className={s.products} id="search-page">
           {(loadingSearchProducts || !isWebsiteOnline) && <SkeletonCards />}
-          {!loadingSearchProducts && isWebsiteOnline && <SearchProducts />}
+          {!loadingSearchProducts && isWebsiteOnline && <searchProducts />}
         </section>
       </main>
     </div>
