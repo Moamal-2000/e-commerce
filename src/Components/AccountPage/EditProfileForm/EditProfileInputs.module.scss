@@ -1,0 +1,65 @@
+@import "src/Styles/mixins";
+
+.inputs {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 40px;
+}
+
+@include large {
+  .wrapper {
+    gap: 20px;
+  }
+}
+
+.inputs .input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.inputs .input>label {
+  cursor: pointer;
+}
+
+.inputs .input>input {
+  border: none;
+  outline: none;
+  background-color: var(--very-light-gray2);
+  border: solid 2px var(--very-light-gray2);
+  border-radius: 4px;
+  padding: 13px 16px;
+  transition: border-color .2s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--medium-light-gray);
+  }
+
+  &[class=invalid] {
+    background-color: #ffdada;
+    border-color: var(--red);
+
+    &::placeholder {
+      color: var(--primary);
+    }
+  }
+}
+
+.inputs .input>input::placeholder {
+  color: var(--dark-gray);
+}
+
+.passwordInputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
