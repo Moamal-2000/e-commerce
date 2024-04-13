@@ -3,6 +3,12 @@
   "name": "E-Commerce",
   "short_name": "E-Commerce",
   "description": "Effortless online shopping: curated collections, easy cart & wishlist, detailed descriptions, intuitive interface. Shop smarter today.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#181818",
+  "background_color": "#181818",
   "icons": [
     {
       "src": "/android-chrome-192x192.webp",
@@ -46,11 +52,5 @@
       "form_factor": "narrow",
       "label": "Wonder Widgets"
     }
-  ],
-  "start_url": ".",
-  "scope": "/",
-  "display": "standalone",
-  "orientation": "portrait",
-  "theme_color": "#181818",
-  "background_color": "#181818"
+  ]
 }

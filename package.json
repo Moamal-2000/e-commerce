@@ -23,14 +23,14 @@
     "react-router-dom": "^6.22.3",
     "react-uuid": "^2.0.0",
     "router-dom": "^2.2.11",
-    "sass": "^1.74.1",
-    "swiper": "^11.1.0",
+    "sass": "^1.75.0",
+    "swiper": "^11.1.1",
     "uuid": "^9.0.1",
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@types/react": "^18.2.74",
-    "@types/react-dom": "^18.2.24",
+    "@types/react": "^18.2.78",
+    "@types/react-dom": "^18.2.25",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
