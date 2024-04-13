@@ -8,7 +8,8 @@
   color: #595959;
 }
 
-.redStar {
+.input .redStarLabel::after {
+  content: "*";
   color: var(--red);
 }
 

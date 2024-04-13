@@ -6,6 +6,8 @@ const ContactForm = () => {
 
     e.preventDefault();
     resetButton?.click();
+
+    // Required a function to show popup message to notify user that the message has been sent
   }
 
   return (

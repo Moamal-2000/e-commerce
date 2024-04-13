@@ -12,13 +12,10 @@ const BillingInput = ({
     autoComplete = false,
   },
 }) => {
-  const redStar = isRequired && <span className={s.redStar}>*</span>;
-
   return (
     <div className={s.input}>
-      <label htmlFor={name}>
+      <label htmlFor={name} className={isRequired ? s.redStarLabel : ""}>
         {label}
-        {redStar}
       </label>
       <input
         id={name}

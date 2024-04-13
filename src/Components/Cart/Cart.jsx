@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet-async";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./Cart.module.scss";
 import AddCoupon from "./CartInfo/AddCoupon";
 import CartInfoMenu from "./CartInfo/CartInfoMenu";
 import CartButtons from "./CartProducts/CartButtons";
 import CartProducts from "./CartProducts/CartProducts";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const Cart = () => {
   return (

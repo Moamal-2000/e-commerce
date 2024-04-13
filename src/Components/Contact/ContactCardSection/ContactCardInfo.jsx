@@ -1,5 +1,5 @@
 import s from "./ContactCardInfo.module.scss";
-import ContactInfo from "./ContactInfo"
+import ContactInfo from "./ContactInfo";
 
 const ContactInfoCard = () => {
   return (

@@ -1,10 +1,7 @@
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import s from "./CartButtons.module.scss";
 
 const CartButtons = () => {
-  const {} = useSelector((state) => state.products);
-
   function updateCart() {}
 
   return (

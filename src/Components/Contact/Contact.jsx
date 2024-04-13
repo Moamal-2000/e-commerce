@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./Contact.module.scss";
 import ContactCardInfo from "./ContactCardSection/ContactCardInfo";
 import ContactForm from "./ContactForm/ContactForm";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const Contact = () => {
   return (
