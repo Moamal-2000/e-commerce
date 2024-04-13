@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import ProductCard from "../../Shared/ProductsCards/ProductCard";
+import ProductCard from "../../Shared/ProductsCards/ProductCard/ProductCard";
 import s from "./SearchProducts.module.scss";
 
 const SearchProducts = () => {

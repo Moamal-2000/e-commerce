@@ -17,18 +17,11 @@ const globalSlice = createSlice({
   initialState,
   name: "globalSlice",
   reducers: {
-    toggleState: (state, action) => {
-      const { key, value } = action.payload;
+    updateGlobalState: (state, { payload: { key, value } }) => {
       state[key] = value;
-    },
-    updateGlobalState: (state, { payload }) => {
-      return {
-        ...state,
-        [payload.key]: payload.value,
-      };
     },
   },
 });
 
-export const { toggleState, updateGlobalState } = globalSlice.actions;
+export const { updateGlobalState } = globalSlice.actions;
 export default globalSlice.reducer;

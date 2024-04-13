@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { toggleState } from "src/Features/globalSlice";
+import { updateGlobalState } from "src/Features/globalSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import DropDownMenu from "./DropDownMenu";
 import s from "./SectionsMenu.module.scss";
@@ -14,8 +14,10 @@ const SectionsMenu = () => {
         type="button"
         className={s.sectionsMenuButton}
         onClick={() => {
-          dispatch(toggleState({ key: "isSectionsMenuActive", value: true }));
-          dispatch(toggleState({ key: "isOverlayActive", value: true }));
+          dispatch(
+            updateGlobalState({ key: "isSectionsMenuActive", value: true })
+          );
+          dispatch(updateGlobalState({ key: "isOverlayActive", value: true }));
         }}
         aria-label="List of sections"
       >
