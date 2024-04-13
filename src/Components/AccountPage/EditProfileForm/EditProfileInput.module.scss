@@ -1,0 +1,38 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.input>label {
+  cursor: pointer;
+}
+
+.input>input {
+  border: none;
+  outline: none;
+  background-color: var(--very-light-gray2);
+  border: solid 2px var(--very-light-gray2);
+  border-radius: 4px;
+  padding: 13px 16px;
+  transition: border-color .2s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--medium-light-gray);
+  }
+
+  &[class=invalid] {
+    background-color: #ffdada;
+    border-color: var(--red);
+
+    &::placeholder {
+      color: var(--primary);
+    }
+  }
+}
+
+.input>input::placeholder {
+  color: var(--dark-gray);
+}

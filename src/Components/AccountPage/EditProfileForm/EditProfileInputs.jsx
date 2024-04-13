@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import EditProfileInput from "./EditProfileInput";
 import s from "./EditProfileInputs.module.scss";
 
 const EditProfileInputs = () => {
@@ -14,83 +15,70 @@ const EditProfileInputs = () => {
   return (
     <section className={s.inputs}>
       <section className={s.wrapper}>
-        <div className={s.input}>
-          <label htmlFor="firstName">First Name</label>
-          <input
-            type="text"
-            name="firstName"
-            id="firstName"
-            value={firstName}
-            autoComplete="off"
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </div>
+        <EditProfileInput
+          inputData={{
+            label: "First Name",
+            name: "firstName",
+            value: firstName,
+            setValue: setFirstName,
+          }}
+        />
 
-        <div className={s.input}>
-          <label htmlFor="lastName">Last Name</label>
-          <input
-            type="text"
-            name="lastName"
-            id="lastName"
-            value={lastName}
-            autoComplete="off"
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </div>
+        <EditProfileInput
+          inputData={{
+            label: "Last Name",
+            name: "lastName",
+            value: lastName,
+            setValue: setLastName,
+          }}
+        />
 
-        <div className={s.input}>
-          <label htmlFor="changeEmail">Email</label>
-          <input
-            type="text"
-            name="emailOrPhone"
-            id="changeEmail"
-            placeholder="example@gmail.com"
-            value={emailOrPhoneState}
-            onChange={(e) => setEmailOrPhoneState(e.target.value)}
-          />
-        </div>
+        <EditProfileInput
+          inputData={{
+            label: "Email",
+            name: "changeEmail",
+            value: emailOrPhoneState,
+            setValue: setEmailOrPhoneState,
+            placeholder: "example@gmail.com",
+          }}
+        />
 
-        <div className={s.input}>
-          <label htmlFor="address">Address</label>
-          <input
-            type="text"
-            name="address"
-            id="address"
-            placeholder="EX Kingston, 5236, United State"
-          />
-        </div>
+        <EditProfileInput
+          inputData={{
+            label: "Address",
+            name: "address",
+            placeholder: "EX Kingston, 5236, United State",
+          }}
+        />
       </section>
 
       <section className={s.passwordInputs}>
-        <div className={s.input}>
-          <label htmlFor="currentPass">Password Changes</label>
-          <input
-            type="password"
-            name="currentPass"
-            id="currentPass"
-            placeholder="Current Password"
-          />
-        </div>
+        <EditProfileInput
+          inputData={{
+            type: "password",
+            label: "Password Changes",
+            name: "currentPass",
+            placeholder: "Current Password",
+          }}
+        />
 
-        <div className={s.input}>
-          <input
-            type="password"
-            name="newPass"
-            id="newPass"
-            placeholder="New Password"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
-        </div>
+        <EditProfileInput
+          inputData={{
+            type: "password",
+            name: "newPass",
+            placeholder: "New Password",
+            value: newPassword,
+            setValue: setNewPassword,
+          }}
+        />
 
-        <div className={s.input}>
-          <input
-            type="password"
-            name="confirmPass"
-            id="confirmPass"
-            placeholder="Confirm New Password"
-          />
-        </div>
+        <EditProfileInput
+          inputData={{
+            type: "password",
+            name: "confirmPass",
+            placeholder: "Confirm New Password",
+          }}
+        />
       </section>
     </section>
   );
