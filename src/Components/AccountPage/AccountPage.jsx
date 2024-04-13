@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory";
-import AccountMenuSection from "./AccountMenuSection";
 import s from "./AccountPage.module.scss";
-import EditProfileForm from "./EditProfileForm";
+import AccountMenuSection from "./AccountMenuSection/AccountMenuSection";
+import EditProfileForm from "./EditProfileForm/EditProfileForm";
 
 const AccountPage = () => {
   const {

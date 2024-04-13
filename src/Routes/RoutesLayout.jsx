@@ -24,10 +24,7 @@ const RoutesLayout = () => {
       <ScrollToTop />
       <Outlet />
       <Footer />
-      <ConnectionLabelAlert
-        isOnline={isWebsiteOnline}
-        isOffline={!isWebsiteOnline}
-      />
+      <ConnectionLabelAlert isOnline={isWebsiteOnline} />
     </div>
   );
 };

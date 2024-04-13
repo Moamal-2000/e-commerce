@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import { toggleState } from "src/Features/globalSlice";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
-import SvgIcon from "../Shared/MiniComponents/SvgIcon";
+import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import s from "./AccountMenuSection.module.scss";
 
 const AccountMenuSection = () => {
