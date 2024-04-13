@@ -1,0 +1,35 @@
+@import "src/Styles/mixins.scss";
+
+.profileSectionsButton {
+  position: absolute;
+  left: 20px;
+  top: 118px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+@include small {
+  .profileSectionsButton {
+    display: block;
+  }
+}
+
+@include very-small {
+  .profileSectionsButton {
+    left: 10px;
+  }
+}
+
+.profileSectionsButton>svg {
+  width: 25px;
+  height: 25px;
+}

@@ -1,34 +1,19 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { updateGlobalState } from "src/Features/globalSlice";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
-import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
+import AccountMenuIcon from "./AccountMenuIcon";
 import s from "./AccountMenuSection.module.scss";
 
 const AccountMenuSection = () => {
   const { isProfileMenuActive } = useSelector((state) => state.global);
-  const dispatch = useDispatch();
   const { width: windowWidth } = useGetResizeWindow();
   const isMobileDevice = windowWidth < 768;
   const mobileClass = isMobileDevice ? s.mobile : "";
   const activeClass = isProfileMenuActive ? s.active : "";
 
-  function openProfileMenu() {
-    dispatch(updateGlobalState({ key: "isProfileMenuActive", value: true }));
-    dispatch(updateGlobalState({ key: "isOverlayActive", value: true }));
-  }
-
   return (
     <>
-      <button
-        type="button"
-        className={s.profileSectionsButton}
-        aria-label="List of Profile sections"
-        title="Sections list"
-        onClick={openProfileMenu}
-      >
-        <SvgIcon name="list" />
-      </button>
+      <AccountMenuIcon />
 
       <section className={`${s.menuSection} ${mobileClass} ${activeClass}`}>
         <section className={s.section}>
