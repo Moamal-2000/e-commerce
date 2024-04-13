@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import SvgIcon from "../MiniComponents/SvgIcon";
+import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./CategoryCard.module.scss";
 
 const CategoryCard = ({ categoryData }) => {

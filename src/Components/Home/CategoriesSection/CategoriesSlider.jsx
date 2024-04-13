@@ -1,5 +1,5 @@
 import { categoriesData } from "src/Data/staticData";
-import CategoryCard from "../../Shared/ProductsCards/CategoryCard";
+import CategoryCard from "../../Shared/ProductsCards/CategoryCard/CategoryCard";
 import s from "./CategoriesSlider.module.scss";
 
 const CategoriesSlider = () => {

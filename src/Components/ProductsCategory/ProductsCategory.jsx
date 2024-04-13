@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
-import ProductCard from "../Shared/ProductsCards/ProductCard";
+import ProductCard from "../Shared/ProductsCards/ProductCard/ProductCard";
 import s from "./ProductsCategory.module.scss";
 
 const ProductsCategory = ({ categoryName, customization }) => {

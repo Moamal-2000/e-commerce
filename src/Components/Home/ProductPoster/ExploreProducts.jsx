@@ -1,5 +1,5 @@
 import { productsData } from "src/Data/productsData";
-import ProductCard from "../../Shared/ProductsCards/ProductCard";
+import ProductCard from "../../Shared/ProductsCards/ProductCard/ProductCard";
 import s from "./ExploreProducts.module.scss";
 
 const ExploreProducts = ({ numOfProducts = -1, customization }) => {

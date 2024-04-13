@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { productCardCustomizations } from "src/Data/staticData";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
-import ProductCard from "../../Shared/ProductsCards/ProductCard";
+import ProductCard from "../../Shared/ProductsCards/ProductCard/ProductCard";
 import s from "./WishProducts.module.scss";
 
 const WishProducts = () => {

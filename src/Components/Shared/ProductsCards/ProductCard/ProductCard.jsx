@@ -5,11 +5,11 @@ import {
   checkDateBeforeMonthToPresent,
   isItemFound,
 } from "src/Functions/helper";
-import SvgIcon from "../MiniComponents/SvgIcon";
-import ToolTip from "../MiniComponents/ToolTip";
+import SvgIcon from "../../MiniComponents/SvgIcon";
+import ToolTip from "../../MiniComponents/ToolTip";
 import s from "./ProductCard.module.scss";
-import AddToCartButton from "./ProductCardComponents/AddToCartButton";
-import ProductCardInfo from "./ProductCardComponents/ProductCardInfo";
+import AddToCartButton from "./AddToCartButton";
+import ProductCardInfo from "./ProductCardInfo";
 
 const ProductCard = ({
   product,

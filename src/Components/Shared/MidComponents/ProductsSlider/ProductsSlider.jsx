@@ -1,6 +1,6 @@
 import { productsData } from "src/Data/productsData";
-import ProductCard from "../../ProductsCards/ProductCard";
 import s from "./ProductsSlider.module.scss";
+import ProductCard from "../../ProductsCards/ProductCard/ProductCard";
 
 const ProductsSlider = ({ filterFun = () => productsData, customization }) => {
   const filteredProducts = filterFun();
