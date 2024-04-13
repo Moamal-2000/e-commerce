@@ -80,35 +80,35 @@ You are welcome to use and modify the codebase for personal and educational purp
 
 #### 1. Colors
 
-| Color Name       | Color Swatch                                                     | Hex Code  |
-| ---------------- | ---------------------------------------------------------------- | --------- |
-| Black            | ![#000000](https://placehold.co/1x1/000000/000000.png) `#000000` | `#000000` |
-| Charcoal         | ![#252525](https://placehold.co/1x1/252525/252525.png) `#252525` | `#252525` |
-| Dark Slate Gray  | ![#2d2d2d](https://placehold.co/1x1/2d2d2d/2d2d2d.png) `#2d2d2d` | `#2d2d2d` |
-| Granite          | ![#363738](https://placehold.co/1x1/363738/363738.png) `#363738` | `#363738` |
-| Coffee           | ![#504242](https://placehold.co/1x1/504242/504242.png) `#504242` | `#504242` |
-| Battleship Gray  | ![#4c5355](https://placehold.co/1x1/4c5355/4c5355.png) `#4c5355` | `#4c5355` |
-| Dolphin Gray     | ![#7d8184](https://placehold.co/1x1/7d8184/7d8184.png) `#7d8184` | `#7d8184` |
-| Silver           | ![#999999](https://placehold.co/1x1/999999/999999.png) `#999999` | `#999999` |
-| Slate Gray       | ![#848d97](https://placehold.co/1x1/848d97/848d97.png) `#848d97` | `#848d97` |
-| Baby Blue        | ![#a0bce0](https://placehold.co/1x1/a0bce0/a0bce0.png) `#a0bce0` | `#a0bce0` |
-| Pale Silver      | ![#cbcbcb](https://placehold.co/1x1/cbcbcb/cbcbcb.png) `#cbcbcb` | `#cbcbcb` |
-| Platinum         | ![#ededed](https://placehold.co/1x1/ededed/ededed.png) `#ededed` | `#ededed` |
-| White Smoke      | ![#f5f5f5](https://placehold.co/1x1/f5f5f5/f5f5f5.png) `#f5f5f5` | `#f5f5f5` |
-| White            | ![#fafafa](https://placehold.co/1x1/fafafa/fafafa.png) `#fafafa` | `#fafafa` |
-| Gainsboro        | ![#f6f7f8](https://placehold.co/1x1/f6f7f8/f6f7f8.png) `#f6f7f8` | `#f6f7f8` |
-| Ice Blue         | ![#edeef1](https://placehold.co/1x1/edeef1/edeef1.png) `#edeef1` | `#edeef1` |
-| Anti-Flash White | ![#fdfdfd](https://placehold.co/1x1/fdfdfd/fdfdfd.png) `#fdfdfd` | `#fdfdfd` |
-| White            | ![#ffffff](https://placehold.co/1x1/ffffff/ffffff.png) `#ffffff` | `#ffffff` |
-| Dark Crimson     | ![#a22f2f](https://placehold.co/1x1/a22f2f/a22f2f.png) `#a22f2f` | `#a22f2f` |
-| Tomato           | ![#b40404](https://placehold.co/1x1/b40404/b40404.png) `#b40404` | `#b40404` |
-| Fire Engine Red  | ![#db4444](https://placehold.co/1x1/db4444/db4444.png) `#db4444` | `#db4444` |
-| Red              | ![#ff0000](https://placehold.co/1x1/ff0000/ff0000.png) `#ff0000` | `#ff0000` |
-| Salmon Pink      | ![#e07575](https://placehold.co/1x1/e07575/e07575.png) `#e07575` | `#e07575` |
-| Dark Green       | ![#078639](https://placehold.co/1x1/078639/078639.png) `#078639` | `#078639` |
-| Dodger Blue      | ![#4493f8](https://placehold.co/1x1/4493f8/4493f8.png) `#4493f8` | `#4493f8` |
-| Light Blue       | ![#4ac2e8](https://placehold.co/1x1/4ac2e8/4ac2e8.png) `#4ac2e8` | `#4ac2e8` |
-| Sunny Yellow     | ![#fffb19](https://placehold.co/1x1/fffb19/fffb19.png) `#fffb19` | `#fffb19` |
+| Color Name       | Hex Code                                                       |
+| ---------------- | ---------------------------------------------------------------- |
+| Black            | ![#000000](https://placehold.co/1x1/000000/000000.png) `#000000` |
+| Charcoal         | ![#252525](https://placehold.co/1x1/252525/252525.png) `#252525` |
+| Dark Slate Gray  | ![#2d2d2d](https://placehold.co/1x1/2d2d2d/2d2d2d.png) `#2d2d2d` |
+| Granite          | ![#363738](https://placehold.co/1x1/363738/363738.png) `#363738` |
+| Coffee           | ![#504242](https://placehold.co/1x1/504242/504242.png) `#504242` |
+| Battleship Gray  | ![#4c5355](https://placehold.co/1x1/4c5355/4c5355.png) `#4c5355` |
+| Dolphin Gray     | ![#7d8184](https://placehold.co/1x1/7d8184/7d8184.png) `#7d8184` |
+| Silver           | ![#999999](https://placehold.co/1x1/999999/999999.png) `#999999` |
+| Slate Gray       | ![#848d97](https://placehold.co/1x1/848d97/848d97.png) `#848d97` |
+| Baby Blue        | ![#a0bce0](https://placehold.co/1x1/a0bce0/a0bce0.png) `#a0bce0` |
+| Pale Silver      | ![#cbcbcb](https://placehold.co/1x1/cbcbcb/cbcbcb.png) `#cbcbcb` |
+| Platinum         | ![#ededed](https://placehold.co/1x1/ededed/ededed.png) `#ededed` |
+| White Smoke      | ![#f5f5f5](https://placehold.co/1x1/f5f5f5/f5f5f5.png) `#f5f5f5` |
+| White            | ![#fafafa](https://placehold.co/1x1/fafafa/fafafa.png) `#fafafa` |
+| Gainsboro        | ![#f6f7f8](https://placehold.co/1x1/f6f7f8/f6f7f8.png) `#f6f7f8` |
+| Ice Blue         | ![#edeef1](https://placehold.co/1x1/edeef1/edeef1.png) `#edeef1` |
+| Anti-Flash White | ![#fdfdfd](https://placehold.co/1x1/fdfdfd/fdfdfd.png) `#fdfdfd` |
+| White            | ![#ffffff](https://placehold.co/1x1/ffffff/ffffff.png) `#ffffff` |
+| Dark Crimson     | ![#a22f2f](https://placehold.co/1x1/a22f2f/a22f2f.png) `#a22f2f` |
+| Tomato           | ![#b40404](https://placehold.co/1x1/b40404/b40404.png) `#b40404` |
+| Fire Engine Red  | ![#db4444](https://placehold.co/1x1/db4444/db4444.png) `#db4444` |
+| Red              | ![#ff0000](https://placehold.co/1x1/ff0000/ff0000.png) `#ff0000` |
+| Salmon Pink      | ![#e07575](https://placehold.co/1x1/e07575/e07575.png) `#e07575` |
+| Dark Green       | ![#078639](https://placehold.co/1x1/078639/078639.png) `#078639` |
+| Dodger Blue      | ![#4493f8](https://placehold.co/1x1/4493f8/4493f8.png) `#4493f8` |
+| Light Blue       | ![#4ac2e8](https://placehold.co/1x1/4ac2e8/4ac2e8.png) `#4ac2e8` |
+| Sunny Yellow     | ![#fffb19](https://placehold.co/1x1/fffb19/fffb19.png) `#fffb19` |
 
 #### 2. Fonts
 
