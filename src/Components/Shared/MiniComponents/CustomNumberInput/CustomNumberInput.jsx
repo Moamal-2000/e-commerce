@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
-import { updateProductsState } from "../../../Features/productsSlice";
+import { updateProductsState } from "../../../../Features/productsSlice";
 import s from "./CustomNumberInput.module.scss";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "../SvgIcon";
 
 const CustomNumberInput = ({ product, quantity }) => {
   const { cartProducts } = useSelector((state) => state.products);

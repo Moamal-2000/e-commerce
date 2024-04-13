@@ -2,10 +2,10 @@ import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useFormData from "src/Hooks/Helper/useFormData";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import BillingDetails from "./BillingDetails/BillingDetails";
 import s from "./CheckoutPage.module.scss";
 import PaymentSection from "./PaymentSection/PaymentSection";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const CheckoutPage = () => {
   const { saveBillingInfoToLocal } = useSelector((state) => state.products);

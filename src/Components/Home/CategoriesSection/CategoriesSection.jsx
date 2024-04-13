@@ -1,4 +1,4 @@
-import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
+import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./CategoriesSection.module.scss";
 import CategoriesSlider from "./CategoriesSlider";
 

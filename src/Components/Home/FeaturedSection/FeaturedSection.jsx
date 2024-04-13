@@ -1,4 +1,4 @@
-import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
+import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./FeaturedSection.module.scss";
 import FeaturedSectionFeatures from "./FeaturedSectionFeatures";
 import FeaturedSectionPosters from "./FeaturedSectionPosters";

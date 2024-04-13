@@ -1,5 +1,5 @@
 import { productsData } from "src/Data/productsData";
-import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
+import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./RelatedItemsSection.module.scss";
 import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 

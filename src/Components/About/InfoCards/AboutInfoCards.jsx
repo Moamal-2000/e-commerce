@@ -1,5 +1,5 @@
 import { aboutCardsInfo } from "src/Data/staticData";
-import InfoCard from "../../Shared/MiniComponents/InfoCard";
+import InfoCard from "../../Shared/MiniComponents/InfoCard/InfoCard";
 import s from "./AboutInfoCards.module.scss";
 
 const AboutInfoCards = () => {

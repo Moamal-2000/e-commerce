@@ -8,11 +8,11 @@ import { updateGlobalState } from "../../Features/globalSlice";
 import useUpdateLoadingOnSamePage from "../../Hooks/App/useUpdateLoadingOnSamePage";
 import useOnlineStatus from "../../Hooks/Helper/useOnlineStatus";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import ProductsCategory from "./ProductsCategory";
 import s from "./ProductsCategoryPage.module.scss";
 import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const ProductsCategoryPage = () => {
   const { loadingCategoryPage } = useSelector((state) => state.global);

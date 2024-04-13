@@ -1,4 +1,4 @@
-import CustomCheckbox from "../../Shared/MiniComponents/CustomCheckbox";
+import CustomCheckbox from "../../Shared/MiniComponents/CustomCheckbox/CustomCheckbox";
 import s from "./BillingDetails.module.scss";
 import BillingInputs from "./BillingInputs";
 

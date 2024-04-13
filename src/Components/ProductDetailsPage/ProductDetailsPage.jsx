@@ -6,10 +6,10 @@ import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
 import { updateGlobalState } from "../../Features/globalSlice";
 import useUpdateLoadingOnSamePage from "../../Hooks/App/useUpdateLoadingOnSamePage";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import s from "./ProductDetailsPage.module.scss";
 import RelatedItemsSection from "./RelatedItemsSection/RelatedItemsSection";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const ProductDetailsPage = () => {
   useScrollOnMount(200);

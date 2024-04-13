@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { updateProductsState } from "../../Features/productsSlice";
 import { getUniqueArrayByObjectKey } from "../../Functions/helper";
-import SectionTitle from "../Shared/MiniComponents/SectionTitle";
 import s from "./FavoritePage.module.scss";
 import FavoriteProducts from "./FavoriteProducts/FavoriteProducts";
 import ForYouProducts from "../WishList/ForYouProducts/ForYouProducts";
+import SectionTitle from "../Shared/MiniComponents/SectionTitle/SectionTitle";
 
 const FavoritePage = () => {
   const { favoritesProducts, cartProducts } = useSelector(

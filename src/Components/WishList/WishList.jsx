@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getUniqueArrayByObjectKey } from "src/Functions/helper";
-import SectionTitle from "../Shared/MiniComponents/SectionTitle";
+import SectionTitle from "../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./WishList.module.scss";
 import { updateProductsState } from "../../Features/productsSlice";
 import WishProducts from "./WishProducts/WishProducts";

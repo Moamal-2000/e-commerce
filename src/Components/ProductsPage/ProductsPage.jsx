@@ -4,10 +4,10 @@ import { productCardCustomizations } from "src/Data/staticData";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useUpdateLoadingState from "../../Hooks/App/useUpdateLoadingState";
 import ExploreProducts from "../Home/ProductPoster/ExploreProducts";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./ProductsPage.module.scss";
 import { updateGlobalState } from "../../Features/globalSlice";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const ProductsPage = () => {
   const { loadingProductsPage } = useSelector((state) => state.global);

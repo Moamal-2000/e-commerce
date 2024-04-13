@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link, useLocation } from "react-router-dom";
 import { UN_BUILT_PAGES } from "src/Data/globalVariables";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import s from "./NotFoundPage.module.scss";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const NotFoundPage = () => {
   const location = useLocation();

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import s from "./ProductColors.module.scss";
-import ToolTip from "./ToolTip";
+import ToolTip from "../ToolTip";
 
 const ProductColors = ({ colors, showToolTip = false }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);

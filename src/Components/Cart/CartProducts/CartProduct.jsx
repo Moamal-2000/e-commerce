@@ -1,10 +1,10 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { removeById } from "src/Features/productsSlice";
-import CustomNumberInput from "../../Shared/MiniComponents/CustomNumberInput";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CartProduct.module.scss";
+import CustomNumberInput from "../../Shared/MiniComponents/CustomNumberInput/CustomNumberInput";
 
 const CartProduct = ({ data }) => {
   const { img, name, shortName, afterDiscount, quantity, id } = data;

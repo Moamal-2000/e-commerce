@@ -1,4 +1,4 @@
-import ProductColors from "../../Shared/MiniComponents/ProductColors";
+import ProductColors from "../../Shared/MiniComponents/ProductColors/ProductColors";
 import s from "./ProductColorsSection.module.scss";
 
 const ProductColorsSection = ({ data: { colors } }) => {

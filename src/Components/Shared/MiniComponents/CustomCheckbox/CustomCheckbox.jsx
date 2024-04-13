@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateProductsState } from "../../../Features/productsSlice";
+import { updateProductsState } from "../../../../Features/productsSlice";
 import s from "./CustomCheckbox.module.scss";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "../SvgIcon";
 
 const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
   const { saveBillingInfoToLocal } = useSelector((state) => state.products);

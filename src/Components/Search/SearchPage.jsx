@@ -3,9 +3,9 @@ import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import { updateGlobalState } from "../../Features/globalSlice";
 import useUpdateLoadingState from "../../Hooks/App/useUpdateLoadingState";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./SearchPage.module.scss";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const SearchPage = () => {
   const { loadingSearchProducts } = useSelector((state) => state.global);

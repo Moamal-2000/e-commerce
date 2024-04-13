@@ -1,5 +1,5 @@
 import RateStars from "../../MidComponents/RateStars/RateStars";
-import ProductColors from "../../MiniComponents/ProductColors";
+import ProductColors from "../../MiniComponents/ProductColors/ProductColors";
 import s from "./ProductCardInfo.module.scss";
 
 const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {

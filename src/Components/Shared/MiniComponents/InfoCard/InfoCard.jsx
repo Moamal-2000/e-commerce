@@ -1,5 +1,5 @@
 import s from "./InfoCard.module.scss";
-import SvgIcon from "./SvgIcon";
+import SvgIcon from "../SvgIcon";
 
 const InfoCard = ({ data }) => {
   return (

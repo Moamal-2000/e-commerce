@@ -1,5 +1,5 @@
 import { car, correctSign, headphone } from "src/Assets/Images/Images";
-import Feature from "../../Shared/MiniComponents/Feature";
+import Feature from "../../Shared/MiniComponents/Feature/Feature";
 import s from "./FeaturedSectionFeatures.module.scss";
 
 const FeaturedSectionFeatures = () => {
