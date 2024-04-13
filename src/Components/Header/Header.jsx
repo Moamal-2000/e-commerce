@@ -2,10 +2,10 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { toggleState } from "src/Features/globalSlice";
 import useNavToolsProps from "src/Hooks/App/useNavToolsProps";
-import NavTools from "../Shared/MidComponents/NavTools";
 import SvgIcon from "../Shared/MiniComponents/SvgIcon";
 import s from "./Header.module.scss";
 import Nav from "./Nav";
+import NavTools from "../Shared/MidComponents/NavTools/NavTools";
 
 const Header = () => {
   const dispatch = useDispatch();

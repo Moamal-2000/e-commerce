@@ -1,4 +1,4 @@
-import RateStars from "../../Shared/MidComponents/RateStars";
+import RateStars from "../../Shared/MidComponents/RateStars/RateStars";
 import s from "./ProductFirstInfos.module.scss";
 
 const ProductFirstInfos = ({ data }) => {

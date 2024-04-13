@@ -1,5 +1,5 @@
-import SvgIcon from "../MiniComponents/SvgIcon";
-import ToolTip from "../MiniComponents/ToolTip";
+import SvgIcon from "../../MiniComponents/SvgIcon";
+import ToolTip from "../../MiniComponents/ToolTip";
 import s from "./MemberCard.module.scss";
 
 const MemberCard = ({ data }) => {

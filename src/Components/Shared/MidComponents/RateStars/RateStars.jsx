@@ -1,6 +1,6 @@
 import { coloredStar, uncoloredStar } from "src/Assets/Images/Images";
 import { isDecimalNumber } from "src/Functions/helper";
-import SvgIcon from "../MiniComponents/SvgIcon";
+import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./RateStars.module.scss";
 
 const RateStars = ({ rate }) => {

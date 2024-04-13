@@ -1,5 +1,5 @@
 import { productsData } from "src/Data/productsData";
-import ProductCard from "../ProductsCards/ProductCard";
+import ProductCard from "../../ProductsCards/ProductCard";
 import s from "./ProductsSlider.module.scss";
 
 const ProductsSlider = ({ filterFun = () => productsData, customization }) => {

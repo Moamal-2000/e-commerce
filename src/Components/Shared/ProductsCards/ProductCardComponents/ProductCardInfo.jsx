@@ -1,4 +1,4 @@
-import RateStars from "../../MidComponents/RateStars";
+import RateStars from "../../MidComponents/RateStars/RateStars";
 import ProductColors from "../../MiniComponents/ProductColors";
 import s from "./ProductCardInfo.module.scss";
 

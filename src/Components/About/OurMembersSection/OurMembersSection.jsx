@@ -1,5 +1,5 @@
 import { ourMembersData } from "src/Data/staticData";
-import MemberCard from "../../Shared/MidComponents/MemberCard";
+import MemberCard from "../../Shared/MidComponents/MemberCard/MemberCard";
 import s from "./OurMembersSection.module.scss";
 
 const OurMembersSection = () => {

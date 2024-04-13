@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import IconWithCount from "../NavTools/IconWithCount";
-import SearchProductsInput from "../NavTools/SearchProductsInput";
-import UserMenuIcon from "../NavTools/UserMenuIcon";
+import IconWithCount from "../../NavTools/IconWithCount";
+import SearchProductsInput from "../../NavTools/SearchProductsInput";
+import UserMenuIcon from "../../NavTools/UserMenuIcon";
 import s from "./NavTools.module.scss";
 
 const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {

@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
-import ProductsSlider from "../../Shared/MidComponents/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import EventCounter from "./EventCounter";
 import s from "./TodaySection.module.scss";
+import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 
 const TodaySection = () => {
   const filterFlashSalesProducts = () =>

@@ -1,7 +1,7 @@
 import { productsData } from "src/Data/productsData";
-import ProductsSlider from "../../Shared/MidComponents/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import s from "./RelatedItemsSection.module.scss";
+import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 
 const RelatedItemsSection = ({ productType, currentProduct }) => {
   const hasRelatedProducts = getProductsByRelatedType().length > 0;

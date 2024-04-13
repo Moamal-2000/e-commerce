@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
-import ProductsSlider from "../../Shared/MidComponents/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle";
 import s from "./ThisMonthSection.module.scss";
+import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 
 const ThisMonthSection = () => {
   function filterThisMonthProducts() {
