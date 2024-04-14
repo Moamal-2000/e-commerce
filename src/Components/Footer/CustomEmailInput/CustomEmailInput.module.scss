@@ -1,0 +1,50 @@
+@import "src/Styles/mixins";
+
+.input {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--medium-light-gray);
+  width: 222px;
+
+  &:has(:focus) {
+    border-color: var(--white);
+
+    & input {
+      color: var(--white);
+    }
+  }
+}
+
+.input>input {
+  outline: none;
+  border: none;
+  color: var(--medium-light-gray);
+  background-color: transparent;
+  padding: 12px 0 12px 16px;
+}
+
+.input>label {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.input svg {
+  width: 22px;
+  height: 22px;
+
+  & path {
+    stroke: var(--medium-light-gray);
+  }
+}
+
+.input:has(:focus) svg {
+  & path {
+    stroke: var(--white);
+  }
+}
+
+.input>input::selection {
+  background-color: var(--white) !important;
+}

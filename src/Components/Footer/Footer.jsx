@@ -1,18 +1,11 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
-import { appStore, googlePlay, qrCode } from "src/Assets/Images/Images";
-import SvgIcon from "../Shared/MiniComponents/SvgIcon";
-import ToolTip from "../Shared/MiniComponents/ToolTip";
+import CopyRightsText from "./CopyRightsText/CopyRightsText";
+import CustomEmailInput from "./CustomEmailInput/CustomEmailInput";
 import s from "./Footer.module.scss";
 import RepoStarsForks from "./RepoStarsForks/RepoStarsForks";
+import DownloadAppInfo from "./WebsiteSocialMedia/DownloadAppInfo";
 
 const Footer = () => {
-  const [email, setEmail] = useState("");
-  function sendEmail(e) {
-    e.preventDefault();
-    setEmail("");
-  }
-
   return (
     <footer className={s.footer}>
       <div className="container">
@@ -24,19 +17,7 @@ const Footer = () => {
             <span>Subscribe</span>
             <p>Get 10% off your first order</p>
 
-            <form className={s.input} onSubmit={(e) => sendEmail(e)}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <label htmlFor="email" aria-label="Send mail">
-                <SvgIcon name="vector" />
-                <ToolTip left="70px" top="50%" content="Send" />
-              </label>
-            </form>
+            <CustomEmailInput />
           </section>
 
           <section className={s.section2}>
@@ -95,79 +76,11 @@ const Footer = () => {
           </section>
 
           <section className={s.section5}>
-            <b>Download App</b>
-            <p>Save $3 with App New User Only</p>
-
-            <div className={s.appInfo}>
-              <div className={s.qrCode}>
-                <img src={qrCode} alt="QR Code" title="qr code" tabIndex="0" />
-              </div>
-
-              <div className={s.downloadButtons}>
-                <button type="button">
-                  <img src={googlePlay} alt="Download app at Google play" />
-                </button>
-
-                <button type="button">
-                  <img src={appStore} alt="Download app at App store" />
-                </button>
-              </div>
-            </div>
-
-            <div className={s.socialMedia}>
-              <a
-                href="https://www.facebook.com/MoamalAlaa109"
-                target="_blank"
-                title="facebook"
-              >
-                <SvgIcon name="facebook" />
-                <ToolTip left="50%" top="48px" content="facebook" />
-              </a>
-
-              <a
-                href="https://twitter.com/MoamalAlaa7"
-                target="_blank"
-                title="twitter"
-              >
-                <SvgIcon name="twitter" />
-                <ToolTip left="50%" top="48px" content="twitter" />
-              </a>
-
-              <a
-                href="https://www.instagram.com/kubislav23/"
-                target="_blank"
-                title="instagram"
-              >
-                <SvgIcon name="instagram" />
-                <ToolTip left="50%" top="48px" content="instagram" />
-              </a>
-
-              <a
-                href="https://www.linkedin.com/in/moamal-alaa-a4bb15237/"
-                target="_blank"
-                title="linkedin"
-              >
-                <SvgIcon name="linkedin" />
-                <ToolTip left="50%" top="48px" content="linkedin" />
-              </a>
-            </div>
+            <DownloadAppInfo />
           </section>
         </section>
 
-        <p className={s.copyRights}>
-          <span>Website designed by</span>
-          <a href="https://dribbble.com/mdrimel15" target="_blank">
-            Rimel
-          </a>
-
-          <span>and coded by</span>
-          <a
-            href="https://www.linkedin.com/in/moamal-alaa-a4bb15237/"
-            target="_blank"
-          >
-            Moamal Alaa
-          </a>
-        </p>
+        <CopyRightsText />
       </div>
 
       <RepoStarsForks />

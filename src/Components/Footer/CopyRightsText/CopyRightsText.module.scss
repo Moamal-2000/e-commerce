@@ -1,0 +1,40 @@
+@import "src/Styles/mixins";
+
+
+.copyRights {
+  width: fit-content;
+  margin: 0 auto;
+  line-height: 24px;
+}
+
+@include small {
+  .copyRights {
+    font-size: .9rem;
+  }
+}
+
+@media (max-width: 342px) {
+  .copyRights {
+    align-items: flex-start;
+  }
+}
+
+.copyRights>span {
+  color: #F9F9F999;
+}
+
+.copyRights>a {
+  outline: none;
+  text-decoration: underline;
+  color: #F9F9F999;
+  margin: 0 4px;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--white);
+  }
+}
+
+.copyRights>*::selection {
+  background-color: var(--white) !important;
+}

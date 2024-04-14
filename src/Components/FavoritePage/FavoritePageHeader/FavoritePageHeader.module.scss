@@ -1,34 +1,29 @@
 @import "src/Styles/mixins";
 
-.favoritePage {
-  margin: var(--page-margin);
-}
-
-.favoritePageContent {
-  margin-bottom: 80px;
-}
-
-.forYou>header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 50px;
+}
 
-  &>div>* {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0 !important;
+.header>label {
+  font-size: 1.25rem;
+}
+
+@include small {
+  .header>label {
+    font-size: 1rem;
   }
 }
 
-.forYou>header>a {
-  background-color: transparent;
+.header>button {
   outline: none;
   padding: 16px 48px;
   border-radius: 4px;
-  border: 1px solid #00000080;
   font-weight: 500;
-  color: var(--black);
+  background-color: transparent;
+  border: 1px solid #00000080;
   transition: background-color .1s, color .1s;
 
   &:hover {
@@ -39,7 +34,7 @@
 }
 
 @include small {
-  .forYou>header>a {
+  .header>button {
     padding: 12px 30px;
     font-size: .9rem;
   }

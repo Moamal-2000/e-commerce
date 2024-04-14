@@ -1,33 +1,12 @@
 import { Helmet } from "react-helmet-async";
-import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { updateProductsState } from "../../Features/productsSlice";
-import { getUniqueArrayByObjectKey } from "../../Functions/helper";
-import s from "./FavoritePage.module.scss";
-import FavoriteProducts from "./FavoriteProducts/FavoriteProducts";
-import ForYouProducts from "../WishList/ForYouProducts/ForYouProducts";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle/SectionTitle";
+import ForYouProducts from "../WishList/ForYouProducts/ForYouProducts";
+import s from "./FavoritePage.module.scss";
+import FavoritePageHeader from "./FavoritePageHeader/FavoritePageHeader";
+import FavoriteProducts from "./FavoriteProducts/FavoriteProducts";
 
 const FavoritePage = () => {
-  const { favoritesProducts, cartProducts } = useSelector(
-    (state) => state.products
-  );
-  const lengthOfFavorites = favoritesProducts.length;
-  const dispatch = useDispatch();
-
-  function moveAllToCart() {
-    const uniqueCartProducts = getUniqueArrayByObjectKey({
-      arr: cartProducts,
-      newArr: favoritesProducts,
-      key: "shortName",
-    });
-
-    dispatch(updateProductsState({ key: "favoritesProducts", value: [] }));
-    dispatch(
-      updateProductsState({ key: "cartProducts", value: uniqueCartProducts })
-    );
-  }
-
   return (
     <>
       <Helmet>
@@ -37,13 +16,7 @@ const FavoritePage = () => {
       <div className="container">
         <main className={s.favoritePage} id="favorite-page">
           <section className={s.favoritePageContent}>
-            <header>
-              <label htmlFor="wishlist">Favorite ({lengthOfFavorites})</label>
-
-              <button type="button" onClick={moveAllToCart}>
-                Move All To Bag
-              </button>
-            </header>
+            <FavoritePageHeader />
 
             <FavoriteProducts />
           </section>

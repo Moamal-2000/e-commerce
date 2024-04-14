@@ -1,0 +1,80 @@
+@import "src/Styles/mixins";
+
+
+.appInfo {
+  display: flex;
+  margin: 8px 0 20px;
+}
+
+.qrCode {
+  --size: 76px;
+  min-width: var(--size);
+  min-height: var(--size);
+  max-width: var(--size);
+  max-height: var(--size);
+  margin-right: 16px;
+  user-select: none;
+}
+
+.qrCode img:focus-visible {
+  outline: solid 2px var(--orange-degree2);
+}
+
+.downloadButtons>button {
+  display: block;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 104px;
+  height: 30px;
+  border-radius: 4px;
+  border: solid 1px var(--white);
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:focus-visible {
+    border-color: var(--orange-degree2);
+  }
+}
+
+.downloadButtons>button>img {
+  border-radius: inherit;
+  scale: .8;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.socialMedia>a {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  filter: grayscale(1);
+  @include center-x-y;
+  position: relative;
+
+  &:focus-visible {
+    transition: opacity .3s, filter .3s .2s;
+    outline: solid 2px var(--orange-degree2);
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+
+.socialMedia>a:not([title=instagram]):focus-visible svg {
+  fill: var(--orange-degree2);
+}
+
+.socialMedia>a[title=instagram]:focus-visible svg {
+  stroke: var(--orange-degree2);
+
+  & path {
+    stroke: var(--orange-degree2);
+  }
+}
