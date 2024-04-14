@@ -1,21 +1,24 @@
 "use strict";
 
-const CACHE_NAME = "e-commerce-v7";
+// Variables
+const CACHE_NAME = "e-commerce-v8";
 const assets = ["/", "/index.html"];
 
-async function caching() {
+// Functions
+async function cacheAssets() {
   const cache = await caches.open(CACHE_NAME);
   await cache.addAll(assets);
 }
 
-async function respondFetch(request) {
+async function handleFetchAndCache(request) {
   const cacheResponse = await caches.match(request);
 
   const networkResponse = fetch(request)
     .then(async (networkRes) => {
-      const skipPutResInCache = networkRes.url.includes("chrome-extension");
+      const shouldSkipCache = networkRes.url.includes("chrome-extension");
 
-      if (skipPutResInCache) return networkRes;
+      if (shouldSkipCache) return networkRes;
+
       if (networkRes.ok) {
         const cache = await caches.open(CACHE_NAME);
         await cache.put(request, networkRes.clone());
@@ -30,17 +33,18 @@ async function respondFetch(request) {
   return cacheResponse || networkResponse;
 }
 
-async function updateCache() {
+async function updateCachedAssets() {
   const cache = await caches.open(CACHE_NAME);
 
   try {
-    const response = await Promise.all(
+    const responses = await Promise.all(
       assets.map(async (asset) => {
         const fetchedResponse = await fetch(asset);
 
         if (fetchedResponse.ok) {
           await cache.put(asset, fetchedResponse.clone());
         }
+
         return fetchedResponse;
       })
     );
@@ -52,18 +56,25 @@ async function updateCache() {
         .map((key) => caches.delete(key))
     );
 
-    return response;
+    return responses;
   } catch (error) {
     console.error("Failed to update cache:", error);
   }
 }
 
-self.addEventListener("install", (event) => event.waitUntil(caching()));
-self.addEventListener("activate", (event) => event.waitUntil(updateCache()));
-
-self.addEventListener("fetch", (event) => {
+function handleFetchEvent(event) {
   const isGetMethod = event.request.method === "GET";
 
-  event.respondWith(respondFetch(event.request));
-  if (isGetMethod) event.waitUntil(updateCache());
-});
+  event.respondWith(handleFetchAndCache(event.request));
+
+  if (isGetMethod) {
+    event.waitUntil(updateCachedAssets());
+  }
+}
+
+// Events
+self.addEventListener("install", (event) => event.waitUntil(cacheAssets()));
+self.addEventListener("activate", (event) =>
+  event.waitUntil(updateCachedAssets())
+);
+self.addEventListener("fetch", handleFetchEvent);
