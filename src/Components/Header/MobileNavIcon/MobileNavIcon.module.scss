@@ -1,0 +1,25 @@
+@import "src/Styles/mixins.scss";
+
+.mobileNav {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: none;
+  transition: opacity .2s;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+@include small {
+  .mobileNav {
+    display: block;
+  }
+}
+
+.mobileNav>svg {
+  width: 27px;
+  height: 27px;
+  cursor: pointer;
+}
