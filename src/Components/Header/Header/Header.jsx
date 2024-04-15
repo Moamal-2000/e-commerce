@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import useNavToolsProps from "src/Hooks/App/useNavToolsProps";
-import NavTools from "../Shared/MidComponents/NavTools/NavTools";
+import NavTools from "../../Shared/MidComponents/NavTools/NavTools";
 import s from "./Header.module.scss";
-import MobileNavIcon from "./MobileNavIcon/MobileNavIcon";
+import MobileNavIcon from "./MobileNavIcon";
 import Nav from "./Nav";
 
 const Header = () => {
