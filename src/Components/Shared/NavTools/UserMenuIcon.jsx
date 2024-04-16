@@ -14,8 +14,7 @@ const UserMenuIcon = ({ visibility }) => {
 
   return (
     visibility && (
-      <button
-        type="button"
+      <div
         className={`${s.userContainer} ${activeClass}`}
         onClick={toggleMenuUserActive}
         onFocus={openMenu}
@@ -25,7 +24,7 @@ const UserMenuIcon = ({ visibility }) => {
         <ToolTip top="48px" left="50%" content="user menu" />
 
         <UserMenu isActive={isMenuUserActive} toggler={toggleMenuUserActive} />
-      </button>
+      </div>
     )
   );
 };

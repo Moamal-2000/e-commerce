@@ -26,6 +26,7 @@
   border: none;
   display: flex;
   align-items: center;
+  user-select: none;
   padding: 12px;
 
   &:hover,

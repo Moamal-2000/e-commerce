@@ -21,11 +21,8 @@ const Nav = () => {
         </li>
 
         <li>
-          {loginInfo.isSignIn ? (
-            <NavLink to="/profile">Profile</NavLink>
-          ) : (
-            <NavLink to="/signup">Sign Up</NavLink>
-          )}
+          {loginInfo.isSignIn && <NavLink to="/profile">Profile</NavLink>}
+          {!loginInfo.isSignIn && <NavLink to="/signup">Sign Up</NavLink>}
         </li>
       </ul>
     </nav>

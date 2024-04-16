@@ -26,7 +26,6 @@ const LanguageSelector = () => {
 
   return (
     <div
-      tabIndex="0"
       className={s.languageSelector}
       onClick={toggleLanguageMenu}
       onFocus={openLanguageMenu}
