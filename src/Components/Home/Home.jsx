@@ -24,12 +24,12 @@ const Home = () => {
           <div className={s.introductionContainer}>
             {/* <SectionsMenu /> */}
 
-            <div className={s.line}></div>
+            {/* <div className={s.line}></div> */}
 
             {/* <MainSlider /> */}
           </div>
 
-          <TodaySection />
+          {/* <TodaySection /> */}
           <CategoriesSection />
           <ThisMonthSection />
           <ProductPoster />

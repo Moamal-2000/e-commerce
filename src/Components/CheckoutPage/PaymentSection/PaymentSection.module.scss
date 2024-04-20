@@ -29,10 +29,20 @@
   padding: 16px 48px;
   border-radius: 4px;
   margin-top: 34px;
+  outline: solid 2px transparent;
+  outline-offset: -2px;
   transition: background-color .2s;
 
-  &:hover {
-    background-color: var(--tomato);
+  &:focus-visible {
+    transition: var(--outline-transition);
+    outline-color: var(--tomato);
+    color: var(--very-dark-gray);
+    background: transparent;
+    color: var(--tomato);
+  }
+
+  &:not(:focus-visible):hover {
+    background: var(--tomato);
   }
 }
 
