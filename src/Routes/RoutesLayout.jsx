@@ -16,15 +16,15 @@ const RoutesLayout = () => {
 
   return (
     <div className="App" tabIndex="-1">
-      {/* <SkipContentLink scrollTo={skipLinkSectionId} /> */}
-      {/* <FirstHeader /> */}
-      {/* <Header /> */}
-      {/* <MobileNav /> */}
-      {/* <GlobalOverlay /> */}
-      {/* <ScrollToTop /> */}
+      <SkipContentLink scrollTo={skipLinkSectionId} />
+      <FirstHeader />
+      <Header />
+      <MobileNav />
+      <GlobalOverlay />
+      <ScrollToTop />
       <Outlet />
-      {/* <Footer /> */}
-      {/* <ConnectionLabelAlert isOnline={isWebsiteOnline} /> */}
+      <Footer />
+      <ConnectionLabelAlert isOnline={isWebsiteOnline} />
     </div>
   );
 };
