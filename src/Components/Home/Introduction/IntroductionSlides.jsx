@@ -18,7 +18,7 @@ const IntroductionSlides = () => {
 
             <h2 className={s.discount}>{discountText}</h2>
 
-            <Link to="/products" className={s.shopNow}>
+            <Link to="/products" className={s.shopNow} tabIndex="-1">
               <span>Shop Now</span>
               <SvgIcon name="arrowRightLong" />
             </Link>

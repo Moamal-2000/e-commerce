@@ -16,7 +16,7 @@ const TodaySection = () => {
         <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />
       </div>
 
-      <ProductsSlider filterFun={filterFlashSalesProducts} />
+      {/* <ProductsSlider filterFun={filterFlashSalesProducts} /> */}
 
       <Link to="/products" className={s.viewProductsBtn}>
         View All Products

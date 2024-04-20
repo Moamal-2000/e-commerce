@@ -36,8 +36,18 @@
   border-radius: 4px;
   font-weight: 500;
   transition: background .2s;
+  outline: solid 2px transparent;
+  outline-offset: -2px;
 
-  &:hover {
+  &:focus-visible {
+    transition: var(--outline-transition);
+    outline-color: var(--tomato);
+    color: var(--very-dark-gray);
+    background: transparent;
+    color: var(--tomato);
+  }
+
+  &:not(:focus-visible):hover {
     background: var(--tomato);
   }
 }
