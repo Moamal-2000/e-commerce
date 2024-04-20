@@ -110,13 +110,20 @@
 }
 
 .dropDownMenu li {
-  padding: 10px 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
 }
 
 .dropDownMenu li a {
+  outline: none;
+  border: none;
+  display: block;
+  padding: 10px 0;
   color: var(--black);
-  margin-top: 20px;
+  width: 100%;
+}
+
+.dropDownMenu:focus-visible {
+  color: var(--orange-degree2);
 }

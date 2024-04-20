@@ -4,28 +4,31 @@ import s from "./DropDownMenu.module.scss";
 
 const DropDownMenu = ({ nameMenu, children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const activeClass = isMenuOpen ? s.active : "";
 
   function handleToggleMenu() {
     setIsMenuOpen((prevState) => !prevState);
   }
 
+  function openMenu() {
+    setIsMenuOpen(true);
+  }
+
   return (
-    <div className={s.dropDownMenu} onClick={() => handleToggleMenu()}>
+    <sic
+      className={s.dropDownMenu}
+      onClick={handleToggleMenu}
+      onFocus={openMenu}
+    >
       <div className={s.nameMenu}>
         <span>{nameMenu}</span>
-        <button
-          type="button"
-          className={isMenuOpen ? s.active : ""}
-          aria-label="arrow right"
-        >
+        <div className={activeClass} aria-label="arrow right">
           <SvgIcon name="chevronRight" />
-        </button>
+        </div>
       </div>
 
-      <div className={`${s.menu} ${isMenuOpen ? s.active : ""}`}>
-        {children}
-      </div>
-    </div>
+      <div className={`${s.menu} ${activeClass}`}>{children}</div>
+    </sic>
   );
 };
 

@@ -7,7 +7,6 @@ const FeaturedSection = () => {
   return (
     <section className={s.featuredSection}>
       <SectionTitle eventName="Featured" sectionName="New Arrival" />
-
       <FeaturedSectionPosters />
       <FeaturedSectionFeatures />
     </section>

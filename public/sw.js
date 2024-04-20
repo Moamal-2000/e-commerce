@@ -2,12 +2,12 @@
 
 // Variables
 const CACHE_NAME = "e-commerce-v8";
-const assets = ["/", "/index.html"];
+const ASSETS = ["/", "/index.html"];
 
 // Functions
 async function cacheAssets() {
   const cache = await caches.open(CACHE_NAME);
-  await cache.addAll(assets);
+  await cache.addAll(ASSETS);
 }
 
 async function handleFetchAndCache(request) {
@@ -38,7 +38,7 @@ async function updateCachedAssets() {
 
   try {
     const responses = await Promise.all(
-      assets.map(async (asset) => {
+      ASSETS.map(async (asset) => {
         const fetchedResponse = await fetch(asset);
 
         if (fetchedResponse.ok) {

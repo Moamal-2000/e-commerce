@@ -30,19 +30,19 @@ const SectionsMenu = () => {
         <DropDownMenu nameMenu="Woman’s Fashion">
           <ul className={s.dropDownMenu}>
             <li>
-              <a href="\#">Elegant Evening Dress</a>
+              <a href="\#">Elegant Dress</a>
             </li>
             <li>
-              <a href="\#">Chic Blouse and Tailored Trousers</a>
+              <a href="\#">Chic Blouse</a>
             </li>
             <li>
               <a href="\#">Statement Handbag</a>
             </li>
             <li>
-              <a href="\#">Versatile Denim Jacket</a>
+              <a href="\#">Versatile Jacket</a>
             </li>
             <li>
-              <a href="\#">Comfortable Yet Stylish Sneakers</a>
+              <a href="\#">Comfortable</a>
             </li>
           </ul>
         </DropDownMenu>
@@ -53,7 +53,7 @@ const SectionsMenu = () => {
               <a href="\#">Tailored Suit</a>
             </li>
             <li>
-              <a href="\#">Casual Button-Down Shirts</a>
+              <a href="\#">Casual Shirts</a>
             </li>
             <li>
               <a href="\#">Slim-Fit Jeans</a>

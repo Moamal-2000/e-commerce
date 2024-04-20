@@ -1,32 +1,33 @@
 @import "src/Styles/mixins";
 
+.dropDownMenu {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 .nameMenu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.dropDownMenu button {
-  background-color: transparent;
-  border: none;
-  outline: none;
   transition: transform .3s;
   cursor: inherit;
-
-  &.active {
-    transform: rotate(90deg);
-  }
+  font-size: 1rem;
 }
 
-.dropDownMenu svg {
+.nameMenu .active svg {
+  transform: rotate(90deg);
+}
+
+.nameMenu svg {
   width: 10px;
   height: 10px;
 }
 
 .menu {
+  overflow: hidden;
   min-height: 0;
   height: 0;
-  overflow: hidden;
   transition: height .5s;
 
   &.active {
