@@ -105,6 +105,14 @@
   padding: 10px;
 }
 
+.sectionsMenu a {
+  outline: none;
+  &:focus-visible {
+    color: var(--orange-degree2) !important;
+    text-decoration: underline;
+  }
+}
+
 .dropDownMenu {
   margin-top: 10px;
 }
@@ -122,8 +130,4 @@
   padding: 10px 0;
   color: var(--black);
   width: 100%;
-}
-
-.dropDownMenu:focus-visible {
-  color: var(--orange-degree2);
 }

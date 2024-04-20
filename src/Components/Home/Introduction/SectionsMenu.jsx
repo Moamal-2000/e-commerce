@@ -1,4 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
+import {
+  menFashionMenuItems,
+  otherSectionsMenuItems,
+  womenFashionMenuItems,
+} from "src/Data/staticData";
 import { updateGlobalState } from "src/Features/globalSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import DropDownMenu from "./DropDownMenu";
@@ -7,73 +12,50 @@ import s from "./SectionsMenu.module.scss";
 const SectionsMenu = () => {
   const dispatch = useDispatch();
   const { isSectionsMenuActive } = useSelector((state) => state.global);
+  const activeClass = isSectionsMenuActive ? s.active : "";
+
+  function openSectionMenu() {
+    dispatch(updateGlobalState({ key: "isSectionsMenuActive", value: true }));
+    dispatch(updateGlobalState({ key: "isOverlayActive", value: true }));
+  }
 
   return (
     <>
       <button
         type="button"
         className={s.sectionsMenuButton}
-        onClick={() => {
-          dispatch(
-            updateGlobalState({ key: "isSectionsMenuActive", value: true })
-          );
-          dispatch(updateGlobalState({ key: "isOverlayActive", value: true }));
-        }}
+        onClick={openSectionMenu}
         aria-label="List of sections"
       >
         <SvgIcon name="list" />
       </button>
 
-      <nav
-        className={`${s.sectionsMenu} ${isSectionsMenuActive ? s.active : ""}`}
-      >
+      <nav className={`${s.sectionsMenu} ${activeClass}`}>
         <DropDownMenu nameMenu="Woman’s Fashion">
           <ul className={s.dropDownMenu}>
-            <li>
-              <a href="\#">Elegant Dress</a>
-            </li>
-            <li>
-              <a href="\#">Chic Blouse</a>
-            </li>
-            <li>
-              <a href="\#">Statement Handbag</a>
-            </li>
-            <li>
-              <a href="\#">Versatile Jacket</a>
-            </li>
-            <li>
-              <a href="\#">Comfortable</a>
-            </li>
+            {womenFashionMenuItems.map((item, index) => (
+              <li key={`item-${index}`}>
+                <a href={item.url}>{item.name}</a>
+              </li>
+            ))}
           </ul>
         </DropDownMenu>
 
         <DropDownMenu nameMenu="Men’s Fashion">
           <ul className={s.dropDownMenu}>
-            <li>
-              <a href="\#">Tailored Suit</a>
-            </li>
-            <li>
-              <a href="\#">Casual Shirts</a>
-            </li>
-            <li>
-              <a href="\#">Slim-Fit Jeans</a>
-            </li>
-            <li>
-              <a href="\#">Leather Accessories</a>
-            </li>
-            <li>
-              <a href="\#">Modern Sneakers</a>
-            </li>
+            {menFashionMenuItems.map((item, index) => (
+              <li key={`item-${index}`}>
+                <a href={item.url}>{item.name}</a>
+              </li>
+            ))}
           </ul>
         </DropDownMenu>
 
-        <a href="\#">Electronics</a>
-        <a href="\#">Home & Lifestyle</a>
-        <a href="\#">Medicine</a>
-        <a href="\#">Sports & Outdoor</a>
-        <a href="\#">Baby's & Toys</a>
-        <a href="\#">Groceries & Pets</a>
-        <a href="\#">Health & Beauty</a>
+        {otherSectionsMenuItems.map((item, index) => (
+          <a href={item.url} key={`item-${index}`}>
+            {item.name}
+          </a>
+        ))}
       </nav>
     </>
   );

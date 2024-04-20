@@ -286,3 +286,29 @@ export const mobileNavData = [
     requiteSignIn: false,
   },
 ];
+
+export const womenFashionMenuItems = [
+  { name: "Elegant Dress", url: "/#" },
+  { name: "Chic Blouse", url: "/#" },
+  { name: "Statement Handbag", url: "/#" },
+  { name: "Versatile Jacket", url: "/#" },
+  { name: "Comfortable", url: "/#" },
+];
+
+export const menFashionMenuItems = [
+  { name: "Tailored Suit", url: "/#" },
+  { name: "Casual Shirts", url: "/#" },
+  { name: "Slim-Fit Jeans", url: "/#" },
+  { name: "Leather Accessories", url: "/#" },
+  { name: "Modern Sneakers", url: "/#" },
+];
+
+export const otherSectionsMenuItems = [
+  { name: "Electronics", url: "/#" },
+  { name: "Home & Lifestyle", url: "/#" },
+  { name: "Medicine", url: "/#" },
+  { name: "Sports & Outdoor", url: "/#" },
+  { name: "Baby's & Toys", url: "/#" },
+  { name: "Groceries & Pets", url: "/#" },
+  { name: "Health & Beauty", url: "/#" },
+];

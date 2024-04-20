@@ -15,7 +15,7 @@ const DropDownMenu = ({ nameMenu, children }) => {
   }
 
   return (
-    <sic
+    <div
       className={s.dropDownMenu}
       onClick={handleToggleMenu}
       onFocus={openMenu}
@@ -28,7 +28,7 @@ const DropDownMenu = ({ nameMenu, children }) => {
       </div>
 
       <div className={`${s.menu} ${activeClass}`}>{children}</div>
-    </sic>
+    </div>
   );
 };
 
