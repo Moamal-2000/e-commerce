@@ -102,13 +102,21 @@
     background-color: var(--white);
     color: var(--dark-tomato);
   }
+
+  &:focus-visible {
+    background-color: #db444407;
+    border-color: var(--tomato);
+    color: var(--tomato);
+  }
 }
 
 .buttons>a {
+  outline: none;
   color: var(--dark-tomato);
   transition: color .2s;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: var(--tomato);
   }
 }
