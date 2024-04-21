@@ -87,6 +87,7 @@
 }
 
 .shopNow {
+  outline: none;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -96,10 +97,18 @@
   width: fit-content;
   position: relative;
 
-  &:hover::before {
+  &:not(:focus-visible):hover::before {
     height: calc(100% + 10px);
     opacity: .3;
     transition: height .2s, opacity .2s;
+  }
+
+  &:focus-visible {
+    color: var(--orange-degree2);
+
+    &::before {
+      background-color: var(--orange-degree2);
+    }
   }
 }
 
