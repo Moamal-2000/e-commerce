@@ -30,10 +30,10 @@ const Home = () => {
           </div>
 
           {/* <TodaySection /> */}
-          <CategoriesSection />
-          <ThisMonthSection />
-          <ProductPoster />
-          <OurProductsSection />
+          {/* <CategoriesSection /> */}
+          {/* <ThisMonthSection /> */}
+          {/* <ProductPoster /> */}
+          {/* <OurProductsSection /> */}
           <FeaturedSection />
         </div>
       </div>
