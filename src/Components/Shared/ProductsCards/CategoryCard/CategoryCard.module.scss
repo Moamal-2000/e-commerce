@@ -3,16 +3,23 @@
 .card {
   border-radius: 4px;
   border: solid 1px #0000004D;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
   transition: background-color .2s;
-}
 
-.card:hover {
-  background-color: var(--tomato);
-  border-color: var(--tomato);
+  &:not(:focus-visible):hover {
+    background-color: var(--tomato);
+    border-color: var(--tomato);
+  }
+
+  &:focus-visible {
+    background-color: #db444407;
+    outline-color: var(--tomato);
+  }
 }
 
 .card svg {
@@ -25,19 +32,31 @@
   }
 }
 
-.card svg[data-fill-hover] {
-  transition: fill .2s;
+.card svg:where([data-fill-hover], [data-stroke-hover]) {
+  transition: fill .2s, stroke .2s;
 }
 
-.card:hover svg[data-fill-hover] {
-  fill: var(--white);
+.card:not(:focus-visible):hover svg[data-fill-hover] {
+  & :where(path, line) {
+    fill: var(--white);
+  }
 }
 
-.card:hover svg {
-  fill: transparent;
-
+.card:not(:focus-visible):hover svg[data-stroke-hover] {
   & :where(path, line) {
     stroke: var(--white);
+  }
+}
+
+.card:focus-visible svg[data-fill-hover] {
+  & :where(path, line) {
+    fill: var(--tomato);
+  }
+}
+
+.card:focus-visible svg[data-stroke-hover] {
+  & :where(path, line) {
+    stroke: var(--tomato);
   }
 }
 
@@ -46,6 +65,10 @@
   color: var(--black);
 }
 
-.card:hover span {
+.card:not(:focus-visible):hover span {
   color: var(--white);
+}
+
+.card:focus-visible span {
+  color: var(--tomato);
 }

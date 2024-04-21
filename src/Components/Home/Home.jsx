@@ -22,14 +22,14 @@ const Home = () => {
       <div className={s.home}>
         <div className={s.container}>
           <div className={s.introductionContainer}>
-            <SectionsMenu />
+            {/* <SectionsMenu /> */}
 
-            <div className={s.line}></div>
+            {/* <div className={s.line}></div> */}
 
-            <MainSlider />
+            {/* <MainSlider /> */}
           </div>
 
-          <TodaySection />
+          {/* <TodaySection /> */}
           <CategoriesSection />
           <ThisMonthSection />
           <ProductPoster />
