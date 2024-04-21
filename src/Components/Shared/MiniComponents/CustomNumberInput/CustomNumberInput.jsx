@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
 import { updateProductsState } from "../../../../Features/productsSlice";
-import s from "./CustomNumberInput.module.scss";
 import SvgIcon from "../SvgIcon";
+import s from "./CustomNumberInput.module.scss";
 
 const CustomNumberInput = ({ product, quantity }) => {
   const { cartProducts } = useSelector((state) => state.products);
@@ -70,11 +70,19 @@ const CustomNumberInput = ({ product, quantity }) => {
       />
 
       <div className={s.buttons}>
-        <button type="button" onClick={() => handleUpdateQuantity("increase")}>
+        <button
+          type="button"
+          onClick={() => handleUpdateQuantity("increase")}
+          tabIndex="-1"
+        >
           <SvgIcon name="arrowUp" />
         </button>
 
-        <button type="button" onClick={() => handleUpdateQuantity("decrease")}>
+        <button
+          type="button"
+          onClick={() => handleUpdateQuantity("decrease")}
+          tabIndex="-1"
+        >
           <SvgIcon name="arrowUp" />
         </button>
       </div>

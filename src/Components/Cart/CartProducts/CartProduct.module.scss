@@ -25,6 +25,10 @@
   top: 0;
   left: 0;
   cursor: pointer;
+
+  &:focus-visible [data-is-tooltip=true] {
+    opacity: 1;
+  }
 }
 
 .removeButton>svg {
@@ -41,11 +45,16 @@
 }
 
 .product a {
+  outline: none;
   color: var(--black);
   transition: color .1s;
 
   &:hover {
     color: var(--dark-gray);
+  }
+
+  &:focus-visible {
+    color: var(--orange-degree2);
   }
 }
 

@@ -10,6 +10,14 @@
   &:hover {
     border-color: var(--black);
   }
+
+  &:has(:focus-visible) {
+    border-color: var(--black);
+
+    .buttons>button>svg {
+      fill: var(--black);
+    }
+  }
 }
 
 .numberInput>input {
@@ -20,6 +28,10 @@
 
   &::-webkit-inner-spin-button {
     display: none;
+  }
+
+  &:focus-visible {
+    color: var(--black);
   }
 }
 
