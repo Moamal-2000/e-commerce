@@ -8,8 +8,8 @@ import {
   compareDataToObjValue,
   getUniqueArrayByObjectKey,
 } from "src/Functions/helper";
-import s from "./SignUpForm.module.scss";
 import { openSignWithGooglePopUp } from "../SignUpWithGoogle/SignUpWithGooglePopup";
+import s from "./SignUpForm.module.scss";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();

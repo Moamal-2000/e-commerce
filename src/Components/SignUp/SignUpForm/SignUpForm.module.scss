@@ -94,6 +94,12 @@
     background-color: var(--white);
     color: var(--dark-tomato);
   }
+
+  &:focus-visible {
+    background-color: #db444407;
+    border-color: var(--tomato);
+    color: var(--tomato);
+  }
 }
 
 .signUpBtn {
@@ -109,6 +115,10 @@
 
   &:hover {
     border-color: var(--dark-gray);
+  }
+
+  &:focus-visible {
+    background-color: #4486db1d;
   }
 }
 
@@ -131,13 +141,22 @@
 }
 
 .buttons>p>a {
+  outline: none;
   color: var(--primary);
   position: relative;
   top: -2px;
   transition: color .2s;
 
-  &:hover {
+  &:not(:focus-visible):hover {
     color: var(--black);
+  }
+
+  &:focus-visible {
+    color: var(--orange-degree2);
+
+    &::before {
+      background-color: var(--orange-degree2);
+    }
   }
 }
 
