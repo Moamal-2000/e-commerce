@@ -13,7 +13,12 @@
   color: var(--black);
 
   &:hover {
-    color: var(--dark-tomato);
+    color: var(--tomato);
+  }
+
+  &:focus-visible {
+    color: var(--tomato);
+    text-decoration: underline;
   }
 }
 
@@ -33,9 +38,10 @@
   color: var(--white);
   font-weight: 500;
   font-size: 1rem;
-  transition: background-color .1s, color .1s;
+  transition: background-color .2s, color .2s;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: var(--white);
     color: var(--dark-tomato);
   }

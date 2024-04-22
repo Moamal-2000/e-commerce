@@ -16,11 +16,17 @@
 }
 
 .welcomeMessage>a {
+  outline: none;
   color: var(--dark-tomato);
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--tomato);
+  }
+
+  &:focus::before {
+    width: 100%;
   }
 }
 

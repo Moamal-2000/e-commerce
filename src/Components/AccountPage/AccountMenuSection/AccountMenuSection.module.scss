@@ -33,17 +33,23 @@
 }
 
 .section>ul>li>a {
+  outline: none;
   color: var(--dark-gray);
 
   &:hover {
     color: var(--dark-tomato);
   }
 
-  &[class=active] {
+  &:not(:focus-visible)[class=active] {
     color: var(--dark-tomato);
 
     &:hover {
       color: var(--tomato);
     }
+  }
+
+  &:focus-visible {
+    text-decoration: underline;
+    color: var(--orange-degree2);
   }
 }
