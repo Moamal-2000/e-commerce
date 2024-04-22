@@ -24,12 +24,18 @@
   font-weight: 500;
   background-color: transparent;
   border: 1px solid #00000080;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
   transition: background-color .1s, color .1s;
 
   &:hover {
     color: var(--white);
     border-color: var(--very-dark-gray);
     background-color: var(--very-dark-gray);
+  }
+
+  &:focus-visible {
+    outline-color: var(--very-dark-gray);
   }
 }
 
