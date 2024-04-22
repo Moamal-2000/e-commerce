@@ -6,8 +6,8 @@ const PaymentCards = () => {
   return (
     <div className={s.images}>
       {paymentCards.map(({ img, alt, link, id }) => (
-        <a key={id} href={link} target="_blank" aria-label={alt}>
-          <img src={img} alt={alt} />
+        <a key={id} href={link} target="_blank">
+          <img src={img} alt={alt + "image"} />
           <ToolTip left="50%" top="46px" content={alt} />
         </a>
       ))}

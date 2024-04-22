@@ -7,12 +7,21 @@
 }
 
 .images a {
+  width: 42px;
+  height: 28px;
   user-select: none;
   position: relative;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: 0;
+
+  &:focus-visible {
+    transition: var(--outline-transition);
+    outline: 2px dashed var(--very-dark-gray);
+    outline-offset: 3px;
+    color: var(--very-dark-gray);
+  }
 }
 
 .images img {
-  width: 42px;
-  height: 28px;
   object-fit: contain;
 }

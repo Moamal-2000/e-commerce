@@ -8,7 +8,8 @@
   border: solid 1px var(--black);
   position: relative;
   cursor: pointer;
-  transition: border-color .2s, opacity .2s;
+  display: flex;
+  transition: opacity .2s;
 }
 
 .checkboxContainer:not(:has(:checked)):hover .customInput {
@@ -19,16 +20,20 @@
   opacity: .8;
 }
 
+.customInput:has(:focus) {
+  border-color: var(--orange-degree2);
+}
+
 .customInput:has(:checked) {
   background-color: var(--tomato);
   border: solid 1px var(--tomato);
 }
 
 .customInput>input {
-  width: 100%;
-  height: 100%;
+  flex: 1;
   opacity: 0;
   cursor: pointer;
+  scale: 1.1 1;
 }
 
 .customInput>svg {

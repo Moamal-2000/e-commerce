@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updateProductsState } from "../../../../Features/productsSlice";
-import s from "./CustomCheckbox.module.scss";
 import SvgIcon from "../SvgIcon";
+import s from "./CustomCheckbox.module.scss";
 
 const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
   const { saveBillingInfoToLocal } = useSelector((state) => state.products);
@@ -26,11 +26,13 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
           name={name}
           checked={saveBillingInfoToLocal}
           onChange={handleCheckboxChange}
-          id={id}
           required={isRequired}
+          id={id}
         />
+
         <SvgIcon name="checked" />
       </div>
+
       <label htmlFor="save-info">
         Save this information for faster check-out next time
       </label>

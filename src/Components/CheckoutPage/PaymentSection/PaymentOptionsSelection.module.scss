@@ -21,6 +21,10 @@
   min-width: 24px;
   min-height: 24px;
   cursor: pointer;
+
+  &:focus-visible {
+    accent-color: var(--tomato);
+  }
 }
 
 .input label {

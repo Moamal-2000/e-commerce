@@ -23,3 +23,17 @@
   user-select: none;
   object-fit: contain;
 }
+
+.wrapper>a {
+  outline: none;
+  color: var(--black);
+
+  &:hover {
+    color: var(--brown);
+  }
+
+  &:focus-visible {
+    color: var(--orange-degree2);
+    text-decoration: underline;
+  }
+}
