@@ -9,6 +9,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  outline-color: var(--black);
+  outline-offset: 3px;
+
+  &:focus {
+    transition: outline-color .2s .1s, outline-offset .2s ease;
+    outline-color: var(--orange-degree2);
+    outline-offset: 8px;
+  }
 }
 
 .wrapper {
@@ -24,16 +32,6 @@
   object-fit: contain;
 }
 
-.wrapper>a {
-  outline: none;
+.wrapper>span {
   color: var(--black);
-
-  &:hover {
-    color: var(--brown);
-  }
-
-  &:focus-visible {
-    color: var(--orange-degree2);
-    text-decoration: underline;
-  }
 }

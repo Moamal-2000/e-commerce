@@ -5,14 +5,14 @@ const PaymentProducts = ({ data }) => {
   return (
     <div className={s.products}>
       {data.map(({ img, name, shortName, afterDiscount, id }) => (
-        <div key={id} className={s.product}>
+        <Link to={`/details?product=${name}`} key={id} className={s.product}>
           <div className={s.wrapper}>
             <img src={img} alt={shortName} />
-            <Link to={`/details?product=${name}`}>{shortName}</Link>
+            <span>{shortName}</span>
           </div>
 
           <span className={s.price}>${afterDiscount}</span>
-        </div>
+        </Link>
       ))}
     </div>
   );

@@ -46,11 +46,11 @@ const CheckoutPage = () => {
 
       <div className="container">
         <main className={s.checkoutPage} id="checkout-page">
-          <PagesHistory history={PAGE_HISTORY} historyPaths={HISTORY_PATHS} />
+          {/* <PagesHistory history={PAGE_HISTORY} historyPaths={HISTORY_PATHS} /> */}
 
           <form method="POST" onSubmit={handleSubmitPayment}>
             <section className={s.checkoutPageContent}>
-              <BillingDetails inputsData={{ billingValues, handleChange }} />
+              {/* <BillingDetails inputsData={{ billingValues, handleChange }} /> */}
               <PaymentSection />
             </section>
           </form>
