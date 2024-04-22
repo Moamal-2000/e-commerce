@@ -192,3 +192,10 @@ export function getUniqueArrayByObjectKey({ arr, newArr, key }) {
 
   return updatedArr;
 }
+
+export function isMobileDevice() {
+  const IPHONE_SCREEN_WIDTH = 428;
+  const mobileMediaQuery = `(max-width: ${IPHONE_SCREEN_WIDTH}px)`;
+  const isMobileDevice = window.matchMedia(mobileMediaQuery).matches;
+  return isMobileDevice;
+}

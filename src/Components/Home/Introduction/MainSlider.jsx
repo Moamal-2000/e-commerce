@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { DEFAULT_SWIPER_SPEED } from "src/Data/globalVariables";
+import { isMobileDevice } from "src/Functions/helper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -29,20 +30,20 @@ function MainSlider() {
 
   return (
     <Swiper
-      pagination={{ clickable: true }}
+      pagination={{ enabled: !isMobileDevice(), clickable: true }}
       className={s.mainSlider}
       modules={swiperModules}
       spaceBetween={-1}
       slidesPerView={1}
       speed={swiperSpeed}
       loop={true}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={setDefaultSpeedOnTouchEnd}
       autoplay={{
         delay: 6000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={setDefaultSpeedOnTouchEnd}
     >
       {IntroductionSlides()}
     </Swiper>
