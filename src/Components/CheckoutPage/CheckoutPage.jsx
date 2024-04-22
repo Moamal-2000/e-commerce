@@ -25,8 +25,8 @@ const CheckoutPage = () => {
     localStorageKey: "billingInfo",
   });
 
-  const PAGE_HISTORY = ["Account", "CheckOut"];
-  const HISTORY_PATHS = [
+  const pageHistory = ["Account", "CheckOut"];
+  const historyPaths = [
     {
       index: 0,
       path: "/profile",
@@ -46,13 +46,15 @@ const CheckoutPage = () => {
 
       <div className="container">
         <main className={s.checkoutPage} id="checkout-page">
-          <PagesHistory history={PAGE_HISTORY} historyPaths={HISTORY_PATHS} />
+          <PagesHistory history={pageHistory} historyPaths={historyPaths} />
 
-          <form method="POST" onSubmit={handleSubmitPayment}>
-            <section className={s.checkoutPageContent}>
-              <BillingDetails inputsData={{ billingValues, handleChange }} />
-              <PaymentSection />
-            </section>
+          <form
+            className={s.checkoutPageContent}
+            method="POST"
+            onSubmit={handleSubmitPayment}
+          >
+            <BillingDetails inputsData={{ billingValues, handleChange }} />
+            <PaymentSection />
           </form>
         </main>
       </div>

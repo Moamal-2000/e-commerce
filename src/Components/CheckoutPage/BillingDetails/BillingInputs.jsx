@@ -18,9 +18,9 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
         inputData={{
           label: "First Name",
           name: "firstName",
-          isRequired: true,
+          required: true,
           value: firstName,
-          onchange: handleChange,
+          onChange: handleChange,
         }}
       />
 
@@ -29,7 +29,7 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
           label: "Company Name",
           name: "companyName",
           value: companyName,
-          onchange: handleChange,
+          onChange: handleChange,
         }}
       />
 
@@ -37,9 +37,9 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
         inputData={{
           label: "Street Address",
           name: "streetAddress",
-          isRequired: true,
+          required: true,
           value: streetAddress,
-          onchange: handleChange,
+          onChange: handleChange,
           autoComplete: true,
         }}
       />
@@ -49,7 +49,7 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
           label: "Apartment, floor, etc. (optional)",
           name: "address",
           value: address,
-          onchange: handleChange,
+          onChange: handleChange,
           autoComplete: true,
         }}
       />
@@ -58,9 +58,9 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
         inputData={{
           label: "Town/City",
           name: "city",
-          isRequired: true,
+          required: true,
           value: city,
-          onchange: handleChange,
+          onChange: handleChange,
           autoComplete: true,
         }}
       />
@@ -69,10 +69,10 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
         inputData={{
           label: "Phone Number",
           name: "phoneNumber",
-          isRequired: true,
+          required: true,
           value: phoneNumber,
           type: "tel",
-          onchange: handleChange,
+          onChange: handleChange,
           autoComplete: true,
         }}
       />
@@ -81,10 +81,10 @@ const BillingInputs = ({ inputsData: { billingValues, handleChange } }) => {
         inputData={{
           label: "Email Address",
           name: "email",
-          isRequired: true,
+          required: true,
           value: email,
           type: "email",
-          onchange: handleChange,
+          onChange: handleChange,
           autoComplete: true,
         }}
       />

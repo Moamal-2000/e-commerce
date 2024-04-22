@@ -1,32 +1,34 @@
 import s from "./BillingInput.module.scss";
 
-const BillingInput = ({
-  inputData: {
+const BillingInput = ({ inputData }) => {
+  const {
     label,
-    placeholder = "",
+    placeholder,
     name,
-    isRequired = false,
-    type = "text",
+    required,
+    type,
     value,
-    onchange,
-    autoComplete = false,
-  },
-}) => {
+    onChange,
+    autoComplete,
+  } = inputData;
+
+  const inputAttributes = {
+    id: name,
+    name,
+    type: type || "text",
+    placeholder: placeholder || "",
+    required: required || false,
+    value,
+    onChange,
+    autoComplete: autoComplete ? "on" : "off",
+  };
+
   return (
     <div className={s.input}>
-      <label htmlFor={name} className={isRequired ? s.redStarLabel : ""}>
+      <label htmlFor={name} className={required ? s.redStarLabel : ""}>
         {label}
       </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        placeholder={placeholder}
-        required={isRequired}
-        value={value}
-        onChange={onchange}
-        autoComplete={autoComplete ? "on" : "off"}
-      />
+      <input {...inputAttributes} />
     </div>
   );
 };
