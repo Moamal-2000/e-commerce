@@ -46,13 +46,13 @@ const ContactForm = () => {
           name="message"
           autoComplete="off"
           placeholder="Your Message"
-        ></textarea>
+        />
       </div>
 
-      <button type="submit">Send Message</button>
-      <button type="reset" hidden>
-        Reset
-      </button>
+      <div className={s.buttons}>
+        <button type="reset">Reset</button>
+        <button type="submit">Send Message</button>
+      </div>
     </form>
   );
 };

@@ -3,7 +3,7 @@ import ContactInfo from "./ContactInfo";
 
 const ContactInfoCard = () => {
   return (
-    <div className={s.contactInfo}>
+    <section className={s.contactInfo}>
       <ContactInfo iconName="phone" title="Call To Us">
         <p>We are available 24/7, 7 days a week.</p>
         <p>
@@ -24,7 +24,7 @@ const ContactInfoCard = () => {
           <a href="mailto:support@exclusive.com">support@exclusive.com</a>
         </p>
       </ContactInfo>
-    </div>
+    </section>
   );
 };
 export default ContactInfoCard;

@@ -86,7 +86,36 @@
   height: 207px;
 }
 
-.contactForm>button[type=submit] {
+.buttons {
+  align-self: flex-end;
+}
+
+.buttons>button[type=reset] {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 4px;
+  margin-right: 16px;
+  font-size: 1rem;
+  color: var(--black);
+
+  &:hover {
+    color: var(--tomato);
+  }
+
+  &:focus-visible {
+    color: var(--tomato);
+    text-decoration: underline;
+  }
+}
+
+@include small {
+  .buttons>button[type=reset] {
+    font-size: .9rem;
+  }
+}
+
+.buttons>button[type=submit] {
   outline: none;
   border: none;
   padding: 16px 48px;
@@ -96,7 +125,6 @@
   color: var(--white);
   font-size: 1rem;
   font-weight: 500;
-  align-self: flex-end;
   transition: background-color .1s, color .1s;
 
   &:focus-visible {
@@ -113,7 +141,7 @@
 }
 
 @include medium {
-  .contactForm>button[type=submit] {
+  .buttons>button[type=submit] {
     padding: 12px 32px;
     font-size: .9rem;
   }
