@@ -9,8 +9,8 @@ const LogInForm = () => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const { signedUpUsers } = useSelector((state) => state.user);
-  const emailOrPhone = useRef("moamalalaapro1@gmail.com");
-  const password = useRef("moamalalaapro123");
+  const emailOrPhone = useRef();
+  const password = useRef();
 
   function login(e) {
     const inputs = e.target.querySelectorAll("input");
@@ -25,9 +25,8 @@ const LogInForm = () => {
     const formDataObj = new FormData(e.target);
     const formData = {};
 
-    for (let pair of formDataObj.entries()) {
-      formData[pair[0]] = pair[1];
-    }
+    // Set keys and values from formDataObj to formData
+    for (let pair of formDataObj.entries()) formData[pair[0]] = pair[1];
 
     if (isCorrectLoginData) {
       dispatch(newSignUp(signedUpUsers));
@@ -70,7 +69,6 @@ const LogInForm = () => {
         <button type="submit" className={s.loginBtn}>
           Log In
         </button>
-
         <a href="#">Forget Password?</a>
       </div>
     </form>

@@ -7,10 +7,9 @@ export function openSignWithGooglePopUp() {
 
   popupWindow.document.documentElement.innerHTML = popupStyles;
   popupWindow.document.body.innerHTML = `<div id="popup-root"></div>`;
+  const popupRoot = popupWindow.document.getElementById("popup-root");
 
-  ReactDOM.createRoot(popupWindow.document.getElementById("popup-root")).render(
-    <SignUpWithGoogle />
-  );
+  ReactDOM.createRoot(popupRoot).render(<SignUpWithGoogle />);
 
   setTimeout(() => popupWindow.close(), 2000);
 }
