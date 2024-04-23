@@ -9,13 +9,21 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
 
   function handleCheckboxChange(e) {
     const isInputChecked = e.target.checked;
+    setSaveBillingInfo(isInputChecked);
+  }
 
-    dispatch(
-      updateProductsState({
-        key: "saveBillingInfoToLocal",
-        value: isInputChecked,
-      })
-    );
+  function handleKeyPress(e) {
+    const isEnterPressed = e.keyCode === 13;
+    if (!isEnterPressed) return;
+    setSaveBillingInfo(!saveBillingInfoToLocal);
+  }
+
+  function setSaveBillingInfo(value) {
+    const updateAction = updateProductsState({
+      key: "saveBillingInfoToLocal",
+      value: value,
+    });
+    dispatch(updateAction);
   }
 
   return (
@@ -26,6 +34,7 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
           name={name}
           checked={saveBillingInfoToLocal}
           onChange={handleCheckboxChange}
+          onKeyDown={handleKeyPress}
           required={isRequired}
           id={id}
         />

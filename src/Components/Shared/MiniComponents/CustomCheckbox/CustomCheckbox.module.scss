@@ -20,13 +20,18 @@
   opacity: .8;
 }
 
-.customInput:has(:focus) {
+.customInput:has(:focus-visible) {
   border-color: var(--orange-degree2);
 }
 
 .customInput:has(:checked) {
   background-color: var(--tomato);
   border: solid 1px var(--tomato);
+
+  &:has(:focus-visible) {
+    background-color: var(--orange-degree2);
+    border: solid 1px var(--orange-degree2);
+  }
 }
 
 .customInput>input {
