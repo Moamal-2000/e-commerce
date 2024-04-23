@@ -312,3 +312,30 @@ export const otherSectionsMenuItems = [
   { name: "Groceries & Pets", url: "/#" },
   { name: "Health & Beauty", url: "/#" },
 ];
+
+export const mySocialMedia = [
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/MoamalAlaa109",
+    icon: "facebook",
+    id: uuid(),
+  },
+  {
+    name: "Twitter",
+    link: "https://twitter.com/MoamalAlaa7",
+    icon: "twitter",
+    id: uuid(),
+  },
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/kubislav23/",
+    icon: "instagram",
+    id: uuid(),
+  },
+  {
+    name: "Linkedin",
+    link: "https://www.linkedin.com/in/moamal-alaa-a4bb15237/",
+    icon: "linkedin",
+    id: uuid(),
+  },
+];

@@ -47,7 +47,7 @@
 .socialMedia {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 8px;
 }
 
 .socialMedia>a {
@@ -55,6 +55,10 @@
   height: 40px;
   border-radius: 6px;
   filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
   @include center-x-y;
   position: relative;
 
@@ -62,15 +66,19 @@
     transition: opacity .3s, filter .3s .2s;
     outline: solid 2px var(--orange-degree2);
     filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
     opacity: 1;
   }
 }
 
-.socialMedia>a:not([title=instagram]):focus-visible svg {
+.socialMedia>a:not([title="instagram" i]):focus-visible svg {
   fill: var(--orange-degree2);
 }
 
-.socialMedia>a[title=instagram]:focus-visible svg {
+.socialMedia>a[title="instagram" i]:focus-visible svg {
   stroke: var(--orange-degree2);
 
   & path {

@@ -2,12 +2,14 @@ import s from "./ContactForm.module.scss";
 
 const ContactForm = () => {
   function handleSubmit(e) {
-    const resetButton = e.target.querySelector("button[type=reset]");
-
     e.preventDefault();
-    resetButton?.click();
-
+    resetForm(e);
     // Required a function to show popup message to notify user that the message has been sent
+  }
+
+  function resetForm(e) {
+    const resetButton = e.target.querySelector("button[type=reset]");
+    resetButton?.click();
   }
 
   return (
@@ -22,7 +24,7 @@ const ContactForm = () => {
               name="username"
               required
             />
-            <div className={s.star} style={{ left: "103px" }} />
+            <span className={s.star} style={{ left: "103px" }} />
           </div>
 
           <div className={s.input}>
@@ -33,12 +35,12 @@ const ContactForm = () => {
               name="email"
               required
             />
-            <div className={s.star} style={{ left: "97px" }} />
+            <span className={s.star} style={{ left: "98px" }} />
           </div>
 
           <div className={s.input}>
             <input type="text" placeholder="Your Phone" name="phone" required />
-            <div className={s.star} style={{ left: "103px" }} />
+            <span className={s.star} style={{ left: "103px" }} />
           </div>
         </div>
 
