@@ -197,14 +197,20 @@ export const LANGUAGES = [
   {
     lang: "English",
     flag: usaFlag,
+    code: "en",
+    id: uuid(),
   },
   {
     lang: "Russian",
     flag: russiaFlag,
+    code: "ru",
+    id: uuid(),
   },
   {
     lang: "Arabic",
     flag: saudiFlag,
+    code: "ar",
+    id: uuid(),
   },
 ];
 

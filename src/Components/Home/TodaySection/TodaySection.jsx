@@ -1,18 +1,22 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
+import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import EventCounter from "./EventCounter";
 import s from "./TodaySection.module.scss";
-import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 
 const TodaySection = () => {
+  const { t } = useTranslation();
+
   const filterFlashSalesProducts = () =>
     productsData.filter((productData) => productData.sold > 100);
 
   return (
     <section className={s.todaysSection} id="todays-section">
       <div className={s.wrapper}>
-        <SectionTitle eventName="Today's" sectionName="Flash Sales" />
+      {t("flash Sales")}
+        <SectionTitle eventName="Today's" sectionName={t("flash Sales")} />
         <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />
       </div>
 

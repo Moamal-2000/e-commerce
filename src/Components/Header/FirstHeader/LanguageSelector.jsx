@@ -1,3 +1,4 @@
+import i18next from "i18next";
 import { useRef, useState } from "react";
 import { LANGUAGES } from "src/Data/staticData";
 import s from "./LanguageSelector.module.scss";
@@ -6,14 +7,13 @@ const LanguageSelector = () => {
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);
   const currentLangRef = useRef();
 
-  function selectLanguage(index) {
+  function selectLanguage(index, langCode) {
     const currentLangEle = currentLangRef.current.querySelector("span");
     const currentFlagEle = currentLangRef.current.querySelector("img");
     const selectedLangData = LANGUAGES[index];
     currentLangEle.textContent = selectedLangData.lang;
     currentFlagEle.src = selectedLangData.flag;
-
-    // Required a function to change website's language
+    i18next.changeLanguage(langCode);
   }
 
   function toggleLanguageMenu() {
@@ -36,17 +36,17 @@ const LanguageSelector = () => {
       </div>
 
       <div className={`${s.menu} ${isLangMenuActive ? s.active : ""}`}>
-        {LANGUAGES.map(({ lang, flag }, i) => {
-          const isLastOption = i + 1 === LANGUAGES.length;
+        {LANGUAGES.map(({ lang, flag, code, id }, index) => {
+          const isLastOption = index + 1 === LANGUAGES.length;
 
           return (
             <button
-              key={i}
+              key={id}
               tabIndex="0"
-              onBlur={isLastOption ? toggleLanguageMenu : null}
               type="button"
               className={s.option}
-              onClick={() => selectLanguage(i)}
+              onBlur={isLastOption ? toggleLanguageMenu : null}
+              onClick={() => selectLanguage(index, code)}
             >
               <span>{lang}</span>
               <img src={flag} alt={`${lang} flag`} />
