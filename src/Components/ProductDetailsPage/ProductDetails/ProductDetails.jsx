@@ -29,7 +29,6 @@ const ProductDetails = ({ data }) => {
 
   return (
     <>
-      {!loadingProductDetails && isWebsiteOnline && (
         <section className={s.detailsSection} id="details-section">
           <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
@@ -48,11 +47,10 @@ const ProductDetails = ({ data }) => {
             <ProductFeatures />
           </section>
         </section>
-      )}
 
-      {(loadingProductDetails || !isWebsiteOnline) && (
+      {/* {(loadingProductDetails || !isWebsiteOnline) && (
         <SkeletonProductDetails />
-      )}
+      )} */}
     </>
   );
 };

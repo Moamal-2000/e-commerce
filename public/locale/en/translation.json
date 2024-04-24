@@ -29,5 +29,84 @@
     "favorite": "Favorites",
     "cart": "Cart",
     "userMenu": "User menu"
+  },
+
+  "products": {
+    "PS5Gamepad": {
+      "shortName": "PS5 Gamepad",
+      "name": "PS5 Gamepad",
+      "category": "Gaming",
+      "description": "High-quality PlayStation 5 Controller Skin with air channel adhesive for easy bubble-free installation and mess-free removal. Pressure-sensitive.",
+      "addedDate": "2024/2/2",
+      "img": "ps5Gamepad"
+    },
+    "AK-9000Keyboard": {
+      "shortName": "AK-900 Wired Keyboard",
+      "name": "AK-900 Wired Keyboard",
+      "category": "Gaming",
+      "description": "Elevate your gaming experience with the AK-900 Wired Keyboard. Designed for precision and durability, this keyboard boasts high responsiveness and tactile feedback. Its sleek design and customizable RGB lighting make it a stylish addition to any gaming setup. Whether you're gaming competitively or typing up reports, the AK-900 ensures peak performance with every keystroke.",
+      "addedDate": "2024/2/7",
+      "img": "wiredKeyboard"
+    },
+    "LCDMonitor": {
+      "shortName": "IPS LCD Gaming Monitor",
+      "name": "IPS LCD Gaming Monitor",
+      "category": "Gaming",
+      "description": "Immerse yourself in the world of gaming with the IPS LCD Gaming Monitor. Featuring stunning visuals and ultra-smooth gameplay, this monitor delivers an unparalleled gaming experience. With its high refresh rate and low input lag, you'll never miss a frame. Whether you're battling foes or exploring vast worlds, the IPS LCD Gaming Monitor brings every detail to life with vibrant colors and crisp clarity.",
+      "addedDate": "2024/3/15",
+      "img": "gamingMonitor"
+    },
+    "SSeriesChair": {
+      "shortName": "S-Series Comfort Chair",
+      "name": "S-Series Comfort Chair",
+      "category": "Furniture",
+      "description": "Experience comfort like never before with the S-Series Comfort Chair. Crafted with plush padding and ergonomic design, this chair provides exceptional support during long gaming sessions or work hours. Its sleek and modern aesthetic adds a touch of sophistication to any space. Say goodbye to discomfort and hello to relaxation with the S-Series Comfort Chair.",
+      "addedDate": "2024/1/1",
+      "img": "comfortChair"
+    },
+    "NorthCoat": {
+      "shortName": "The North Coat",
+      "name": "The North Coat",
+      "category": "Clothes",
+      "description": "Stay warm and stylish with The North Coat. Made from premium materials and expert craftsmanship, this coat is designed to withstand the elements while keeping you cozy. Its timeless design and versatile color make it a wardrobe essential for any season. Whether you're braving the outdoors or running errands in the city, The North Coat is sure to turn heads wherever you go.",
+      "addedDate": "2024/3/7",
+      "img": "northCoat"
+    },
+    "GucciBag": {
+      "shortName": "Gucci Duffle Bag",
+      "name": "Gucci Duffle Bag",
+      "category": "Backpack",
+      "description": "Make a statement with the Gucci Duffle Bag. Crafted from luxurious materials and adorned with iconic branding, this bag exudes sophistication and style. With its spacious interior and multiple compartments, it's perfect for storing all your essentials in organized fashion. Whether you're traveling in first-class or hitting the gym, the Gucci Duffle Bag is the epitome of luxury and functionality.",
+      "addedDate": "2022/9/15",
+      "img": "gucciBag"
+    },
+    "CPUCooler": {
+      "shortName": "RGB Liquid CPU Cooler",
+      "name": "RGB Liquid CPU Cooler",
+      "category": "Gaming",
+      "description": "Keep your CPU running cool and quiet with the RGB Liquid CPU Cooler. Featuring advanced cooling technology and customizable RGB lighting, this cooler not only keeps temperatures low but also adds a touch of flair to your build. Its sleek design and high-performance capabilities make it a must-have for any gaming rig or workstation. Say goodbye to overheating and hello to peak performance with the RGB Liquid CPU Cooler.",
+      "addedDate": "2024/3/7",
+      "img": "cpuCooler"
+    },
+    "BookShelf": {
+      "shortName": "Small Bookshelf",
+      "name": "Small Bookshelf",
+      "category": "Furniture",
+      "description": "Organize your library in style with the Small Bookshelf. Crafted from durable materials and featuring a compact design, this bookshelf maximizes storage space without sacrificing aesthetics. Whether you're displaying your favorite novels or showcasing decorative items, its minimalist design seamlessly blends with any décor. Say goodbye to clutter and hello to sophistication with the Small Bookshelf.",
+      "addedDate": "2024/4/1",
+      "img": "bookshelf"
+    }
+  },
+
+  "detailsPage": {
+    "reviews": "({{votes}} Reviews)",
+    "inStock": "In Stock",
+    "colors": "Colors",
+    "size": "Size",
+    "addToFav": "Add to Favorites"
+  },
+
+  "common": {
+    "buyNow": "Buy Now"
   }
 }

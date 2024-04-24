@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import s from "./ProductSizes.module.scss";
 
 const ProductSizes = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={s.sizes}>
-      <span>Size:</span>
+      <span>{t("detailsPage.size")}:</span>
       <Sizes />
     </section>
   );

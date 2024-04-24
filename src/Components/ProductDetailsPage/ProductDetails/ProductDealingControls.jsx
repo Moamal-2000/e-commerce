@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
@@ -13,6 +14,7 @@ const ProductDealingControls = ({ data }) => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
+  const { t } = useTranslation();
   const isFavoriteProduct =
     favoritesProducts.filter((product) => product.shortName === data.shortName)
       .length !== 0;
@@ -78,18 +80,18 @@ const ProductDealingControls = ({ data }) => {
           className={s.buyButton}
           onClick={handleBuyProduct}
         >
-          Buy Now
+          {t("common.buyNow")}
         </button>
 
         <button
           type="button"
           className={`${s.addToFav} ${isFavoriteProduct ? s.active : ""}`}
-          aria-label="Add to favorite"
+          aria-label={t("detailsPage.addToFav")}
           onClick={addProductToFavorite}
         >
           <div className={s.heartBackground} />
           <SvgIcon name="heart" />
-          <ToolTip left="50%" top="60px" content="Add to favorite" />
+          <ToolTip left="50%" top="60px" content={t("detailsPage.addToFav")} />
         </button>
       </div>
     </section>
