@@ -18,5 +18,10 @@
     "about": "About",
     "profile": "Profile",
     "signUp": "Sign Up"
+  },
+
+  "searchProductsInput": {
+    "placeholder": "What are you looking for?",
+    "searchButtonTitle": "Search"
   }
 }

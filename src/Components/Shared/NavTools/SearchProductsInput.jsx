@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
@@ -9,6 +10,7 @@ import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./SearchProductsInput.module.scss";
 
 const SearchProductsInput = () => {
+  const { t } = useTranslation();
   const searchRef = useRef("");
   const location = useLocation();
   const dispatch = useDispatch();
@@ -89,14 +91,15 @@ const SearchProductsInput = () => {
         type="text"
         id="search-input"
         autoComplete="off"
-        placeholder="What are you looking for?"
+        placeholder={t("searchProductsInput.placeholder")}
         onChange={(e) => handleSearchOnChange(e)}
       />
 
-      <button type="submit" title="search">
+      <button type="submit" title={t("searchProductsInput.searchButtonTitle")}>
         <SvgIcon name="search" />
       </button>
     </form>
   );
 };
+
 export default SearchProductsInput;

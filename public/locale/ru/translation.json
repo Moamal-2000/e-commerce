@@ -18,5 +18,10 @@
     "about": "О нас",
     "profile": "Профиль",
     "signUp": "Регистрация"
+  },
+
+  "searchProductsInput": {
+    "placeholder": "Что вы ищете?",
+    "searchButtonTitle": "Поиск"
   }
 }

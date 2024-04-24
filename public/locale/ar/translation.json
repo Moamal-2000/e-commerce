@@ -18,5 +18,10 @@
     "about": "معلومات عنا",
     "profile": "الملف الشخصي",
     "signUp": "تسجيل الدخول"
+  },
+
+  "searchProductsInput": {
+    "placeholder": "ماذا تبحث عنه؟",
+    "searchButtonTitle": "بحث"
   }
 }
