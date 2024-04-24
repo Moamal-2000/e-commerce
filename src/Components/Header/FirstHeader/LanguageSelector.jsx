@@ -1,11 +1,13 @@
-import i18next from "i18next";
-import { useRef, useState } from "react";
+import i18n from "i18next";
+import cookies from "js-cookie";
+import { useEffect, useRef, useState } from "react";
 import { LANGUAGES } from "src/Data/staticData";
 import s from "./LanguageSelector.module.scss";
 
 const LanguageSelector = () => {
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);
   const currentLangRef = useRef();
+  const currLang = cookies.get("i18next") || "en";
 
   function selectLanguage(index, langCode) {
     const currentLangEle = currentLangRef.current.querySelector("span");
@@ -13,7 +15,7 @@ const LanguageSelector = () => {
     const selectedLangData = LANGUAGES[index];
     currentLangEle.textContent = selectedLangData.lang;
     currentFlagEle.src = selectedLangData.flag;
-    i18next.changeLanguage(langCode);
+    i18n.changeLanguage(langCode);
   }
 
   function toggleLanguageMenu() {
@@ -23,6 +25,18 @@ const LanguageSelector = () => {
   function openLanguageMenu() {
     setIsLangMenuActive(true);
   }
+
+  function updateWebsiteDirection() {
+    const currentLang = LANGUAGES.find((lang) => lang.code === currLang);
+    const currentLangIndex = LANGUAGES.indexOf(currentLang);
+
+    document.documentElement.dir = i18n.dir(currLang);
+    selectLanguage(currentLangIndex, currLang);
+  }
+
+  useEffect(() => {
+    updateWebsiteDirection();
+  }, [currLang]);
 
   return (
     <div

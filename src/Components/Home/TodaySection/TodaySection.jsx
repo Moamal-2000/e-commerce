@@ -15,8 +15,7 @@ const TodaySection = () => {
   return (
     <section className={s.todaysSection} id="todays-section">
       <div className={s.wrapper}>
-      {t("flash Sales")}
-        <SectionTitle eventName="Today's" sectionName={t("flash Sales")} />
+        <SectionTitle eventName="Today's" sectionName={t("flashSales")} />
         <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />
       </div>
 
