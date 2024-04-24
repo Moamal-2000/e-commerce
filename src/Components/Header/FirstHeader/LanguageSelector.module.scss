@@ -101,9 +101,23 @@
 
 .option>span {
   width: 70px;
+  text-align: start;
 }
 
 .option>img {
   width: 22px;
   object-fit: contain;
+}
+
+// rtl direction styles
+[dir=rtl] .languageSelector .currentOption {
+  gap: 0;
+}
+
+[dir=rtl] .option>span {
+  font-weight: bold;
+}
+
+[dir=rtl] .languageSelector .menu .option {
+  gap: 0;
 }

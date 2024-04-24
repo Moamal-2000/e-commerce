@@ -64,3 +64,8 @@
 .userMenu>a:focus span {
   color: var(--black);
 }
+
+// rtl direction Styles
+[dir=rtl] .userMenu {
+  left: 0;
+}

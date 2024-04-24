@@ -1,8 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import s from "./FirstHeader.module.scss";
 import LanguageSelector from "./LanguageSelector";
 
 const FirstHeader = () => {
+  const { t } = useTranslation();
+
   return (
     <div className={s.header}>
       <div className={s.container}>
@@ -10,11 +13,8 @@ const FirstHeader = () => {
 
         <div className={s.headerContent}>
           <p className={s.discount}>
-            <span>
-              Summer Sale For All Swim Suits And Free Express Delivery - OFF
-              50%!
-            </span>
-            <Link to="/products">ShopNow</Link>
+            <span>{t("saleMessage")}</span>
+            <Link to="/products">{t("shopNow")}</Link>
           </p>
 
           <LanguageSelector />

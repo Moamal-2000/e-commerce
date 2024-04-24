@@ -20,12 +20,6 @@
   }
 }
 
-@include medium {
-  .container {
-    grid-template-columns: 0 1fr;
-  }
-}
-
 @include small {
   .container {
     width: var(--container-mobile-width);
@@ -87,4 +81,9 @@
 
 .discount::selection {
   background-color: var(--white) !important;
+}
+
+// Russian language styles
+[lang=ru] .container {
+  grid-template-columns: 0% 1fr;
 }

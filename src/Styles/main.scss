@@ -24,6 +24,10 @@ body {
   background-color: var(--website-bg);
 }
 
+.App {
+  outline: none;
+}
+
 .container {
   width: var(--container-width);
   margin: 0 auto;
@@ -112,4 +116,18 @@ main {
 *:hover>[data-is-tooltip=true] {
   opacity: 1;
   pointer-events: all;
+}
+
+// rtl direction styles
+[dir=rtl] p {
+  font-size: 1.1rem;
+}
+
+[dir=rtl] .skip-content {
+  left: auto;
+  right: -150%;
+
+  &:focus {
+    right: 0;
+  }
 }

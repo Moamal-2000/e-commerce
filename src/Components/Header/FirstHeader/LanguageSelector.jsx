@@ -1,10 +1,12 @@
 import i18n from "i18next";
 import cookies from "js-cookie";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "src/Data/staticData";
 import s from "./LanguageSelector.module.scss";
 
 const LanguageSelector = () => {
+  const { t } = useTranslation();
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);
   const currentLangRef = useRef();
   const currLang = cookies.get("i18next") || "en";
@@ -26,16 +28,17 @@ const LanguageSelector = () => {
     setIsLangMenuActive(true);
   }
 
-  function updateWebsiteDirection() {
+  function updateWebsiteLang() {
     const currentLang = LANGUAGES.find((lang) => lang.code === currLang);
     const currentLangIndex = LANGUAGES.indexOf(currentLang);
 
     document.documentElement.dir = i18n.dir(currLang);
+    document.documentElement.lang = currLang;
     selectLanguage(currentLangIndex, currLang);
   }
 
   useEffect(() => {
-    updateWebsiteDirection();
+    updateWebsiteLang();
   }, [currLang]);
 
   return (
@@ -45,7 +48,7 @@ const LanguageSelector = () => {
       onFocus={openLanguageMenu}
     >
       <div className={s.currentOption} ref={currentLangRef}>
-        <span>English</span>
+        <span>{t(`${currLang.toLowerCase()}`)}</span>
         <img src={LANGUAGES[0].flag} alt={`${LANGUAGES[0]} flag`} />
       </div>
 
@@ -62,7 +65,7 @@ const LanguageSelector = () => {
               onBlur={isLastOption ? toggleLanguageMenu : null}
               onClick={() => selectLanguage(index, code)}
             >
-              <span>{lang}</span>
+              <span>{t(`${lang.toLowerCase()}`)}</span>
               <img src={flag} alt={`${lang} flag`} />
             </button>
           );
@@ -71,4 +74,5 @@ const LanguageSelector = () => {
     </div>
   );
 };
+
 export default LanguageSelector;
