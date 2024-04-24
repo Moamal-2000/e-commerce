@@ -23,5 +23,11 @@
   "searchProductsInput": {
     "placeholder": "ماذا تبحث عنه؟",
     "searchButtonTitle": "بحث"
+  },
+
+  "navTools": {
+    "favorite": "المفضلة",
+    "cart": "السلة",
+    "userMenu": "قائمة المستخدم"
   }
 }

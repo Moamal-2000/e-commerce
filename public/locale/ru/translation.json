@@ -23,5 +23,11 @@
   "searchProductsInput": {
     "placeholder": "Что вы ищете?",
     "searchButtonTitle": "Поиск"
+  },
+
+  "navTools": {
+    "favorite": "Избранное",
+    "cart": "Корзина",
+    "userMenu": "Меню пользователя"
   }
 }

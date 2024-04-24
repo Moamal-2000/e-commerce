@@ -23,5 +23,11 @@
   "searchProductsInput": {
     "placeholder": "What are you looking for?",
     "searchButtonTitle": "Search"
+  },
+
+  "navTools": {
+    "favorite": "Favorites",
+    "cart": "Cart",
+    "userMenu": "User menu"
   }
 }
