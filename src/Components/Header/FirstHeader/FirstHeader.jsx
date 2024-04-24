@@ -13,8 +13,8 @@ const FirstHeader = () => {
 
         <div className={s.headerContent}>
           <p className={s.discount}>
-            <span>{t("saleMessage")}</span>
-            <Link to="/products">{t("shopNow")}</Link>
+            <span>{t("firstHeader.saleMessage")}</span>
+            <Link to="/products">{t("firstHeader.shopNow")}</Link>
           </p>
 
           <LanguageSelector />

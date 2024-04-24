@@ -48,7 +48,7 @@ const LanguageSelector = () => {
       onFocus={openLanguageMenu}
     >
       <div className={s.currentOption} ref={currentLangRef}>
-        <span>{t(`${currLang.toLowerCase()}`)}</span>
+        <span>{t(`languageSelector.${currLang.toLowerCase()}`)}</span>
         <img src={LANGUAGES[0].flag} alt={`${LANGUAGES[0]} flag`} />
       </div>
 
@@ -65,7 +65,7 @@ const LanguageSelector = () => {
               onBlur={isLastOption ? toggleLanguageMenu : null}
               onClick={() => selectLanguage(index, code)}
             >
-              <span>{t(`${lang.toLowerCase()}`)}</span>
+              <span>{t(`languageSelector.${lang.toLowerCase()}`)}</span>
               <img src={flag} alt={`${lang} flag`} />
             </button>
           );

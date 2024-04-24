@@ -1,28 +1,33 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import s from "./Nav.module.scss";
 
 const Nav = () => {
+  const { t } = useTranslation();
   const { loginInfo } = useSelector((state) => state.user);
 
   return (
     <nav className={s.nav}>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">{t("nav.home")}</NavLink>
         </li>
 
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact">{t("nav.contact")}</NavLink>
         </li>
 
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about">{t("nav.about")}</NavLink>
         </li>
 
         <li>
-          {loginInfo.isSignIn && <NavLink to="/profile">Profile</NavLink>}
-          {!loginInfo.isSignIn && <NavLink to="/signup">Sign Up</NavLink>}
+          {loginInfo.isSignIn ? (
+            <NavLink to="/profile">{t("nav.profile")}</NavLink>
+          ) : (
+            <NavLink to="/signup">{t("nav.signUp")}</NavLink>
+          )}
         </li>
       </ul>
     </nav>
