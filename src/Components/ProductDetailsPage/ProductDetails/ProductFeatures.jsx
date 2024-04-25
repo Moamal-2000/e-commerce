@@ -1,15 +1,20 @@
+import { useTranslation } from "react-i18next";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import s from "./ProductFeatures.module.scss";
 
 const ProductFeatures = () => {
+  const { t } = useTranslation();
+  const freeDeliveryTrans = "detailsPage.freeDelivery";
+  const returnDeliveryTrans = "detailsPage.returnDelivery";
+
   return (
     <section className={s.features}>
       <div className={s.feature}>
         <SvgIcon name="truck" />
 
         <div className={s.content}>
-          <b>Free Delivery</b>
-          <p>Enter your postal code for Delivery Availability</p>
+          <b>{t(`${freeDeliveryTrans}.title`)}</b>
+          <p>{t(`${freeDeliveryTrans}.description`)}</p>
         </div>
       </div>
 
@@ -17,8 +22,8 @@ const ProductFeatures = () => {
         <SvgIcon name="infiniteArrows" />
 
         <div className={s.content}>
-          <b>Return Delivery</b>
-          <p>Free 30 Days Delivery Returns. Details</p>
+          <b>{t(`${returnDeliveryTrans}.title`)}</b>
+          <p>{t(`${returnDeliveryTrans}.description`)}</p>
         </div>
       </div>
     </section>

@@ -111,7 +111,15 @@
     "inStock": "متوفر",
     "colors": "الالوان",
     "size": "الحجم",
-    "addToFav": "اضف الى المفضلة"
+    "addToFav": "اضف الى المفضلة",
+    "freeDelivery": {
+      "title": "التوصيل المجاني",
+      "description": "أدخل رمز بريدي الخاص بك لتوافر التوصيل"
+    },
+    "returnDelivery": {
+      "title": "إرجاع المنتج",
+      "description": "إرجاع مجاني خلال 30 يومًا. تفاصيل"
+    }
   },
 
   "common": {

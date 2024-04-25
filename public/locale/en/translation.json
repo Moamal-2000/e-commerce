@@ -103,7 +103,15 @@
     "inStock": "In Stock",
     "colors": "Colors",
     "size": "Size",
-    "addToFav": "Add to Favorites"
+    "addToFav": "Add to Favorites",
+    "freeDelivery": {
+      "title": "Free Delivery",
+      "description": "Enter your postal code for Delivery Availability"
+    },
+    "returnDelivery": {
+      "title": "Return Delivery",
+      "description": "Free 30 Days Delivery Returns. Details"
+    }
   },
 
   "common": {
