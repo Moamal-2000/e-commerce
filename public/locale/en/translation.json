@@ -56,7 +56,7 @@
       "addedDate": "2024/3/15",
       "img": "gamingMonitor"
     },
-    "SSeriesChair": {
+    "S-SeriesChair": {
       "shortName": "S-Series Comfort Chair",
       "name": "S-Series Comfort Chair",
       "category": "Furniture",
@@ -95,6 +95,70 @@
       "description": "Organize your library in style with the Small Bookshelf. Crafted from durable materials and featuring a compact design, this bookshelf maximizes storage space without sacrificing aesthetics. Whether you're displaying your favorite novels or showcasing decorative items, its minimalist design seamlessly blends with any décor. Say goodbye to clutter and hello to sophistication with the Small Bookshelf.",
       "addedDate": "2024/4/1",
       "img": "bookshelf"
+    },
+    "DogFood": {
+      "shortName": "Breed Dry Dog Food",
+      "name": "Breed Dry Dog Food",
+      "category": "animal",
+      "description": "Treat your furry friend to the best with Breed Dry Dog Food. Formulated with premium ingredients and essential nutrients, this dog food provides complete and balanced nutrition for dogs of all ages and breeds. Its delicious flavor and crunchy texture will have your dog begging for more. Say goodbye to mealtime struggles and hello to happy, healthy dogs with Breed Dry Dog Food.",
+      "addedDate": "2024/3/7",
+      "img": "dogFood"
+    },
+    "CannonCamera": {
+      "shortName": "CANON EOS DSLR Camera",
+      "name": "CANON EOS DSLR Camera",
+      "category": "camera",
+      "description": "Capture life's precious moments with the CANON EOS DSLR Camera. Whether you're a professional photographer or an amateur enthusiast, this camera delivers stunning image quality and performance. With its advanced features and intuitive controls, you can unleash your creativity and take your photography to the next level. Say goodbye to blurry shots and hello to crystal-clear images with the CANON EOS DSLR Camera.",
+      "addedDate": "2024/3/7",
+      "img": "canonCamera"
+    },
+    "FHDLaptop": {
+      "shortName": "ASUS FHD Gaming Laptop",
+      "name": "ASUS FHD Gaming Laptop",
+      "category": "computers",
+      "description": "Experience unparalleled gaming performance with the ASUS FHD Gaming Laptop. Powered by cutting-edge hardware and featuring a stunning Full HD display, this laptop is built to handle even the most demanding games with ease. Its sleek design and lightweight construction make it the perfect companion for gaming on the go. Say goodbye to lag and hello to smooth gameplay with the ASUS FHD Gaming Laptop.",
+      "addedDate": "2024/3/7",
+      "img": "gamingLaptop"
+    },
+    "Curology": {
+      "shortName": "Curology Product Set",
+      "name": "Curology Product Set",
+      "category": "makeup",
+      "description": "Transform your skincare routine with the Curology Product Set. Formulated by dermatologists and tailored to your unique skin needs, this set includes everything you need to achieve clear, radiant skin. From cleansers to serums, each product is designed to target specific concerns and deliver visible results. Say goodbye to dull, uneven skin and hello to a complexion that glows with health and vitality with the Curology Product Set.",
+      "addedDate": "2024/3/7",
+      "img": "curology"
+    },
+    "ElectricCar": {
+      "shortName": "Kids Electric Car",
+      "name": "Kids Electric Car",
+      "category": "gaming",
+      "description": "Spark your child's imagination with the Kids Electric Car. Designed for fun and excitement, this car features realistic details and effortless controls that make every ride an adventure. Whether they're cruising around the neighborhood or exploring the backyard, the Kids Electric Car provides hours of entertainment for children of all ages. Say goodbye to boredom and hello to endless fun with the Kids Electric Car.",
+      "addedDate": "2024/3/7",
+      "img": "kidsCar"
+    },
+    "SoccerCleats": {
+      "shortName": "Jr. Zoom Soccer Cleats",
+      "name": "Jr. Zoom Soccer Cleats",
+      "category": "clothes",
+      "description": "Take your game to the next level with Jr. Zoom Soccer Cleats. Engineered for speed and agility, these cleats deliver exceptional traction and stability on the field. With their lightweight design and responsive cushioning, you'll feel unstoppable from kickoff to the final whistle. Say goodbye to slips and slides and hello to peak performance with Jr. Zoom Soccer Cleats.",
+      "addedDate": "2024/3/7",
+      "img": "soccerCleats"
+    },
+    "GP11Gamepad": {
+      "shortName": "GP11 Shooter USB Gamepad",
+      "name": "GP11 Shooter USB Gamepad",
+      "category": "gaming",
+      "description": "Dominate the competition with the GP11 Shooter USB Gamepad. Designed for precision and comfort, this gamepad delivers an immersive gaming experience with every press and swipe. Whether you're battling enemies or racing against the clock, its ergonomic design and responsive controls give you the competitive edge you need to come out on top. Say goodbye to laggy inputs and hello to smooth, seamless gameplay with the GP11 Shooter USB Gamepad.",
+      "addedDate": "2024/3/7",
+      "img": "usbGamepad"
+    },
+    "SatinJacket": {
+      "shortName": "Quilted Satin Jacket",
+      "name": "Quilted Satin Jacket",
+      "category": "clothes",
+      "description": "Elevate your outerwear collection with the Quilted Satin Jacket. Crafted from premium satin fabric and featuring a quilted design, this jacket combines style and functionality with ease. Whether you're braving the elements or hitting the town, its luxurious texture and sleek silhouette make it a versatile addition to any wardrobe. Say goodbye to boring outerwear and hello to effortless style with the Quilted Satin Jacket.",
+      "addedDate": "2024/3/7",
+      "img": "satinJacket"
     }
   },
 
