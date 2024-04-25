@@ -180,7 +180,11 @@
   },
 
   "common": {
-    "buyNow": "Buy Now"
+    "buyNow": "Buy Now",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
   },
 
   "history": {
@@ -200,5 +204,44 @@
     "checkout": "Checkout",
     "results": "Results",
     "404Error": "404 Error"
+  },
+
+  "footer": {
+    "section1": {
+      "subscribe": "Subscribe",
+      "getOffer": "Get 10% off your first order",
+      "enterEmailPlaceholder": "Enter your email",
+      "sendLabel": "Send"
+    },
+    "section2": {
+      "support": "Support",
+      "address": "Iraq, Baghdad"
+    },
+    "section3": {
+      "account": "Account",
+      "myAccount": "My Account",
+      "loginRegister": "Login / Register",
+      "cart": "Cart",
+      "wishlist": "Wishlist",
+      "shop": "Shop"
+    },
+    "section4": {
+      "quickLink": "Quick Link",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfUse": "Terms Of Use",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "section5": {
+        "downloadApp": "Download App",
+        "saveThreeDollars": "Save $3 with App New User Only"
+      }
+    },
+    "copyRightsText": {
+      "designedBy": "Website designed by",
+      "codedBy": "and coded by"
+    },
+    "repoStarsForks": {
+      "tooltip": "website's repository"
+    }
   }
 }

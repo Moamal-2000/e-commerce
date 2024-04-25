@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { appStore, googlePlay, qrCode } from "src/Assets/Images/Images";
 import { mySocialMedia } from "../../../Data/staticData";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
@@ -5,10 +6,12 @@ import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./DownloadAppInfo.module.scss";
 
 const DownloadAppInfo = () => {
+  const { t } = useTranslation();
+
   return (
     <>
-      <b>Download App</b>
-      <p>Save $3 with App New User Only</p>
+      <b>{t("footer.section5.downloadApp")}</b>
+      <p>{t("footer.section5.saveThreeDollars")}</p>
 
       <div className={s.appInfo}>
         <div className={s.qrCode}>
@@ -27,12 +30,16 @@ const DownloadAppInfo = () => {
       </div>
 
       <div className={s.socialMedia}>
-        {mySocialMedia.map((item) => (
-          <a href={item.link} target="_blank" title={item.name} key={item.id}>
-            <SvgIcon name={item.icon} />
-            <ToolTip left="50%" top="48px" content={item.name} />
-          </a>
-        ))}
+        {mySocialMedia.map((item) => {
+          const nameTrans = t(`common.${item.name.toLowerCase()}`);
+
+          return (
+            <a href={item.link} target="_blank" title={nameTrans} key={item.id}>
+              <SvgIcon name={item.icon} />
+              <ToolTip left="50%" top="48px" content={nameTrans} />
+            </a>
+          );
+        })}
       </div>
     </>
   );

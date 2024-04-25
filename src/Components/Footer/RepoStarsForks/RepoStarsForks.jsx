@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/globalVariables";
 import { getSpecificRepo } from "src/Functions/helper";
 import useAsync from "src/Hooks/Helper/useAsync";
@@ -6,6 +7,7 @@ import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./RepoStarsForks.module.scss";
 
 const RepoStarsForks = () => {
+  const { t } = useTranslation();
   const [reposData, isError] = useAsync(MY_REPOS_URL);
   const websiteRepo = getSpecificRepo(reposData, WEBSITE_REPO_ID);
   const repoStars = websiteRepo?.stargazers_count;
@@ -30,7 +32,11 @@ const RepoStarsForks = () => {
           <span className={s.number}>{repoForks}</span>
         </div>
 
-        <ToolTip left="77px" bottom="40px" content="website's repository" />
+        <ToolTip
+          left="77px"
+          bottom="40px"
+          content={t("footer.repoStarsForks.tooltip")}
+        />
       </a>
     )
   );

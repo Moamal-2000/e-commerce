@@ -180,7 +180,11 @@
   },
 
   "common": {
-    "buyNow": "Купить сейчас"
+    "buyNow": "Купить сейчас",
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn"
   },
 
   "history": {
@@ -200,5 +204,44 @@
     "checkout": "погашение",
     "results": "Результаты",
     "404Error": "404 Ошибка"
+  },
+
+  "footer": {
+    "section1": {
+      "subscribe": "Подписаться",
+      "getOffer": "Получите скидку 10% на первый заказ",
+      "enterEmailPlaceholder": "Введите ваш адрес электронной почты",
+      "sendLabel": "Отправить"
+    },
+    "section2": {
+      "support": "Поддержка",
+      "address": "Ирак, Багдад"
+    },
+    "section3": {
+      "account": "Аккаунт",
+      "myAccount": "Мой аккаунт",
+      "loginRegister": "Войти / Зарегистрироваться",
+      "cart": "Корзина",
+      "wishlist": "Список желаемого",
+      "shop": "Магазин"
+    },
+    "section4": {
+      "quickLink": "Быстрые ссылки",
+      "privacyPolicy": "Политика конфиденциальности",
+      "termsOfUse": "Условия использования",
+      "faq": "Часто задаваемые вопросы",
+      "contact": "Контакт"
+    },
+    "section5": {
+      "downloadApp": "Скачать приложение",
+      "saveThreeDollars": "Сэкономьте $3 с новым приложением только для пользователей"
+    },
+    "copyRightsText": {
+      "designedBy": "Сайт разработан",
+      "codedBy": "и написан"
+    },
+    "repoStarsForks": {
+      "tooltip": "репозиторий веб-сайта"
+    }
   }
 }

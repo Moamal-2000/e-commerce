@@ -180,7 +180,11 @@
   },
 
   "common": {
-    "buyNow": "اشتري الان"
+    "buyNow": "اشتري الان",
+    "facebook": "فيسبوك",
+    "twitter": "تويتر",
+    "instagram": "انستجرام",
+    "linkedin": "لينكدان"
   },
 
   "history": {
@@ -200,5 +204,44 @@
     "checkout": "الدفع",
     "results": "النتائج",
     "404Error": "خطأ 404"
+  },
+
+  "footer": {
+    "section1": {
+      "subscribe": "اشترك",
+      "getOffer": "احصل على خصم 10٪ على أول طلب لديك",
+      "enterEmailPlaceholder": "أدخل بريدك الإلكتروني",
+      "sendLabel": "إرسال"
+    },
+    "section2": {
+      "support": "الدعم",
+      "address": "العراق، بغداد"
+    },
+    "section3": {
+      "account": "الحساب",
+      "myAccount": "حسابي",
+      "loginRegister": "تسجيل الدخول / التسجيل",
+      "cart": "السلة",
+      "wishlist": "قائمة الرغبات",
+      "shop": "المتجر"
+    },
+    "section4": {
+      "quickLink": "روابط سريعة",
+      "privacyPolicy": "سياسة الخصوصية",
+      "termsOfUse": "شروط الاستخدام",
+      "faq": "أسئلة مكررة",
+      "contact": "اتصل بنا"
+    },
+    "section5": {
+      "downloadApp": "تحميل التطبيق",
+      "saveThreeDollars": "وفّر 3 دولارات مع تطبيق جديد للمستخدمين فقط"
+    },
+    "copyRightsText": {
+      "designedBy": "تم تصميم الموقع بواسطة",
+      "codedBy": "وبرمج بواسطة"
+    },
+    "repoStarsForks": {
+      "tooltip": "مستودع الموقع"
+    }
   }
 }

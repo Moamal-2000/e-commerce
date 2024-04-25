@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import CopyRightsText from "./CopyRightsText/CopyRightsText";
 import CustomEmailInput from "./CustomEmailInput/CustomEmailInput";
@@ -6,6 +7,9 @@ import RepoStarsForks from "./RepoStarsForks/RepoStarsForks";
 import DownloadAppInfo from "./WebsiteSocialMedia/DownloadAppInfo";
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const section = "footer.section";
+
   return (
     <footer className={s.footer}>
       <div className="container">
@@ -14,17 +18,17 @@ const Footer = () => {
             <b>
               <Link to="/">Exclusive</Link>
             </b>
-            <span>Subscribe</span>
-            <p>Get 10% off your first order</p>
+            <span>{t(`${section}1.subscribe`)}</span>
+            <p>{t(`${section}1.getOffer`)}</p>
 
             <CustomEmailInput />
           </section>
 
           <section className={s.section2}>
-            <b>Support</b>
+            <b>{t(`${section}2.support`)}</b>
 
             <ul>
-              <li>111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.</li>
+              <li>{t(`${section}2.address`)}</li>
               <li>
                 <a href="mailto:exclusive@gmail.com">exclusive@gmail.com</a>
               </li>
@@ -35,42 +39,42 @@ const Footer = () => {
           </section>
 
           <section className={s.section3}>
-            <b>Account</b>
+            <b>{t(`${section}3.account`)}</b>
 
             <ul>
               <li>
-                <Link to="/profile">My Account</Link>
+                <Link to="/profile">{t(`${section}3.myAccount`)}</Link>
               </li>
               <li>
-                <Link to="/signup">Login / Register</Link>
+                <Link to="/signup">{t(`${section}3.loginRegister`)}</Link>
               </li>
               <li>
-                <Link to="/cart">Cart</Link>
+                <Link to="/cart">{t(`${section}3.cart`)}</Link>
               </li>
               <li>
-                <Link to="/wishlist">Wishlist</Link>
+                <Link to="/wishlist">{t(`${section}3.wishlist`)}</Link>
               </li>
               <li>
-                <Link to="/products">Shop</Link>
+                <Link to="/products">{t(`${section}3.shop`)}</Link>
               </li>
             </ul>
           </section>
 
           <section className={s.section4}>
-            <b>Quick Link</b>
+            <b>{t(`${section}4.quickLink`)}</b>
 
             <ul>
               <li>
-                <Link to="/privacy">Privacy Policy</Link>
+                <Link to="/privacy">{t(`${section}4.privacyPolicy`)}</Link>
               </li>
               <li>
-                <Link to="/terms">Terms Of Use</Link>
+                <Link to="/terms">{t(`${section}4.termsOfUse`)}</Link>
               </li>
               <li>
-                <Link to="/faq">FAQ</Link>
+                <Link to="/faq">{t(`${section}4.faq`)}</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact">{t(`${section}4.contact`)}</Link>
               </li>
             </ul>
           </section>
