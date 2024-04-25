@@ -181,5 +181,24 @@
 
   "common": {
     "buyNow": "Buy Now"
+  },
+
+  "history": {
+    "categories": {
+      "gaming": "Gaming",
+      "furniture": "Furniture",
+      "clothes": "Clothes",
+      "backpack": "Backpack",
+      "animal": "Animal",
+      "camera": "Camera",
+      "computers": "Computers",
+      "makeup": "Makeup"
+    },
+    "account": "Account",
+    "products": "Products",
+    "cart": "Cart",
+    "checkout": "Checkout",
+    "results": "Results",
+    "404Error": "404 Error"
   }
 }

@@ -1,30 +1,32 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { productCardCustomizations } from "src/Data/staticData";
-import { capitalize } from "src/Functions/helper";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
 import { SIMPLE_DELAYS } from "../../Data/globalVariables";
 import { updateGlobalState } from "../../Features/globalSlice";
+import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
 import useUpdateLoadingOnSamePage from "../../Hooks/App/useUpdateLoadingOnSamePage";
 import useOnlineStatus from "../../Hooks/Helper/useOnlineStatus";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import ProductsCategory from "./ProductsCategory";
 import s from "./ProductsCategoryPage.module.scss";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const ProductsCategoryPage = () => {
   const { loadingCategoryPage } = useSelector((state) => state.global);
+  const { t } = useTranslation();
   const categoryType = useGetSearchParam("type");
+  const categoryTypeTrans = t(`history.categories.${categoryType}`);
   const isWebsiteOnline = useOnlineStatus();
-  useScrollOnMount(200);
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingCategoryPage",
     actionMethod: updateGlobalState,
     delays: SIMPLE_DELAYS,
     dependencies: [categoryType],
   });
+  useScrollOnMount(200);
 
   return (
     <>
@@ -34,7 +36,7 @@ const ProductsCategoryPage = () => {
 
       <div className="container">
         <main className={s.categoryPage}>
-          <PagesHistory history={["/", capitalize(categoryType)]} />
+          <PagesHistory history={["/", categoryTypeTrans]} />
 
           <section className={s.categoryContent}>
             {!loadingCategoryPage && isWebsiteOnline && (

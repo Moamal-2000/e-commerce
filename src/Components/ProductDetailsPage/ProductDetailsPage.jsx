@@ -1,26 +1,30 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productsData } from "src/Data/productsData";
-import { capitalize } from "src/Functions/helper";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
 import { updateGlobalState } from "../../Features/globalSlice";
 import useUpdateLoadingOnSamePage from "../../Hooks/App/useUpdateLoadingOnSamePage";
+import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import ProductDetails from "./ProductDetails/ProductDetails";
 import s from "./ProductDetailsPage.module.scss";
 import RelatedItemsSection from "./RelatedItemsSection/RelatedItemsSection";
-import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 
 const ProductDetailsPage = () => {
-  useScrollOnMount(200);
+  const { t } = useTranslation();
   const PRODUCT_NAME = useGetSearchParam("product");
   const PRODUCT_DATA = productsData.filter(
     (product) => product?.name?.toLowerCase() === PRODUCT_NAME?.toLowerCase()
   )?.[0];
+  const productCategory = PRODUCT_DATA?.category.toLowerCase();
+  const productCategoryTrans = t(`history.categories.${productCategory}`);
+  const productName = PRODUCT_DATA?.shortName.replaceAll(" ", "");
+  const productNameTrans = t(`products.${productName}.name`);
   const history = [
-    "Account",
-    capitalize(PRODUCT_DATA?.category),
-    PRODUCT_DATA?.name.toUpperCase(),
+    t("history.account"),
+    productCategoryTrans,
+    productNameTrans,
   ];
   const historyPaths = [
     {
@@ -32,12 +36,14 @@ const ProductDetailsPage = () => {
       path: `/category?type=${PRODUCT_DATA?.category}`,
     },
   ];
+
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingProductDetails",
     actionMethod: updateGlobalState,
     delays: SIMPLE_DELAYS,
     dependencies: [PRODUCT_NAME],
   });
+  useScrollOnMount(200);
 
   return (
     <>

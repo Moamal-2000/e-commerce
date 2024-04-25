@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { updateGlobalState } from "src/Features/globalSlice";
@@ -9,6 +10,7 @@ import s from "./SearchPage.module.scss";
 import SearchProducts from "./SearchProducts/SearchProducts";
 
 const SearchPage = () => {
+  const { t } = useTranslation();
   const { loadingSearchProducts } = useSelector((state) => state.global);
   const { searchProducts } = useSelector((state) => state.products);
   useUpdateLoadingState({
@@ -23,7 +25,7 @@ const SearchPage = () => {
   return (
     <div className="container">
       <main className={s.searchPage}>
-        <PagesHistory history={["/", "Results"]} />
+        <PagesHistory history={["/", t("history.results")]} />
 
         <section className={s.products} id="search-page">
           {(loadingSearchProducts || !isWebsiteOnline) && <SkeletonCards />}

@@ -181,5 +181,24 @@
 
   "common": {
     "buyNow": "Купить сейчас"
+  },
+
+  "history": {
+    "categories": {
+      "gaming": "Игры",
+      "furniture": "Мебель",
+      "clothes": "Одежда",
+      "backpack": "Рюкзак",
+      "animal": "Животные",
+      "camera": "Камера",
+      "computers": "Компьютеры",
+      "makeup": "Макияж"
+    },
+    "account": "учётная запись",
+    "products": "Товары",
+    "cart": "Корзина",
+    "checkout": "погашение",
+    "results": "Результаты",
+    "404Error": "404 Ошибка"
   }
 }

@@ -29,28 +29,28 @@ const ProductDetails = ({ data }) => {
 
   return (
     <>
-        <section className={s.detailsSection} id="details-section">
-          <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
+      <section className={s.detailsSection} id="details-section">
+        <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
-          <section className={s.details}>
-            <div className={`${s.zoomInPreview} ${activeClass}`}>
-              <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
-            </div>
+        <section className={s.details}>
+          <div className={`${s.zoomInPreview} ${activeClass}`}>
+            <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
+          </div>
 
-            <ProductFirstInfos data={data} />
+          <ProductFirstInfos data={data} />
 
-            <div className={s.horizontalLine} />
+          <div className={s.horizontalLine} />
 
-            <ProductColorsSection data={data} />
-            <ProductSizes data={data} />
-            <ProductDealingControls data={data} />
-            <ProductFeatures />
-          </section>
+          <ProductColorsSection data={data} />
+          <ProductSizes data={data} />
+          <ProductDealingControls data={data} />
+          <ProductFeatures />
         </section>
+      </section>
 
-      {/* {(loadingProductDetails || !isWebsiteOnline) && (
+      {(loadingProductDetails || !isWebsiteOnline) && (
         <SkeletonProductDetails />
-      )} */}
+      )}
     </>
   );
 };

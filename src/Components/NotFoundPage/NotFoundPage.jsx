@@ -1,10 +1,12 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import { UN_BUILT_PAGES } from "src/Data/globalVariables";
-import s from "./NotFoundPage.module.scss";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
+import s from "./NotFoundPage.module.scss";
 
 const NotFoundPage = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const pageName = location.pathname.replace("/", "");
   const isPageNotReady = UN_BUILT_PAGES.includes(pageName);
@@ -21,7 +23,7 @@ const NotFoundPage = () => {
 
       <div className="container">
         <main className={s.notFoundPage}>
-          <PagesHistory history={["/", "404 Error"]} />
+          <PagesHistory history={["/", t("history.404Error")]} />
 
           <div className={s.wrapper} id="notfound-page">
             <b>404 Not Found</b>

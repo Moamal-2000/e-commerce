@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useFormData from "src/Hooks/Helper/useFormData";
@@ -9,6 +10,7 @@ import PaymentSection from "./PaymentSection/PaymentSection";
 
 const CheckoutPage = () => {
   useScrollOnMount(160);
+  const { t } = useTranslation();
   const { saveBillingInfoToLocal } = useSelector((state) => state.products);
   const { values: billingValues, handleChange } = useFormData({
     initialValues: {
@@ -25,7 +27,7 @@ const CheckoutPage = () => {
     localStorageKey: "billingInfo",
   });
 
-  const pageHistory = ["Account", "CheckOut"];
+  const pageHistory = [t("history.account"), t("history.checkout")];
   const historyPaths = [
     {
       index: 0,
