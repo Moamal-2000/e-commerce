@@ -243,5 +243,19 @@
     "repoStarsForks": {
       "tooltip": "репозиторий веб-сайта"
     }
+  },
+
+  "sectionsMenu": {
+    "womenFashion": "Женская мода",
+    "menFashion": "Мужская мода",
+    "otherSections": {
+      "electronics": "Электроника",
+      "homeLifestyle": "Дом и образ жизни",
+      "medicine": "Медицина",
+      "sportsOutdoor": "Спорт и активный отдых",
+      "babyToys": "Дети и игрушки",
+      "groceriesPets": "Продукты и домашние животные",
+      "healthBeauty": "Здоровье и красота"
+    }
   }
 }

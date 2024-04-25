@@ -80,6 +80,21 @@ export function capitalize(str) {
   return firstCapitalLetter + restSmallLetters;
 }
 
+export function camelCase(str) {
+  const formattedStr = str
+    ?.toLowerCase()
+    ?.replaceAll("& ", "")
+    .replaceAll("-", "")
+    .replaceAll("'s", "");
+
+  const camelCased = formattedStr
+    .split(" ")
+    .map((word, index) => (index !== 0 ? capitalize(word) : word))
+    .join("");
+
+  return camelCased;
+}
+
 export function updateClassOnCondition(
   input,
   condition,

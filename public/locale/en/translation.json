@@ -243,5 +243,19 @@
     "repoStarsForks": {
       "tooltip": "website's repository"
     }
+  },
+
+  "sectionsMenu": {
+    "womenFashion": "Woman’s Fashion",
+    "menFashion": "Men’s Fashion",
+    "otherSections": {
+      "electronics": "Electronics",
+      "homeLifestyle": "Home & Lifestyle",
+      "medicine": "Medicine",
+      "sportsOutdoor": "Sports & Outdoor",
+      "babyToys": "Baby's & Toys",
+      "groceriesPets": "Groceries & Pets",
+      "healthBeauty": "Health & Beauty"
+    }
   }
 }

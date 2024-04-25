@@ -1,3 +1,5 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import {
   menFashionMenuItems,
@@ -5,12 +7,14 @@ import {
   womenFashionMenuItems,
 } from "src/Data/staticData";
 import { updateGlobalState } from "src/Features/globalSlice";
+import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import DropDownMenu from "./DropDownMenu";
 import s from "./SectionsMenu.module.scss";
 
 const SectionsMenu = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const { isSectionsMenuActive } = useSelector((state) => state.global);
   const activeClass = isSectionsMenuActive ? s.active : "";
 
@@ -25,13 +29,13 @@ const SectionsMenu = () => {
         type="button"
         className={s.sectionsMenuButton}
         onClick={openSectionMenu}
-        aria-label="List of sections"
+        aria-label={t("sectionsMenu.womenFashion")}
       >
         <SvgIcon name="list" />
       </button>
 
       <nav className={`${s.sectionsMenu} ${activeClass}`}>
-        <DropDownMenu nameMenu="Woman’s Fashion">
+        <DropDownMenu nameMenu={t("sectionsMenu.womenFashion")}>
           <ul className={s.dropDownMenu}>
             {womenFashionMenuItems.map((item, index) => (
               <li key={`item-${index}`}>
@@ -41,7 +45,7 @@ const SectionsMenu = () => {
           </ul>
         </DropDownMenu>
 
-        <DropDownMenu nameMenu="Men’s Fashion">
+        <DropDownMenu nameMenu={t("sectionsMenu.menFashion")}>
           <ul className={s.dropDownMenu}>
             {menFashionMenuItems.map((item, index) => (
               <li key={`item-${index}`}>
@@ -51,11 +55,16 @@ const SectionsMenu = () => {
           </ul>
         </DropDownMenu>
 
-        {otherSectionsMenuItems.map((item, index) => (
-          <a href={item.url} key={`item-${index}`}>
-            {item.name}
-          </a>
-        ))}
+        {otherSectionsMenuItems.map((item, index) => {
+          const itemName = camelCase(item.name);
+          const itemTrans = t("sectionsMenu.otherSections." + itemName);
+
+          return (
+            <a href={item.url} key={`item-${index}`}>
+              {itemTrans}
+            </a>
+          );
+        })}
       </nav>
     </>
   );

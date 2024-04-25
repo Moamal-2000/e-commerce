@@ -243,5 +243,19 @@
     "repoStarsForks": {
       "tooltip": "مستودع الموقع"
     }
+  },
+
+  "sectionsMenu": {
+    "womenFashion": "أزياء النساء",
+    "menFashion": "أزياء الرجال",
+    "otherSections": {
+      "electronics": "الإلكترونيات",
+      "homeLifestyle": "المنزل ونمط الحياة",
+      "medicine": "الطب",
+      "sportsOutdoor": "الرياضة والهواء الطلق",
+      "babyToys": "الأطفال والألعاب",
+      "groceriesPets": "البقالة والحيوانات الأليفة",
+      "healthBeauty": "الصحة والجمال"
+    }
   }
 }
