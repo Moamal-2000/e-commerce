@@ -175,7 +175,8 @@
     "returnDelivery": {
       "title": "Return Delivery",
       "description": "Free 30 Days Delivery Returns. Details"
-    }
+    },
+    "relatedItems": "Related Items"
   },
 
   "common": {

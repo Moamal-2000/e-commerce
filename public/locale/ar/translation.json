@@ -175,7 +175,8 @@
     "returnDelivery": {
       "title": "إرجاع المنتج",
       "description": "إرجاع مجاني خلال 30 يومًا. تفاصيل"
-    }
+    },
+    "relatedItems": "المنتجات ذات صلة"
   },
 
   "common": {

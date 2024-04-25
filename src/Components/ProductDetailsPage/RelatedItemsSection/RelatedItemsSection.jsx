@@ -2,9 +2,11 @@ import { productsData } from "src/Data/productsData";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./RelatedItemsSection.module.scss";
 import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
+import { useTranslation } from "react-i18next";
 
 const RelatedItemsSection = ({ productType, currentProduct }) => {
   const hasRelatedProducts = getProductsByRelatedType().length > 0;
+  const {t} = useTranslation()
 
   function getProductsByRelatedType() {
     return productsData.filter((product) => {
@@ -16,7 +18,7 @@ const RelatedItemsSection = ({ productType, currentProduct }) => {
 
   return (
     <section className={s.section}>
-      <SectionTitle type={2} eventName="Related Item" />
+      <SectionTitle type={2} eventName={t("detailsPage.relatedItems")} />
 
       {!hasRelatedProducts && <p>No related items were found.</p>}
 
