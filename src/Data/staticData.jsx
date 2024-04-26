@@ -16,6 +16,7 @@ import {
   visaCard,
 } from "src/Assets/Images/Images";
 import { v4 as uuid } from "uuid";
+import { car, correctSign, headphone } from "../Assets/Images/Images";
 
 export const introductionSliderData = [
   {
@@ -346,6 +347,30 @@ export const mySocialMedia = [
     name: "Linkedin",
     link: "https://www.linkedin.com/in/moamal-alaa-a4bb15237/",
     icon: "linkedin",
+    id: uuid(),
+  },
+];
+
+export const featuresSectionData = [
+  {
+    iconImg: car,
+    iconAlt: "Car",
+    title: "FREE AND FAST DELIVERY",
+    description: "Free delivery for all orders over $140",
+    id: uuid(),
+  },
+  {
+    iconImg: headphone,
+    iconAlt: "Headphone",
+    title: "24/7 CUSTOMER SERVICE",
+    description: "Friendly 24/7 customer support",
+    id: uuid(),
+  },
+  {
+    iconImg: correctSign,
+    iconAlt: "Correct sign",
+    title: "MONEY BACK GUARANTEE",
+    description: "We return money within 30 days",
     id: uuid(),
   },
 ];

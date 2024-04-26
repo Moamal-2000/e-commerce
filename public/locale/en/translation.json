@@ -348,6 +348,26 @@
         "name": "Will Smith",
         "jobTitle": "Product Designer"
       }
+    },
+    "featuresSectionData": {
+      "car": {
+        "iconImg": "car.png",
+        "iconAlt": "Car",
+        "title": "FREE AND FAST DELIVERY",
+        "description": "Free delivery for all orders over $140"
+      },
+      "headphone": {
+        "iconImg": "headphone.png",
+        "iconAlt": "Headphone",
+        "title": "24/7 CUSTOMER SERVICE",
+        "description": "Friendly 24/7 customer support"
+      },
+      "correctSign": {
+        "iconImg": "correctSign.png",
+        "iconAlt": "Correct sign",
+        "title": "MONEY BACK GUARANTEE",
+        "description": "We return money within 30 days"
+      }
     }
   }
 }

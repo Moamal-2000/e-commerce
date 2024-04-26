@@ -1,30 +1,31 @@
-import { car, correctSign, headphone } from "src/Assets/Images/Images";
+import { useTranslation } from "react-i18next";
+import { featuresSectionData } from "src/Data/staticData";
+import { camelCase } from "src/Functions/helper";
 import Feature from "../../Shared/MiniComponents/Feature/Feature";
 import s from "./FeaturedSectionFeatures.module.scss";
 
 const FeaturedSectionFeatures = () => {
+  const featureSection = "aboutPage.featuresSectionData";
+  const { t } = useTranslation();
+
   return (
     <div className={s.features}>
-      <Feature
-        iconImg={car}
-        iconAlt="Car"
-        title="FREE AND FAST DELIVERY"
-        description="Free delivery for all orders over $140"
-      />
+      {featuresSectionData.map(({ iconImg, iconAlt, id }) => {
+        const featuresTransData = `${featureSection}.${camelCase(iconAlt)}`;
+        const iconAltTrans = t(`${featuresTransData}.iconAlt`);
+        const titleTrans = t(`${featuresTransData}.title`);
+        const descriptionTrans = t(`${featuresTransData}.description`);
 
-      <Feature
-        iconImg={headphone}
-        iconAlt="Headphone"
-        title="24/7 CUSTOMER SERVICE"
-        description="Friendly 24/7 customer support"
-      />
-
-      <Feature
-        iconImg={correctSign}
-        iconAlt="Correct sign"
-        title="MONEY BACK GUARANTEE"
-        description="We reurn money within 30 days"
-      />
+        return (
+          <Feature
+            iconImg={iconImg}
+            iconAlt={iconAltTrans}
+            title={titleTrans}
+            description={descriptionTrans}
+            key={id}
+          />
+        );
+      })}
     </div>
   );
 };
