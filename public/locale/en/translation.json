@@ -399,6 +399,10 @@
     "clothes": "Clothes",
     "animal": "Animal",
     "makeup": "Makeup"
-  }
+  },
 
+  "productPoster": {
+    "tittle": "Categories",
+    "subTitle": "Enhance Your Music Experience"
+  }
 }

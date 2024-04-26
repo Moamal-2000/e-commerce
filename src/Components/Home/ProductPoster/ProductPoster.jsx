@@ -10,8 +10,8 @@ const ProductPoster = () => {
   return (
     <section className={s.productPoster}>
       <div className={s.content}>
-        <span>Categories</span>
-        <h2>Enhance Your Music Experience</h2>
+        <span>{t("productPoster.title")}</span>
+        <h2>{t("productPoster.subTitle")}</h2>
         <PostCounter />
         <Link to="/products">{t("buttons.buyNow")}!</Link>
       </div>
