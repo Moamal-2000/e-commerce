@@ -5,16 +5,22 @@ import { addToArray, removeByKeyName } from "src/Features/productsSlice";
 import { isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
+import { useTranslation } from "react-i18next";
 
 const AddToCartButton = ({ product }) => {
+  const { t } = useTranslation();
   const { cartProducts } = useSelector((state) => state.products);
   const { loginInfo } = useSelector((state) => state.user);
   const isProductAlreadyExist = isItemFound(cartProducts, product, "shortName");
   const iconName = isProductAlreadyExist ? "trashCan" : "cart3";
-  const buttonText = isProductAlreadyExist ? "Remove from cart" : "Add to cart";
   const [iconNameState, setIconName] = useState(iconName);
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
+  const buttonText = t(
+    `productCard.buttonText.${
+      isProductAlreadyExist ? "removeFromCart" : "addToCart"
+    }`
+  );
 
   function handleCartButton() {
     if (!loginInfo.isSignIn) {

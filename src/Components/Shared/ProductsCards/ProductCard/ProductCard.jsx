@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { addToArray, removeById } from "src/Features/productsSlice";
@@ -7,8 +8,8 @@ import {
 } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import ToolTip from "../../MiniComponents/ToolTip";
-import s from "./ProductCard.module.scss";
 import AddToCartButton from "./AddToCartButton";
+import s from "./ProductCard.module.scss";
 import ProductCardInfo from "./ProductCardInfo";
 
 const ProductCard = ({
@@ -63,6 +64,7 @@ const ProductCard = ({
   );
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -126,11 +128,15 @@ const ProductCard = ({
                   isAddedToFavorites ? s.active : ""
                 }`}
                 onClick={addProductToFavorite}
-                aria-label="Favorite"
+                aria-label={t("productCard.icons.favorite")}
               >
                 <div className={s.heartBackground}></div>
                 <SvgIcon name="heart" />
-                <ToolTip top="18px" left="-44px" content="Favorite" />
+                <ToolTip
+                  top="18px"
+                  left="-44px"
+                  content={t("productCard.icons.favorite")}
+                />
               </button>
             )}
 
@@ -138,10 +144,14 @@ const ProductCard = ({
               <Link
                 onClick={navigateToProductDetails}
                 className={`${s.iconHolder} ${s.detailsIcon}`}
-                aria-label="Details"
+                aria-label={t("productCard.icons.details")}
               >
                 <SvgIcon name="eye" />
-                <ToolTip top="18px" left="-39px" content="Details" />
+                <ToolTip
+                  top="18px"
+                  left="-39px"
+                  content={t("productCard.icons.details")}
+                />
               </Link>
             )}
 
@@ -153,7 +163,11 @@ const ProductCard = ({
                 onClick={() => dispatch(removeById({ key: removeFrom, id }))}
               >
                 <SvgIcon name="trashCan" />
-                <ToolTip top="18px" left="-41px" content="Remove" />
+                <ToolTip
+                  top="18px"
+                  left="-41px"
+                  content={t("productCard.icons.remove")}
+                />
               </button>
             )}
 
@@ -167,7 +181,11 @@ const ProductCard = ({
                 aria-label="Add to wishlist"
               >
                 <SvgIcon name="save" />
-                <ToolTip top="18px" left="-41px" content="Wishlist" />
+                <ToolTip
+                  top="18px"
+                  left="-41px"
+                  content={t("productCard.icons.wishlist")}
+                />
               </button>
             )}
           </div>

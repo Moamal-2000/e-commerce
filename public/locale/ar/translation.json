@@ -162,6 +162,20 @@
     }
   },
 
+  "productCard": {
+    "buttonText": {
+      "addToCart": "أضف إلى السلة",
+      "removeFromCart": "إزالة من السلة"
+    },
+
+    "icons": {
+      "details": "تفاصيل",
+      "remove": "إزالة",
+      "wishlist": "قائمة الرغبات",
+      "favorite": "المفضلة"
+    }
+  },
+
   "detailsPage": {
     "reviews": "({{votes}} تقييمات)",
     "inStock": "متوفر",

@@ -162,6 +162,20 @@
     }
   },
 
+  "productCard": {
+    "buttonText": {
+      "addToCart": "Добавить в корзину",
+      "removeFromCart": "Удалить из корзины"
+    },
+
+    "icons": {
+      "details": "Подробнее",
+      "remove": "Удалить",
+      "wishlist": "Избранное",
+      "favorite": "Избранное"
+    }
+  },
+
   "detailsPage": {
     "reviews": "{{votes}} отзывов",
     "inStock": "В наличии",

@@ -162,6 +162,20 @@
     }
   },
 
+  "productCard": {
+    "buttonText": {
+      "addToCart": "Add to cart",
+      "removeFromCart": "Remove from cart"
+    },
+
+    "icons": {
+      "details": "Details",
+      "remove": "Remove",
+      "wishlist": "Wishlist",
+      "favorite": "Favorite"
+    }
+  },
+
   "detailsPage": {
     "reviews": "({{votes}} Reviews)",
     "inStock": "In Stock",
