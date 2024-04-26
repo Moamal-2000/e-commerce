@@ -385,6 +385,10 @@
     "thisMonthSection": {
       "title": "هذا الشهر",
       "bestSelling": "افضل المبيعات"
+    },
+    "ourProducts": {
+      "title": "منتجاتنا",
+      "exploreProducts": "تصفح منتجاتنا"
     }
   },
 

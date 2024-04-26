@@ -7,13 +7,14 @@ import s from "./OurProductsSection.module.scss";
 
 const OurProductsSection = () => {
   const { t } = useTranslation();
+  const ourProducts = "SectionTitles.ourProducts";
 
   return (
     <section className={s.ourProductsSection}>
       <div className={s.wrapper}>
         <SectionTitle
-          eventName="Our Products"
-          sectionName="Explore Our Products"
+          eventName={t(`${ourProducts}.title`)}
+          sectionName={t(`${ourProducts}.exploreProducts`)}
         />
       </div>
 

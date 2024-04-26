@@ -385,6 +385,10 @@
     "thisMonthSection": {
       "title": "This Month",
       "bestSelling": "Best Selling Products"
+    },
+    "ourProducts": {
+      "title": "Our Products",
+      "exploreProducts": "Explore Our Products"
     }
   },
 

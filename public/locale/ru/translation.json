@@ -385,6 +385,10 @@
     "thisMonthSection": {
       "title": "Этот месяц",
       "bestSelling": "Лучшее продаваемое"
+    },
+    "ourProducts": {
+      "title": "Наши продукты",
+      "exploreProducts": "Все продукты"
     }
   },
 
