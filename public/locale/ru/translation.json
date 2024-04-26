@@ -1,6 +1,4 @@
 {
-  "flashSales": "Распродажа-раскрутка",
-
   "firstHeader": {
     "saleMessage": "Летняя распродажа всех купальников и бесплатная экспресс-доставка - скидка 50%!",
     "shopNow": "Купить сейчас"
@@ -197,7 +195,11 @@
     "facebook": "Facebook",
     "twitter": "Twitter",
     "instagram": "Instagram",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "days": "дней",
+    "hours": "часов",
+    "minutes": "минут",
+    "seconds": "секунд"
   },
 
   "history": {
@@ -368,6 +370,13 @@
         "title": "ГАРАНТИЯ ВОЗВРАТА ДЕНЕГ",
         "description": "Мы возвращаем деньги в течение 30 дней"
       }
+    }
+  },
+
+  "SectionTitles": {
+    "todaysSection": {
+      "title": "Сегодня",
+      "flashSales": "Распродажа-раскрутка"
     }
   }
 }

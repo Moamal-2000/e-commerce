@@ -1,6 +1,4 @@
 {
-  "flashSales": "Flash Sales",
-
   "firstHeader": {
     "saleMessage": "Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!",
     "shopNow": "Shop Now"
@@ -197,7 +195,11 @@
     "facebook": "Facebook",
     "twitter": "Twitter",
     "instagram": "Instagram",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds"
   },
 
   "history": {
@@ -368,6 +370,13 @@
         "title": "MONEY BACK GUARANTEE",
         "description": "We return money within 30 days"
       }
+    }
+  },
+
+  "SectionTitles": {
+    "todaysSection": {
+      "title": "Today's",
+      "flashSales": "Flash Sales"
     }
   }
 }

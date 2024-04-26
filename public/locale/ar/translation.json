@@ -1,6 +1,4 @@
 {
-  "flashSales": "تخفيضات مفاجئة",
-
   "firstHeader": {
     "saleMessage": "تخفيضات الصيف على جميع ملابس السباحة مع التوصيل السريع المجاني - خصم 50%!",
     "shopNow": "تسوق الآن"
@@ -197,7 +195,11 @@
     "facebook": "فيسبوك",
     "twitter": "تويتر",
     "instagram": "انستجرام",
-    "linkedin": "لينكدان"
+    "linkedin": "لينكدان",
+    "days": "يوم",
+    "hours": "ساعة",
+    "minutes": "دقيقة",
+    "seconds": "ثانية"
   },
 
   "history": {
@@ -368,6 +370,13 @@
         "title": "ضمان استرداد الأموال",
         "description": "نقوم بإرجاع الأموال خلال 30 يومًا"
       }
+    }
+  },
+
+  "SectionTitles": {
+    "todaysSection": {
+      "title": "اليوم",
+      "flashSales": "مبيعات سريعة"
     }
   }
 }

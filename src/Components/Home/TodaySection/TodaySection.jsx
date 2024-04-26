@@ -8,6 +8,7 @@ import s from "./TodaySection.module.scss";
 
 const TodaySection = () => {
   const { t } = useTranslation();
+  const todaysSection = "SectionTitles.todaysSection";
 
   const filterFlashSalesProducts = () =>
     productsData.filter((productData) => productData.sold > 100);
@@ -15,7 +16,10 @@ const TodaySection = () => {
   return (
     <section className={s.todaysSection} id="todays-section">
       <div className={s.wrapper}>
-        <SectionTitle eventName="Today's" sectionName={t("flashSales")} />
+        <SectionTitle
+          eventName={t(`${todaysSection}.title`)}
+          sectionName={t(`${todaysSection}.flashSales`)}
+        />
         <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />
       </div>
 
