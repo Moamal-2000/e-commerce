@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { userImg } from "src/Assets/Images/Images";
 import { mobileNavData } from "src/Data/staticData";
 import useSignOut from "src/Hooks/App/useSignOut";
+import { camelCase } from "../../../Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
 
@@ -10,20 +12,24 @@ const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
   const { loginInfo } = useSelector((state) => state.user);
   const { username, isSignIn } = loginInfo;
-  const usernameText = username === "Guest" ? "There" : username;
   const handleSignOut = useSignOut();
+  const { t } = useTranslation();
 
   return (
     <div className={`${s.mobileMenu} ${isMobileMenuActive ? s.active : ""}`}>
       <div className={s.userInfo}>
-        <Link to="/profile" title="Profile" className={s.img}>
+        <Link to="/profile" title={t("mobileNav.profile")} className={s.img}>
           <img src={userImg} alt="user's picture" />
         </Link>
 
         <p>
-          Hey 🖐️
-          <Link to="/profile" title="Profile" className={s.userName}>
-            {usernameText}
+          {t("mobileNav.hey")}
+          <Link
+            to="/profile"
+            title={t("mobileNav.profile")}
+            className={s.userName}
+          >
+            {username}
           </Link>
         </p>
       </div>
@@ -38,7 +44,7 @@ const MobileNav = () => {
               <li key={"mobile-nav-link-" + index}>
                 <NavLink to={link}>
                   <SvgIcon name={icon} />
-                  <span>{name}</span>
+                  <span>{t(`mobileNav.${camelCase(name)}`)}</span>
                 </NavLink>
               </li>
             );
@@ -55,14 +61,14 @@ const MobileNav = () => {
           onClick={handleSignOut}
         >
           <SvgIcon name="boxArrowRight" />
-          <span>Sign Out</span>
+          <span>{t("mobileNav.signOut")}</span>
         </button>
       )}
 
       {!isSignIn && (
         <Link to="/signup" className={s.signOutButton}>
           <SvgIcon name="boxArrowRight" />
-          <span>Sign In</span>
+          <span>{t("mobileNav.signIn")}</span>
         </Link>
       )}
     </div>

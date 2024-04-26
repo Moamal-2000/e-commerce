@@ -34,7 +34,7 @@ const userSlice = createSlice({
     },
     signOut: (state) => {
       const guestData = {
-        username: "Guest",
+        username: "",
         emailOrPhone: "",
         password: "",
       };

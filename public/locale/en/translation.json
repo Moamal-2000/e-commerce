@@ -289,5 +289,18 @@
       "groceriesPets": "Groceries & Pets",
       "healthBeauty": "Health & Beauty"
     }
+  },
+
+  "mobileNav": {
+    "profile": "Profile",
+    "home": "Home",
+    "about": "About",
+    "myCart": "My Cart",
+    "favorite": "Favorite",
+    "wishlist": "Wishlist",
+    "notification": "Notification",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "hey": "Hey 🖐️"
   }
 }
