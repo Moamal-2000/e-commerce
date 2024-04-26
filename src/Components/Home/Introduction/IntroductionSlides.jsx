@@ -11,7 +11,7 @@ const IntroductionSlides = () => {
   return introductionSliderData.map(
     ({ productName, productImg, logoImg, discountText, id }) => {
       return (
-        <SwiperSlide className={s.slide} key={id}>
+        <SwiperSlide dir="ltr" className={s.slide} key={id}>
           <img src={productImg} alt="product preview" />
           <div className={s.content}>
             <div className={s.nameProduct}>
@@ -19,7 +19,7 @@ const IntroductionSlides = () => {
               <strong>{productName}</strong>
             </div>
 
-            <h2 className={s.discount}>{discountText}</h2>
+            <h2 className={s.discount}>{t("homeSlider.title")}</h2>
 
             <Link to="/products" className={s.shopNow} tabIndex="-1">
               <span>{t("buttons.buyNow")}</span>

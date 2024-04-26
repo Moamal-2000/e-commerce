@@ -44,6 +44,7 @@ function MainSlider() {
       }}
       onTouchMove={handleTouchMove}
       onTouchEnd={setDefaultSpeedOnTouchEnd}
+      dir="rtl"
     >
       {IntroductionSlides()}
     </Swiper>

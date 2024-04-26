@@ -29,6 +29,10 @@
     "userMenu": "User menu"
   },
 
+  "homeSlider": {
+    "title": "Up to 30% off Voucher"
+  },
+
   "products": {
     "PS5Gamepad": {
       "shortName": "PS5 Gamepad",

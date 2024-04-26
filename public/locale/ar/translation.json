@@ -29,6 +29,10 @@
     "userMenu": "قائمة المستخدم"
   },
 
+  "homeSlider": {
+    "title": "خصم يصل إلى 30% على القسيمة"
+  },
+
   "products": {
     "PS5Gamepad": {
       "shortName": "جيمباد PS5",

@@ -29,6 +29,10 @@
     "userMenu": "Меню пользователя"
   },
 
+  "homeSlider": {
+    "title": "Скидка до 30% на ваучер"
+  },
+
   "products": {
     "PS5Gamepad": {
       "shortName": "PS5 Геймпад",
