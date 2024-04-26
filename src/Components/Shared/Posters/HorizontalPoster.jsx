@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import s from "./HorizontalPoster.module.scss";
 
 const HorizontalPoster = ({ title, description, posterUrl }) => {
+  const { t } = useTranslation();
   const horPosterRef = useRef();
 
   useEffect(() => {
@@ -15,7 +17,7 @@ const HorizontalPoster = ({ title, description, posterUrl }) => {
         <b>{title}</b>
         <p>{description}</p>
         <Link to="/products" className={s.shopNow}>
-          Shop Now
+          <span>{t("buttons.buyNow")}</span>
         </Link>
       </div>
     </div>

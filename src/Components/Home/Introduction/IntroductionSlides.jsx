@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { introductionSliderData } from "src/Data/staticData";
 import { SwiperSlide } from "swiper/react";
@@ -5,6 +6,8 @@ import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import s from "./IntroductionSlides.module.scss";
 
 const IntroductionSlides = () => {
+  const { t } = useTranslation();
+
   return introductionSliderData.map(
     ({ productName, productImg, logoImg, discountText, id }) => {
       return (
@@ -19,7 +22,7 @@ const IntroductionSlides = () => {
             <h2 className={s.discount}>{discountText}</h2>
 
             <Link to="/products" className={s.shopNow} tabIndex="-1">
-              <span>Shop Now</span>
+              <span>{t("buttons.buyNow")}</span>
               <SvgIcon name="arrowRightLong" />
             </Link>
           </div>

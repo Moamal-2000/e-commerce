@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import s from "./MediumPoster.module.scss";
 
 const MediumPoster = ({ title, description, posterUrl }) => {
+  const { t } = useTranslation();
   const midPosterRef = useRef();
 
   useEffect(() => {
@@ -15,7 +17,7 @@ const MediumPoster = ({ title, description, posterUrl }) => {
         <b>{title}</b>
         <p>{description}</p>
         <Link to="/products" className={s.shopNow}>
-          Shop Now
+          <span>{t("buttons.buyNow")}</span>
         </Link>
       </div>
     </div>

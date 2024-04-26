@@ -1,7 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import s from "./SmallPoster.module.scss";
 
 const SmallPoster = ({ title, description, posterUrl }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={s.smallPoster}>
       <img src={posterUrl} alt="product's poster" />
@@ -9,7 +12,7 @@ const SmallPoster = ({ title, description, posterUrl }) => {
         <b>{title}</b>
         <p>{description}</p>
         <Link to="/products" className={s.shopNow}>
-          Shop Now
+          <span>{t("buttons.buyNow")}</span>
         </Link>
       </div>
     </div>
