@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import SvgIcon from "../SvgIcon";
 import s from "./InfoCard.module.scss";
 
-const InfoCard = ({ data }) => {
-  const { iconName, number, text } = data;
+const InfoCard = ({ data, index }) => {
+  const { iconName, number } = data;
+  const { t } = useTranslation();
 
   return (
     <div className={s.card} tabIndex="0">
@@ -11,7 +13,7 @@ const InfoCard = ({ data }) => {
       </div>
 
       <b>{number}</b>
-      <p>{text}</p>
+      <p>{t(`aboutPage.cardInfo.aboutCardsInfo${index + 1}`)}</p>
     </div>
   );
 };

@@ -106,24 +106,28 @@ export const aboutCardsInfo = [
     iconName: "shop",
     number: "10.5k",
     text: "Sallers active our site",
+    translationKey: "aboutCardsInfo1",
     id: uuid(),
   },
   {
     iconName: "dollarSign",
     number: "33k",
     text: "Mopnthly Produduct Sale",
+    translationKey: "aboutCardsInfo2",
     id: uuid(),
   },
   {
     iconName: "shoppingBag",
     number: "45.5k",
     text: "Customer active in our site",
+    translationKey: "aboutCardsInfo3",
     id: uuid(),
   },
   {
     iconName: "moneyBag",
     number: "25k",
     text: "Anual gross sale in our site",
+    translationKey: "aboutCardsInfo4",
     id: uuid(),
   },
 ];
