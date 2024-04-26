@@ -334,6 +334,20 @@
       "aboutCardsInfo2": "مبيعات المنتجات الشهرية",
       "aboutCardsInfo3": "العملاء النشطين على موقعنا",
       "aboutCardsInfo4": "المبيعات الإجمالية السنوية على موقعنا"
+    },
+    "ourMembersData": {
+      "founderChairman": {
+        "name": "توم كروز",
+        "jobTitle": "مؤسس ورئيس مجلس الإدارة"
+      },
+      "managingDirector": {
+        "name": "إيما واتسون",
+        "jobTitle": "المدير التنفيذي"
+      },
+      "productDesigner": {
+        "name": "ويل سميث",
+        "jobTitle": "مصمم منتجات"
+      }
     }
   }
 }

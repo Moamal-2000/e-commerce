@@ -334,6 +334,20 @@
       "aboutCardsInfo2": "Monthly Product Sales",
       "aboutCardsInfo3": "Customers active on our site",
       "aboutCardsInfo4": "Annual gross sales on our site"
+    },
+    "ourMembersData": {
+      "founderChairman": {
+        "name": "Tom Cruise",
+        "jobTitle": "Founder & Chairman"
+      },
+      "managingDirector": {
+        "name": "Emma Watson",
+        "jobTitle": "Managing Director"
+      },
+      "productDesigner": {
+        "name": "Will Smith",
+        "jobTitle": "Product Designer"
+      }
     }
   }
 }

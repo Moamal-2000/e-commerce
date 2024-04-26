@@ -334,6 +334,20 @@
       "aboutCardsInfo2": "Ежемесячные продажи продукции",
       "aboutCardsInfo3": "Активные клиенты на нашем сайте",
       "aboutCardsInfo4": "Годовой валовый оборот на нашем сайте"
+    },
+    "ourMembersData": {
+      "founderChairman": {
+        "name": "Том Круз",
+        "jobTitle": "Основатель и председатель"
+      },
+      "managingDirector": {
+        "name": "Эмма Уотсон",
+        "jobTitle": "Исполнительный директор"
+      },
+      "productDesigner": {
+        "name": "Уилл Смит",
+        "jobTitle": "Дизайнер продукта"
+      }
     }
   }
 }
