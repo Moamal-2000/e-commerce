@@ -194,7 +194,6 @@
   },
 
   "common": {
-    "buyNow": "Buy Now",
     "facebook": "Facebook",
     "twitter": "Twitter",
     "instagram": "Instagram",
@@ -302,5 +301,24 @@
     "signIn": "Sign In",
     "signOut": "Sign Out",
     "hey": "Hey 🖐️"
+  },
+
+  "buttons": {
+    "viewAllProducts": "View All Products",
+    "buyNow": "Buy Now",
+    "viewAll": "View All",
+    "sendMessage": "Send Message",
+    "saveChanges": "Save Changes",
+    "moveAllToBag": "Move All To Bag",
+    "seeAll": "See All",
+    "returnToShop": "Return To Shop",
+    "updateCart": "Update Cart",
+    "applyCoupon": "Applay Coupon",
+    "processToCheckout": "Process To Checkout",
+    "placeOrder": "Place Order",
+    "backToHome": "Back to home page",
+    "createAccount": "Create Account",
+    "signUpWithGoogle": "Sign Up With Google",
+    "login": "Log In"
   }
 }

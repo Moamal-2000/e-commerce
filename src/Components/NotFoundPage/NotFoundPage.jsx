@@ -28,7 +28,7 @@ const NotFoundPage = () => {
           <div className={s.wrapper} id="notfound-page">
             <b>404 Not Found</b>
             <p>{descriptionText}</p>
-            <Link to="/">Back to home page</Link>
+            <Link to="/">{t("buttons.backToHome")}</Link>
           </div>
         </main>
       </div>

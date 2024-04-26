@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import { googleIcon } from "src/Assets/Images/Images";
@@ -14,6 +15,7 @@ import s from "./SignUpForm.module.scss";
 const SignUpForm = () => {
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
+  const { t } = useTranslation();
   const { signedUpUsers } = useSelector((state) => state.user);
   const username = useRef("");
   const emailOrPhone = useRef("");
@@ -106,7 +108,7 @@ const SignUpForm = () => {
 
       <div className={s.buttons}>
         <button type="submit" className={s.createAccBtn}>
-          Create Account
+          {t("buttons.createAccount")}
         </button>
 
         <button
@@ -115,7 +117,7 @@ const SignUpForm = () => {
           onClick={handleSignUpWithGoogle}
         >
           <img src={googleIcon} alt="Colored Google icon" />
-          <span>Sign up with Google</span>
+          <span>{t("buttons.signUpWithGoogle")}</span>
         </button>
 
         <p>

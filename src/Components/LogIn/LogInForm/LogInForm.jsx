@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { newSignUp } from "src/Features/userSlice";
@@ -8,6 +9,7 @@ import s from "./LogInForm.module.scss";
 const LogInForm = () => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const { signedUpUsers } = useSelector((state) => state.user);
   const emailOrPhone = useRef();
   const password = useRef();
@@ -67,7 +69,7 @@ const LogInForm = () => {
 
       <div className={s.buttons}>
         <button type="submit" className={s.loginBtn}>
-          Log In
+          {t("buttons.login")}
         </button>
         <a href="#">Forget Password?</a>
       </div>

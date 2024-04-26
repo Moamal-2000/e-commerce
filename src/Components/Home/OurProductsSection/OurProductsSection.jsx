@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { productCardCustomizations } from "src/Data/staticData";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
@@ -5,6 +6,8 @@ import ExploreProducts from "../ProductPoster/ExploreProducts";
 import s from "./OurProductsSection.module.scss";
 
 const OurProductsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className={s.ourProductsSection}>
       <div className={s.wrapper}>
@@ -20,7 +23,7 @@ const OurProductsSection = () => {
       />
 
       <Link to="/products" className={s.viewProductsBtn}>
-        View All Products
+        {t("buttons.viewAllProducts")}
       </Link>
     </section>
   );

@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getSubTotal } from "src/Functions/helper";
@@ -6,6 +7,7 @@ import s from "./CartInfoMenu.module.scss";
 const CartInfoMenu = () => {
   const { cartProducts } = useSelector((state) => state.products);
   const subTotal = getSubTotal(cartProducts);
+  const { t } = useTranslation();
 
   return (
     <div className={s.menu}>
@@ -28,7 +30,7 @@ const CartInfoMenu = () => {
         </div>
       </div>
 
-      <Link to="/checkout">Process to checkout</Link>
+      <Link to="/checkout">{t("buttons.processToCheckout")}</Link>
     </div>
   );
 };

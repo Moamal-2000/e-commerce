@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import AddCoupon from "../../Cart/CartInfo/AddCoupon";
 import PaymentCalculation from "./PaymentCalculation";
@@ -7,6 +8,7 @@ import s from "./PaymentSection.module.scss";
 
 const PaymentSection = () => {
   const { cartProducts } = useSelector((state) => state.products);
+  const { t } = useTranslation();
 
   return (
     <section className={s.paymentSection}>
@@ -16,7 +18,7 @@ const PaymentSection = () => {
       <AddCoupon />
 
       <button type="submit" className={s.submitPaymentButton}>
-        Place Order
+        {t("buttons.placeOrder")}
       </button>
     </section>
   );

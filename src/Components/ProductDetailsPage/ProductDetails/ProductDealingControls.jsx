@@ -80,7 +80,7 @@ const ProductDealingControls = ({ data }) => {
           className={s.buyButton}
           onClick={handleBuyProduct}
         >
-          {t("common.buyNow")}
+          {t("buttons.buyNow")}
         </button>
 
         <button

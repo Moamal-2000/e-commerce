@@ -22,7 +22,7 @@ const TodaySection = () => {
       <ProductsSlider filterFun={filterFlashSalesProducts} />
 
       <Link to="/products" className={s.viewProductsBtn}>
-        View All Products
+        {t("buttons.viewAllProducts")}
       </Link>
     </section>
   );

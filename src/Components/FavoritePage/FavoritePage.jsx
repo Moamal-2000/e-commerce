@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle/SectionTitle";
 import ForYouProducts from "../WishList/ForYouProducts/ForYouProducts";
@@ -7,6 +8,8 @@ import FavoritePageHeader from "./FavoritePageHeader/FavoritePageHeader";
 import FavoriteProducts from "./FavoriteProducts/FavoriteProducts";
 
 const FavoritePage = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       <Helmet>
@@ -25,7 +28,7 @@ const FavoritePage = () => {
             <header>
               <SectionTitle eventName="Just For You" type={2} />
 
-              <Link to="/products">See All</Link>
+              <Link to="/products">{t("buttons.seeAll")}</Link>
             </header>
 
             <ForYouProducts />

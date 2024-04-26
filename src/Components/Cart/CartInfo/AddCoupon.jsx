@@ -1,8 +1,10 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import s from "./AddCoupon.module.scss";
 
 const AddCoupon = () => {
   const couponInputRef = useRef("");
+  const { t } = useTranslation();
 
   return (
     <div className={s.couponContainer}>
@@ -12,7 +14,7 @@ const AddCoupon = () => {
         onChange={(e) => (couponInputRef.current = e.target.value)}
       />
 
-      <button type="button">Apply Coupon</button>
+      <button type="button">{t("buttons.applyCoupon")}</button>
     </div>
   );
 };

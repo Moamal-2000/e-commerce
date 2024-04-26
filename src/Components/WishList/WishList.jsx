@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getUniqueArrayByObjectKey } from "src/Functions/helper";
@@ -12,6 +13,7 @@ const WishList = () => {
   const { wishList, cartProducts } = useSelector((state) => state.products);
   const lengthOfWishList = wishList.length;
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   function moveAllToCart() {
     const uniqueCartProducts = getUniqueArrayByObjectKey({
@@ -38,7 +40,7 @@ const WishList = () => {
               <label htmlFor="wishlist">WishList ({lengthOfWishList})</label>
 
               <button type="button" onClick={moveAllToCart}>
-                Move All To Bag
+                {t("buttons.moveAllToBag")}
               </button>
             </header>
 
@@ -49,7 +51,7 @@ const WishList = () => {
             <header>
               <SectionTitle eventName="Just For You" type={2} />
 
-              <Link to="/products">See All</Link>
+              <Link to="/products">{t("buttons.seeAll")}</Link>
             </header>
 
             <ForYouProducts />

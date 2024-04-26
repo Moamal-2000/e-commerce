@@ -3,8 +3,11 @@ import { productsData } from "src/Data/productsData";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./ThisMonthSection.module.scss";
 import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
+import { useTranslation } from "react-i18next";
 
 const ThisMonthSection = () => {
+  const { t } = useTranslation();
+
   function filterThisMonthProducts() {
     const filteredProducts = productsData.filter(
       (productData) => productData.sold > 1000
@@ -22,7 +25,7 @@ const ThisMonthSection = () => {
         />
 
         <Link to="/products" className={s.viewAllBtn}>
-          View All
+          {t("buttons.viewAll")}
         </Link>
       </div>
 

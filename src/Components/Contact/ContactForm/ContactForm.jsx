@@ -1,6 +1,9 @@
+import { useTranslation } from "react-i18next";
 import s from "./ContactForm.module.scss";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
+
   function handleSubmit(e) {
     e.preventDefault();
     resetForm(e);
@@ -53,7 +56,7 @@ const ContactForm = () => {
 
       <div className={s.buttons}>
         <button type="reset">Reset</button>
-        <button type="submit">Send Message</button>
+        <button type="submit">{t("buttons.sendMessage")}</button>
       </div>
     </form>
   );

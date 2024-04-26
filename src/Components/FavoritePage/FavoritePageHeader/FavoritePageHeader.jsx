@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProductsState } from "src/Features/productsSlice";
 import { getUniqueArrayByObjectKey } from "src/Functions/helper";
@@ -8,6 +9,7 @@ const FavoritePageHeader = () => {
     (state) => state.products
   );
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const lengthOfFavorites = favoritesProducts.length;
 
   function moveAllToCart() {
@@ -28,7 +30,7 @@ const FavoritePageHeader = () => {
       <label htmlFor="wishlist">Favorite ({lengthOfFavorites})</label>
 
       <button type="button" onClick={moveAllToCart}>
-        Move All To Bag
+        {t("buttons.moveAllToBag")}
       </button>
     </header>
   );
