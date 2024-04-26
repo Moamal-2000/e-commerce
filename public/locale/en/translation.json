@@ -246,8 +246,26 @@
   },
 
   "sectionsMenu": {
-    "womenFashion": "Woman’s Fashion",
-    "menFashion": "Men’s Fashion",
+    "womenFashion": {
+      "title": "Woman’s Fashion",
+      "menuItems": {
+        "elegantDress": "Elegant Dress",
+        "chicBlouse": "Chic Blouse",
+        "statementHandbag": "Statement Handbag",
+        "versatileJacket": "Versatile Jacket",
+        "comfortable": "Comfortable Shoes"
+      }
+    },
+    "menFashion": {
+      "title": "Men’s Fashion",
+      "menuItems": {
+        "tailoredSuit": "Tailored Suit",
+        "casualShirts": "Casual Shirts",
+        "slimFitJeans": "Slim-Fit Jeans",
+        "leatherAccessories": "Leather Accessories",
+        "modernSneakers": "Modern Sneakers"
+      }
+    },
     "otherSections": {
       "electronics": "Electronics",
       "homeLifestyle": "Home & Lifestyle",

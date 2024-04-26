@@ -246,8 +246,26 @@
   },
 
   "sectionsMenu": {
-    "womenFashion": "أزياء النساء",
-    "menFashion": "أزياء الرجال",
+    "womenFashion": {
+      "title": "أزياء نسائية",
+      "menuItems": {
+        "elegantDress": "فستان أنيق",
+        "chicBlouse": "بلوزة أنيقة",
+        "statementHandbag": "حقيبة بيانية",
+        "versatileJacket": "جاكيت متعدد الاستخدامات",
+        "comfortable": "أحذية مريحة"
+      }
+    },
+    "menFashion": {
+      "title": "أزياء رجالية",
+      "menuItems": {
+        "tailoredSuit": "بدلة مصممة",
+        "casualShirts": "قمصان عادية",
+        "slimFitJeans": "جينز متناسق",
+        "leatherAccessories": "إكسسوارات جلدية",
+        "modernSneakers": "حذاء رياضي حديث"
+      }
+    },
     "otherSections": {
       "electronics": "الإلكترونيات",
       "homeLifestyle": "المنزل ونمط الحياة",

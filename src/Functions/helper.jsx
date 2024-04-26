@@ -81,11 +81,14 @@ export function capitalize(str) {
 }
 
 export function camelCase(str) {
-  const formattedStr = str
+  let formattedStr = str
     ?.toLowerCase()
     ?.replaceAll("& ", "")
-    .replaceAll("-", "")
     .replaceAll("'s", "");
+
+  if (formattedStr.includes("-")) {
+    formattedStr = formattedStr.replaceAll("-", " ");
+  }
 
   const camelCased = formattedStr
     .split(" ")

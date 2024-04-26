@@ -35,23 +35,36 @@ const SectionsMenu = () => {
       </button>
 
       <nav className={`${s.sectionsMenu} ${activeClass}`}>
-        <DropDownMenu nameMenu={t("sectionsMenu.womenFashion")}>
+        <DropDownMenu nameMenu={t("sectionsMenu.womenFashion.title")}>
           <ul className={s.dropDownMenu}>
-            {womenFashionMenuItems.map((item, index) => (
-              <li key={`item-${index}`}>
-                <a href={item.url}>{item.name}</a>
-              </li>
-            ))}
+            {womenFashionMenuItems.map((item, index) => {
+              const itemName = camelCase(item.name);
+              const itemTrans = t(
+                "sectionsMenu.womenFashion.menuItems." + itemName
+              );
+
+              return (
+                <li key={`item-${index}`}>
+                  <a href={item.url}>{itemTrans}</a>
+                </li>
+              );
+            })}
           </ul>
         </DropDownMenu>
 
-        <DropDownMenu nameMenu={t("sectionsMenu.menFashion")}>
+        <DropDownMenu nameMenu={t("sectionsMenu.menFashion.title")}>
           <ul className={s.dropDownMenu}>
-            {menFashionMenuItems.map((item, index) => (
-              <li key={`item-${index}`}>
-                <a href={item.url}>{item.name}</a>
-              </li>
-            ))}
+            {menFashionMenuItems.map((item, index) => {
+              const itemName = camelCase(item.name);
+              const itemTrans = t(
+                "sectionsMenu.menFashion.menuItems." + itemName
+              );
+              return (
+                <li key={`item-${index}`}>
+                  <a href={item.url}>{itemTrans}</a>
+                </li>
+              );
+            })}
           </ul>
         </DropDownMenu>
 

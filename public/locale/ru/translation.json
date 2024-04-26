@@ -246,8 +246,26 @@
   },
 
   "sectionsMenu": {
-    "womenFashion": "Женская мода",
-    "menFashion": "Мужская мода",
+    "womenFashion": {
+      "title": "Женская мода",
+      "menuItems": {
+        "elegantDress": "Элегантное платье",
+        "chicBlouse": "Шикарная блузка",
+        "statementHandbag": "Заявительная сумка",
+        "versatileJacket": "Универсальная куртка",
+        "comfortable": "Удобная обувь"
+      }
+    },
+    "menFashion": {
+      "title": "Мужская мода",
+      "menuItems": {
+        "tailoredSuit": "Мужской костюм на заказ",
+        "casualShirts": "Повседневные рубашки",
+        "slimFitJeans": "Узкие джинсы",
+        "leatherAccessories": "Кожаные аксессуары",
+        "modernSneakers": "Современные кроссовки"
+      }
+    },
     "otherSections": {
       "electronics": "Электроника",
       "homeLifestyle": "Дом и образ жизни",
