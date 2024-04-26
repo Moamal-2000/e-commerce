@@ -10,10 +10,15 @@ const NotFoundPage = () => {
   const location = useLocation();
   const pageName = location.pathname.replace("/", "");
   const isPageNotReady = UN_BUILT_PAGES.includes(pageName);
-  const tabTitleText = isPageNotReady ? "Page Not Built" : "Page Not Found";
+  const tabTitleText = isPageNotReady
+    ? t("notFoundPage.notBuiltTabTitle")
+    : t("notFoundPage.tabTitle");
   const descriptionText = isPageNotReady
-    ? "Sorry, the page you're looking for is not built yet."
-    : "Your visited page was not found. You may go to the home page.";
+    ? t("notFoundPage.notBuiltDescription")
+    : t("notFoundPage.description");
+  const notFoundMessage = t("notFoundPage.notFoundMessage");
+  const backToHomeText = t("buttons.backToHome");
+  const historyText = t("notFoundPage.history");
 
   return (
     <>
@@ -23,16 +28,17 @@ const NotFoundPage = () => {
 
       <div className="container">
         <main className={s.notFoundPage}>
-          <PagesHistory history={["/", t("history.404Error")]} />
+          <PagesHistory history={["/", historyText]} />
 
           <div className={s.wrapper} id="notfound-page">
-            <b>404 Not Found</b>
+            <b>{notFoundMessage}</b>
             <p>{descriptionText}</p>
-            <Link to="/">{t("buttons.backToHome")}</Link>
+            <Link to="/">{backToHomeText}</Link>
           </div>
         </main>
       </div>
     </>
   );
 };
+
 export default NotFoundPage;

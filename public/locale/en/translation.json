@@ -408,5 +408,13 @@
   "productPoster": {
     "tittle": "Categories",
     "subTitle": "Enhance Your Music Experience"
+  },
+
+  "notFoundPage": {
+    "tabTitle": "Page Not Found",
+    "description": "Your visited page was not found. You may go to the home page.",
+    "notBuiltTabTitle": "Page Not Built",
+    "notBuiltDescription": "Sorry, the page you're looking for is not built yet.",
+    "notFoundMessage": "404 Not Found"
   }
 }
