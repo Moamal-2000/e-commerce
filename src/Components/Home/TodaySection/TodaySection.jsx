@@ -7,8 +7,8 @@ import EventCounter from "./EventCounter";
 import s from "./TodaySection.module.scss";
 
 const TodaySection = () => {
-  const { t } = useTranslation();
   const todaysSection = "SectionTitles.todaysSection";
+  const { t } = useTranslation();
 
   const filterFlashSalesProducts = () =>
     productsData.filter((productData) => productData.sold > 100);

@@ -377,6 +377,24 @@
     "todaysSection": {
       "title": "Today's",
       "flashSales": "Flash Sales"
+    },
+    "categoriesSection": {
+      "title": "Categories",
+      "browseByCategory": "Browse By Category"
     }
+  },
+
+  "categoriesData": {
+    "phones": "Phones",
+    "computers": "Computers",
+    "smartwatch": "SmartWatch",
+    "camera": "Camera",
+    "headphones": "HeadPhones",
+    "gaming": "Gaming",
+    "furniture": "Furniture",
+    "clothes": "Clothes",
+    "animal": "Animal",
+    "makeup": "Makeup"
   }
+
 }

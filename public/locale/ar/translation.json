@@ -377,6 +377,23 @@
     "todaysSection": {
       "title": "اليوم",
       "flashSales": "مبيعات سريعة"
+    },
+    "categoriesSection": {
+      "title": "الفئات",
+      "browseByCategory": "تصفح حسب الفئة"
     }
+  },
+
+  "categoriesData": {
+    "phones": "هواتف",
+    "computers": "أجهزة الكمبيوتر",
+    "smartwatch": "الساعات الذكية",
+    "camera": "كاميرا",
+    "headphones": "سماعات الرأس",
+    "gaming": "ألعاب",
+    "furniture": "الأثاث",
+    "clothes": "ملابس",
+    "animal": "حيوان",
+    "makeup": "ماكياج"
   }
 }

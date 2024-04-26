@@ -377,6 +377,23 @@
     "todaysSection": {
       "title": "Сегодня",
       "flashSales": "Распродажа-раскрутка"
+    },
+    "categoriesSection": {
+      "title": "Категории",
+      "browseByCategory": "Просмотр категорий"
     }
+  },
+
+  "categoriesData": {
+    "phones": "Телефоны",
+    "computers": "Компьютеры",
+    "smartwatch": "Умные часы",
+    "camera": "Камеры",
+    "headphones": "Наушники",
+    "gaming": "Игры",
+    "furniture": "Мебель",
+    "clothes": "Одежда",
+    "animal": "Животные",
+    "makeup": "Косметика"
   }
 }
