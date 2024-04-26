@@ -381,6 +381,10 @@
     "categoriesSection": {
       "title": "Categories",
       "browseByCategory": "Browse By Category"
+    },
+    "thisMonthSection": {
+      "title": "This Month",
+      "bestSelling": "Best Selling Products"
     }
   },
 

@@ -1,12 +1,13 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
+import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./ThisMonthSection.module.scss";
-import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
-import { useTranslation } from "react-i18next";
 
 const ThisMonthSection = () => {
   const { t } = useTranslation();
+  const thisMonthSection = "SectionTitles.thisMonthSection";
 
   function filterThisMonthProducts() {
     const filteredProducts = productsData.filter(
@@ -20,8 +21,8 @@ const ThisMonthSection = () => {
     <section className={s.thisMonthSection}>
       <div className={s.wrapper}>
         <SectionTitle
-          eventName="This Month"
-          sectionName="Best Selling Products"
+          eventName={t(`${thisMonthSection}.title`)}
+          sectionName={t(`${thisMonthSection}.bestSelling`)}
         />
 
         <Link to="/products" className={s.viewAllBtn}>

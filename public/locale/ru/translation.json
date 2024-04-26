@@ -381,6 +381,10 @@
     "categoriesSection": {
       "title": "Категории",
       "browseByCategory": "Просмотр категорий"
+    },
+    "thisMonthSection": {
+      "title": "Этот месяц",
+      "bestSelling": "Лучшее продаваемое"
     }
   },
 

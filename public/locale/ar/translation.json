@@ -381,6 +381,10 @@
     "categoriesSection": {
       "title": "الفئات",
       "browseByCategory": "تصفح حسب الفئة"
+    },
+    "thisMonthSection": {
+      "title": "هذا الشهر",
+      "bestSelling": "افضل المبيعات"
     }
   },
 
