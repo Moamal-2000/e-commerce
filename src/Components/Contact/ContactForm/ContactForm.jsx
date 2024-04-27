@@ -23,7 +23,7 @@ const ContactForm = () => {
             <input
               type="text"
               autoComplete="off"
-              placeholder="Your Name"
+              placeholder={t("inputsPlaceholders.yourName")}
               name="username"
               required
             />
@@ -34,7 +34,7 @@ const ContactForm = () => {
             <input
               type="email"
               autoComplete="off"
-              placeholder="Your Email"
+              placeholder={t("inputsPlaceholders.yourEmail")}
               name="email"
               required
             />
@@ -42,7 +42,12 @@ const ContactForm = () => {
           </div>
 
           <div className={s.input}>
-            <input type="text" placeholder="Your Phone" name="phone" required />
+            <input
+              type="text"
+              placeholder={t("inputsPlaceholders.yourPhone")}
+              name="phone"
+              required
+            />
             <span className={s.star} style={{ left: "103px" }} />
           </div>
         </div>
@@ -50,7 +55,7 @@ const ContactForm = () => {
         <textarea
           name="message"
           autoComplete="off"
-          placeholder="Your Message"
+          placeholder={t("inputsPlaceholders.yourMessage")}
         />
       </div>
 

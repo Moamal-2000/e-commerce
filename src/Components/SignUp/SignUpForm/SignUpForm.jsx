@@ -86,21 +86,21 @@ const SignUpForm = () => {
         <input
           type="text"
           name="username"
-          placeholder="Full Name"
+          placeholder={t("inputsPlaceholders.fullName")}
           onChange={(e) => (username.current = e.target.value)}
           required
         />
         <input
           type="text"
           name="emailOrPhone"
-          placeholder="Email or Phone Number"
+          placeholder={t("inputsPlaceholders.emailOrPhone")}
           onChange={(e) => (emailOrPhone.current = e.target.value)}
           required
         />
         <input
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder={t("inputsPlaceholders.password")}
           onChange={(e) => (password.current = e.target.value)}
           required
         />

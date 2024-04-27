@@ -18,7 +18,7 @@ const CheckoutPage = () => {
       companyName: "",
       address: "",
       streetAddress: "",
-      city: "",
+      cityOrTown: "",
       phoneNumber: "",
       email: "",
     },

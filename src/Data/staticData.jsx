@@ -374,3 +374,60 @@ export const featuresSectionData = [
     id: uuid(),
   },
 ];
+
+export const billingInputsData = [
+  {
+    translationKey: "firstName",
+    label: "First Name",
+    name: "firstName",
+    required: true,
+    id: uuid(),
+  },
+  {
+    translationKey: "companyName",
+    label: "Company Name",
+    name: "companyName",
+    id: uuid(),
+  },
+  {
+    translationKey: "streetAddress",
+    label: "Street Address",
+    name: "streetAddress",
+    required: true,
+    autoComplete: true,
+    id: uuid(),
+  },
+  {
+    translationKey: "apartment",
+    label: "Apartment, floor, etc. (optional)",
+    name: "address",
+    autoComplete: true,
+    id: uuid(),
+  },
+  {
+    translationKey: "townOrCity",
+    label: "Town/City",
+    name: "city",
+    required: true,
+    autoComplete: true,
+    id: uuid(),
+  },
+  {
+    translationKey: "phoneNumber",
+    label: "Phone Number",
+    name: "phoneNumber",
+    required: true,
+    type: "tel",
+    autoComplete: true,
+    id: uuid(),
+  },
+  {
+    translationKey: "email",
+    label: "Email Address",
+    name: "email",
+    required: true,
+    type: "email",
+    autoComplete: true,
+    id: uuid(),
+  },
+];

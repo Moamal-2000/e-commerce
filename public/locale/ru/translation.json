@@ -18,11 +18,6 @@
     "signUp": "Регистрация"
   },
 
-  "searchProductsInput": {
-    "placeholder": "Что вы ищете?",
-    "searchButtonTitle": "Поиск"
-  },
-
   "navTools": {
     "favorite": "Избранное",
     "cart": "Корзина",
@@ -412,7 +407,8 @@
 
   "tooltips": {
     "scrollToTop": "пролистать наверх",
-    "repoStarsForks": "репозиторий веб-сайта"
+    "repoStarsForks": "репозиторий веб-сайта",
+    "searchButton": "Поиск"
   },
 
   "inputsPlaceholders": {
@@ -425,17 +421,25 @@
     "address": "Пример: Кингстон, 5236, США.",
     "currentPass": "Текущий пароль",
     "confirmPass": "Подтвердите пароль",
-    "newPass": "Новый пароль"
+    "newPass": "Новый пароль",
+    "couponExample": "Пример: SAVE20",
+    "fullName": "Полное имя",
+    "emailOrPhone": "Электронная почта или номер телефона",
+    "password": "Пароль"
   },
 
   "inputsLabels": {
     "firstName": "Имя",
+    "lastName": "фамилия",
+    "email": "Электронная почта",
     "companyName": "Название компании",
     "streetAddress": "Улица, дом",
     "apartment": "Квартира, этаж (необязательно)",
     "townOrCity": "Город",
     "phoneNumber": "Номер телефона",
     "emailAddress": "Адрес электронной почты",
-    "saveThisInfo": "Сохранить эту информацию для быстрого оформления заказа в следующий раз"
+    "saveThisInfo": "Сохранить эту информацию для быстрого оформления заказа в следующий раз",
+    "passwordChanges": "изменение пароля",
+    "address": "Адрес"
   }
 }

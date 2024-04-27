@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import EditProfileInput from "./EditProfileInput";
 import s from "./EditProfileInputs.module.scss";
@@ -11,13 +12,14 @@ const EditProfileInputs = () => {
   const [lastName, setLastName] = useState(firstLastUserName[1]);
   const [emailOrPhoneState, setEmailOrPhoneState] = useState(emailOrPhone);
   const [newPassword, setNewPassword] = useState("");
+  const { t } = useTranslation();
 
   return (
     <section className={s.inputs}>
       <section className={s.wrapper}>
         <EditProfileInput
           inputData={{
-            label: "First Name",
+            label: t("inputsLabels.firstName"),
             name: "firstName",
             value: firstName,
             setValue: setFirstName,
@@ -26,7 +28,7 @@ const EditProfileInputs = () => {
 
         <EditProfileInput
           inputData={{
-            label: "Last Name",
+            label: t("inputsLabels.lastName"),
             name: "lastName",
             value: lastName,
             setValue: setLastName,
@@ -35,7 +37,7 @@ const EditProfileInputs = () => {
 
         <EditProfileInput
           inputData={{
-            label: "Email",
+            label: t("inputsLabels.email"),
             name: "changeEmail",
             value: emailOrPhoneState,
             setValue: setEmailOrPhoneState,
@@ -45,9 +47,9 @@ const EditProfileInputs = () => {
 
         <EditProfileInput
           inputData={{
-            label: "Address",
+            label: t("inputsLabels.address"),
             name: "address",
-            placeholder: "EX Kingston, 5236, United State",
+            placeholder: t("inputsPlaceholders.address"),
           }}
         />
       </section>
@@ -56,17 +58,17 @@ const EditProfileInputs = () => {
         <EditProfileInput
           inputData={{
             type: "password",
-            label: "Password Changes",
+            label: t("inputsLabels.passwordChanges"),
             name: "currentPass",
-            placeholder: "Current Password",
+            placeholder: t("inputsPlaceholders.currentPass"),
           }}
         />
 
         <EditProfileInput
           inputData={{
             type: "password",
-            name: "newPass",
-            placeholder: "New Password",
+            label: t("inputsPlaceholders.newPass"),
+            placeholder: t("inputsPlaceholders.newPass"),
             value: newPassword,
             setValue: setNewPassword,
           }}
@@ -75,8 +77,8 @@ const EditProfileInputs = () => {
         <EditProfileInput
           inputData={{
             type: "password",
-            name: "confirmPass",
-            placeholder: "Confirm New Password",
+            label: t("inputsPlaceholders.confirmPass"),
+            placeholder: t("inputsPlaceholders.confirmPass"),
           }}
         />
       </section>

@@ -18,11 +18,6 @@
     "signUp": "تسجيل الدخول"
   },
 
-  "searchProductsInput": {
-    "placeholder": "ماذا تبحث عنه؟",
-    "searchButtonTitle": "بحث"
-  },
-
   "navTools": {
     "favorite": "المفضلة",
     "cart": "السلة",
@@ -412,7 +407,8 @@
 
   "tooltips": {
     "scrollToTop": "تنقل للأعلى",
-    "repoStarsForks": "مستودع الموقع"
+    "repoStarsForks": "مستودع الموقع",
+    "searchButton": "بحث"
   },
 
   "inputsPlaceholders": {
@@ -425,17 +421,25 @@
     "address": "قطر, الدوحة, المرخية",
     "currentPass": "كلمة المرور الحالية",
     "confirmPass": "تأكيد كلمة المرور",
-    "newPass": "كلمة المرور الجديدة"
+    "newPass": "كلمة المرور الجديدة",
+    "couponExample": "مثال SAVE20",
+    "fullName": "الاسم الكامل",
+    "emailOrPhone": "البريد الالكتروني او رقم الهاتف",
+    "password": "كلمة المرور"
   },
 
   "inputsLabels": {
     "firstName": "الاسم الأول",
+    "lastName": "الاسم الأخير",
+    "email": "البريد الإلكتروني",
     "companyName": "اسم الشركة",
     "streetAddress": "عنوان الشارع",
     "apartment": "الشقة، الطابق، إلخ (اختياري)",
     "townOrCity": "المدينة/البلدة",
     "phoneNumber": "رقم الهاتف",
     "emailAddress": "عنوان البريد الإلكتروني",
-    "saveThisInfo": "حفظ هذه المعلومات للسرعة في الدفع في المرة القادمة"
+    "saveThisInfo": "حفظ هذه المعلومات للسرعة في الدفع في المرة القادمة",
+    "passwordChanges": "تغيير كلمة المرور",
+    "address": "العنوان"
   }
 }

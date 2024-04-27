@@ -18,11 +18,6 @@
     "signUp": "Sign Up"
   },
 
-  "searchProductsInput": {
-    "placeholder": "What are you looking for?",
-    "searchButtonTitle": "Search"
-  },
-
   "navTools": {
     "favorite": "Favorites",
     "cart": "Cart",
@@ -412,7 +407,8 @@
 
   "tooltips": {
     "scrollToTop": "Scroll to top",
-    "repoStarsForks": "website's repository"
+    "repoStarsForks": "website's repository",
+    "searchButton": "Search"
   },
 
   "inputsPlaceholders": {
@@ -426,17 +422,24 @@
     "currentPass": "Current password",
     "confirmPass": "Confirm password",
     "newPass": "New password",
-    "couponExample": "Example SAVE20"
+    "couponExample": "Example SAVE20",
+    "fullName": "Full Name",
+    "emailOrPhone": "Email or Phone Number",
+    "password": "Password"
   },
 
   "inputsLabels": {
     "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
     "companyName": "Company Name",
     "streetAddress": "Street Address",
     "apartment": "Apartment, floor, etc. (optional)",
     "townOrCity": "Town/City",
     "phoneNumber": "Phone Number",
     "emailAddress": "Email Address",
-    "saveThisInfo": "Save this information for faster check-out next time"
+    "saveThisInfo": "Save this information for faster check-out next time",
+    "passwordChanges": "Password changes",
+    "address": "Address"
   }
 }

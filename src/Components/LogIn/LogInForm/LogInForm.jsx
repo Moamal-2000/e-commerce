@@ -56,13 +56,13 @@ const LogInForm = () => {
         <input
           type="text"
           name="emailOrPhone"
-          placeholder="Email or Phone Number"
+          placeholder={t("inputsPlaceholders.emailOrPhone")}
           onChange={(e) => (emailOrPhone.current = e.target.value)}
         />
         <input
           type="password"
           name="Password"
-          placeholder="Password"
+          placeholder={t("inputsPlaceholders.password")}
           onChange={(e) => (password.current = e.target.value)}
         />
       </div>

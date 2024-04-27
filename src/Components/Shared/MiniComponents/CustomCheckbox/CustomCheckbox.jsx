@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { updateProductsState } from "../../../../Features/productsSlice";
 import SvgIcon from "../SvgIcon";
@@ -6,6 +7,7 @@ import s from "./CustomCheckbox.module.scss";
 const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
   const { saveBillingInfoToLocal } = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   function handleCheckboxChange(e) {
     const isInputChecked = e.target.checked;
@@ -42,9 +44,7 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
         <SvgIcon name="checked" />
       </div>
 
-      <label htmlFor="save-info">
-        Save this information for faster check-out next time
-      </label>
+      <label htmlFor="save-info">{t("inputsLabels.saveThisInfo")}</label>
     </div>
   );
 };

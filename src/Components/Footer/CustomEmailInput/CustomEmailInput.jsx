@@ -18,7 +18,7 @@ const CustomEmailInput = () => {
     <form className={s.input} onSubmit={sendEmail}>
       <input
         type="email"
-        placeholder={t("footer.section1.enterEmailPlaceholder")}
+        placeholder={t("inputsPlaceholders.enterYourEmail")}
         id="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}

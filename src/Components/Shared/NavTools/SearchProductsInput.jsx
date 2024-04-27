@@ -91,11 +91,11 @@ const SearchProductsInput = () => {
         type="text"
         id="search-input"
         autoComplete="off"
-        placeholder={t("searchProductsInput.placeholder")}
+        placeholder={t("inputsPlaceholders.whatYouLookingFor")}
         onChange={(e) => handleSearchOnChange(e)}
       />
 
-      <button type="submit" title={t("searchProductsInput.searchButtonTitle")}>
+      <button type="submit" title={t("tooltips.searchButton")}>
         <SvgIcon name="search" />
       </button>
     </form>

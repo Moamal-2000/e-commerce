@@ -10,7 +10,7 @@ const AddCoupon = () => {
     <div className={s.couponContainer}>
       <input
         type="text"
-        placeholder="Example SAVE20"
+        placeholder={t("inputsPlaceholders.couponExample")}
         onChange={(e) => (couponInputRef.current = e.target.value)}
       />
 
