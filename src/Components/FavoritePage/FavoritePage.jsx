@@ -26,7 +26,7 @@ const FavoritePage = () => {
 
           <section className={s.forYou}>
             <header>
-              <SectionTitle eventName="Just For You" type={2} />
+              <SectionTitle eventName={t("sectionTitles.forYou")} type={2} />
 
               <Link to="/products">{t("buttons.seeAll")}</Link>
             </header>

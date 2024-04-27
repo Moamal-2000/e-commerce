@@ -357,7 +357,8 @@
     "featuredSection": {
       "title": "متميز",
       "newArrival": "المنتجات القادمة"
-    }
+    },
+    "forYou": "من اجلك"
   },
 
   "categoriesData": {
@@ -447,5 +448,14 @@
     "createAccount": "انشاء حساب",
     "enterDetails": "ادخل بياناتك تحت",
     "login": "تسجيل الدخول"
+  },
+
+  "favoritePage": {
+    "title": "المفضلة ({{numberOfProducts}})"
+  },
+
+  "connectionLabel": {
+    "restoredInternet": "تم استعادة الاتصال بالانترنت.",
+    "noInternetAvailable": "لا يوجد اتصال بالانترنت."
   }
 }

@@ -357,7 +357,8 @@
     "featuredSection": {
       "title": "Featured",
       "newArrival": "New Arrival"
-    }
+    },
+    "forYou": "Just For You"
   },
 
   "categoriesData": {
@@ -447,5 +448,14 @@
     "createAccount": "Create an account",
     "enterDetails": "Enter your details below",
     "login": "Log in to Exclusive"
+  },
+
+  "favoritePage": {
+    "title": "Favorites ({{numberOfProducts}})"
+  },
+
+  "connectionLabel": {
+    "restoredInternet": "The connection has been restored",
+    "noInternetAvailable": "No internet connection available."
   }
 }

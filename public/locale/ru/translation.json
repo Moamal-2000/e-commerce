@@ -357,7 +357,8 @@
     "featuredSection": {
       "title": "Рекомендуемые",
       "newArrival": "Новое поступление"
-    }
+    },
+    "forYou": "Для вас"
   },
 
   "categoriesData": {
@@ -447,5 +448,14 @@
     "createAccount": "Создайте аккаунт",
     "enterDetails": "Введите введите свои данные",
     "login": "Авторизоваться"
+  },
+
+  "favoritePage": {
+    "title": "Избранное ({{numberOfProducts}})"
+  },
+
+  "connectionLabel": {
+    "restoredInternet": "Соединение восстановлено",
+    "noInternetAvailable": "Нет подключения к Интернету."
   }
 }

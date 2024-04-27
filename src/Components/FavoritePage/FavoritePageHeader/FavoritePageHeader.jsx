@@ -10,7 +10,8 @@ const FavoritePageHeader = () => {
   );
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const lengthOfFavorites = favoritesProducts.length;
+  const numberOfProducts = favoritesProducts.length;
+  const labelTrans = t("favoritePage.title", {numberOfProducts});
 
   function moveAllToCart() {
     const uniqueCartProducts = getUniqueArrayByObjectKey({
@@ -27,7 +28,7 @@ const FavoritePageHeader = () => {
 
   return (
     <header className={s.header}>
-      <label htmlFor="wishlist">Favorite ({lengthOfFavorites})</label>
+      <label htmlFor="wishlist">{labelTrans}</label>
 
       <button type="button" onClick={moveAllToCart}>
         {t("buttons.moveAllToBag")}
