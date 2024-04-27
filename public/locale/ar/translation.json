@@ -413,5 +413,29 @@
   "tooltips": {
     "scrollToTop": "تنقل للأعلى",
     "repoStarsForks": "مستودع الموقع"
+  },
+
+  "inputsPlaceholders": {
+    "whatYouLookingFor": "ما الذي تبحث عنه؟",
+    "enterYourEmail": "ادخل بريدك الالكتروني",
+    "yourName": "اسمك",
+    "yourEmail": "بريدك الالكتروني",
+    "yourMessage": "رسالتك",
+    "yourPhone": "رقم الهاتف",
+    "address": "قطر, الدوحة, المرخية",
+    "currentPass": "كلمة المرور الحالية",
+    "confirmPass": "تأكيد كلمة المرور",
+    "newPass": "كلمة المرور الجديدة"
+  },
+
+  "inputsLabels": {
+    "firstName": "الاسم الأول",
+    "companyName": "اسم الشركة",
+    "streetAddress": "عنوان الشارع",
+    "apartment": "الشقة، الطابق، إلخ (اختياري)",
+    "townOrCity": "المدينة/البلدة",
+    "phoneNumber": "رقم الهاتف",
+    "emailAddress": "عنوان البريد الإلكتروني",
+    "saveThisInfo": "حفظ هذه المعلومات للسرعة في الدفع في المرة القادمة"
   }
 }

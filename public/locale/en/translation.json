@@ -413,5 +413,30 @@
   "tooltips": {
     "scrollToTop": "Scroll to top",
     "repoStarsForks": "website's repository"
+  },
+
+  "inputsPlaceholders": {
+    "whatYouLookingFor": "What are you looking for?",
+    "enterYourEmail": "Enter your email",
+    "yourName": "Your name",
+    "yourEmail": "Your email",
+    "yourMessage": "Your message",
+    "yourPhone": "Your phone",
+    "address": "Ex Kingston, 5236, United State",
+    "currentPass": "Current password",
+    "confirmPass": "Confirm password",
+    "newPass": "New password",
+    "couponExample": "Example SAVE20"
+  },
+
+  "inputsLabels": {
+    "firstName": "First Name",
+    "companyName": "Company Name",
+    "streetAddress": "Street Address",
+    "apartment": "Apartment, floor, etc. (optional)",
+    "townOrCity": "Town/City",
+    "phoneNumber": "Phone Number",
+    "emailAddress": "Email Address",
+    "saveThisInfo": "Save this information for faster check-out next time"
   }
 }

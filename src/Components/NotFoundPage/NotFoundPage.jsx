@@ -18,7 +18,7 @@ const NotFoundPage = () => {
     : t("notFoundPage.description");
   const notFoundMessage = t("notFoundPage.notFoundMessage");
   const backToHomeText = t("buttons.backToHome");
-  const historyText = t("notFoundPage.history");
+  const historyText = t("history.404Error");
 
   return (
     <>

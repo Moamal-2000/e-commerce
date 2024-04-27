@@ -413,5 +413,29 @@
   "tooltips": {
     "scrollToTop": "пролистать наверх",
     "repoStarsForks": "репозиторий веб-сайта"
+  },
+
+  "inputsPlaceholders": {
+    "whatYouLookingFor": "Что вы ищете?",
+    "enterYourEmail": "Введите введите свою электронную почту",
+    "yourName": "Ваше имя",
+    "yourEmail": "Ваша электронная почта",
+    "yourMessage": "Ваше сообщение",
+    "yourPhone": "Ваш телефон",
+    "address": "Пример: Кингстон, 5236, США.",
+    "currentPass": "Текущий пароль",
+    "confirmPass": "Подтвердите пароль",
+    "newPass": "Новый пароль"
+  },
+
+  "inputsLabels": {
+    "firstName": "Имя",
+    "companyName": "Название компании",
+    "streetAddress": "Улица, дом",
+    "apartment": "Квартира, этаж (необязательно)",
+    "townOrCity": "Город",
+    "phoneNumber": "Номер телефона",
+    "emailAddress": "Адрес электронной почты",
+    "saveThisInfo": "Сохранить эту информацию для быстрого оформления заказа в следующий раз"
   }
 }
