@@ -9,7 +9,7 @@ const IntroductionSlides = () => {
   const { t } = useTranslation();
 
   return introductionSliderData.map(
-    ({ productName, productImg, logoImg, discountText, id }) => {
+    ({ productName, productImg, logoImg, id }) => {
       return (
         <SwiperSlide dir="ltr" className={s.slide} key={id}>
           <img src={productImg} alt="product preview" />

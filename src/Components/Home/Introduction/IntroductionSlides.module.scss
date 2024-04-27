@@ -109,7 +109,7 @@
   position: absolute;
   left: 0;
   bottom: -5px;
-  width: calc(100% - 20px - 12px);
+  width: 100%;
   height: 2px;
   background-color: var(--secondary-white);
   transition: height .3s, opacity .2s .2s;
@@ -128,5 +128,23 @@
   .shopNow>svg {
     margin-left: 6px;
     transform: scaleY(1);
+  }
+}
+
+// rtl direction styles
+[dir=rtl] .discount {
+  width: 420px;
+}
+
+@include medium {
+  [dir=rtl] .discount {
+    width: 340px;
+  }
+}
+
+// russia styles
+@include medium {
+  [lang=ru] .discount {
+  width: 320px;
   }
 }

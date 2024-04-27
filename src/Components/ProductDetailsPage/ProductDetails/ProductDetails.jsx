@@ -13,9 +13,9 @@ import ProductSizes from "./ProductSizes";
 const ProductDetails = ({ data }) => {
   const { previewImg, isZoomInPreviewActive, loadingProductDetails } =
     useSelector((state) => state.global);
-  const activeClass = isZoomInPreviewActive ? s.active : "";
   const zoomInImgRef = useRef();
   const isWebsiteOnline = useOnlineStatus();
+  const activeClass = isZoomInPreviewActive ? s.active : "";
 
   function handleZoomInEffect(e) {
     const imgRect = e.target.getClientRects()[0];
@@ -29,24 +29,26 @@ const ProductDetails = ({ data }) => {
 
   return (
     <>
-      <section className={s.detailsSection} id="details-section">
-        <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
+      {!loadingProductDetails && isWebsiteOnline && (
+        <section className={s.detailsSection} id="details-section">
+          <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
-        <section className={s.details}>
-          <div className={`${s.zoomInPreview} ${activeClass}`}>
-            <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
-          </div>
+          <section className={s.details}>
+            <div className={`${s.zoomInPreview} ${activeClass}`}>
+              <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
+            </div>
 
-          <ProductFirstInfos data={data} />
+            <ProductFirstInfos data={data} />
 
-          <div className={s.horizontalLine} />
+            <div className={s.horizontalLine} />
 
-          <ProductColorsSection data={data} />
-          <ProductSizes data={data} />
-          <ProductDealingControls data={data} />
-          <ProductFeatures />
+            <ProductColorsSection data={data} />
+            <ProductSizes data={data} />
+            <ProductDealingControls data={data} />
+            <ProductFeatures />
+          </section>
         </section>
-      </section>
+      )}
 
       {(loadingProductDetails || !isWebsiteOnline) && (
         <SkeletonProductDetails />
