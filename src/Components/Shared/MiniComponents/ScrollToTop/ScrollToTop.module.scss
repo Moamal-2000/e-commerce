@@ -13,7 +13,7 @@
   bottom: 30px;
   right: 30px;
   pointer-events: all;
-  transition: opacity .25s ease, background-color .25s, border-radius .25s .1s;
+  transition: opacity .3s, background-color .25s, border-radius .25s .1s;
 
   &.hide:not(:focus-visible) {
     opacity: 0;

@@ -35,7 +35,7 @@ const RepoStarsForks = () => {
         <ToolTip
           left="77px"
           bottom="40px"
-          content={t("footer.repoStarsForks.tooltip")}
+          content={t("tooltips.repoStarsForks")}
         />
       </a>
     )

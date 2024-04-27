@@ -226,9 +226,6 @@
     "copyRightsText": {
       "designedBy": "تم تصميم الموقع بواسطة",
       "codedBy": "وبرمج بواسطة"
-    },
-    "repoStarsForks": {
-      "tooltip": "مستودع الموقع"
     }
   },
 
@@ -395,11 +392,11 @@
   },
 
   "featuredSection": {
-    "horizontalPoster": {
+    "mediumPoster": {
       "title": "بلايستيشن 5",
       "description": "الإصدار الأسود والأبيض من بلايستيشن 5 سيتوفر للبيع قريباً."
     },
-    "mediumPoster": {
+    "horizontalPoster": {
       "title": "مجموعات النساء",
       "description": "مجموعات المرأة المميزة التي تعطيك شعورًا آخر."
     },
@@ -411,5 +408,10 @@
       "title": "عطر",
       "description": "GUCCI INTENSE OUD EDP"
     }
+  },
+
+  "tooltips": {
+    "scrollToTop": "تنقل للأعلى",
+    "repoStarsForks": "مستودع الموقع"
   }
 }

@@ -226,9 +226,6 @@
     "copyRightsText": {
       "designedBy": "Website designed by",
       "codedBy": "and coded by"
-    },
-    "repoStarsForks": {
-      "tooltip": "website's repository"
     }
   },
 
@@ -395,11 +392,11 @@
   },
 
   "featuredSection": {
-    "horizontalPoster": {
+    "mediumPoster": {
       "title": "PlayStation 5",
       "description": "Black and White version of the PS5 coming out on sale."
     },
-    "mediumPoster": {
+    "horizontalPoster": {
       "title": "Women’s Collections",
       "description": "Featured woman collections that give you another vibe."
     },
@@ -411,5 +408,10 @@
       "title": "Perfume",
       "description": "GUCCI INTENSE OUD EDP"
     }
+  },
+
+  "tooltips": {
+    "scrollToTop": "Scroll to top",
+    "repoStarsForks": "website's repository"
   }
 }
