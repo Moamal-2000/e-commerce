@@ -79,8 +79,8 @@ const SignUpForm = () => {
 
   return (
     <form action="GET" className={s.form} onSubmit={signUp}>
-      <h2>Create an account</h2>
-      <p>Enter your details below</p>
+      <h2>{t("loginSignUpPage.createAccount")}</h2>
+      <p>{t("loginSignUpPage.enterDetails")}</p>
 
       <div className={s.inputs}>
         <input

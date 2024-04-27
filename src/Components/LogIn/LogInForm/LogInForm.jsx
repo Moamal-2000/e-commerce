@@ -49,8 +49,9 @@ const LogInForm = () => {
 
   return (
     <form className={s.form} onSubmit={login}>
-      <h2>Log in to Exclusive</h2>
-      <p>Enter your details below</p>
+      <h2></h2>
+      <h2>{t("loginSignUpPage.login")}</h2>
+      <p>{t("loginSignUpPage.enterDetails")}</p>
 
       <div className={s.inputs}>
         <input

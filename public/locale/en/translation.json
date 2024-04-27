@@ -441,5 +441,11 @@
     "saveThisInfo": "Save this information for faster check-out next time",
     "passwordChanges": "Password changes",
     "address": "Address"
+  },
+
+  "loginSignUpPage": {
+    "createAccount": "Create an account",
+    "enterDetails": "Enter your details below",
+    "login": "Log in to Exclusive"
   }
 }

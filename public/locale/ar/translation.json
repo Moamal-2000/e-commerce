@@ -441,5 +441,11 @@
     "saveThisInfo": "حفظ هذه المعلومات للسرعة في الدفع في المرة القادمة",
     "passwordChanges": "تغيير كلمة المرور",
     "address": "العنوان"
+  },
+
+  "loginSignUpPage": {
+    "createAccount": "انشاء حساب",
+    "enterDetails": "ادخل بياناتك تحت",
+    "login": "تسجيل الدخول"
   }
 }
