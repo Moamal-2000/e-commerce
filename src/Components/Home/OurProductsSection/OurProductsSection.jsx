@@ -7,7 +7,7 @@ import s from "./OurProductsSection.module.scss";
 
 const OurProductsSection = () => {
   const { t } = useTranslation();
-  const ourProducts = "SectionTitles.ourProducts";
+  const ourProducts = "sectionTitles.ourProducts";
 
   return (
     <section className={s.ourProductsSection}>

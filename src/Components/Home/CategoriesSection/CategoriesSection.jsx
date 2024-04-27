@@ -5,7 +5,7 @@ import CategoriesSlider from "./CategoriesSlider";
 
 const CategoriesSection = () => {
   const { t } = useTranslation();
-  const categoriesSection = "SectionTitles.categoriesSection";
+  const categoriesSection = "sectionTitles.categoriesSection";
 
   return (
     <section className={s.categoriesSection}>

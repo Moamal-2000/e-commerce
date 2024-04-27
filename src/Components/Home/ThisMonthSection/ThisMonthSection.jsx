@@ -7,7 +7,7 @@ import s from "./ThisMonthSection.module.scss";
 
 const ThisMonthSection = () => {
   const { t } = useTranslation();
-  const thisMonthSection = "SectionTitles.thisMonthSection";
+  const thisMonthSection = "sectionTitles.thisMonthSection";
 
   function filterThisMonthProducts() {
     const filteredProducts = productsData.filter(
