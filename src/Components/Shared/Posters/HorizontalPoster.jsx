@@ -12,7 +12,7 @@ const HorizontalPoster = ({ title, description, posterUrl }) => {
   });
 
   return (
-    <div className={s.HorPoster} ref={horPosterRef}>
+    <div className={s.HorPoster} ref={horPosterRef} dir="ltr">
       <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>

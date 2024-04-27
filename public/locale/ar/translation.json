@@ -392,5 +392,24 @@
     "notBuiltTabTitle": "الصفحة غير مبنية",
     "notBuiltDescription": "عذرًا، الصفحة التي تبحث عنها غير مبنية بعد.",
     "notFoundMessage": "404 الصفحة غير موجودة"
+  },
+
+  "featuredSection": {
+    "horizontalPoster": {
+      "title": "بلايستيشن 5",
+      "description": "الإصدار الأسود والأبيض من بلايستيشن 5 سيتوفر للبيع قريباً."
+    },
+    "mediumPoster": {
+      "title": "مجموعات النساء",
+      "description": "مجموعات المرأة المميزة التي تعطيك شعورًا آخر."
+    },
+    "smallPoster1": {
+      "title": "السماعات",
+      "description": "سماعات لاسلكية من أمازون"
+    },
+    "smallPoster2": {
+      "title": "عطر",
+      "description": "GUCCI INTENSE OUD EDP"
+    }
   }
 }

@@ -6,7 +6,7 @@ const SmallPoster = ({ title, description, posterUrl }) => {
   const { t } = useTranslation();
 
   return (
-    <div className={s.smallPoster}>
+    <div className={s.smallPoster} dir="ltr">
       <img src={posterUrl} alt="product's poster" />
       <div className={s.content}>
         <b>{title}</b>

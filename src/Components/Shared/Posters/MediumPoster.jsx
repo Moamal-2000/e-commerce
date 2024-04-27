@@ -12,7 +12,7 @@ const MediumPoster = ({ title, description, posterUrl }) => {
   });
 
   return (
-    <div className={s.midPoster} ref={midPosterRef}>
+    <div className={s.midPoster} ref={midPosterRef} dir="ltr">
       <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>

@@ -392,5 +392,24 @@
     "notBuiltTabTitle": "Page Not Built",
     "notBuiltDescription": "Sorry, the page you're looking for is not built yet.",
     "notFoundMessage": "404 Not Found"
+  },
+
+  "featuredSection": {
+    "horizontalPoster": {
+      "title": "PlayStation 5",
+      "description": "Black and White version of the PS5 coming out on sale."
+    },
+    "mediumPoster": {
+      "title": "Women’s Collections",
+      "description": "Featured woman collections that give you another vibe."
+    },
+    "smallPoster1": {
+      "title": "Speakers",
+      "description": "Amazon wireless speakers"
+    },
+    "smallPoster2": {
+      "title": "Perfume",
+      "description": "GUCCI INTENSE OUD EDP"
+    }
   }
 }

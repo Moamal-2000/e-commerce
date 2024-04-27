@@ -392,5 +392,24 @@
     "notBuiltTabTitle": "Страница не построена",
     "notBuiltDescription": "Извините, страница, которую вы ищете, еще не построена.",
     "notFoundMessage": "404 Страница не найдена"
+  },
+
+  "featuredSection": {
+    "horizontalPoster": {
+      "title": "PlayStation 5",
+      "description": "Черно-белая версия PlayStation 5 скоро появится в продаже."
+    },
+    "mediumPoster": {
+      "title": "Женские коллекции",
+      "description": "Популярные женские коллекции, придающие вашему образу особую атмосферу."
+    },
+    "smallPoster1": {
+      "title": "Колонки",
+      "description": "Беспроводные колонки Amazon"
+    },
+    "smallPoster2": {
+      "title": "Парфюм",
+      "description": "GUCCI INTENSE OUD EDP"
+    }
   }
 }
