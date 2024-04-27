@@ -317,19 +317,16 @@
     },
     "featuresSectionData": {
       "car": {
-        "iconImg": "car.png",
         "iconAlt": "سيارة",
         "title": "توصيل سريع ومجاني",
         "description": "توصيل مجاني لجميع الطلبات بأكثر من 140 دولار"
       },
       "headphone": {
-        "iconImg": "headphone.png",
         "iconAlt": "سماعة",
         "title": "خدمة العملاء على مدار الساعة 24/7",
         "description": "دعم صديق للعملاء على مدار الساعة"
       },
       "correctSign": {
-        "iconImg": "correctSign.png",
         "iconAlt": "علامة صح",
         "title": "ضمان استرداد الأموال",
         "description": "نقوم بإرجاع الأموال خلال 30 يومًا"
@@ -402,7 +399,7 @@
     },
     "smallPoster2": {
       "title": "عطر",
-      "description": "GUCCI INTENSE OUD EDP"
+      "description": "عطر غوتشي"
     }
   },
 
