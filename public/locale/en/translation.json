@@ -478,6 +478,15 @@
   },
 
   "accountPage": {
-    "editProfile": "Edit Your Profile"
+    "editProfile": "Edit Your Profile",
+    "accountMenuSection": {
+      "manageMyAccount": "Manage My Account",
+      "myOrders": "My Orders",
+      "profile": "My Profile",
+      "addressBook": "Address Book",
+      "paymentOptions": "My Payment Options",
+      "returns": "My Returns",
+      "cancellations": "My Cancellations"
+    }
   }
 }

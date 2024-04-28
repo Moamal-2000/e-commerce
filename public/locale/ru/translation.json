@@ -478,6 +478,15 @@
   },
 
   "accountPage": {
-    "editProfile": "Редактировать профиль"
+    "editProfile": "Редактировать профиль",
+    "accountMenuSection": {
+      "manageMyAccount": "Управление моим аккаунтом",
+      "myOrders": "Мои заказы",
+      "profile": "Мой профиль",
+      "addressBook": "Адресная книга",
+      "paymentOptions": "Мои варианты оплаты",
+      "returns": "Мои возвраты",
+      "cancellations": "Мои отмены"
+    }
   }
 }

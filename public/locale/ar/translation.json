@@ -475,6 +475,15 @@
   },
 
   "accountPage": {
-    "editProfile": "تعديل بيانات الحساب"
+    "editProfile": "تعديل بيانات الحساب",
+    "accountMenuSection": {
+      "manageMyAccount": "إدارة حسابي",
+      "myOrders": "طلباتي",
+      "profile": "ملفي",
+      "addressBook": "دليل العناوين",
+      "paymentOptions": "خيارات الدفع الخاصة بي",
+      "returns": "إرجاعاتي",
+      "cancellations": "إلغاءاتي"
+    }
   }
 }
