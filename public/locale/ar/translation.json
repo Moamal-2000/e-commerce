@@ -503,5 +503,7 @@
       "total": "الإجمالي",
       "processToCheckout": "الانتقال إلى الخروج"
     }
-  }
+  },
+
+  "wishlist": "قائمة الرغبات ({{numberOfWishlist}})"
 }

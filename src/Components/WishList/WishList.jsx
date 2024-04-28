@@ -11,7 +11,7 @@ import WishProducts from "./WishProducts/WishProducts";
 
 const WishList = () => {
   const { wishList, cartProducts } = useSelector((state) => state.products);
-  const lengthOfWishList = wishList.length;
+  const numberOfWishlist = wishList.length;
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -37,7 +37,7 @@ const WishList = () => {
         <main className={s.wishListPage} id="wishlist-page">
           <section className={s.wishList}>
             <header>
-              <label htmlFor="wishlist">WishList ({lengthOfWishList})</label>
+              <label htmlFor="wishlist">{t("wishlist", {numberOfWishlist})}</label>
 
               <button type="button" onClick={moveAllToCart}>
                 {t("buttons.moveAllToBag")}
@@ -49,7 +49,7 @@ const WishList = () => {
 
           <section className={s.forYou}>
             <header>
-              <SectionTitle eventName="Just For You" type={2} />
+              <SectionTitle eventName={t("sectionTitles.forYou")} type={2} />
 
               <Link to="/products">{t("buttons.seeAll")}</Link>
             </header>

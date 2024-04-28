@@ -506,5 +506,7 @@
       "total": "Всего",
       "processToCheckout": "Перейти к оформлению заказа"
     }
-  }
+  },
+
+  "wishlist": "Избранное ({{numberOfWishlist}})"
 }

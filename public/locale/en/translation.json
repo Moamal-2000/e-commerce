@@ -506,5 +506,7 @@
       "total": "Total",
       "processToCheckout": "Proceed to Checkout"
     }
-  }
+  },
+
+  "wishlist": "Wishlist ({{numberOfWishlist}})"
 }
