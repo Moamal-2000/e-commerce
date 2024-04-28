@@ -409,7 +409,8 @@
   "tooltips": {
     "scrollToTop": "تنقل للأعلى",
     "repoStarsForks": "مستودع الموقع",
-    "searchButton": "بحث"
+    "searchButton": "بحث",
+    "remove": "حذف"
   },
 
   "inputsPlaceholders": {
@@ -484,6 +485,15 @@
       "paymentOptions": "خيارات الدفع الخاصة بي",
       "returns": "إرجاعاتي",
       "cancellations": "إلغاءاتي"
+    }
+  },
+
+  "cartPage": {
+    "productsTable": {
+      "product": "المنتج",
+      "price": "السعر",
+      "quantity": "الكمية",
+      "subtotal": "المجموع"
     }
   }
 }

@@ -412,7 +412,8 @@
   "tooltips": {
     "scrollToTop": "пролистать наверх",
     "repoStarsForks": "репозиторий веб-сайта",
-    "searchButton": "Поиск"
+    "searchButton": "Поиск",
+    "remove": "Удалить"
   },
 
   "inputsPlaceholders": {
@@ -487,6 +488,15 @@
       "paymentOptions": "Мои варианты оплаты",
       "returns": "Мои возвраты",
       "cancellations": "Мои отмены"
+    }
+  },
+
+  "cartPage": {
+    "productsTable": {
+      "product": "Продукт",
+      "price": "Цена",
+      "quantity": "Количество",
+      "subtotal": "Итоговая сумма"
     }
   }
 }
