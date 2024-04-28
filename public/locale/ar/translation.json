@@ -507,5 +507,8 @@
     }
   },
 
-  "wishlist": "قائمة الرغبات ({{numberOfWishlist}})"
+  "wishlist": "قائمة الرغبات ({{numberOfWishlist}})",
+  "cashOnDelivery": "الدفع عند الاستلام",
+  "bank": "البنك",
+  "billingDetails": "تفاصيل الفاتورة"
 }

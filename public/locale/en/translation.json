@@ -510,5 +510,8 @@
     }
   },
 
-  "wishlist": "Wishlist ({{numberOfWishlist}})"
+  "wishlist": "Wishlist ({{numberOfWishlist}})",
+  "cashOnDelivery": "Cash on Delivery",
+  "bank": "Bank",
+  "billingDetails": "Billing Details"
 }

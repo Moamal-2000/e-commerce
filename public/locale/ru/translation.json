@@ -510,5 +510,8 @@
     }
   },
 
-  "wishlist": "Избранное ({{numberOfWishlist}})"
+  "wishlist": "Избранное ({{numberOfWishlist}})",
+  "cashOnDelivery": "Оплата при доставке",
+  "bank": "Банк",
+  "billingDetails": "Детали выставления счета"
 }

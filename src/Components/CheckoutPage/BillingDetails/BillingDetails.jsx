@@ -1,11 +1,14 @@
+import { useTranslation } from "react-i18next";
 import CustomCheckbox from "../../Shared/MiniComponents/CustomCheckbox/CustomCheckbox";
 import s from "./BillingDetails.module.scss";
 import BillingInputs from "./BillingInputs";
 
 const BillingDetails = ({ inputsData: { billingValues, handleChange } }) => {
+  const { t } = useTranslation();
+
   return (
     <section className={s.billingDetailsSection}>
-      <h2>Billing Details</h2>
+      <h2>{t("billingDetails")}</h2>
 
       <BillingInputs inputsData={{ billingValues, handleChange }} />
 

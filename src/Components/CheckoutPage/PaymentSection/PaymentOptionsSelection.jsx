@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import PaymentCards from "./PaymentCards";
 import s from "./PaymentOptionsSelection.module.scss";
 
 const PaymentOptionsSelection = () => {
   const [paymentType, setPaymentType] = useState("bank");
+  const { t } = useTranslation();
 
   return (
     <div className={s.paymentOptions}>
@@ -17,7 +19,7 @@ const PaymentOptionsSelection = () => {
             checked
             onChange={(e) => setPaymentType(e.target.value)}
           />
-          <label htmlFor="bank-option">Bank</label>
+          <label htmlFor="bank-option">{t("bank")}</label>
         </div>
 
         <PaymentCards />
@@ -32,7 +34,7 @@ const PaymentOptionsSelection = () => {
             value="cash"
             onChange={(e) => setPaymentType(e.target.value)}
           />
-          <label htmlFor="cash-option">Cash on delivery</label>
+          <label htmlFor="cash-option">{t("cashOnDelivery")}</label>
         </div>
       </div>
     </div>
