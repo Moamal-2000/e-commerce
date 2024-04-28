@@ -167,7 +167,9 @@
     "hours": "Hours",
     "minutes": "Minutes",
     "seconds": "Seconds",
-    "reset": "Reset"
+    "reset": "Reset",
+    "welcome": "Welcome",
+    "cancel": "Cancel"
   },
 
   "history": {
@@ -473,5 +475,9 @@
         "email": "Email"
       }
     }
+  },
+
+  "accountPage": {
+    "editProfile": "Edit Your Profile"
   }
 }

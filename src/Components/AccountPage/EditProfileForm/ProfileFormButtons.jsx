@@ -7,7 +7,7 @@ const ProfileFormButtons = () => {
 
   return (
     <div className={s.buttons}>
-      <Link to="/">Cancel</Link>
+      <Link to="/">{t("common.cancel")}</Link>
       <button type="submit">{t("buttons.saveChanges")}</button>
     </div>
   );

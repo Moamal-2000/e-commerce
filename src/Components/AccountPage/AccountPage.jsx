@@ -23,7 +23,8 @@ const AccountPage = () => {
             <PagesHistory history={["/", t("nav.profile")]} />
 
             <p className={s.welcomeMessage}>
-              Welcome! <Link to="/profile">{loginInfo.username}</Link>
+              {t("common.welcome")}{"! "}
+              <Link to="/profile">{loginInfo.username}</Link>
             </p>
           </div>
 

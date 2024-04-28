@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { updateUserData } from "src/Features/userSlice";
 import {
@@ -14,6 +15,7 @@ import ProfileFormButtons from "./ProfileFormButtons";
 const EditProfileForm = () => {
   const { loginInfo } = useSelector((state) => state.user);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
   const formRef = useRef();
 
   function handleSubmit(e) {
@@ -56,7 +58,7 @@ const EditProfileForm = () => {
       className={s.profileForm}
       onSubmit={handleSubmit}
     >
-      <h2>Edit Your Profile</h2>
+      <h2>{t("accountPage.editProfile")}</h2>
       <EditProfileInputs />
       <ProfileFormButtons />
     </form>
