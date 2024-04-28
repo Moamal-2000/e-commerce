@@ -497,6 +497,14 @@
       "price": "Price",
       "quantity": "Quantity",
       "subtotal": "Subtotal"
+    },
+    "cartInfoMenu": {
+      "cartTotal": "Cart Total",
+      "subTotal": "Subtotal",
+      "shipping": "Shipping",
+      "free": "Free",
+      "total": "Total",
+      "processToCheckout": "Proceed to Checkout"
     }
   }
 }

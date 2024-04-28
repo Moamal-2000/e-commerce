@@ -494,6 +494,14 @@
       "price": "السعر",
       "quantity": "الكمية",
       "subtotal": "المجموع"
+    },
+    "cartInfoMenu": {
+      "cartTotal": "إجمالي العربة",
+      "subTotal": "المجموع الفرعي",
+      "shipping": "الشحن",
+      "free": "ًمجانا",
+      "total": "الإجمالي",
+      "processToCheckout": "الانتقال إلى الخروج"
     }
   }
 }

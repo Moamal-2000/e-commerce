@@ -497,6 +497,14 @@
       "price": "Цена",
       "quantity": "Количество",
       "subtotal": "Итоговая сумма"
+    },
+    "cartInfoMenu": {
+      "cartTotal": "Итого в корзине",
+      "subTotal": "Итого",
+      "shipping": "Доставка",
+      "free": "Бесплатно",
+      "total": "Всего",
+      "processToCheckout": "Перейти к оформлению заказа"
     }
   }
 }
