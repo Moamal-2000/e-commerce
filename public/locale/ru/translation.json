@@ -166,7 +166,8 @@
     "days": "дней",
     "hours": "часов",
     "minutes": "минут",
-    "seconds": "секунд"
+    "seconds": "секунд",
+    "reset": "Сброс"
   },
 
   "history": {
@@ -457,5 +458,20 @@
   "connectionLabel": {
     "restoredInternet": "Соединение восстановлено",
     "noInternetAvailable": "Нет подключения к Интернету."
+  },
+
+  "contactPage": {
+    "contactInfoCard": {
+      "phoneSection": {
+        "title": "Позвоните нам",
+        "weAreAvailable": "Мы доступны 24/7, 7 дней в неделю.",
+        "phoneNumber": "Телефон"
+      },
+      "emailSection": {
+        "title": "Напишите нам",
+        "fillOut": "Заполните нашу форму, и мы свяжемся с вами в течение 24 часов.",
+        "email": "Электронная почта"
+      }
+    }
   }
 }

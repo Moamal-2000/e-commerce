@@ -60,7 +60,7 @@ const ContactForm = () => {
       </div>
 
       <div className={s.buttons}>
-        <button type="reset">Reset</button>
+        <button type="reset">{t("common.reset")}</button>
         <button type="submit">{t("buttons.sendMessage")}</button>
       </div>
     </form>

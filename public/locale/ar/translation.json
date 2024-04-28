@@ -166,7 +166,8 @@
     "days": "يوم",
     "hours": "ساعة",
     "minutes": "دقيقة",
-    "seconds": "ثانية"
+    "seconds": "ثانية",
+    "reset": "افراغ الحقول"
   },
 
   "history": {
@@ -454,5 +455,20 @@
   "connectionLabel": {
     "restoredInternet": "تم استعادة الاتصال بالانترنت.",
     "noInternetAvailable": "لا يوجد اتصال بالانترنت."
+  },
+
+  "contactPage": {
+    "contactInfoCard": {
+      "phoneSection": {
+        "title": "اتصل بنا",
+        "weAreAvailable": "نحن متاحون على مدار الساعة طوال أيام الأسبوع.",
+        "phoneNumber": "الهاتف"
+      },
+      "emailSection": {
+        "title": "راسلنا",
+        "fillOut": "املأ الاستمارة الخاصة بنا وسنتصل بك في غضون 24 ساعة.",
+        "email": "البريد الالكتروني"
+      }
+    }
   }
 }

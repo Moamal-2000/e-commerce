@@ -166,7 +166,8 @@
     "days": "Days",
     "hours": "Hours",
     "minutes": "Minutes",
-    "seconds": "Seconds"
+    "seconds": "Seconds",
+    "reset": "Reset"
   },
 
   "history": {
@@ -457,5 +458,20 @@
   "connectionLabel": {
     "restoredInternet": "The connection has been restored",
     "noInternetAvailable": "No internet connection available."
+  },
+
+  "contactPage": {
+    "contactInfoCard": {
+      "phoneSection": {
+        "title": "Call To Us",
+        "weAreAvailable": "We are available 24/7, 7 days a week.",
+        "phoneNumber": "Phone"
+      },
+      "emailSection": {
+        "title": "Write To Us",
+        "fillOut": "Fill out our form and we will contact you within 24 hours.",
+        "email": "Email"
+      }
+    }
   }
 }
