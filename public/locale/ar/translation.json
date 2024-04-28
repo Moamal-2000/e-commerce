@@ -448,7 +448,9 @@
   "loginSignUpPage": {
     "createAccount": "انشاء حساب",
     "enterDetails": "ادخل بياناتك تحت",
-    "login": "تسجيل الدخول"
+    "login": "تسجيل الدخول",
+    "forgotPassword": "هل نسيت كلمة السر",
+    "alreadyHaveAcc": "لديك حساب بالفعل؟"
   },
 
   "favoritePage": {

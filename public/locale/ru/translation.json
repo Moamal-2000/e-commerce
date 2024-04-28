@@ -451,7 +451,9 @@
   "loginSignUpPage": {
     "createAccount": "Создайте аккаунт",
     "enterDetails": "Введите введите свои данные",
-    "login": "Авторизоваться"
+    "login": "Авторизоваться",
+    "forgotPassword": "Забыли пароль?",
+    "alreadyHaveAcc": "У вас уже есть аккаунт?"
   },
 
   "favoritePage": {

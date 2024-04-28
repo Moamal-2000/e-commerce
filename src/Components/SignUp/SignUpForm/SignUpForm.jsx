@@ -121,8 +121,8 @@ const SignUpForm = () => {
         </button>
 
         <p>
-          <span>Already have account?</span>
-          <NavLink to="/login">Log in</NavLink>
+          <span>{t("loginSignUpPage.alreadyHaveAcc")}</span>
+          <NavLink to="/login">{t("buttons.login")}</NavLink>
         </p>
       </div>
     </form>
