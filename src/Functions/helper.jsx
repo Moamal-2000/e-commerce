@@ -171,9 +171,12 @@ export function setFormattedPrice(product) {
 
 export function getSubTotal(cartProducts, key = "quantity") {
   const total = cartProducts?.reduce((acc, product) => {
-    const quantityPrice = product?.[key] * +product?.afterDiscount;
+    const priceAfterDiscount = +product?.afterDiscount.replaceAll(",", "");
+    const quantity = +product?.[key];
+    const quantityPrice = quantity * priceAfterDiscount;
     return (acc += quantityPrice);
   }, 0);
+
   return total.toFixed(2);
 }
 

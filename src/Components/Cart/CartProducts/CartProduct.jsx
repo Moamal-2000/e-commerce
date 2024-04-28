@@ -6,7 +6,8 @@ import RemoveCartProductBtn from "./RemoveCartProductBtn";
 
 const CartProduct = ({ data }) => {
   const { img, name, shortName, afterDiscount, quantity, id } = data;
-  const subTotal = (quantity * afterDiscount).toFixed(2);
+  const priceAfterDiscount = afterDiscount.replaceAll(",", "");
+  const subTotal = (quantity * priceAfterDiscount).toFixed(2);
   const { t } = useTranslation();
 
   function translateProduct(key, uppercase, dynamicData = {}) {
