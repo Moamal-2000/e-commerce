@@ -1,0 +1,514 @@
+{
+  "firstHeader": {
+    "saleMessage": "Vente d'été pour tous les maillots de bain et livraison express gratuite - 50% de réduction !",
+    "shopNow": "Achetez maintenant"
+  },
+
+  "languageSelector": {
+    "english": "Anglais",
+    "russian": "Russe",
+    "arabic": "Arabe",
+    "french": "Français"
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "contact": "Contact",
+    "about": "À propos",
+    "profile": "Profil",
+    "signUp": "S'inscrire"
+  },
+
+  "navTools": {
+    "favorite": "Favoris",
+    "cart": "Panier",
+    "userMenu": "Menu utilisateur"
+  },
+
+  "homeSlider": {
+    "title": "Jusqu'à 30% de réduction sur le bon d'achat"
+  },
+
+  "products": {
+    "PS5Gamepad": {
+      "shortName": "Manette PS5",
+      "name": "Manette PS5",
+      "category": "Jeux vidéo",
+      "description": "Peau de contrôleur PlayStation 5 de haute qualité avec adhésif à canal d'air pour une installation facile sans bulles et un retrait sans désordre. Sensible à la pression."
+    },
+    "AK-9000Keyboard": {
+      "shortName": "Clavier AK-9000",
+      "name": "Clavier filaire AK-9000",
+      "category": "Jeux vidéo",
+      "description": "Rehaussez votre expérience de jeu avec le clavier filaire AK-9000. Conçu pour la précision et la durabilité, ce clavier offre une grande réactivité et un retour tactile. Son design élégant et son éclairage RGB personnalisable en font un ajout stylé à tout setup de jeu. Que vous jouiez en compétition ou rédigiez des rapports, le clavier AK-9000 assure des performances optimales à chaque frappe."
+    },
+    "LCDMonitor": {
+      "shortName": "Moniteur LCD",
+      "name": "Moniteur de jeu LCD IPS",
+      "category": "Jeux vidéo",
+      "description": "Immergez-vous dans le monde du jeu avec le moniteur de jeu LCD IPS. Doté de visuels époustouflants et d'un gameplay ultra-fluide, ce moniteur offre une expérience de jeu inégalée. Avec son taux de rafraîchissement élevé et son faible temps de réponse, vous ne manquerez jamais une image. Que vous affrontiez des ennemis ou exploriez des mondes vastes, le moniteur de jeu LCD IPS donne vie à chaque détail avec des couleurs vives et une clarté nette."
+    },
+    "S-SeriesChair": {
+      "shortName": "Chaise S-Series",
+      "name": "Chaise confort S-Series",
+      "category": "Meubles",
+      "description": "Expérimentez le confort comme jamais auparavant avec la chaise confort S-Series. Conçue avec un rembourrage moelleux et un design ergonomique, cette chaise offre un soutien exceptionnel lors de longues sessions de jeu ou de travail. Son esthétique élégante et moderne ajoute une touche de sophistication à n'importe quel espace. Dites adieu à l'inconfort et bonjour à la détente avec la chaise confort S-Series."
+    },
+    "NorthCoat": {
+      "shortName": "Manteau du Nord",
+      "name": "Le Manteau du Nord",
+      "category": "Vêtements",
+      "description": "Restez au chaud et élégant avec Le Manteau du Nord. Fabriqué à partir de matériaux de qualité supérieure et d'un savoir-faire expert, ce manteau est conçu pour résister aux éléments tout en vous gardant au chaud. Son design intemporel et sa couleur polyvalente en font un essentiel de garde-robe pour toutes les saisons. Que vous braviez les éléments ou fassiez des courses en ville, Le Manteau du Nord ne manquera pas de faire tourner les têtes où que vous alliez."
+    },
+    "GucciBag": {
+      "shortName": "Sac Gucci",
+      "name": "Sac de voyage Gucci",
+      "category": "Sac à dos",
+      "description": "Faites une déclaration avec le sac de voyage Gucci. Fabriqué à partir de matériaux luxueux et orné du logo emblématique, ce sac dégage sophistication et style. Avec son intérieur spacieux et ses multiples compartiments, il est parfait pour ranger tous vos essentiels de manière organisée. Que vous voyagiez en première classe ou alliez à la salle de sport, le sac de voyage Gucci est l'incarnation du luxe et de la fonctionnalité."
+    },
+    "CPUCooler": {
+      "shortName": "Refroidisseur de CPU",
+      "name": "Refroidisseur de CPU liquide RGB",
+      "category": "Jeux vidéo",
+      "description": "Gardez votre CPU au frais et silencieux avec le refroidisseur de CPU liquide RGB. Doté d'une technologie de refroidissement avancée et d'un éclairage RGB personnalisable, ce refroidisseur maintient non seulement les températures basses, mais ajoute également une touche de flair à votre configuration. Son design élégant et ses performances élevées en font un incontournable pour tout ordinateur de jeu ou de travail. Dites adieu à la surchauffe et bonjour aux performances optimales avec le refroidisseur de CPU liquide RGB."
+    },
+    "BookShelf": {
+      "shortName": "Bibliothèque",
+      "name": "Petite bibliothèque",
+      "category": "Meubles",
+      "description": "Organisez votre bibliothèque avec style avec la petite bibliothèque. Fabriquée à partir de matériaux durables et dotée d'un design compact, cette bibliothèque maximise l'espace de rangement sans sacrifier l'esthétique. Que vous exposiez vos romans préférés ou des objets décoratifs, son design minimaliste se marie parfaitement avec n'importe quel décor. Dites adieu au désordre et bonjour à la sophistication avec la petite bibliothèque."
+    },
+    "DogFood": {
+      "shortName": "Nourriture pour chien",
+      "name": "Nourriture sèche pour chien de race",
+      "category": "Animal",
+      "description": "Faites plaisir à votre ami à quatre pattes avec la nourriture sèche pour chien de race. Formulée avec des ingrédients de qualité premium et des nutriments essentiels, cette nourriture pour chien offre une nutrition complète et équilibrée pour les chiens de tous âges et de toutes races. Son goût délicieux et sa texture croquante feront quémander à votre chien. Dites adieu aux luttes pendant les repas et bonjour aux chiens heureux et en bonne santé avec la nourriture sèche pour chien de race."
+    },
+    "CannonCamera": {
+      "shortName": "Appareil photo Canon",
+      "name": "Appareil photo reflex numérique CANON EOS",
+      "category": "Appareil photo",
+      "description": "Capturez les moments précieux de la vie avec l'appareil photo reflex numérique CANON EOS. Que vous soyez un photographe professionnel ou un amateur enthousiaste, cet appareil photo offre une qualité d'image et des performances exceptionnelles. Avec ses fonctionnalités avancées et ses commandes intuitives, vous pouvez libérer votre créativité et emmener votre photographie au niveau supérieur. Dites adieu aux photos floues et bonjour aux images nettes et claires avec l'appareil photo reflex numérique CANON EOS."
+    },
+    "FHDLaptop": {
+      "shortName": "Ordinateur portable FHD",
+      "name": "Ordinateur portable de jeu ASUS FHD",
+      "category": "Informatique",
+      "description": "Vivez une expérience de jeu inégalée avec l'ordinateur portable de jeu ASUS FHD. Alimenté par du matériel de pointe et doté d'un superbe écran Full HD, cet ordinateur portable est conçu pour gérer même les jeux les plus exigeants avec facilité. Son design élégant et sa construction légère en font le compagnon idéal pour jouer en déplacement. Dites adieu aux ralentissements et bonjour à un gameplay fluide avec l'ordinateur portable de jeu ASUS FHD."
+    },
+    "Curology": {
+      "shortName": "Curology",
+      "name": "Ensemble de produits Curology",
+      "category": "Maquillage",
+      "description": "Transformez votre routine de soins de la peau avec l'ensemble de produits Curology. Formulé par des dermatologues et adapté à vos besoins uniques en matière de peau, cet ensemble comprend tout ce dont vous avez besoin pour obtenir une peau claire et radieuse. Des nettoyants aux sérums, chaque produit est conçu pour cibler des préoccupations spécifiques et offrir des résultats visibles. Dites adieu à une peau terne et irrégulière et bonjour à un teint qui rayonne de santé et de vitalité avec l'ensemble de produits Curology."
+    },
+    "ElectricCar": {
+      "shortName": "Voiture électrique",
+      "name": "Voiture électrique pour enfants",
+      "category": "Jeux vidéo",
+      "description": "Éveillez l'imagination de votre enfant avec la voiture électrique pour enfants. Conçue pour le plaisir et l'excitation, cette voiture présente des détails réalistes et des commandes simples qui rendent chaque trajet une aventure. Que ce soit pour une balade dans le quartier ou une exploration du jardin, la voiture électrique pour enfants offre des heures de divertissement pour les enfants de tous âges. Dites adieu à l'ennui et bonjour au plaisir sans fin avec la voiture électrique pour enfants."
+    },
+    "SoccerCleats": {
+      "shortName": "Crampons de football",
+      "name": "Crampons de football Jr. Zoom",
+      "category": "Vêtements",
+      "description": "Portez votre jeu au niveau supérieur avec les crampons de football Jr. Zoom. Conçus pour la vitesse et l'agilité, ces crampons offrent une traction exceptionnelle et une stabilité sur le terrain. Avec leur design léger et leur amorti réactif, vous vous sentirez imbattable du début à la fin. Dites adieu aux glissades et bonjour aux performances optimales avec les crampons de football Jr. Zoom."
+    },
+    "GP11Gamepad": {
+      "shortName": "Manette GP11",
+      "name": "Manette de jeu USB GP11 Shooter",
+      "category": "Jeux vidéo",
+      "description": "Dominez la concurrence avec la manette de jeu USB GP11 Shooter. Conçue pour la précision et le confort, cette manette offre une expérience de jeu immersive à chaque pression et glissement. Que vous affrontiez des ennemis ou couriez contre la montre, son design ergonomique et ses commandes réactives vous donnent l'avantage concurrentiel nécessaire pour sortir vainqueur. Dites adieu aux entrées saccadées et bonjour à un gameplay fluide et sans heurts avec la manette de jeu USB GP11 Shooter."
+    },
+    "SatinJacket": {
+      "shortName": "Veste en satin",
+      "name": "Veste matelassée en satin",
+      "category": "Vêtements",
+      "description": "Rehaussez votre collection de vêtements d'extérieur avec la veste matelassée en satin. Fabriquée à partir de tissu satiné de qualité supérieure et dotée d'un design matelassé, cette veste allie style et fonctionnalité avec facilité. Que vous affrontiez les éléments ou sortiez en ville, sa texture luxueuse et sa silhouette élégante en font un ajout polyvalent à toute garde-robe. Dites adieu aux vêtements d'extérieur ennuyeux et bonjour au style sans effort avec la veste matelassée en satin."
+    }
+  },
+
+  "productCard": {
+    "buttonText": {
+      "addToCart": "Ajouter au panier",
+      "removeFromCart": "Retirer du panier"
+    },
+    "icons": {
+      "details": "Détails",
+      "remove": "Retirer",
+      "wishlist": "Liste de souhaits",
+      "favorite": "Favori"
+    }
+  },
+
+  "detailsPage": {
+    "reviews": "({{votes}} Avis)",
+    "inStock": "En stock",
+    "colors": "Couleurs",
+    "size": "Taille",
+    "addToFav": "Ajouter aux favoris",
+    "freeDelivery": {
+      "title": "Livraison gratuite",
+      "description": "Entrez votre code postal pour la disponibilité de la livraison"
+    },
+    "returnDelivery": {
+      "title": "Retour gratuit",
+      "description": "Retours gratuits sous 30 jours. Détails"
+    },
+    "relatedItems": "Articles associés"
+  },
+
+  "common": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "days": "Jours",
+    "hours": "Heures",
+    "minutes": "Minutes",
+    "seconds": "Secondes",
+    "reset": "Réinitialiser",
+    "welcome": "Bienvenue",
+    "cancel": "Annuler"
+  },
+
+  "history": {
+    "categories": {
+      "gaming": "Jeux vidéo",
+      "furniture": "Meubles",
+      "clothes": "Vêtements",
+      "backpack": "Sac à dos",
+      "animal": "Animal",
+      "camera": "Appareil photo",
+      "computers": "Informatique",
+      "makeup": "Maquillage"
+    },
+    "account": "Compte",
+    "products": "Produits",
+    "cart": "Panier",
+    "checkout": "Paiement",
+    "results": "Résultats",
+    "404Error": "Erreur 404"
+  },
+
+  "footer": {
+    "section1": {
+      "subscribe": "S'abonner",
+      "getOffer": "Obtenez 10% de réduction sur votre première commande",
+      "enterEmailPlaceholder": "Entrez votre e-mail",
+      "sendLabel": "Envoyer"
+    },
+    "section2": {
+      "support": "Support",
+      "address": "Irak, Bagdad"
+    },
+    "section3": {
+      "account": "Compte",
+      "myAccount": "Mon compte",
+      "loginRegister": "Connexion / Inscription",
+      "cart": "Panier",
+      "wishlist": "Liste de souhaits",
+      "shop": "Boutique"
+    },
+    "section4": {
+      "quickLink": "Liens rapides",
+      "privacyPolicy": "Politique de confidentialité",
+      "termsOfUse": "Conditions d'utilisation",
+      "faq": "FAQ",
+      "contact": "Contact",
+      "section5": {
+        "downloadApp": "Télécharger l'application",
+        "saveThreeDollars": "Économisez 3 $ avec l'application, nouveau utilisateur uniquement"
+      }
+    },
+    "copyRightsText": {
+      "designedBy": "Site Web conçu par",
+      "codedBy": "et codé par"
+    }
+  },
+
+  "sectionsMenu": {
+    "womenFashion": {
+      "title": "Mode femme",
+      "menuItems": {
+        "elegantDress": "Robe élégante",
+        "chicBlouse": "Chemisier chic",
+        "statementHandbag": "Sac à main tendance",
+        "versatileJacket": "Veste polyvalente",
+        "comfortable": "Chaussures confortables"
+      }
+    },
+    "menFashion": {
+      "title": "Mode homme",
+      "menuItems": {
+        "tailoredSuit": "Costume sur mesure",
+        "casualShirts": "Chemises décontractées",
+        "slimFitJeans": "Jeans slim-fit",
+        "leatherAccessories": "Accessoires en cuir",
+        "modernSneakers": "Baskets modernes"
+      }
+    },
+    "otherSections": {
+      "electronics": "Électronique",
+      "homeLifestyle": "Maison et style de vie",
+      "medicine": "Médecine",
+      "sportsOutdoor": "Sports et plein air",
+      "babyToys": "Bébés et jouets",
+      "groceriesPets": "Épicerie et animaux de compagnie",
+      "healthBeauty": "Santé et beauté"
+    }
+  },
+
+  "mobileNav": {
+    "profile": "Profil",
+    "home": "Accueil",
+    "about": "À propos",
+    "myCart": "Mon panier",
+    "favorite": "Favori",
+    "wishlist": "Liste de souhaits",
+    "notification": "Notification",
+    "signIn": "Se connecter",
+    "signOut": "Déconnexion",
+    "hey": "Salut"
+  },
+
+  "buttons": {
+    "viewAllProducts": "Voir tous les produits",
+    "buyNow": "Acheter maintenant",
+    "viewAll": "Voir tout",
+    "sendMessage": "Envoyer le message",
+    "saveChanges": "Enregistrer les modifications",
+    "moveAllToBag": "Tout déplacer dans le sac",
+    "seeAll": "Voir tout",
+    "returnToShop": "Retour à la boutique",
+    "updateCart": "Mettre à jour le panier",
+    "applyCoupon": "Appliquer le coupon",
+    "processToCheckout": "Passer à la caisse",
+    "placeOrder": "Passer la commande",
+    "backToHome": "Retour à la page d'accueil",
+    "createAccount": "Créer un compte",
+    "signUpWithGoogle": "S'inscrire avec Google",
+    "login": "Connexion"
+  },
+
+  "aboutPage": {
+    "heroSection": {
+      "heading": "Notre histoire",
+      "paragraphOne": "Lancé en 2015, Exclusive est le principal marché en ligne d'Asie du Sud avec une présence active au Bangladesh. Soutenu par une large gamme de solutions marketing, de données et de services adaptées, Exclusive compte 10 500 vendeurs et 300 marques et dessert 3 millions de clients dans la région.",
+      "paragraphTwo": "Exclusive propose plus d'un million de produits, en pleine croissance. Exclusive offre une gamme diversifiée de catégories allant de la consommation.",
+      "imageAlt": "deux jeunes femmes heureuses de faire du shopping"
+    },
+    "cardInfo": {
+      "aboutCardsInfo1": "Vendeurs actifs sur notre site",
+      "aboutCardsInfo2": "Ventes mensuelles de produits",
+      "aboutCardsInfo3": "Clients actifs sur notre site",
+      "aboutCardsInfo4": "Ventes brutes annuelles sur notre site"
+    },
+    "ourMembersData": {
+      "founderChairman": {
+        "name": "Tom Cruise",
+        "jobTitle": "Fondateur et Président"
+      },
+      "managingDirector": {
+        "name": "Emma Watson",
+        "jobTitle": "Directrice Générale"
+      },
+      "productDesigner": {
+        "name": "Will Smith",
+        "jobTitle": "Designer Produit"
+      }
+    },
+    "featuresSectionData": {
+      "car": {
+        "iconAlt": "Voiture",
+        "title": "LIVRAISON GRATUITE ET RAPIDE",
+        "description": "Livraison gratuite pour toutes les commandes de plus de 140 $"
+      },
+      "headphone": {
+        "iconAlt": "Écouteurs",
+        "title": "SUPPORT CLIENT 24/7",
+        "description": "Service client disponible 24 heures sur 24, 7 jours sur 7, par chat en direct, e-mail ou téléphone"
+      },
+      "correctSign": {
+        "iconAlt": "Signe de vérification",
+        "title": "GARANTIE DE REMBOURSEMENT",
+        "description": "Nous remboursons dans les 30 jours"
+      }
+    }
+  },
+
+  "sectionTitles": {
+    "todaysSection": {
+      "title": "Les offres du jour",
+      "flashSales": "Ventes Flash"
+    },
+    "categoriesSection": {
+      "title": "Catégories",
+      "browseByCategory": "Parcourir par catégorie"
+    },
+    "thisMonthSection": {
+      "title": "Ce mois-ci",
+      "bestSelling": "Meilleurs produits vendus"
+    },
+    "ourProducts": {
+      "title": "Nos produits",
+      "exploreProducts": "Explorer nos produits"
+    },
+    "featuredSection": {
+      "title": "En vedette",
+      "newArrival": "Nouveautés"
+    },
+    "forYou": "Juste pour vous"
+  },
+
+  "categoriesData": {
+    "phones": "Téléphones",
+    "computers": "Ordinateurs",
+    "smartwatch": "Montres connectées",
+    "camera": "Appareils photo",
+    "headphones": "Écouteurs",
+    "gaming": "Jeux vidéo",
+    "furniture": "Meubles",
+    "clothes": "Vêtements",
+    "animal": "Animaux",
+    "makeup": "Maquillage"
+  },
+
+  "productPoster": {
+    "tittle": "Catégories",
+    "subTitle": "Améliorez votre expérience musicale"
+  },
+
+  "notFoundPage": {
+    "tabTitle": "Page non trouvée",
+    "description": "La page que vous avez visitée n'a pas été trouvée. Vous pouvez aller à la page d'accueil.",
+    "notBuiltTabTitle": "Page non construite",
+    "notBuiltDescription": "Désolé, la page que vous recherchez n'est pas encore construite.",
+    "notFoundMessage": "404 Non trouvé"
+  },
+
+  "featuredSection": {
+    "mediumPoster": {
+      "title": "PlayStation 5",
+      "description": "Version noire et blanche de la PS5 en vente."
+    },
+    "horizontalPoster": {
+      "title": "Collections pour femmes",
+      "description": "Collections de femmes en vedette qui vous donnent une autre ambiance."
+    },
+    "smallPoster1": {
+      "title": "Enceintes",
+      "description": "Enceintes sans fil Amazon"
+    },
+    "smallPoster2": {
+      "title": "Parfum",
+      "description": "GUCCI INTENSE OUD EDP"
+    }
+  },
+
+  "tooltips": {
+    "scrollToTop": "Remonter en haut",
+    "repoStarsForks": "dépôt du site web",
+    "searchButton": "Rechercher",
+    "remove": "Supprimer"
+  },
+
+  "inputsPlaceholders": {
+    "whatYouLookingFor": "Que recherchez-vous ?",
+    "enterYourEmail": "Entrez votre e-mail",
+    "yourName": "Votre nom",
+    "yourEmail": "Votre e-mail",
+    "yourMessage": "Votre message",
+    "yourPhone": "Votre téléphone",
+    "address": "Ex. Kingston, 5236, États-Unis",
+    "currentPass": "Mot de passe actuel",
+    "confirmPass": "Confirmer le mot de passe",
+    "newPass": "Nouveau mot de passe",
+    "couponExample": "Exemple SAVE20",
+    "fullName": "Nom complet",
+    "emailOrPhone": "E-mail ou numéro de téléphone",
+    "password": "Mot de passe"
+  },
+
+  "inputsLabels": {
+    "firstName": "Prénom",
+    "lastName": "Nom de famille",
+    "email": "E-mail",
+    "companyName": "Nom de l'entreprise",
+    "streetAddress": "Adresse",
+    "apartment": "Appartement, étage, etc. (facultatif)",
+    "townOrCity": "Ville",
+    "phoneNumber": "Numéro de téléphone",
+    "emailAddress": "Adresse e-mail",
+    "saveThisInfo": "Enregistrer ces informations pour un paiement plus rapide la prochaine fois",
+    "passwordChanges": "Changements de mot de passe",
+    "address": "Adresse"
+  },
+
+  "loginSignUpPage": {
+    "createAccount": "Créer un compte",
+    "enterDetails": "Entrez vos détails ci-dessous",
+    "login": "Se connecter à Exclusive",
+    "forgotPassword": "Mot de passe oublié ?",
+    "alreadyHaveAcc": "Vous avez déjà un compte ?"
+  },
+
+  "favoritePage": {
+    "title": "Favoris ({{numberOfProducts}})"
+  },
+
+  "connectionLabel": {
+    "restoredInternet": "La connexion a été rétablie",
+    "noInternetAvailable": "Aucune connexion Internet disponible."
+  },
+
+  "contactPage": {
+    "contactInfoCard": {
+      "phoneSection": {
+        "title": "Appelez-nous",
+        "weAreAvailable": "Nous sommes disponibles 24h/24 et 7j/7.",
+        "phoneNumber": "Téléphone"
+      },
+      "emailSection": {
+        "title": "Écrivez-nous",
+        "fillOut": "Remplissez notre formulaire et nous vous contacterons dans les 24 heures.",
+        "email": "E-mail"
+      }
+    }
+  },
+
+  "accountPage": {
+    "editProfile": "Modifier votre profil",
+    "accountMenuSection": {
+      "manageMyAccount": "Gérer mon compte",
+      "myOrders": "Mes commandes",
+      "profile": "Mon profil",
+      "addressBook": "Carnet d'adresses",
+      "paymentOptions": "Mes options de paiement",
+      "returns": "Mes retours",
+      "cancellations": "Mes annulations"
+    }
+  },
+
+  "cartPage": {
+    "productsTable": {
+      "product": "Produit",
+      "price": "Prix",
+      "quantity": "Quantité",
+      "subtotal": "Sous-total"
+    },
+    "cartInfoMenu": {
+      "cartTotal": "Total du panier",
+      "subTotal": "Sous-total",
+      "shipping": "Livraison",
+      "free": "Gratuit",
+      "total": "Total",
+      "processToCheckout": "Passer à la caisse"
+    }
+  },
+
+  "wishlist": "Liste de souhaits ({{numberOfWishlist}})",
+  "cashOnDelivery": "Paiement à la livraison",
+  "bank": "Banque",
+  "billingDetails": "Détails de facturation"
+}
