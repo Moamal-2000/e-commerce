@@ -223,6 +223,12 @@ export const LANGUAGES = [
     code: "fr",
     id: uuid(),
   },
+  {
+    lang: "Japanese",
+    flag: saudiFlag,
+    code: "ja",
+    id: uuid(),
+  }
 ];
 
 export const productCardCustomizations = {

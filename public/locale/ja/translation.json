@@ -1,0 +1,492 @@
+{
+  "firstHeader": {
+    "saleMessage": "全ての水着の夏のセールと無料のエクスプレス配送 - 50％オフ！",
+    "shopNow": "今すぐショップ"
+  },
+
+  "languageSelector": {
+    "english": "英語",
+    "russian": "ロシア語",
+    "arabic": "アラビア語",
+    "french": "フランス語"
+  },
+
+  "nav": {
+    "home": "ホーム",
+    "contact": "お問い合わせ",
+    "about": "会社概要",
+    "profile": "プロフィール",
+    "signUp": "サインアップ"
+  },
+
+  "navTools": {
+    "favorite": "お気に入り",
+    "cart": "カート",
+    "userMenu": "ユーザーメニュー"
+  },
+
+  "homeSlider": {
+    "title": "最大30％オフのバウチャー"
+  },
+
+  "products": {
+    "PS5Gamepad": {
+      "shortName": "PS5ゲームパッド",
+      "name": "PS5ゲームパッド",
+      "category": "ゲーム",
+      "description": "高品質のPlayStation 5コントローラースキンで、エアチャンネル接着剤を使用して簡単にバブルフリーの取り付けと汚れのない取り外しを実現します。圧力感知。"
+    },
+    "AK-9000Keyboard": {
+      "shortName": "AK-9000キーボード",
+      "name": "AK-900有線キーボード",
+      "category": "ゲーム",
+      "description": "AK-900有線キーボードでゲーム体験を高めましょう。精密性と耐久性を備えたデザインで、このキーボードは高い応答性とタクタイルフィードバックを誇っています。その洗練されたデザインとカスタマイズ可能なRGBライティングは、どんなゲームセットアップにもスタイリッシュなアクセントを加えます。競争力のあるゲームを行うか、レポートを入力するかに関係なく、AK-900はすべてのキーストロークで最高のパフォーマンスを確保します。"
+    },
+    "LCDMonitor": {
+      "shortName": "液晶モニター",
+      "name": "IPS液晶ゲームモニター",
+      "category": "ゲーム",
+      "description": "IPS液晶ゲームモニターでゲームの世界に没頭しましょう。見事なビジュアルと超スムーズなゲームプレイを特長とするこのモニターは、比類のないゲーム体験を提供します。高リフレッシュレートと低入力遅延を備えたこのモニターは、1フレームも見逃しません。敵と戦ったり、広大な世界を探索したりする場合でも、IPS液晶ゲームモニターは鮮やかな色彩とクリアなクラリティですべてのディテールを生き生きと表現します。"
+    },
+    "S-SeriesChair": {
+      "shortName": "S-Seriesチェア",
+      "name": "S-Seriesコンフォートチェア",
+      "category": "家具",
+      "description": "S-Series Comfort Chairでかつてないほどの快適さを体験してください。豊富なパディングと人間工学に基づいたデザインで作られたこのチェアは、長時間のゲームセッションや仕事時間中に優れたサポートを提供します。その洗練されたモダンな美しさは、どんなスペースにも洗練されたタッチを加えます。S-Series Comfort Chairで不快感とさようならを言い、リラックスにハローを言います。"
+    },
+    "NorthCoat": {
+      "shortName": "ノースコート",
+      "name": "ザ・ノースコート",
+      "category": "服",
+      "description": "ザ・ノースコートで温かくてスタイリッシュに保つ。プレミアム素材と熟練した職人技で作られたこのコートは、暴風雨に耐えるように設計されていますが、あなたを居心地の良い状態に保ちます。その時代を超越したデザインと汎用性のある色彩は、どんな季節にも必需品です。アウトドアで勇敢に立ち向かうか、都市で用事を済ませるかに関係なく、ザ・ノースコートはあなたが行くどこでも注目を集めるでしょう。"
+    },
+    "GucciBag": {
+      "shortName": "グッチバッグ",
+      "name": "グッチダッフルバッグ",
+      "category": "バックパック",
+      "description": "グッチダッフルバッグでステートメントを作成します。豪華な素材で作られ、象徴的なブランドで飾られたこのバッグは、洗練とスタイルを放ちます。その広々とした内部と複数のコンパートメントは、すべての必需品を整理して整然と収納するのに最適です。ファーストクラスで旅行するか、ジムで運動するかに関係なく、グッチダッフルバッグは贅沢さと機能性の典型です。"
+    },
+    "CPUCooler": {
+      "shortName": "CPUクーラー",
+      "name": "RGB液体CPUクーラー",
+      "category": "ゲーム",
+      "description": "RGB液体CPUクーラーでCPUをクールで静かに保ちます。高度な冷却技術とカスタマイズ可能なRGBライティングを備えたこのクーラーは、温度を低く保つだけでなく、ビルドに華を添えます。その洗練されたデザインと高性能な機能性は、どんなゲーミングリグやワークステーションにも必須です。過熱をさようならして、RGB液体CPUクーラーで最高のパフォーマンスをお楽しみください。"
+    },
+    "BookShelf": {
+      "shortName": "本棚",
+      "name": "小さな本棚",
+      "category": "家具",
+      "description": "小さな本棚でライブラリーをスタイリッシュに整理します。耐久性のある素材で作られ、コンパクトなデザインを特長とするこの本棚は、美学を犠牲にすることなく収納スペースを最大限に活用します。お気に入りの小説を展示したり、装飾品を展示したりする場合でも、そのミニマリストデザインはどんな装飾ともシームレスに調和します。クラッターにさようならを言い、小さな本棚で洗練されたスタイルにハローを言います。"
+    },
+    "DogFood": {
+      "shortName": "ドッグフード",
+      "name": "ブリードドライドッグフード",
+      "category": "動物",
+      "description": "ブリードドライドッグフードで愛らしい友達に最高のものを提供してください。プレミアムな成分と必須栄養素で作られたこのドッグフードは、あらゆる年齢と品種の犬に完全でバランスの取れた栄養を提供します。そのおいしい味とサクサクした食感は、あなたの犬がもっと欲しがるでしょう。食事の時間の苦労にさようならを言い、ブリードドライドッグフードで幸せで健康な犬にハローを言います。"
+    },
+    "CannonCamera": {
+      "shortName": "キャノンカメラ",
+      "name": "キヤノンEOSデジタル一眼レフカメラ",
+      "category": "カメラ",
+      "description": "キヤノンEOSデジタル一眼レフカメラで人生の貴重な瞬間を捉えます。あなたがプロのフォトグラファーであろうと、アマチュアの愛好家であろうと、このカメラは見事な画質とパフォーマンスを提供します。その高度な機能と直感的なコントロールで、あなたの創造力を解放し、写真を次のレベルに引き上げることができます。ぼやけた写真にさようならを言い、キヤノンEOSデジタル一眼レフカメラでクリスタルクリアな画像にハローを言います。"
+    },
+    "FHDLaptop": {
+      "shortName": "FHDラップトップ",
+      "name": "ASUS FHDゲーミングラップトップ",
+      "category": "コンピューター",
+      "description": "ASUS FHDゲーミングラップトップで比類のないゲームパフォーマンスを体験してください。最新のハードウェアでパワーを供給し、見事なフルHDディスプレイを搭載したこのラップトップは、最も要求の厳しいゲームにも対応できるように設計されています。その洗練されたデザインと軽量構造は、移動中のゲームに最適です。遅延にさようならを言い、ASUS FHDゲーミングラップトップでスムーズなゲームプレイにハローを言います。"
+    },
+    "Curology": {
+      "shortName": "キュロロジー",
+      "name": "キュロロジー製品セット",
+      "category": "化粧品",
+      "description": "キュロロジー製品セットでスキンケアルーチンを変えましょう。皮膚科医によって開発され、あなたのユニークな肌のニーズに合わせて調整されたこのセットには、明るく、輝く肌を実現するために必要なすべてが含まれています。クレンザーからセラムまで、それぞれの製品は特定の懸念を対象とし、目に見える結果を提供するように設計されています。くすんだ、ムラのある肌にさようならを言い、キュロロジー製品セットで健康で活気に満ちた肌にハローを言います。"
+    },
+    "ElectricCar": {
+      "shortName": "電動車",
+      "name": "子供用電動車",
+      "category": "ゲーム",
+      "description": "子供の想像力をかきたてる子供用電動車。楽しさと興奮のために設計されたこの車は、リアルなディテールと楽なコントロールを備えており、乗るたびに冒険が待っています。近所をクルージングしたり、庭を探検したりする場合でも、子供用電動車はあらゆる年齢の子供に数時間のエンターテインメントを提供します。退屈にさようならを言い、子供用電動車で絶え間ない楽しみにハローを言います。"
+    },
+    "SoccerCleats": {
+      "shortName": "サッカーシューズ",
+      "name": "Jr.ズームサッカーシューズ",
+      "category": "衣類",
+      "description": "Jr.ズームサッカーシューズでゲームを次のレベルに引き上げます。速度と俊敏性のために設計されたこれらのサッカーシューズは、フィールド上で優れたトラクションと安定性を提供します。その軽量デザインと反応性のクッショニングにより、キックオフから最後のホイッスルまで止めることはできません。滑りやすさにさようならを言い、Jr.ズームサッカーシューズで最高のパフォーマンスにハローを言います。"
+    },
+    "GP11Gamepad": {
+      "shortName": "GP11ゲームパッド",
+      "name": "GP11シューターUSBゲームパッド",
+      "category": "ゲーム",
+      "description": "GP11シューターUSBゲームパッドで競争を制しましょう。精密と快適さを兼ね備えたこのゲームパッドは、各プレスやスワイプで没入型のゲーム体験を提供します。敵と戦ったり、時間と競争したりする場合でも、その人間工学に基づいたデザインと反応性の高いコントロールで、競争力を持って上位に出ることができます。遅延した入力にさようならを言い、GP11シューターUSBゲームパッドでスムーズでシームレスなゲームプレイにハローを言います。"
+    },
+    "SatinJacket": {
+      "shortName": "サテンジャケット",
+      "name": "キルトサテンジャケット",
+      "category": "衣類",
+      "description": "キルトサテンジャケットで外出コレクションをアップグレードします。プレミアムサテン生地で作られたこのジャケットは、キルティングデザインが特徴で、スタイルと機能を簡単に組み合わせます。要素に立ち向かうか、町を歩くかに関係なく、その豪華なテクスチャと洗練されたシルエットは、どんなワードローブにも柔軟な追加です。退屈なアウターウェアにさようならを言い、キルトサテンジャケットで無駄なスタイルにハローを言います。"
+    }
+  },
+
+  "productCard": {
+    "buttonText": {
+      "addToCart": "カートに追加",
+      "removeFromCart": "カートから削除"
+    },
+    "icons": {
+      "details": "詳細",
+      "remove": "削除",
+      "wishlist": "ウィッシュリスト",
+      "favorite": "お気に入り"
+    }
+  },
+
+  "detailsPage": {
+    "reviews": "({{votes}} レビュー)",
+    "inStock": "在庫あり",
+    "colors": "色",
+    "size": "サイズ",
+    "addToFav": "お気に入りに追加",
+    "freeDelivery": {
+      "title": "送料無料",
+      "description": "配送可能な場所を知るには郵便番号を入力してください"
+    },
+    "returnDelivery": {
+      "title": "返品送料",
+      "description": "30日間の無料返品配送。 詳細"
+    },
+    "relatedItems": "関連商品"
+  },
+
+  "common": {
+    "facebook": "Facebook",
+    "twitter": "ツイッター",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "days": "日",
+    "hours": "時間",
+    "minutes": "分",
+    "seconds": "秒",
+    "reset": "リセット",
+    "welcome": "ようこそ",
+    "cancel": "キャンセル"
+  },
+
+  "history": {
+    "categories": {
+      "gaming": "ゲーム",
+      "furniture": "家具",
+      "clothing": "衣類",
+      "backpacks": "バックパック",
+      "animals": "動物",
+      "cameras": "カメラ",
+      "computers": "コンピューター",
+      "cosmetics": "化粧品"
+    },
+    "empty": "表示する履歴はありません",
+    "clear": "クリア履歴"
+  },
+
+  "footer": {
+    "section1": {
+      "subscribe": "購読",
+      "getOffer": "最初の注文で10％オフ",
+      "enterEmailPlaceholder": "メールアドレスを入力",
+      "sendLabel": "送信"
+    },
+    "section2": {
+      "support": "サポート",
+      "address": "イラク、バグダッド"
+    },
+    "section3": {
+      "account": "アカウント",
+      "myAccount": "マイアカウント",
+      "loginRegister": "ログイン / 登録",
+      "cart": "カート",
+      "wishlist": "ウィッシュリスト",
+      "shop": "ショップ"
+    },
+    "section4": {
+      "quickLink": "クイックリンク",
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfUse": "利用規約",
+      "faq": "よくある質問",
+      "contact": "お問い合わせ",
+      "section5": {
+        "downloadApp": "アプリをダウンロード",
+        "saveThreeDollars": "新規ユーザーは$3を保存"
+      }
+    },
+    "copyRightsText": {
+      "designedBy": "ウェブサイトのデザイン:",
+      "codedBy": "コーディング:"
+    }
+  },
+
+  "sectionsMenu": {
+    "womenFashion": {
+      "title": "女性ファッション",
+      "menuItems": {
+        "elegantDress": "エレガントドレス",
+        "chicBlouse": "シックブラウス",
+        "statementHandbag": "ステートメントハンドバッグ",
+        "versatileJacket": "多目的ジャケット",
+        "comfortable": "快適な靴"
+      }
+    },
+    "menFashion": {
+      "title": "メンズファッション",
+      "menuItems": {
+        "tailoredSuit": "テーラードスーツ",
+        "casualShirts": "カジュアルシャツ",
+        "slimFitJeans": "スリムフィットジーンズ",
+        "leatherAccessories": "レザーアクセサリー",
+        "modernSneakers": "モダンスニーカー"
+      }
+    },
+    "otherSections": {
+      "electronics": "電子製品",
+      "homeLifestyle": "家庭とライフスタイル",
+      "medicine": "医学",
+      "sportsOutdoor": "スポーツとアウトドア",
+      "babyToys": "ベビー＆おもちゃ",
+      "groceriesPets": "食料品とペット",
+      "healthBeauty": "健康と美容"
+    }
+  },
+  "mobileNav": {
+    "profile": "プロフィール",
+    "home": "ホーム",
+    "about": "について",
+    "myCart": "マイカート",
+    "favorite": "お気に入り",
+    "wishlist": "ウィッシュリスト",
+    "notification": "通知",
+    "signIn": "サインイン",
+    "signOut": "サインアウト",
+    "hey": "こんにちは"
+  },
+  "buttons": {
+    "viewAllProducts": "すべての製品を見る",
+    "buyNow": "今すぐ購入",
+    "viewAll": "すべて表示",
+    "sendMessage": "メッセージを送信",
+    "saveChanges": "変更を保存",
+    "moveAllToBag": "すべてをバッグに移動",
+    "seeAll": "すべて見る",
+    "returnToShop": "ショップに戻る",
+    "updateCart": "カートを更新",
+    "applyCoupon": "クーポンを適用",
+    "processToCheckout": "チェックアウトへ進む",
+    "placeOrder": "注文する",
+    "backToHome": "ホームに戻る",
+    "createAccount": "アカウントを作成",
+    "signUpWithGoogle": "Googleでサインアップ",
+    "login": "ログイン"
+  },
+  "aboutPage": {
+    "heroSection": {
+      "heading": "私たちの物語",
+      "paragraphOne": "2015年に立ち上げられたExclusiveは、バングラデシュに積極的に参加している南アジアのプレミアムオンラインショッピングマーケットプレイスです。 特製のマーケティング、データ、およびサービスソリューションをサポートすることにより、Exclusiveには10,500人のセラーと300ブランドがあり、この地域全体で300万人の顧客をサポートしています。",
+      "paragraphTwo": "Exclusiveには100万以上の製品があり、非常に速い成長を遂げています。 Exclusiveは、消費者向けからカテゴリの多様なアソートメントを提供しています。",
+      "imageAlt": "買い物をして幸せな2人の若い女性"
+    },
+    "cardInfo": {
+      "aboutCardsInfo1": "サイト上で活動中のセラー",
+      "aboutCardsInfo2": "月間商品販売高",
+      "aboutCardsInfo3": "サイト上で活動中の顧客",
+      "aboutCardsInfo4": "サイト上の年間総売上高"
+    },
+    "ourMembersData": {
+      "founderChairman": {
+        "name": "トム・クルーズ",
+        "jobTitle": "創業者兼会長"
+      },
+      "managingDirector": {
+        "name": "エマ・ワトソン",
+        "jobTitle": "マネージングディレクター"
+      },
+      "productDesigner": {
+        "name": "ウィル・スミス",
+        "jobTitle": "プロダクトデザイナー"
+      }
+    },
+    "featuresSectionData": {
+      "car": {
+        "iconAlt": "車",
+        "title": "無料で迅速な配送",
+        "description": "$140以上のすべての注文に無料配送"
+      },
+      "headphone": {
+        "iconAlt": "ヘッドフォン",
+        "title": "24/7カスタマーサービス",
+        "description": "フレンドリーな24/7カスタマーサポート"
+      },
+      "correctSign": {
+        "iconAlt": "正しいサイン",
+        "title": "30日間の返金保証",
+        "description": "30日以内に返金します"
+      }
+    }
+  },
+  "sectionTitles": {
+    "todaysSection": {
+      "title": "今日の",
+      "flashSales": "フラッシュセール"
+    },
+    "categoriesSection": {
+      "title": "カテゴリー",
+      "browseByCategory": "カテゴリーでブラウズ"
+    },
+    "thisMonthSection": {
+      "title": "今月の",
+      "bestSelling": "ベストセラー商品"
+    },
+    "ourProducts": {
+      "title": "当社の製品",
+      "exploreProducts": "製品を探索"
+    },
+    "featuredSection": {
+      "title": "注目",
+      "newArrival": "新着商品"
+    },
+    "forYou": "あなたにぴったり"
+  },
+  "categoriesData": {
+    "phones": "電話",
+    "computers": "コンピューター",
+    "smartwatch": "スマートウォッチ",
+    "camera": "カメラ",
+    "headphones": "ヘッドフォン",
+    "gaming": "ゲーム",
+    "furniture": "家具",
+    "clothes": "服",
+    "animal": "動物",
+    "makeup": "メイク"
+  },
+  "productPoster": {
+    "tittle": "カテゴリー",
+    "subTitle": "あなたの音楽体験を向上させる"
+  },
+  "notFoundPage": {
+    "tabTitle": "ページが見つかりません",
+    "description": "訪問したページが見つかりませんでした。ホームページに移動することができます。",
+    "notBuiltTabTitle": "ページが作成されていません",
+    "notBuiltDescription": "申し訳ありませんが、お探しのページはまだ作成されていません。",
+    "notFoundMessage": "404 Not Found"
+  },
+  "featuredSection": {
+    "mediumPoster": {
+      "title": "プレイステーション5",
+      "description": "販売中のPS5のブラックアンドホワイトバージョン。"
+    },
+    "horizontalPoster": {
+      "title": "女性のコレクション",
+      "description": "別の雰囲気を感じさせる女性のコレクションが特集されています。"
+    },
+    "smallPoster1": {
+      "title": "スピーカー",
+      "description": "Amazonのワイヤレススピーカー"
+    },
+    "smallPoster2": {
+      "title": "香水",
+      "description": "GUCCI INTENSE OUD EDP"
+    }
+  },
+  "tooltips": {
+    "scrollToTop": "トップにスクロール",
+    "repoStarsForks": "ウェブサイトのリポジトリ",
+    "searchButton": "検索",
+    "remove": "削除"
+  },
+  "inputsPlaceholders": {
+    "whatYouLookingFor": "何をお探しですか？",
+    "enterYourEmail": "メールアドレスを入力してください",
+    "yourName": "あなたの名前",
+    "yourEmail": "あなたのメールアドレス",
+    "yourMessage": "メッセージを入力してください",
+    "yourPhone": "あなたの電話",
+    "address": "例：キングストン、5236、アメリカ合衆国",
+    "currentPass": "現在のパスワード",
+    "confirmPass": "パスワードを確認",
+    "newPass": "新しいパスワード",
+    "couponExample": "例：SAVE20",
+    "fullName": "フルネーム",
+    "emailOrPhone": "メールアドレスまたは電話番号",
+    "password": "パスワード"
+  },
+  "inputsLabels": {
+    "firstName": "名",
+    "lastName": "姓",
+    "email": "メール",
+    "companyName": "会社名",
+    "streetAddress": "住所",
+    "apartment": "アパート、階層など（オプション）",
+    "townOrCity": "市区町村",
+    "phoneNumber": "電話番号",
+    "emailAddress": "メールアドレス",
+    "saveThisInfo": "次回のチェックアウトが速くなるように、この情報を保存します",
+    "passwordChanges": "パスワードの変更",
+    "address": "住所"
+  },
+  "loginSignUpPage": {
+    "createAccount": "アカウントを作成する",
+    "enterDetails": "以下に詳細を入力してください",
+    "login": "Exclusiveにログインする",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "alreadyHaveAcc": "すでにアカウントをお持ちですか？"
+  },
+  "favoritePage": {
+    "title": "お気に入り（{{numberOfProducts}}）"
+  },
+  "connectionLabel": {
+    "restoredInternet": "接続が復旧しました",
+    "noInternetAvailable": "インターネット接続が利用できません。"
+  },
+  "contactPage": {
+    "contactInfoCard": {
+      "phoneSection": {
+        "title": "お電話でお問い合わせ",
+        "weAreAvailable": "24時間365日対応しています。",
+        "phoneNumber": "電話番号"
+      },
+      "emailSection": {
+        "title": "メールでお問い合わせ",
+        "fillOut": "フォームに記入してください。24時間以内にご連絡いたします。",
+        "email": "メールアドレス"
+      }
+    }
+  },
+  "accountPage": {
+    "editProfile": "プロフィールを編集する",
+    "accountMenuSection": {
+      "manageMyAccount": "マイアカウントを管理する",
+      "myOrders": "私の注文",
+      "profile": "マイプロフィール",
+      "addressBook": "住所録",
+      "paymentOptions": "支払いオプション",
+      "returns": "返品",
+      "cancellations": "キャンセル"
+    }
+  },
+  "cartPage": {
+    "productsTable": {
+      "product": "商品",
+      "price": "価格",
+      "quantity": "数量",
+      "subtotal": "小計"
+    },
+    "cartInfoMenu": {
+      "cartTotal": "カート合計",
+      "subTotal": "小計",
+      "shipping": "配送料",
+      "free": "無料",
+      "total": "合計",
+      "processToCheckout": "チェックアウトへ進む"
+    }
+  },
+  "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
+  "cashOnDelivery": "代金引換",
+  "bank": "銀行",
+  "billingDetails": "請求先の詳細"
+}
