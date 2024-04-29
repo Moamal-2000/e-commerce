@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
 }
 
 ::selection {
@@ -22,6 +21,7 @@ html {
 
 body {
   background-color: var(--website-bg);
+  font-family: "Poppins";
 }
 
 .App {
@@ -119,6 +119,10 @@ main {
 }
 
 // rtl direction styles
+[lang=ar] body {
+  font-family: "Rubik" !important;
+}
+
 [dir=rtl] p {
   font-size: 1.1rem;
 }

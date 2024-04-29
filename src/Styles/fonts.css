@@ -88,3 +88,45 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+/* Rubik */
+@font-face {
+  font-family: "Rubik";
+  src: url("../Fonts/Rubik/Rubik-Light.ttf"), format("ttf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../Fonts/Rubik/Rubik-Regular.ttf"), format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../Fonts/Rubik/Rubik-Medium.ttf"), format("ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../Fonts/Rubik/Rubik-SemiBold.ttf"), format("ttf");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../Fonts/Rubik/Rubik-Bold.ttf"), format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
