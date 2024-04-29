@@ -1,0 +1,511 @@
+{
+  "firstHeader": {
+    "saleMessage": "Nyári Akció Minden Fürdőruhára és Ingyenes Expressz Szállítás - 50% kedvezmény!",
+    "shopNow": "Vásárolj Most"
+  },
+
+  "languageSelector": {
+    "english": "Angol",
+    "russian": "Orosz",
+    "arabic": "Arab",
+    "french": "Francia"
+  },
+
+  "nav": {
+    "home": "Kezdőlap",
+    "contact": "Kapcsolat",
+    "about": "Rólunk",
+    "profile": "Profil",
+    "signUp": "Regisztráció"
+  },
+
+  "navTools": {
+    "favorite": "Kedvencek",
+    "cart": "Kosár",
+    "userMenu": "Felhasználói menü"
+  },
+
+  "homeSlider": {
+    "title": "30% kedvezmény Kuponra"
+  },
+
+  "products": {
+    "PS5Gamepad": {
+      "shortName": "PS5 Vezérlő",
+      "name": "PS5 Vezérlő",
+      "category": "Játék",
+      "description": "Magas minőségű PlayStation 5 Vezérlő Bőr léggömbös ragasztóval, könnyű buborékmentes telepítéshez és rendetlen eltávolításhoz. Nyomásérzékeny."
+    },
+    "AK-9000Keyboard": {
+      "shortName": "AK-9000 Billentyűzet",
+      "name": "AK-900 Vezetékes Billentyűzet",
+      "category": "Játék",
+      "description": "Emeld magasabb szintre a játékélményt az AK-900 Vezetékes Billentyűzettel. A precízió és a tartósság érdekében tervezett billentyűzet kiváló reakcióképességgel és tapintásos visszajelzéssel rendelkezik. Letisztult dizájnja és testreszabható RGB világítása stílusos kiegészítővé teszi bármely játékfelállást. Legyen szó versenyszerű játékról vagy jelentések írásáról, az AK-900 garantálja a csúcsteljesítményt minden lenyomott gombbal."
+    },
+    "LCDMonitor": {
+      "shortName": "LCD Monitor",
+      "name": "IPS LCD Játék Monitor",
+      "category": "Játék",
+      "description": "Merülj el a játék világában az IPS LCD Játék Monitorral. Lenyűgöző látványvilága és ultrakönnyű játékmenete révén ez a monitor páratlan játékélményt nyújt. Magas frissítési rátájával és alacsony bemeneti késleltetésével sosem fogsz lemaradni egyetlen képkockáról sem. Legyen szó ellenfelek legyőzéséről vagy hatalmas világok felfedezéséről, az IPS LCD Játék Monitor minden részletet életre kelt élénk színekkel és kristálytiszta tisztasággal."
+    },
+    "S-SeriesChair": {
+      "shortName": "S-Sorozat Szék",
+      "name": "S-Sorozat Kényelmes Szék",
+      "category": "Bútor",
+      "description": "Élvezd a kényelmet mint soha korábban az S-Sorozat Kényelmes Székkel. Puhára párnázott és ergonomikus kialakítású, ez a szék kivételes támaszt nyújt hosszú játékórák vagy munkaidő alatt. Letisztult és modern esztétikája stílusos megjelenést kölcsönöz bármely térnek. Búcsúzz el a kényelmetlenségtől és üdvözöld a pihenést az S-Sorozat Kényelmes Székkel."
+    },
+    "NorthCoat": {
+      "shortName": "Északi Kabát",
+      "name": "Az Északi Kabát",
+      "category": "Ruha",
+      "description": "Maradj melegen és stílusosan Az Északi Kabáttal. Prémium anyagokból és szakértői kézügyességgel készült, ez a kabát tervezték az elemek elleni védelemre és a kényelmes melegség biztosítására. Időtlen dizájnjával és sokoldalú színével alapdarabja lesz bármely évszaknak. Legyen szó a szabadban való kalandozásról vagy a városban való ügyintézésről, Az Északi Kabát biztosan magára vonzza a tekinteteket, bárhova is mész."
+    },
+    "GucciBag": {
+      "shortName": "Gucci Táska",
+      "name": "Gucci Sporttáska",
+      "category": "Hátizsák",
+      "description": "Közöld a véleményedet a Gucci Sporttáskával. Luxus anyagokból készült és ikonikus márkanévvel ellátott, ez a táska eleganciát és stílust sugároz. Tágas belső tere és több rekesze tökéletes a lényeges dolgok rendezett tárolására. Legyen szó első osztályú utazásról vagy az edzőterem felkereséséről, a Gucci Sporttáska a luxus és funkcionalitás kimeríthetetlen forrása."
+    },
+    "CPUCooler": {
+      "shortName": "CPU Hűtő",
+      "name": "RGB Folyadékhűtésű CPU Hűtő",
+      "category": "Játék",
+      "description": "Tartsd a CPU-t hűvösen és csendesen az RGB Folyadékhűtésű CPU Hűtővel. Fejlett hűtési technológiával és testreszabható RGB világítással ez a hűtő nemcsak alacsony hőmérsékleteket tart, hanem stílust is kölcsönöz a gépednek. Letisztult dizájnja és magas teljesítményű képességei miatt nélkülözhetetlen minden játékhoz vagy munkaállomáshoz. Búcsúzz el a túlmelegedéstől és üdvözöld a csúcs teljesítményt az RGB Folyadékhűtésű CPU Hűtővel."
+    },
+    "BookShelf": {
+      "shortName": "Könyvespolc",
+      "name": "Kis Könyvespolc",
+      "category": "Bútor",
+      "description": "Szervezd meg könyvtáradat stílusosan a Kis Könyvespolccal. Tartós anyagokból készült és kompakt kialakítású, ez a könyvespolc maximalizálja a tárolóhelyet anélkül, hogy áldozna az esztétikumot. Legyen szó kedvenc regényeid bemutatásáról vagy dekoratív tárgyak kiállításáról, letisztult dizájnja tökéletesen illeszkedik bármilyen dekorációhoz. Búcsúzz el a rendetlenségtől és üdvözöld a stílust a Kis Könyvespolccal."
+    },
+    "DogFood": {
+      "shortName": "Kutyatáp",
+      "name": "Fajtiszta Száraz Kutyatáp",
+      "category": "Állat",
+      "description": "Kényeztesd bundás barátodat a legjobbal a Fajtiszta Száraz Kutyatáppal. Prémium összetevőkből és nélkülözhetetlen tápanyagokkal ez a kutyatáp teljes és kiegyensúlyozott táplálást biztosít minden korú és fajtájú kutyának. Ízletes ízvilágának és ropogós textúrájának köszönhetően kutyád még többet kér majd. Búcsúzz el az étkezési küzdelmektől és üdvözöld boldog, egészséges kutyáidat a Fajtiszta Száraz Kutyatáppal."
+    },
+    "CannonCamera": {
+      "shortName": "Cannon Kamera",
+      "name": "CANON EOS Tükörreflexes Kamera",
+      "category": "Kamera",
+      "description": "Rögzítsd az élet értékes pillanatait a CANON EOS Tükörreflexes Kamerával. Legyél akár profi fotós, akár amatőr rajongó, ez a kamera lenyűgöző képminőséget és teljesítményt nyújt. Fejlett funkcióival és intuitív vezérléseivel kibontakoztathatod kreativitásodat és fotózási szintedet a következő szintre emelheted. Búcsúzz el a homályos felvételektől és üdvözöld a kristálytiszta képeket a CANON EOS Tükörreflexes Kamerával."
+    },
+    "FHDLaptop": {
+      "shortName": "FHD Laptop",
+      "name": "ASUS FHD Játék Laptop",
+      "category": "Számítógépek",
+      "description": "Tapasztald meg a páratlan játék teljesítményt az ASUS FHD Játék Laptopjával. A legmodernebb hardverrel és lenyűgöző Full HD kijelzővel felszerelve ez a laptop képes megbirkózni a legigényesebb játékokkal is könnyedén. Letisztult dizájnja és könnyű kivitele tökéletes társat biztosít a játékhoz bárhol is legyél. Búcsúzz el a lassúságtól és üdvözöld a sima játékmenetet az ASUS FHD Játék Laptopjával."
+    },
+    "Curology": {
+      "shortName": "Curology",
+      "name": "Curology Termék Készlet",
+      "category": "Smink",
+      "description": "Változtasd meg bőrápolási rutinodat a Curology Termék Készlettel. Bőrgyógyászok által kidolgozott és az egyedi bőröd igényeire szabottan összeállított, ez a készlet mindent tartalmaz, amire szükséged van az egyenletes, ragyogó bőrért. A tisztítóktól a szérumokig minden termék célzott problémákra lett kifejlesztve és látható eredményeket nyújt. Búcsúzz el a fakó, egyenetlen bőrtől és üdvözöld az egészséges, ragyogó bőrt a Curology Termék Készlettel."
+    },
+    "ElectricCar": {
+      "shortName": "Elektromos Autó",
+      "name": "Gyerek Elektromos Autó",
+      "category": "Játék",
+      "description": "Szórakoztasd gyermeked fantáziáját a Gyerek Elektromos Autóval. A szórakozás és izgalom érdekében tervezett autó valósághű részletekkel és könnyű vezérléssel rendelkezik, ami minden utazást kalanddá tesz. Legyen szó a szomszédság felfedezéséről vagy a kert feltérképezéséről, a Gyerek Elektromos Autó órákra szórakoztatja a kisgyerekeket. Búcsúzz el az unalmastól és üdvözöld a végtelen szórakozást a Gyerek Elektromos Autóval."
+    },
+    "SoccerCleats": {
+      "shortName": "Labdarúgó Cipő",
+      "name": "Jr. Zoom Labdarúgó Cipő",
+      "category": "Ruha",
+      "description": "Vidd a játékodat a következő szintre a Jr. Zoom Labdarúgó Cipővel. A sebességhez és az ügyességhez tervezve, ezek a cipők kivételes tapadást és stabilitást biztosítanak a pályán. Könnyű kialakításuk és reakcióképes párnázásuk miatt megállíthatatlannak érezheted magad a kezdő sípszóig. Búcsúzz el a csúszkálástól és üdvözöld a csúcsteljesítményt a Jr. Zoom Labdarúgó Cipővel."
+    },
+    "GP11Gamepad": {
+      "shortName": "GP11 Vezérlő",
+      "name": "GP11 Shooter USB Vezérlő",
+      "category": "Játék",
+      "description": "Uralkodj a versenyben a GP11 Shooter USB Vezérlővel. A precízió és a kényelem érdekében tervezett vezérlővel minden nyomás és csúsztatás egyaránt lenyűgöző játékélményt nyújt. Legyen szó ellenfelek legyőzéséről vagy az idő elleni versenyről, ergonomikus kialakítása és reagáló vezérlői segítségével mindig előnyben leszel. Búcsúzz el a lassú bemenetektől és üdvözöld a sima, zökkenőmentes játékmenetet a GP11 Shooter USB Vezérlővel."
+    },
+    "SatinJacket": {
+      "shortName": "Selyem Kabát",
+      "name": "Steppelt Selyem Kabát",
+      "category": "Ruha",
+      "description": "Dobd fel a külső ruhatáradat a Steppelt Selyem Kabáttal. Prémium selyem anyagból készült és steppelt kialakítással, ez a kabát könnyedén ötvözi a stílust és a funkcionalitást. Legyen szó az elemekkel való küzdelemről vagy a városban való barangolásról, luxus textúrája és letisztult sziluettje sokoldalúvá teszi bármelyik gardrób alapdarabjává. Búcsúzz el a unalmas külső ruházattól és üdvözöld a könnyed stílust a Steppelt Selyem Kabáttal."
+    }
+  },
+
+  "productCard": {
+    "buttonText": {
+      "addToCart": "Kosárba",
+      "removeFromCart": "Eltávolítás a kosárból"
+    },
+    "icons": {
+      "details": "Részletek",
+      "remove": "Eltávolítás",
+      "wishlist": "Kívánságlista",
+      "favorite": "Kedvenc"
+    }
+  },
+
+  "detailsPage": {
+    "reviews": "({{votes}} vélemény)",
+    "inStock": "Raktáron",
+    "colors": "Színek",
+    "size": "Méret",
+    "addToFav": "Hozzáadás a Kedvencekhez",
+    "freeDelivery": {
+      "title": "Ingyenes Szállítás",
+      "description": "Írd be irányítószámod a Szállítási Elérhetőséghez"
+    },
+    "returnDelivery": {
+      "title": "Visszaküldési Szállítás",
+      "description": "Ingyenes 30 napos Szállítási Visszaküldés. Részletek"
+    },
+    "relatedItems": "Kapcsolódó Tételek"
+  },
+
+  "common": {
+    "facebook": "Facebook",
+    "twitter": "Twitter",
+    "instagram": "Instagram",
+    "linkedin": "LinkedIn",
+    "days": "Nap",
+    "hours": "Óra",
+    "minutes": "Perc",
+    "seconds": "Másodperc",
+    "reset": "Visszaállítás",
+    "welcome": "Üdvözöljük",
+    "cancel": "Mégse"
+  },
+
+  "history": {
+    "categories": {
+      "gaming": "Játék",
+      "furniture": "Bútor",
+      "clothes": "Ruha",
+      "backpack": "Hátizsák",
+      "animal": "Állat",
+      "camera": "Kamera",
+      "computers": "Számítógépek",
+      "makeup": "Smink"
+    },
+    "account": "Fiók",
+    "products": "Termékek",
+    "cart": "Kosár",
+    "checkout": "Pénztár",
+    "results": "Eredmények",
+    "404Error": "404 Hiba"
+  },
+
+  "footer": {
+    "section1": {
+      "subscribe": "Feliratkozás",
+      "getOffer": "Kapjon 10% kedvezményt első rendelésére",
+      "enterEmailPlaceholder": "Adja meg az e-mail címét",
+      "sendLabel": "Küldés"
+    },
+    "section2": {
+      "support": "Támogatás",
+      "address": "Irak, Bagdad"
+    },
+    "section3": {
+      "account": "Fiók",
+      "myAccount": "Saját fiókom",
+      "loginRegister": "Bejelentkezés / Regisztráció",
+      "cart": "Kosár",
+      "wishlist": "Kívánságlista",
+      "shop": "Vásárlás"
+    },
+    "section4": {
+      "quickLink": "Gyors hivatkozások",
+      "privacyPolicy": "Adatvédelmi irányelvek",
+      "termsOfUse": "Használati feltételek",
+      "faq": "GYIK",
+      "contact": "Kapcsolat",
+      "section5": {
+        "downloadApp": "App letöltése",
+        "saveThreeDollars": "Mentse el a 3 dollárt az App új felhasználói számára"
+      }
+    },
+    "copyRightsText": {
+      "designedBy": "Weboldal tervezője",
+      "codedBy": "és kódolta"
+    }
+  },
+
+  "sectionsMenu": {
+    "womenFashion": {
+      "title": "Női divat",
+      "menuItems": {
+        "elegantDress": "Elegáns ruha",
+        "chicBlouse": "Elegáns blúz",
+        "statementHandbag": "Kiemelkedő kézitáska",
+        "versatileJacket": "Változatos dzseki",
+        "comfortable": "Kényelmes cipők"
+      }
+    },
+    "menFashion": {
+      "title": "Férfi divat",
+      "menuItems": {
+        "tailoredSuit": "Szabott öltöny",
+        "casualShirts": "Közvetlen ingek",
+        "slimFitJeans": "Szűkített farmer",
+        "leatherAccessories": "Bőr kiegészítők",
+        "modernSneakers": "Modern tornacipők"
+      }
+    },
+    "otherSections": {
+      "electronics": "Elektronika",
+      "homeLifestyle": "Otthon és életmód",
+      "medicine": "Gyógyászat",
+      "sportsOutdoor": "Sport és szabadidő",
+      "babyToys": "Baba és játékok",
+      "groceriesPets": "Élelmiszerek és háziállatok",
+      "healthBeauty": "Egészség és szépség"
+    }
+  },
+  "mobileNav": {
+    "profile": "Profil",
+    "home": "Kezdőlap",
+    "about": "Névjegy",
+    "myCart": "Kosaram",
+    "favorite": "Kedvenc",
+    "wishlist": "Kívánságlista",
+    "notification": "Értesítés",
+    "signIn": "Bejelentkezés",
+    "signOut": "Kijelentkezés",
+    "hey": "Hé"
+  },
+
+  "buttons": {
+    "viewAllProducts": "Összes termék megtekintése",
+    "buyNow": "Vásárlás most",
+    "viewAll": "Összes megtekintése",
+    "sendMessage": "Üzenet küldése",
+    "saveChanges": "Változtatások mentése",
+    "moveAllToBag": "Összes áthelyezése a táskába",
+    "seeAll": "Mindent megtekint",
+    "returnToShop": "Vissza az üzletbe",
+    "updateCart": "Kosár frissítése",
+    "applyCoupon": "Kupon alkalmazása",
+    "processToCheckout": "Folyamat megkezdése a kijelentkezéshez",
+    "placeOrder": "Rendelés leadása",
+    "backToHome": "Vissza a kezdőlapra",
+    "createAccount": "Fiók létrehozása",
+    "signUpWithGoogle": "Regisztráció a Google-lal",
+    "login": "Bejelentkezés"
+  },
+
+  "aboutPage": {
+    "heroSection": {
+      "heading": "Mi történetünk",
+      "paragraphOne": "Az Exkluzív 2015-ben indult, Dél-Ázsia első számú online vásárlási piactere, aktív jelenléttel Bangladesben. Széles körű személyre szabott marketing-, adat- és szolgáltatási megoldásokkal támogatva az Exkluzív 10 500 eladóval és 300 márkával rendelkezik, és 3 millió ügyfelet szolgál ki a régióban.",
+      "paragraphTwo": "Az Exkluzív több mint 1 millió terméket kínál, nagyon gyorsan növekszik. Az Exkluzív változatos választékot kínál olyan kategóriákban, mint a fogyasztói.",
+      "imageAlt": "két boldog fiatal nő vásárol"
+    },
+    "cardInfo": {
+      "aboutCardsInfo1": "Eladók aktív weboldalunkon",
+      "aboutCardsInfo2": "Havi termékértékesítések",
+      "aboutCardsInfo3": "Ügyfelek aktív weboldalunkon",
+      "aboutCardsInfo4": "Éves bruttó árbevétel weboldalunkon"
+    },
+    "ourMembersData": {
+      "founderChairman": {
+        "name": "Tom Cruise",
+        "jobTitle": "Alapító és elnök"
+      },
+      "managingDirector": {
+        "name": "Emma Watson",
+        "jobTitle": "Ügyvezető igazgató"
+      },
+      "productDesigner": {
+        "name": "Will Smith",
+        "jobTitle": "Terméktervező"
+      }
+    },
+    "featuresSectionData": {
+      "car": {
+        "iconAlt": "Autó",
+        "title": "INGYENES ÉS GYORS SZÁLLÍTÁS",
+        "description": "Ingyenes szállítás minden 140 dollár feletti rendelésre"
+      },
+      "headphone": {
+        "iconAlt": "Fejhallgató",
+        "title": "24/7 ÜGYFÉLSZOLGÁLAT",
+        "description": "Barátságos 24/7 ügyfélszolgálat"
+      },
+      "correctSign": {
+        "iconAlt": "Helyes jelzés",
+        "title": "PÉNZ VISSZAFIZETÉSI GARANCIA",
+        "description": "Pénzt visszafizetünk 30 napon belül"
+      }
+    }
+  },
+
+  "sectionTitles": {
+    "todaysSection": {
+      "title": "Mai",
+      "flashSales": "Villám akciók"
+    },
+    "categoriesSection": {
+      "title": "Kategóriák",
+      "browseByCategory": "Böngésszen kategóriák szerint"
+    },
+    "thisMonthSection": {
+      "title": "Ebben a hónapban",
+      "bestSelling": "Legjobban eladott termékek"
+    },
+    "ourProducts": {
+      "title": "Termékeink",
+      "exploreProducts": "Fedezze fel termékeinket"
+    },
+    "featuredSection": {
+      "title": "Kiemelt",
+      "newArrival": "Új érkezés"
+    },
+    "forYou": "Csak neked"
+  },
+
+  "categoriesData": {
+    "phones": "Telefonok",
+    "computers": "Számítógépek",
+    "smartwatch": "Okosóra",
+    "camera": "Kamera",
+    "headphones": "Fejhallgatók",
+    "gaming": "Játék",
+    "furniture": "Bútor",
+    "clothes": "Ruhák",
+    "animal": "Állat",
+    "makeup": "Smink"
+  },
+  "productPoster": {
+    "title": "Kategóriák",
+    "subTitle": "Fokozza a zenei élményét"
+  },
+
+  "notFoundPage": {
+    "tabTitle": "Az oldal nem található",
+    "description": "A látogatott oldal nem található. Léphet vissza a kezdőlapra.",
+    "notBuiltTabTitle": "Az oldal nincs elkészítve",
+    "notBuiltDescription": "Sajnáljuk, az oldalt, amelyet keres, még nem készítették el.",
+    "notFoundMessage": "404 Nem található"
+  },
+
+  "featuredSection": {
+    "mediumPoster": {
+      "title": "PlayStation 5",
+      "description": "Fekete-fehér verziója a PS5-nek, amely akciósan elérhető."
+    },
+    "horizontalPoster": {
+      "title": "Női kollekciók",
+      "description": "Kiemelt női kollekciók, amelyek más érzést keltenek."
+    },
+    "smallPoster1": {
+      "title": "Hangszórók",
+      "description": "Amazon vezeték nélküli hangszórók"
+    },
+    "smallPoster2": {
+      "title": "Parfüm",
+      "description": "GUCCI INTENSE OUD EDP"
+    }
+  },
+
+  "tooltips": {
+    "scrollToTop": "Görgetés az oldal tetejére",
+    "repoStarsForks": "a webhely tárolója",
+    "searchButton": "Keresés",
+    "remove": "Eltávolítás"
+  },
+
+  "inputsPlaceholders": {
+    "whatYouLookingFor": "Mit keresel?",
+    "enterYourEmail": "Írd be az email címed",
+    "yourName": "A neved",
+    "yourEmail": "Az email címed",
+    "yourMessage": "Az üzeneted",
+    "yourPhone": "A telefonszámod",
+    "address": "Ex Kingston, 5236, Egyesült Államok",
+    "currentPass": "Jelenlegi jelszó",
+    "confirmPass": "Jelszó megerősítése",
+    "newPass": "Új jelszó",
+    "couponExample": "Példa: MENTÉS20",
+    "fullName": "Teljes név",
+    "emailOrPhone": "Email vagy telefonszám",
+    "password": "Jelszó"
+  },
+
+  "inputsLabels": {
+    "firstName": "Keresztnév",
+    "lastName": "Vezetéknév",
+    "email": "Email",
+    "companyName": "Cégnév",
+    "streetAddress": "Utca és házszám",
+    "apartment": "Lakás, emelet stb. (opcionális)",
+    "townOrCity": "Város",
+    "phoneNumber": "Telefonszám",
+    "emailAddress": "Email cím",
+    "saveThisInfo": "Mentsd el az információkat a következő gyorsabb kijelentkezéshez",
+    "passwordChanges": "Jelszó módosítása",
+    "address": "Cím"
+  },
+
+  "loginSignUpPage": {
+    "createAccount": "Fiók létrehozása",
+    "enterDetails": "Írd be az adataidat lentebb",
+    "login": "Bejelentkezés az Exclusive webhelyre",
+    "forgotPassword": "Elfelejtett jelszó?",
+    "alreadyHaveAcc": "Már van fiókod?"
+  },
+
+  "favoritePage": {
+    "title": "Kedvencek ({{numberOfProducts}})"
+  },
+
+  "connectionLabel": {
+    "restoredInternet": "A kapcsolat helyreállt",
+    "noInternetAvailable": "Nincs internetkapcsolat."
+  },
+  "contactPage": {
+    "contactInfoCard": {
+      "phoneSection": {
+        "title": "Hívjon minket",
+        "weAreAvailable": "Vagyunk elérhetők 24/7, 7 naponta.",
+        "phoneNumber": "Telefonszám"
+      },
+      "emailSection": {
+        "title": "Írjon nekünk",
+        "fillOut": "Töltse ki az űrlapot, és 24 órán belül felvesszük Önnel a kapcsolatot.",
+        "email": "Email"
+      }
+    }
+  },
+
+  "accountPage": {
+    "editProfile": "Profil szerkesztése",
+    "accountMenuSection": {
+      "manageMyAccount": "Fiókom kezelése",
+      "myOrders": "Rendeléseim",
+      "profile": "Profilom",
+      "addressBook": "Címjegyzék",
+      "paymentOptions": "Fizetési lehetőségeim",
+      "returns": "Visszatérítéseim",
+      "cancellations": "Lemondásaim"
+    }
+  },
+
+  "cartPage": {
+    "productsTable": {
+      "product": "Termék",
+      "price": "Ár",
+      "quantity": "Mennyiség",
+      "subtotal": "Részösszeg"
+    },
+    "cartInfoMenu": {
+      "cartTotal": "Kosár összesen",
+      "subTotal": "Részösszeg",
+      "shipping": "Szállítás",
+      "free": "Ingyenes",
+      "total": "Összesen",
+      "processToCheckout": "Folyamat a pénztárhoz"
+    }
+  },
+
+  "wishlist": "Kívánságlista ({{numberOfWishlist}})",
+  "cashOnDelivery": "Utánvétel",
+  "bank": "Bank",
+  "billingDetails": "Számlázási adatok"
+}

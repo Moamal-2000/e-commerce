@@ -13,5 +13,7 @@ const useChangeLangDirOnKeys = () => {
   useFunctionOnKey(() => changeLang("ru"), ["KeyR"], delay);
   useFunctionOnKey(() => changeLang("fr"), ["KeyF"], delay);
   useFunctionOnKey(() => changeLang("ja"), ["KeyJ"], delay);
+  useFunctionOnKey(() => changeLang("hu"), ["KeyH"], delay);
+  useFunctionOnKey(() => changeLang("hi"), ["KeyI"], delay);
 };
 export default useChangeLangDirOnKeys;
