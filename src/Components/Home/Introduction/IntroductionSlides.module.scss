@@ -131,13 +131,13 @@
   }
 }
 
-// rtl direction styles
-[dir=rtl] .discount {
+// Arabic styles
+[lang=ar] .discount {
   width: 420px;
 }
 
 @include medium {
-  [dir=rtl] .discount {
+  [lang=ar] .discount {
     width: 340px;
   }
 }
@@ -145,6 +145,6 @@
 // russia styles
 @include medium {
   [lang=ru] .discount {
-  width: 320px;
+    width: 320px;
   }
 }

@@ -131,3 +131,14 @@
   color: var(--black);
   width: 100%;
 }
+
+// Arabic styles
+[lang=ar] .sectionsMenuButton {
+  top: 126px;
+}
+
+@include medium {
+  [lang=ar] .sectionsMenuButton {
+    top: 130px;
+  }
+}

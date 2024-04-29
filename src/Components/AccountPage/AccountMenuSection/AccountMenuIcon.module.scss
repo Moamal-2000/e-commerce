@@ -3,7 +3,7 @@
 .profileSectionsButton {
   position: absolute;
   left: 20px;
-  top: 118px;
+  top: 134px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -32,4 +32,9 @@
 .profileSectionsButton>svg {
   width: 25px;
   height: 25px;
+}
+
+// Arabic styles
+[lang=ar] .profileSectionsButton {
+  top: 130px;
 }

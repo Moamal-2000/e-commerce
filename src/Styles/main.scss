@@ -118,16 +118,20 @@ main {
   pointer-events: all;
 }
 
-// rtl direction styles
+// Arabic styles
 [lang=ar] body {
   font-family: "Rubik" !important;
 }
 
-[dir=rtl] p {
+[lang=ar] :where(h2, b) {
+  letter-spacing: -1px !important;
+}
+
+[lang=ar] p {
   font-size: 1.1rem;
 }
 
-[dir=rtl] .skip-content {
+[lang=ar] .skip-content {
   left: auto;
   right: -150%;
 

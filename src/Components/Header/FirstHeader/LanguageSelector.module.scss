@@ -31,17 +31,13 @@
 }
 
 .languageSelector .currentOption {
-  min-width: 63px;
+  width: 100%;
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 8px 11px;
   background-color: transparent;
   padding-right: 10px;
-}
-
-.currentOption>span {
-  width: 67.4px;
 }
 
 .currentOption>img {
@@ -58,8 +54,8 @@
 
 .languageSelector .menu {
   position: absolute;
-  left: -1.6px;
-  top: 41.8px;
+  left: -64px;
+  top: 62px;
   background-color: var(--black);
   z-index: 10;
   opacity: 0;
@@ -78,7 +74,7 @@
   color: var(--white);
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap:60px;
   padding: 8px 11px;
   outline: dashed 0 var(--regular-light-gray);
   outline-offset: -4px;
@@ -109,15 +105,32 @@
   object-fit: contain;
 }
 
-// rtl direction styles
-[dir=rtl] .languageSelector .currentOption {
-  gap: 0;
-}
-
-[dir=rtl] .option>span {
+// Arabic styles
+[lang=ar] .option>span {
   font-weight: bold;
 }
 
-[dir=rtl] .languageSelector .menu .option {
-  gap: 0;
+[lang=ar] .languageSelector .menu {
+  top: 61px;
+  left: 0;
+}
+
+// Russian styles
+[lang=ru] .languageSelector .menu {
+  left: -58px;
+}
+
+// Hungarian styles
+[lang=hu] .languageSelector .menu {
+  left: -37px;
+}
+
+// Japanese styles
+[lang=ja] .languageSelector .menu {
+  left: -40px;
+}
+
+// Hindi styles
+[lang=hi] .languageSelector .menu {
+  left: -80px;
 }

@@ -3,16 +3,11 @@
 .header {
   background-color: var(--black);
   color: var(--white);
+  min-height: 84px;
   padding: 16px 0;
   position: relative;
   display: flex;
   align-items: center;
-}
-
-@include large {
-  .header {
-    min-height: 89px;
-  }
 }
 
 .container {
@@ -94,4 +89,15 @@
 // Russian language styles
 [lang=ru] .container {
   grid-template-columns: 0% 1fr;
+}
+
+// French styles
+[lang=fr] .discount {
+  font-size: .95rem;
+}
+
+@include medium {
+  [lang=fr] .discount {
+    font-size: .8rem;
+  }
 }
