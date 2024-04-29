@@ -235,6 +235,12 @@ export const LANGUAGES = [
     code: "hu",
     id: uuid(),
   },
+  {
+    lang: "Hindi",
+    flag: saudiFlag,
+    code: "hi",
+    id: uuid(),
+  },
 ];
 
 export const productCardCustomizations = {
