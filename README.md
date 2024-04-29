@@ -9,10 +9,6 @@
   Design on <a href="https://www.figma.com/file/bwhp2Q5jdzJDIw5YIsBlXe/Full-E-Commerce-Website-UI-UX-Design-(Community)?node-id=34%3A213&mode=design" target="_blank">Figma</a>
 </p>
 
-<p align="center">
-  Visit the website: <a href="https://e-commercew.netlify.app" target="_blank">E-Commerce Website</a>
-</p>
-
 ## 1. Installation
 
 **1. Clone the repository:**
@@ -42,13 +38,14 @@ You are welcome to use and modify the codebase for personal and educational purp
 ## 3. Technologies Used
 
 - [Progressive Web App](https://vite-pwa-org.netlify.app) for web app features
-- [postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
+- [Postcss plugin](https://www.npmjs.com/package/postcss) for auto prefix CSS properties
 - [CSS modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet) with [SASS](https://sass-lang.com/documentation) for styling
 - [Redux/Toolkit](https://redux-toolkit.js.org) for state management
 - [React js](https://react.dev) for better development
 - [React Router Dom v6](https://reactrouter.com) for SPA
-- [react helmet async](https://www.npmjs.com/package/react-helmet-async) for better SEO
+- [React helmet async](https://www.npmjs.com/package/react-helmet-async) for better SEO
 - [Swiper](https://swiperjs.com/react) for carousel slider
+- [React-i18next](https://react.i18next.com) for multi language website
 
 ## 4. Features
 
@@ -68,7 +65,7 @@ You are welcome to use and modify the codebase for personal and educational purp
    View detailed product information with the ability to zoom in on product images.
 
 6. **Search Functionality:**
-   Search for products by name, category, or browse all available products.
+   Search for products by name, or category, or browse all available products.
 
 7. **Save to Favorites/Wishlist/Cart:**
    Save products to your preferred list for future reference or purchase.
@@ -116,3 +113,4 @@ You are welcome to use and modify the codebase for personal and educational purp
 | ---------------------------------------------------- | -------------------------------------- |
 | [Inter](https://fonts.google.com/specimen/Inter)     | Light, Medium, Regular, Bold, SemiBold |
 | [Poppins](https://fonts.google.com/specimen/Poppins) | Light, Medium, Regular, Bold, SemiBold |
+| [Rubik](https://fonts.google.com/specimen/Rubik)     | Black Light, Medium, Regular, Bold, SemiBold, ExtraBold |
