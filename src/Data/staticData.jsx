@@ -16,7 +16,15 @@ import {
   visaCard,
 } from "src/Assets/Images/Images";
 import { v4 as uuid } from "uuid";
-import { car, correctSign, headphone } from "../Assets/Images/Images";
+import {
+  car,
+  correctSign,
+  franceFlag,
+  headphone,
+  hungaryFlag,
+  indiaFlag,
+  japanFlag,
+} from "../Assets/Images/Images";
 
 export const introductionSliderData = [
   {
@@ -40,13 +48,6 @@ export const introductionSliderData = [
     discountText: "Up to 15% off Voucher",
     id: uuid(),
   },
-  // {
-  //   productName: "",
-  //   productImg: "",
-  //   logoImg: "",
-  //   discountText: "Up to 10% off Voucher",
-  //   id: uuid(),
-  // },
 ];
 
 export const categoriesData = [
@@ -219,25 +220,25 @@ export const LANGUAGES = [
   },
   {
     lang: "French",
-    flag: saudiFlag,
+    flag: franceFlag,
     code: "fr",
     id: uuid(),
   },
   {
-    lang: "Japanese",
-    flag: saudiFlag,
-    code: "ja",
-    id: uuid(),
-  },
-  {
     lang: "hungarian",
-    flag: saudiFlag,
+    flag: hungaryFlag,
     code: "hu",
     id: uuid(),
   },
   {
+    lang: "Japanese",
+    flag: japanFlag,
+    code: "ja",
+    id: uuid(),
+  },
+  {
     lang: "Hindi",
-    flag: saudiFlag,
+    flag: indiaFlag,
     code: "hi",
     id: uuid(),
   },

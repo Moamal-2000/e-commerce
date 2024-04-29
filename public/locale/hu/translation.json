@@ -5,10 +5,13 @@
   },
 
   "languageSelector": {
-    "english": "Angol",
-    "russian": "Orosz",
-    "arabic": "Arab",
-    "french": "Francia"
+    "english": "angol",
+    "russian": "orosz",
+    "arabic": "arab",
+    "french": "francia",
+    "japanese": "japán",
+    "hungarian": "magyar",
+    "hindi": "hindi"
   },
 
   "nav": {

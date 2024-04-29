@@ -5,10 +5,13 @@
   },
 
   "languageSelector": {
-    "english": "Английский",
-    "russian": "Русский",
-    "arabic": "Арабский",
-    "french": "Французский"
+    "english": "английский",
+    "russian": "русский",
+    "arabic": "арабский",
+    "french": "французский",
+    "japanese": "японский",
+    "hungarian": "венгерский",
+    "hindi": "хинди"
   },
 
   "nav": {
