@@ -176,16 +176,6 @@
   },
 
   "history": {
-    "categories": {
-      "gaming": "Játék",
-      "furniture": "Bútor",
-      "clothes": "Ruha",
-      "backpack": "Hátizsák",
-      "animal": "Állat",
-      "camera": "Kamera",
-      "computers": "Számítógépek",
-      "makeup": "Smink"
-    },
     "account": "Fiók",
     "products": "Termékek",
     "cart": "Kosár",

@@ -177,16 +177,6 @@
   },
 
   "history": {
-    "categories": {
-      "gaming": "ألعاب",
-      "furniture": "أثاث",
-      "clothes": "ملابس",
-      "backpack": "حقيبة ظهر",
-      "animal": "حيوانات",
-      "camera": "كاميرا",
-      "computers": "حواسيب",
-      "makeup": "مكياج"
-    },
     "account": "الملف الشخصي",
     "products": "المنتجات",
     "cart": "عربة التسوق",

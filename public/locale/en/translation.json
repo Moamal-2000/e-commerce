@@ -176,16 +176,6 @@
   },
 
   "history": {
-    "categories": {
-      "gaming": "Gaming",
-      "furniture": "Furniture",
-      "clothes": "Clothes",
-      "backpack": "Backpack",
-      "animal": "Animal",
-      "camera": "Camera",
-      "computers": "Computers",
-      "makeup": "Makeup"
-    },
     "account": "Account",
     "products": "Products",
     "cart": "Cart",
@@ -366,14 +356,15 @@
 
   "categoriesData": {
     "phones": "Phones",
-    "computers": "Computers",
-    "smartwatch": "SmartWatch",
-    "camera": "Camera",
-    "headphones": "HeadPhones",
     "gaming": "Gaming",
+    "smartwatch": "Smartwatch",
     "furniture": "Furniture",
     "clothes": "Clothes",
+    "backpack": "Backpack",
     "animal": "Animal",
+    "camera": "Camera",
+    "headphones": "Headphones",
+    "computers": "Computers",
     "makeup": "Makeup"
   },
 

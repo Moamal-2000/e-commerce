@@ -18,7 +18,7 @@ const ProductDetailsPage = () => {
     (product) => product?.name?.toLowerCase() === PRODUCT_NAME?.toLowerCase()
   )?.[0];
   const productCategory = PRODUCT_DATA?.category.toLowerCase();
-  const productCategoryTrans = t(`history.categories.${productCategory}`);
+  const productCategoryTrans = t(`categoriesData.${productCategory}`);
   const productName = PRODUCT_DATA?.shortName.replaceAll(" ", "");
   const productNameTrans = t(`products.${productName}.name`);
   const history = [

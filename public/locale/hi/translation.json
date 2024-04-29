@@ -176,16 +176,6 @@
   },
 
   "history": {
-    "categories": {
-      "gaming": "गेमिंग",
-      "furniture": "फर्नीचर",
-      "clothes": "कपड़े",
-      "backpack": "बैकपैक",
-      "animal": "जानवर",
-      "camera": "कैमरा",
-      "computers": "कंप्यूटर",
-      "makeup": "मेकअप"
-    },
     "account": "खाता",
     "products": "उत्पाद",
     "cart": "कार्ट",

@@ -18,7 +18,7 @@ const ProductsCategoryPage = () => {
   const { loadingCategoryPage } = useSelector((state) => state.global);
   const { t } = useTranslation();
   const categoryType = useGetSearchParam("type");
-  const categoryTypeTrans = t(`history.categories.${categoryType}`);
+  const categoryTypeTrans = t(`categoriesData.${categoryType}`);
   const isWebsiteOnline = useOnlineStatus();
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingCategoryPage",

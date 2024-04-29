@@ -176,18 +176,12 @@
   },
 
   "history": {
-    "categories": {
-      "gaming": "ゲーム",
-      "furniture": "家具",
-      "clothing": "衣類",
-      "backpacks": "バックパック",
-      "animals": "動物",
-      "cameras": "カメラ",
-      "computers": "コンピューター",
-      "cosmetics": "化粧品"
-    },
-    "empty": "表示する履歴はありません",
-    "clear": "クリア履歴"
+    "account": "アカウント",
+    "products": "製品",
+    "cart": "カート",
+    "checkout": "チェックアウト",
+    "results": "結果",
+    "404Error": "404 エラー"
   },
 
   "footer": {
@@ -257,6 +251,7 @@
       "healthBeauty": "健康と美容"
     }
   },
+
   "mobileNav": {
     "profile": "プロフィール",
     "home": "ホーム",
@@ -269,6 +264,7 @@
     "signOut": "サインアウト",
     "hey": "こんにちは"
   },
+
   "buttons": {
     "viewAllProducts": "すべての製品を見る",
     "buyNow": "今すぐ購入",
@@ -287,6 +283,7 @@
     "signUpWithGoogle": "Googleでサインアップ",
     "login": "ログイン"
   },
+
   "aboutPage": {
     "heroSection": {
       "heading": "私たちの物語",
@@ -332,6 +329,7 @@
       }
     }
   },
+
   "sectionTitles": {
     "todaysSection": {
       "title": "今日の",
@@ -355,6 +353,7 @@
     },
     "forYou": "あなたにぴったり"
   },
+
   "categoriesData": {
     "phones": "電話",
     "computers": "コンピューター",
@@ -367,17 +366,20 @@
     "animal": "動物",
     "makeup": "メイク"
   },
+
   "productPoster": {
     "title": "カテゴリー",
     "subTitle": "あなたの音楽体験を向上させる"
   },
+
   "notFoundPage": {
     "tabTitle": "ページが見つかりません",
     "description": "訪問したページが見つかりませんでした。ホームページに移動することができます。",
     "notBuiltTabTitle": "ページが作成されていません",
     "notBuiltDescription": "申し訳ありませんが、お探しのページはまだ作成されていません。",
-    "notFoundMessage": "404 Not Found"
+    "notFoundMessage": "404 見つかりません"
   },
+
   "featuredSection": {
     "mediumPoster": {
       "title": "プレイステーション5",
@@ -396,12 +398,14 @@
       "description": "GUCCI INTENSE OUD EDP"
     }
   },
+
   "tooltips": {
     "scrollToTop": "トップにスクロール",
     "repoStarsForks": "ウェブサイトのリポジトリ",
     "searchButton": "検索",
     "remove": "削除"
   },
+
   "inputsPlaceholders": {
     "whatYouLookingFor": "何をお探しですか？",
     "enterYourEmail": "メールアドレスを入力してください",
@@ -418,6 +422,7 @@
     "emailOrPhone": "メールアドレスまたは電話番号",
     "password": "パスワード"
   },
+
   "inputsLabels": {
     "firstName": "名",
     "lastName": "姓",
@@ -432,6 +437,7 @@
     "passwordChanges": "パスワードの変更",
     "address": "住所"
   },
+
   "loginSignUpPage": {
     "createAccount": "アカウントを作成する",
     "enterDetails": "以下に詳細を入力してください",
@@ -439,13 +445,16 @@
     "forgotPassword": "パスワードをお忘れですか？",
     "alreadyHaveAcc": "すでにアカウントをお持ちですか？"
   },
+
   "favoritePage": {
     "title": "お気に入り（{{numberOfProducts}}）"
   },
+
   "connectionLabel": {
     "restoredInternet": "接続が復旧しました",
     "noInternetAvailable": "インターネット接続が利用できません。"
   },
+
   "contactPage": {
     "contactInfoCard": {
       "phoneSection": {
@@ -460,6 +469,7 @@
       }
     }
   },
+
   "accountPage": {
     "editProfile": "プロフィールを編集する",
     "accountMenuSection": {
@@ -472,6 +482,7 @@
       "cancellations": "キャンセル"
     }
   },
+
   "cartPage": {
     "productsTable": {
       "product": "商品",
@@ -488,6 +499,7 @@
       "processToCheckout": "チェックアウトへ進む"
     }
   },
+
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
   "cashOnDelivery": "代金引換",
   "bank": "銀行",

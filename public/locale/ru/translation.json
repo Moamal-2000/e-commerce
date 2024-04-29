@@ -177,16 +177,6 @@
   },
 
   "history": {
-    "categories": {
-      "gaming": "Игры",
-      "furniture": "Мебель",
-      "clothes": "Одежда",
-      "backpack": "Рюкзак",
-      "animal": "Животные",
-      "camera": "Камера",
-      "computers": "Компьютеры",
-      "makeup": "Макияж"
-    },
     "account": "учётная запись",
     "products": "Товары",
     "cart": "Корзина",
@@ -324,19 +314,16 @@
     },
     "featuresSectionData": {
       "car": {
-        "iconImg": "car.png",
         "iconAlt": "Машина",
         "title": "БЕСПЛАТНАЯ И БЫСТРАЯ ДОСТАВКА",
         "description": "Бесплатная доставка для всех заказов свыше 140 долларов"
       },
       "headphone": {
-        "iconImg": "headphone.png",
         "iconAlt": "Наушники",
         "title": "СЛУЖБА ПОДДЕРЖКИ КЛИЕНТОВ 24/7",
         "description": "Дружелюбная поддержка клиентов круглосуточно, 7 дней в неделю"
       },
       "correctSign": {
-        "iconImg": "correctSign.png",
         "iconAlt": "Правильный знак",
         "title": "ГАРАНТИЯ ВОЗВРАТА ДЕНЕГ",
         "description": "Мы возвращаем деньги в течение 30 дней"

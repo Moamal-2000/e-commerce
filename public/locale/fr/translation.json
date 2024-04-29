@@ -176,16 +176,6 @@
   },
 
   "history": {
-    "categories": {
-      "gaming": "Jeux vidéo",
-      "furniture": "Meubles",
-      "clothes": "Vêtements",
-      "backpack": "Sac à dos",
-      "animal": "Animal",
-      "camera": "Appareil photo",
-      "computers": "Informatique",
-      "makeup": "Maquillage"
-    },
     "account": "Compte",
     "products": "Produits",
     "cart": "Panier",
