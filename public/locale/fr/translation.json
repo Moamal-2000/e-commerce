@@ -202,7 +202,7 @@
       "sendLabel": "Envoyer"
     },
     "section2": {
-      "support": "Support",
+      "support": "Soutien",
       "address": "Irak, Bagdad"
     },
     "section3": {
@@ -218,11 +218,11 @@
       "privacyPolicy": "Politique de confidentialité",
       "termsOfUse": "Conditions d'utilisation",
       "faq": "FAQ",
-      "contact": "Contact",
-      "section5": {
-        "downloadApp": "Télécharger l'application",
-        "saveThreeDollars": "Économisez 3 $ avec l'application, nouveau utilisateur uniquement"
-      }
+      "contact": "Contact"
+    },
+    "section5": {
+      "downloadApp": "Télécharger l'application",
+      "saveThreeDollars": "Économisez 3 $ avec l'application, nouveau utilisateur uniquement"
     },
     "copyRightsText": {
       "designedBy": "Site Web conçu par",
@@ -329,7 +329,7 @@
       },
       "headphone": {
         "iconAlt": "Écouteurs",
-        "title": "SUPPORT CLIENT 24/7",
+        "title": "SOUTENIR LE CLIENT 24/7",
         "description": "Service client disponible 24 heures sur 24, 7 jours sur 7, par chat en direct, e-mail ou téléphone"
       },
       "correctSign": {
@@ -378,7 +378,7 @@
   },
 
   "productPoster": {
-    "tittle": "Catégories",
+    "title": "Catégories",
     "subTitle": "Améliorez votre expérience musicale"
   },
 

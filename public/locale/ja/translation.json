@@ -162,10 +162,10 @@
   },
 
   "common": {
-    "facebook": "Facebook",
+    "facebook": "フェイスブック",
     "twitter": "ツイッター",
-    "instagram": "Instagram",
-    "linkedin": "LinkedIn",
+    "instagram": "インスタグラム",
+    "linkedin": "リンクトイン",
     "days": "日",
     "hours": "時間",
     "minutes": "分",
@@ -214,11 +214,11 @@
       "privacyPolicy": "プライバシーポリシー",
       "termsOfUse": "利用規約",
       "faq": "よくある質問",
-      "contact": "お問い合わせ",
-      "section5": {
-        "downloadApp": "アプリをダウンロード",
-        "saveThreeDollars": "新規ユーザーは$3を保存"
-      }
+      "contact": "お問い合わせ"
+    },
+    "section5": {
+      "downloadApp": "アプリをダウンロード",
+      "saveThreeDollars": "新規ユーザーは$3を保存"
     },
     "copyRightsText": {
       "designedBy": "ウェブサイトのデザイン:",
@@ -368,7 +368,7 @@
     "makeup": "メイク"
   },
   "productPoster": {
-    "tittle": "カテゴリー",
+    "title": "カテゴリー",
     "subTitle": "あなたの音楽体験を向上させる"
   },
   "notFoundPage": {

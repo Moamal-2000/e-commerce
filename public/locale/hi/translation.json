@@ -218,11 +218,11 @@
       "privacyPolicy": "गोपनीयता नीति",
       "termsOfUse": "उपयोग की शर्तें",
       "faq": "सामान्य प्रश्न",
-      "contact": "संपर्क करें",
-      "section5": {
-        "downloadApp": "ऐप डाउनलोड करें",
-        "saveThreeDollars": "नए उपयोगकर्ता के लिए एप्प के साथ $3 बचाएं"
-      }
+      "contact": "संपर्क करें"
+    },
+    "section5": {
+      "downloadApp": "ऐप डाउनलोड करें",
+      "saveThreeDollars": "नए उपयोगकर्ता के लिए एप्प के साथ $3 बचाएं"
     },
     "copyRightsText": {
       "designedBy": "वेबसाइट का डिज़ाइन किया गया है",

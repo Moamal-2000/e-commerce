@@ -218,11 +218,11 @@
       "privacyPolicy": "Privacy Policy",
       "termsOfUse": "Terms Of Use",
       "faq": "FAQ",
-      "contact": "Contact",
-      "section5": {
-        "downloadApp": "Download App",
-        "saveThreeDollars": "Save $3 with App New User Only"
-      }
+      "contact": "Contact"
+    },
+    "section5": {
+      "downloadApp": "Download App",
+      "saveThreeDollars": "Save $3 with App New User Only"
     },
     "copyRightsText": {
       "designedBy": "Website designed by",
@@ -378,7 +378,7 @@
   },
 
   "productPoster": {
-    "tittle": "Categories",
+    "title": "Categories",
     "subTitle": "Enhance Your Music Experience"
   },
 

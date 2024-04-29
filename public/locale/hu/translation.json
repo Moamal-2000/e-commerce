@@ -218,11 +218,11 @@
       "privacyPolicy": "Adatvédelmi irányelvek",
       "termsOfUse": "Használati feltételek",
       "faq": "GYIK",
-      "contact": "Kapcsolat",
-      "section5": {
-        "downloadApp": "App letöltése",
-        "saveThreeDollars": "Mentse el a 3 dollárt az App új felhasználói számára"
-      }
+      "contact": "Kapcsolat"
+    },
+    "section5": {
+      "downloadApp": "App letöltése",
+      "saveThreeDollars": "Mentse el a 3 dollárt az App új felhasználói számára"
     },
     "copyRightsText": {
       "designedBy": "Weboldal tervezője",
