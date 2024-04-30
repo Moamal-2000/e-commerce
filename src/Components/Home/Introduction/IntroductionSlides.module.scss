@@ -19,6 +19,8 @@
   left: 40px;
   top: 50px;
   width: 300px;
+  display: flex;
+  flex-direction: column;
 }
 
 @include medium {
@@ -115,7 +117,7 @@
   transition: height .3s, opacity .2s .2s;
 }
 
-.shopNow>svg {
+.shopNow svg {
   fill: var(--secondary-white);
   width: 20px;
   height: 20px;
@@ -125,13 +127,30 @@
 }
 
 @include small {
-  .shopNow>svg {
+  .shopNow svg {
     margin-left: 6px;
     transform: scaleY(1);
   }
 }
 
 // Arabic styles
+[lang=ar] .slide {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+[lang=ar] .content {
+  direction: rtl;
+  left: auto;
+  right: 40px;
+  width: 400px;
+  align-items: flex-start;
+}
+
+[lang=ar] .nameProduct {
+  direction: ltr;
+}
+
 [lang=ar] .discount {
   width: 420px;
 }
@@ -139,6 +158,49 @@
 @include medium {
   [lang=ar] .discount {
     width: 340px;
+  }
+}
+
+[lang=ar] .arrow {
+  rotate: 180deg;
+}
+
+// Hungarian styles
+[lang=hu] {
+  .discount {
+    width: 500px;
+  }
+}
+
+@include medium {
+  [lang=hu] {
+    .discount {
+      width: 400px;
+    }
+  }
+}
+
+// Japanese styles
+@include medium {
+  [lang=ja] {
+    .discount {
+      width: 300px;
+    }
+  }
+}
+
+// French styles
+[lang=fr] .discount {
+  width: 450px;
+  font-size: 2rem;
+  line-height: 50px;
+}
+
+@include medium {
+  [lang=fr] .discount {
+    width: 380px;
+    font-size: 1.5rem;
+    line-height: 40px;
   }
 }
 

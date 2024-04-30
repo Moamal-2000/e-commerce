@@ -23,7 +23,10 @@ const IntroductionSlides = () => {
 
             <Link to="/products" className={s.shopNow} tabIndex="-1">
               <span>{t("buttons.buyNow")}</span>
-              <SvgIcon name="arrowRightLong" />
+
+              <div className={s.arrow}>
+                <SvgIcon name="arrowRightLong" />
+              </div>
             </Link>
           </div>
         </SwiperSlide>

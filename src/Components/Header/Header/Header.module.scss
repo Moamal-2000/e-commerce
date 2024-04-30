@@ -93,15 +93,24 @@
   }
 }
 
-// Arabic styles
+// Arabic & Japanese styles
 @media (max-width: 1300px) {
-  [lang=ar] .container {
+  :where([lang=ar], [lang=ja]) .container {
     grid-template-columns: 17% 1fr;
   }
 }
 
 @include large {
-  [lang=ar] .container {
+  :where([lang=ar], [lang=ja]) .container {
     grid-template-columns: unset;
+  }
+}
+
+// Japanese styles
+@include medium {
+  [lang=ja] .headerContent {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
 }
