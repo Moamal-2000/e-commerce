@@ -9,24 +9,27 @@
 @include small {
   .eventTimer {
     margin-top: 20px;
+    gap: 10px;
   }
 }
 
 .timeContainer {
+  width: 40px;
+  min-width: 40px;
   display: flex;
   flex-direction: column;
 }
 
 .timeContainer .typeTime {
   color: var(--black);
-  transform: scale(.9);
+  scale: .9;
   font-weight: 500;
   font-size: .75rem;
 }
 
 @include small {
   .timeContainer .typeTime {
-    transform: scale(.8);
+    scale: .8;
     position: relative;
     left: -6px;
   }
@@ -49,4 +52,15 @@
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--dark-tomato);
+}
+
+// Arabic styles
+[lang=ar] .eventTimer {
+  flex-direction: row-reverse;
+}
+
+@include small {
+  [lang=ar] .timeContainer .typeTime {
+    left: 0;
+  }
 }
