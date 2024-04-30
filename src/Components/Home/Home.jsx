@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
+import FeaturedSectionFeatures from "./FeaturedSection/FeaturedSectionFeatures";
 import s from "./Home.module.scss";
 import MainSlider from "./Introduction/MainSlider";
 import SectionsMenu from "./Introduction/SectionsMenu";
@@ -35,6 +36,7 @@ const Home = () => {
           <ProductPoster />
           <OurProductsSection />
           <FeaturedSection />
+          <FeaturedSectionFeatures />
         </div>
       </div>
     </>

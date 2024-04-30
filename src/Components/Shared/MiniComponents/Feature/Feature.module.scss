@@ -6,23 +6,7 @@
   align-items: center;
   width: fit-content;
   margin: 0 auto;
-}
-
-@include large {
-  .feature:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
-@include medium {
-  .feature {
-    margin: 0;
-
-    &:not(:last-child) {
-      margin: 0;
-      margin-bottom: 40px;
-    }
-  }
+  max-width: 380px;
 }
 
 .iconHolder {
@@ -53,11 +37,13 @@
   margin: 26px 0 0;
   font-weight: 600;
   font-size: 1.25rem;
+  text-align: center;
 }
 
 .feature>p {
   font-size: .9rem;
   line-height: 21px;
+  text-align: center;
 }
 
 .feature>:where(p, b) {

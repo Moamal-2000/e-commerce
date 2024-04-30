@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./FeaturedSection.module.scss";
-import FeaturedSectionFeatures from "./FeaturedSectionFeatures";
 import FeaturedSectionPosters from "./FeaturedSectionPosters";
 
 const FeaturedSection = () => {
@@ -15,7 +14,6 @@ const FeaturedSection = () => {
         sectionName={t(`${featuredSection}.newArrival`)}
       />
       <FeaturedSectionPosters />
-      <FeaturedSectionFeatures />
     </section>
   );
 };

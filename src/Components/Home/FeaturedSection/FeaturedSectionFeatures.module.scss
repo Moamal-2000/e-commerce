@@ -3,10 +3,20 @@
 .features {
   display: flex;
   align-items: center;
+  margin-bottom: 120px;
+  gap: 30px;
 }
 
 @include medium {
   .features {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+// Multi language styles
+@include large {
+  :where([lang=fr], [lang=ru], [lang=hu], [lang=ar]) .features {
     flex-direction: column;
     align-items: center;
   }
