@@ -32,3 +32,12 @@
     transition: height 0s;
   }
 }
+
+// Arabic styles
+[lang=ar] .nameMenu svg {
+  transform: rotate(180deg);
+}
+
+[lang=ar] .nameMenu .active svg {
+  transform: rotate(90deg);
+}

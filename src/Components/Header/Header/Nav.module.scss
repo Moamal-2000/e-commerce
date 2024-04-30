@@ -59,3 +59,10 @@
 .nav ul li a:focus-visible::before {
   background-color: transparent;
 }
+
+// Arabic styles
+@include medium {
+  [lang=ar] .nav ul {
+    gap: 14px;
+  }
+}

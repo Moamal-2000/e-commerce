@@ -3,7 +3,7 @@
 .sectionsMenuButton {
   position: absolute;
   left: 20px;
-  top: 128px;
+  top: 123px;
   background-color: transparent;
   border: none;
   outline: none;
@@ -25,7 +25,7 @@
 
 @include medium {
   .sectionsMenuButton {
-    top: 134px;
+    top: 129px;
   }
 }
 
@@ -45,7 +45,7 @@
   max-height: 404px;
   display: flex;
   flex-direction: column;
-  padding-right: 10px;
+  padding-inline-end: 10px;
   overflow-y: auto;
 }
 
@@ -134,11 +134,11 @@
 
 // Arabic styles
 [lang=ar] .sectionsMenuButton {
-  top: 126px;
+  top: 120px;
 }
 
 @include medium {
   [lang=ar] .sectionsMenuButton {
-    top: 130px;
+    top: 126px;
   }
 }

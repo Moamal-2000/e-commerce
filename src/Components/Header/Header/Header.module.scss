@@ -92,3 +92,16 @@
     display: none;
   }
 }
+
+// Arabic styles
+@media (max-width: 1300px) {
+  [lang=ar] .container {
+    grid-template-columns: 17% 1fr;
+  }
+}
+
+@include large {
+  [lang=ar] .container {
+    grid-template-columns: unset;
+  }
+}

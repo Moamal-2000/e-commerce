@@ -1,3 +1,5 @@
+@import "src/Styles/mixins";
+
 .searchContainer {
   background-color: var(--secondary-white);
   display: flex;
@@ -68,4 +70,13 @@
 
 .searchContainer>button:focus svg {
   fill: var(--black)
+}
+
+// Arabic styles
+@include medium {
+  [lang=ar] .searchContainer {
+    padding: 6px 12px 6px 18px;
+    width: 200px;
+    margin-inline-end: 8px;
+  }
 }

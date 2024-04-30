@@ -22,7 +22,7 @@ const DropDownMenu = ({ nameMenu, children }) => {
     >
       <div className={s.nameMenu}>
         <span>{nameMenu}</span>
-        <div className={activeClass} aria-label="arrow right">
+        <div className={activeClass} aria-label="arrow icon">
           <SvgIcon name="chevronRight" />
         </div>
       </div>
