@@ -5,6 +5,7 @@
   left: 4px;
   display: flex;
   align-items: center;
+  gap: 8px;
   user-select: none;
   padding: 4px 10px;
   outline-offset: -2px;
@@ -20,10 +21,6 @@
 .repoStarsForks .wrapper {
   display: flex;
   align-items: center;
-
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
 }
 
 .repoStarsForks:hover .wrapper {
@@ -62,4 +59,9 @@
 
 .repoStarsForks:focus-visible .number {
   color: var(--blue);
+}
+
+// Arabic styles
+[lang=ar] .repoStarsForks .wrapper {
+  gap: 4px;
 }

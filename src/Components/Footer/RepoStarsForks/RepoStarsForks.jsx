@@ -1,5 +1,7 @@
+import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/globalVariables";
+import { repoStarsForksToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { getSpecificRepo } from "src/Functions/helper";
 import useAsync from "src/Hooks/Helper/useAsync";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
@@ -13,6 +15,8 @@ const RepoStarsForks = () => {
   const repoStars = websiteRepo?.stargazers_count;
   const repoForks = websiteRepo?.forks;
   const repoUrl = websiteRepo?.html_url;
+  const lang = cookies.get("i18next");
+  const leftToolTipPos = repoStarsForksToolTipLeftPos(lang);
 
   return (
     !isError && (
@@ -33,8 +37,8 @@ const RepoStarsForks = () => {
         </div>
 
         <ToolTip
-          left="77px"
           bottom="40px"
+          left={leftToolTipPos}
           content={t("tooltips.repoStarsForks")}
         />
       </a>

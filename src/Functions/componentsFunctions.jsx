@@ -22,3 +22,33 @@ export function simpleValidationCheck(inputs) {
 
   return isFormValid;
 }
+
+export function repoStarsForksToolTipLeftPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "55px";
+    case "ja":
+      return "92px";
+  }
+
+  return "77px";
+}
+
+export function scrollToTopToolTipLeftPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "-70px";
+    case "ja":
+      return "-86px";
+    case "ru":
+      return "-84px";
+    case "fr":
+      return "-80px";
+    case "hu":
+      return "-104px";
+    case "hi":
+      return "-73px";
+  }
+
+  return "-60px";
+}
