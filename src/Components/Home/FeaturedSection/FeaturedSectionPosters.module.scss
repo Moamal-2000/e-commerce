@@ -19,12 +19,12 @@
 }
 
 .smallPosters {
-  margin-left: 30px;
+  margin-inline-start: 30px;
 }
 
 @media (max-width: 1300px) {
   .smallPosters {
-    margin: 0;
+    margin-inline-start: 0;
     margin-top: 30px;
   }
 }
@@ -34,19 +34,12 @@
   align-items: center;
   width: 100%;
   margin-top: 30px;
-
-  &>*:not(:last-child) {
-    margin-right: 30px;
-  }
+  display: flex;
+  gap: 30px;
 }
 
 @include small {
   .smallerPosters {
     flex-direction: column;
-
-    &>*:not(:last-child) {
-      margin-right: 0;
-      margin-bottom: 30px;
-    }
   }
 }

@@ -110,3 +110,15 @@
 .shopNow::selection {
   background-color: var(--white) !important;
 }
+
+// Arabic styles
+[lang=ar] .midPoster {
+  align-items: flex-end;
+}
+
+[lang=ar] .content {
+  direction: rtl;
+  background-color: #000000aa;
+  padding: 14px;
+  width: 280px;
+}

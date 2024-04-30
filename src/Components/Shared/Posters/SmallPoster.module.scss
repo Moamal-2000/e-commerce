@@ -133,3 +133,16 @@
 .shopNow::selection {
   background-color: var(--white) !important;
 }
+
+// Arabic styles
+[lang=ar] .smallPoster {
+  justify-content: flex-end;
+  background-position: -130px bottom;
+}
+
+[lang=ar] .content {
+  direction: rtl;
+  background-color: #000000aa;
+  padding: 14px;
+  width: 280px;
+}

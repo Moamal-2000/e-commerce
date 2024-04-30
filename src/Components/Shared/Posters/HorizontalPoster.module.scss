@@ -84,3 +84,16 @@
 .shopNow::selection {
   background-color: var(--white) !important;
 }
+
+// Arabic styles
+[lang=ar] .HorPoster {
+  justify-content: flex-end;
+  background-position: -130px bottom;
+}
+
+[lang=ar] .content {
+  direction: rtl;
+  background-color: #00000062;
+  padding: 14px;
+  width: 280px;
+}
