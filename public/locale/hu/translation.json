@@ -172,7 +172,11 @@
     "seconds": "Másodperc",
     "reset": "Visszaállítás",
     "welcome": "Üdvözöljük",
-    "cancel": "Mégse"
+    "cancel": "Mégse",
+    "resultsNotFound": "Nincs találat",
+    "weDontHaveProducts": "nincsenek termékeink ebben a kategóriában. Vissza a",
+    "backTo": "Vissza a",
+    "home": "Kezdőlap"
   },
 
   "history": {

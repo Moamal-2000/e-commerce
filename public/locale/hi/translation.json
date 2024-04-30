@@ -172,7 +172,11 @@
     "seconds": "सेकंड",
     "reset": "रीसेट",
     "welcome": "स्वागत हे",
-    "cancel": "रद्द करें"
+    "cancel": "रद्द करें",
+    "resultsNotFound": "परिणाम नहीं मिला",
+    "weDontHaveProducts": "हमारे पास इस श्रेणी में कोई उत्पाद नहीं है। वापस",
+    "backTo": "वापस",
+    "home": "होम पेज"
   },
 
   "history": {

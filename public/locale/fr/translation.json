@@ -172,7 +172,11 @@
     "seconds": "Secondes",
     "reset": "Réinitialiser",
     "welcome": "Bienvenue",
-    "cancel": "Annuler"
+    "cancel": "Annuler",
+    "resultsNotFound": "Aucun résultat trouvé",
+    "weDontHaveProducts": "nous n'avons aucun produit dans cette catégorie. Retour à la",
+    "backTo": "Retour à",
+    "home": "Page d'accueil"
   },
 
   "history": {

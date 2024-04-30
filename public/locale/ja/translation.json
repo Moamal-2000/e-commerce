@@ -172,7 +172,11 @@
     "seconds": "秒",
     "reset": "リセット",
     "welcome": "ようこそ",
-    "cancel": "キャンセル"
+    "cancel": "キャンセル",
+    "resultsNotFound": "結果が見つかりません",
+    "weDontHaveProducts": "申し訳ありませんが、このカテゴリーには商品がありません",
+    "backTo": "戻る",
+    "home": "ホームページ"
   },
 
   "history": {

@@ -149,7 +149,7 @@
     "reviews": "({{votes}} تقييمات)",
     "inStock": "متوفر",
     "colors": "الالوان",
-    "size": "الحجم",
+    "size": "الاحجام",
     "addToFav": "اضف الى المفضلة",
     "freeDelivery": {
       "title": "التوصيل المجاني",
@@ -159,7 +159,7 @@
       "title": "إرجاع المنتج",
       "description": "إرجاع مجاني خلال 30 يومًا. تفاصيل"
     },
-    "relatedItems": "المنتجات ذات صلة"
+    "relatedItems": "منتجات ذات صلة"
   },
 
   "common": {
@@ -173,7 +173,11 @@
     "seconds": "ثانية",
     "reset": "افراغ الحقول",
     "welcome": "مرحباً بك",
-    "cancel": "الغاء"
+    "cancel": "الغاء",
+    "resultsNotFound": "عذراً, لم يتم العثور على المنتج المطلوب.",
+    "weDontHaveProducts": "عذرًا، ليس لدينا أي منتجات في هذه الفئة",
+    "backTo": "العودة إلى",
+    "home": "الصفحة الرئيسية"
   },
 
   "history": {
@@ -410,7 +414,7 @@
   "inputsPlaceholders": {
     "whatYouLookingFor": "ما الذي تبحث عنه؟",
     "enterYourEmail": "ادخل بريدك الالكتروني",
-    "yourName": "اسمك",
+    "yourName": "اسم المستخدم",
     "yourEmail": "بريدك الالكتروني",
     "yourMessage": "رسالتك",
     "yourPhone": "رقم الهاتف",
@@ -474,7 +478,7 @@
   "accountPage": {
     "editProfile": "تعديل بيانات الحساب",
     "accountMenuSection": {
-      "manageMyAccount": "إدارة حسابي",
+      "manageMyAccount":"إدارة حسابك",
       "myOrders": "طلباتي",
       "profile": "ملفي",
       "addressBook": "دليل العناوين",

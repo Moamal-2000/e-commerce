@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import ProductCard from "../../Shared/ProductsCards/ProductCard/ProductCard";
 import s from "./SearchProducts.module.scss";
@@ -5,6 +6,7 @@ import s from "./SearchProducts.module.scss";
 const SearchProducts = () => {
   const { searchProducts } = useSelector((state) => state.products);
   const isFoundResults = searchProducts.length > 0;
+  const { t } = useTranslation();
 
   return (
     <>
@@ -13,7 +15,9 @@ const SearchProducts = () => {
           <ProductCard product={product} key={product.id} />
         ))}
 
-      {!isFoundResults && <p className={s.message}>No results found.</p>}
+      {!isFoundResults && (
+        <p className={s.message}>{t("common.resultsNotFound")}</p>
+      )}
     </>
   );
 };

@@ -67,7 +67,6 @@ const EditProfileInputs = () => {
         <EditProfileInput
           inputData={{
             type: "password",
-            label: t("inputsPlaceholders.newPass"),
             placeholder: t("inputsPlaceholders.newPass"),
             value: newPassword,
             setValue: setNewPassword,
@@ -77,7 +76,6 @@ const EditProfileInputs = () => {
         <EditProfileInput
           inputData={{
             type: "password",
-            label: t("inputsPlaceholders.confirmPass"),
             placeholder: t("inputsPlaceholders.confirmPass"),
           }}
         />
