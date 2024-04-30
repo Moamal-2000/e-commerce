@@ -203,3 +203,8 @@
 .card.noHover [data-add-to-cart-button] {
   transform: translateY(0);
 }
+
+// Arabic styles
+[lang=ar] .layerContent {
+  direction: ltr;
+}

@@ -1,11 +1,17 @@
+import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { addToArray, removeById } from "src/Features/productsSlice";
+import { favIconToolTipLeftPos } from "src/Functions/componentsFunctions";
 import {
   checkDateBeforeMonthToPresent,
   isItemFound,
 } from "src/Functions/helper";
+import {
+  detailsIconToolTipLeftPos,
+  trashcanIconToolTipLeftPos,
+} from "../../../../Functions/componentsFunctions";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import ToolTip from "../../MiniComponents/ToolTip";
 import AddToCartButton from "./AddToCartButton";
@@ -65,6 +71,10 @@ const ProductCard = ({
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const { t } = useTranslation();
+  const lang = cookies.get("i18next");
+  const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
+  const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(lang);
+  const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(lang);
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -134,7 +144,7 @@ const ProductCard = ({
                 <SvgIcon name="heart" />
                 <ToolTip
                   top="18px"
-                  left="-44px"
+                  left={favIconLeftToolTipPos}
                   content={t("productCard.icons.favorite")}
                 />
               </button>
@@ -149,7 +159,7 @@ const ProductCard = ({
                 <SvgIcon name="eye" />
                 <ToolTip
                   top="18px"
-                  left="-39px"
+                  left={detailsIconLeftToolTipPos}
                   content={t("productCard.icons.details")}
                 />
               </Link>
@@ -165,7 +175,7 @@ const ProductCard = ({
                 <SvgIcon name="trashCan" />
                 <ToolTip
                   top="18px"
-                  left="-41px"
+                  left={trashcanIconLeftToolTipPos}
                   content={t("productCard.icons.remove")}
                 />
               </button>
