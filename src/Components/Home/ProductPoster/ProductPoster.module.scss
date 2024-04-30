@@ -20,6 +20,12 @@
   }
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .content>span {
   font-weight: 600;
   color: #00FF66;
@@ -118,4 +124,9 @@
       min-width: 200px;
     }
   }
+}
+
+// Arabic styles
+[lang=ar] .content>h2 {
+  line-height: 1.4;
 }

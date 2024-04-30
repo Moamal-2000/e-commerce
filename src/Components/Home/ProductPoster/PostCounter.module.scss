@@ -5,6 +5,13 @@
   align-items: center;
   height: fit-content;
   margin-bottom: 40px;
+  gap: 24px;
+}
+
+@include small {
+  .postCounter {
+    gap: 10px;
+  }
 }
 
 .timeUnit {
@@ -15,24 +22,12 @@
   flex-direction: column;
   @include center-x-y;
   user-select: none;
-
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
 }
 
 @media (max-width: 520px) {
   .timeUnit {
     width: 60px;
     height: 60px;
-  }
-}
-
-@include small {
-  .timeUnit {
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
   }
 }
 
@@ -66,4 +61,10 @@
 .timeUnit>span:last-child {
   font-size: .8rem;
   scale: .85;
+}
+
+// Arabic styles
+[lang=ar] .postCounter {
+  flex-direction: row-reverse;
+  align-self: flex-start;
 }

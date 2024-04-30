@@ -33,10 +33,12 @@
 }
 
 .sectionTitle b {
+  display: block;
   color: var(--black);
   letter-spacing: 1.4px;
   font: 600 2.25rem "Inter", sans-serif;
-  text-wrap: nowrap;
+  height: auto;
+  max-width: 400px;
 }
 
 @include small {
