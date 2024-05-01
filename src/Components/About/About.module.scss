@@ -6,7 +6,7 @@
 
 .container {
   width: calc(var(--container-width) + 7.5%);
-  margin-left: calc(15% / 2);
+  margin-inline-start: calc(15% / 2);
 }
 
 @include medium {

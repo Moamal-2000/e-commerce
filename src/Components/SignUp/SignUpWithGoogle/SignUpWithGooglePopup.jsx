@@ -56,7 +56,7 @@ a {
 #popup-root .signUp>header>p {
   color: #5F6368;
   font-size: .9rem;
-  margin-left: 10px;
+    margin-inline-start: 10px;
 }
 
 #popup-root .content {
@@ -134,7 +134,7 @@ a {
 }
 
 #popup-root .account .info {
-  margin-left: 10px;
+    margin-inline-start: 10px;
 }
 
 #popup-root .account .info>h3 {

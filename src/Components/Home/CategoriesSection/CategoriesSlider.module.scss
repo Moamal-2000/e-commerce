@@ -22,7 +22,7 @@
 .categoriesSlider>* {
   flex: 0 0 auto;
   width: calc(((100% / 6) - 30px) + (30px / 6));
-  margin-right: 30px;
+  margin-inline-end: 30px;
 }
 
 @media (max-width: 1500px) {
@@ -56,5 +56,5 @@
 }
 
 .categoriesSlider>*:last-child {
-  margin-right: 0;
+  margin-inline-end: 0;
 }

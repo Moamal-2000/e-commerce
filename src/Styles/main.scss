@@ -119,8 +119,8 @@ main {
 }
 
 // Arabic styles
-[lang=ar] body {
-  font-family: "Rubik" !important;
+[lang=ar] * {
+  font-family: "Rubik";
 }
 
 [lang=ar] :where(h2, b) {

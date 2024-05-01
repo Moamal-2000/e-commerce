@@ -26,7 +26,7 @@
 
 @include small {
   .languageSelector {
-    margin-right: 37px;
+    margin-inline-end: 37px;
   }
 }
 
@@ -74,7 +74,7 @@
   color: var(--white);
   display: flex;
   align-items: center;
-  gap:60px;
+  gap: 60px;
   padding: 8px 11px;
   outline: dashed 0 var(--regular-light-gray);
   outline-offset: -4px;

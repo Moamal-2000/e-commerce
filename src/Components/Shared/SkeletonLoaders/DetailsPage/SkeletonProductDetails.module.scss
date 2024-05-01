@@ -82,7 +82,7 @@
 .sizeText {
   width: 45px;
   height: 16px;
-  margin-right: 32px;
+  margin-inline-end: 32px;
 }
 
 .sizes {
@@ -116,7 +116,7 @@
   width: 164px;
   height: 45px;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-inline-start: 20px;
 }
 
 .favButton {
@@ -125,7 +125,7 @@
   width: 45px;
   height: 45px;
   border-radius: 5px;
-  margin-left: 20px;
+  margin-inline-start: 20px;
 }
 
 @keyframes skeletonShine {

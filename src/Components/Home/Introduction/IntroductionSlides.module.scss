@@ -52,7 +52,7 @@
 .nameProduct img {
   width: 40px;
   height: 40px;
-  margin-right: 20px;
+  margin-inline-end: 20px;
 }
 
 .nameProduct strong {
@@ -121,14 +121,14 @@
   fill: var(--secondary-white);
   width: 20px;
   height: 20px;
-  margin-left: 12px;
+  margin-inline-start: 12px;
   margin-top: 6px;
   transform: scaleY(1.3);
 }
 
 @include small {
   .shopNow svg {
-    margin-left: 6px;
+    margin-inline-start: 6px;
     transform: scaleY(1);
   }
 }
