@@ -110,3 +110,22 @@ export function trashcanIconToolTipLeftPos(lang) {
 
   return "-41px";
 }
+
+export function wishlistIconToolTipLeftPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "-46px";
+    case "ja":
+      return "-72px";
+    case "ru":
+      return "-50px";
+    case "fr":
+      return "-69px";
+    case "hu":
+      return "-57px";
+    case "hi":
+      return "-43px";
+  }
+
+  return "-39px";
+}

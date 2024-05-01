@@ -3,15 +3,16 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { addToArray, removeById } from "src/Features/productsSlice";
-import { favIconToolTipLeftPos } from "src/Functions/componentsFunctions";
+import {
+  detailsIconToolTipLeftPos,
+  favIconToolTipLeftPos,
+  trashcanIconToolTipLeftPos,
+  wishlistIconToolTipLeftPos,
+} from "src/Functions/componentsFunctions";
 import {
   checkDateBeforeMonthToPresent,
   isItemFound,
 } from "src/Functions/helper";
-import {
-  detailsIconToolTipLeftPos,
-  trashcanIconToolTipLeftPos,
-} from "../../../../Functions/componentsFunctions";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import ToolTip from "../../MiniComponents/ToolTip";
 import AddToCartButton from "./AddToCartButton";
@@ -75,6 +76,7 @@ const ProductCard = ({
   const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
   const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(lang);
   const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(lang);
+  const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(lang);
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -193,7 +195,7 @@ const ProductCard = ({
                 <SvgIcon name="save" />
                 <ToolTip
                   top="18px"
-                  left="-41px"
+                  left={wishlistIconLeftToolTipPos}
                   content={t("productCard.icons.wishlist")}
                 />
               </button>
