@@ -53,7 +53,6 @@ export function scrollToTopToolTipLeftPos(lang) {
   return "-60px";
 }
 
-
 export function favIconToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":
@@ -128,4 +127,23 @@ export function wishlistIconToolTipLeftPos(lang) {
   }
 
   return "-39px";
+}
+
+export function sendToolTipLeftPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "-27px";
+    case "ja":
+      return "66px";
+    case "ru":
+      return "85px";
+    case "fr":
+      return "80px";
+    case "hu":
+      return "76px";
+    case "hi":
+      return "63px";
+  }
+
+  return "70px";
 }

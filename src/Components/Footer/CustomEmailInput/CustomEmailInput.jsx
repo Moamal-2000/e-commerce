@@ -1,5 +1,7 @@
+import cookies from "js-cookie";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { sendToolTipLeftPos } from "src/Functions/componentsFunctions";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CustomEmailInput.module.scss";
@@ -7,6 +9,8 @@ import s from "./CustomEmailInput.module.scss";
 const CustomEmailInput = () => {
   const [email, setEmail] = useState("");
   const { t } = useTranslation();
+  const lang = cookies.get("i18next");
+  const sendIconToolTipLeftPos = sendToolTipLeftPos(lang);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -27,7 +31,7 @@ const CustomEmailInput = () => {
       <label htmlFor="email" aria-label="Send mail">
         <SvgIcon name="vector" />
         <ToolTip
-          left="70px"
+          left={sendIconToolTipLeftPos}
           top="50%"
           content={t("footer.section1.sendLabel")}
         />
