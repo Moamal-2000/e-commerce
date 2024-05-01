@@ -114,3 +114,18 @@
     gap: 20px;
   }
 }
+
+// French styles
+[lang=fr] .container {
+  width: var(--container-width);
+}
+
+// Hungarian styles
+[lang=hu] .container {
+  width: calc(var(--container-width) - 2%);
+}
+
+// Russian styles
+[lang=ru] .container {
+  width: calc(var(--container-width) - 2%);
+}

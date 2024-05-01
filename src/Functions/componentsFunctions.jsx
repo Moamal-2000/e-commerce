@@ -37,7 +37,7 @@ export function repoStarsForksToolTipLeftPos(lang) {
 export function scrollToTopToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":
-      return "-70px";
+      return "-48px";
     case "ja":
       return "-86px";
     case "ru":

@@ -66,3 +66,24 @@
     gap: 14px;
   }
 }
+
+// French styles
+@include medium {
+  [lang=fr] .nav ul {
+    gap: 12px;
+  }
+}
+
+// Hungarian styles
+@include medium {
+  [lang=hu] .nav ul {
+    gap: 12px;
+  }
+}
+
+// Russian styles
+@include medium {
+  [lang=ru] .nav ul {
+    gap: 12px;
+  }
+}
