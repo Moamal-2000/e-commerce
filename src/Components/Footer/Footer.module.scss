@@ -18,6 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 80px;
+  gap: 60px;
 }
 
 @media (max-width: 1300px) {
@@ -29,16 +30,6 @@
 @include small {
   .sections {
     justify-content: center;
-  }
-}
-
-.sections>section:not(:last-child) {
-  margin-right: 60px;
-}
-
-@include small {
-  .sections>section:not(:last-child) {
-    margin-right: 0;
   }
 }
 
@@ -116,6 +107,7 @@
 
 .section1>p {
   margin: 24px 0 10px;
+  font-size: 1rem !important;
 }
 
 @media (max-width: 400px) {
@@ -130,11 +122,29 @@
 
 .section5>p {
   font-weight: 500;
-  font-size: .8rem;
+  font-size: .8rem !important;
   line-height: 18px;
   color: var(--medium-light-gray);
 }
 
 .sections>section :where(span, b, p, li, a)::selection {
   background-color: var(--white) !important;
+}
+
+// French styles
+[lang=fr] .section5>p {
+  max-width: 250px;
+}
+
+[lang=fr] .section1>p {
+  max-width: 250px;
+}
+
+// Hungarian styles
+[lang=hu] .section5>p {
+  max-width: 200px;
+}
+
+[lang=hu] .section1>p {
+  max-width: 250px;
 }
