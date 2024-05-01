@@ -1,15 +1,13 @@
 import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import {
-  detailsIconToolTipLeftPos,
-  favIconToolTipLeftPos,
-} from "src/Functions/componentsFunctions";
+import { useNavigate } from "react-router-dom";
+import { favIconToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isItemFound } from "src/Functions/helper";
 import { addToArray, removeById } from "../../../../Features/productsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import ToolTip from "../../MiniComponents/ToolTip";
+import ProductCardDetailsIcon from "./ProductCardDetailsIcon";
 import s from "./ProductCardIcons.module.scss";
 import ProductCardRemoveIcon from "./ProductCardRemoveIcon";
 import ProductCardWishListIcon from "./ProductCardWishListIcon";
@@ -31,7 +29,6 @@ const ProductCardIcons = ({
   const navigateTo = useNavigate();
   const lang = cookies.get("i18next");
   const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
-  const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(lang);
 
   function addProductToFavorite() {
     const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
@@ -66,18 +63,9 @@ const ProductCardIcons = ({
       )}
 
       {showDetailsIcon && (
-        <Link
-          onClick={navigateToProductDetails}
-          className={`${s.iconHolder} ${s.detailsIcon}`}
-          aria-label={t("productCard.icons.details")}
-        >
-          <SvgIcon name="eye" />
-          <ToolTip
-            top="18px"
-            left={detailsIconLeftToolTipPos}
-            content={t("productCard.icons.details")}
-          />
-        </Link>
+        <ProductCardDetailsIcon
+          navigateToProductDetails={navigateToProductDetails}
+        />
       )}
 
       {showRemoveIcon && (
