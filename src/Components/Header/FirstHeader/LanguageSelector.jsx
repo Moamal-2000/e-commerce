@@ -15,7 +15,9 @@ const LanguageSelector = () => {
     const currentLangEle = currentLangRef.current.querySelector("span");
     const currentFlagEle = currentLangRef.current.querySelector("img");
     const selectedLangData = LANGUAGES[index];
-    currentLangEle.textContent = selectedLangData.lang;
+    currentLangEle.textContent = t(
+      `languageSelector.${selectedLangData.lang.toLowerCase()}`
+    );
     currentFlagEle.src = selectedLangData.flag;
     i18n.changeLanguage(langCode);
   }

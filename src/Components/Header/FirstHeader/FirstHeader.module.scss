@@ -86,9 +86,11 @@
   background-color: var(--white) !important;
 }
 
-// Russian language styles
-[lang=ru] .container {
-  grid-template-columns: 0% 1fr;
+// Multi language styles
+@media (max-width: 1300px) {
+  :where([lang=ar], [lang=ru], [lang=fr], [lang=hu]) .container {
+    grid-template-columns: 0 1fr;
+  }
 }
 
 // French styles

@@ -98,6 +98,7 @@
 .option>span {
   width: 70px;
   text-align: start;
+  text-wrap: nowrap;
 }
 
 .option>img {
@@ -117,20 +118,25 @@
 
 // Russian styles
 [lang=ru] .languageSelector .menu {
-  left: -58px;
+  left: -65px;
+}
+
+// French styles
+[lang=fr] .languageSelector .menu {
+  left: -52px;
 }
 
 // Hungarian styles
 [lang=hu] .languageSelector .menu {
-  left: -37px;
+  left: -55px;
 }
 
 // Japanese styles
 [lang=ja] .languageSelector .menu {
-  left: -40px;
+  left: -72px;
 }
 
 // Hindi styles
 [lang=hi] .languageSelector .menu {
-  left: -80px;
+  left: -83px;
 }
