@@ -81,122 +81,17 @@
   z-index: -1;
 }
 
-.layerContent .icons {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  position: relative;
-  z-index: 10;
-  opacity: 0;
-  transform: translateX(50px);
-}
-
-.card:hover .icons,
-.card.noHover .icons {
+.card:hover [data-product-icons-hover],
+.card.noHover [data-product-icons-hover] {
   opacity: 1;
   transform: translateX(0);
   transition: transform .4s .1s, opacity .2s .2s;
 }
 
-.card:has(:focus-visible) .icons {
+.card:has(:focus-visible) [data-product-icons-hover] {
   opacity: 1;
   transform: translateX(0);
   transition: transform 0, opacity 0;
-}
-
-.layerContent .icons .iconHolder {
-  outline: none;
-  border: none;
-  width: 34px;
-  height: 34px;
-  background: var(--white);
-  color: var(--black);
-  border-radius: 50%;
-  @include center-x-y;
-  cursor: pointer;
-  position: relative;
-
-  &:focus-visible {
-    background-color: #303030;
-    transition: opacity .3s, var(--outline-transition), background .2s, transform 0;
-    outline: 2px solid var(--yellow);
-    outline-offset: -2px;
-  }
-}
-
-.layerContent .icons .iconHolder svg {
-  font-size: .9rem;
-  transition: fill .2s;
-  width: 16px;
-  height: 16px;
-}
-
-.iconHolder:focus-visible svg {
-  fill: var(--yellow);
-}
-
-.favIcon {
-  --heart-color: var(--tomato);
-
-  &:focus-visible {
-    --heart-color: var(--yellow);
-  }
-}
-
-.favIcon.active {
-  fill: var(--tomato);
-
-  & .heartBackground {
-    opacity: 1;
-  }
-}
-
-.favIcon .heartBackground {
-  position: absolute;
-  top: 17px;
-  border-style: solid;
-  border-color: var(--heart-color) transparent transparent transparent;
-  border-width: 7px;
-  opacity: 0;
-}
-
-.favIcon .heartBackground::before,
-.favIcon .heartBackground::after {
-  content: '';
-  position: absolute;
-  top: -12px;
-  background-color: var(--heart-color);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.favIcon .heartBackground::before {
-  left: -7.5px;
-}
-
-.favIcon .heartBackground::after {
-  right: -7px;
-}
-
-.detailsIcon:not(:focus-visible):hover svg {
-  fill: #6f6f6f;
-}
-
-:where(.favIcon, .removeIcon):hover svg {
-  fill: var(--tomato);
-}
-
-.wishListIcon svg {
-  fill: var(--black);
-}
-
-.wishListIcon:not(:focus-visible):hover svg {
-  fill: #6f6f6f;
-}
-
-.wishListIcon.active svg path {
-  fill-rule: nonzero;
 }
 
 .card:hover [data-add-to-cart-button],

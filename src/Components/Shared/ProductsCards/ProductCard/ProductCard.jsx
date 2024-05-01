@@ -1,22 +1,9 @@
-import cookies from "js-cookie";
-import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { addToArray, removeById } from "src/Features/productsSlice";
-import {
-  detailsIconToolTipLeftPos,
-  favIconToolTipLeftPos,
-  trashcanIconToolTipLeftPos,
-  wishlistIconToolTipLeftPos,
-} from "src/Functions/componentsFunctions";
-import {
-  checkDateBeforeMonthToPresent,
-  isItemFound,
-} from "src/Functions/helper";
-import SvgIcon from "../../MiniComponents/SvgIcon";
-import ToolTip from "../../MiniComponents/ToolTip";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { checkDateBeforeMonthToPresent } from "src/Functions/helper";
 import AddToCartButton from "./AddToCartButton";
 import s from "./ProductCard.module.scss";
+import ProductCardIcons from "./ProductCardIcons";
 import ProductCardInfo from "./ProductCardInfo";
 
 const ProductCard = ({
@@ -33,25 +20,14 @@ const ProductCard = ({
   },
   removeFrom,
 }) => {
-  const {
-    name,
-    price,
-    discount,
-    afterDiscount,
-    img,
-    rate,
-    votes,
-    id,
-    addedDate,
-    colors,
-  } = product;
+  const { name, discount, img, id, addedDate } = product;
   const {
     stopHover,
     showDiscount,
+    showNewText,
     showFavIcon,
     showDetailsIcon,
     showRemoveIcon,
-    showNewText,
     showWishList,
     showColors,
   } = customization;
@@ -59,24 +35,13 @@ const ProductCard = ({
   const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
   const hideNewClass = shouldHideNewWord();
   const { loadingProductDetails } = useSelector((state) => state.global);
-  const { loginInfo } = useSelector((state) => state.user);
-  const { favoritesProducts, wishList } = useSelector(
-    (state) => state.products
-  );
-  const isAddedToWishList = wishList?.find(
-    (wishProduct) => wishProduct.id === id
-  );
-  const isAddedToFavorites = favoritesProducts?.find(
-    (favProduct) => favProduct.id === id
-  );
   const navigateTo = useNavigate();
-  const dispatch = useDispatch();
-  const { t } = useTranslation();
-  const lang = cookies.get("i18next");
-  const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
-  const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(lang);
-  const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(lang);
-  const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(lang);
+  const iconsData = {
+    showFavIcon,
+    showDetailsIcon,
+    showRemoveIcon,
+    showWishList,
+  };
 
   function shouldHideNewWord() {
     return checkDateBeforeMonthToPresent(addedDate) || !showNewText
@@ -84,31 +49,9 @@ const ProductCard = ({
       : "";
   }
 
-  function addProductToFavorite() {
-    const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
-    if (!loginInfo.isSignIn) navigateTo("/signup");
-    if (isProductAlreadyExist) {
-      dispatch(removeById({ key: "favoritesProducts", id: product.id }));
-      return;
-    }
-
-    dispatch(addToArray({ key: "favoritesProducts", value: product }));
-  }
-
   function navigateToProductDetails() {
     if (loadingProductDetails) return;
     navigateTo(`/details?product=${name.toLowerCase()}`);
-  }
-
-  function addProductToWishList() {
-    const isProductAlreadyExist = isItemFound(wishList, product, "id");
-    if (!loginInfo.isSignIn) navigateTo("/signup");
-    if (isProductAlreadyExist) {
-      dispatch(removeById({ key: "wishList", id: product.id }));
-      return;
-    }
-
-    dispatch(addToArray({ key: "wishList", value: product }));
   }
 
   return (
@@ -132,76 +75,13 @@ const ProductCard = ({
 
           <div className={`${s.new} ${hideNewClass}`}>New</div>
 
-          <div className={s.icons}>
-            {showFavIcon && (
-              <button
-                type="button"
-                className={`${s.iconHolder} ${s.favIcon} ${
-                  isAddedToFavorites ? s.active : ""
-                }`}
-                onClick={addProductToFavorite}
-                aria-label={t("productCard.icons.favorite")}
-              >
-                <div className={s.heartBackground}></div>
-                <SvgIcon name="heart" />
-                <ToolTip
-                  top="18px"
-                  left={favIconLeftToolTipPos}
-                  content={t("productCard.icons.favorite")}
-                />
-              </button>
-            )}
-
-            {showDetailsIcon && (
-              <Link
-                onClick={navigateToProductDetails}
-                className={`${s.iconHolder} ${s.detailsIcon}`}
-                aria-label={t("productCard.icons.details")}
-              >
-                <SvgIcon name="eye" />
-                <ToolTip
-                  top="18px"
-                  left={detailsIconLeftToolTipPos}
-                  content={t("productCard.icons.details")}
-                />
-              </Link>
-            )}
-
-            {showRemoveIcon && (
-              <button
-                type="button"
-                className={`${s.iconHolder} ${s.removeIcon}`}
-                aria-label={`Remove from ${removeFrom}`}
-                onClick={() => dispatch(removeById({ key: removeFrom, id }))}
-              >
-                <SvgIcon name="trashCan" />
-                <ToolTip
-                  top="18px"
-                  left={trashcanIconLeftToolTipPos}
-                  content={t("productCard.icons.remove")}
-                />
-              </button>
-            )}
-
-            {showWishList && (
-              <button
-                type="button"
-                className={`${s.iconHolder} ${s.wishListIcon} ${
-                  isAddedToWishList ? s.active : ""
-                }`}
-                onClick={addProductToWishList}
-                aria-label="Add to wishlist"
-              >
-                <SvgIcon name="save" />
-                <ToolTip
-                  top="18px"
-                  left={wishlistIconLeftToolTipPos}
-                  content={t("productCard.icons.wishlist")}
-                />
-              </button>
-            )}
-          </div>
-
+          <ProductCardIcons
+            iconsData={iconsData}
+            productId={id}
+            navigateToProductDetails={navigateToProductDetails}
+            product={product}
+            removeFrom={removeFrom}
+          />
           <AddToCartButton hoverDataAttribute={true} product={product} />
         </div>
       </div>
