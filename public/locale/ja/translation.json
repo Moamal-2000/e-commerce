@@ -516,5 +516,6 @@
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
   "cashOnDelivery": "代金引換",
   "bank": "銀行",
-  "billingDetails": "請求先の詳細"
+  "billingDetails": "請求先の詳細",
+  "skipToContent": "コンテンツにスキップ"
 }

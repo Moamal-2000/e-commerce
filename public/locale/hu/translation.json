@@ -513,5 +513,6 @@
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",
   "cashOnDelivery": "Utánvétel",
   "bank": "Bank",
-  "billingDetails": "Számlázási adatok"
+  "billingDetails": "Számlázási adatok",
+  "skipToContent": "Ugrás a tartalomra"
 }

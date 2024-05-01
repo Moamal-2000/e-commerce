@@ -516,5 +516,6 @@
   "wishlist": "Liste de souhaits ({{numberOfWishlist}})",
   "cashOnDelivery": "Paiement à la livraison",
   "bank": "Banque",
-  "billingDetails": "Détails de facturation"
+  "billingDetails": "Détails de facturation",
+  "skipToContent": "Aller au contenu"
 }

@@ -516,5 +516,6 @@
   "wishlist": "इच्छा-सूची ({{numberOfWishlist}})",
   "cashOnDelivery": "कैश ऑन डिलीवरी",
   "bank": "बैंक",
-  "billingDetails": "बिलिंग विवरण"
+  "billingDetails": "बिलिंग विवरण",
+  "skipToContent": "सामग्री पर जाएं"
 }

@@ -517,5 +517,6 @@
   "wishlist": "قائمة الرغبات ({{numberOfWishlist}})",
   "cashOnDelivery": "الدفع عند الاستلام",
   "bank": "البنك",
-  "billingDetails": "تفاصيل الفاتورة"
+  "billingDetails": "تفاصيل الفاتورة",
+  "skipToContent": "تخطى إلى المحتوى"
 }

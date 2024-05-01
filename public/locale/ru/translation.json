@@ -517,5 +517,6 @@
   "wishlist": "Избранное ({{numberOfWishlist}})",
   "cashOnDelivery": "Оплата при доставке",
   "bank": "Банк",
-  "billingDetails": "Детали выставления счета"
+  "billingDetails": "Детали выставления счета",
+  "skipToContent": "Перейти к содержимому"
 }
