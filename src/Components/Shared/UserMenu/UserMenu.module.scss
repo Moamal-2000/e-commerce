@@ -57,7 +57,8 @@
 .userMenu>a>span {
   color: var(--white);
   font-size: .85rem;
-  margin-left: 8px;
+  // margin-left: 8px;
+  margin-inline-start: 8px;
 }
 
 .userMenu>a:hover span,
@@ -67,5 +68,5 @@
 
 // Arabic styles
 [lang=ar] .userMenu {
-  left: 0;
+  direction: rtl;
 }

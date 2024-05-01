@@ -7,10 +7,8 @@
   align-items: center;
   width: 20px;
   height: 20px;
-
-  &:not(:last-child) {
-    margin-right: 16px;
-  }
+  display: flex;
+  gap: 8px;
 }
 
 .wrapper {
@@ -47,4 +45,11 @@
   color: var(--white);
   font-size: .85rem;
   margin-left: 8px;
+  text-wrap: nowrap;
+}
+
+// Arabic styles
+[lang=ar] .count {
+  right: auto;
+  left: 4px;
 }
