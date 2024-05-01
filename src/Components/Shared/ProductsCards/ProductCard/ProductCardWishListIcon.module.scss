@@ -1,0 +1,44 @@
+.iconHolder {
+  outline: none;
+  border: none;
+  width: 34px;
+  height: 34px;
+  background: var(--white);
+  color: var(--black);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+
+  &:focus-visible {
+    background-color: #303030;
+    transition: opacity .3s, var(--outline-transition), background .2s, transform 0;
+    outline: 2px solid var(--yellow);
+    outline-offset: -2px;
+  }
+}
+
+.iconHolder svg {
+  font-size: .9rem;
+  transition: fill .2s;
+  width: 16px;
+  height: 16px;
+}
+
+.iconHolder:focus-visible svg {
+  fill: var(--yellow);
+}
+
+.wishListIcon svg {
+  fill: var(--black);
+}
+
+.wishListIcon:not(:focus-visible):hover svg {
+  fill: #6f6f6f;
+}
+
+.wishListIcon.active svg path {
+  fill-rule: nonzero;
+}

@@ -6,13 +6,13 @@ import {
   detailsIconToolTipLeftPos,
   favIconToolTipLeftPos,
   trashcanIconToolTipLeftPos,
-  wishlistIconToolTipLeftPos,
 } from "src/Functions/componentsFunctions";
 import { isItemFound } from "src/Functions/helper";
 import { addToArray, removeById } from "../../../../Features/productsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import ToolTip from "../../MiniComponents/ToolTip";
 import s from "./ProductCardIcons.module.scss";
+import ProductCardWishListIcon from "./ProductCardWishListIcon";
 
 const ProductCardIcons = ({
   iconsData: { showFavIcon, showDetailsIcon, showRemoveIcon, showWishList },
@@ -22,12 +22,7 @@ const ProductCardIcons = ({
   removeFrom,
 }) => {
   const { loginInfo } = useSelector((state) => state.user);
-  const { favoritesProducts, wishList } = useSelector(
-    (state) => state.products
-  );
-  const isAddedToWishList = wishList?.find(
-    (wishProduct) => wishProduct.id === productId
-  );
+  const { favoritesProducts } = useSelector((state) => state.products);
   const isAddedToFavorites = favoritesProducts?.find(
     (favProduct) => favProduct.id === productId
   );
@@ -38,7 +33,6 @@ const ProductCardIcons = ({
   const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
   const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(lang);
   const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(lang);
-  const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(lang);
 
   function addProductToFavorite() {
     const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
@@ -49,17 +43,6 @@ const ProductCardIcons = ({
     }
 
     dispatch(addToArray({ key: "favoritesProducts", value: product }));
-  }
-
-  function addProductToWishList() {
-    const isProductAlreadyExist = isItemFound(wishList, product, "id");
-    if (!loginInfo.isSignIn) navigateTo("/signup");
-    if (isProductAlreadyExist) {
-      dispatch(removeById({ key: "wishList", id: product.id }));
-      return;
-    }
-
-    dispatch(addToArray({ key: "wishList", value: product }));
   }
 
   function removeProduct() {
@@ -119,21 +102,7 @@ const ProductCardIcons = ({
       )}
 
       {showWishList && (
-        <button
-          type="button"
-          className={`${s.iconHolder} ${s.wishListIcon} ${
-            isAddedToWishList ? s.active : ""
-          }`}
-          onClick={addProductToWishList}
-          aria-label="Add to wishlist"
-        >
-          <SvgIcon name="save" />
-          <ToolTip
-            top="18px"
-            left={wishlistIconLeftToolTipPos}
-            content={t("productCard.icons.wishlist")}
-          />
-        </button>
+        <ProductCardWishListIcon product={product} productId={productId} />
       )}
     </div>
   );
