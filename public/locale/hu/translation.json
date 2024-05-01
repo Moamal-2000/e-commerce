@@ -501,6 +501,15 @@
     }
   },
 
+  "userMenuItems": {
+    "profile": "Fiókom kezelése",
+    "cart": "Rendelésem",
+    "cancellations": "Megszakításaim",
+    "reviews": "Értékeléseim",
+    "wishlist": "Kívánságlistám",
+    "logout": "Kijelentkezés"
+  },
+
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",
   "cashOnDelivery": "Utánvétel",
   "bank": "Bank",

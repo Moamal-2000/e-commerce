@@ -505,6 +505,15 @@
     }
   },
 
+  "userMenuItems": {
+    "profile": "إدارة حسابي",
+    "cart": "طلباتي",
+    "cancellations": "الطلبات الملغية",
+    "reviews": "تقييماتي",
+    "wishlist": "قائمة الرغبات",
+    "logout": "تسجيل الخروج"
+  },
+
   "wishlist": "قائمة الرغبات ({{numberOfWishlist}})",
   "cashOnDelivery": "الدفع عند الاستلام",
   "bank": "البنك",

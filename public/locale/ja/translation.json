@@ -504,6 +504,15 @@
     }
   },
 
+  "userMenuItems": {
+    "profile": "マイアカウントの管理",
+    "cart": "私の注文",
+    "cancellations": "私のキャンセル",
+    "reviews": "私のレビュー",
+    "wishlist": "ほしい物リスト",
+    "logout": "ログアウト"
+  },
+
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
   "cashOnDelivery": "代金引換",
   "bank": "銀行",

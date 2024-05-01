@@ -375,6 +375,7 @@
     "title": "श्रेणियाँ",
     "subTitle": "अपने संगीत अनुभव को बढ़ाएं"
   },
+
   "notFoundPage": {
     "tabTitle": "पृष्ठ नहीं मिला",
     "description": "आपके द्वारा देखे गए पृष्ठ को नहीं मिला। आप घर पृष्ठ पर जा सकते हैं।",
@@ -382,6 +383,7 @@
     "notBuiltDescription": "माफ़ कीजिए, वह पृष्ठ जिसे आप खोज रहे हैं अभी तक निर्मित नहीं है।",
     "notFoundMessage": "404 नहीं मिला"
   },
+
   "featuredSection": {
     "mediumPoster": {
       "title": "प्लेस्टेशन 5",
@@ -400,12 +402,14 @@
       "description": "GUCCI INTENSE OUD EDP"
     }
   },
+
   "tooltips": {
     "scrollToTop": "शीर्ष पर स्क्रॉल करें",
     "repoStarsForks": "वेबसाइट की रिपॉज़िटरी",
     "searchButton": "खोजें",
     "remove": "हटाएं"
   },
+
   "inputsPlaceholders": {
     "whatYouLookingFor": "आप क्या खोज रहे हैं?",
     "enterYourEmail": "अपना ईमेल दर्ज करें",
@@ -422,6 +426,7 @@
     "emailOrPhone": "ईमेल या फोन नंबर",
     "password": "पासवर्ड"
   },
+
   "inputsLabels": {
     "firstName": "पहला नाम",
     "lastName": "अंतिम नाम",
@@ -436,6 +441,7 @@
     "passwordChanges": "पासवर्ड परिवर्तन",
     "address": "पता"
   },
+
   "loginSignUpPage": {
     "createAccount": "खाता बनाएं",
     "enterDetails": "नीचे अपना विवरण दर्ज करें",
@@ -443,13 +449,16 @@
     "forgotPassword": "पासवर्ड भूल गए?",
     "alreadyHaveAcc": "पहले से ही खाता है?"
   },
+
   "favoritePage": {
     "title": "पसंदीदा ({{numberOfProducts}})"
   },
+
   "connectionLabel": {
     "restoredInternet": "कनेक्शन बहाल कर दिया गया है",
     "noInternetAvailable": "कोई इंटरनेट कनेक्शन उपलब्ध नहीं है।"
   },
+
   "contactPage": {
     "contactInfoCard": {
       "phoneSection": {
@@ -464,6 +473,7 @@
       }
     }
   },
+
   "accountPage": {
     "editProfile": "अपनी प्रोफ़ाइल संपादित करें",
     "accountMenuSection": {
@@ -476,6 +486,7 @@
       "cancellations": "मेरा रद्द करना"
     }
   },
+  
   "cartPage": {
     "productsTable": {
       "product": "उत्पाद",
@@ -492,6 +503,16 @@
       "processToCheckout": "चेकआउट प्रक्रिया प्रारंभ करें"
     }
   },
+
+  "userMenuItems": {
+    "profile": "मेरे खाते का प्रबंधन करें",
+    "cart": "मेरा आदेश",
+    "cancellations": "मेरी रद्दी",
+    "reviews": "मेरी समीक्षाएँ",
+    "wishlist": "इच्छा-सूची",
+    "logout": "लॉगआउट"
+  },
+
   "wishlist": "इच्छा-सूची ({{numberOfWishlist}})",
   "cashOnDelivery": "कैश ऑन डिलीवरी",
   "bank": "बैंक",

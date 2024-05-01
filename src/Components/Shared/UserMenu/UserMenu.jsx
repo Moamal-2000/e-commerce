@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink, useNavigate } from "react-router-dom";
 import useSignOut from "src/Hooks/App/useSignOut";
@@ -10,6 +11,7 @@ const UserMenu = ({ isActive, toggler }) => {
   const wishListLength = wishList.length;
   const activeClass = isActive ? s.active : "";
   const navigateTo = useNavigate();
+  const { t } = useTranslation();
   const signOut = useSignOut();
 
   function handleSignOut() {
@@ -21,29 +23,29 @@ const UserMenu = ({ isActive, toggler }) => {
     <div className={`${s.userMenu} ${activeClass}`}>
       <NavLink to="/profile">
         <SvgIcon name="user" />
-        <span>Manage My Account</span>
+        <span>{t("userMenuItems.profile")}</span>
       </NavLink>
 
       <NavLink to="/cart">
         <SvgIcon name="cart" />
-        <span>My Order</span>
+        <span>{t("userMenuItems.cart")}</span>
       </NavLink>
 
       <NavLink to="/cancellations">
         <SvgIcon name="cancel" />
-        <span>My Cancellations</span>
+        <span>{t("userMenuItems.cancellations")}</span>
       </NavLink>
 
       <NavLink to="/reviews">
         <SvgIcon name="solidStar" />
-        <span>My Reviews</span>
+        <span>{t("userMenuItems.reviews")}</span>
       </NavLink>
 
       <NavLink to="/wishlist">
         <UserMenuItemWithCount
           props={{
             iconName: "save",
-            title: "Wishlist",
+            title: t("userMenuItems.wishlist"),
             countLength: wishListLength,
           }}
         />
@@ -51,7 +53,7 @@ const UserMenu = ({ isActive, toggler }) => {
 
       <a href="#" onClick={handleSignOut} onBlur={() => toggler()}>
         <SvgIcon name="boxArrowLeft" />
-        <span>Logout</span>
+        <span>{t("userMenuItems.logout")}</span>
       </a>
     </div>
   );

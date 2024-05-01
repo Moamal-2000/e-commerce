@@ -505,6 +505,15 @@
     }
   },
 
+  "userMenuItems": {
+    "profile": "Управление моим аккаунтом",
+    "cart": "Мой заказ",
+    "cancellations": "Мои отмены",
+    "reviews": "Мои отзывы",
+    "wishlist": "Список желаемого",
+    "logout": "Выйти"
+  },
+
   "wishlist": "Избранное ({{numberOfWishlist}})",
   "cashOnDelivery": "Оплата при доставке",
   "bank": "Банк",

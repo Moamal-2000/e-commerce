@@ -504,6 +504,15 @@
     }
   },
 
+  "userMenuItems": {
+    "profile": "Gérer mon compte",
+    "cart": "Ma commande",
+    "cancellations": "Mes annulations",
+    "reviews": "Mes avis",
+    "wishlist": "Liste de souhaits",
+    "logout": "Se déconnecter"
+  },
+
   "wishlist": "Liste de souhaits ({{numberOfWishlist}})",
   "cashOnDelivery": "Paiement à la livraison",
   "bank": "Banque",

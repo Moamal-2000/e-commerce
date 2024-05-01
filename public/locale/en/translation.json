@@ -505,6 +505,15 @@
     }
   },
 
+  "userMenuItems": {
+    "profile": "Manage My Account",
+    "cart": "My Order",
+    "cancellations": "My Cancellations",
+    "reviews": "My Reviews",
+    "wishlist": "Wishlist",
+    "logout": "Logout"
+  },
+
   "wishlist": "Wishlist ({{numberOfWishlist}})",
   "cashOnDelivery": "Cash on Delivery",
   "bank": "Bank",
