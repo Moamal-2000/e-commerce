@@ -5,13 +5,13 @@ import { Link, useNavigate } from "react-router-dom";
 import {
   detailsIconToolTipLeftPos,
   favIconToolTipLeftPos,
-  trashcanIconToolTipLeftPos,
 } from "src/Functions/componentsFunctions";
 import { isItemFound } from "src/Functions/helper";
 import { addToArray, removeById } from "../../../../Features/productsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import ToolTip from "../../MiniComponents/ToolTip";
 import s from "./ProductCardIcons.module.scss";
+import ProductCardRemoveIcon from "./ProductCardRemoveIcon";
 import ProductCardWishListIcon from "./ProductCardWishListIcon";
 
 const ProductCardIcons = ({
@@ -32,7 +32,6 @@ const ProductCardIcons = ({
   const lang = cookies.get("i18next");
   const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
   const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(lang);
-  const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(lang);
 
   function addProductToFavorite() {
     const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
@@ -43,10 +42,6 @@ const ProductCardIcons = ({
     }
 
     dispatch(addToArray({ key: "favoritesProducts", value: product }));
-  }
-
-  function removeProduct() {
-    dispatch(removeById({ key: removeFrom, id: productId }));
   }
 
   return (
@@ -86,19 +81,7 @@ const ProductCardIcons = ({
       )}
 
       {showRemoveIcon && (
-        <button
-          type="button"
-          className={`${s.iconHolder} ${s.removeIcon}`}
-          aria-label={`Remove from ${removeFrom}`}
-          onClick={removeProduct}
-        >
-          <SvgIcon name="trashCan" />
-          <ToolTip
-            top="18px"
-            left={trashcanIconLeftToolTipPos}
-            content={t("productCard.icons.remove")}
-          />
-        </button>
+        <ProductCardRemoveIcon productId={productId} removeFrom={removeFrom} />
       )}
 
       {showWishList && (
