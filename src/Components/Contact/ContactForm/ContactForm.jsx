@@ -20,35 +20,18 @@ const ContactForm = () => {
       <div className={s.inputs}>
         <div className={s.wrapper}>
           <div className={s.input}>
-            <input
-              type="text"
-              autoComplete="off"
-              placeholder={t("inputsPlaceholders.yourName")}
-              name="username"
-              required
-            />
-            <span className={s.star} style={{ left: "103px" }} />
+            <label htmlFor="username">{t("inputsPlaceholders.yourName")}</label>
+            <input type="text" autoComplete="off" name="username" required />
           </div>
 
           <div className={s.input}>
-            <input
-              type="email"
-              autoComplete="off"
-              placeholder={t("inputsPlaceholders.yourEmail")}
-              name="email"
-              required
-            />
-            <span className={s.star} style={{ left: "98px" }} />
+            <label htmlFor="email">{t("inputsPlaceholders.yourEmail")}</label>
+            <input type="email" autoComplete="off" name="email" required />
           </div>
 
           <div className={s.input}>
-            <input
-              type="text"
-              placeholder={t("inputsPlaceholders.yourPhone")}
-              name="phone"
-              required
-            />
-            <span className={s.star} style={{ left: "103px" }} />
+            <label htmlFor="phone">{t("inputsPlaceholders.yourPhone")}</label>
+            <input type="text" name="phone" required />
           </div>
         </div>
 

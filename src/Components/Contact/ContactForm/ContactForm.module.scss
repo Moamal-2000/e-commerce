@@ -30,6 +30,22 @@
 
 .input {
   flex: 1;
+  position: relative;
+}
+
+.input>label {
+  color: #757575;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: .8rem;
+  letter-spacing: -.5px;
+}
+
+.input:has([required])>label::after {
+  content: "*";
+  color: var(--tomato);
 }
 
 .input>input,
@@ -48,37 +64,6 @@
   &:focus {
     border-color: var(--medium-light-gray);
   }
-}
-
-.input>input::placeholder {
-  color: var(--dark-gray);
-}
-
-.input:has([required]) {
-  position: relative;
-
-  .star {
-    position: absolute;
-    top: 50%;
-    translate: 0 -50%;
-    width: 6px;
-    height: 6px;
-    color: var(--rose);
-    z-index: 2;
-    pointer-events: none;
-
-    &::before {
-      content: "*";
-      position: absolute;
-      top: 50%;
-      translate: 0 calc(-50% + 3px);
-      left: -16px;
-    }
-  }
-}
-
-.input:has([required])>input:not(:placeholder-shown)+.star {
-  display: none;
 }
 
 .inputs>textarea {
@@ -148,3 +133,7 @@
 }
 
 // Arabic styles
+[lang=ar] .input>label {
+  left: unset;
+  right: 10px;
+}
