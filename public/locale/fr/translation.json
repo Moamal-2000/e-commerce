@@ -380,8 +380,7 @@
     "tabTitle": "Page non trouvée",
     "description": "La page que vous avez visitée n'a pas été trouvée. Vous pouvez aller à la page d'accueil.",
     "notBuiltTabTitle": "Page non construite",
-    "notBuiltDescription": "Désolé, la page que vous recherchez n'est pas encore construite.",
-    "notFoundMessage": "404 Non trouvé"
+    "notBuiltDescription": "Désolé, la page que vous recherchez n'est pas encore construite."
   },
 
   "featuredSection": {

@@ -378,8 +378,7 @@
     "tabTitle": "Az oldal nem található",
     "description": "A látogatott oldal nem található. Léphet vissza a kezdőlapra.",
     "notBuiltTabTitle": "Az oldal nincs elkészítve",
-    "notBuiltDescription": "Sajnáljuk, az oldalt, amelyet keres, még nem készítették el.",
-    "notFoundMessage": "404 Nem található"
+    "notBuiltDescription": "Sajnáljuk, az oldalt, amelyet keres, még nem készítették el."
   },
 
   "featuredSection": {

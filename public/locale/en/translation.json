@@ -381,8 +381,7 @@
     "tabTitle": "Page Not Found",
     "description": "Your visited page was not found. You may go to the home page.",
     "notBuiltTabTitle": "Page Not Built",
-    "notBuiltDescription": "Sorry, the page you're looking for is not built yet.",
-    "notFoundMessage": "404 Not Found"
+    "notBuiltDescription": "Sorry, the page you're looking for is not built yet."
   },
 
   "featuredSection": {

@@ -16,7 +16,7 @@ const NotFoundPage = () => {
   const descriptionText = isPageNotReady
     ? t("notFoundPage.notBuiltDescription")
     : t("notFoundPage.description");
-  const notFoundMessage = t("notFoundPage.notFoundMessage");
+  const notFoundMessage = t("notFoundPage.tabTitle");
   const backToHomeText = t("buttons.backToHome");
   const historyText = t("history.404Error");
 

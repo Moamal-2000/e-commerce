@@ -15,6 +15,13 @@
 .wrapper>b {
   font: 500 6.875rem "Inter", sans-serif;
   letter-spacing: .03rem;
+  text-align: center;
+}
+
+@include large {
+  .wrapper>b {
+    font-size: 6rem;
+  }
 }
 
 @include medium {
@@ -76,5 +83,34 @@
 
   &:not(:focus-visible):hover {
     background: var(--tomato);
+  }
+}
+
+// Multi-language styles
+:where([lang=hu], [lang=ja]) .wrapper>b {
+  font-size: 5.4rem;
+}
+
+@include large {
+  :where([lang=hu], [lang=ja]) .wrapper>b {
+    font-size: 4.5rem;
+  }
+}
+
+@include medium {
+  :where([lang=hu], [lang=ja]) .wrapper>b {
+    font-size: 3.8rem;
+  }
+}
+
+@include small {
+  :where([lang=hu], [lang=ja]) .wrapper>b {
+    font-size: 2rem;
+  }
+}
+
+@include very-small {
+  :where([lang=hu], [lang=ja]) .wrapper>b {
+    font-size: 1.4rem;
   }
 }

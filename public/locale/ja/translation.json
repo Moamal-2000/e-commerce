@@ -380,8 +380,7 @@
     "tabTitle": "ページが見つかりません",
     "description": "訪問したページが見つかりませんでした。ホームページに移動することができます。",
     "notBuiltTabTitle": "ページが作成されていません",
-    "notBuiltDescription": "申し訳ありませんが、お探しのページはまだ作成されていません。",
-    "notFoundMessage": "404 見つかりません"
+    "notBuiltDescription": "申し訳ありませんが、お探しのページはまだ作成されていません。"
   },
 
   "featuredSection": {
