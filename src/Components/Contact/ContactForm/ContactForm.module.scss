@@ -16,6 +16,12 @@
   }
 }
 
+@include very-small {
+  .contactForm {
+    padding: 40px 20px;
+  }
+}
+
 .inputs {
   flex: 1;
   margin-bottom: 20px;
@@ -26,6 +32,24 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+@include large {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+@include medium {
+  .wrapper {
+    flex-direction: row;
+  }
+}
+
+@include small {
+  .wrapper {
+    flex-direction: column;
+  }
 }
 
 .input {

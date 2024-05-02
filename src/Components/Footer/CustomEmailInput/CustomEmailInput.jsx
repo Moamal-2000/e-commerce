@@ -8,9 +8,12 @@ import s from "./CustomEmailInput.module.scss";
 
 const CustomEmailInput = () => {
   const [email, setEmail] = useState("");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const lang = cookies.get("i18next");
   const sendIconToolTipLeftPos = sendToolTipLeftPos(lang);
+  const sendIconDirection = {
+    rotate: i18n.dir() === "rtl" ? "180deg" : "0deg",
+  };
 
   function sendEmail(e) {
     e.preventDefault();
@@ -29,7 +32,10 @@ const CustomEmailInput = () => {
       />
 
       <label htmlFor="email" aria-label="Send mail">
-        <SvgIcon name="vector" />
+        <div style={sendIconDirection}>
+          <SvgIcon name="vector" />
+        </div>
+
         <ToolTip
           left={sendIconToolTipLeftPos}
           top="50%"

@@ -132,7 +132,7 @@ export function wishlistIconToolTipLeftPos(lang) {
 export function sendToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":
-      return "-27px";
+      return "-29px";
     case "ja":
       return "66px";
     case "ru":
