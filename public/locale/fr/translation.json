@@ -469,7 +469,8 @@
       "emailSection": {
         "title": "Écrivez-nous",
         "fillOut": "Remplissez notre formulaire et nous vous contacterons dans les 24 heures.",
-        "email": "E-mail"
+        "customersEmail": "Email des clients",
+        "supportEmail": "Email de support"
       }
     }
   },

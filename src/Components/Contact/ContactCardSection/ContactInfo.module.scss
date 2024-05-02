@@ -33,6 +33,12 @@
 .content>p {
   font-size: .875rem;
   color: var(--black);
+  position: relative;
+}
+
+.content>p:has(a) {
+  width: min-content;
+  text-wrap: nowrap;
 }
 
 .content>p:first-child {
@@ -43,7 +49,7 @@
   outline: none;
   border: none;
   color: var(--black);
-  position: relative;
+  text-wrap: wrap;
 }
 
 .content>p>a:hover {

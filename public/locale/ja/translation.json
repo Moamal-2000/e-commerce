@@ -469,7 +469,8 @@
       "emailSection": {
         "title": "メールでお問い合わせ",
         "fillOut": "フォームに記入してください。24時間以内にご連絡いたします。",
-        "email": "メールアドレス"
+        "customersEmail": "顧客のメールアドレス",
+        "supportEmail": "サポートメール"
       }
     }
   },

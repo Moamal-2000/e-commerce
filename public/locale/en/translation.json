@@ -470,7 +470,8 @@
       "emailSection": {
         "title": "Write To Us",
         "fillOut": "Fill out our form and we will contact you within 24 hours.",
-        "email": "Email"
+        "customersEmail": "Customers Email",
+        "supportEmail": "Support Email"
       }
     }
   },

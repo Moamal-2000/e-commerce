@@ -466,7 +466,8 @@
       "emailSection": {
         "title": "Írjon nekünk",
         "fillOut": "Töltse ki az űrlapot, és 24 órán belül felvesszük Önnel a kapcsolatot.",
-        "email": "Email"
+        "customersEmail": "Ügyfelek e-mail címe",
+        "supportEmail": "Támogatási e-mail"
       }
     }
   },

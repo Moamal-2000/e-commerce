@@ -11,7 +11,8 @@ const ContactInfoCard = () => {
 
   const emailSectionTitle = t(`${contactInfo}.emailSection.title`);
   const fillOutTrans = t(`${contactInfo}.emailSection.fillOut`);
-  const emailTrans = t(`${contactInfo}.emailSection.email`);
+  const customersEmailTrans = t(`${contactInfo}.emailSection.customersEmail`);
+  const supportEmailTrans = t(`${contactInfo}.emailSection.supportEmail`);
 
   return (
     <section className={s.contactInfo}>
@@ -28,12 +29,12 @@ const ContactInfoCard = () => {
       <ContactInfo iconName="email2" title={emailSectionTitle}>
         <p>{fillOutTrans}</p>
         <p>
-          {emailTrans + ": "}
+          {customersEmailTrans + ": "}
           <a href="mailto:customer@exclusive.com">customer@exclusive.com</a>
         </p>
 
         <p>
-          {emailTrans + ": "}
+          {supportEmailTrans + ": "}
           <a href="mailto:support@exclusive.com">support@exclusive.com</a>
         </p>
       </ContactInfo>
