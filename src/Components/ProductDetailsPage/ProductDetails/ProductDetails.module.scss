@@ -95,3 +95,16 @@
     min-width: auto;
   }
 }
+
+// Arabic styles
+[dir=rtl] .detailsSection {
+  flex-direction: row-reverse;
+}
+
+@include large {
+  [dir=rtl] .detailsSection {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+}

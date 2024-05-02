@@ -22,11 +22,6 @@
 @media (max-width: 1400px) {
   .otherImages {
     height: auto;
-  }
-}
-
-@media (max-width: 1400px) {
-  .otherImages {
     max-width: 500px;
     flex-direction: row;
   }
@@ -98,6 +93,13 @@
   }
 }
 
+@include small {
+  .previewImgHolder {
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
 @media (max-width: 480px) {
   .previewImgHolder {
     height: 410px;
@@ -106,14 +108,19 @@
   }
 }
 
-@include small {
-  .previewImgHolder {
-    width: 100%;
-  }
-}
-
 .previewImgHolder>img {
   background-color: var(--very-light-gray2);
   border-radius: inherit;
   object-fit: contain;
+}
+
+// Arabic styles
+[dir=rtl] .images {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1400px) {
+  [dir=rtl] .images {
+    flex-direction: column-reverse;
+  }
 }
