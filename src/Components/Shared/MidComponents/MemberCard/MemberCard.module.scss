@@ -80,3 +80,8 @@
 .instagram:focus-visible>svg>path {
   stroke: var(--orange-degree2);
 }
+
+// Arabic styles
+[lang=ar] .info>p {
+  margin-top: 5px;
+}
