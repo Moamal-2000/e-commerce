@@ -21,17 +21,29 @@ const ContactForm = () => {
         <div className={s.wrapper}>
           <div className={s.input}>
             <label htmlFor="username">{t("inputsPlaceholders.yourName")}</label>
-            <input type="text" autoComplete="off" name="username" required />
+            <input
+              type="text"
+              placeholder=""
+              autoComplete="off"
+              name="username"
+              required
+            />
           </div>
 
           <div className={s.input}>
             <label htmlFor="email">{t("inputsPlaceholders.yourEmail")}</label>
-            <input type="email" autoComplete="off" name="email" required />
+            <input
+              type="email"
+              placeholder=""
+              autoComplete="off"
+              name="email"
+              required
+            />
           </div>
 
           <div className={s.input}>
             <label htmlFor="phone">{t("inputsPlaceholders.yourPhone")}</label>
-            <input type="text" name="phone" required />
+            <input type="text" placeholder="" name="phone" required />
           </div>
         </div>
 

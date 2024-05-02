@@ -33,7 +33,7 @@
   position: relative;
 }
 
-.input>label {
+.input label {
   color: #757575;
   position: absolute;
   left: 10px;
@@ -41,6 +41,15 @@
   translate: 0 -50%;
   font-size: .8rem;
   letter-spacing: -.5px;
+  pointer-events: none;
+}
+
+.input:has(:not(:placeholder-shown)) label {
+  display: none;
+}
+
+.input:has(:placeholder-shown) label {
+  display: block;
 }
 
 .input:has([required])>label::after {
