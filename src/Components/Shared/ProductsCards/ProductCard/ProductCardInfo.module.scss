@@ -29,7 +29,8 @@
 }
 
 .productInfo .price .afterDiscount {
-  margin-inline-start: 16px;
+  // margin-inline-start: 16px;
+  margin-left: 16px;
   color: var(--primary);
   font-weight: 500;
 }

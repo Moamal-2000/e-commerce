@@ -56,11 +56,11 @@ export function scrollToTopToolTipLeftPos(lang) {
 export function favIconToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":
-      return "-33px";
+      return "-40px";
     case "ja":
       return "-51px";
     case "ru":
-      return "-51px";
+      return "-52px";
     case "fr":
       return "-35px";
     case "hu":
@@ -113,11 +113,11 @@ export function trashcanIconToolTipLeftPos(lang) {
 export function wishlistIconToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":
-      return "-46px";
+      return "-54px";
     case "ja":
       return "-72px";
     case "ru":
-      return "-50px";
+      return "-51px";
     case "fr":
       return "-69px";
     case "hu":
