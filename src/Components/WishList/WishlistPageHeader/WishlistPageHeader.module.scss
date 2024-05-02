@@ -1,28 +1,25 @@
 @import "src/Styles/mixins";
 
-.wishListPage {
-  margin: var(--page-margin);
-}
-
-.wishList {
-  margin-bottom: 80px;
-}
-
-
-.forYou>header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
   margin-bottom: 50px;
+}
 
-  &>div>* {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0 !important;
+.header>label {
+  font-size: 1.25rem;
+  text-wrap: nowrap;
+}
+
+@include small {
+  .header>label {
+    font-size: 1rem;
   }
 }
 
-.forYou>header>a {
+.header>button {
   background-color: transparent;
   outline: none;
   padding: 16px 48px;
@@ -31,7 +28,6 @@
   outline: 2px solid transparent;
   outline-offset: -2px;
   font-weight: 500;
-  color: var(--black);
   transition: background-color .1s, color .1s;
 
   &:hover {
@@ -46,8 +42,8 @@
 }
 
 @include small {
-  .forYou>header>a {
-    padding: 12px 30px;
+  .header>button {
+    padding: 12px 20px;
     font-size: .9rem;
   }
 }
