@@ -30,7 +30,6 @@ export function repoStarsForksToolTipLeftPos(lang) {
     case "ja":
       return "92px";
   }
-
   return "77px";
 }
 
@@ -49,7 +48,6 @@ export function scrollToTopToolTipLeftPos(lang) {
     case "hi":
       return "-73px";
   }
-
   return "-60px";
 }
 
@@ -68,7 +66,6 @@ export function favIconToolTipLeftPos(lang) {
     case "hi":
       return "-37px";
   }
-
   return "-41px";
 }
 
@@ -87,7 +84,6 @@ export function detailsIconToolTipLeftPos(lang) {
     case "hi":
       return "-36px";
   }
-
   return "-39px";
 }
 
@@ -106,7 +102,6 @@ export function trashcanIconToolTipLeftPos(lang) {
     case "hi":
       return "-29px";
   }
-
   return "-41px";
 }
 
@@ -125,7 +120,6 @@ export function wishlistIconToolTipLeftPos(lang) {
     case "hi":
       return "-43px";
   }
-
   return "-39px";
 }
 
@@ -144,6 +138,21 @@ export function sendToolTipLeftPos(lang) {
     case "hi":
       return "63px";
   }
-
   return "70px";
+}
+
+export function removeCartProductToolTipLeftPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "56px";
+    case "ja":
+      return "-37px";
+    case "fr":
+      return "-55px";
+    case "hu":
+      return "-55px";
+    case "hi":
+      return "-37px";
+  }
+  return "-50px";
 }
