@@ -81,3 +81,15 @@
     padding: 12px 20px;
   }
 }
+
+// Hungarian styles
+[lang=hu] .menu>a {
+  font-size: .9rem;
+}
+
+@include small {
+  [lang=hu] .menu>a {
+    font-size: .8rem;
+    padding: 16px 20px;
+  }
+}
