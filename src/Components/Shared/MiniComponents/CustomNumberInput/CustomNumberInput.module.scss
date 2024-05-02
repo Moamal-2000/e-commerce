@@ -24,7 +24,7 @@
   border: none;
   outline: none;
   max-width: 40px;
-  padding-left: 10px;
+  padding-inline-start: 10px;
 
   &::-webkit-inner-spin-button {
     display: none;
@@ -40,7 +40,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-right: 8px;
+  padding-inline-end: 8px;
 }
 
 .buttons>button {

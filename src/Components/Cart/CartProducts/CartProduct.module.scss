@@ -38,3 +38,8 @@
   width: 54px;
   margin-inline-end: 20px;
 }
+
+// Arabic styles
+[lang=ar] .product {
+  justify-content: space-between;
+}

@@ -23,3 +23,9 @@
   height: 12px;
   fill: var(--white)
 }
+
+// Arabic styles
+[lang=ar] .removeButton {
+  left: auto;
+  right: 0;
+}
