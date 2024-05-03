@@ -3,9 +3,10 @@ import { updateGlobalState } from "src/Features/globalSlice";
 import s from "./GlobalOverlay.module.scss";
 
 const GlobalOverlay = () => {
+  const dispatch = useDispatch();
   const { isOverlayActive, isMobileMenuActive, isProfileMenuActive } =
     useSelector((state) => state.global);
-  const dispatch = useDispatch();
+  const activeClass = isOverlayActive ? s.active : "";
 
   function handleOverlayClick() {
     if (isMobileMenuActive)
@@ -19,9 +20,11 @@ const GlobalOverlay = () => {
 
   return (
     <div
-      className={`${s.overlay} ${isOverlayActive ? s.active : ""}`}
+      tabIndex="0"
+      className={`${s.overlay} ${activeClass}`}
       onClick={handleOverlayClick}
-    ></div>
+      onKeyUp={(e) => e.key === "Enter" && handleOverlayClick()}
+    />
   );
 };
 
