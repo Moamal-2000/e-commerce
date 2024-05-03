@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import App from "./App.jsx";
 import { store } from "./App/store.jsx";
 import "./Styles/main.scss";
-import "./Translations/i18n";
+import "./i18n.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>

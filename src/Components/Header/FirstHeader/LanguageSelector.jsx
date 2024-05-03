@@ -15,7 +15,7 @@ const LanguageSelector = () => {
     const currentFlagEle = currentLangRef.current.querySelector("img");
     const selectedLangData = LANGUAGES[index];
 
-    currentFlagEle.src = selectedLangData.flag;
+    currentFlagEle.src = selectedLangData?.flag;
     i18n.changeLanguage(langCode);
   }
 
@@ -39,8 +39,8 @@ const LanguageSelector = () => {
 
   function updateSelectedLanguage() {
     const currentLangEle = currentLangRef.current.querySelector("span");
-    const currentLangData = LANGUAGES.find((lang) => lang.code === currLang);
-    const selectedLangLowerCase = currentLangData.lang.toLowerCase();
+    const currentLangData = LANGUAGES?.find((lang) => lang?.code === currLang);
+    const selectedLangLowerCase = currentLangData?.lang?.toLowerCase();
     currentLangEle.textContent = t(`languageSelector.${selectedLangLowerCase}`);
   }
 
@@ -68,7 +68,7 @@ const LanguageSelector = () => {
     >
       <div className={s.currentOption} ref={currentLangRef}>
         <span>{t(`languageSelector.${currLang.toLowerCase()}`)}</span>
-        <img src={LANGUAGES[0].flag} alt={`${LANGUAGES[0]} flag`} />
+        <img src={LANGUAGES[0]?.flag} alt={`${LANGUAGES[0]} flag`} />
       </div>
 
       <div className={`${s.menu} ${isLangMenuActive ? s.active : ""}`}>

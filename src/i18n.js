@@ -4,6 +4,7 @@ import HttpApi from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
 const i18nConfig = {
+  debug: true,
   compatibilityJSON: "v3",
   fallbackLng: "en",
   detection: {
@@ -19,7 +20,7 @@ const i18nConfig = {
     caches: ["cookie"],
   },
   backend: {
-    loadPath: "src/Translations/locale/{{lng}}/{{ns}}.json",
+    loadPath: "/locale/{{lng}}/{{ns}}.json",
   },
 };
 
