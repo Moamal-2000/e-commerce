@@ -56,3 +56,8 @@
     outline-offset: 2px;
   }
 }
+
+// Arabic styles
+[lang=ar] .feature>p {
+  margin-top: 6px;
+}

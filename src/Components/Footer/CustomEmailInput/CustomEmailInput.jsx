@@ -28,6 +28,7 @@ const CustomEmailInput = () => {
         placeholder={t("inputsPlaceholders.enterYourEmail")}
         id="email"
         value={email}
+        autoComplete="off"
         onChange={(e) => setEmail(e.target.value)}
       />
 

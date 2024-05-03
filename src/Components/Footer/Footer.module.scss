@@ -131,6 +131,12 @@
   background-color: var(--white) !important;
 }
 
+// Arabic styles
+[lang=ar] .sections>section a:not(:has(svg))::after {
+  left: auto;
+  right: 0;
+}
+
 // French styles
 [lang=fr] .section5>p {
   max-width: 250px;

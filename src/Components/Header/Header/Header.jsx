@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className={s.header}>
-      <div className={s.container} dir="ltr">
+      <div className={s.container} >
         <h1>
           <Link to="/">Exclusive</Link>
         </h1>

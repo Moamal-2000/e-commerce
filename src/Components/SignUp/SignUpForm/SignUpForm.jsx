@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { googleIcon } from "src/Assets/Images/Images";
 import { newSignUp, setLoginData } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
@@ -122,7 +122,7 @@ const SignUpForm = () => {
 
         <p>
           <span>{t("loginSignUpPage.alreadyHaveAcc")}</span>
-          <NavLink to="/login">{t("buttons.login")}</NavLink>
+          <Link to="/login">{t("buttons.login")}</Link>
         </p>
       </div>
     </form>

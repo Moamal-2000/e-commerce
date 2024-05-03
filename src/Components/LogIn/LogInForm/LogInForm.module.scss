@@ -20,9 +20,9 @@
 }
 
 .form>h2 {
-  font: 500 2.25rem/30px "Inter", sans-serif;
+  font: 500 2.25rem/38px "Inter", sans-serif;
   letter-spacing: .04rem;
-  width: max-content;
+  width: 331px;
 }
 
 @include small {
@@ -118,5 +118,23 @@
   &:hover,
   &:focus-visible {
     color: var(--tomato);
+  }
+}
+
+// Hungarian styles
+[lang=hu] .form>h2 {
+  font-size: 2rem;
+}
+
+@include small {
+  [lang=hu] .form>h2 {
+    font-size: 1.4rem;
+  }
+}
+
+// Japanese styles
+@include small {
+  .form>h2 {
+    font-size: 1.6rem;
   }
 }
