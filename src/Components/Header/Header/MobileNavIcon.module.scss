@@ -10,6 +10,10 @@
   &:hover {
     opacity: .7;
   }
+
+  &:focus-visible>svg {
+    fill: var(--orange-degree2);
+  }
 }
 
 @include small {
@@ -22,4 +26,5 @@
   width: 27px;
   height: 27px;
   cursor: pointer;
+  transition: fill .2s;
 }
