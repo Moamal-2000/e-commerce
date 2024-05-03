@@ -42,6 +42,7 @@
   width: 70px;
   height: 70px;
   border-radius: 5px;
+  user-select: none;
   display: flex;
   outline: solid 3px #54577a;
   transition: outline-color .3s;
@@ -52,6 +53,10 @@
 
   &:hover {
     outline-color: #787db0;
+  }
+
+  &:focus-visible {
+    outline-color: var(--white);
   }
 }
 
@@ -67,6 +72,13 @@
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+  outline: none;
+  transition: .2s color;
+
+  &:focus-visible {
+    color: var(--orange-degree2);
+    text-decoration: underline;
+  }
 }
 
 .navLinks {
@@ -91,7 +103,8 @@
   align-items: center;
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color .2s;
+  outline: solid 2px transparent;
+  transition: background-color .2s, outline-color .2s;
 
   &[class=active],
   &:hover {
@@ -100,6 +113,10 @@
 
   &[class=active]:hover {
     background-color: rgba(87, 87, 87, .8);
+  }
+
+  &:focus-visible {
+    outline-color: var(--white);
   }
 }
 
