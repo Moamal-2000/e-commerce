@@ -9,6 +9,7 @@ import {
   compareDataToObjValue,
   getUniqueArrayByObjectKey,
 } from "src/Functions/helper";
+import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import { openSignWithGooglePopUp } from "../SignUpWithGoogle/SignUpWithGooglePopup";
 import s from "./SignUpForm.module.scss";
 
@@ -97,13 +98,16 @@ const SignUpForm = () => {
           onChange={(e) => (emailOrPhone.current = e.target.value)}
           required
         />
-        <input
-          type="password"
-          name="password"
-          placeholder={t("inputsPlaceholders.password")}
-          onChange={(e) => (password.current = e.target.value)}
-          required
-        />
+        <div className={s.input}>
+          <input
+            type="password"
+            name="password"
+            placeholder={t("inputsPlaceholders.password")}
+            onChange={(e) => (password.current = e.target.value)}
+            required
+          />
+          <ShowHidePassword />
+        </div>
       </div>
 
       <div className={s.buttons}>

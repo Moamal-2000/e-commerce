@@ -38,15 +38,21 @@
 .inputs {
   display: flex;
   flex-direction: column;
+  gap: 40px;
 }
 
-.inputs>input {
+.input {
+  position: relative;
+}
+
+.inputs input {
   border: none;
   outline: none;
   border-bottom: solid 1px var(--dark-gray);
   padding-bottom: 8px;
   color: var(--black);
   transition: border-color .1s;
+  width: 100%;
 
   &:focus {
     border-block-color: var(--black);
@@ -54,10 +60,6 @@
 
   &::placeholder {
     transition: color .1s;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 40px;
   }
 
   &[class=invalid] {
@@ -74,7 +76,7 @@
   }
 }
 
-.inputs>input::placeholder {
+.inputs input::placeholder {
   color: var(--regular-light-gray);
 }
 
