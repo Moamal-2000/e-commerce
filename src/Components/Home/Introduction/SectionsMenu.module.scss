@@ -10,10 +10,14 @@
   cursor: pointer;
   display: none;
   z-index: 2;
-  transition: opacity .2s;
+  transition: opacity .2s, fill .2s;
 
   &:hover {
     opacity: .7;
+  }
+
+  &:focus-visible>svg {
+    fill: var(--orange-degree2);
   }
 }
 
@@ -107,6 +111,7 @@
 
 .sectionsMenu a {
   outline: none;
+
   &:focus-visible {
     color: var(--orange-degree2) !important;
     text-decoration: underline;

@@ -12,22 +12,11 @@ const LanguageSelector = () => {
   const currLang = cookies.get("i18next") || "en";
 
   function selectLanguage(index, langCode) {
-    const currentLangEle = currentLangRef.current.querySelector("span");
     const currentFlagEle = currentLangRef.current.querySelector("img");
     const selectedLangData = LANGUAGES[index];
-    currentLangEle.textContent = t(
-      `languageSelector.${selectedLangData.lang.toLowerCase()}`
-    );
+
     currentFlagEle.src = selectedLangData.flag;
     i18n.changeLanguage(langCode);
-  }
-
-  function toggleLanguageMenu() {
-    setIsLangMenuActive((prevState) => !prevState);
-  }
-
-  function openLanguageMenu() {
-    setIsLangMenuActive(true);
   }
 
   function updateWebsiteLang() {
@@ -39,9 +28,37 @@ const LanguageSelector = () => {
     selectLanguage(currentLangIndex, currLang);
   }
 
+  function handleBlur(e) {
+    const relatedTarget = e.nativeEvent.relatedTarget;
+    const relatedTargetName = relatedTarget?.tagName;
+    const isAnchorTag = relatedTargetName === "A";
+    if (!isAnchorTag) return;
+
+    toggleLanguageMenu();
+  }
+
+  function updateSelectedLanguage() {
+    const currentLangEle = currentLangRef.current.querySelector("span");
+    const currentLangData = LANGUAGES.find((lang) => lang.code === currLang);
+    const selectedLangLowerCase = currentLangData.lang.toLowerCase();
+    currentLangEle.textContent = t(`languageSelector.${selectedLangLowerCase}`);
+  }
+
+  function toggleLanguageMenu() {
+    setIsLangMenuActive((prevState) => !prevState);
+  }
+
+  function openLanguageMenu() {
+    setIsLangMenuActive(true);
+  }
+
   useEffect(() => {
     updateWebsiteLang();
   }, [currLang]);
+
+  useEffect(() => {
+    updateSelectedLanguage();
+  }, [t]);
 
   return (
     <div
@@ -64,7 +81,7 @@ const LanguageSelector = () => {
               tabIndex="0"
               type="button"
               className={s.option}
-              onBlur={isLastOption ? toggleLanguageMenu : null}
+              onBlur={isLastOption ? (e) => handleBlur(e) : null}
               onClick={() => selectLanguage(index, code)}
             >
               <span>{t(`languageSelector.${lang.toLowerCase()}`)}</span>

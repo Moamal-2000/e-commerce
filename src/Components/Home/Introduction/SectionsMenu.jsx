@@ -27,8 +27,8 @@ const SectionsMenu = () => {
     <>
       <button
         type="button"
-        className={s.sectionsMenuButton}
         onClick={openSectionMenu}
+        className={s.sectionsMenuButton}
         aria-label={t("sectionsMenu.womenFashion")}
       >
         <SvgIcon name="list" />
