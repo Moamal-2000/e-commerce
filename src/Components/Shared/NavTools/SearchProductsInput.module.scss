@@ -17,13 +17,12 @@
   transition: border-color .1s, outline-color .1s, background-color .1s .05s;
 
   &:hover {
-    outline-color: var(--turquoise);
+    outline-color: #ff7b00;
   }
 
   &:has(:focus) {
-    outline-color: var(--turquoise);
-    border-color: var(--white);
-    background-color: rgba(74, 195, 232, .07);
+    outline-color: #ff7b00;
+    background-color: rgba(255, 166, 0, .08);
   }
 }
 
@@ -54,10 +53,11 @@
   width: 18px;
   height: 18px;
   transition: fill .1s;
+  fill: #757575;
 }
 
 .searchContainer:has(:focus)>button>svg {
-  fill: #757575;
+  fill: var(--black);
 }
 
 .searchContainer>button:active svg {
@@ -73,6 +73,10 @@
 }
 
 // Arabic styles
+[lang=ar] .searchContainer {
+  padding: 10px 12px;
+}
+
 @include medium {
   [lang=ar] .searchContainer {
     padding: 6px 12px 6px 18px;
