@@ -19,7 +19,12 @@ const MobileNav = () => {
     <div className={`${s.mobileMenu} ${isMobileMenuActive ? s.active : ""}`}>
       <div className={s.userInfo}>
         <Link to="/profile" title={t("mobileNav.profile")} className={s.img}>
-          <img src={userImg} alt="user's picture" />
+          <img
+            src={userImg}
+            alt="user's picture"
+            loading="lazy"
+            decoding="async"
+          />
         </Link>
 
         <p>

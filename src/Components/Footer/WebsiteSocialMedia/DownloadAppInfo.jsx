@@ -15,16 +15,33 @@ const DownloadAppInfo = () => {
 
       <div className={s.appInfo}>
         <div className={s.qrCode}>
-          <img src={qrCode} alt="QR Code" title="qr code" tabIndex="0" />
+          <img
+            src={qrCode}
+            alt="QR Code"
+            title="qr code"
+            tabIndex="0"
+            loading="lazy"
+            decoding="async"
+          />
         </div>
 
         <div className={s.downloadButtons}>
           <button type="button">
-            <img src={googlePlay} alt="Download app at Google play" />
+            <img
+              src={googlePlay}
+              alt="Download app at Google play"
+              loading="lazy"
+              decoding="async"
+            />
           </button>
 
           <button type="button">
-            <img src={appStore} alt="Download app at App store" />
+            <img
+              src={appStore}
+              alt="Download app at App store"
+              loading="lazy"
+              decoding="async"
+            />
           </button>
         </div>
       </div>
