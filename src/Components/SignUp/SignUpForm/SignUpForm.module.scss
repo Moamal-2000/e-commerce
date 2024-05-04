@@ -51,8 +51,8 @@
   border-bottom: solid 1px var(--dark-gray);
   padding-bottom: 8px;
   color: var(--black);
-  transition: border-color .1s;
   width: 100%;
+  transition: border-color .1s;
 
   &:focus {
     border-block-color: var(--black);

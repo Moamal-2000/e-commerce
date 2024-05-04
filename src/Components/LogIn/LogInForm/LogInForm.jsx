@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { newSignUp } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
+import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import s from "./LogInForm.module.scss";
 
 const LogInForm = () => {
@@ -60,12 +61,16 @@ const LogInForm = () => {
           placeholder={t("inputsPlaceholders.emailOrPhone")}
           onChange={(e) => (emailOrPhone.current = e.target.value)}
         />
-        <input
-          type="password"
-          name="Password"
-          placeholder={t("inputsPlaceholders.password")}
-          onChange={(e) => (password.current = e.target.value)}
-        />
+
+        <div className={s.input}>
+          <input
+            type="password"
+            name="Password"
+            placeholder={t("inputsPlaceholders.password")}
+            onChange={(e) => (password.current = e.target.value)}
+          />
+          <ShowHidePassword />
+        </div>
       </div>
 
       <div className={s.buttons}>
