@@ -65,7 +65,7 @@ const LanguageSelector = () => {
 
       <div className={`${s.menu} ${isLangMenuActive ? s.active : ""}`}>
         {LANGUAGES.map(({ lang, flag, code, id }, index) => {
-          const isLastOption = index + 1 === LANGUAGES.length;
+          const langTrans = t(`languageSelector.${lang.toLowerCase()}`);
 
           return (
             <button
@@ -75,8 +75,8 @@ const LanguageSelector = () => {
               className={s.option}
               onClick={() => selectLanguage(index, code)}
             >
-              <span>{t(`languageSelector.${lang.toLowerCase()}`)}</span>
-              <img src={flag} alt={`${lang} flag`} />
+              <span>{langTrans}</span>
+              <img src={flag} alt={"country flag"} />
             </button>
           );
         })}
