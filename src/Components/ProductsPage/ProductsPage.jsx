@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
@@ -25,25 +26,32 @@ const ProductsPage = () => {
   useScrollOnMount(200);
 
   return (
-    <div className="container">
-      <main className={s.productsPage}>
-        <PagesHistory history={["/", t("history.products")]} />
+    <>
+      <Helmet>
+        <title>Products</title>
+        <link ref="preconnect" href="https://api.github.com/" />
+      </Helmet>
 
-        <section className={s.products} id="products-section">
-          {!loadingProductsPage && (
-            <ExploreProducts
-              customization={productCardCustomizations.allProducts}
-            />
-          )}
+      <div className="container">
+        <main className={s.productsPage}>
+          <PagesHistory history={["/", t("history.products")]} />
 
-          {loadingProductsPage && (
-            <div className={s.SkeletonCards}>
-              <SkeletonCards numberOfCards={8} />
-            </div>
-          )}
-        </section>
-      </main>
-    </div>
+          <section className={s.products} id="products-section">
+            {!loadingProductsPage && (
+              <ExploreProducts
+                customization={productCardCustomizations.allProducts}
+              />
+            )}
+
+            {loadingProductsPage && (
+              <div className={s.SkeletonCards}>
+                <SkeletonCards numberOfCards={8} />
+              </div>
+            )}
+          </section>
+        </main>
+      </div>
+    </>
   );
 };
 export default ProductsPage;
