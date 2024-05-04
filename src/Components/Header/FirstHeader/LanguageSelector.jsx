@@ -60,7 +60,7 @@ const LanguageSelector = () => {
     >
       <div className={s.currentOption} ref={currentLangRef}>
         <span></span>
-        <img src={LANGUAGES[0]?.flag} alt={`${LANGUAGES[0]} flag`} />
+        <img src={LANGUAGES[0]?.flag} alt={"country flag"} />
       </div>
 
       <div className={`${s.menu} ${isLangMenuActive ? s.active : ""}`}>
