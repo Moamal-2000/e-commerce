@@ -61,7 +61,6 @@ const EditProfileInputs = () => {
             label: t("inputsLabels.passwordChanges"),
             name: "currentPass",
             placeholder: t("inputsPlaceholders.currentPass"),
-            showPassTopPos: "52px"
           }}
         />
 

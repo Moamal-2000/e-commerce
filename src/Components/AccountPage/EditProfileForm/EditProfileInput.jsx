@@ -1,4 +1,3 @@
-import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import s from "./EditProfileInput.module.scss";
 
 const EditProfileInput = ({
@@ -11,7 +10,6 @@ const EditProfileInput = ({
     required = false,
     autoComplete = false,
     placeholder = "",
-    showPassTopPos = "50%",
   },
 }) => {
   return (
@@ -28,8 +26,6 @@ const EditProfileInput = ({
         onChange={setValue ? (e) => setValue(e.target.value) : null}
         placeholder={placeholder}
       />
-
-      {type === "password" && <ShowHidePassword top={showPassTopPos} />}
     </div>
   );
 };
