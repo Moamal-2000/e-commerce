@@ -41,6 +41,7 @@ const LanguageSelector = () => {
     const currentLangEle = currentLangRef.current.querySelector("span");
     const currentLangData = LANGUAGES?.find((lang) => lang?.code === currLang);
     const selectedLangLowerCase = currentLangData?.lang?.toLowerCase();
+
     currentLangEle.textContent = t(`languageSelector.${selectedLangLowerCase}`);
   }
 
@@ -67,7 +68,7 @@ const LanguageSelector = () => {
       onFocus={openLanguageMenu}
     >
       <div className={s.currentOption} ref={currentLangRef}>
-        <span>{t(`languageSelector.${currLang.toLowerCase()}`)}</span>
+        <span></span>
         <img src={LANGUAGES[0]?.flag} alt={`${LANGUAGES[0]} flag`} />
       </div>
 

@@ -4,9 +4,9 @@ import HttpApi from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
 const i18nConfig = {
-  debug: true,
   compatibilityJSON: "v3",
   fallbackLng: "en",
+  returnObjects: true,
   detection: {
     order: [
       "cookie",
