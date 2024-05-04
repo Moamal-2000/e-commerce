@@ -26,6 +26,7 @@ const ContactForm = () => {
               placeholder=""
               autoComplete="off"
               name="username"
+              id="username"
               required
             />
           </div>
@@ -37,13 +38,20 @@ const ContactForm = () => {
               placeholder=""
               autoComplete="off"
               name="email"
+              id="email"
               required
             />
           </div>
 
           <div className={s.input}>
             <label htmlFor="phone">{t("inputsPlaceholders.yourPhone")}</label>
-            <input type="text" placeholder="" name="phone" required />
+            <input
+              type="text"
+              placeholder=""
+              name="phone"
+              id="phone"
+              required
+            />
           </div>
         </div>
 

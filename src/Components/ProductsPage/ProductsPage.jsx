@@ -29,7 +29,7 @@ const ProductsPage = () => {
       <main className={s.productsPage}>
         <PagesHistory history={["/", t("history.products")]} />
 
-        <section className={s.products}>
+        <section className={s.products} id="products-section">
           {!loadingProductsPage && (
             <ExploreProducts
               customization={productCardCustomizations.allProducts}

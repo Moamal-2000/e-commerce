@@ -3,9 +3,9 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
+import { updateGlobalState } from "src/Features/globalSlice";
+import { updateProductsState } from "src/Features/productsSlice";
 import { searchByObjectKey } from "src/Functions/helper";
-import { updateGlobalState } from "../../../Features/globalSlice";
-import { updateProductsState } from "../../../Features/productsSlice";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./SearchProductsInput.module.scss";
 

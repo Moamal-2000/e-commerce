@@ -64,6 +64,7 @@ const CustomNumberInput = ({ product, quantity }) => {
       <input
         type="number"
         value={quantity}
+        placeholder="0"
         onChange={(e) => handleChangeQuantityInput(e)}
         min={MINIMUM_QUANTITY}
         max={MAXIMUM_QUANTITY}
@@ -72,6 +73,7 @@ const CustomNumberInput = ({ product, quantity }) => {
       <div className={s.buttons}>
         <button
           type="button"
+          aria-label="Increase quantity"
           onClick={() => handleUpdateQuantity("increase")}
           tabIndex="-1"
         >
@@ -80,6 +82,7 @@ const CustomNumberInput = ({ product, quantity }) => {
 
         <button
           type="button"
+          aria-label="Decrease quantity"
           onClick={() => handleUpdateQuantity("decrease")}
           tabIndex="-1"
         >

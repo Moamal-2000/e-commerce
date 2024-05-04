@@ -28,15 +28,6 @@ const LanguageSelector = () => {
     selectLanguage(currentLangIndex, currLang);
   }
 
-  function handleBlur(e) {
-    const relatedTarget = e.nativeEvent.relatedTarget;
-    const relatedTargetName = relatedTarget?.tagName;
-    const isAnchorTag = relatedTargetName === "A";
-    if (!isAnchorTag) return;
-
-    toggleLanguageMenu();
-  }
-
   function updateSelectedLanguage() {
     const currentLangEle = currentLangRef.current.querySelector("span");
     const currentLangData = LANGUAGES?.find((lang) => lang?.code === currLang);
@@ -82,7 +73,6 @@ const LanguageSelector = () => {
               tabIndex="0"
               type="button"
               className={s.option}
-              onBlur={isLastOption ? (e) => handleBlur(e) : null}
               onClick={() => selectLanguage(index, code)}
             >
               <span>{t(`languageSelector.${lang.toLowerCase()}`)}</span>

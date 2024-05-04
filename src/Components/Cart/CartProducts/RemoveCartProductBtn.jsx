@@ -16,7 +16,9 @@ const RemoveCartProductBtn = ({ productId }) => {
   const lang = cookies.get("i18next");
   const { width: windowWidth } = useGetResizeWindow();
 
-  const [toolTipLeftPos, setToolTipLeftPos] = useState(removeCartProductToolTipLeftPos(lang));
+  const [toolTipLeftPos, setToolTipLeftPos] = useState(
+    removeCartProductToolTipLeftPos(lang)
+  );
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
   function updateToolTipPositions() {
@@ -40,7 +42,12 @@ const RemoveCartProductBtn = ({ productId }) => {
   }
 
   return (
-    <button type="button" className={s.removeButton} onClick={removeProduct}>
+    <button
+      type="button"
+      className={s.removeButton}
+      aria-label="Remove product from cart"
+      onClick={removeProduct}
+    >
       <SvgIcon name="xMark" />
       <ToolTip
         top={toolTipTopPos}

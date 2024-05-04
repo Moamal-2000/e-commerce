@@ -123,6 +123,13 @@
 // Hungarian styles
 [lang=hu] .container {
   width: calc(var(--container-width) - 2%);
+  grid-template-columns: 17% 1fr;
+}
+
+@include large {
+  [lang=hu] .container {
+    grid-template-columns: unset;
+  }
 }
 
 // Russian styles
