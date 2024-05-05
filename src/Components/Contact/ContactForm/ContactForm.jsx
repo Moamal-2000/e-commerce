@@ -20,7 +20,9 @@ const ContactForm = () => {
       <div className={s.inputs}>
         <div className={s.wrapper}>
           <div className={s.input}>
-            <label htmlFor="username">{t("inputsPlaceholders.yourName")}</label>
+            <label htmlFor="username" aria-label="Username field placeholder">
+              {t("inputsPlaceholders.yourName")}
+            </label>
             <input
               type="text"
               placeholder=""
@@ -32,7 +34,9 @@ const ContactForm = () => {
           </div>
 
           <div className={s.input}>
-            <label htmlFor="email">{t("inputsPlaceholders.yourEmail")}</label>
+            <label htmlFor="email" aria-label="Email field placeholder">
+              {t("inputsPlaceholders.yourEmail")}
+            </label>
             <input
               type="email"
               placeholder=""
@@ -44,7 +48,9 @@ const ContactForm = () => {
           </div>
 
           <div className={s.input}>
-            <label htmlFor="phone">{t("inputsPlaceholders.yourPhone")}</label>
+            <label htmlFor="phone" aria-label="Phone number field placeholder">
+              {t("inputsPlaceholders.yourPhone")}
+            </label>
             <input
               type="text"
               placeholder=""
@@ -59,6 +65,7 @@ const ContactForm = () => {
           name="message"
           autoComplete="off"
           placeholder={t("inputsPlaceholders.yourMessage")}
+          aria-label="User message field"
         />
       </div>
 

@@ -16,7 +16,7 @@ const MobileNavIcon = () => {
       type="button"
       className={s.mobileNav}
       onClick={openMobileNav}
-      aria-label="Nav menu"
+      aria-label="Toggle navigation menu"
     >
       <SvgIcon name="burgerMenu" />
     </button>
