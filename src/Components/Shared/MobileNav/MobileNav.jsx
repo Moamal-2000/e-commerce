@@ -43,11 +43,14 @@ const MobileNav = () => {
         <ul>
           {mobileNavData.map(({ name, link, icon, requiteSignIn }, index) => {
             const shouldShow = requiteSignIn ? isSignIn : true;
+            const currentPage =
+              window.location.pathname === link ? "page" : undefined;
+
             if (!shouldShow) return null;
 
             return (
               <li key={"mobile-nav-link-" + index}>
-                <NavLink to={link}>
+                <NavLink to={link} aria-current={currentPage}>
                   <SvgIcon name={icon} />
                   <span>{t(`mobileNav.${camelCase(name)}`)}</span>
                 </NavLink>

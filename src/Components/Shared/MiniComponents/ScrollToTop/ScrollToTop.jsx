@@ -28,7 +28,7 @@ const ScrollToTop = () => {
       type="button"
       className={`${`${s.scrollTopButton} ${s.hide}`}`}
       onClick={scrollToTop}
-      aria-label="Scroll to top"
+      aria-label="Scroll to top button"
     >
       <SvgIcon name="arrowUp2" />
       <ToolTip

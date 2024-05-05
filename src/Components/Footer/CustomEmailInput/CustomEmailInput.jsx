@@ -29,6 +29,7 @@ const CustomEmailInput = () => {
         id="email"
         value={email}
         autoComplete="off"
+        aria-describedby="email-tooltip"
         onChange={(e) => setEmail(e.target.value)}
       />
 
