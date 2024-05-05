@@ -12,11 +12,19 @@ const CategoriesSlider = () => {
   return (
     <>
       <div className={s.sliderButtons}>
-        <button type="button" onClick={handlePrevBtn}>
+        <button
+          type="button"
+          onClick={handlePrevBtn}
+          aria-label="Previous button for slider"
+        >
           <SvgIcon name="arrowLeftShort" />
         </button>
 
-        <button type="button" onClick={handleNextBtn}>
+        <button
+          type="button"
+          onClick={handleNextBtn}
+          aria-label="Next button for slider"
+        >
           <SvgIcon name="arrowRightShort" />
         </button>
       </div>
