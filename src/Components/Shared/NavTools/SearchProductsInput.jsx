@@ -93,9 +93,11 @@ const SearchProductsInput = () => {
         autoComplete="off"
         placeholder={t("inputsPlaceholders.whatYouLookingFor")}
         onChange={(e) => handleSearchOnChange(e)}
+        role="search"
+        aria-label="Search product input"
       />
 
-      <button type="submit" title={t("tooltips.searchButton")}>
+      <button type="submit" aria-label={t("tooltips.searchButton")}>
         <SvgIcon name="search" />
       </button>
     </form>

@@ -19,10 +19,11 @@ const DropDownMenu = ({ nameMenu, children }) => {
       className={s.dropDownMenu}
       onClick={handleToggleMenu}
       onFocus={openMenu}
+      aria-haspopup="true"
     >
       <div className={s.nameMenu}>
         <span>{nameMenu}</span>
-        <div className={activeClass} aria-label="arrow icon">
+        <div className={activeClass} aria-label="Toggle submenu">
           <SvgIcon name="chevronRight" />
         </div>
       </div>
