@@ -156,3 +156,30 @@ export function removeCartProductToolTipLeftPos(lang) {
   }
   return "-50px";
 }
+
+export function getElementWidth(element) {
+  return element?.getBoundingClientRect()?.width;
+}
+
+export function getScrollSliderValue(sliderEle) {
+  const sliderItemEle = sliderEle.children[0];
+  const computersWidth = 1500;
+  const laptopsWidth = 1300;
+  const macBooksWidth = 992;
+  const GAP = 30;
+  const sliderItemEleWidth = getElementWidth(sliderItemEle) + GAP;
+
+  if (window.innerWidth >= computersWidth) {
+    return sliderItemEleWidth * 4;
+  }
+
+  if (window.innerWidth >= laptopsWidth) {
+    return sliderItemEleWidth * 3;
+  }
+
+  if (window.innerWidth >= macBooksWidth) {
+    return sliderItemEleWidth * 2;
+  }
+
+  return sliderItemEleWidth;
+}

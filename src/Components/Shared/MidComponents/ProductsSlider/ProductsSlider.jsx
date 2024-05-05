@@ -1,20 +1,37 @@
+import { useRef } from "react";
 import { productsData } from "src/Data/productsData";
-import s from "./ProductsSlider.module.scss";
+import useSlider from "src/Hooks/App/useSlider";
+import SvgIcon from "../../MiniComponents/SvgIcon";
 import ProductCard from "../../ProductsCards/ProductCard/ProductCard";
+import s from "./ProductsSlider.module.scss";
 
 const ProductsSlider = ({ filterFun = () => productsData, customization }) => {
   const filteredProducts = filterFun();
+  const sliderRef = useRef();
+  const { handleNextBtn, handlePrevBtn } = useSlider(sliderRef);
 
   return (
-    <div className={s.productsSlider}>
-      {filteredProducts.map((product) => (
-        <ProductCard
-          product={product}
-          key={product.id}
-          customization={customization}
-        />
-      ))}
-    </div>
+    <>
+      <div className={s.sliderButtons}>
+        <button type="button" onClick={handlePrevBtn}>
+          <SvgIcon name="arrowLeftShort" />
+        </button>
+
+        <button type="button" onClick={handleNextBtn}>
+          <SvgIcon name="arrowRightShort" />
+        </button>
+      </div>
+
+      <div className={s.productsSlider} ref={sliderRef} draggable={true}>
+        {filteredProducts.map((product) => (
+          <ProductCard
+            product={product}
+            key={product.id}
+            customization={customization}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

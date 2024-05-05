@@ -1,11 +1,44 @@
 @import "src/Styles/mixins";
 
+
+.sliderButtons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  margin-inline-end: 30px;
+  gap: 8px;
+}
+
+.sliderButtons>button {
+  width: 46px;
+  height: 46px;
+  background-color: var(--very-light-gray2);
+  @include center-x-y;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+}
+
+.sliderButtons>button:active>svg {
+  fill: var(--black);
+  position: relative;
+}
+
+.sliderButtons>button>svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--very-dark-gray);
+  z-index: 2;
+  position: absolute;
+}
+
 .categoriesSlider {
   display: flex;
   overflow: auto hidden;
   scrollbar-width: none;
   margin-bottom: 180px;
   position: relative;
+  scroll-behavior: smooth;
 }
 
 @include small {
