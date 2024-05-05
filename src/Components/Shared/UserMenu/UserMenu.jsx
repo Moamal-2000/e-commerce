@@ -21,27 +21,27 @@ const UserMenu = ({ isActive, toggler }) => {
 
   return (
     <div className={`${s.userMenu} ${activeClass}`}>
-      <NavLink to="/profile">
+      <NavLink to="/profile" aria-label="Profile page">
         <SvgIcon name="user" />
         <span>{t("userMenuItems.profile")}</span>
       </NavLink>
 
-      <NavLink to="/cart">
+      <NavLink to="/cart" aria-label="Cart page">
         <SvgIcon name="cart" />
         <span>{t("userMenuItems.cart")}</span>
       </NavLink>
 
-      <NavLink to="/cancellations">
+      <NavLink to="/cancellations" aria-label="Cancellations page">
         <SvgIcon name="cancel" />
         <span>{t("userMenuItems.cancellations")}</span>
       </NavLink>
 
-      <NavLink to="/reviews">
+      <NavLink to="/reviews" aria-label="Reviews page">
         <SvgIcon name="solidStar" />
         <span>{t("userMenuItems.reviews")}</span>
       </NavLink>
 
-      <NavLink to="/wishlist">
+      <NavLink to="/wishlist" aria-label="Wishlist page">
         <UserMenuItemWithCount
           props={{
             iconName: "save",
@@ -51,7 +51,12 @@ const UserMenu = ({ isActive, toggler }) => {
         />
       </NavLink>
 
-      <a href="#" onClick={handleSignOut} onBlur={() => toggler()}>
+      <a
+        href="#"
+        onClick={handleSignOut}
+        onBlur={() => toggler()}
+        aria-label="Logout"
+      >
         <SvgIcon name="boxArrowLeft" />
         <span>{t("userMenuItems.logout")}</span>
       </a>

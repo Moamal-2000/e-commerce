@@ -58,7 +58,7 @@
 }
 
 .input label {
-  color: #757575;
+  color: #515151;
   position: absolute;
   left: 10px;
   top: 50%;
@@ -102,6 +102,10 @@
 .inputs>textarea {
   resize: none;
   height: 207px;
+
+  &::placeholder {
+    color: #515151;
+  }
 }
 
 .buttons {
