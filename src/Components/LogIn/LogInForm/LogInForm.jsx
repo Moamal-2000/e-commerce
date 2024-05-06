@@ -1,14 +1,13 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { showAlert } from "src/Features/globalSlice";
 import { newSignUp } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import s from "./LogInForm.module.scss";
 
 const LogInForm = () => {
-  const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { signedUpUsers } = useSelector((state) => state.user);
@@ -33,7 +32,7 @@ const LogInForm = () => {
 
     if (isCorrectLoginData) {
       dispatch(newSignUp(signedUpUsers));
-      navigateTo("/", { replace: true });
+      logInAlert();
     }
   }
 
@@ -46,6 +45,15 @@ const LogInForm = () => {
   function checkLoginPassword(filteredUsersData) {
     const isPasswordValid = filteredUsersData[0]?.password === password.current;
     return isPasswordValid;
+  }
+
+  function logInAlert() {
+    const alertText = "You logged in successfully, Welcome back!";
+    const alertState = "success";
+
+    setTimeout(() => {
+      dispatch(showAlert({ alertText, alertState }));
+    }, 1500);
   }
 
   return (
