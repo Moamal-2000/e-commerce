@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
 import { sendToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isEmailValid } from "src/Functions/helper";
+import useOnlineStatus from "../../../Hooks/Helper/useOnlineStatus";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CustomEmailInput.module.scss";
@@ -15,6 +16,7 @@ const CustomEmailInput = () => {
   const { t, i18n } = useTranslation();
   const lang = cookies.get("i18next");
   const sendIconToolTipLeftPos = sendToolTipLeftPos(lang);
+  const isWebsiteOnline = useOnlineStatus();
   const sendIconDirection = {
     rotate: i18n.dir() === "rtl" ? "180deg" : "0deg",
   };
@@ -23,20 +25,19 @@ const CustomEmailInput = () => {
     const emailInput = e.target.querySelector("input");
 
     e.preventDefault();
-    if (!isEmailValid(emailInput)) return;
-
-    setEmail("");
-    subscription();
+    if (isEmailValid(emailInput)) subscription();
   }
 
   function subscription() {
+    const alertText = isWebsiteOnline
+      ? "You subscribed to exclusive offers"
+      : "Failed to subscribe, Please check your internet connection";
+    const alertState = isWebsiteOnline ? "success" : "error";
+
+    if (isWebsiteOnline) setEmail("");
+
     setTimeout(() => {
-      dispatch(
-        showAlert({
-          alertText: "You subscribed to exclusive offers",
-          alertState: "success",
-        })
-      );
+      dispatch(showAlert({ alertText, alertState }));
     }, 1000);
   }
 
