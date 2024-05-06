@@ -13,8 +13,8 @@
   position: fixed;
   z-index: 1000;
   left: 40px;
-  bottom: -500px;
-  transition: bottom .2s;
+  bottom: -300px;
+  transition: bottom .3s ease;
 }
 
 @include small {

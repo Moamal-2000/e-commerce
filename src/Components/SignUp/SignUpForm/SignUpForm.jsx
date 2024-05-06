@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { googleIcon } from "src/Assets/Images/Images";
+import { showAlert } from "src/Features/globalSlice";
 import { newSignUp, setLoginData } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import {
@@ -50,7 +51,7 @@ const SignUpForm = () => {
 
       dispatch(newSignUp(uniqueSignedUpUsers));
       dispatch(setLoginData(formData));
-      navigateTo("/", { replace: true });
+      signInAlert();
     }
   }
 
@@ -76,6 +77,15 @@ const SignUpForm = () => {
 
       setTimeout(() => dispatch(setLoginData(defaultLoginData)), 500);
     }, 2500);
+  }
+
+  function signInAlert() {
+    const alertText = "You signed in successfully, Welcome!";
+    const alertState = "success";
+
+    setTimeout(() => {
+      dispatch(showAlert({ alertText, alertState }));
+    }, 1500);
   }
 
   return (
