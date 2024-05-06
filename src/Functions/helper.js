@@ -220,3 +220,8 @@ export function isMobileDevice() {
   const isMobileDevice = window.matchMedia(mobileMediaQuery).matches;
   return isMobileDevice;
 }
+
+export function isEmailValid(emailInput) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
+  return emailRegex.test(emailInput.value);
+}

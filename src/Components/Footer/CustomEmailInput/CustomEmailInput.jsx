@@ -1,12 +1,16 @@
 import cookies from "js-cookie";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { showAlert } from "src/Features/globalSlice";
 import { sendToolTipLeftPos } from "src/Functions/componentsFunctions";
+import { isEmailValid } from "src/Functions/helper";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CustomEmailInput.module.scss";
 
 const CustomEmailInput = () => {
+  const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const { t, i18n } = useTranslation();
   const lang = cookies.get("i18next");
@@ -16,9 +20,24 @@ const CustomEmailInput = () => {
   };
 
   function sendEmail(e) {
+    const emailInput = e.target.querySelector("input");
+
     e.preventDefault();
+    if (!isEmailValid(emailInput)) return;
+
     setEmail("");
-    // Required a function to show popup message to notify user that the message has been sent
+    subscription();
+  }
+
+  function subscription() {
+    setTimeout(() => {
+      dispatch(
+        showAlert({
+          alertText: "You subscribed to exclusive offers",
+          alertState: "success",
+        })
+      );
+    }, 1000);
   }
 
   return (
