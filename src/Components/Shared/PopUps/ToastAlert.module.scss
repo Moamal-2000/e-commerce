@@ -1,0 +1,93 @@
+@import "src/Styles/mixins";
+
+.toastAlert {
+  background-color: #242C32;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  width: 343px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: -6px 10px 19px -14px var(--black);
+  position: fixed;
+  z-index: 200;
+  left: 40px;
+  bottom: -500px;
+  transition: bottom .2s;
+}
+
+.toastAlert.show {
+  bottom: 20px;
+}
+
+.toastAlert::before {
+  content: '';
+  position: absolute;
+  left: -60px;
+  top: 50%;
+  translate: 0 -50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(240, 66, 72, .2);
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+}
+
+.toastAlert.success::before {
+  background-color: rgba(0, 225, 124, .12);
+}
+
+.toastAlert.warning::before {
+  background-color: rgba(255, 212, 38, .13);
+}
+
+.iconHolder {
+  width: 28px;
+  height: 28px;
+  aspect-ratio: 1/1;
+  @include center-x-y;
+  border-radius: 50%;
+  margin: 0 10px;
+  position: relative;
+}
+
+.radialColor {
+  position: absolute;
+  background-color: #f04248;
+  width: 38px;
+  height: 38px;
+  @include center-x-y;
+  border-radius: 50%;
+  border: solid 7px #463947;
+}
+
+.toastAlert.success .radialColor {
+  background-color: #00e17a;
+  border: solid 7px #2b4947;
+}
+
+.toastAlert.warning .radialColor {
+  background-color: #ffd21f;
+  border: solid 7px #444743;
+}
+
+.iconHolder>svg {
+  position: relative;
+  fill: #242C32;
+  width: 13px;
+  height: 13px;
+  z-index: 2;
+}
+
+.toastAlert>p {
+  color: #C8C5C5;
+  margin-left: 16px;
+  line-height: 16px;
+  letter-spacing: -0.08px;
+  font-size: .8rem;
+}
