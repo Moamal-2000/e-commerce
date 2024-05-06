@@ -12,6 +12,7 @@ export const UN_BUILT_PAGES = [
   "faq",
   "terms",
   "privacy",
+  "notification",
 ];
 export const pagesRequireSignIn = [
   "/favorites",

@@ -11,7 +11,7 @@
   position: relative;
   box-shadow: -6px 10px 19px -14px var(--black);
   position: fixed;
-  z-index: 200;
+  z-index: 1000;
   left: 40px;
   bottom: -500px;
   transition: bottom .2s;
