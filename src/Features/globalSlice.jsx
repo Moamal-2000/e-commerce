@@ -23,8 +23,13 @@ const globalSlice = createSlice({
     updateGlobalState: (state, { payload: { key, value } }) => {
       state[key] = value;
     },
+    showAlert: (state, { payload: { alertText, alertState } }) => {
+      state.toastAlertText = alertText;
+      state.toastAlertState = alertState;
+      state.isToastAlertActive = true;
+    },
   },
 });
 
-export const { updateGlobalState } = globalSlice.actions;
+export const { updateGlobalState, showAlert } = globalSlice.actions;
 export default globalSlice.reducer;

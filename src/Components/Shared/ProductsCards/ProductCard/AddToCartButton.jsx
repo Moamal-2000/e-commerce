@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
 import { isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
-import { useTranslation } from "react-i18next";
 
 const AddToCartButton = ({ product }) => {
   const { t } = useTranslation();
@@ -14,7 +14,6 @@ const AddToCartButton = ({ product }) => {
   const isProductAlreadyExist = isItemFound(cartProducts, product, "shortName");
   const iconName = isProductAlreadyExist ? "trashCan" : "cart3";
   const [iconNameState, setIconName] = useState(iconName);
-  const navigateTo = useNavigate();
   const dispatch = useDispatch();
   const buttonText = t(
     `productCard.buttonText.${
@@ -24,7 +23,13 @@ const AddToCartButton = ({ product }) => {
 
   function handleCartButton() {
     if (!loginInfo.isSignIn) {
-      navigateTo("/signup");
+      dispatch(
+        showAlert({
+          alertText: "Please sign in to add product to cart",
+          alertState: "warning",
+        })
+      );
+
       return;
     }
     isProductAlreadyExist ? removeFromCart() : addToCart();
