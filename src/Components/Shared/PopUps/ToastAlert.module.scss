@@ -17,8 +17,22 @@
   transition: bottom .2s;
 }
 
+@include small {
+  .toastAlert {
+    width: calc(100vw - (100% - 100vw));
+    left: 0;
+    border-radius: 0;
+  }
+}
+
 .toastAlert.show {
   bottom: 20px;
+}
+
+@include small {
+  .toastAlert.show {
+    bottom: 0;
+  }
 }
 
 .toastAlert::before {
@@ -86,8 +100,14 @@
 
 .toastAlert>p {
   color: #C8C5C5;
-  margin-left: 16px;
+  margin-inline-start: 16px;
   line-height: 16px;
   letter-spacing: -0.08px;
   font-size: .8rem;
+}
+
+@include small {
+  .toastAlert>p {
+    padding-inline-end: 45px;
+  }
 }

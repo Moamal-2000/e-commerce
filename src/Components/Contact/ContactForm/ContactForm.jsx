@@ -1,18 +1,42 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useDispatch } from "react-redux";
+import { showAlert } from "src/Features/globalSlice";
 import s from "./ContactForm.module.scss";
 
 const ContactForm = () => {
   const { t } = useTranslation();
+  const dispatch = useDispatch();
+  const [phone, setPhone] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
     resetForm(e);
-    // Required a function to show popup message to notify user that the message has been sent
+    showSentMsgAlert();
   }
 
   function resetForm(e) {
     const resetButton = e.target.querySelector("button[type=reset]");
     resetButton?.click();
+    setPhone("");
+  }
+
+  function showSentMsgAlert() {
+    setTimeout(() => {
+      dispatch(
+        showAlert({
+          alertText:
+            "Thank you for your message!, we will get back to you shortly",
+          alertState: "success",
+        })
+      );
+    }, 1200);
+  }
+
+  function handleMobileOnChange(e) {
+    const pressedKey = e.nativeEvent.data;
+    const isNumber = !isNaN(parseInt(pressedKey));
+    if (isNumber || pressedKey === null) setPhone(e.target.value);
   }
 
   return (
@@ -52,11 +76,14 @@ const ContactForm = () => {
               {t("inputsPlaceholders.yourPhone")}
             </label>
             <input
-              type="text"
+              type="tel"
+              autoComplete="off"
               placeholder=""
               name="phone"
               id="phone"
               required
+              onChange={handleMobileOnChange}
+              value={phone}
             />
           </div>
         </div>
@@ -66,6 +93,7 @@ const ContactForm = () => {
           autoComplete="off"
           placeholder={t("inputsPlaceholders.yourMessage")}
           aria-label="User message field"
+          required
         />
       </div>
 

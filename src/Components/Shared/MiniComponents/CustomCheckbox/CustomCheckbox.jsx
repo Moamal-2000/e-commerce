@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { updateProductsState } from "../../../../Features/productsSlice";
+import { updateProductsState } from "src/Features/productsSlice";
 import SvgIcon from "../SvgIcon";
 import s from "./CustomCheckbox.module.scss";
 

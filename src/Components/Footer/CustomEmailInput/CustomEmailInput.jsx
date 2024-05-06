@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
 import { sendToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isEmailValid } from "src/Functions/helper";
-import useOnlineStatus from "../../../Hooks/Helper/useOnlineStatus";
+import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CustomEmailInput.module.scss";

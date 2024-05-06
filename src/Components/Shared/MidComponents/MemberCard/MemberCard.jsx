@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { camelCase } from "../../../../Functions/helper";
+import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import ToolTip from "../../MiniComponents/ToolTip";
 import s from "./MemberCard.module.scss";

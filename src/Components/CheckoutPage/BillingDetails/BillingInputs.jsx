@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { billingInputsData } from "../../../Data/staticData";
+import { billingInputsData } from "src/Data/staticData";
 import BillingInput from "./BillingInput";
 import s from "./BillingInputs.module.scss";
 
