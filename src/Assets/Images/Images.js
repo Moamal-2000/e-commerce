@@ -30,11 +30,11 @@ import stereo from "./stereo.webp";
 import uncoloredStar from "./uncolored-star.svg";
 import usaFlag from "./usa-flag.webp";
 import userImg from "./user-image.webp";
+import userPicturePlaceholder from "./user-picture-placeholder.webp";
 import visaCard from "./visa.webp";
 import womanWithHat from "./woman-with-hat.webp";
 import member2Img from "./woman.webp";
 import womenShopping from "./women-shopping.webp";
-// import  from "."
 
 export {
   appStore,
@@ -70,6 +70,7 @@ export {
   uncoloredStar,
   usaFlag,
   userImg,
+  userPicturePlaceholder,
   visaCard,
   womanWithHat,
   womenShopping,

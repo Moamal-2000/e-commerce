@@ -1,10 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import { userImg } from "src/Assets/Images/Images";
+import { userImg, userPicturePlaceholder } from "src/Assets/Images/Images";
 import { mobileNavData } from "src/Data/staticData";
+import { camelCase } from "src/Functions/helper";
 import useSignOut from "src/Hooks/App/useSignOut";
-import { camelCase } from "../../../Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
 
@@ -20,7 +20,7 @@ const MobileNav = () => {
       <div className={s.userInfo}>
         <Link to="/profile" title={t("mobileNav.profile")} className={s.img}>
           <img
-            src={userImg}
+            src={isSignIn ? userImg : userPicturePlaceholder}
             alt="user's picture"
             loading="lazy"
             decoding="async"
