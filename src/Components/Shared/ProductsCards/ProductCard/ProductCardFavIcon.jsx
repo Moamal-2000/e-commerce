@@ -1,7 +1,7 @@
 import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeById } from "src/Features/productsSlice";
 import { favIconToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isItemFound } from "src/Functions/helper";
@@ -14,7 +14,6 @@ const ProductCardFavIcon = ({ product, productId }) => {
   const { favoritesProducts } = useSelector((state) => state.products);
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const navigateTo = useNavigate();
   const lang = cookies.get("i18next");
   const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
   const isAddedToFavorites = favoritesProducts?.find(
@@ -24,7 +23,17 @@ const ProductCardFavIcon = ({ product, productId }) => {
 
   function addProductToFavorite() {
     const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
-    if (!loginInfo.isSignIn) navigateTo("/signup");
+    if (!loginInfo.isSignIn) {
+      dispatch(
+        showAlert({
+          alertText: "Please sign in to add/remove product to favorites",
+          alertState: "warning",
+        })
+      );
+
+      return;
+    }
+
     if (isProductAlreadyExist) {
       dispatch(removeById({ key: "favoritesProducts", id: product.id }));
       return;

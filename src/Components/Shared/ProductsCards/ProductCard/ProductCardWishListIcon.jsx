@@ -1,7 +1,7 @@
 import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeById } from "src/Features/productsSlice";
 import { wishlistIconToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isItemFound } from "src/Functions/helper";
@@ -14,7 +14,6 @@ const ProductCardWishListIcon = ({ product, productId }) => {
   const { loginInfo } = useSelector((state) => state.user);
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const navigateTo = useNavigate();
   const lang = cookies.get("i18next");
   const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(lang);
   const isAddedToWishList = wishList?.find(
@@ -25,7 +24,16 @@ const ProductCardWishListIcon = ({ product, productId }) => {
   function addProductToWishList() {
     const isProductAlreadyExist = isItemFound(wishList, product, "id");
 
-    if (!loginInfo.isSignIn) navigateTo("/signup");
+    if (!loginInfo.isSignIn) {
+      dispatch(
+        showAlert({
+          alertText: "Please sign in to add/remove product to wishlist",
+          alertState: "warning",
+        })
+      );
+
+      return;
+    }
     if (isProductAlreadyExist) {
       dispatch(removeById({ key: "wishList", id: product.id }));
       return;
