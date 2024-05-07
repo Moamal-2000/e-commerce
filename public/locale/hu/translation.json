@@ -510,6 +510,22 @@
     "logout": "Kijelentkezés"
   },
 
+  "toastAlert": {
+    "accountInfoUpdated": "A fiók információi frissítve.",
+    "messageSent": "Köszönjük üzenetét! Hamarosan válaszolunk",
+    "subscriptionSuccess": "Feliratkozott az exkluzív ajánlatokra",
+    "subscriptionFailed": "Nem sikerült feliratkozni. Kérjük, ellenőrizze internetkapcsolatát",
+    "loginSuccess": "Sikeresen bejelentkezett. Üdvözöljük!",
+    "loginFailed": "Sikertelen bejelentkezés. Kérjük, ellenőrizze internetkapcsolatát",
+    "addToCart": "Kérjük, jelentkezzen be a termék kosárba helyezéséhez",
+    "addToFavorite": "Kérjük, jelentkezzen be a termék hozzáadásához/eltávolításához a kedvencek közül",
+    "addToWishListFailed": "Kérjük, jelentkezzen be a termék hozzáadásához/eltávolításához a kívánságlistáról",
+    "signInSuccess": "Sikeresen bejelentkezett. Üdvözöljük!",
+    "signOutSuccess": "Kijelentkezett a fiókjából",
+    "pageRequiringSignIn": "Kérjük, jelentkezzen be, hogy meglátogassa ezt az oldalt",
+    "signInToPerformAction": "Be kell jelentkeznie, hogy végrehajtsa ezt a műveletet"
+  },
+
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",
   "cashOnDelivery": "Utánvétel",
   "bank": "Bank",

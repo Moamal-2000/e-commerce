@@ -513,6 +513,23 @@
     "logout": "Se déconnecter"
   },
 
+  "toastAlert": {
+    "accountInfoUpdated": "Les informations du compte ont été mises à jour.",
+    "messageSent": "Merci pour votre message ! Nous vous répondrons sous peu",
+    "subscriptionSuccess": "Vous vous êtes abonné aux offres exclusives",
+    "subscriptionFailed": "Échec de l'abonnement. Veuillez vérifier votre connexion Internet",
+    "loginSuccess": "Vous êtes connecté avec succès. Bienvenue !",
+    "loginFailed": "Échec de la connexion. Veuillez vérifier votre connexion Internet",
+    "addToCart": "Veuillez vous connecter pour ajouter le produit au panier",
+    "addToFavorite": "Veuillez vous connecter pour ajouter/supprimer le produit des favoris",
+    "addToWishListFailed": "Veuillez vous connecter pour ajouter/supprimer le produit à la liste de souhaits",
+    "signInSuccess": "Vous êtes connecté avec succès. Bienvenue !",
+    "signOutSuccess": "Vous avez été déconnecté de votre compte",
+    "pageRequiringSignIn": "Veuillez vous connecter pour visiter cette page",
+    "signInToPerformAction": "Vous devez vous connecter pour effectuer cette action"
+  },
+
+
   "wishlist": "Liste de souhaits ({{numberOfWishlist}})",
   "cashOnDelivery": "Paiement à la livraison",
   "bank": "Banque",

@@ -520,8 +520,14 @@
     "subscriptionSuccess": "You subscribed to exclusive offers",
     "subscriptionFailed": "Failed to subscribe, Please check your internet connection",
     "loginSuccess": "You logged in successfully, Welcome back!",
-    "loginFailed": "Failed to login, Please check your internet connection"
-
+    "loginFailed": "Failed to login, Please check your internet connection",
+    "addToCart": "Please sign in to add product to cart",
+    "addToFavorite": "Please sign in to add/remove product to favorites",
+    "addToWishListFailed": "Please sign in to add/remove product to wishlist",
+    "signInSuccess": "You signed in successfully, Welcome!",
+    "signOutSuccess": "You Signed out of your account",
+    "pageRequiringSignIn": "Please sign in to visit this page",
+    "signInToPerformAction": "You have to sign in to do this action"
   },
 
   "wishlist": "Wishlist ({{numberOfWishlist}})",
