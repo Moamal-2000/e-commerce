@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { showAlert } from "src/Features/globalSlice";
 import { updateUserData } from "src/Features/userSlice";
 import {
   checkEmailValidation,
@@ -44,11 +45,23 @@ const EditProfileForm = () => {
     const updatedUserData = {
       username: `${inputs[0].value} ${inputs[1].value}`,
       emailOrPhone: inputs[2].value,
+      address: inputs[3].value,
       password: inputs[5].value,
     };
 
     if (updatedUserData.password === "") delete updatedUserData.password;
+
     dispatch(updateUserData({ updatedUserData }));
+    updateUserInfoAlert();
+  }
+
+  function updateUserInfoAlert() {
+    const alertText = "Account's information updated.";
+    const alertState = "success";
+
+    setTimeout(() => {
+      dispatch(showAlert({ alertText, alertState }));
+    }, 300);
   }
 
   return (

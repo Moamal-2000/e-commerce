@@ -9,6 +9,7 @@ const initialState = initialStateLocal
         username: "Lily Watson",
         emailOrPhone: "lily.wastons@gmail.com",
         password: "random-password1234",
+        address: "United State, California",
         isSignIn: true,
       },
       signedUpUsers: [

@@ -61,6 +61,7 @@ const SignUpForm = () => {
 
     openSignWithGooglePopUp();
     setDefaultSignUpData();
+    signInAlert()
   }
 
   function setDefaultSignUpData() {

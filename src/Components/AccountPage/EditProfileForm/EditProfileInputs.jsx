@@ -6,12 +6,13 @@ import s from "./EditProfileInputs.module.scss";
 
 const EditProfileInputs = () => {
   const { loginInfo } = useSelector((state) => state.user);
-  const { username, emailOrPhone } = loginInfo;
+  const { username, emailOrPhone, address } = loginInfo;
   const firstLastUserName = username.split(" ");
   const [firstName, setFirstName] = useState(firstLastUserName[0]);
   const [lastName, setLastName] = useState(firstLastUserName[1]);
   const [emailOrPhoneState, setEmailOrPhoneState] = useState(emailOrPhone);
   const [newPassword, setNewPassword] = useState("");
+  const [addressState, setAddress] = useState(address);
   const { t } = useTranslation();
 
   return (
@@ -49,6 +50,8 @@ const EditProfileInputs = () => {
           inputData={{
             label: t("inputsLabels.address"),
             name: "address",
+            value: addressState,
+            setValue: setAddress,
             placeholder: t("inputsPlaceholders.address"),
           }}
         />
