@@ -1,3 +1,4 @@
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
@@ -6,9 +7,10 @@ import s from "./Nav.module.scss";
 const Nav = () => {
   const { t } = useTranslation();
   const { loginInfo } = useSelector((state) => state.user);
+  const navDirection = i18next.dir() === "ltr" ? "ltr" : "rtl";
 
   return (
-    <nav className={s.nav}>
+    <nav className={s.nav} dir={navDirection}>
       <ul>
         <li>
           <NavLink to="/">{t("nav.home")}</NavLink>

@@ -1,6 +1,5 @@
 @import "src/Styles/mixins";
 
-
 .sliderButtons {
   display: flex;
   justify-content: flex-end;
@@ -90,4 +89,11 @@
 
 .categoriesSlider>*:last-child {
   margin-inline-end: 0;
+}
+
+
+// Arabic styles
+[lang=ar] .sliderButtons {
+  justify-content: flex-start;
+  direction: ltr;
 }

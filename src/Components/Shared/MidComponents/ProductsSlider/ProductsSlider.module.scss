@@ -71,3 +71,15 @@
 .productsSlider>*:last-child {
   margin-inline-end: 0;
 }
+
+// Arabic styles
+[lang=ar] .sliderButtons {
+  justify-content: flex-start;
+  direction: ltr;
+}
+
+@include small {
+  [lang=ar] .sliderButtons {
+    justify-content: flex-end;
+  }
+}

@@ -15,6 +15,7 @@ const ToastAlert = ({ state, text, visibility }) => {
   const dispatch = useDispatch();
   const { iconName, className } = toastState[state];
   const showClass = visibility ? s.show : "";
+  const paragraphDirection = i18next.dir() === "ltr" ? "rtl" : "ltr";
   let timerId;
 
   useEffect(() => {
@@ -35,7 +36,7 @@ const ToastAlert = ({ state, text, visibility }) => {
         <SvgIcon name={iconName} />
       </div>
 
-      <p dir={i18next.dir() === "ltr" ? "rtl" : "ltr"}>{text}</p>
+      <p dir={paragraphDirection}>{text}</p>
     </div>
   );
 };

@@ -9,8 +9,8 @@ const Header = () => {
   const navToolsProps = useNavToolsProps();
 
   return (
-    <header className={s.header}>
-      <div className={s.container} >
+    <header className={s.header} dir="ltr">
+      <div className={s.container}>
         <h1>
           <Link to="/">Exclusive</Link>
         </h1>

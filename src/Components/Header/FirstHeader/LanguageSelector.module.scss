@@ -9,7 +9,7 @@
   outline: dashed 0 var(--regular-light-gray);
   outline-offset: -2px;
 
-  &:focus-visible {
+  &:focus {
     transition: opacity .3s, var(--outline-transition);
     outline: 2px dashed var(--orange-degree2);
     outline-offset: 0;
