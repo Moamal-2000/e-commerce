@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
 import { newSignUp } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
+import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import s from "./LogInForm.module.scss";
 
@@ -13,10 +14,16 @@ const LogInForm = () => {
   const { signedUpUsers } = useSelector((state) => state.user);
   const emailOrPhone = useRef();
   const password = useRef();
+  const isWebsiteOnline = useOnlineStatus();
 
   function login(e) {
     const inputs = e.target.querySelectorAll("input");
     e.preventDefault();
+
+    if (!isWebsiteOnline) {
+      internetConnectionAlert();
+      return;
+    }
 
     const isFormValid = simpleValidationCheck(inputs);
     if (!isFormValid) return;
@@ -54,6 +61,13 @@ const LogInForm = () => {
     setTimeout(() => {
       dispatch(showAlert({ alertText, alertState }));
     }, 1500);
+  }
+
+  function internetConnectionAlert() {
+    const alertText = "Failed to login, Please check your internet connection";
+    const alertState = "error";
+
+    dispatch(showAlert({ alertText, alertState }));
   }
 
   return (
