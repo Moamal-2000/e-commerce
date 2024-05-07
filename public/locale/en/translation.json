@@ -514,6 +514,16 @@
     "logout": "Logout"
   },
 
+  "toastAlert": {
+    "accountInfoUpdated": "Account's information updated.",
+    "messageSent": "Thank you for your message!, we will get back to you shortly",
+    "subscriptionSuccess": "You subscribed to exclusive offers",
+    "subscriptionFailed": "Failed to subscribe, Please check your internet connection",
+    "loginSuccess": "You logged in successfully, Welcome back!",
+    "loginFailed": "Failed to login, Please check your internet connection"
+
+  },
+
   "wishlist": "Wishlist ({{numberOfWishlist}})",
   "cashOnDelivery": "Cash on Delivery",
   "bank": "Bank",

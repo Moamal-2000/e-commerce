@@ -3,7 +3,7 @@ import {
   getFormattedTime,
   getTimeInMilliseconds,
   getTimeObj,
-} from "../../Functions/helper";
+} from "src/Functions/helper";
 import useLocalStorage from "../Helper/useLocalStorage";
 
 /* Props Example

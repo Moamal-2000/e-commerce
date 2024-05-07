@@ -10,6 +10,7 @@ import {
   compareDataToObjValue,
   getUniqueArrayByObjectKey,
 } from "src/Functions/helper";
+import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import { openSignWithGooglePopUp } from "../SignUpWithGoogle/SignUpWithGooglePopup";
 import s from "./SignUpForm.module.scss";
@@ -22,10 +23,12 @@ const SignUpForm = () => {
   const username = useRef("");
   const emailOrPhone = useRef("");
   const password = useRef("");
+  const isWebsiteOnline = useOnlineStatus();
   let isSignUpWithGooglePressed = false;
 
   function signUp(e) {
     e.preventDefault();
+
     const inputs = e.target.querySelectorAll("input");
     const formDataObj = new FormData(e.target);
     const formData = {};
@@ -49,6 +52,11 @@ const SignUpForm = () => {
         key: "emailOrPhone",
       });
 
+      if (!isWebsiteOnline) {
+        internetConnectionAlert();
+        return;
+      }
+
       dispatch(newSignUp(uniqueSignedUpUsers));
       dispatch(setLoginData(formData));
       signInAlert();
@@ -61,7 +69,7 @@ const SignUpForm = () => {
 
     openSignWithGooglePopUp();
     setDefaultSignUpData();
-    signInAlert()
+    signInAlert();
   }
 
   function setDefaultSignUpData() {
@@ -87,6 +95,13 @@ const SignUpForm = () => {
     setTimeout(() => {
       dispatch(showAlert({ alertText, alertState }));
     }, 1500);
+  }
+
+  function internetConnectionAlert() {
+    const alertText = "Failed to login, Please check your internet connection";
+    const alertState = "error";
+
+    dispatch(showAlert({ alertText, alertState }));
   }
 
   return (

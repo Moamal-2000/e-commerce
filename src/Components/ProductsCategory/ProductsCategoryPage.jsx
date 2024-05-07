@@ -1,13 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productCardCustomizations } from "src/Data/staticData";
+import { updateGlobalState } from "src/Features/globalSlice";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
+import useUpdateLoadingOnSamePage from "src/Hooks/App/useUpdateLoadingOnSamePage";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
-import { SIMPLE_DELAYS } from "../../Data/globalVariables";
-import { updateGlobalState } from "../../Features/globalSlice";
-import useScrollOnMount from "../../Hooks/App/useScrollOnMount";
-import useUpdateLoadingOnSamePage from "../../Hooks/App/useUpdateLoadingOnSamePage";
-import useOnlineStatus from "../../Hooks/Helper/useOnlineStatus";
+import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import CategoriesSection from "../Home/CategoriesSection/CategoriesSection";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";

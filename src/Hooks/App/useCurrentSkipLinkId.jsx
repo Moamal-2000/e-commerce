@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { PAGE_SECTIONS_ID } from "../../Data/pagesData";
+import { PAGE_SECTIONS_ID } from "src/Data/pagesData";
 
 const useCurrentSkipLinkId = () => {
   const { pathname } = useLocation();
