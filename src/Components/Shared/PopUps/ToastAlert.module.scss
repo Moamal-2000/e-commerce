@@ -103,11 +103,37 @@
   margin-inline-start: 16px;
   line-height: 16px;
   letter-spacing: -0.08px;
-  font-size: .8rem;
+  font-size: .8rem !important;
 }
 
 @include small {
   .toastAlert>p {
     padding-inline-end: 45px;
+  }
+}
+
+.toastAlert>p::selection {
+  background-color: var(--white) !important;
+}
+
+// Arabic styles
+[lang=ar] .toastAlert {
+  left: auto;
+  right: 40px;
+  justify-content: flex-end;
+  width: auto;
+}
+
+@include small {
+  [lang=ar] .toastAlert>p {
+    direction: rtl;
+    padding-inline-start: 30px;
+  }
+}
+
+@include small {
+  [lang=ar] .toastAlert {
+    width: calc(100vw - (100% - 100vw));
+    justify-content: space-between;
   }
 }

@@ -11,7 +11,7 @@ const initialState = {
   loadingSearchProducts: true,
   loadingProductsPage: true,
   previewImg: null,
-  isToastAlertActive: true,
+  isToastAlertActive: false,
   toastAlertText: "",
   toastAlertState: "error",
 };

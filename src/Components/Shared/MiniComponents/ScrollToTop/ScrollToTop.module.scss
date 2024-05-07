@@ -35,3 +35,8 @@
   height: 20px;
   fill: var(--white);
 }
+
+// Arabic styles
+[lang=ar] .scrollTopButton {
+  bottom: 100px;
+}
