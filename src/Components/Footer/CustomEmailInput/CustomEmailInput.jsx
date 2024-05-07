@@ -30,8 +30,8 @@ const CustomEmailInput = () => {
 
   function subscription() {
     const alertText = isWebsiteOnline
-      ? "You subscribed to exclusive offers"
-      : "Failed to subscribe, Please check your internet connection";
+      ? t("toastAlert.subscriptionSuccess")
+      : t("toastAlert.subscriptionFailed");
     const alertState = isWebsiteOnline ? "success" : "error";
 
     if (isWebsiteOnline) setEmail("");

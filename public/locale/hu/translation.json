@@ -519,7 +519,7 @@
     "loginFailed": "Sikertelen bejelentkezés. Kérjük, ellenőrizze internetkapcsolatát",
     "addToCart": "Kérjük, jelentkezzen be a termék kosárba helyezéséhez",
     "addToFavorite": "Kérjük, jelentkezzen be a termék hozzáadásához/eltávolításához a kedvencek közül",
-    "addToWishListFailed": "Kérjük, jelentkezzen be a termék hozzáadásához/eltávolításához a kívánságlistáról",
+    "addToWishList": "Kérjük, jelentkezzen be a termék hozzáadásához/eltávolításához a kívánságlistáról",
     "signInSuccess": "Sikeresen bejelentkezett. Üdvözöljük!",
     "signOutSuccess": "Kijelentkezett a fiókjából",
     "pageRequiringSignIn": "Kérjük, jelentkezzen be, hogy meglátogassa ezt az oldalt",

@@ -27,7 +27,7 @@ const ProductCardWishListIcon = ({ product, productId }) => {
     if (!loginInfo.isSignIn) {
       dispatch(
         showAlert({
-          alertText: "Please sign in to add/remove product to wishlist",
+          alertText: t("toastAlert.addToWishList"),
           alertState: "warning",
         })
       );

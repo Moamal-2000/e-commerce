@@ -89,7 +89,7 @@ const SignUpForm = () => {
   }
 
   function signInAlert() {
-    const alertText = "You signed in successfully, Welcome!";
+    const alertText = t("toastAlert.signInSuccess");
     const alertState = "success";
 
     setTimeout(() => {
@@ -98,7 +98,7 @@ const SignUpForm = () => {
   }
 
   function internetConnectionAlert() {
-    const alertText = "Failed to login, Please check your internet connection";
+    const alertText = t("toastAlert.loginFailed");
     const alertState = "error";
 
     dispatch(showAlert({ alertText, alertState }));

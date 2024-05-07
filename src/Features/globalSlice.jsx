@@ -11,8 +11,8 @@ const initialState = {
   loadingSearchProducts: true,
   loadingProductsPage: true,
   previewImg: null,
-  isToastAlertActive: false,
-  toastAlertText: "You have to sign in to do this action",
+  isToastAlertActive: true,
+  toastAlertText: "",
   toastAlertState: "error",
 };
 

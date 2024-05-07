@@ -18,9 +18,9 @@ const ToastAlert = ({ state, text, visibility }) => {
     if (!showClass) return;
     let timerId;
 
-    timerId = setTimeout(() => {
-      dispatch(updateGlobalState({ key: "isToastAlertActive", value: false }));
-    }, 6000);
+    // timerId = setTimeout(() => {
+    //   dispatch(updateGlobalState({ key: "isToastAlertActive", value: false }));
+    // }, 6000);
 
     return () => clearTimeout(timerId);
   }

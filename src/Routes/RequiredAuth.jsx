@@ -21,7 +21,7 @@ const RequiredAuth = ({ children }) => {
   }
 
   function loginFirstAlert() {
-    const alertText = "Please sign in to visit this page";
+    const alertText = t("toastAlert.pageRequiringSignIn");
     const alertState = "warning";
     dispatch(showAlert({ alertText, alertState }));
   }

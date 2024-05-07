@@ -26,7 +26,7 @@ const ProductCardFavIcon = ({ product, productId }) => {
     if (!loginInfo.isSignIn) {
       dispatch(
         showAlert({
-          alertText: "Please sign in to add/remove product to favorites",
+          alertText: t("toastAlert.addToFavorite"),
           alertState: "warning",
         })
       );

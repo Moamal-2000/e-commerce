@@ -21,7 +21,7 @@ const useSignOut = () => {
     setTimeout(() => {
       dispatch(
         showAlert({
-          alertText: "You Signed out of your account",
+          alertText: t("toastAlert.signOutSuccess"),
           alertState: "warning",
         })
       );

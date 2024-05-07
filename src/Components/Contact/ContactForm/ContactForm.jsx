@@ -25,8 +25,7 @@ const ContactForm = () => {
     setTimeout(() => {
       dispatch(
         showAlert({
-          alertText:
-            "Thank you for your message!, we will get back to you shortly",
+          alertText: t("toastAlert.messageSent"),
           alertState: "success",
         })
       );

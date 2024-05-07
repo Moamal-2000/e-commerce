@@ -55,7 +55,7 @@ const LogInForm = () => {
   }
 
   function logInAlert() {
-    const alertText = "You logged in successfully, Welcome back!";
+    const alertText = t("toastAlert.loginSuccess");
     const alertState = "success";
 
     setTimeout(() => {
@@ -64,7 +64,7 @@ const LogInForm = () => {
   }
 
   function internetConnectionAlert() {
-    const alertText = "Failed to login, Please check your internet connection";
+    const alertText = t("toastAlert.loginFailed");
     const alertState = "error";
 
     dispatch(showAlert({ alertText, alertState }));

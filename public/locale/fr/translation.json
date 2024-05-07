@@ -522,7 +522,7 @@
     "loginFailed": "Échec de la connexion. Veuillez vérifier votre connexion Internet",
     "addToCart": "Veuillez vous connecter pour ajouter le produit au panier",
     "addToFavorite": "Veuillez vous connecter pour ajouter/supprimer le produit des favoris",
-    "addToWishListFailed": "Veuillez vous connecter pour ajouter/supprimer le produit à la liste de souhaits",
+    "addToWishList": "Veuillez vous connecter pour ajouter/supprimer le produit à la liste de souhaits",
     "signInSuccess": "Vous êtes connecté avec succès. Bienvenue !",
     "signOutSuccess": "Vous avez été déconnecté de votre compte",
     "pageRequiringSignIn": "Veuillez vous connecter pour visiter cette page",

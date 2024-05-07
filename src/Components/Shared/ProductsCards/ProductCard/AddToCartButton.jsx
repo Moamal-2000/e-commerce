@@ -25,7 +25,7 @@ const AddToCartButton = ({ product }) => {
     if (!loginInfo.isSignIn) {
       dispatch(
         showAlert({
-          alertText: "Please sign in to add product to cart",
+          alertText: t("toastAlert.addToCart"),
           alertState: "warning",
         })
       );
