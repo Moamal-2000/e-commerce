@@ -193,7 +193,8 @@
       "subscribe": "Subscribe",
       "getOffer": "Get 10% off your first order",
       "enterEmailPlaceholder": "Enter your email",
-      "sendLabel": "Send"
+      "sendLabel": "Send",
+      "sendingLabel": "Sending"
     },
     "section2": {
       "support": "Support",

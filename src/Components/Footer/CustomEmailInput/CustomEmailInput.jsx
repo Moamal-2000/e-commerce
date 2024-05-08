@@ -6,6 +6,7 @@ import { showAlert } from "src/Features/globalSlice";
 import { sendToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isEmailValid } from "src/Functions/helper";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
+import FadeInOutLoading from "../../Shared/Loaders/spinnerLoading";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CustomEmailInput.module.scss";
@@ -20,11 +21,16 @@ const CustomEmailInput = () => {
   const sendIconDirection = {
     rotate: i18n.dir() === "rtl" ? "180deg" : "0deg",
   };
+  const [loading, setLoading] = useState(false);
+  const toolTipTextTrans = loading
+    ? t("footer.section1.sendingLabel")
+    : t("footer.section1.sendLabel");
 
   function sendEmail(e) {
     const emailInput = e.target.querySelector("input");
-
     e.preventDefault();
+
+    if (loading) return;
     if (isEmailValid(emailInput)) subscription();
   }
 
@@ -34,11 +40,15 @@ const CustomEmailInput = () => {
       : t("toastAlert.subscriptionFailed");
     const alertState = isWebsiteOnline ? "success" : "error";
 
-    if (isWebsiteOnline) setEmail("");
+    if (isWebsiteOnline) {
+      setLoading(true);
+      setEmail("");
+    }
 
     setTimeout(() => {
       dispatch(showAlert({ alertText, alertState }));
-    }, 1000);
+      setLoading(false);
+    }, 3000);
   }
 
   return (
@@ -46,24 +56,24 @@ const CustomEmailInput = () => {
       <input
         type="email"
         placeholder={t("inputsPlaceholders.enterYourEmail")}
-        id="email"
         value={email}
         autoComplete="off"
         aria-describedby="email-tooltip"
         onChange={(e) => setEmail(e.target.value)}
       />
 
-      <label htmlFor="email" aria-label="Send mail">
+      <button aria-label="Send mail" type="submit">
         <div style={sendIconDirection}>
-          <SvgIcon name="vector" />
+          {!loading && <SvgIcon name="vector" />}
+          {loading && <FadeInOutLoading />}
         </div>
 
         <ToolTip
           left={sendIconToolTipLeftPos}
           top="50%"
-          content={t("footer.section1.sendLabel")}
+          content={toolTipTextTrans}
         />
-      </label>
+      </button>
     </form>
   );
 };

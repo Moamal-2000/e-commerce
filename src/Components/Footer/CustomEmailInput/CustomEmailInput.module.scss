@@ -25,7 +25,9 @@
   padding-inline-start: 16px;
 }
 
-.input>label {
+.input>button {
+  background-color: transparent;
+  border: none;
   cursor: pointer;
   padding: 10px;
   position: relative;
