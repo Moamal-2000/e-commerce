@@ -14,12 +14,16 @@ const PaymentOptionsSelection = () => {
           <input
             type="radio"
             name="payment"
-            id="bank-option"
             value="bank"
-            checked
+            id="bank-option"
+            checked={paymentType === "bank"}
             onChange={(e) => setPaymentType(e.target.value)}
+            aria-checked={paymentType === "bank"}
+            aria-labelledby="bank-label"
           />
-          <label htmlFor="bank-option">{t("bank")}</label>
+          <label id="bank-label" htmlFor="bank-option">
+            {t("bank")}
+          </label>
         </div>
 
         <PaymentCards />
@@ -30,14 +34,20 @@ const PaymentOptionsSelection = () => {
           <input
             type="radio"
             name="payment"
-            id="cash-option"
             value="cash"
+            id="cash-option"
+            checked={paymentType === "cash"}
             onChange={(e) => setPaymentType(e.target.value)}
+            aria-checked={paymentType === "cash"}
+            aria-labelledby="cash-label"
           />
-          <label htmlFor="cash-option">{t("cashOnDelivery")}</label>
+          <label id="cash-label" htmlFor="cash-option">
+            {t("cashOnDelivery")}
+          </label>
         </div>
       </div>
     </div>
   );
 };
+
 export default PaymentOptionsSelection;
