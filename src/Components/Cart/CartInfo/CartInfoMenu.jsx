@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { showAlert } from "src/Features/globalSlice";
 import { getSubTotal } from "src/Functions/helper";
 import s from "./CartInfoMenu.module.scss";
 
@@ -9,6 +10,21 @@ const CartInfoMenu = () => {
   const subTotal = getSubTotal(cartProducts);
   const { t } = useTranslation();
   const cartInfo = "cartPage.cartInfoMenu";
+  const navigateTo = useNavigate();
+  const dispatch = useDispatch();
+
+  function handleCheckoutBtn() {
+    const isThereAnyCartItem = cartProducts.length > 0;
+
+    if (isThereAnyCartItem) navigateTo("/checkout");
+    else showEmptyCartAlert();
+  }
+
+  function showEmptyCartAlert() {
+    const alertText = t("toastAlert.cartEmpty");
+    const alertState = "warning";
+    dispatch(showAlert({ alertText, alertState }));
+  }
 
   return (
     <div className={s.menu}>
@@ -31,7 +47,9 @@ const CartInfoMenu = () => {
         </div>
       </div>
 
-      <Link to="/checkout">{t("buttons.processToCheckout")}</Link>
+      <button type="button" onClick={handleCheckoutBtn}>
+        {t("buttons.processToCheckout")}
+      </button>
     </div>
   );
 };

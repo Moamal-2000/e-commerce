@@ -527,7 +527,8 @@
     "signInSuccess": "ログインに成功しました。ようこそ！",
     "signOutSuccess": "アカウントからサインアウトしました",
     "pageRequiringSignIn": "このページを訪れるにはログインしてください",
-    "signInToPerformAction": "このアクションを行うにはサインインする必要があります"
+    "signInToPerformAction": "このアクションを行うにはサインインする必要があります",
+    "cartEmpty": "まずカートにアイテムを追加してください"
   },
 
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",

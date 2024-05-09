@@ -527,7 +527,8 @@
     "signInSuccess": "आप सफलतापूर्वक साइन इन हो गए हैं। स्वागत है!",
     "signOutSuccess": "आपने अपने खाते से साइन आउट किया है",
     "pageRequiringSignIn": "इस पृष्ठ को देखने के लिए कृपया साइन इन करें",
-    "signInToPerformAction": "इस क्रिया को करने के लिए आपको साइन इन करना होगा"
+    "signInToPerformAction": "इस क्रिया को करने के लिए आपको साइन इन करना होगा",
+    "cartEmpty": "कृपया पहले कुछ आइटम कार्ट में जोड़ें"
   },
 
   "wishlist": "इच्छा-सूची ({{numberOfWishlist}})",

@@ -43,12 +43,13 @@
   border-bottom: solid 1px var(--regular-light-gray);
 }
 
-.menu>a {
+.menu>button {
   display: block;
   border: none;
   outline: none;
   padding: 16px 48px;
   border-radius: 4px;
+  font-size: 1rem;
   font-weight: 500;
   background: var(--dark-tomato);
   color: var(--white);
@@ -83,12 +84,12 @@
 }
 
 // Hungarian styles
-[lang=hu] .menu>a {
+[lang=hu] .menu>button {
   font-size: .9rem;
 }
 
 @include small {
-  [lang=hu] .menu>a {
+  [lang=hu] .menu>button {
     font-size: .8rem;
     padding: 16px 20px;
   }

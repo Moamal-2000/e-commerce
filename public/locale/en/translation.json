@@ -528,7 +528,8 @@
     "signInSuccess": "You signed in successfully, Welcome!",
     "signOutSuccess": "You Signed out of your account",
     "pageRequiringSignIn": "Please sign in to visit this page",
-    "signInToPerformAction": "You have to sign in to do this action"
+    "signInToPerformAction": "You have to sign in to do this action",
+    "cartEmpty": "Please add some items to cart first"
   },
 
   "wishlist": "Wishlist ({{numberOfWishlist}})",
