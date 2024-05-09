@@ -78,7 +78,17 @@
   }
 
   &:hover {
-    opacity: .9;
+    animation: opacity 1s 1 forwards;
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
