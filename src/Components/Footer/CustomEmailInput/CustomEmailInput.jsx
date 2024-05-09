@@ -16,14 +16,18 @@ import s from "./CustomEmailInput.module.scss";
 
 const CustomEmailInput = () => {
   const dispatch = useDispatch();
-  const [email, setEmail] = useState("");
   const { t, i18n } = useTranslation();
-  const lang = cookies.get("i18next");
+
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
   const isWebsiteOnline = useOnlineStatus();
   const sendIconDirection = {
     rotate: i18n.dir() === "rtl" ? "180deg" : "0deg",
   };
-  const [loading, setLoading] = useState(false);
+
+  // Tooltip variables
+  const lang = cookies.get("i18next");
   const sendIconToolTipLeftPos = sendToolTipLeftPos(lang);
   const sendingIconToolTipLeftPos = sendingToolTipLeftPos(lang);
   const toolTipLeftPosition = loading
@@ -33,15 +37,15 @@ const CustomEmailInput = () => {
     ? t("footer.section1.sendingLabel")
     : t("footer.section1.sendLabel");
 
-  function sendEmail(e) {
-    const emailInput = e.target.querySelector("input");
+  const sendEmail = (e) => {
     e.preventDefault();
-
     if (loading) return;
-    if (isEmailValid(emailInput)) subscription();
-  }
 
-  function subscription() {
+    const emailInput = e.target.querySelector("input");
+    if (isEmailValid(emailInput)) subscription();
+  };
+
+  const subscription = () => {
     const alertText = isWebsiteOnline
       ? t("toastAlert.subscriptionSuccess")
       : t("toastAlert.subscriptionFailed");
@@ -56,7 +60,7 @@ const CustomEmailInput = () => {
       dispatch(showAlert({ alertText, alertState }));
       setLoading(false);
     }, 3000);
-  }
+  };
 
   return (
     <form className={s.input} onSubmit={sendEmail}>
@@ -76,12 +80,13 @@ const CustomEmailInput = () => {
         </div>
 
         <ToolTip
-          left={toolTipLeftPosition}
           top="50%"
+          left={toolTipLeftPosition}
           content={toolTipTextTrans}
         />
       </button>
     </form>
   );
 };
+
 export default CustomEmailInput;

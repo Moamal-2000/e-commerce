@@ -126,17 +126,17 @@ export function wishlistIconToolTipLeftPos(lang) {
 export function sendToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":
-      return "-29px";
+      return "-31px";
     case "ja":
-      return "66px";
+      return "68px";
     case "ru":
-      return "85px";
+      return "89px";
     case "fr":
       return "80px";
     case "hu":
-      return "76px";
+      return "75px";
     case "hi":
-      return "63px";
+      return "64px";
   }
   return "70px";
 }
@@ -144,19 +144,19 @@ export function sendToolTipLeftPos(lang) {
 export function sendingToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":
-      return "-44px";
+      return "-46px";
     case "ja":
-      return "73px";
+      return "75px";
     case "ru":
-      return "74px";
+      return "75px";
     case "fr":
-      return "70px";
+      return "71px";
     case "hu":
-      return "74px";
+      return "75px";
     case "hi":
-      return "69px";
+      return "70px";
   }
-  return "78px";
+  return "80px";
 }
 
 export function removeCartProductToolTipLeftPos(lang) {
