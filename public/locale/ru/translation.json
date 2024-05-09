@@ -194,7 +194,8 @@
       "subscribe": "Подписаться",
       "getOffer": "Получите скидку 10% на первый заказ",
       "enterEmailPlaceholder": "Введите ваш адрес электронной почты",
-      "sendLabel": "Отправить"
+      "sendLabel": "Отправить",
+      "sendingLabel": "Küldés"
     },
     "section2": {
       "support": "Поддержка",

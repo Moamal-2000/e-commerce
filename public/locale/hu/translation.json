@@ -193,7 +193,8 @@
       "subscribe": "Feliratkozás",
       "getOffer": "Kapjon 10% kedvezményt első rendelésére",
       "enterEmailPlaceholder": "Adja meg az e-mail címét",
-      "sendLabel": "Küldés"
+      "sendLabel": "Küldés",
+      "sendingLabel": "Küldés"
     },
     "section2": {
       "support": "Támogatás",

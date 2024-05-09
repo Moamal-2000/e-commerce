@@ -193,7 +193,8 @@
       "subscribe": "購読",
       "getOffer": "最初の注文で10％オフ",
       "enterEmailPlaceholder": "メールアドレスを入力",
-      "sendLabel": "送信"
+      "sendLabel": "送信",
+      "sendingLabel": "送信中"
     },
     "section2": {
       "support": "サポート",

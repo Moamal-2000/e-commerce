@@ -193,7 +193,8 @@
       "subscribe": "S'abonner",
       "getOffer": "Obtenez 10% de réduction sur votre première commande",
       "enterEmailPlaceholder": "Entrez votre e-mail",
-      "sendLabel": "Envoyer"
+      "sendLabel": "Envoyer",
+      "sendingLabel": "Envoi"
     },
     "section2": {
       "support": "Soutien",

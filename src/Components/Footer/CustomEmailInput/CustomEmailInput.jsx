@@ -3,7 +3,10 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
-import { sendToolTipLeftPos } from "src/Functions/componentsFunctions";
+import {
+  sendToolTipLeftPos,
+  sendingToolTipLeftPos,
+} from "src/Functions/componentsFunctions";
 import { isEmailValid } from "src/Functions/helper";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import FadeInOutLoading from "../../Shared/Loaders/spinnerLoading";
@@ -16,12 +19,16 @@ const CustomEmailInput = () => {
   const [email, setEmail] = useState("");
   const { t, i18n } = useTranslation();
   const lang = cookies.get("i18next");
-  const sendIconToolTipLeftPos = sendToolTipLeftPos(lang);
   const isWebsiteOnline = useOnlineStatus();
   const sendIconDirection = {
     rotate: i18n.dir() === "rtl" ? "180deg" : "0deg",
   };
   const [loading, setLoading] = useState(false);
+  const sendIconToolTipLeftPos = sendToolTipLeftPos(lang);
+  const sendingIconToolTipLeftPos = sendingToolTipLeftPos(lang);
+  const toolTipLeftPosition = loading
+    ? sendingIconToolTipLeftPos
+    : sendIconToolTipLeftPos;
   const toolTipTextTrans = loading
     ? t("footer.section1.sendingLabel")
     : t("footer.section1.sendLabel");
@@ -69,7 +76,7 @@ const CustomEmailInput = () => {
         </div>
 
         <ToolTip
-          left={sendIconToolTipLeftPos}
+          left={toolTipLeftPosition}
           top="50%"
           content={toolTipTextTrans}
         />

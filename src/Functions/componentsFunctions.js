@@ -141,6 +141,24 @@ export function sendToolTipLeftPos(lang) {
   return "70px";
 }
 
+export function sendingToolTipLeftPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "-44px";
+    case "ja":
+      return "73px";
+    case "ru":
+      return "74px";
+    case "fr":
+      return "70px";
+    case "hu":
+      return "74px";
+    case "hi":
+      return "69px";
+  }
+  return "78px";
+}
+
 export function removeCartProductToolTipLeftPos(lang) {
   switch (lang) {
     case "ar":

@@ -193,7 +193,8 @@
       "subscribe": "सब्सक्राइब करें",
       "getOffer": "पहले ऑर्डर पर 10% छूट प्राप्त करें",
       "enterEmailPlaceholder": "अपना ईमेल दर्ज करें",
-      "sendLabel": "भेजें"
+      "sendLabel": "भेजें",
+      "sendingLabel": "भेजना"
     },
     "section2": {
       "support": "समर्थन",

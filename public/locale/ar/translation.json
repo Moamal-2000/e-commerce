@@ -194,7 +194,8 @@
       "subscribe": "اشترك",
       "getOffer": "احصل على خصم 10٪ على أول طلب لديك",
       "enterEmailPlaceholder": "أدخل بريدك الإلكتروني",
-      "sendLabel": "إرسال"
+      "sendLabel": "إرسال",
+      "sendingLabel": "يتم الارسال"
     },
     "section2": {
       "support": "الدعم",
