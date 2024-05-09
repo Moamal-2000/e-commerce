@@ -1,5 +1,5 @@
 import cookies from "js-cookie";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
@@ -20,6 +20,7 @@ const CustomEmailInput = () => {
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
+  const emailRef = useRef()
 
   const isWebsiteOnline = useOnlineStatus();
   const sendIconDirection = {
@@ -41,6 +42,7 @@ const CustomEmailInput = () => {
     e.preventDefault();
     if (loading) return;
 
+    emailRef.current.focus()
     const emailInput = e.target.querySelector("input");
     if (isEmailValid(emailInput)) subscription();
   };
@@ -71,6 +73,7 @@ const CustomEmailInput = () => {
         autoComplete="off"
         aria-describedby="email-tooltip"
         onChange={(e) => setEmail(e.target.value)}
+        ref={emailRef}
       />
 
       <button aria-label="Send mail" type="submit">

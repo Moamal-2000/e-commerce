@@ -167,10 +167,10 @@
     "twitter": "تويتر",
     "instagram": "انستجرام",
     "linkedin": "لينكدان",
-    "days": "يوم",
-    "hours": "ساعة",
-    "minutes": "دقيقة",
-    "seconds": "ثانية",
+    "days": "الايام",
+    "hours": "الساعات",
+    "minutes": "الدقائق",
+    "seconds": "الثواني",
     "reset": "افراغ الحقول",
     "welcome": "مرحباً بك",
     "cancel": "الغاء",
@@ -388,11 +388,11 @@
   "featuredSection": {
     "mediumPoster": {
       "title": "بلايستيشن 5",
-      "description": "الإصدار الأسود والأبيض من بلايستيشن 5 سيتوفر للبيع قريباً."
+      "description": "الإصدار الأسود والأبيض من بلايستيشن 5 سيتوفر للبيع قريباً"
     },
     "horizontalPoster": {
       "title": "مجموعات النساء",
-      "description": "مجموعات المرأة المميزة التي تعطيك شعورًا آخر."
+      "description": "مجموعات المرأة المميزة التي تعطيك شعورًا آخر"
     },
     "smallPoster1": {
       "title": "السماعات",
@@ -456,20 +456,20 @@
   },
 
   "connectionLabel": {
-    "restoredInternet": "تم استعادة الاتصال بالانترنت.",
-    "noInternetAvailable": "لا يوجد اتصال بالانترنت."
+    "restoredInternet": "تم استعادة الاتصال بالانترنت",
+    "noInternetAvailable": "لا يوجد اتصال بالانترنت"
   },
 
   "contactPage": {
     "contactInfoCard": {
       "phoneSection": {
         "title": "اتصل بنا",
-        "weAreAvailable": "نحن متاحون على مدار الساعة طوال أيام الأسبوع.",
+        "weAreAvailable": "نحن متاحون على مدار الساعة طوال أيام الأسبوع",
         "phoneNumber": "الهاتف"
       },
       "emailSection": {
         "title": "راسلنا",
-        "fillOut": "املأ الاستمارة الخاصة بنا وسنتصل بك في غضون 24 ساعة.",
+        "fillOut": "املأ الاستمارة الخاصة بنا وسنتصل بك في غضون 24 ساعة",
         "customersEmail": "بريد العملاء",
         "supportEmail": "بريد الدعم"
       }
@@ -516,7 +516,7 @@
   },
 
   "toastAlert": {
-    "accountInfoUpdated": "تم تحديث معلومات الحساب.",
+    "accountInfoUpdated": "تم تحديث معلومات الحساب",
     "messageSent": "شكرًا لرسالتك! سنعود إليك قريبًا",
     "subscriptionSuccess": "لقد اشتركت في العروض الحصرية",
     "subscriptionFailed": "فشل الاشتراك، يرجى التحقق من اتصال الإنترنت الخاص بك",
