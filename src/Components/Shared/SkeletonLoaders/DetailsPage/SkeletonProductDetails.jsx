@@ -12,30 +12,30 @@ const SkeletonProductDetails = () => {
 
         <section className={s.productOptions}>
           <section className={s.colorsSection}>
-            <div className={s.colorText}></div>
+            <div className={s.colorText} />
 
             <div className={s.colors}>
-              <div className={s.color}></div>
-              <div className={s.color}></div>
+              <div className={s.color} />
+              <div className={s.color} />
             </div>
           </section>
 
           <section className={s.sizesSection}>
-            <div className={s.sizeText}></div>
+            <div className={s.sizeText} />
 
             <div className={s.sizes}>
-              <div className={s.size}></div>
-              <div className={s.size}></div>
-              <div className={s.size}></div>
-              <div className={s.size}></div>
-              <div className={s.size}></div>
+              <div className={s.size} />
+              <div className={s.size} />
+              <div className={s.size} />
+              <div className={s.size} />
+              <div className={s.size} />
             </div>
           </section>
 
           <section className={s.options}>
-            <div className={s.customInput}></div>
-            <button className={s.buyNowButton}></button>
-            <button className={s.favButton}></button>
+            <div className={s.customInput} />
+            <button className={s.buyNowButton} />
+            <button className={s.favButton} />
           </section>
         </section>
       </section>
