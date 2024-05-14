@@ -9,8 +9,8 @@ import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowH
 import s from "./LogInForm.module.scss";
 
 const LogInForm = () => {
-  const dispatch = useDispatch();
   const { t } = useTranslation();
+  const dispatch = useDispatch();
   const { signedUpUsers } = useSelector((state) => state.user);
   const emailOrPhone = useRef();
   const password = useRef();

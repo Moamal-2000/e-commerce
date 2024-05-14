@@ -1,0 +1,42 @@
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.socialMedia>a {
+  position: relative;
+  outline: none;
+}
+
+.socialMedia>a>svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--black);
+
+  & path {
+    fill: var(--black);
+  }
+}
+
+.socialMedia>.instagram>svg>path {
+  fill: var(--white);
+  stroke: var(--black);
+}
+
+.socialMedia>a:focus-visible [data-is-tooltip=true] {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.socialMedia>a:not(.instagram):focus-visible>svg {
+  stroke: var(--orange-degree2);
+
+  & path {
+    fill: var(--orange-degree2);
+  }
+}
+
+.instagram:focus-visible>svg>path {
+  stroke: var(--orange-degree2);
+}

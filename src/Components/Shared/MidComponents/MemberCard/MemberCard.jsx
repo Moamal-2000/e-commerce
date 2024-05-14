@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { camelCase } from "src/Functions/helper";
-import SvgIcon from "../../MiniComponents/SvgIcon";
-import ToolTip from "../../MiniComponents/ToolTip";
 import s from "./MemberCard.module.scss";
+import SocialMedia from "./memberCardComponents/SocialMedia";
 
 const MemberCard = ({ data }) => {
   const { t } = useTranslation();
@@ -19,34 +18,9 @@ const MemberCard = ({ data }) => {
         <b tabIndex="0">{t(`${memberDataTrans}.name`)}</b>
         <p tabIndex="0">{t(`${memberDataTrans}.jobTitle`)}</p>
 
-        <div className={s.socialMedia}>
-          <SocialMedia socialMedia={socialMedia} />
-        </div>
+        <SocialMedia socialMedia={socialMedia} />
       </div>
     </div>
   );
 };
 export default MemberCard;
-
-const SocialMedia = ({ socialMedia }) => {
-  const socialMediaNames = Object.keys(socialMedia);
-  const { t } = useTranslation();
-
-  return socialMediaNames?.map((mediaName, i) => {
-    const instagramClass = mediaName === "instagram" ? s.instagram : "";
-    const mediaNameTrans = t(`common.${mediaName}`);
-
-    return (
-      <a
-        key={mediaName + i}
-        href={socialMedia[mediaName]}
-        target="_blank"
-        className={instagramClass}
-        title={mediaNameTrans}
-      >
-        <SvgIcon name={mediaName} />
-        <ToolTip top="40px" left="50%" content={mediaNameTrans} />
-      </a>
-    );
-  });
-};

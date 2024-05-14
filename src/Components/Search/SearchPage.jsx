@@ -13,6 +13,7 @@ const SearchPage = () => {
   const { t } = useTranslation();
   const { loadingSearchProducts } = useSelector((state) => state.global);
   const { searchProducts } = useSelector((state) => state.products);
+  const isWebsiteOnline = useOnlineStatus();
   useUpdateLoadingState({
     loadingState: loadingSearchProducts,
     loadingKey: "loadingSearchProducts",
@@ -20,7 +21,6 @@ const SearchPage = () => {
     delays: SIMPLE_DELAYS,
     dependencies: [searchProducts],
   });
-  const isWebsiteOnline = useOnlineStatus();
 
   return (
     <div className="container">
