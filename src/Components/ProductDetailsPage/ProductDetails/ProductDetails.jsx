@@ -8,7 +8,7 @@ import ProductDealingControls from "./ProductDealingControls";
 import s from "./ProductDetails.module.scss";
 import ProductFeatures from "./ProductFeatures";
 import ProductFirstInfos from "./ProductFirstInfos";
-import ProductSizes from "./ProductSizes";
+import ProductSizes from "./ProductSizes/ProductSizes";
 
 const ProductDetails = ({ data }) => {
   const { previewImg, isZoomInPreviewActive, loadingProductDetails } =
@@ -33,7 +33,7 @@ const ProductDetails = ({ data }) => {
         <section className={s.detailsSection} id="details-section">
           <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
-          <section className={s.details} >
+          <section className={s.details}>
             <div className={`${s.zoomInPreview} ${activeClass}`}>
               <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
             </div>

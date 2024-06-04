@@ -21,3 +21,25 @@ export const pagesRequireSignIn = [
   "/wishlist",
   "/cart",
 ];
+export const PRODUCT_SIZES = [
+  {
+    size: "XS",
+    title: "X Small",
+  },
+  {
+    size: "S",
+    title: "Small",
+  },
+  {
+    size: "M",
+    title: "Medium",
+  },
+  {
+    size: "L",
+    title: "Large",
+  },
+  {
+    size: "XL",
+    title: "X Large",
+  },
+];

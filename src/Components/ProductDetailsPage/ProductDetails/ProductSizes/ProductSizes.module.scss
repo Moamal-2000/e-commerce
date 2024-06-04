@@ -1,0 +1,14 @@
+@import "src/Styles/mixins";
+
+.sizes {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sizes>span {
+  display: block;
+  font: 400 1.25rem "Inter", sans-serif;
+  letter-spacing: .03rem;
+  margin-inline-end: 10px;
+}

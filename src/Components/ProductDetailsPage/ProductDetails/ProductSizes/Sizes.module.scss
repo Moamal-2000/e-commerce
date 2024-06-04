@@ -1,25 +1,15 @@
 @import "src/Styles/mixins";
 
-.sizes {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.sizes>span {
-  display: block;
-  font: 400 1.25rem "Inter", sans-serif;
-  letter-spacing: .03rem;
-  margin-inline-end: 10px;
-}
-
-.sizes .sizesWrapper {
+.sizesWrapper {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.sizes .sizesWrapper .size {
+.sizesWrapper .size {
+  background-color: transparent;
+  font-family: "Inter", sans-serif;
+  font-size: .875rem;
   font-weight: 500;
   font-size: 875rem;
   font-size: 14px;
