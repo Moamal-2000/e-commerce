@@ -19,7 +19,6 @@ const RateStars = ({ rate }) => {
       if (fixedRate > i) {
         return <img key={key} src={coloredStar} alt="star" />;
       }
-
       if (isDecimalNumber(rate) && !isHalfStarRendered) {
         isHalfStarRendered = true;
         return <SvgIcon name="halfStar" key={key} />;

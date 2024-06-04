@@ -9,6 +9,7 @@
 @media (max-width: 1400px) {
   .images {
     flex-direction: column-reverse;
+    justify-content: flex-end;
   }
 }
 
@@ -32,6 +33,7 @@
     height: 500px;
     max-height: 500px;
     min-height: 500px;
+    // max-height: 500px;
     @include center-x-y;
   }
 }
