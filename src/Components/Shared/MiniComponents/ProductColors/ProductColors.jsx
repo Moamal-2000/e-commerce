@@ -1,6 +1,6 @@
 import { useState } from "react";
-import s from "./ProductColors.module.scss";
 import ToolTip from "../ToolTip";
+import s from "./ProductColors.module.scss";
 
 const ProductColors = ({ colors, showToolTip = false }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);
@@ -13,7 +13,8 @@ const ProductColors = ({ colors, showToolTip = false }) => {
     const firstItemActiveClass = i === activeColorIndex ? s.active : "";
 
     return (
-      <div
+      <button
+        type="button"
         key={"color-" + i}
         className={`${s.color} ${firstItemActiveClass}`}
         style={{ backgroundColor: color, border: `solid 3px ${color}` }}
@@ -23,7 +24,7 @@ const ProductColors = ({ colors, showToolTip = false }) => {
         {showToolTip && (
           <ToolTip left="50%" top="40px" content={name + " color"} />
         )}
-      </div>
+      </button>
     );
   });
 };

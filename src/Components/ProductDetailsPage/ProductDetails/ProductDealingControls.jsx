@@ -64,7 +64,11 @@ const ProductDealingControls = ({ data }) => {
   return (
     <section className={s.dealing}>
       <div className={s.customNumberInput}>
-        <button onClick={decreaseQuantity} type="button">
+        <button
+          type="button"
+          onClick={decreaseQuantity}
+          aria-label="Decrease quantity by 1"
+        >
           -
         </button>
 
@@ -76,7 +80,11 @@ const ProductDealingControls = ({ data }) => {
           max={1000}
         />
 
-        <button onClick={increaseQuantity} type="button">
+        <button
+          type="button"
+          onClick={increaseQuantity}
+          aria-label="Increase quantity by 1"
+        >
           +
         </button>
       </div>

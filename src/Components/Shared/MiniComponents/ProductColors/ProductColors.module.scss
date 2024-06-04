@@ -9,8 +9,18 @@
   outline: solid 2px var(--website-bg);
   transition: border-color .1s, outline-color .1s .2s ease;
 
+  &:focus-visible {
+    outline-color: var(--orange-degree2);
+    outline-offset: 4px;
+  }
+
   &.active {
     border: solid 3px var(--white) !important;
     outline: solid 2px var(--black);
+
+    &:focus-visible {
+      outline-color: var(--orange-degree2);
+      outline-offset: 2px;
+    }
   }
 }

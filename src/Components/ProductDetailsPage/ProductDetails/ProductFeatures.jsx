@@ -9,7 +9,7 @@ const ProductFeatures = () => {
 
   return (
     <section className={s.features}>
-      <div className={s.feature}>
+      <div className={s.feature} tabIndex="0">
         <SvgIcon name="truck" />
 
         <div className={s.content}>
@@ -18,7 +18,7 @@ const ProductFeatures = () => {
         </div>
       </div>
 
-      <div className={s.feature}>
+      <div className={s.feature} tabIndex="0">
         <SvgIcon name="infiniteArrows" />
 
         <div className={s.content}>

@@ -33,4 +33,16 @@
     background-color: var(--dark-tomato);
     color: var(--white);
   }
+
+  &:focus {
+    outline: 2px dashed var(--orange-degree2);
+    border: none;
+  }
+
+  &.active:focus,
+  &:hover:focus {
+    outline: 2px dashed var(--orange-degree2);
+    background-color: var(--orange-degree2);
+    border: none;
+  }
 }
