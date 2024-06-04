@@ -95,7 +95,7 @@
     box-shadow: 0 0 20px -15px var(--black);
     overflow-y: auto;
     width: fit-content;
-    transition: left .2s ease;
+    transition: left 1s ease;
 
     &.active {
       left: 0;

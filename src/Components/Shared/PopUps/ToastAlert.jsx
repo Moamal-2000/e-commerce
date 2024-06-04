@@ -1,6 +1,6 @@
 import i18next from "i18next";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./ToastAlert.module.scss";
@@ -12,6 +12,7 @@ const toastState = {
 };
 
 const ToastAlert = ({ state, text, visibility }) => {
+  const { numberOfShowedAlerts } = useSelector((state) => state.global);
   const dispatch = useDispatch();
   const { iconName, className } = toastState[state];
   const showClass = visibility ? s.show : "";
@@ -27,7 +28,7 @@ const ToastAlert = ({ state, text, visibility }) => {
     }, 6000);
 
     return () => clearTimeout(timerId);
-  }, [text]);
+  }, [state, text, numberOfShowedAlerts]);
 
   return (
     <div className={`${s.toastAlert} ${className} ${showClass}`} dir="ltr">

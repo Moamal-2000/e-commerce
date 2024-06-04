@@ -32,15 +32,11 @@ const ProductDealingControls = ({ data }) => {
   }
 
   function handleBuyProduct() {
-    if (!loginInfo.isSignIn) {
-      dispatch(
-        showAlert({
-          alertText: t("toastAlert.pageRequiringSignIn"),
-          alertState: "warning",
-        })
-      );
-      navigateTo("/signup");
-    }
+    if (loginInfo.isSignIn) return;
+
+    const alertText = t("toastAlert.pageRequiringSignIn");
+    dispatch(showAlert({ alertText, alertState: "warning" }));
+    navigateTo("/signup");
   }
 
   function addProductToFavorite() {

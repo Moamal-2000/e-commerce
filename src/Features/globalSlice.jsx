@@ -11,6 +11,7 @@ const initialState = {
   loadingSearchProducts: true,
   loadingProductsPage: true,
   previewImg: null,
+  numberOfShowedAlerts: 0,
   isToastAlertActive: false,
   toastAlertText: "",
   toastAlertState: "error",
@@ -27,6 +28,7 @@ const globalSlice = createSlice({
       state.toastAlertText = alertText;
       state.toastAlertState = alertState;
       state.isToastAlertActive = true;
+      state.numberOfShowedAlerts = ++state.numberOfShowedAlerts;
     },
   },
 });

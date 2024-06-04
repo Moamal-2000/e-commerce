@@ -25,7 +25,7 @@ const RequiredAuth = ({ children }) => {
   function loginFirstAlert() {
     const alertText = t("toastAlert.pageRequiringSignIn");
     const alertState = "warning";
-    dispatch(showAlert({ alertText, alertState }));
+    setTimeout(() => dispatch(showAlert({ alertText, alertState })), 300);
   }
 
   return children;
