@@ -2,8 +2,10 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
 import { isItemFound } from "src/Functions/helper";
+import { showAlert } from "../../../Features/globalSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ProductDealingControls.module.scss";
@@ -20,15 +22,25 @@ const ProductDealingControls = ({ data }) => {
       .length !== 0;
 
   function increaseQuantity() {
+    if (quantity >= MAXIMUM_QUANTITY) return;
     setQuantity((prevNumber) => +prevNumber + 1);
   }
 
   function decreaseQuantity() {
+    if (quantity <= MINIMUM_QUANTITY) return;
     setQuantity((prevNumber) => +prevNumber - 1);
   }
 
   function handleBuyProduct() {
-    if (!loginInfo.isSignIn) navigateTo("/signup");
+    if (!loginInfo.isSignIn) {
+      dispatch(
+        showAlert({
+          alertText: t("toastAlert.pageRequiringSignIn"),
+          alertState: "warning",
+        })
+      );
+      navigateTo("/signup");
+    }
   }
 
   function addProductToFavorite() {
@@ -57,7 +69,7 @@ const ProductDealingControls = ({ data }) => {
     <section className={s.dealing}>
       <div className={s.customNumberInput}>
         <button onClick={decreaseQuantity} type="button">
-          <label htmlFor="quantity-input">-</label>
+          -
         </button>
 
         <input
@@ -66,11 +78,10 @@ const ProductDealingControls = ({ data }) => {
           value={quantity}
           min={1}
           max={1000}
-          id="quantity-input"
         />
 
         <button onClick={increaseQuantity} type="button">
-          <label htmlFor="quantity-input">+</label>
+          +
         </button>
       </div>
 
