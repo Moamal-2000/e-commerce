@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { updateGlobalState } from "src/Features/globalSlice";
 import s from "./ProductPreview.module.scss";
+import PreviewImages from "./PreviewImages";
 
 const ProductPreview = ({ data, handleZoomInEffect }) => {
   const { previewImg } = useSelector((state) => state.global);
@@ -46,19 +47,3 @@ const ProductPreview = ({ data, handleZoomInEffect }) => {
   );
 };
 export default ProductPreview;
-
-const PreviewImages = ({ data, previewImg, setPreviewImg }) => {
-  return (
-    <div className={s.otherImages}>
-      {data.map((img, i) => (
-        <div
-          key={i}
-          className={`${s.imgHolder} ${previewImg === img ? s.active : ""}`}
-          onClick={() => setPreviewImg(data[i])}
-        >
-          <img src={img} alt="product's image" />
-        </div>
-      ))}
-    </div>
-  );
-};
