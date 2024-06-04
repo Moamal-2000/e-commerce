@@ -24,6 +24,25 @@ body {
   font-family: "Poppins";
 }
 
+body::-webkit-scrollbar {
+  width: 14px;
+}
+
+body::-webkit-scrollbar-thumb {
+  min-height: 120px;
+  border: 3px solid var(--website-bg);
+  border-radius: 4px;
+  background-color: #cbcbcb;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #c3c2c2;
+}
+
+body::-webkit-scrollbar-thumb:active {
+  background-color: #afafaf;
+}
+
 .App {
   outline: none;
 }
