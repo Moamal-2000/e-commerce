@@ -8,10 +8,10 @@ const AboutHeroSection = () => {
   return (
     <section className={s.heroSection}>
       <section className={s.content}>
-        <h2 tabIndex="0">{t("aboutPage.heroSection.heading")}</h2>
+        <h2>{t("aboutPage.heroSection.heading")}</h2>
 
-        <p tabIndex="0">{t("aboutPage.heroSection.paragraphOne")}</p>
-        <p tabIndex="0">{t("aboutPage.heroSection.paragraphTwo")}</p>
+        <p>{t("aboutPage.heroSection.paragraphOne")}</p>
+        <p>{t("aboutPage.heroSection.paragraphTwo")}</p>
       </section>
 
       <div className={s.imgHolder}>

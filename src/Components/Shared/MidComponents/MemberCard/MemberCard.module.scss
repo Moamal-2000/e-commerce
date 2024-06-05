@@ -15,27 +15,11 @@
   font: 500 2rem "Inter", sans-serif;
   letter-spacing: .04rem;
   width: fit-content;
-  outline: dashed 0 transparent;
-  outline-offset: 0;
-
-  &:focus-visible {
-    transition: opacity .3s, var(--outline-transition), outline-offset .25s .05s;
-    outline: 2px dashed var(--black);
-    outline-offset: 2px;
-  }
 }
 
 .info>p {
   margin-bottom: 10px;
   width: fit-content;
-  outline: dashed 0 transparent;
-  outline-offset: 0;
-
-  &:focus-visible {
-    transition: opacity .3s, var(--outline-transition), outline-offset .25s .05s;
-    outline: 2px dashed var(--black);
-    outline-offset: 2px;
-  }
 }
 
 // Arabic styles

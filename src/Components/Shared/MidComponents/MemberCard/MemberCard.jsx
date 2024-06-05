@@ -15,8 +15,8 @@ const MemberCard = ({ data }) => {
       </div>
 
       <div className={s.info}>
-        <b tabIndex="0">{t(`${memberDataTrans}.name`)}</b>
-        <p tabIndex="0">{t(`${memberDataTrans}.jobTitle`)}</p>
+        <b>{t(`${memberDataTrans}.name`)}</b>
+        <p>{t(`${memberDataTrans}.jobTitle`)}</p>
 
         <SocialMedia socialMedia={socialMedia} />
       </div>
