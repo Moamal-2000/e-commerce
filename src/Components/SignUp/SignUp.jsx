@@ -11,6 +11,10 @@ const SignUp = () => {
     <>
       <Helmet>
         <title>Sign up</title>
+        <meta
+          name="description"
+          content="Create an Exclusive account to enjoy a personalized shopping experience, track your orders, and manage your preferences easily."
+        />
       </Helmet>
 
       <main className={s.signUpPage} id="signup-page">
