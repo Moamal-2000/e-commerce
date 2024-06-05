@@ -3,7 +3,7 @@ import { PRODUCT_SIZES } from "src/Data/globalVariables";
 import s from "./Sizes.module.scss";
 
 const Sizes = ({ sizes }) => {
-  const [sizeActiveIndex, setSizeActiveIndex] = useState(0);
+  const [sizeActiveIndex, setSizeActiveIndex] = useState();
   const sizesEleRef = useRef();
 
   function choiceProductSize(index) {

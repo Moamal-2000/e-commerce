@@ -517,19 +517,19 @@
 
   "toastAlert": {
     "accountInfoUpdated": "Account's information updated.",
-    "messageSent": "Thank you for your message!, we will get back to you shortly",
-    "subscriptionSuccess": "You subscribed to exclusive offers",
-    "subscriptionFailed": "Failed to subscribe, Please check your internet connection",
+    "messageSent": "Thank you for your message!, we will get back to you shortly.",
+    "subscriptionSuccess": "You subscribed to exclusive offers!",
+    "subscriptionFailed": "Failed to subscribe, Please check your internet connection.",
     "loginSuccess": "You logged in successfully, Welcome back!",
-    "loginFailed": "Failed to login, Please check your internet connection",
-    "addToCart": "Please sign in to add product to cart",
-    "addToFavorite": "Please sign in to add/remove product to favorites",
-    "addToWishList": "Please sign in to add/remove product to wishlist",
+    "loginFailed": "Failed to login, Please check your internet connection.",
+    "addToCart": "Please sign in to add product to cart.",
+    "addToFavorite": "Please sign in to add/remove product to favorites.",
+    "addToWishList": "Please sign in to add/remove product to wishlist.",
     "signInSuccess": "You signed in successfully, Welcome!",
-    "signOutSuccess": "You Signed out of your account",
-    "pageRequiringSignIn": "Please sign in to visit this page",
-    "signInToPerformAction": "You have to sign in to do this action",
-    "cartEmpty": "Please add some items to cart first"
+    "signOutSuccess": "You Signed out of your account.",
+    "pageRequiringSignIn": "Please sign in to visit this page.",
+    "signInToPerformAction": "You have to sign in to do this action.",
+    "cartEmpty": "Please add some items to cart first."
   },
 
   "wishlist": "Wishlist ({{numberOfWishlist}})",
