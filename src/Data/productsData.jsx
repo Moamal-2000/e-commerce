@@ -124,10 +124,6 @@ export const productsData = [
     ],
     colors: [
       {
-        name: "white",
-        color: "#e4e4e4",
-      },
-      {
         name: "black",
         color: "#03040f",
       },
@@ -244,6 +240,7 @@ export const productsData = [
         color: "#29518a",
       },
     ],
+    sizes: ["S", "M", "L", "XL"],
     rate: 5,
     votes: 65,
     quantity: 1,

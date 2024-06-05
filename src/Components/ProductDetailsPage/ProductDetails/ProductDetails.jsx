@@ -43,7 +43,7 @@ const ProductDetails = ({ data }) => {
             <div className={s.horizontalLine} />
 
             <ProductColorsSection data={data} />
-            <ProductSizes data={data} />
+            {data?.sizes && <ProductSizes data={data} />}
             <ProductDealingControls data={data} />
             <ProductFeatures />
           </section>

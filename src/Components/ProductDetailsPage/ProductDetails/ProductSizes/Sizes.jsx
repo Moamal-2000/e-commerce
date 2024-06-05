@@ -1,29 +1,43 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PRODUCT_SIZES } from "src/Data/globalVariables";
 import s from "./Sizes.module.scss";
 
-const Sizes = () => {
-  const [sizeActiveIndex, setSizeActiveIndex] = useState(2);
+const Sizes = ({ sizes }) => {
+  const [sizeActiveIndex, setSizeActiveIndex] = useState(0);
+  const sizesEleRef = useRef();
 
   function choiceProductSize(index) {
     setSizeActiveIndex(index);
+    setFirstSizeActiveClass(false);
   }
 
+  function setFirstSizeActiveClass(active) {
+    const firstSizeEle = sizesEleRef.current?.children[0];
+    firstSizeEle.classList[active ? "add" : "remove"](s.active);
+  }
+
+  useEffect(() => {
+    setFirstSizeActiveClass(true);
+  }, []);
+
   return (
-    <div className={s.sizesWrapper}>
+    <div className={s.sizesWrapper} ref={sizesEleRef}>
       {PRODUCT_SIZES.map(({ size, title }, index) => {
-        const activeClass = index === sizeActiveIndex ? s.active : "";
+        const isSizeExist = sizes.includes(size);
+        const activeClass = sizeActiveIndex === index ? s.active : "";
 
         return (
-          <button
-            type="button"
-            key={"size-" + index}
-            className={`${s.size} ${activeClass}`}
-            onClick={() => choiceProductSize(index)}
-            title={title}
-          >
-            {size}
-          </button>
+          isSizeExist && (
+            <button
+              type="button"
+              key={"size-" + index}
+              className={`${s.size} ${activeClass}`}
+              onClick={() => choiceProductSize(index)}
+              title={title}
+            >
+              {size}
+            </button>
+          )
         );
       })}
     </div>
