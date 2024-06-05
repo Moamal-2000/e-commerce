@@ -62,6 +62,11 @@
 }
 
 // Arabic styles
-[lang=ar] .repoStarsForks .wrapper {
-  gap: 4px;
+[lang=ar] .repoStarsForks {
+  left: auto;
+  right: 4px;
+
+  &.wrapper {
+    gap: 4px;
+  }
 }
