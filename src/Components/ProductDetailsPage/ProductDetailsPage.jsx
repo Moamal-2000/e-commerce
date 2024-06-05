@@ -14,9 +14,9 @@ import RelatedItemsSection from "./RelatedItemsSection/RelatedItemsSection";
 const ProductDetailsPage = () => {
   const { t } = useTranslation();
   const PRODUCT_NAME = useGetSearchParam("product");
-  const PRODUCT_DATA = productsData.filter(
+  const PRODUCT_DATA = productsData.find(
     (product) => product?.name?.toLowerCase() === PRODUCT_NAME?.toLowerCase()
-  )?.[0];
+  );
   const productCategory = PRODUCT_DATA?.category.toLowerCase();
   const productCategoryTrans = t(`categoriesData.${productCategory}`);
   const productName = PRODUCT_DATA?.shortName.replaceAll(" ", "");
@@ -49,6 +49,10 @@ const ProductDetailsPage = () => {
     <>
       <Helmet>
         <title>{PRODUCT_DATA?.shortName}</title>
+        <meta
+          name="description"
+          content="Explore the details and specifications of your favorite products on Exclusive. Find everything you need to know, from features to customer reviews, before making your purchase."
+        />
       </Helmet>
 
       <div className="container">
