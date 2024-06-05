@@ -8,6 +8,10 @@ const LogIn = () => {
     <>
       <Helmet>
         <title>Login in</title>
+        <meta
+          name="description"
+          content="Log in to your Exclusive account to access personalized shopping features, track orders, and manage your account details securely."
+        />
       </Helmet>
 
       <main className={s.LogInPage} id="login-page">
