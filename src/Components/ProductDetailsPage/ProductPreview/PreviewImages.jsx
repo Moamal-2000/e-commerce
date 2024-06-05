@@ -4,13 +4,14 @@ const PreviewImages = ({ data, previewImg, setPreviewImg }) => {
   return (
     <div className={s.otherImages}>
       {data.map((img, i) => (
-        <div
+        <button
           key={i}
+          type="button"
           className={`${s.imgHolder} ${previewImg === img ? s.active : ""}`}
           onClick={() => setPreviewImg(data[i])}
         >
           <img src={img} alt="product's image" />
-        </div>
+        </button>
       ))}
     </div>
   );

@@ -7,6 +7,7 @@ const RateStars = ({ rate }) => {
   const isRateFound = rate !== undefined || rate !== null;
   const fixedRate = Math.floor(rate);
   const maxNumberOfRate = 5;
+  const rateMessage = `Rate of the product is ${rate} of 5 stars`;
 
   if (!isRateFound) throw new Error("Rate value is undefined or null");
 
@@ -28,7 +29,11 @@ const RateStars = ({ rate }) => {
     });
   }
 
-  return <div className={s.stars}>{getRateStars()}</div>;
+  return (
+    <div className={s.stars} tabIndex="0" title={rateMessage}>
+      {getRateStars()}
+    </div>
+  );
 };
 
 export default RateStars;

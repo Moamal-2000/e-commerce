@@ -16,6 +16,14 @@
   border-radius: 50%;
   border: none;
   position: relative;
+  outline: dashed 0 var(--regular-light-gray);
+  outline-offset: 0;
+
+  &:focus-visible {
+    transition: outline-offset .3s, outline-color .1s .2s;
+    outline: 2px dashed var(--orange-degree2);
+    outline-offset: 2px;
+  }
 }
 
 .sliderButtons>button:active>svg {

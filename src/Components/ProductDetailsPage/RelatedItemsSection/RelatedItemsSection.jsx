@@ -1,12 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { productsData } from "src/Data/productsData";
+import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
 import SectionTitle from "../../Shared/MiniComponents/SectionTitle/SectionTitle";
 import s from "./RelatedItemsSection.module.scss";
-import ProductsSlider from "../../Shared/MidComponents/ProductsSlider/ProductsSlider";
-import { useTranslation } from "react-i18next";
 
 const RelatedItemsSection = ({ productType, currentProduct }) => {
   const hasRelatedProducts = getProductsByRelatedType().length > 0;
-  const {t} = useTranslation()
+  const { t } = useTranslation();
 
   function getProductsByRelatedType() {
     return productsData.filter((product) => {

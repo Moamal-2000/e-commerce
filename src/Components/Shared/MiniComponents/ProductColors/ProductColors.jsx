@@ -5,7 +5,7 @@ import s from "./ProductColors.module.scss";
 const ProductColors = ({ colors, showToolTip = false }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);
 
-  function choiceProductColor(e, i) {
+  function choiceProductColor(i) {
     setActiveColorIndex(i);
   }
 
@@ -18,7 +18,7 @@ const ProductColors = ({ colors, showToolTip = false }) => {
         key={"color-" + i}
         className={`${s.color} ${firstItemActiveClass}`}
         style={{ backgroundColor: color, border: `solid 3px ${color}` }}
-        onClick={(e) => choiceProductColor(e, i)}
+        onClick={() => choiceProductColor(i)}
         aria-label={name + " color"}
       >
         {showToolTip && (

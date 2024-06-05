@@ -7,9 +7,9 @@
   cursor: pointer;
   position: relative;
   outline: solid 2px var(--website-bg);
-  transition: border-color .1s, outline-color .1s .2s ease;
 
   &:focus-visible {
+    transition: border-color .1s, outline-color .1s .2s ease;
     outline-color: var(--orange-degree2);
     outline-offset: 4px;
   }

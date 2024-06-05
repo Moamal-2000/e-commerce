@@ -15,18 +15,30 @@ const ProductFirstInfos = ({ data }) => {
 
   return (
     <section className={s.firstInfos}>
-      <b className={s.productName}>{translateProduct("name", true)}</b>
+      <b className={s.productName} tabIndex="0">
+        {translateProduct("name", true)}
+      </b>
 
       <section className={s.rateAndReviews}>
         <RateStars rate={rate} />
-        <span className={s.reviews}>{t("detailsPage.reviews", { votes })}</span>
+        <span className={s.reviews} tabIndex="0">
+          {t("detailsPage.reviews", { votes })}
+        </span>
+
         <div className={s.verticalLine} />
-        <span className={s.greenText}>{t("detailsPage.inStock")}</span>
+
+        <span className={s.greenText} tabIndex="0">
+          {t("detailsPage.inStock")}
+        </span>
       </section>
 
-      <span className={s.price}>${price}</span>
+      <span className={s.price} tabIndex="0">
+        ${price}
+      </span>
 
-      <p className={s.description}>{translateProduct("description")}</p>
+      <p className={s.description} tabIndex="0">
+        {translateProduct("description")}
+      </p>
     </section>
   );
 };
