@@ -18,6 +18,10 @@ const Home = () => {
     <>
       <Helmet>
         <title>E-Commercew</title>
+        <meta
+          name="description"
+          content="Your ultimate destination for effortless online shopping. Discover curated collections, easily add items to your cart and wishlist,and enjoy detailed product descriptions with captivating previews. Experience convenience like never before with our intuitive interface. Shop smarter with us today."
+        />
       </Helmet>
 
       <div className={s.home}>
