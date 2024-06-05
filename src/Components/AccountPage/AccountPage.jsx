@@ -15,6 +15,10 @@ const AccountPage = () => {
     <>
       <Helmet>
         <title>Profile</title>
+        <meta
+          name="description"
+          content="Update your personal information easily on Exclusive. Manage your account details, shipping addresses, and preferences for a personalized shopping experience."
+        />
       </Helmet>
 
       <div className="container">
@@ -23,7 +27,8 @@ const AccountPage = () => {
             <PagesHistory history={["/", t("nav.profile")]} />
 
             <p className={s.welcomeMessage}>
-              {t("common.welcome")}{"! "}
+              {t("common.welcome")}
+              {"! "}
               <Link to="/profile">{loginInfo.username}</Link>
             </p>
           </div>
