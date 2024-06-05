@@ -14,6 +14,10 @@ const Cart = () => {
     <>
       <Helmet>
         <title>Cart</title>
+        <meta
+          name="description"
+          content="Review and manage your selected items in the Exclusive cart. Add products, apply coupons, and proceed to checkout for a seamless shopping experience."
+        />
       </Helmet>
 
       <div className="container">
