@@ -30,6 +30,10 @@ const ProductsPage = () => {
       <Helmet>
         <title>Products</title>
         <link ref="preconnect" href="https://api.github.com/" />
+        <meta
+          name="description"
+          content="Explore the entire collection of products available on Exclusive. From fashion to electronics, browse our comprehensive catalog to find the perfect items for your needs."
+        />
       </Helmet>
 
       <div className="container">
