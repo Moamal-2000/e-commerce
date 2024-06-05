@@ -14,6 +14,10 @@ const WishList = () => {
     <>
       <Helmet>
         <title>Wishlist</title>
+        <meta
+          name="description"
+          content="Curate your dream shopping list on Exclusive's wishlist page. Save your favorite products and access them anytime for a personalized shopping experience."
+        />
       </Helmet>
 
       <div className="container">
