@@ -35,11 +35,11 @@
     background-color: rgba(255, 166, 0, .08);
   }
 
-  &:focus {
+  &:focus-visible {
     border: solid 2px var(--black);
   }
 
-  &.active:focus {
+  &.active:focus-visible {
     border: solid 2px #ff7b00;
   }
 }

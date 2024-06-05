@@ -32,6 +32,10 @@ const ProductsCategoryPage = () => {
     <>
       <Helmet>
         <title>{categoryType}</title>
+        <meta
+          name="description"
+          content="Discover a wide range of products categorized for easy browsing on Exclusive. Explore our extensive selection by category or type to find exactly what you're looking for."
+        />
       </Helmet>
 
       <div className="container">
