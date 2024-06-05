@@ -30,7 +30,11 @@ const RateStars = ({ rate }) => {
   }
 
   return (
-    <div className={s.stars} tabIndex="0" title={rateMessage}>
+    <div
+      className={s.stars}
+      title={rateMessage}
+      aria-label={`Rating: ${rate} stars`}
+    >
       {getRateStars()}
     </div>
   );

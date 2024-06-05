@@ -31,7 +31,7 @@ const ProductDetails = ({ data }) => {
     <>
       {!loadingProductDetails && isWebsiteOnline && (
         <section className={s.detailsSection} id="details-section">
-          {/* <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} /> */}
+          <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
 
           <section className={s.details}>
             <div className={`${s.zoomInPreview} ${activeClass}`}>

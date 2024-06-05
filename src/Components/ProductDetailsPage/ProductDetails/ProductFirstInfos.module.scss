@@ -3,11 +3,6 @@
 .productName {
   font: 600 1.5rem/24px "Inter", sans-serif;
   letter-spacing: .03rem;
-
-  &:focus-visible {
-    outline: 2px dashed var(--black);
-    outline-offset: 2px;
-  }
 }
 
 .rateAndReviews {
@@ -31,11 +26,6 @@
 .reviews {
   font-size: .875rem;
   color: var(--dark-gray);
-
-  &:focus-visible {
-    outline: 2px dashed var(--black);
-    outline-offset: 2px;
-  }
 }
 
 .verticalLine {
@@ -52,11 +42,6 @@
 .greenText {
   font-size: .875rem;
   color: var(--green);
-
-  &:focus-visible {
-    outline: 2px dashed var(--black);
-    outline-offset: 2px;
-  }
 }
 
 .price {
@@ -65,21 +50,11 @@
   letter-spacing: .03rem;
   margin-bottom: 20px;
   width: fit-content;
-
-  &:focus-visible {
-    outline: 2px dashed var(--black);
-    outline-offset: 2px;
-  }
 }
 
 .description {
   font-size: .875rem;
   max-width: 400px;
-
-  &:focus-visible {
-    outline: 2px dashed var(--black);
-    outline-offset: 2px;
-  }
 }
 
 @include large {

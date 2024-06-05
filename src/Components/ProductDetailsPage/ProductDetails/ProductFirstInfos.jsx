@@ -15,30 +15,22 @@ const ProductFirstInfos = ({ data }) => {
 
   return (
     <section className={s.firstInfos}>
-      <b className={s.productName} tabIndex="0">
-        {translateProduct("name", true)}
-      </b>
+      <h2 className={s.productName}>{translateProduct("name", true)}</h2>
 
-      <section className={s.rateAndReviews}>
+      <div className={s.rateAndReviews}>
         <RateStars rate={rate} />
-        <span className={s.reviews} tabIndex="0">
-          {t("detailsPage.reviews", { votes })}
-        </span>
+        <span className={s.reviews}>{t("detailsPage.reviews", { votes })}</span>
 
         <div className={s.verticalLine} />
 
-        <span className={s.greenText} tabIndex="0">
-          {t("detailsPage.inStock")}
-        </span>
-      </section>
+        <span className={s.greenText}>{t("detailsPage.inStock")}</span>
+      </div>
 
-      <span className={s.price} tabIndex="0">
+      <span className={s.price} aria-label={`Price: $${price}`}>
         ${price}
       </span>
 
-      <p className={s.description} tabIndex="0">
-        {translateProduct("description")}
-      </p>
+      <p className={s.description}>{translateProduct("description")}</p>
     </section>
   );
 };
