@@ -24,6 +24,10 @@ const NotFoundPage = () => {
     <>
       <Helmet>
         <title>{tabTitleText}</title>
+        <meta
+          name="description"
+          content="Oops! The page you're looking for on Exclusive couldn't be found. Return to our homepage to continue browsing our wide selection of products."
+        />
       </Helmet>
 
       <div className="container">
