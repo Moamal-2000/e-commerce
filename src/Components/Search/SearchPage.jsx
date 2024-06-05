@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
@@ -23,16 +24,26 @@ const SearchPage = () => {
   });
 
   return (
-    <div className="container">
-      <main className={s.searchPage}>
-        <PagesHistory history={["/", t("history.results")]} />
+    <>
+      <Helmet>
+        <title>Search</title>
+        <meta
+          name="description"
+          content="Find what you're looking for quickly and easily on Exclusive's search page. Enter the product name or keywords to discover a wide range of options tailored to your preferences."
+        />
+      </Helmet>
 
-        <section className={s.products} id="search-page">
-          {(loadingSearchProducts || !isWebsiteOnline) && <SkeletonCards />}
-          {!loadingSearchProducts && isWebsiteOnline && <SearchProducts />}
-        </section>
-      </main>
-    </div>
+      <div className="container">
+        <main className={s.searchPage}>
+          <PagesHistory history={["/", t("history.results")]} />
+
+          <section className={s.products} id="search-page">
+            {(loadingSearchProducts || !isWebsiteOnline) && <SkeletonCards />}
+            {!loadingSearchProducts && isWebsiteOnline && <SearchProducts />}
+          </section>
+        </main>
+      </div>
+    </>
   );
 };
 export default SearchPage;
