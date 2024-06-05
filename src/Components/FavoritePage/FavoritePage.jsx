@@ -14,6 +14,10 @@ const FavoritePage = () => {
     <>
       <Helmet>
         <title>Favorite</title>
+        <meta
+          name="description"
+          content="Save and manage your favorite products on Exclusive. Create a personalized wishlist to easily access and purchase your preferred items anytime."
+        />
       </Helmet>
 
       <div className="container">
