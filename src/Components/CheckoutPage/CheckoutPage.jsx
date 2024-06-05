@@ -44,6 +44,10 @@ const CheckoutPage = () => {
     <>
       <Helmet>
         <title>Checkout</title>
+        <meta
+          name="description"
+          content="Complete your purchase on Exclusive by reviewing your cart, adding your shipping details, and choosing payment options such as cash or bank card for a smooth checkout experience."
+        />
       </Helmet>
 
       <div className="container">
