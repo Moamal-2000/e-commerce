@@ -21,6 +21,9 @@ const globalSlice = createSlice({
   initialState,
   name: "globalSlice",
   reducers: {
+    multiUpdateGlobalState: (state, { payload }) => {
+      Object.assign(state, payload);
+    },
     updateGlobalState: (state, { payload: { key, value } }) => {
       state[key] = value;
     },
@@ -33,5 +36,6 @@ const globalSlice = createSlice({
   },
 });
 
-export const { updateGlobalState, showAlert } = globalSlice.actions;
+export const { updateGlobalState, showAlert, multiUpdateGlobalState } =
+  globalSlice.actions;
 export default globalSlice.reducer;

@@ -6,7 +6,6 @@ import {
   otherSectionsMenuItems,
   womenFashionMenuItems,
 } from "src/Data/staticData";
-import { updateGlobalState } from "src/Features/globalSlice";
 import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import DropDownMenu from "./DropDownMenu";
@@ -19,8 +18,11 @@ const SectionsMenu = () => {
   const activeClass = isSectionsMenuActive ? s.active : "";
 
   function openSectionMenu() {
-    dispatch(updateGlobalState({ key: "isSectionsMenuActive", value: true }));
-    dispatch(updateGlobalState({ key: "isOverlayActive", value: true }));
+    const payload = {
+      isSectionsMenuActive: true,
+      isOverlayActive: true,
+    };
+    dispatch(multiUpdateGlobalState(payload));
   }
 
   return (

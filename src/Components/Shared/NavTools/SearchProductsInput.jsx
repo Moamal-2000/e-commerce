@@ -63,7 +63,6 @@ const SearchProductsInput = () => {
       });
     }
 
-    dispatch(updateGlobalState({ key: "loadingSearchProducts", value: true }));
     dispatch(
       updateProductsState({ key: "searchProducts", value: productsFound })
     );
