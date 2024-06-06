@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { TOAST_ALERT_DURATION_MILLISECONDS } from "src/Data/globalVariables";
 import { updateGlobalState } from "src/Features/globalSlice";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./ToastAlert.module.scss";
@@ -22,14 +23,16 @@ const ToastAlert = () => {
   const showClass = isToastAlertActive ? s.show : "";
   let timerId;
 
-  useEffect(() => {
-    timerId = undefined;
+  function setToastAlertTimeout() {
     if (!showClass) return;
 
     timerId = setTimeout(() => {
       dispatch(updateGlobalState({ key: "isToastAlertActive", value: false }));
-    }, 6000);
+    }, TOAST_ALERT_DURATION_MILLISECONDS);
+  }
 
+  useEffect(() => {
+    setToastAlertTimeout();
     return () => clearTimeout(timerId);
   }, [toastAlertState, toastAlertText, numberOfShowedAlerts]);
 
