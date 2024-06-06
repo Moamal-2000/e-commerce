@@ -6,6 +6,7 @@ import {
   otherSectionsMenuItems,
   womenFashionMenuItems,
 } from "src/Data/staticData";
+import { multiUpdateGlobalState } from "src/Features/globalSlice";
 import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import DropDownMenu from "./DropDownMenu";

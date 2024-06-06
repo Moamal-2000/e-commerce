@@ -1,3 +1,4 @@
+import { regexPatterns } from "../Data/globalVariables";
 import { isCurrentPassValid, isNewPasswordValid } from "./conditions";
 
 export function isDecimalNumber(number) {
@@ -47,21 +48,6 @@ export function getFormattedTime(time) {
 
 export const padStart = (num) => `${num}`.padStart(2, "0");
 
-export function checkIsObjExistInArr(arr, obj) {
-  for (let i = 0; i < arr.length; i++) {
-    let dataIsEqual = [];
-
-    for (const key in arr[i]) {
-      dataIsEqual.push(arr[i][key] === obj[key]);
-    }
-
-    const isObjExist = dataIsEqual.every((val) => val);
-    if (isObjExist) return true;
-  }
-
-  return false;
-}
-
 export function compareDataToObjValue(data, obj, key) {
   const filteredData = data.filter((dataObj) => dataObj[key] === obj[key]);
   return filteredData.length > 0;
@@ -81,21 +67,12 @@ export function capitalize(str) {
 }
 
 export function camelCase(str) {
-  let formattedStr = str
-    ?.toLowerCase()
-    ?.replaceAll("& ", "")
-    .replaceAll("'s", "");
-
-  if (formattedStr.includes("-")) {
-    formattedStr = formattedStr.replaceAll("-", " ");
-  }
-
-  const camelCased = formattedStr
-    .split(" ")
-    .map((word, index) => (index !== 0 ? capitalize(word) : word))
-    .join("");
-
-  return camelCased;
+  const regex = /([-]|\s?&\s|'s[-&]?)/g;
+  const words = str.toLowerCase().replace(regex, " ").split(" ");
+  const camelCasedWords = words.map((word, index) =>
+    index !== 0 ? capitalize(word) : word
+  );
+  return camelCasedWords.join("");
 }
 
 export function updateClassOnCondition(
@@ -123,8 +100,7 @@ export function checkIsInputsValid(inputs) {
 }
 
 export function checkEmailValidation(emailInput) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
-  const isEmailValid = emailRegex.test(emailInput.value);
+  const isEmailValid = regexPatterns.email.test(emailInput.value);
   updateClassOnCondition(emailInput, isEmailValid);
 }
 
@@ -155,17 +131,17 @@ export function getDiscountedPrice(originalPrice, discountPercentage) {
   return discountedPrice.toFixed(2);
 }
 
-export const formateNumber = (price) =>
-  `${price}`.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+export const formatePrice = (price) =>
+  `${price}`.replace(regexPatterns.price, ",");
 
 export function setAfterDiscountKey(product) {
   const discountedPrice = getDiscountedPrice(product.price, product.discount);
-  const formattedDiscountedPrice = formateNumber(discountedPrice);
+  const formattedDiscountedPrice = formatePrice(discountedPrice);
   product.afterDiscount = formattedDiscountedPrice;
 }
 
 export function setFormattedPrice(product) {
-  const formattedPrice = formateNumber(product.price);
+  const formattedPrice = formatePrice(product.price);
   product.price = formattedPrice;
 }
 
@@ -222,6 +198,5 @@ export function isMobileDevice() {
 }
 
 export function isEmailValid(emailInput) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,3}$/;
-  return emailRegex.test(emailInput.value);
+  return regexPatterns.email.test(emailInput.value);
 }

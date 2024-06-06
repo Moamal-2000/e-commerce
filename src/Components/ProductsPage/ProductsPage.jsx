@@ -5,7 +5,7 @@ import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productCardCustomizations } from "src/Data/staticData";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useUpdateLoadingState from "src/Hooks/App/useUpdateLoadingState";
-import { updateGlobalState } from "../../Features/globalSlice";
+import { updateGlobalState } from "src/Features/globalSlice";
 import ExploreProducts from "../Home/ProductPoster/ExploreProducts";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";

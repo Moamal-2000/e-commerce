@@ -1,6 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateGlobalState } from "src/Features/globalSlice";
-import { multiUpdateGlobalState } from "../../../../Features/globalSlice";
+import {
+  multiUpdateGlobalState,
+  updateGlobalState,
+} from "src/Features/globalSlice";
 import s from "./GlobalOverlay.module.scss";
 
 const GlobalOverlay = () => {

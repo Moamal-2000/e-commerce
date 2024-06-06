@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { multiUpdateGlobalState } from "../../../Features/globalSlice";
+import { multiUpdateGlobalState } from "src/Features/globalSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import s from "./MobileNavIcon.module.scss";
 

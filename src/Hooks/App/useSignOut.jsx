@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { showAlert } from "../../Features/globalSlice";
-import { setEmptyArrays } from "../../Features/productsSlice";
-import { signOut } from "../../Features/userSlice";
+import { showAlert } from "src/Features/globalSlice";
+import { setEmptyArrays } from "src/Features/productsSlice";
+import { signOut } from "src/Features/userSlice";
 
 const useSignOut = () => {
   const { t } = useTranslation();

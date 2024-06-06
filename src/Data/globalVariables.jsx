@@ -44,3 +44,8 @@ export const PRODUCT_SIZES = [
     title: "X Large",
   },
 ];
+
+export const regexPatterns = {
+  email: /^\w+@\w+\.\w+$/,
+  price: /\B(?=(\d{3})+(?!\d))/g,
+};
