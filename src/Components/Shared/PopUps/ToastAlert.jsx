@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
@@ -11,12 +10,16 @@ const toastState = {
   error: { iconName: "xMark", className: s.error },
 };
 
-const ToastAlert = ({ state, text, visibility }) => {
-  const { numberOfShowedAlerts } = useSelector((state) => state.global);
+const ToastAlert = () => {
+  const {
+    numberOfShowedAlerts,
+    isToastAlertActive,
+    toastAlertText,
+    toastAlertState,
+  } = useSelector((state) => state.global);
   const dispatch = useDispatch();
-  const { iconName, className } = toastState[state];
-  const showClass = visibility ? s.show : "";
-  const paragraphDirection = i18next.dir() === "ltr" ? "rtl" : "ltr";
+  const { iconName, className } = toastState[toastAlertState];
+  const showClass = isToastAlertActive ? s.show : "";
   let timerId;
 
   useEffect(() => {
@@ -28,7 +31,7 @@ const ToastAlert = ({ state, text, visibility }) => {
     }, 6000);
 
     return () => clearTimeout(timerId);
-  }, [state, text, numberOfShowedAlerts]);
+  }, [toastAlertState, toastAlertText, numberOfShowedAlerts]);
 
   return (
     <div className={`${s.toastAlert} ${className} ${showClass}`} dir="ltr">
@@ -37,7 +40,7 @@ const ToastAlert = ({ state, text, visibility }) => {
         <SvgIcon name={iconName} />
       </div>
 
-      <p dir={paragraphDirection}>{text}</p>
+      <p dir="ltr">{toastAlertText}</p>
     </div>
   );
 };

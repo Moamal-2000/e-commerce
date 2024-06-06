@@ -1,4 +1,3 @@
-import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import Footer from "../Components/Footer/Footer";
 import FirstHeader from "../Components/Header/FirstHeader/FirstHeader";
@@ -13,9 +12,6 @@ import useCurrentSkipLinkId from "../Hooks/App/useCurrentSkipLinkId";
 import useOnlineStatus from "../Hooks/Helper/useOnlineStatus";
 
 const RoutesLayout = () => {
-  const { isToastAlertActive, toastAlertText, toastAlertState } = useSelector(
-    (state) => state.global
-  );
   const skipLinkSectionId = useCurrentSkipLinkId();
   const isWebsiteOnline = useOnlineStatus();
 
@@ -30,11 +26,7 @@ const RoutesLayout = () => {
       <Outlet />
       <Footer />
       <ConnectionLabelAlert isOnline={isWebsiteOnline} />
-      <ToastAlert
-        visibility={isToastAlertActive}
-        text={toastAlertText}
-        state={toastAlertState}
-      />
+      <ToastAlert />
     </div>
   );
 };

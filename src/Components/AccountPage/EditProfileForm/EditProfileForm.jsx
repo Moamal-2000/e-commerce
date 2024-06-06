@@ -58,10 +58,7 @@ const EditProfileForm = () => {
   function updateUserInfoAlert() {
     const alertText = t("toastAlert.accountInfoUpdated");
     const alertState = "success";
-
-    setTimeout(() => {
-      dispatch(showAlert({ alertText, alertState }));
-    }, 300);
+    setTimeout(() => dispatch(showAlert({ alertText, alertState })), 300);
   }
 
   return (
