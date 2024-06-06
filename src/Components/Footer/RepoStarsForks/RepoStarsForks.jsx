@@ -2,7 +2,7 @@ import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/globalVariables";
 import { repoStarsForksToolTipLeftPos } from "src/Functions/componentsFunctions";
-import { getSpecificRepo } from "src/Functions/helper";
+import { getDataById } from "src/Functions/helper";
 import useAsync from "src/Hooks/Helper/useAsync";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
@@ -11,7 +11,7 @@ import s from "./RepoStarsForks.module.scss";
 const RepoStarsForks = () => {
   const { t } = useTranslation();
   const [reposData, isError] = useAsync(MY_REPOS_URL);
-  const websiteRepo = getSpecificRepo(reposData, WEBSITE_REPO_ID);
+  const websiteRepo = getDataById(reposData, WEBSITE_REPO_ID);
   const repoStars = websiteRepo?.stargazers_count;
   const repoForks = websiteRepo?.forks;
   const repoUrl = websiteRepo?.html_url;

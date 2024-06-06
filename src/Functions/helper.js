@@ -95,7 +95,7 @@ export function checkEmptyInputs({ exceptions, formRef }) {
   });
 }
 
-export function checkIsInputsValid(inputs) {
+export function checkAreInputsValid(inputs) {
   return [...inputs].every((input) => !input.classList.contains("invalid"));
 }
 
@@ -118,8 +118,8 @@ export function checkPasswordInputs(passwordInputs, password) {
   updateClassOnCondition(confirmPassInput, isCurrPassEqualsNew);
 }
 
-export function getSpecificRepo(repos, id) {
-  return repos?.find((repo) => repo.id === id);
+export function getDataById(arr, id) {
+  return arr?.find((item) => item?.id === id);
 }
 
 export const scrollToTop = () =>
@@ -171,7 +171,7 @@ export function searchByObjectKey({ data, key, query }) {
   return data.filter((item) => isQueryContainedInItem(query, item?.[key]));
 }
 
-export function random(arr) {
+export function getRandomItem(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
@@ -190,7 +190,7 @@ export function getUniqueArrayByObjectKey({ arr, newArr, key }) {
   return updatedArr;
 }
 
-export function isMobileDevice() {
+export function isMobileScreenWidth() {
   const IPHONE_SCREEN_WIDTH = 428;
   const mobileMediaQuery = `(max-width: ${IPHONE_SCREEN_WIDTH}px)`;
   const isMobileDevice = window.matchMedia(mobileMediaQuery).matches;

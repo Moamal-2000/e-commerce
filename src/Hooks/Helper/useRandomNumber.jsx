@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 const useRandomNumber = (min = 0, max = 1000) => {
-  const [randomNumber, setRandomNumber] = useState(generateRandomNumber(min, max));
+  const [randomNumber, setRandomNumber] = useState(
+    generateRandomNumber(min, max)
+  );
 
   function changeRandomNumber(newMin = min, newMax = max) {
     let newRandomNumber = generateRandomNumber(newMin, newMax);

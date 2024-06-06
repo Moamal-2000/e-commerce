@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { DEFAULT_SWIPER_SPEED } from "src/Data/globalVariables";
-import { isMobileDevice } from "src/Functions/helper";
+import { isMobileScreenWidth } from "src/Functions/helper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -30,7 +30,7 @@ function MainSlider() {
 
   return (
     <Swiper
-      pagination={{ enabled: !isMobileDevice(), clickable: true }}
+      pagination={{ enabled: !isMobileScreenWidth(), clickable: true }}
       className={s.mainSlider}
       modules={swiperModules}
       spaceBetween={-1}

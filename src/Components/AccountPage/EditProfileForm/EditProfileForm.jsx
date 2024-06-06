@@ -4,9 +4,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
 import { updateUserData } from "src/Features/userSlice";
 import {
+  checkAreInputsValid,
   checkEmailValidation,
   checkEmptyInputs,
-  checkIsInputsValid,
   checkPasswordInputs,
 } from "src/Functions/helper";
 import s from "./EditProfileForm.module.scss";
@@ -38,7 +38,7 @@ const EditProfileForm = () => {
   function updateUserInfo() {
     const formEle = formRef.current;
     const inputs = formEle.querySelectorAll("input");
-    const isFormValid = checkIsInputsValid(inputs);
+    const isFormValid = checkAreInputsValid(inputs);
 
     if (!isFormValid) return;
 
