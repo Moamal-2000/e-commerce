@@ -18,7 +18,10 @@ const AccountMenuSection = () => {
     <>
       <AccountMenuIcon />
 
-      <section className={`${s.menuSection} ${mobileClass} ${activeClass}`}>
+      <nav
+        className={`${s.menuSection} ${mobileClass} ${activeClass}`}
+        aria-label={"Account navigation"}
+      >
         <section className={s.section}>
           <h2>{t(`${accountMenu}.manageMyAccount`)}</h2>
 
@@ -50,7 +53,7 @@ const AccountMenuSection = () => {
             </li>
           </ul>
         </section>
-      </section>
+      </nav>
     </>
   );
 };
