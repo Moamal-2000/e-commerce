@@ -9,9 +9,9 @@ import {
   checkEmptyInputs,
   checkPasswordInputs,
 } from "src/Functions/helper";
+import EditProfileInputs from "../EditProfileFormInputs/EditProfileInputs";
+import ProfileFormButtons from "../ProfileFormButtons/ProfileFormButtons";
 import s from "./EditProfileForm.module.scss";
-import EditProfileInputs from "./EditProfileInputs";
-import ProfileFormButtons from "./ProfileFormButtons";
 
 const EditProfileForm = () => {
   const { loginInfo } = useSelector((state) => state.user);
