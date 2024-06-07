@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import ProductColors from "../../Shared/MiniComponents/ProductColors/ProductColors";
+import ProductColors from "../../../Shared/MiniComponents/ProductColors/ProductColors";
 import s from "./ProductColorsSection.module.scss";
 
 const ProductColorsSection = ({ data: { colors } }) => {

@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import SkeletonProductDetails from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductDetails";
 import ProductPreview from "../ProductPreview/ProductPreview";
-import ProductColorsSection from "./ProductColorsSection";
-import ProductDealingControls from "./ProductDealingControls";
+import ProductColorsSection from "./ProductColorsSection/ProductColorsSection";
+import ProductDealingControls from "./ProductDealingControls/ProductDealingControls";
 import s from "./ProductDetails.module.scss";
-import ProductFeatures from "./ProductFeatures";
-import ProductFirstInfos from "./ProductFirstInfos";
+import ProductFeatures from "./ProductFeatures/ProductFeatures";
+import ProductFirstInfos from "./ProductFirstInfos/ProductFirstInfos";
 import ProductSizes from "./ProductSizes/ProductSizes";
 
 const ProductDetails = ({ data }) => {

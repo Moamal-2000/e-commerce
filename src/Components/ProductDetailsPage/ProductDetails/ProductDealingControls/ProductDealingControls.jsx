@@ -6,8 +6,8 @@ import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
 import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
 import { isItemFound } from "src/Functions/helper";
-import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
-import ToolTip from "../../Shared/MiniComponents/ToolTip";
+import SvgIcon from "../../../Shared/MiniComponents/SvgIcon";
+import ToolTip from "../../../Shared/MiniComponents/ToolTip";
 import s from "./ProductDealingControls.module.scss";
 
 const ProductDealingControls = ({ data }) => {

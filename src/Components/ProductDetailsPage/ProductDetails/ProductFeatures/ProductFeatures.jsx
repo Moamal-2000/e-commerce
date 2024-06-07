@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
+import SvgIcon from "../../../Shared/MiniComponents/SvgIcon";
 import s from "./ProductFeatures.module.scss";
 
 const ProductFeatures = () => {
