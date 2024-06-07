@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import CustomCheckbox from "../../Shared/MiniComponents/CustomCheckbox/CustomCheckbox";
+import BillingInputs from "../BillingDetailsInputs/BillingInputs";
 import s from "./BillingDetails.module.scss";
-import BillingInputs from "./BillingInputs";
 
 const BillingDetails = ({ inputsData: { billingValues, handleChange } }) => {
   const { t } = useTranslation();
