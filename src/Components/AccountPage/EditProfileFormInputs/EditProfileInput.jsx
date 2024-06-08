@@ -12,20 +12,22 @@ const EditProfileInput = ({
     placeholder = "",
   },
 }) => {
+  const inputAttributes = {
+    type: type || "text",
+    name,
+    id: name,
+    value,
+    required: required || false,
+    "aria-required": required,
+    autoComplete: autoComplete ? "on" : "off",
+    onChange: setValue ? (e) => setValue(e.target.value) : null,
+    placeholder: placeholder || "",
+  };
+
   return (
     <div className={s.input}>
       {label && <label htmlFor={name}>{label}</label>}
-
-      <input
-        type={type}
-        name={name}
-        id={name}
-        value={value?.length === 0 ? "" : value}
-        required={required}
-        autoComplete={`${autoComplete ? "on" : "off"}`}
-        onChange={setValue ? (e) => setValue(e.target.value) : null}
-        placeholder={placeholder}
-      />
+      <input {...inputAttributes} />
     </div>
   );
 };

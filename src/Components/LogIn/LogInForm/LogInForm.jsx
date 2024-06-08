@@ -82,6 +82,7 @@ const LogInForm = () => {
           name="emailOrPhone"
           placeholder={t("inputsPlaceholders.emailOrPhone")}
           onChange={(e) => (emailOrPhone.current = e.target.value)}
+          aria-required="false"
         />
 
         <div className={s.input}>
@@ -90,6 +91,7 @@ const LogInForm = () => {
             name="Password"
             placeholder={t("inputsPlaceholders.password")}
             onChange={(e) => (password.current = e.target.value)}
+            aria-required="false"
           />
           <ShowHidePassword />
         </div>

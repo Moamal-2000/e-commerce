@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 const useGetResizeWindow = () => {
   const [sizes, setSizes] = useState({
-    width: innerWidth,
-    height: innerHeight,
+    windowWidth: innerWidth,
+    windowHeight: innerHeight,
   });
   let timerId;
 
@@ -13,14 +13,13 @@ const useGetResizeWindow = () => {
 
       timerId = setTimeout(() => {
         setSizes({
-          width: innerWidth,
-          height: innerHeight,
+          windowWidth: innerWidth,
+          windowHeight: innerHeight,
         });
       }, 300);
     }
 
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 

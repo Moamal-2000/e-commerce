@@ -60,7 +60,7 @@ const LanguageSelector = () => {
       aria-haspopup="true"
     >
       <div className={s.currentOption} ref={currentLangRef}>
-        <span aria-live="polite"></span>
+        <span aria-live="polite" />
         <img src={LANGUAGES[0]?.flag} alt={"country flag"} />
       </div>
 

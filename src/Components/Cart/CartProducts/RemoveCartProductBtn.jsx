@@ -16,9 +16,7 @@ const RemoveCartProductBtn = ({ productId }) => {
   const lang = cookies.get("i18next");
   const { windowWidth } = useGetResizeWindow();
 
-  const [toolTipLeftPos, setToolTipLeftPos] = useState(
-    cartProductToolTipPos(lang)
-  );
+  const [toolTipLeftPos, setToolTipLeftPos] = useState(cartProductToolTipPos(lang));
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
   function updateToolTipPositions() {

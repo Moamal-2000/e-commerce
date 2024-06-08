@@ -94,6 +94,7 @@ const SearchProductsInput = () => {
         onChange={(e) => handleSearchOnChange(e)}
         role="search"
         aria-label="Search product input"
+        aria-required="false"
       />
 
       <button type="submit" aria-label={t("tooltips.searchButton")}>

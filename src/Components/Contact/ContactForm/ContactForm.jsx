@@ -53,6 +53,7 @@ const ContactForm = () => {
               name="username"
               id="username"
               required
+              aria-required="true"
             />
           </div>
 
@@ -67,6 +68,7 @@ const ContactForm = () => {
               name="email"
               id="email"
               required
+              aria-required="true"
             />
           </div>
 
@@ -81,6 +83,7 @@ const ContactForm = () => {
               name="phone"
               id="phone"
               required
+              aria-required="true"
               onChange={handleMobileOnChange}
               value={phone}
             />
@@ -93,6 +96,7 @@ const ContactForm = () => {
           placeholder={t("inputsPlaceholders.yourMessage")}
           aria-label="User message field"
           required
+          aria-required="true"
         />
       </div>
 

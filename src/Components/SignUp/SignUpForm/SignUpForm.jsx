@@ -116,6 +116,7 @@ const SignUpForm = () => {
           placeholder={t("inputsPlaceholders.fullName")}
           onChange={(e) => (username.current = e.target.value)}
           required
+          aria-required="true"
         />
         <input
           type="text"
@@ -123,6 +124,7 @@ const SignUpForm = () => {
           placeholder={t("inputsPlaceholders.emailOrPhone")}
           onChange={(e) => (emailOrPhone.current = e.target.value)}
           required
+          aria-required="true"
         />
         <div className={s.input}>
           <input
@@ -131,6 +133,7 @@ const SignUpForm = () => {
             placeholder={t("inputsPlaceholders.password")}
             onChange={(e) => (password.current = e.target.value)}
             required
+            aria-required="true"
           />
           <ShowHidePassword />
         </div>

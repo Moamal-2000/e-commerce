@@ -18,6 +18,7 @@ const BillingInput = ({ inputData }) => {
     type: type || "text",
     placeholder: placeholder || "",
     required: required || false,
+    "aria-required": required,
     value,
     onChange,
     autoComplete: autoComplete ? "on" : "off",

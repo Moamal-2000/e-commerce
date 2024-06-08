@@ -38,6 +38,7 @@ const CustomCheckbox = ({ inputData: { name, isRequired = false, id } }) => {
           onChange={handleCheckboxChange}
           onKeyDown={handleKeyPress}
           required={isRequired}
+          aria-required={isRequired}
           id={id}
         />
 

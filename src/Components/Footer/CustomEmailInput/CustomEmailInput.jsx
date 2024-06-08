@@ -20,7 +20,7 @@ const CustomEmailInput = () => {
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
-  const emailRef = useRef()
+  const emailRef = useRef();
 
   const isWebsiteOnline = useOnlineStatus();
   const sendIconDirection = {
@@ -42,7 +42,7 @@ const CustomEmailInput = () => {
     e.preventDefault();
     if (loading) return;
 
-    emailRef.current.focus()
+    emailRef.current.focus();
     const emailInput = e.target.querySelector("input");
     if (isEmailValid(emailInput)) subscription();
   };
@@ -74,6 +74,7 @@ const CustomEmailInput = () => {
         aria-describedby="email-tooltip"
         onChange={(e) => setEmail(e.target.value)}
         ref={emailRef}
+        aria-required="false"
       />
 
       <button aria-label="Send mail" type="submit">

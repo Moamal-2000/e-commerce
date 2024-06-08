@@ -6,7 +6,11 @@ const AddCoupon = () => {
 
   return (
     <div className={s.couponContainer}>
-      <input type="text" placeholder={t("inputsPlaceholders.couponExample")} />
+      <input
+        type="text"
+        placeholder={t("inputsPlaceholders.couponExample")}
+        aria-required="false"
+      />
       <button type="button">{t("buttons.applyCoupon")}</button>
     </div>
   );
