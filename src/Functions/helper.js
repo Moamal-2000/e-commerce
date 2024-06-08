@@ -1,4 +1,4 @@
-import { regexPatterns } from "../Data/globalVariables";
+import { SCREEN_SIZES, regexPatterns } from "../Data/globalVariables";
 import { isCurrentPassValid, isNewPasswordValid } from "./conditions";
 
 export function isDecimalNumber(number) {
@@ -191,8 +191,7 @@ export function getUniqueArrayByObjectKey({ arr, newArr, key }) {
 }
 
 export function isMobileScreenWidth() {
-  const IPHONE_SCREEN_WIDTH = 428;
-  const mobileMediaQuery = `(max-width: ${IPHONE_SCREEN_WIDTH}px)`;
+  const mobileMediaQuery = `(max-width: ${SCREEN_SIZES.mobile}px)`;
   const isMobileDevice = window.matchMedia(mobileMediaQuery).matches;
   return isMobileDevice;
 }

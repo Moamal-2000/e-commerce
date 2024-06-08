@@ -2,9 +2,9 @@ import cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { MAC_BOOKS_SCREEN_WIDTH } from "src/Data/globalVariables";
+import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { removeById } from "src/Features/productsSlice";
-import { removeCartProductToolTipLeftPos } from "src/Functions/componentsFunctions";
+import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
@@ -14,21 +14,21 @@ const RemoveCartProductBtn = ({ productId }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const lang = cookies.get("i18next");
-  const { width: windowWidth } = useGetResizeWindow();
+  const { windowWidth } = useGetResizeWindow();
 
   const [toolTipLeftPos, setToolTipLeftPos] = useState(
-    removeCartProductToolTipLeftPos(lang)
+    cartProductToolTipPos(lang)
   );
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
   function updateToolTipPositions() {
-    if (windowWidth <= MAC_BOOKS_SCREEN_WIDTH) {
+    if (windowWidth <= SCREEN_SIZES.laptop) {
       setToolTipLeftPos("50%");
       setToolTipTopPos("-20px");
       return;
     }
 
-    setToolTipLeftPos(removeCartProductToolTipLeftPos(lang));
+    setToolTipLeftPos(cartProductToolTipPos(lang));
     setToolTipTopPos("50%");
   }
 

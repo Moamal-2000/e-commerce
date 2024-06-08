@@ -1,15 +1,16 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { SCREEN_SIZES } from "src/Data/globalVariables";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import AccountMenuIcon from "./AccountMenuIcon";
 import s from "./AccountMenuSection.module.scss";
 
 const AccountMenuSection = () => {
   const { isProfileMenuActive } = useSelector((state) => state.global);
-  const { width: windowWidth } = useGetResizeWindow();
+  const { windowWidth } = useGetResizeWindow();
   const { t } = useTranslation();
-  const isMobileDevice = windowWidth < 768;
+  const isMobileDevice = windowWidth < SCREEN_SIZES.tablet;
   const mobileClass = isMobileDevice ? s.mobile : "";
   const activeClass = isProfileMenuActive ? s.active : "";
   const accountMenu = "accountPage.accountMenuSection";

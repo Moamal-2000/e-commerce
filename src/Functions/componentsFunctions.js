@@ -1,3 +1,5 @@
+import { SCREEN_SIZES } from "../Data/globalVariables";
+
 export function simpleValidationCheck(inputs) {
   let isFormValid = false;
 
@@ -159,7 +161,7 @@ export function sendingToolTipLeftPos(lang) {
   return "80px";
 }
 
-export function removeCartProductToolTipLeftPos(lang) {
+export function cartProductToolTipPos(lang) {
   switch (lang) {
     case "ar":
       return "56px";
@@ -180,22 +182,20 @@ export function getElementWidth(element) {
 }
 
 export function getScrollSliderValue(sliderEle) {
-  const sliderItemEle = sliderEle.children[0];
-  const computersWidth = 1500;
-  const laptopsWidth = 1300;
-  const macBooksWidth = 992;
   const GAP = 30;
+  const { desktop, laptop } = SCREEN_SIZES;
+  const sliderItemEle = sliderEle.children[0];
   const sliderItemEleWidth = getElementWidth(sliderItemEle) + GAP;
 
-  if (window.innerWidth >= computersWidth) {
+  if (window.innerWidth >= desktop + 300) {
     return sliderItemEleWidth * 4;
   }
 
-  if (window.innerWidth >= laptopsWidth) {
+  if (window.innerWidth >= desktop + 100) {
     return sliderItemEleWidth * 3;
   }
 
-  if (window.innerWidth >= macBooksWidth) {
+  if (window.innerWidth >= laptop) {
     return sliderItemEleWidth * 2;
   }
 
