@@ -6,24 +6,24 @@ import s from "./AccountMenuIcon.module.scss";
 const AccountMenuIcon = () => {
   const dispatch = useDispatch();
 
-  function openProfileMenu() {
-    const payload = {
-      isProfileMenuActive: true,
-      isOverlayActive: true,
-    };
-    dispatch(multiUpdateGlobalState(payload));
-  }
-
   return (
     <button
       type="button"
       className={s.profileSectionsButton}
       aria-label="List of Profile sections"
       title="Sections list"
-      onClick={openProfileMenu}
+      onClick={() => openProfileMenu(dispatch)}
     >
       <SvgIcon name="list" />
     </button>
   );
 };
 export default AccountMenuIcon;
+
+function openProfileMenu(dispatch) {
+  const payload = {
+    isProfileMenuActive: true,
+    isOverlayActive: true,
+  };
+  dispatch(multiUpdateGlobalState(payload));
+}

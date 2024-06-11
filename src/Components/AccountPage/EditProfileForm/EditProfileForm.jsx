@@ -32,33 +32,7 @@ const EditProfileForm = () => {
     });
     checkEmailValidation(emailInput);
     checkPasswordInputs(passwordInputs, loginInfo.password);
-    updateUserInfo();
-  }
-
-  function updateUserInfo() {
-    const formEle = formRef.current;
-    const inputs = formEle.querySelectorAll("input");
-    const isFormValid = checkAreInputsValid(inputs);
-
-    if (!isFormValid) return;
-
-    const updatedUserData = {
-      username: `${inputs[0].value} ${inputs[1].value}`,
-      emailOrPhone: inputs[2].value,
-      address: inputs[3].value,
-      password: inputs[5].value,
-    };
-
-    if (updatedUserData.password === "") delete updatedUserData.password;
-
-    dispatch(updateUserData({ updatedUserData }));
-    updateUserInfoAlert();
-  }
-
-  function updateUserInfoAlert() {
-    const alertText = t("toastAlert.accountInfoUpdated");
-    const alertState = "success";
-    setTimeout(() => dispatch(showAlert({ alertText, alertState })), 300);
+    updateUserInfo(formRef, dispatch, t);
   }
 
   return (
@@ -75,3 +49,29 @@ const EditProfileForm = () => {
   );
 };
 export default EditProfileForm;
+
+function updateUserInfo(formRef, dispatch, t) {
+  const formEle = formRef.current;
+  const inputs = formEle.querySelectorAll("input");
+  const isFormValid = checkAreInputsValid(inputs);
+
+  if (!isFormValid) return;
+
+  const updatedUserData = {
+    username: `${inputs[0].value} ${inputs[1].value}`,
+    emailOrPhone: inputs[2].value,
+    address: inputs[3].value,
+    password: inputs[5].value,
+  };
+
+  if (updatedUserData.password === "") delete updatedUserData.password;
+
+  dispatch(updateUserData({ updatedUserData }));
+  updateUserInfoAlert(dispatch, t);
+}
+
+function updateUserInfoAlert(dispatch, t) {
+  const alertText = t("toastAlert.accountInfoUpdated");
+  const alertState = "success";
+  setTimeout(() => dispatch(showAlert({ alertText, alertState })), 300);
+}
