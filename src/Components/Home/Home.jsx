@@ -5,7 +5,7 @@ import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import FeaturedSectionFeatures from "./FeaturedSection/FeaturedSectionFeatures";
 import s from "./Home.module.scss";
 import MainSlider from "./Introduction/MainSlider";
-import SectionsMenu from "./Introduction/SectionsMenu";
+import SectionsMenu from "./Introduction/SectionsMenu/SectionsMenu";
 import OurProductsSection from "./OurProductsSection/OurProductsSection";
 import ProductPoster from "./ProductPoster/ProductPoster";
 import ThisMonthSection from "./ThisMonthSection/ThisMonthSection";

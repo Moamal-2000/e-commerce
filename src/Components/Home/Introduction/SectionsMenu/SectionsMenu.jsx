@@ -8,8 +8,9 @@ import {
 } from "src/Data/staticData";
 import { multiUpdateGlobalState } from "src/Features/globalSlice";
 import { camelCase } from "src/Functions/helper";
-import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
-import DropDownMenu from "./DropDownMenu";
+import SvgIcon from "../../../Shared/MiniComponents/SvgIcon";
+import DropDownMenu from "../DropDownMenu";
+import OtherSections from "./OtherSections";
 import s from "./SectionsMenu.module.scss";
 
 const SectionsMenu = () => {
@@ -71,16 +72,7 @@ const SectionsMenu = () => {
           </ul>
         </DropDownMenu>
 
-        {otherSectionsMenuItems.map((item, index) => {
-          const itemName = camelCase(item.name);
-          const itemTrans = t("sectionsMenu.otherSections." + itemName);
-
-          return (
-            <a href={item.url} key={`item-${index}`}>
-              {itemTrans}
-            </a>
-          );
-        })}
+        <OtherSections data={otherSectionsMenuItems} />
       </nav>
     </>
   );
