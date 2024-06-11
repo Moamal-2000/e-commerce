@@ -9,7 +9,7 @@ import {
 import { multiUpdateGlobalState } from "src/Features/globalSlice";
 import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../../Shared/MiniComponents/SvgIcon";
-import DropDownMenu from "../DropDownMenu";
+import DropDownMenu from "./DropDownMenu";
 import OtherSections from "./OtherSections";
 import s from "./SectionsMenu.module.scss";
 
