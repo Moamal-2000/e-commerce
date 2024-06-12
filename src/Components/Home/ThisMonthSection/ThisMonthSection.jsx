@@ -9,14 +9,6 @@ const ThisMonthSection = () => {
   const { t } = useTranslation();
   const thisMonthSection = "sectionTitles.thisMonthSection";
 
-  function filterThisMonthProducts() {
-    const filteredProducts = productsData.filter(
-      (productData) => productData.sold > 1000
-    );
-
-    return filteredProducts;
-  }
-
   return (
     <section className={s.thisMonthSection}>
       <div className={s.wrapper}>
@@ -35,3 +27,11 @@ const ThisMonthSection = () => {
   );
 };
 export default ThisMonthSection;
+
+function filterThisMonthProducts() {
+  const filteredProducts = productsData.filter(
+    (productData) => productData.sold > 1000
+  );
+
+  return filteredProducts;
+}

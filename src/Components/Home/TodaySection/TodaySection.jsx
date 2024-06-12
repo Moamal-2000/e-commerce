@@ -10,9 +10,6 @@ const TodaySection = () => {
   const todaysSection = "sectionTitles.todaysSection";
   const { t } = useTranslation();
 
-  const filterFlashSalesProducts = () =>
-    productsData.filter((productData) => productData.sold > 100);
-
   return (
     <section className={s.todaysSection} id="todays-section">
       <div className={s.wrapper}>
@@ -32,3 +29,7 @@ const TodaySection = () => {
   );
 };
 export default TodaySection;
+
+function filterFlashSalesProducts() {
+  return productsData.filter((productData) => productData.sold > 100);
+}
