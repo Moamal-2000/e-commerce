@@ -10,12 +10,11 @@ const CartProduct = ({ data }) => {
   const subTotal = (quantity * priceAfterDiscount).toFixed(2);
   const { t } = useTranslation();
 
-  function translateProduct(key, uppercase, dynamicData = {}) {
-    const shortNameKey = shortName.replaceAll(" ", "");
-    const productTrans = `products.${shortNameKey}`;
-    const translateText = t(`${productTrans}.${key}`, dynamicData);
-    return uppercase ? translateText.toUpperCase() : translateText;
-  }
+  const translatedProductName = translateProduct({
+    productName: shortName,
+    translateMethod: t,
+    translateKey: "shortName",
+  });
 
   return (
     <tr className={s.productContainer}>
@@ -25,9 +24,7 @@ const CartProduct = ({ data }) => {
           <RemoveCartProductBtn productId={id} />
         </div>
 
-        <Link to={`/details?product=${name}`}>
-          {translateProduct("shortName")}
-        </Link>
+        <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
       </td>
 
       <td className={s.price}>${afterDiscount}</td>
@@ -41,3 +38,19 @@ const CartProduct = ({ data }) => {
   );
 };
 export default CartProduct;
+
+export function translateProduct({
+  productName,
+  translateMethod,
+  translateKey,
+  uppercase = false,
+  dynamicData = {},
+}) {
+  const shortNameKey = productName?.replaceAll(" ", "");
+  const productTrans = `products.${shortNameKey}`;
+  const translateText = translateMethod(
+    `${productTrans}.${translateKey}`,
+    dynamicData
+  );
+  return uppercase ? translateText.toUpperCase() : translateText;
+}

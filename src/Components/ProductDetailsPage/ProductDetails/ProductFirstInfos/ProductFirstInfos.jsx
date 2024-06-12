@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { translateProduct } from "../../../Cart/CartProducts/CartProduct";
 import RateStars from "../../../Shared/MidComponents/RateStars/RateStars";
 import s from "./ProductFirstInfos.module.scss";
 
@@ -6,16 +7,22 @@ const ProductFirstInfos = ({ data }) => {
   const { shortName, price, votes, rate } = data;
   const { t } = useTranslation();
 
-  function translateProduct(key, uppercase, dynamicData = {}) {
-    const shortNameKey = shortName.replaceAll(" ", "");
-    const productTrans = `products.${shortNameKey}`;
-    const translateText = t(`${productTrans}.${key}`, dynamicData);
-    return uppercase ? translateText.toUpperCase() : translateText;
-  }
+  const translatedProductName = translateProduct({
+    productName: shortName,
+    translateMethod: t,
+    translateKey: "name",
+    uppercase: true,
+  });
+
+  const translatedDescription = translateProduct({
+    productName: shortName,
+    translateMethod: t,
+    translateKey: "description",
+  });
 
   return (
     <section className={s.firstInfos}>
-      <h2 className={s.productName}>{translateProduct("name", true)}</h2>
+      <h2 className={s.productName}>{translatedProductName}</h2>
 
       <div className={s.rateAndReviews}>
         <RateStars rate={rate} />
@@ -30,7 +37,7 @@ const ProductFirstInfos = ({ data }) => {
         ${price}
       </span>
 
-      <p className={s.description}>{translateProduct("description")}</p>
+      <p className={s.description}>{translatedDescription}</p>
     </section>
   );
 };

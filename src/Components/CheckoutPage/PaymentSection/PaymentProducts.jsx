@@ -1,16 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { translateProduct } from "../../Cart/CartProducts/CartProduct";
 import s from "./PaymentProducts.module.scss";
 
 const PaymentProducts = ({ data }) => {
   const { t } = useTranslation();
-
-  function translateProduct(key, shortName, uppercase, dynamicData = {}) {
-    const shortNameKey = shortName.replaceAll(" ", "");
-    const productTrans = `products.${shortNameKey}`;
-    const translateText = t(`${productTrans}.${key}`, dynamicData);
-    return uppercase ? translateText.toUpperCase() : translateText;
-  }
 
   return (
     <div className={s.products}>
@@ -18,7 +12,14 @@ const PaymentProducts = ({ data }) => {
         <Link to={`/details?product=${name}`} key={id} className={s.product}>
           <div className={s.wrapper}>
             <img src={img} alt={shortName} />
-            <span>{translateProduct("shortName", shortName)}</span>
+
+            <span>
+              {translateProduct({
+                productName: shortName,
+                translateMethod: t,
+                translateKey: "shortName",
+              })}
+            </span>
           </div>
 
           <span className={s.price}>${afterDiscount}</span>

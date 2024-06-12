@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { translateProduct } from "../../../Cart/CartProducts/CartProduct";
 import RateStars from "../../MidComponents/RateStars/RateStars";
 import ProductColors from "../../MiniComponents/ProductColors/ProductColors";
 import s from "./ProductCardInfo.module.scss";
@@ -8,20 +9,20 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
     product;
   const { t } = useTranslation();
 
-  function translateProduct(key, uppercase, dynamicData = {}) {
-    const shortNameKey = shortName.replaceAll(" ", "");
-    const productTrans = `products.${shortNameKey}`;
-    const translateText = t(`${productTrans}.${key}`, dynamicData);
-    return uppercase ? translateText.toUpperCase() : translateText;
-  }
+  const translatedProductName = translateProduct({
+    productName: shortName,
+    translateMethod: t,
+    translateKey: "shortName",
+  });
 
   return (
     <section className={s.productInfo}>
       <strong className={s.productName}>
         <a href="#" onClick={() => navigateToProductDetails()}>
-          {translateProduct("shortName")}
+          {translatedProductName}
         </a>
       </strong>
+
       <div className={s.price}>
         ${afterDiscount}
         {discount > 0 && <del className={s.afterDiscount}>${price}</del>}
@@ -29,7 +30,6 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
 
       <div className={s.rateContainer}>
         <RateStars rate={rate} />
-
         <span className={s.numOfVotes}>({votes})</span>
       </div>
 

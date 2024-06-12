@@ -13,19 +13,6 @@ const CartInfoMenu = () => {
   const navigateTo = useNavigate();
   const dispatch = useDispatch();
 
-  function handleCheckoutBtn() {
-    const isThereAnyCartItem = cartProducts.length > 0;
-
-    if (isThereAnyCartItem) navigateTo("/checkout");
-    else showEmptyCartAlert();
-  }
-
-  function showEmptyCartAlert() {
-    const alertText = t("toastAlert.cartEmpty");
-    const alertState = "warning";
-    dispatch(showAlert({ alertText, alertState }));
-  }
-
   return (
     <div className={s.menu} role="region" aria-labelledby="cart-summary">
       <b>{t(`${cartInfo}.cartTotal`)}</b>
@@ -49,10 +36,26 @@ const CartInfoMenu = () => {
         </div>
       </div>
 
-      <button type="button" onClick={handleCheckoutBtn}>
+      <button
+        type="button"
+        onClick={() => handleCheckoutBtn(cartProducts, navigateTo, dispatch, t)}
+      >
         {t("buttons.processToCheckout")}
       </button>
     </div>
   );
 };
 export default CartInfoMenu;
+
+function handleCheckoutBtn(cartProducts, navigateTo, dispatch, t) {
+  const isThereAnyCartItem = cartProducts.length > 0;
+
+  if (isThereAnyCartItem) navigateTo("/checkout");
+  else showEmptyCartAlert(dispatch, t);
+}
+
+function showEmptyCartAlert(dispatch, t) {
+  const alertText = t("toastAlert.cartEmpty");
+  const alertState = "warning";
+  dispatch(showAlert({ alertText, alertState }));
+}
