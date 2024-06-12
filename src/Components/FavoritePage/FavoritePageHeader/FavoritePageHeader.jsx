@@ -11,29 +11,32 @@ const FavoritePageHeader = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const numberOfProducts = favoritesProducts.length;
-  const labelTrans = t("favoritePage.title", {numberOfProducts});
-
-  function moveAllToCart() {
-    const uniqueCartProducts = getUniqueArrayByObjectKey({
-      arr: cartProducts,
-      newArr: favoritesProducts,
-      key: "shortName",
-    });
-
-    dispatch(updateProductsState({ key: "favoritesProducts", value: [] }));
-    dispatch(
-      updateProductsState({ key: "cartProducts", value: uniqueCartProducts })
-    );
-  }
+  const labelTrans = t("favoritePage.title", { numberOfProducts });
 
   return (
     <header className={s.header}>
       <label htmlFor="wishlist">{labelTrans}</label>
 
-      <button type="button" onClick={moveAllToCart}>
+      <button
+        type="button"
+        onClick={() => moveAllToCart(cartProducts, favoritesProducts, dispatch)}
+      >
         {t("buttons.moveAllToBag")}
       </button>
     </header>
   );
 };
 export default FavoritePageHeader;
+
+function moveAllToCart(cartProducts, favoritesProducts, dispatch) {
+  const uniqueCartProducts = getUniqueArrayByObjectKey({
+    arr: cartProducts,
+    newArr: favoritesProducts,
+    key: "shortName",
+  });
+
+  dispatch(updateProductsState({ key: "favoritesProducts", value: [] }));
+  dispatch(
+    updateProductsState({ key: "cartProducts", value: uniqueCartProducts })
+  );
+}
