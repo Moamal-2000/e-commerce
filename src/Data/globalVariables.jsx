@@ -51,6 +51,6 @@ export const PRODUCT_SIZES = [
 ];
 
 export const regexPatterns = {
-  email: /^\w+@\w+\.\w+$/,
+  email: /^[0-9a-zA-Z._]+@[a-z]+\.[a-z]+$/,
   price: /\B(?=(\d{3})+(?!\d))/g,
 };
