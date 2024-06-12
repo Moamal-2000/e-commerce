@@ -55,8 +55,8 @@ const CheckoutPage = () => {
           <PagesHistory history={pageHistory} historyPaths={historyPaths} />
 
           <form
-            className={s.checkoutPageContent}
             method="POST"
+            className={s.checkoutPageContent}
             onSubmit={handleSubmitPayment}
           >
             <BillingDetails inputsData={{ billingValues, handleChange }} />

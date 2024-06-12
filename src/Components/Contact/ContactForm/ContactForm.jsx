@@ -11,31 +11,8 @@ const ContactForm = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    resetForm(e);
-    showSentMsgAlert();
-  }
-
-  function resetForm(e) {
-    const resetButton = e.target.querySelector("button[type=reset]");
-    resetButton?.click();
-    setPhone("");
-  }
-
-  function showSentMsgAlert() {
-    setTimeout(() => {
-      dispatch(
-        showAlert({
-          alertText: t("toastAlert.messageSent"),
-          alertState: "success",
-        })
-      );
-    }, 1200);
-  }
-
-  function handleMobileOnChange(e) {
-    const pressedKey = e.nativeEvent.data;
-    const isNumber = !isNaN(parseInt(pressedKey));
-    if (isNumber || pressedKey === null) setPhone(e.target.value);
+    resetForm(e, setPhone);
+    showSentMsgAlert(dispatch, t);
   }
 
   return (
@@ -84,7 +61,7 @@ const ContactForm = () => {
               id="phone"
               required
               aria-required="true"
-              onChange={handleMobileOnChange}
+              onChange={(e) => handleMobileOnChange(e, setPhone)}
               value={phone}
             />
           </div>
@@ -108,3 +85,24 @@ const ContactForm = () => {
   );
 };
 export default ContactForm;
+
+function resetForm(e, setPhone) {
+  const resetButton = e.target.querySelector("button[type=reset]");
+  resetButton?.click();
+  setPhone("");
+}
+
+function handleMobileOnChange(e, setPhone) {
+  const pressedKey = e.nativeEvent.data;
+  const isNumber = !isNaN(parseInt(pressedKey));
+  if (isNumber || pressedKey === null) setPhone(e.target.value);
+}
+
+function showSentMsgAlert(dispatch, t) {
+  const action = showAlert({
+    alertText: t("toastAlert.messageSent"),
+    alertState: "success",
+  });
+
+  setTimeout(() => dispatch(action), 1200);
+}
