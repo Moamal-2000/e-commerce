@@ -6,6 +6,7 @@ const DropDownMenu = ({ nameMenu, children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeClass = isMenuOpen ? s.active : "";
   const ariaLabel = isMenuOpen ? "Close submenu" : "Open submenu";
+
   const dropDownMenuAttributes = {
     className: s.dropDownMenu,
     onClick: handleToggleMenu,

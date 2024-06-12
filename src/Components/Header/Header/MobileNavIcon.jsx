@@ -6,19 +6,11 @@ import s from "./MobileNavIcon.module.scss";
 const MobileNavIcon = () => {
   const dispatch = useDispatch();
 
-  function openMobileNav() {
-    const payload = {
-      isMobileMenuActive: true,
-      isOverlayActive: true,
-    };
-    dispatch(multiUpdateGlobalState(payload));
-  }
-
   return (
     <button
       type="button"
       className={s.mobileNav}
-      onClick={openMobileNav}
+      onClick={() => openMobileNav(dispatch)}
       aria-label="Toggle navigation menu"
     >
       <SvgIcon name="burgerMenu" />
@@ -26,3 +18,11 @@ const MobileNavIcon = () => {
   );
 };
 export default MobileNavIcon;
+
+function openMobileNav(dispatch) {
+  const payload = {
+    isMobileMenuActive: true,
+    isOverlayActive: true,
+  };
+  dispatch(multiUpdateGlobalState(payload));
+}

@@ -1,0 +1,56 @@
+@import "src/Styles/mixins";
+
+.sectionsMenuButton {
+  position: absolute;
+  left: 20px;
+  top: 123px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+  transition: opacity .2s, fill .2s;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  &:focus-visible>svg {
+    fill: var(--orange-degree2);
+  }
+}
+
+@include large {
+  .sectionsMenuButton {
+    display: block;
+  }
+}
+
+@include medium {
+  .sectionsMenuButton {
+    top: 129px;
+  }
+}
+
+@include very-small {
+  .sectionsMenuButton {
+    left: 10px;
+  }
+}
+
+.sectionsMenuButton>svg {
+  width: 25px;
+  height: 25px;
+}
+
+// Arabic styles
+[lang=ar] .sectionsMenuButton {
+  top: 120px;
+}
+
+@include medium {
+  [lang=ar] .sectionsMenuButton {
+    top: 126px;
+  }
+}

@@ -18,12 +18,8 @@ const FeaturedSectionPosters = () => {
   const smallPoster1DescTrans = t("featuredSection.smallPoster1.description");
   const smallPoster2TitleTrans = t("featuredSection.smallPoster2.title");
   const smallPoster2DescTrans = t("featuredSection.smallPoster2.description");
-  const horizontalPosterTitleTrans = t(
-    "featuredSection.horizontalPoster.title"
-  );
-  const horizontalPosterDescTrans = t(
-    "featuredSection.horizontalPoster.description"
-  );
+  const horizontalPosterTitleTrans = t("featuredSection.horizontalPoster.title");
+  const horizontalPosterDescTrans = t("featuredSection.horizontalPoster.description");
 
   return (
     <div className={s.posters}>
