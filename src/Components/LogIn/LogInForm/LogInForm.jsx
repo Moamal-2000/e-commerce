@@ -21,15 +21,15 @@ const LogInForm = () => {
     e.preventDefault();
 
     if (!isWebsiteOnline) {
-      internetConnectionAlert();
+      internetConnectionAlert(dispatch, t);
       return;
     }
 
     const isFormValid = simpleValidationCheck(inputs);
     if (!isFormValid) return;
 
-    const dataByEmail = filterLoginByEmailOrPhone();
-    const isCorrectLoginData = checkLoginPassword(dataByEmail);
+    const dataByEmail = filterLoginByEmailOrPhone(signedUpUsers, emailOrPhone);
+    const isCorrectLoginData = checkLoginPassword(dataByEmail, password);
 
     const formDataObj = new FormData(e.target);
     const formData = {};
@@ -39,35 +39,8 @@ const LogInForm = () => {
 
     if (isCorrectLoginData) {
       dispatch(newSignUp(signedUpUsers));
-      logInAlert();
+      logInAlert(dispatch, t);
     }
-  }
-
-  function filterLoginByEmailOrPhone() {
-    return signedUpUsers?.filter(
-      (user) => user.emailOrPhone === emailOrPhone.current
-    );
-  }
-
-  function checkLoginPassword(filteredUsersData) {
-    const isPasswordValid = filteredUsersData[0]?.password === password.current;
-    return isPasswordValid;
-  }
-
-  function logInAlert() {
-    const alertText = t("toastAlert.loginSuccess");
-    const alertState = "success";
-
-    setTimeout(() => {
-      dispatch(showAlert({ alertText, alertState }));
-    }, 1500);
-  }
-
-  function internetConnectionAlert() {
-    const alertText = t("toastAlert.loginFailed");
-    const alertState = "error";
-
-    dispatch(showAlert({ alertText, alertState }));
   }
 
   return (
@@ -107,3 +80,29 @@ const LogInForm = () => {
   );
 };
 export default LogInForm;
+
+function checkLoginPassword(filteredUsersData, passwordRef) {
+  const isPasswordValid =
+    filteredUsersData[0]?.password === passwordRef.current;
+  return isPasswordValid;
+}
+
+function filterLoginByEmailOrPhone(signedUpUsers, emailOrPhoneRef) {
+  return signedUpUsers?.filter(
+    (user) => user.emailOrPhone === emailOrPhoneRef.current
+  );
+}
+
+function logInAlert(dispatch, t) {
+  const alertText = t("toastAlert.loginSuccess");
+  const alertState = "success";
+
+  setTimeout(() => dispatch(showAlert({ alertText, alertState })), 1500);
+}
+
+function internetConnectionAlert(dispatch, t) {
+  const alertText = t("toastAlert.loginFailed");
+  const alertState = "error";
+
+  dispatch(showAlert({ alertText, alertState }));
+}
