@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "attr-spacing": "error",
+    "close-order": "error",
+    "element-name": "error",
+    "form-dup-name": "error",
+    "no-raw-characters": "error",
+    "no-redundant-for": "error",
+    "valid-id": "error"
+  }
+}

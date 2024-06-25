@@ -14,6 +14,7 @@
     "@reduxjs/toolkit": "^2.2.5",
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
+    "html-validate": "^8.20.1",
     "i18next": "^23.11.5",
     "i18next-browser-languagedetector": "^8.0.0",
     "i18next-http-backend": "^2.5.2",
