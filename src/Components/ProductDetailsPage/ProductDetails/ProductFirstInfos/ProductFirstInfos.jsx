@@ -3,8 +3,8 @@ import { translateProduct } from "../../../Cart/CartProducts/CartProduct";
 import RateStars from "../../../Shared/MidComponents/RateStars/RateStars";
 import s from "./ProductFirstInfos.module.scss";
 
-const ProductFirstInfos = ({ data }) => {
-  const { shortName, price, votes, rate } = data;
+const ProductFirstInfos = ({ productData }) => {
+  const { shortName, price, votes, rate } = productData;
   const { t } = useTranslation();
 
   const translatedProductName = translateProduct({

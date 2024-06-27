@@ -5,11 +5,11 @@ import { updateGlobalState } from "src/Features/globalSlice";
 import PreviewImages from "./PreviewImages";
 import s from "./ProductPreview.module.scss";
 
-const ProductPreview = ({ data, handleZoomInEffect }) => {
+const ProductPreview = ({ productData, handleZoomInEffect }) => {
   const { previewImg } = useSelector((state) => state.global);
   const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
-  const { img, name, otherImages } = data;
+  const { img, name, otherImages } = productData;
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
 
   function setZoomInPreview(value = false) {

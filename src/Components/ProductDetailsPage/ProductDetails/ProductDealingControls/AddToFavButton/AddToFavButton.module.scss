@@ -1,0 +1,79 @@
+.addToFav {
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 1px solid #00000080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    border-color: var(--tomato);
+  }
+
+  &.active>svg {
+    fill: var(--tomato);
+  }
+
+  &:focus-visible {
+    border-color: var(--orange-degree2);
+  }
+}
+
+.addToFav.active:focus-visible svg {
+  fill: var(--orange-degree2);
+}
+
+.addToFav .heartBackground {
+  --heart-color: var(--tomato);
+
+  position: absolute;
+  top: calc(50% + 8px);
+  left: 50%;
+  translate: -50% -50%;
+  border-style: solid;
+  border-color: var(--heart-color) transparent transparent transparent;
+  border-width: 10px;
+  opacity: 0;
+}
+
+.addToFav.active .heartBackground {
+  opacity: 1;
+}
+
+.addToFav.active:focus-visible .heartBackground {
+  border-top-color: var(--orange-degree2);
+}
+
+.addToFav .heartBackground::before,
+.addToFav .heartBackground::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  background-color: var(--heart-color);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.addToFav.active:focus-visible .heartBackground::before,
+.addToFav.active:focus-visible .heartBackground::after {
+  background-color: var(--orange-degree2);
+}
+
+.addToFav .heartBackground::before {
+  left: -9px;
+}
+
+.addToFav .heartBackground::after {
+  right: -9px;
+}
+
+.addToFav>svg {
+  width: 20px;
+  height: 20px;
+}

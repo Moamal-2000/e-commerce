@@ -10,7 +10,7 @@ import ProductFeatures from "./ProductFeatures/ProductFeatures";
 import ProductFirstInfos from "./ProductFirstInfos/ProductFirstInfos";
 import ProductSizes from "./ProductSizes/ProductSizes";
 
-const ProductDetails = ({ data }) => {
+const ProductDetails = ({ productData }) => {
   const { previewImg, isZoomInPreviewActive, loadingProductDetails } =
     useSelector((state) => state.global);
   const zoomInImgRef = useRef();
@@ -31,20 +31,23 @@ const ProductDetails = ({ data }) => {
     <>
       {!loadingProductDetails && isWebsiteOnline && (
         <section className={s.detailsSection} id="details-section">
-          <ProductPreview data={data} handleZoomInEffect={handleZoomInEffect} />
+          <ProductPreview
+            productData={productData}
+            handleZoomInEffect={handleZoomInEffect}
+          />
 
           <section className={s.details}>
             <div className={`${s.zoomInPreview} ${activeClass}`}>
               <img src={previewImg} alt="product preview" ref={zoomInImgRef} />
             </div>
 
-            <ProductFirstInfos data={data} />
+            <ProductFirstInfos productData={productData} />
 
             <div className={s.horizontalLine} />
 
-            <ProductColorsSection data={data} />
-            {data?.sizes && <ProductSizes data={data} />}
-            <ProductDealingControls data={data} />
+            <ProductColorsSection productData={productData} />
+            {productData?.sizes && <ProductSizes productData={productData} />}
+            <ProductDealingControls productData={productData} />
             <ProductFeatures />
           </section>
         </section>
