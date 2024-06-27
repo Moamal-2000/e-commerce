@@ -1,7 +1,5 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
-import { googleIcon } from "src/Assets/Images/Images";
 import { showAlert } from "src/Features/globalSlice";
 import { newSignUp, setLoginData } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
@@ -10,17 +8,15 @@ import {
   getUniqueArrayByObjectKey,
 } from "src/Functions/helper";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
-import { openSignWithGooglePopUp } from "../SignUpWithGoogle/SignUpWithGooglePopup";
+import SignUpButtons from "./SignUpButtons/SignUpButtons";
 import s from "./SignUpForm.module.scss";
 import SignUpFormInputs from "./SignUpFormInputs/SignUpFormInputs";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
-  const navigateTo = useNavigate();
   const { t } = useTranslation();
   const { signedUpUsers } = useSelector((state) => state.user);
   const isWebsiteOnline = useOnlineStatus();
-  let isSignUpWithGooglePressed = false;
 
   function signUp(e) {
     e.preventDefault();
@@ -55,42 +51,8 @@ const SignUpForm = () => {
 
       dispatch(newSignUp(uniqueSignedUpUsers));
       dispatch(setLoginData(formData));
-      signInAlert();
+      signInAlert(t, dispatch);
     }
-  }
-
-  function handleSignUpWithGoogle() {
-    if (isSignUpWithGooglePressed) return;
-    isSignUpWithGooglePressed = true;
-
-    openSignWithGooglePopUp();
-    setDefaultSignUpData();
-    signInAlert();
-  }
-
-  function setDefaultSignUpData() {
-    const defaultLoginData = {
-      username: "Lily Watson",
-      emailOrPhone: "lily.wastons@gmail.com",
-      password: "random-password1234",
-      isSignIn: true,
-    };
-
-    setTimeout(() => {
-      navigateTo("/");
-      isSignUpWithGooglePressed = false;
-
-      setTimeout(() => dispatch(setLoginData(defaultLoginData)), 500);
-    }, 2500);
-  }
-
-  function signInAlert() {
-    const alertText = t("toastAlert.signInSuccess");
-    const alertState = "success";
-
-    setTimeout(() => {
-      dispatch(showAlert({ alertText, alertState }));
-    }, 1500);
   }
 
   function internetConnectionAlert() {
@@ -107,26 +69,17 @@ const SignUpForm = () => {
 
       <SignUpFormInputs />
 
-      <div className={s.buttons}>
-        <button type="submit" className={s.createAccBtn}>
-          {t("buttons.createAccount")}
-        </button>
-
-        <button
-          type="button"
-          className={s.signUpBtn}
-          onClick={handleSignUpWithGoogle}
-        >
-          <img src={googleIcon} alt="Colored Google icon" />
-          <span>{t("buttons.signUpWithGoogle")}</span>
-        </button>
-
-        <p>
-          <span>{t("loginSignUpPage.alreadyHaveAcc")}</span>
-          <Link to="/login">{t("buttons.login")}</Link>
-        </p>
-      </div>
+      <SignUpButtons />
     </form>
   );
 };
 export default SignUpForm;
+
+export function signInAlert(t, dispatch) {
+  const alertText = t("toastAlert.signInSuccess");
+  const alertState = "success";
+
+  setTimeout(() => {
+    dispatch(showAlert({ alertText, alertState }));
+  }, 1500);
+}

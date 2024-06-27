@@ -54,3 +54,10 @@ export const regexPatterns = {
   email: /^[0-9a-zA-Z._]+@[a-z]+\.[a-z]+$/,
   price: /\B(?=(\d{3})+(?!\d))/g,
 };
+
+export const DEFAULT_LOGIN_DATA = {
+  username: "Lily Watson",
+  emailOrPhone: "lily.wastons@gmail.com",
+  password: "random-password1234",
+  isSignIn: true,
+};

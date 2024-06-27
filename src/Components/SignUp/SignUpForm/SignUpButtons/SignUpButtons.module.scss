@@ -1,0 +1,98 @@
+.createAccBtn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: var(--dark-tomato);
+  border: solid 2px var(--dark-tomato);
+  color: var(--white);
+  font-weight: 500;
+  margin: 40px 0 20px;
+  height: 57.6px;
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--dark-tomato);
+  }
+
+  &:focus-visible {
+    background-color: #db444407;
+    border-color: var(--tomato);
+    color: var(--tomato);
+  }
+}
+
+.signUpBtn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid #00000066;
+  height: 57.6px;
+  transition: border-color .2s;
+
+  &:hover {
+    border-color: var(--dark-gray);
+  }
+
+  &:focus-visible {
+    background-color: #4486db1d;
+  }
+}
+
+.signUpBtn>img {
+  margin-inline-end: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.buttons>p {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 40px auto 0;
+}
+
+.buttons>p>span {
+  display: inline-block;
+  margin-inline-end: 10px;
+}
+
+.buttons>p>a {
+  outline: none;
+  color: var(--primary);
+  position: relative;
+  top: -2px;
+  transition: color .2s;
+
+  &:not(:focus-visible):hover {
+    color: var(--black);
+  }
+
+  &:focus-visible {
+    color: var(--orange-degree2);
+
+    &::before {
+      border-color: var(--orange-degree2);
+    }
+  }
+}
+
+.buttons>p>a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  border-bottom: solid 1px var(--primary);
+  transition: border-color .2s;
+}
+
+.buttons>p>a:hover::before {
+  border-color: var(--black);
+}

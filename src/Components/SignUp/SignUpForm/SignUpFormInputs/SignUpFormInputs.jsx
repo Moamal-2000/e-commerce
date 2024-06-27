@@ -5,11 +5,11 @@ import ShowHidePassword from "../../../Shared/MiniComponents/ShowHidePassword/Sh
 import s from "./SignUpFormInputs.module.scss";
 
 const SignUpFormInputs = () => {
+  const { t } = useTranslation();
+  const dispatch = useDispatch();
   const { username, emailOrPhone, password } = useSelector(
     (state) => state.forms.signUp
   );
-  const { t } = useTranslation();
-  const dispatch = useDispatch();
 
   function updateInputOnChange(e) {
     dispatch(
