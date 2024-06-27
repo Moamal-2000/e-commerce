@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setPreviewImg } from "../PreviewImages";
-import s from "./ProductImages.module.scss"
+import { setPreviewImg } from "./PreviewImages";
+import s from "./ProductImages.module.scss";
 
 const ProductImages = ({ img, productData, index }) => {
   const { previewImg } = useSelector((state) => state.global);
@@ -18,4 +18,4 @@ const ProductImages = ({ img, productData, index }) => {
     </button>
   );
 };
-export default ProductImages
+export default ProductImages;

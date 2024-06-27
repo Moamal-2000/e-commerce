@@ -20,6 +20,7 @@ const ProductsCategoryPage = () => {
   const categoryType = useGetSearchParam("type");
   const categoryTypeTrans = t(`categoriesData.${categoryType}`);
   const isWebsiteOnline = useOnlineStatus();
+
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingCategoryPage",
     actionMethod: updateGlobalState,

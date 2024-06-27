@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSearchParams } from "react-router-dom";
-import { updateGlobalState } from "../../../Features/globalSlice";
+import { updateGlobalState } from "../../../../Features/globalSlice";
 import s from "./PreviewImages.module.scss";
-import ProductImages from "./ProductImages/ProductImages";
+import ProductImages from "./ProductImages";
 
 const PreviewImages = ({ productData }) => {
   const dispatch = useDispatch();

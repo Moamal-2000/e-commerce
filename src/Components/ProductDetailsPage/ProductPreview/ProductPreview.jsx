@@ -1,8 +1,6 @@
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useSearchParams } from "react-router-dom";
 import { updateGlobalState } from "src/Features/globalSlice";
-import PreviewImages from "./PreviewImages";
+import PreviewImages from "./ProductImages/PreviewImages";
 import s from "./ProductPreview.module.scss";
 
 const ProductPreview = ({ productData, handleZoomInEffect }) => {

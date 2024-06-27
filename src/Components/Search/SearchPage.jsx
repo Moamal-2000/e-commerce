@@ -15,6 +15,7 @@ const SearchPage = () => {
   const { loadingSearchProducts } = useSelector((state) => state.global);
   const { searchProducts } = useSelector((state) => state.products);
   const isWebsiteOnline = useOnlineStatus();
+
   useUpdateLoadingState({
     loadingState: loadingSearchProducts,
     loadingKey: "loadingSearchProducts",

@@ -9,9 +9,9 @@ const ProductsCategory = ({ categoryName, customization }) => {
   const categoryProducts = productsData.filter(
     (product) => product.category === categoryName
   );
-  const hasNoProducts = categoryProducts.length === 0;
+  const hasProducts = categoryProducts.length > 0;
 
-  if (hasNoProducts)
+  if (!hasProducts)
     return (
       <div className={s.notFoundMessage}>
         <p>{t("common.weDontHaveProducts")}</p>

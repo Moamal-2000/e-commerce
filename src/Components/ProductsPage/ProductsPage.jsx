@@ -15,6 +15,7 @@ const ProductsPage = () => {
   const { loadingProductsPage } = useSelector((state) => state.global);
   const dispatch = useDispatch();
   const { t } = useTranslation();
+
   useUpdateLoadingState({
     loadingState: loadingProductsPage,
     loadingKey: "loadingProductsPage",
