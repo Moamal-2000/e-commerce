@@ -1,20 +1,29 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useSearchParams } from "react-router-dom";
+import { updateGlobalState } from "../../../Features/globalSlice";
 import s from "./PreviewImages.module.scss";
+import ProductImages from "./ProductImages/ProductImages";
 
-const PreviewImages = ({ data, previewImg, setPreviewImg }) => {
+const PreviewImages = ({ productData }) => {
+  const dispatch = useDispatch();
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    setPreviewImg(productData.otherImages[0], dispatch);
+  }, [searchParams]);
+
   return (
     <div className={s.otherImages}>
-      {data.map((img, i) => (
-        <button
-          key={i}
-          type="button"
-          className={`${s.imgHolder} ${previewImg === img ? s.active : ""}`}
-          onClick={() => setPreviewImg(data[i])}
-        >
-          <img src={img} alt="product's image" />
-        </button>
+      {productData?.otherImages?.map((img, i) => (
+        <ProductImages key={i} img={img} productData={productData} index={i} />
       ))}
     </div>
   );
 };
 
 export default PreviewImages;
+
+export function setPreviewImg(img, dispatch) {
+  dispatch(updateGlobalState({ key: "previewImg", value: img }));
+}

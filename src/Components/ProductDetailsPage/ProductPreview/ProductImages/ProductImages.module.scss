@@ -1,0 +1,45 @@
+.imgHolder {
+  background-color: var(--very-light-gray2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  width: 125px;
+  cursor: pointer;
+  border: solid 1px var(--very-light-gray);
+
+  &:hover,
+  &.active {
+    border-color: #ff7b00;
+    background-color: rgba(255, 166, 0, .08);
+  }
+
+  &:focus-visible {
+    border: solid 2px var(--black);
+  }
+
+  &.active:focus-visible {
+    border: solid 2px #ff7b00;
+  }
+}
+
+@media (max-width: 1400px) {
+  .imgHolder {
+    width: calc((25% - 14px) + (14px / 4));
+    height: auto;
+  }
+}
+
+.imgHolder img {
+  aspect-ratio: 1/1;
+  width: 80%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+@media (max-width: 1400px) {
+  .imgHolder img {
+    width: 80%;
+    height: 80%;
+  }
+}

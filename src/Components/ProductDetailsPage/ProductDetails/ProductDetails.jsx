@@ -21,10 +21,9 @@ const ProductDetails = ({ productData }) => {
     const imgRect = e.target.getClientRects()[0];
     const xPosition = e.clientX - imgRect.left;
     const yPosition = e.clientY - imgRect.top;
+    const positions = `-${xPosition * 2}px, -${yPosition * 2}px`;
 
-    zoomInImgRef.current.style.transform = `translate(-${xPosition * 2}px, -${
-      yPosition * 2
-    }px)`;
+    zoomInImgRef.current.style.transform = `translate(${positions})`;
   }
 
   return (

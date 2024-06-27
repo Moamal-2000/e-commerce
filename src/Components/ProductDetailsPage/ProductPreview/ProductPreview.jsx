@@ -7,32 +7,17 @@ import s from "./ProductPreview.module.scss";
 
 const ProductPreview = ({ productData, handleZoomInEffect }) => {
   const { previewImg } = useSelector((state) => state.global);
-  const [searchParams] = useSearchParams();
   const dispatch = useDispatch();
-  const { img, name, otherImages } = productData;
+  const { name, otherImages } = productData;
   const hasOtherImages = otherImages?.length !== 0 && otherImages;
 
   function setZoomInPreview(value = false) {
     dispatch(updateGlobalState({ key: "isZoomInPreviewActive", value: value }));
   }
 
-  function setPreviewImg(img) {
-    dispatch(updateGlobalState({ key: "previewImg", value: img }));
-  }
-
-  useEffect(() => {
-    setPreviewImg(img);
-  }, [searchParams]);
-
   return (
     <section className={s.images}>
-      {hasOtherImages && (
-        <PreviewImages
-          data={otherImages}
-          previewImg={previewImg}
-          setPreviewImg={setPreviewImg}
-        />
-      )}
+      {hasOtherImages && <PreviewImages productData={productData} />}
 
       <div className={s.previewImgHolder}>
         <img
