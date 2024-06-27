@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
-import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
 import { isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../../Shared/MiniComponents/ToolTip";
 import s from "./ProductDealingControls.module.scss";
+import BuyButton from "./BuyButton/BuyButton";
 
 const ProductDealingControls = ({ data }) => {
   const { favoritesProducts } = useSelector((state) => state.products);
@@ -29,14 +29,6 @@ const ProductDealingControls = ({ data }) => {
   function decreaseQuantity() {
     if (quantity <= MINIMUM_QUANTITY) return;
     setQuantity((prevNumber) => +prevNumber - 1);
-  }
-
-  function handleBuyProduct() {
-    if (loginInfo.isSignIn) return;
-
-    const alertText = t("toastAlert.pageRequiringSignIn");
-    dispatch(showAlert({ alertText, alertState: "warning" }));
-    navigateTo("/signup");
   }
 
   function addProductToFavorite() {
@@ -90,13 +82,7 @@ const ProductDealingControls = ({ data }) => {
       </div>
 
       <div className={s.wrapper}>
-        <button
-          type="button"
-          className={s.buyButton}
-          onClick={handleBuyProduct}
-        >
-          {t("buttons.buyNow")}
-        </button>
+        <BuyButton />
 
         <button
           type="button"
