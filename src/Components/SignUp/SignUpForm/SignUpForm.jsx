@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,18 +10,15 @@ import {
   getUniqueArrayByObjectKey,
 } from "src/Functions/helper";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
-import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import { openSignWithGooglePopUp } from "../SignUpWithGoogle/SignUpWithGooglePopup";
 import s from "./SignUpForm.module.scss";
+import SignUpFormInputs from "./SignUpFormInputs/SignUpFormInputs";
 
 const SignUpForm = () => {
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
   const { t } = useTranslation();
   const { signedUpUsers } = useSelector((state) => state.user);
-  const username = useRef("");
-  const emailOrPhone = useRef("");
-  const password = useRef("");
   const isWebsiteOnline = useOnlineStatus();
   let isSignUpWithGooglePressed = false;
 
@@ -109,35 +105,7 @@ const SignUpForm = () => {
       <h2>{t("loginSignUpPage.createAccount")}</h2>
       <p>{t("loginSignUpPage.enterDetails")}</p>
 
-      <div className={s.inputs}>
-        <input
-          type="text"
-          name="username"
-          placeholder={t("inputsPlaceholders.fullName")}
-          onChange={(e) => (username.current = e.target.value)}
-          required
-          aria-required="true"
-        />
-        <input
-          type="text"
-          name="emailOrPhone"
-          placeholder={t("inputsPlaceholders.emailOrPhone")}
-          onChange={(e) => (emailOrPhone.current = e.target.value)}
-          required
-          aria-required="true"
-        />
-        <div className={s.input}>
-          <input
-            type="password"
-            name="password"
-            placeholder={t("inputsPlaceholders.password")}
-            onChange={(e) => (password.current = e.target.value)}
-            required
-            aria-required="true"
-          />
-          <ShowHidePassword />
-        </div>
-      </div>
+      <SignUpFormInputs />
 
       <div className={s.buttons}>
         <button type="submit" className={s.createAccBtn}>
