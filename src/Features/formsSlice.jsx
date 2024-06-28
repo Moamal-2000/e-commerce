@@ -9,7 +9,7 @@ const initialState = {
   login: {
     emailOrPhone: "",
     password: "",
-  }
+  },
 };
 
 const formSlice = createSlice({
@@ -17,7 +17,6 @@ const formSlice = createSlice({
   name: "formSlice",
   reducers: {
     updateInput: (state, { payload: { formName, key, value } }) => {
-      console.log(state[formName][key]);
       state[formName][key] = value;
     },
   },

@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
@@ -9,12 +8,11 @@ import s from "./LogInForm.module.scss";
 import LogInFormInputs from "./LogInFormInputs/LogInFormInputs";
 
 const LogInForm = () => {
+  const { emailOrPhone, password } = useSelector((state) => state.forms.login);
+  const { signedUpUsers } = useSelector((state) => state.user);
+  const isWebsiteOnline = useOnlineStatus();
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const { signedUpUsers } = useSelector((state) => state.user);
-  const emailOrPhone = useRef();
-  const password = useRef();
-  const isWebsiteOnline = useOnlineStatus();
 
   function login(e) {
     const inputs = e.target.querySelectorAll("input");
@@ -45,7 +43,6 @@ const LogInForm = () => {
 
   return (
     <form className={s.form} onSubmit={login}>
-      <h2></h2>
       <h2>{t("loginSignUpPage.login")}</h2>
       <p>{t("loginSignUpPage.enterDetails")}</p>
 
@@ -62,16 +59,13 @@ const LogInForm = () => {
 };
 export default LogInForm;
 
-function checkLoginPassword(filteredUsersData, passwordRef) {
-  const isPasswordValid =
-    filteredUsersData[0]?.password === passwordRef.current;
+function checkLoginPassword(filteredUsersData, password) {
+  const isPasswordValid = filteredUsersData[0]?.password === password;
   return isPasswordValid;
 }
 
-function filterLoginByEmailOrPhone(signedUpUsers, emailOrPhoneRef) {
-  return signedUpUsers?.filter(
-    (user) => user.emailOrPhone === emailOrPhoneRef.current
-  );
+function filterLoginByEmailOrPhone(signedUpUsers, emailOrPhone) {
+  return signedUpUsers?.filter((user) => user.emailOrPhone === emailOrPhone);
 }
 
 function logInAlert(dispatch, t) {

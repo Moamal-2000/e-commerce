@@ -13,10 +13,10 @@ import s from "./SignUpForm.module.scss";
 import SignUpFormInputs from "./SignUpFormInputs/SignUpFormInputs";
 
 const SignUpForm = () => {
-  const dispatch = useDispatch();
-  const { t } = useTranslation();
   const { signedUpUsers } = useSelector((state) => state.user);
   const isWebsiteOnline = useOnlineStatus();
+  const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   function signUp(e) {
     e.preventDefault();
