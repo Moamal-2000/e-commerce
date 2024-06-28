@@ -1,0 +1,25 @@
+.buttons {
+  margin-inline-start: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline-end: 8px;
+}
+
+.buttons>button {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 4px 6px;
+  padding-top: 6px;
+}
+
+.buttons>button:last-child {
+  rotate: 180deg;
+  margin-inline-start: .5px;
+}
+
+.buttons>button>svg {
+  width: 10px;
+}

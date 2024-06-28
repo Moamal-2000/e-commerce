@@ -22,9 +22,7 @@ const ConnectionLabelAlert = ({ isOnline }) => {
   }, [isOnline]);
 
   return (
-    <div className={`${s.labelBody} ${activeClass} ${showClass}`}>
-      <p>{message}</p>
-    </div>
+    <p className={`${s.labelBody} ${activeClass} ${showClass}`}>{message}</p>
   );
 };
 export default ConnectionLabelAlert;

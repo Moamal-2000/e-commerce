@@ -1,24 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
-import { updateProductsState } from "src/Features/productsSlice";
-import SvgIcon from "../SvgIcon";
 import s from "./CustomNumberInput.module.scss";
+import CustomNumberInputButtons, {
+  updateProductQuantity,
+} from "./CustomNumberInputButtons/CustomNumberInputButtons";
 
 const CustomNumberInput = ({ product, quantity }) => {
   const { cartProducts } = useSelector((state) => state.products);
   const dispatch = useDispatch();
-
-  function handleUpdateQuantity(state) {
-    const isDecrease = state === "decrease";
-    const updatedProduct = { ...product };
-    const isBelowMinimum = quantity <= MINIMUM_QUANTITY && isDecrease;
-    const isAboveMaximum = quantity >= MAXIMUM_QUANTITY && !isDecrease;
-
-    if (isBelowMinimum || isAboveMaximum) return;
-
-    updatedProduct.quantity += isDecrease ? -1 : 1;
-    updateProductQuantity(updatedProduct);
-  }
 
   function handleChangeQuantityInput(e) {
     const inputValue = parseInt(e.target.value);
@@ -37,26 +26,8 @@ const CustomNumberInput = ({ product, quantity }) => {
       updatedProduct.quantity = inputValue;
     }
 
-    updateProductQuantity(updatedProduct);
+    updateProductQuantity(updatedProduct, cartProducts, dispatch);
     return updatedProduct.quantity;
-  }
-
-  function updateProductQuantity(updatedProduct) {
-    const indexToUpdate = cartProducts.findIndex(
-      (item) => item.id == updatedProduct.id
-    );
-
-    if (indexToUpdate === -1) return;
-
-    const updatedCartProducts = [...cartProducts];
-    updatedCartProducts[indexToUpdate] = updatedProduct;
-
-    dispatch(
-      updateProductsState({
-        key: "cartProducts",
-        value: updatedCartProducts,
-      })
-    );
   }
 
   return (
@@ -70,25 +41,7 @@ const CustomNumberInput = ({ product, quantity }) => {
         max={MAXIMUM_QUANTITY}
       />
 
-      <div className={s.buttons}>
-        <button
-          type="button"
-          aria-label="Increase quantity"
-          onClick={() => handleUpdateQuantity("increase")}
-          tabIndex="-1"
-        >
-          <SvgIcon name="arrowUp" />
-        </button>
-
-        <button
-          type="button"
-          aria-label="Decrease quantity"
-          onClick={() => handleUpdateQuantity("decrease")}
-          tabIndex="-1"
-        >
-          <SvgIcon name="arrowUp" />
-        </button>
-      </div>
+      <CustomNumberInputButtons product={product} quantity={quantity} />
     </div>
   );
 };
