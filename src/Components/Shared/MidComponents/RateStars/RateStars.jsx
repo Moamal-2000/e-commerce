@@ -5,29 +5,9 @@ import s from "./RateStars.module.scss";
 
 const RateStars = ({ rate }) => {
   const isRateFound = rate !== undefined || rate !== null;
-  const fixedRate = Math.floor(rate);
-  const maxNumberOfRate = 5;
-  const rateMessage = `Rate of the product is ${rate} of 5 stars`;
+  const rateMessage = `product rate is ${rate} of 5 stars`;
 
   if (!isRateFound) throw new Error("Rate value is undefined or null");
-
-  function getRateStars() {
-    let isHalfStarRendered = false;
-
-    return Array.from({ length: maxNumberOfRate }, (_, i) => {
-      const key = `star-${i}`;
-
-      if (fixedRate > i) {
-        return <img key={key} src={coloredStar} alt="star" />;
-      }
-      if (isDecimalNumber(rate) && !isHalfStarRendered) {
-        isHalfStarRendered = true;
-        return <SvgIcon name="halfStar" key={key} />;
-      }
-
-      return <img key={key} src={uncoloredStar} alt="star" />;
-    });
-  }
 
   return (
     <div
@@ -35,9 +15,28 @@ const RateStars = ({ rate }) => {
       title={rateMessage}
       aria-label={`Rating: ${rate} stars`}
     >
-      {getRateStars()}
+      {getRateStars(rate)}
     </div>
   );
 };
 
 export default RateStars;
+
+function getRateStars(rate, maximumStars = 5) {
+  const fixedRate = Math.floor(rate);
+  let isHalfStarRendered = false;
+
+  return Array.from({ length: maximumStars }, (_, i) => {
+    const key = `star-${i}`;
+
+    if (fixedRate > i) {
+      return <img key={key} src={coloredStar} alt="star" />;
+    }
+    if (isDecimalNumber(rate) && !isHalfStarRendered) {
+      isHalfStarRendered = true;
+      return <SvgIcon name="halfStar" key={key} />;
+    }
+
+    return <img key={key} src={uncoloredStar} alt="star" />;
+  });
+}
