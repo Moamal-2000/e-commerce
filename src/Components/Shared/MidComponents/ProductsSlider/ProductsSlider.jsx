@@ -1,9 +1,9 @@
 import { useRef } from "react";
 import { productsData } from "src/Data/productsData";
 import useSlider from "src/Hooks/App/useSlider";
-import SvgIcon from "../../MiniComponents/SvgIcon";
 import ProductCard from "../../ProductsCards/ProductCard/ProductCard";
 import s from "./ProductsSlider.module.scss";
+import SliderButtons from "./SliderButtons/SliderButtons";
 
 const ProductsSlider = ({ filterFun = () => productsData, customization }) => {
   const filteredProducts = filterFun();
@@ -12,25 +12,12 @@ const ProductsSlider = ({ filterFun = () => productsData, customization }) => {
 
   return (
     <>
-      <div className={s.sliderButtons}>
-        <button
-          type="button"
-          onClick={handlePrevBtn}
-          aria-label="Previous button for slider"
-        >
-          <SvgIcon name="arrowLeftShort" />
-        </button>
+      <SliderButtons
+        handleNextBtn={handleNextBtn}
+        handlePrevBtn={handlePrevBtn}
+      />
 
-        <button
-          type="button"
-          onClick={handleNextBtn}
-          aria-label="Next button for slider"
-        >
-          <SvgIcon name="arrowRightShort" />
-        </button>
-      </div>
-
-      <div className={s.productsSlider} ref={sliderRef} draggable={true}>
+      <div className={s.productsSlider} ref={sliderRef}>
         {filteredProducts.map((product) => (
           <ProductCard
             product={product}
