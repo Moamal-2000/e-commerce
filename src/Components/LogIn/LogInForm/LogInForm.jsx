@@ -5,8 +5,8 @@ import { showAlert } from "src/Features/globalSlice";
 import { newSignUp } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
-import ShowHidePassword from "../../Shared/MiniComponents/ShowHidePassword/ShowHidePassword";
 import s from "./LogInForm.module.scss";
+import LogInFormInputs from "./LogInFormInputs/LogInFormInputs";
 
 const LogInForm = () => {
   const { t } = useTranslation();
@@ -49,26 +49,7 @@ const LogInForm = () => {
       <h2>{t("loginSignUpPage.login")}</h2>
       <p>{t("loginSignUpPage.enterDetails")}</p>
 
-      <div className={s.inputs}>
-        <input
-          type="text"
-          name="emailOrPhone"
-          placeholder={t("inputsPlaceholders.emailOrPhone")}
-          onChange={(e) => (emailOrPhone.current = e.target.value)}
-          aria-required="false"
-        />
-
-        <div className={s.input}>
-          <input
-            type="password"
-            name="Password"
-            placeholder={t("inputsPlaceholders.password")}
-            onChange={(e) => (password.current = e.target.value)}
-            aria-required="false"
-          />
-          <ShowHidePassword />
-        </div>
-      </div>
+      <LogInFormInputs />
 
       <div className={s.buttons}>
         <button type="submit" className={s.loginBtn}>

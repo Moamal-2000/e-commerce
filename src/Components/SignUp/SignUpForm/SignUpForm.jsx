@@ -68,7 +68,6 @@ const SignUpForm = () => {
       <p>{t("loginSignUpPage.enterDetails")}</p>
 
       <SignUpFormInputs />
-
       <SignUpButtons />
     </form>
   );

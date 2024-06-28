@@ -1,0 +1,47 @@
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.input {
+  position: relative;
+}
+
+.inputs input {
+  border: none;
+  outline: none;
+  border-bottom: solid 1px var(--dark-gray);
+  padding-bottom: 8px;
+  color: var(--black);
+  width: 100%;
+  transition: border-color .1s;
+
+  &:focus {
+    border-block-color: var(--black);
+  }
+
+  &::placeholder {
+    transition: color .1s;
+  }
+
+  &[class=invalid] {
+    border-bottom-color: var(--dark-tomato);
+
+    &::placeholder {
+      color: var(--dark-tomato);
+    }
+  }
+
+  &:not(:placeholder-shown) {
+    border-bottom-color: var(--dark-gray);
+  }
+
+  &:focus::placeholder {
+    color: var(--black) !important;
+  }
+}
+
+.inputs input::placeholder {
+  color: var(--regular-light-gray);
+}
