@@ -2,8 +2,7 @@ import { useTranslation } from "react-i18next";
 import SvgIcon from "../SvgIcon";
 import s from "./InfoCard.module.scss";
 
-const InfoCard = ({ data, index }) => {
-  const { iconName, number } = data;
+const InfoCard = ({ data: { iconName, number }, index }) => {
   const { t } = useTranslation();
 
   return (

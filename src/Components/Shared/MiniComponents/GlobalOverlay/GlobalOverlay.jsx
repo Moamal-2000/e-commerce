@@ -11,7 +11,9 @@ const GlobalOverlay = () => {
     useSelector((state) => state.global);
   const activeClass = isOverlayActive ? s.active : "";
 
-  function handleOverlayClick() {
+  function handleOverlayClick(e) {
+    if (e.key === "Enter") return;
+
     const closeMenuAndOverlayAction = multiUpdateGlobalState({
       isSectionsMenuActive: false,
       isOverlayActive: false,
@@ -29,7 +31,7 @@ const GlobalOverlay = () => {
       tabIndex="0"
       className={`${s.overlay} ${activeClass}`}
       onClick={handleOverlayClick}
-      onKeyUp={(e) => e.key === "Enter" && handleOverlayClick()}
+      onKeyUp={handleOverlayClick}
     />
   );
 };

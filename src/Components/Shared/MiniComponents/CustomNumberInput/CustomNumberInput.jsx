@@ -36,7 +36,7 @@ const CustomNumberInput = ({ product, quantity }) => {
         type="number"
         value={quantity}
         placeholder="0"
-        onChange={(e) => handleChangeQuantityInput(e)}
+        onChange={handleChangeQuantityInput}
         min={MINIMUM_QUANTITY}
         max={MAXIMUM_QUANTITY}
       />
