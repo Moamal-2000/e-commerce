@@ -5,20 +5,21 @@ import s from "./ProductColors.module.scss";
 const ProductColors = ({ colors, showToolTip = false }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);
 
-  function choiceProductColor(i) {
-    setActiveColorIndex(i);
+  function choiceProductColor(index) {
+    setActiveColorIndex(index);
   }
 
-  return colors.map(({ color, name }, i) => {
-    const firstItemActiveClass = i === activeColorIndex ? s.active : "";
+  return colors.map(({ color, name }, index) => {
+    const firstItemActiveClass = index === activeColorIndex ? s.active : "";
+    const styles = { backgroundColor: color, border: `solid 3px ${color}` };
 
     return (
       <button
         type="button"
-        key={"color-" + i}
+        key={"color-" + index}
         className={`${s.color} ${firstItemActiveClass}`}
-        style={{ backgroundColor: color, border: `solid 3px ${color}` }}
-        onClick={() => choiceProductColor(i)}
+        style={styles}
+        onClick={() => choiceProductColor(index)}
         aria-label={name + " color"}
       >
         {showToolTip && (

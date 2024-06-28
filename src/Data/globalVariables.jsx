@@ -4,6 +4,7 @@ export const MINIMUM_QUANTITY = 1;
 export const MAXIMUM_QUANTITY = 1000;
 export const DEFAULT_SWIPER_SPEED = 1000;
 export const TOAST_ALERT_DURATION_MILLISECONDS = 6000;
+export const SCROLL_REQUIRED = 1000;
 export const DELAYS = [500, 1000, 1500, 2000, 2500, 3000, 3500];
 export const SIMPLE_DELAYS = [1200, 1400, 1600, 1800];
 export const SCREEN_SIZES = {

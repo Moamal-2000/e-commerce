@@ -23,6 +23,7 @@ const PagesHistory = ({ history, historyPaths }) => {
     <div className={s.pageHistory}>
       {previousPages.map((page, i) => {
         const pageName = page === "/" ? t("nav.home") : page;
+
         return (
           <div className={s.page} key={i}>
             <a href="#" onClick={() => navigateToPage(i)}>
@@ -32,6 +33,7 @@ const PagesHistory = ({ history, historyPaths }) => {
           </div>
         );
       })}
+
       <span className={s.currentPage}>{currentPage}</span>
     </div>
   );

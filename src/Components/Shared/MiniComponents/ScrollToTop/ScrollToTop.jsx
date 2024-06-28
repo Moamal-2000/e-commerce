@@ -1,6 +1,7 @@
 import cookies from "js-cookie";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { SCROLL_REQUIRED } from "src/Data/globalVariables";
 import { scrollToTopToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { scrollToTop } from "src/Functions/helper";
 import useEventListener from "src/Hooks/Helper/useEventListener";
@@ -11,7 +12,6 @@ import s from "./ScrollToTop.module.scss";
 const ScrollToTop = () => {
   const scrollTopButtonRef = useRef();
   const { t } = useTranslation();
-  const SCROLL_REQUIRED = 1000;
   const lang = cookies.get("i18next");
   const leftToolTipPos = scrollToTopToolTipLeftPos(lang);
 
