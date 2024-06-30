@@ -37,50 +37,6 @@
   border-radius: 2px;
 }
 
-.userInfo .img {
-  display: block;
-  width: 70px;
-  height: 70px;
-  border-radius: 5px;
-  user-select: none;
-  display: flex;
-  outline: solid 3px #54577a;
-  transition: outline-color .3s;
-
-  & img {
-    border-radius: inherit;
-  }
-
-  &:hover {
-    outline-color: #787db0;
-  }
-
-  &:focus-visible {
-    outline-color: var(--white);
-  }
-}
-
-.userInfo p {
-  color: var(--medium-light-gray);
-  margin: 20px 0 50px;
-}
-
-.userInfo p .userName {
-  display: block;
-  color: var(--white);
-  margin-top: 4px;
-  font-weight: bold;
-  cursor: pointer;
-  user-select: none;
-  outline: none;
-  transition: .2s color;
-
-  &:focus-visible {
-    color: var(--orange-degree2);
-    text-decoration: underline;
-  }
-}
-
 .navLinks {
   position: relative;
   left: -10px;

@@ -1,43 +1,23 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
-import { userImg, userPicturePlaceholder } from "src/Assets/Images/Images";
 import { mobileNavData } from "src/Data/staticData";
 import { camelCase } from "src/Functions/helper";
 import useSignOut from "src/Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
+import UserProfileSidebar from "./UserProfileSidebar/UserProfileSidebar";
 
 const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
   const { loginInfo } = useSelector((state) => state.user);
-  const { username, isSignIn } = loginInfo;
+  const { isSignIn } = loginInfo;
   const handleSignOut = useSignOut();
   const { t } = useTranslation();
 
   return (
     <div className={`${s.mobileMenu} ${isMobileMenuActive ? s.active : ""}`}>
-      <div className={s.userInfo}>
-        <Link to="/profile" title={t("mobileNav.profile")} className={s.img}>
-          <img
-            src={isSignIn ? userImg : userPicturePlaceholder}
-            alt="user's picture"
-            loading="lazy"
-            decoding="async"
-          />
-        </Link>
-
-        <p>
-          {t("mobileNav.hey")} 🖐️
-          <Link
-            to="/profile"
-            title={t("mobileNav.profile")}
-            className={s.userName}
-          >
-            {username}
-          </Link>
-        </p>
-      </div>
+      <UserProfileSidebar />
 
       <nav className={s.navLinks}>
         <ul>
