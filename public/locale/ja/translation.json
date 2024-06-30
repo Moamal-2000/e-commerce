@@ -145,6 +145,7 @@
   },
 
   "detailsPage": {
+    "productRate": "商品の評価は5つ星中{{rate}}です",
     "reviews": "({{votes}} レビュー)",
     "inStock": "在庫あり",
     "colors": "色",

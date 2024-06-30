@@ -146,6 +146,7 @@
   },
 
   "detailsPage": {
+    "productRate": "Рейтинг продукта {{rate}} из 5 звезд",
     "reviews": "{{votes}} отзывов",
     "inStock": "В наличии",
     "colors": "Цвета",

@@ -145,6 +145,7 @@
   },
 
   "detailsPage": {
+    "productRate": "A termék értékelése {{rate}} az 5 csillagból",
     "reviews": "({{votes}} vélemény)",
     "inStock": "Raktáron",
     "colors": "Színek",

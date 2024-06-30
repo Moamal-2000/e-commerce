@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { coloredStar, uncoloredStar } from "src/Assets/Images/Images";
 import { isDecimalNumber } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
@@ -5,9 +6,10 @@ import s from "./RateStars.module.scss";
 
 const RateStars = ({ rate }) => {
   const isRateFound = rate !== undefined || rate !== null;
-  const rateMessage = `product rate is ${rate} of 5 stars`;
-
   if (!isRateFound) throw new Error("Rate value is undefined or null");
+
+  const { t } = useTranslation();
+  const rateMessage = t("detailsPage.productRate", { rate });
 
   return (
     <div

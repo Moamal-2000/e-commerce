@@ -145,6 +145,7 @@
   },
 
   "detailsPage": {
+    "productRate": "La note du produit est {{rate}} sur 5 étoiles",
     "reviews": "({{votes}} Avis)",
     "inStock": "En stock",
     "colors": "Couleurs",

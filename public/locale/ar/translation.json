@@ -146,6 +146,7 @@
   },
 
   "detailsPage": {
+    "productRate": "تقييم المنتج هو {{rate}} من 5 نجوم",
     "reviews": "({{votes}} تقييمات)",
     "inStock": "متوفر",
     "colors": "الالوان",

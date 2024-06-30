@@ -145,6 +145,7 @@
   },
 
   "detailsPage": {
+    "productRate": "उत्पाद की रेटिंग {{rate}} में से 5 सितारे है",
     "reviews": "({{votes}} समीक्षाएँ)",
     "inStock": "स्टॉक में है",
     "colors": "रंग",
