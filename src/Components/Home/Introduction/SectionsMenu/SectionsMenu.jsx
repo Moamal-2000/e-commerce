@@ -21,7 +21,7 @@ const SectionsMenu = () => {
     <>
       <SectionsMenuButton />
 
-      <nav className={`${s.sectionsMenu} ${activeClass}`}>
+      <aside className={`${s.sectionsMenu} ${activeClass}`}>
         <DropDownMenu nameMenu={t("sectionsMenu.womenFashion.title")}>
           <ul className={s.dropDownMenu}>
             {womenFashionMenuItems.map((item, index) => {
@@ -56,7 +56,7 @@ const SectionsMenu = () => {
         </DropDownMenu>
 
         <OtherSections data={otherSectionsMenuItems} />
-      </nav>
+      </aside>
     </>
   );
 };

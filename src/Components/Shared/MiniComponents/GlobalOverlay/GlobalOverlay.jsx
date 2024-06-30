@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   multiUpdateGlobalState,
@@ -25,6 +26,12 @@ const GlobalOverlay = () => {
     if (isProfileMenuActive)
       dispatch(updateGlobalState({ key: "isProfileMenuActive", value: false }));
   }
+
+  function toggleScrollbar() {
+    document.body.style.overflow = isOverlayActive ? "hidden" : "";
+  }
+
+  useEffect(() => toggleScrollbar(), [isOverlayActive]);
 
   return (
     <div
