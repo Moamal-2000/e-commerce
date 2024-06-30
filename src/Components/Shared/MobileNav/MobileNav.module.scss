@@ -49,8 +49,7 @@
   gap: 8px;
 }
 
-.navLinks ul li a,
-.signOutButton {
+.navLinks ul li a {
   all: unset;
   color: var(--medium-light-gray);
   padding: 10px;
@@ -76,13 +75,11 @@
   }
 }
 
-.navLinks ul li a span,
-.signOutButton span {
+.navLinks ul li a span {
   padding-inline-start: 16px;
 }
 
-.navLinks ul svg,
-.signOutButton svg {
+.navLinks ul svg {
   fill: var(--white);
   width: 20px;
   height: 20px;

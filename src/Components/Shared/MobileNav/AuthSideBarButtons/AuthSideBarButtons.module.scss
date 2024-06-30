@@ -1,0 +1,35 @@
+.signOutButton {
+  all: unset;
+  color: var(--medium-light-gray);
+  padding: 10px;
+  min-width: 126px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: solid 2px transparent;
+  transition: background-color .2s, outline-color .2s;
+
+  &[class=active],
+  &:hover {
+    background-color: rgba(87, 87, 87, .5);
+  }
+
+  &[class=active]:hover {
+    background-color: rgba(87, 87, 87, .8);
+  }
+
+  &:focus-visible {
+    outline-color: var(--white);
+  }
+}
+
+.signOutButton span {
+  padding-inline-start: 16px;
+}
+
+.signOutButton svg {
+  fill: var(--white);
+  width: 20px;
+  height: 20px;
+}

@@ -3,16 +3,15 @@ import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { mobileNavData } from "src/Data/staticData";
 import { camelCase } from "src/Functions/helper";
-import useSignOut from "src/Hooks/App/useSignOut";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./MobileNav.module.scss";
 import UserProfileSidebar from "./UserProfileSidebar/UserProfileSidebar";
+import AuthSideBarButtons from "./AuthSideBarButtons/AuthSideBarButtons";
 
 const MobileNav = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);
   const { loginInfo } = useSelector((state) => state.user);
   const { isSignIn } = loginInfo;
-  const handleSignOut = useSignOut();
   const { t } = useTranslation();
 
   return (
@@ -42,23 +41,7 @@ const MobileNav = () => {
 
       <hr className={s.line}></hr>
 
-      {isSignIn && (
-        <button
-          className={s.signOutButton}
-          type="button"
-          onClick={handleSignOut}
-        >
-          <SvgIcon name="boxArrowRight" />
-          <span>{t("mobileNav.signOut")}</span>
-        </button>
-      )}
-
-      {!isSignIn && (
-        <Link to="/signup" className={s.signOutButton}>
-          <SvgIcon name="boxArrowRight" />
-          <span>{t("mobileNav.signIn")}</span>
-        </Link>
-      )}
+      <AuthSideBarButtons />
     </div>
   );
 };
