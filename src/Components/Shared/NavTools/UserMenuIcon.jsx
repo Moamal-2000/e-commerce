@@ -23,7 +23,7 @@ const UserMenuIcon = ({ visibility }) => {
         aria-label={t("navTools.userMenu")}
       >
         <SvgIcon name="user" />
-        <ToolTip top="48px" left="50%" content={t("navTools.userMenu")} />
+        <ToolTip bottom="26px" left="50%" content={t("navTools.userMenu")} />
 
         <UserMenu isActive={isMenuUserActive} toggler={toggleMenuUserActive} />
       </div>

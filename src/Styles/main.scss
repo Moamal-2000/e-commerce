@@ -126,6 +126,7 @@ main {
   user-select: none;
   translate: -50% -50%;
   opacity: 0;
+  z-index: 9;
   pointer-events: none;
   @include center-x-y;
   transition: opacity .1s ease;

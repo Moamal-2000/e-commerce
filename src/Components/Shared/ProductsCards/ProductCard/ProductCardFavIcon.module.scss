@@ -54,6 +54,7 @@
   border-color: var(--heart-color) transparent transparent transparent;
   border-width: 7px;
   opacity: 0;
+  pointer-events: none;
 }
 
 .favIcon .heartBackground::before,
