@@ -1,15 +1,9 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TOAST_ALERT_DURATION_MILLISECONDS } from "src/Data/globalVariables";
+import { TOAST_ALERT_DURATION_MS } from "src/Data/globalVariables";
 import { updateGlobalState } from "src/Features/globalSlice";
 import SvgIcon from "../MiniComponents/SvgIcon";
 import s from "./ToastAlert.module.scss";
-
-const toastState = {
-  success: { iconName: "checked", className: s.success },
-  warning: { iconName: "exclamation", className: s.warning },
-  error: { iconName: "xMark", className: s.error },
-};
 
 const ToastAlert = () => {
   const {
@@ -28,7 +22,7 @@ const ToastAlert = () => {
 
     timerId = setTimeout(() => {
       dispatch(updateGlobalState({ key: "isToastAlertActive", value: false }));
-    }, TOAST_ALERT_DURATION_MILLISECONDS);
+    }, TOAST_ALERT_DURATION_MS);
   }
 
   useEffect(() => {
@@ -49,3 +43,9 @@ const ToastAlert = () => {
 };
 
 export default ToastAlert;
+
+const toastState = {
+  success: { iconName: "checked", className: s.success },
+  warning: { iconName: "exclamation", className: s.warning },
+  error: { iconName: "xMark", className: s.error },
+};

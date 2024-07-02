@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { translateProduct } from "../../../Cart/CartProducts/CartProduct";
-import RateStars from "../../MidComponents/RateStars/RateStars";
-import ProductColors from "../../MiniComponents/ProductColors/ProductColors";
+import { translateProduct } from "../../../../Cart/CartProducts/CartProduct";
+import RateStars from "../../../MidComponents/RateStars/RateStars";
+import ProductColors from "../../../MiniComponents/ProductColors/ProductColors";
 import s from "./ProductCardInfo.module.scss";
 
 const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {

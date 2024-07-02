@@ -5,8 +5,8 @@ import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeById } from "src/Features/productsSlice";
 import { wishlistIconToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isItemFound } from "src/Functions/helper";
-import SvgIcon from "../../MiniComponents/SvgIcon";
-import ToolTip from "../../MiniComponents/ToolTip";
+import SvgIcon from "../../../MiniComponents/SvgIcon";
+import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardWishListIcon.module.scss";
 
 const ProductCardWishListIcon = ({ product, productId }) => {

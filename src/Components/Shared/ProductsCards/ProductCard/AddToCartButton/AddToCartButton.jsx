@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
 import { isItemFound } from "src/Functions/helper";
-import SvgIcon from "../../MiniComponents/SvgIcon";
+import SvgIcon from "../../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 
 const AddToCartButton = ({ product }) => {

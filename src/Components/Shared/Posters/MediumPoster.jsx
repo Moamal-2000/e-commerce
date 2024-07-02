@@ -9,7 +9,7 @@ const MediumPoster = ({ title, description, posterUrl }) => {
 
   useEffect(() => {
     midPosterRef.current.style.backgroundImage = `url(${posterUrl})`;
-  });
+  }, []);
 
   return (
     <div className={s.midPoster} ref={midPosterRef} dir="ltr">

@@ -9,7 +9,7 @@ const HorizontalPoster = ({ title, description, posterUrl }) => {
 
   useEffect(() => {
     horPosterRef.current.style.backgroundImage = `url(${posterUrl})`;
-  });
+  }, []);
 
   return (
     <div className={s.HorPoster} ref={horPosterRef} dir="ltr">
