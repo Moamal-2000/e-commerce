@@ -7,6 +7,7 @@ import { updateGlobalState } from "src/Features/globalSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { searchByObjectKey } from "src/Functions/helper";
 import SvgIcon from "../MiniComponents/SvgIcon";
+import SearchInput from "./SearchInput/SearchInput";
 import s from "./SearchProductsInput.module.scss";
 
 const SearchProductsInput = () => {
@@ -21,11 +22,6 @@ const SearchProductsInput = () => {
   function focusInput(e) {
     const searchInput = e.currentTarget.querySelector("#search-input");
     searchInput.focus();
-  }
-
-  function handleSearchOnChange(e) {
-    const inputValue = e.target.value;
-    searchRef.current = inputValue?.trim()?.toLowerCase();
   }
 
   function handleSearchProducts(e) {
@@ -83,19 +79,10 @@ const SearchProductsInput = () => {
   return (
     <form
       className={s.searchContainer}
-      onSubmit={(e) => handleSearchProducts(e)}
-      onClick={(e) => focusInput(e)}
+      onSubmit={handleSearchProducts}
+      onClick={focusInput}
     >
-      <input
-        type="text"
-        id="search-input"
-        autoComplete="off"
-        placeholder={t("inputsPlaceholders.whatYouLookingFor")}
-        onChange={(e) => handleSearchOnChange(e)}
-        role="search"
-        aria-label="Search product input"
-        aria-required="false"
-      />
+      <SearchInput searchRef={searchRef} />
 
       <button type="submit" aria-label={t("tooltips.searchButton")}>
         <SvgIcon name="search" />
