@@ -12,17 +12,12 @@ import s from "./SearchProductsInput.module.scss";
 
 const SearchProductsInput = () => {
   const { t } = useTranslation();
-  const searchRef = useRef("");
-  const location = useLocation();
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
+  const searchRef = useRef("");
+  const location = useLocation();
   const pathName = location.pathname;
   const [searchParams, setSearchParams] = useSearchParams();
-
-  function focusInput(e) {
-    const searchInput = e.currentTarget.querySelector("#search-input");
-    searchInput.focus();
-  }
 
   function handleSearchProducts(e) {
     setSearchParams({ query: searchRef.current });
@@ -45,19 +40,7 @@ const SearchProductsInput = () => {
       return;
     }
 
-    let productsFound = searchByObjectKey({
-      data: productsData,
-      key: "shortName",
-      query: queryValue,
-    });
-
-    if (productsFound.length === 0) {
-      productsFound = searchByObjectKey({
-        data: productsData,
-        key: "category",
-        query: queryValue,
-      });
-    }
+    const productsFound = getProducts(queryValue);
 
     dispatch(
       updateProductsState({ key: "searchProducts", value: productsFound })
@@ -92,3 +75,26 @@ const SearchProductsInput = () => {
 };
 
 export default SearchProductsInput;
+
+function focusInput(e) {
+  const searchInput = e.currentTarget.querySelector("#search-input");
+  searchInput.focus();
+}
+
+function getProducts(query) {
+  let productsFound = searchByObjectKey({
+    data: productsData,
+    key: "shortName",
+    query,
+  });
+
+  if (productsFound.length === 0) {
+    productsFound = searchByObjectKey({
+      data: productsData,
+      key: "category",
+      query,
+    });
+  }
+
+  return productsFound;
+}
