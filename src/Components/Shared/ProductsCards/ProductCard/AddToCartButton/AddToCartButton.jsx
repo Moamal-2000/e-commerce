@@ -10,7 +10,7 @@ import s from "./AddToCartButton.module.scss";
 const AddToCartButton = ({ product }) => {
   const { t } = useTranslation();
   const { cartProducts } = useSelector((state) => state.products);
-  const { loginInfo } = useSelector((state) => state.user);
+  const {loginInfo: { isSignIn }} = useSelector((state) => state.user);
   const isProductAlreadyExist = isItemFound(cartProducts, product, "shortName");
   const iconName = isProductAlreadyExist ? "trashCan" : "cart3";
   const [iconNameState, setIconName] = useState(iconName);
@@ -22,17 +22,17 @@ const AddToCartButton = ({ product }) => {
   );
 
   function handleCartButton() {
-    if (!loginInfo.isSignIn) {
-      dispatch(
-        showAlert({
-          alertText: t("toastAlert.addToCart"),
-          alertState: "warning",
-        })
-      );
-
+    if (isSignIn) {
+      isProductAlreadyExist ? removeFromCart() : addToCart();
       return;
     }
-    isProductAlreadyExist ? removeFromCart() : addToCart();
+
+    dispatch(
+      showAlert({
+        alertText: t("toastAlert.addToCart"),
+        alertState: "warning",
+      })
+    );
   }
 
   function addToCart() {
