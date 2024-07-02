@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import SvgIcon from "../MiniComponents/SvgIcon";
-import ToolTip from "../MiniComponents/ToolTip";
+import SvgIcon from "../../MiniComponents/SvgIcon";
+import ToolTip from "../../MiniComponents/ToolTip";
 import s from "./IconWithCount.module.scss";
 
 const IconWithCount = ({

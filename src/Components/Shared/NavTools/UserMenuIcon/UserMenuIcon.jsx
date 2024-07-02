@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import useToggle from "src/Hooks/Helper/useToggle";
-import SvgIcon from "../MiniComponents/SvgIcon";
-import ToolTip from "../MiniComponents/ToolTip";
-import UserMenu from "../UserMenu/UserMenu";
+import SvgIcon from "../../MiniComponents/SvgIcon";
+import ToolTip from "../../MiniComponents/ToolTip";
+import UserMenu from "../../UserMenu/UserMenu";
 import s from "./UserMenuIcon.module.scss";
 
 const UserMenuIcon = ({ visibility }) => {

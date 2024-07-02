@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import IconWithCount from "../../NavTools/IconWithCount";
-import SearchProductsInput from "../../NavTools/SearchProductsInput";
-import UserMenuIcon from "../../NavTools/UserMenuIcon";
+import IconWithCount from "../../NavTools/IconWithCount/IconWithCount";
+import SearchProductsInput from "../../NavTools/SearchInput/SearchProductsInput";
+import UserMenuIcon from "../../NavTools/UserMenuIcon/UserMenuIcon";
 import s from "./NavTools.module.scss";
 
 const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {

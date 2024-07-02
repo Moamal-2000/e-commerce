@@ -6,8 +6,8 @@ import { productsData } from "src/Data/productsData";
 import { updateGlobalState } from "src/Features/globalSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { searchByObjectKey } from "src/Functions/helper";
-import SvgIcon from "../MiniComponents/SvgIcon";
-import SearchInput from "./SearchInput/SearchInput";
+import SvgIcon from "../../MiniComponents/SvgIcon";
+import SearchInput from "./SearchInput";
 import s from "./SearchProductsInput.module.scss";
 
 const SearchProductsInput = () => {
