@@ -14,20 +14,21 @@ const UserMenuIcon = ({ visibility }) => {
     toggleMenuUserActive(true);
   }
 
-  return (
-    visibility && (
-      <div
-        className={`${s.userContainer} ${activeClass}`}
-        onClick={toggleMenuUserActive}
-        onFocus={openMenu}
-        aria-label={t("navTools.userMenu")}
-      >
-        <SvgIcon name="user" />
-        <ToolTip bottom="26px" left="50%" content={t("navTools.userMenu")} />
+  if (!visibility) return null;
 
-        <UserMenu isActive={isMenuUserActive} toggler={toggleMenuUserActive} />
-      </div>
-    )
+  return (
+    <div
+      className={`${s.userContainer} ${activeClass}`}
+      onClick={toggleMenuUserActive}
+      onFocus={openMenu}
+      aria-label={t("navTools.userMenu")}
+      aria-haspopup="true"
+    >
+      <SvgIcon name="user" />
+      <ToolTip bottom="26px" left="50%" content={t("navTools.userMenu")} />
+
+      <UserMenu isActive={isMenuUserActive} toggler={toggleMenuUserActive} />
+    </div>
   );
 };
 
