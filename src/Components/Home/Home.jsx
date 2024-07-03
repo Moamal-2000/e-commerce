@@ -24,7 +24,7 @@ const Home = () => {
         />
       </Helmet>
 
-      <div className={s.home}>
+      <main className={s.home}>
         <div className={s.container}>
           <div className={s.introductionContainer}>
             <SectionsMenu />
@@ -42,7 +42,7 @@ const Home = () => {
           <FeaturedSection />
           <FeaturedSectionFeatures />
         </div>
-      </div>
+      </main>
     </>
   );
 };

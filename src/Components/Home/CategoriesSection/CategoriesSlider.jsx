@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { categoriesData } from "src/Data/staticData";
 import useSlider from "src/Hooks/App/useSlider";
-import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
+import SliderButtons from "../../Shared/MidComponents/ProductsSlider/SliderButtons/SliderButtons";
 import CategoryCard from "../../Shared/ProductsCards/CategoryCard/CategoryCard";
 import s from "./CategoriesSlider.module.scss";
 
@@ -11,23 +11,10 @@ const CategoriesSlider = () => {
 
   return (
     <>
-      <div className={s.sliderButtons}>
-        <button
-          type="button"
-          onClick={handlePrevBtn}
-          aria-label="Previous button for slider"
-        >
-          <SvgIcon name="arrowLeftShort" />
-        </button>
-
-        <button
-          type="button"
-          onClick={handleNextBtn}
-          aria-label="Next button for slider"
-        >
-          <SvgIcon name="arrowRightShort" />
-        </button>
-      </div>
+      <SliderButtons
+        handlePrevBtn={handlePrevBtn}
+        handleNextBtn={handleNextBtn}
+      />
 
       <div className={s.categoriesSlider} ref={sliderRef}>
         {categoriesData.map((categoryData) => (
