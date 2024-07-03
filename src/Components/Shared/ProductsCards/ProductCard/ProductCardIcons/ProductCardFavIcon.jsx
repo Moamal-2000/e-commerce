@@ -10,7 +10,9 @@ import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardFavIcon.module.scss";
 
 const ProductCardFavIcon = ({ product, productId }) => {
-  const { loginInfo } = useSelector((state) => state.user);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const { favoritesProducts } = useSelector((state) => state.products);
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -22,23 +24,31 @@ const ProductCardFavIcon = ({ product, productId }) => {
   const activeClass = isAddedToFavorites ? s.active : "";
 
   function addProductToFavorite() {
-    const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
-    if (!loginInfo.isSignIn) {
+    if (!isSignIn) {
       dispatch(
         showAlert({
           alertText: t("toastAlert.addToFavorite"),
           alertState: "warning",
         })
       );
-
       return;
     }
+
+    const isProductAlreadyExist = isItemFound(favoritesProducts, product, "id");
 
     if (isProductAlreadyExist) {
-      dispatch(removeById({ key: "favoritesProducts", id: product.id }));
+      removeProduct();
       return;
     }
 
+    addProduct();
+  }
+
+  function removeProduct() {
+    dispatch(removeById({ key: "favoritesProducts", id: product.id }));
+  }
+
+  function addProduct() {
     dispatch(addToArray({ key: "favoritesProducts", value: product }));
   }
 
