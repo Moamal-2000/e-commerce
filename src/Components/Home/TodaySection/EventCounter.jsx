@@ -17,19 +17,16 @@ const EventCounter = ({ timeEvent, eventName }) => {
           <div className={s.time}>{timeData.days}</div>
         </div>
         <span>:</span>
-
         <div className={s.timeContainer}>
           <div className={s.typeTime}>{t("common.hours")}</div>
           <div className={s.time}>{timeData.hours}</div>
         </div>
         <span>:</span>
-
         <div className={s.timeContainer}>
           <div className={s.typeTime}>{t("common.minutes")}</div>
           <div className={s.time}>{timeData.minutes}</div>
         </div>
         <span>:</span>
-
         <div className={s.timeContainer}>
           <div className={s.typeTime}>{t("common.seconds")}</div>
           <div className={s.time}>{timeData.seconds}</div>

@@ -14,10 +14,12 @@ const FeaturedSectionPosters = () => {
   const { t } = useTranslation();
   const medPosterTitleTrans = t("featuredSection.mediumPoster.title");
   const medPosterDescTrans = t("featuredSection.mediumPoster.description");
+
   const smallPoster1TitleTrans = t("featuredSection.smallPoster1.title");
   const smallPoster1DescTrans = t("featuredSection.smallPoster1.description");
   const smallPoster2TitleTrans = t("featuredSection.smallPoster2.title");
   const smallPoster2DescTrans = t("featuredSection.smallPoster2.description");
+
   const horizontalPosterTitleTrans = t("featuredSection.horizontalPoster.title");
   const horizontalPosterDescTrans = t("featuredSection.horizontalPoster.description");
 
