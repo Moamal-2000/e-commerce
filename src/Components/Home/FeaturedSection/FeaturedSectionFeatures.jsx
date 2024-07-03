@@ -10,18 +10,15 @@ const FeaturedSectionFeatures = () => {
 
   return (
     <div className={s.features}>
-      {featuresSectionData.map(({ iconImg, iconAlt, id }) => {
+      {featuresSectionData?.map(({ iconImg, iconAlt, id }) => {
         const featuresTransData = `${featureSection}.${camelCase(iconAlt)}`;
-        const iconAltTrans = t(`${featuresTransData}.iconAlt`);
-        const titleTrans = t(`${featuresTransData}.title`);
-        const descriptionTrans = t(`${featuresTransData}.description`);
 
         return (
           <Feature
             iconImg={iconImg}
-            iconAlt={iconAltTrans}
-            title={titleTrans}
-            description={descriptionTrans}
+            iconAlt={t(`${featuresTransData}.iconAlt`)}
+            title={t(`${featuresTransData}.title`)}
+            description={t(`${featuresTransData}.description`)}
             key={id}
           />
         );
