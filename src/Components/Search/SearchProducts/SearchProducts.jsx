@@ -11,7 +11,7 @@ const SearchProducts = () => {
   return (
     <>
       {isFoundResults &&
-        searchProducts.map((product) => (
+        searchProducts?.map((product) => (
           <ProductCard product={product} key={product.id} />
         ))}
 

@@ -51,12 +51,7 @@ const UserMenu = ({ isActive, toggler }) => {
         />
       </NavLink>
 
-      <a
-        href="#"
-        onClick={handleSignOut}
-        onBlur={() => toggler()}
-        aria-label="Logout"
-      >
+      <a href="#" onClick={handleSignOut} onBlur={toggler} aria-label="Logout">
         <SvgIcon name="boxArrowLeft" />
         <span>{t("userMenuItems.logout")}</span>
       </a>
