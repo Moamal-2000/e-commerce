@@ -10,8 +10,8 @@ import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardWishListIcon.module.scss";
 
 const ProductCardWishListIcon = ({ product, productId }) => {
+  const {loginInfo: { isSignIn }} = useSelector((state) => state.user);
   const { wishList } = useSelector((state) => state.products);
-  const { loginInfo } = useSelector((state) => state.user);
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const lang = cookies.get("i18next");
@@ -22,23 +22,31 @@ const ProductCardWishListIcon = ({ product, productId }) => {
   const activeClass = isAddedToWishList ? s.active : "";
 
   function addProductToWishList() {
-    const isProductAlreadyExist = isItemFound(wishList, product, "id");
-
-    if (!loginInfo.isSignIn) {
+    if (!isSignIn) {
       dispatch(
         showAlert({
           alertText: t("toastAlert.addToWishList"),
           alertState: "warning",
         })
       );
-
       return;
     }
+
+    const isProductAlreadyExist = isItemFound(wishList, product, "id");
+
     if (isProductAlreadyExist) {
-      dispatch(removeById({ key: "wishList", id: product.id }));
+      removeProduct();
       return;
     }
 
+    addProduct();
+  }
+
+  function removeProduct() {
+    dispatch(removeById({ key: "wishList", id: product.id }));
+  }
+
+  function addProduct() {
     dispatch(addToArray({ key: "wishList", value: product }));
   }
 

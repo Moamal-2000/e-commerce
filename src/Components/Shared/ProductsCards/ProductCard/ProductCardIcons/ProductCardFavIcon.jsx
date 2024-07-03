@@ -10,9 +10,7 @@ import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardFavIcon.module.scss";
 
 const ProductCardFavIcon = ({ product, productId }) => {
-  const {
-    loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
+  const {loginInfo: { isSignIn }} = useSelector((state) => state.user);
   const { favoritesProducts } = useSelector((state) => state.products);
   const { t } = useTranslation();
   const dispatch = useDispatch();
