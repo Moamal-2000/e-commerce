@@ -67,7 +67,7 @@ export function capitalize(str) {
 }
 
 export function camelCase(str) {
-  const regex = /([-]|\s?&\s|'s[-&]?)/g;
+  const regex = regexPatterns.words;
   const words = str.toLowerCase().replace(regex, " ").split(" ");
   const camelCasedWords = words.map((word, index) =>
     index !== 0 ? capitalize(word) : word
