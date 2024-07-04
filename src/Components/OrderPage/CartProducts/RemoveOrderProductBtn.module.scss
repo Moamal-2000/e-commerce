@@ -1,0 +1,31 @@
+.removeButton {
+  border: none;
+  outline: none;
+  background-color: var(--tomato);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+
+  &:focus-visible [data-is-tooltip=true] {
+    opacity: 1;
+  }
+}
+
+.removeButton>svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--white)
+}
+
+// Arabic styles
+[lang=ar] .removeButton {
+  left: auto;
+  right: 0;
+}

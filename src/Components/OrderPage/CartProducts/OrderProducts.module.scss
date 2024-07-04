@@ -1,0 +1,93 @@
+@import "src/Styles/mixins";
+
+.orderProducts {
+  width: 100%;
+  min-height: 370px;
+}
+
+@include small {
+  .orderProducts {
+    min-height: 270px;
+  }
+}
+
+.orderProducts tr {
+  box-shadow: 0 1px 13px 0 #0000000D;
+  border-radius: 4px;
+  padding: 24px 40px;
+}
+
+@include small {
+  .orderProducts tr {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+}
+
+@include small {
+  .orderProducts thead {
+    display: none;
+  }
+}
+
+.orderProducts thead tr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.orderProducts thead tr th {
+  display: inline-block;
+  width: 100px;
+  text-align: start;
+
+  &:first-child {
+    width: 260px;
+  }
+}
+
+.orderProducts tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@include small {
+  .orderProducts tbody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@include small {
+  .orderProducts tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-width: 310px;
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 520px) {
+  .orderProducts tbody tr {
+    min-width: 100%;
+    width: 100%;
+  }
+}
+
+.orderProducts tbody>tr>td {
+  width: 100px;
+}
+
+@include small {
+  .orderProducts tbody tr td {
+    @include center-x-y;
+  }
+}
