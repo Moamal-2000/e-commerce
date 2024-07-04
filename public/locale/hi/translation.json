@@ -531,7 +531,8 @@
     "pageRequiringSignIn": "इस पृष्ठ को देखने के लिए कृपया साइन इन करें.",
     "signInToPerformAction": "इस क्रिया को करने के लिए आपको साइन इन करना होगा.",
     "cartEmpty": "कृपया पहले कुछ आइटम कार्ट में जोड़ें.",
-    "productAlreadyInCart": "आपने पहले ही इस उत्पाद को कार्ट में जोड़ लिया है"
+    "productAlreadyInCart": "आपने पहले ही इस उत्पाद को कार्ट में जोड़ लिया है",
+    "productAlreadyInOrder": "आपने पहले ही इस उत्पाद को ऑर्डर में जोड़ लिया है"
   },
 
   "wishlist": "इच्छा-सूची ({{numberOfWishlist}})",

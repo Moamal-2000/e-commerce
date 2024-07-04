@@ -532,7 +532,8 @@
     "pageRequiringSignIn": ".يرجى تسجيل الدخول لزيارة هذه الصفحة",
     "signInToPerformAction": ".يجب عليك تسجيل الدخول للقيام بهذا الإجراء",
     "cartEmpty": ".الرجاء إضافة بعض العناصر إلى السلة أولاً",
-    "productAlreadyInCart": "لقد قمت بالفعل بإضافة هذا المنتج إلى السلة"
+    "productAlreadyInCart": "لقد قمت بالفعل بإضافة هذا المنتج إلى السلة",
+    "productAlreadyInOrder": "لقد قمت بالفعل بإضافة هذا المنتج إلى الطلبات"
   },
 
   "wishlist": "قائمة الرغبات ({{numberOfWishlist}})",

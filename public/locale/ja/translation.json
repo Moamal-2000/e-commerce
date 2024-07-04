@@ -531,7 +531,8 @@
     "pageRequiringSignIn": "このページを訪れるにはログインしてください.",
     "signInToPerformAction": "このアクションを行うにはサインインする必要があります.",
     "cartEmpty": "まずカートにアイテムを追加してください.",
-    "productAlreadyInCart": "この商品はすでにカートに追加されています"
+    "productAlreadyInCart": "この商品はすでにカートに追加されています",
+    "productAlreadyInOrder": "この商品はすでに注文に追加されています"
   },
 
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
