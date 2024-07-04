@@ -6,16 +6,23 @@ import { compareDataToObjValue } from "src/Functions/helper";
 import s from "./BuyButton.module.scss";
 
 const BuyButton = () => {
-  const { selectedProduct, productQuantity, cartProducts } = useSelector(
-    (state) => state.products
-  );
-  const {loginInfo: { isSignIn }} = useSelector((state) => state.user);
+  const { selectedProduct, productQuantity, cartProducts, orderProducts } =
+    useSelector((state) => state.products);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   function handleBuyProduct() {
     const isAlreadyAddedToCart = compareDataToObjValue(
       cartProducts,
+      selectedProduct,
+      "shortName"
+    );
+
+    const isAlreadyAddedToOrder = compareDataToObjValue(
+      orderProducts,
       selectedProduct,
       "shortName"
     );
@@ -30,6 +37,11 @@ const BuyButton = () => {
       return;
     }
 
+    if (isAlreadyAddedToOrder) {
+      showWarning("productAlreadyInOrder");
+      return;
+    }
+
     addToCart();
   }
 
@@ -37,10 +49,12 @@ const BuyButton = () => {
     const clonedProduct = { ...selectedProduct };
     clonedProduct.quantity = productQuantity;
 
-    dispatch({
-      key: "cartProducts",
-      value: clonedProduct,
-    });
+    dispatch(
+      addToArray({
+        key: "cartProducts",
+        value: clonedProduct,
+      })
+    );
   }
 
   function showWarning(translateKey) {

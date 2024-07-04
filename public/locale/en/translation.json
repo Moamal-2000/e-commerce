@@ -532,7 +532,8 @@
     "pageRequiringSignIn": "Please sign in to visit this page.",
     "signInToPerformAction": "You have to sign in to do this action.",
     "cartEmpty": "Please add some items to cart first.",
-    "productAlreadyInCart": "You have already added this product to cart"
+    "productAlreadyInCart": "You have already added this product to cart",
+    "productAlreadyInOrder": "You have already added this product to order"
   },
 
   "wishlist": "Wishlist ({{numberOfWishlist}})",

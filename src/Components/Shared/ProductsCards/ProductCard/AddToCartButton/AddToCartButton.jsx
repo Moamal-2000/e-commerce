@@ -3,14 +3,18 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/globalSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
-import { isItemFound } from "src/Functions/helper";
+import { compareDataToObjValue, isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 
 const AddToCartButton = ({ product }) => {
   const { t } = useTranslation();
-  const { cartProducts } = useSelector((state) => state.products);
-  const {loginInfo: { isSignIn }} = useSelector((state) => state.user);
+  const { cartProducts, orderProducts } = useSelector(
+    (state) => state.products
+  );
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const isProductAlreadyExist = isItemFound(cartProducts, product, "shortName");
   const iconName = isProductAlreadyExist ? "trashCan" : "cart3";
   const [iconNameState, setIconName] = useState(iconName);
@@ -22,14 +26,29 @@ const AddToCartButton = ({ product }) => {
   );
 
   function handleCartButton() {
-    if (isSignIn) {
-      isProductAlreadyExist ? removeFromCart() : addToCart();
+    if (!isSignIn) {
+      showWarning("addToCart");
       return;
     }
 
+    const isAlreadyAddedToOrder = compareDataToObjValue(
+      orderProducts,
+      product,
+      "shortName"
+    );
+
+    if (isAlreadyAddedToOrder) {
+      showWarning("productAlreadyInOrder");
+      return;
+    }
+
+    isProductAlreadyExist ? removeFromCart() : addToCart();
+  }
+
+  function showWarning(translateKey) {
     dispatch(
       showAlert({
-        alertText: t("toastAlert.addToCart"),
+        alertText: t(`toastAlert.${translateKey}`),
         alertState: "warning",
       })
     );

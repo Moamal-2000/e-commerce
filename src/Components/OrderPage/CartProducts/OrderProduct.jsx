@@ -28,7 +28,7 @@ const OrderProduct = ({ data }) => {
 
       <td className={s.price}>${afterDiscount}</td>
 
-      <td>0</td>
+      <td>{quantity}</td>
 
       <td>${subTotal}</td>
     </tr>
