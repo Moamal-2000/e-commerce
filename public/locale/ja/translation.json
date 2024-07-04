@@ -186,7 +186,8 @@
     "cart": "カート",
     "checkout": "チェックアウト",
     "results": "結果",
-    "404Error": "404 エラー"
+    "404Error": "404 エラー",
+    "orders": "注文"
   },
 
   "footer": {

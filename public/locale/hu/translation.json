@@ -186,7 +186,8 @@
     "cart": "Kosár",
     "checkout": "Pénztár",
     "results": "Eredmények",
-    "404Error": "404 Hiba"
+    "404Error": "404 Hiba",
+    "orders": "rendelések"
   },
 
   "footer": {

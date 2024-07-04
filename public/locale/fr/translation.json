@@ -186,7 +186,8 @@
     "cart": "Panier",
     "checkout": "Paiement",
     "results": "Résultats",
-    "404Error": "Erreur 404"
+    "404Error": "Erreur 404",
+    "orders": "commandes"
   },
 
   "footer": {

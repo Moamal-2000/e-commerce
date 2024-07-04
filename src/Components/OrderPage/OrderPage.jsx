@@ -8,7 +8,7 @@ const OrderPage = () => {
   return (
     <div className="container">
       <main className={s.orderPage}>
-        <PagesHistory history={["/", t("history.order")]} />
+        <PagesHistory history={["/", t("history.orders")]} />
       </main>
     </div>
   );
