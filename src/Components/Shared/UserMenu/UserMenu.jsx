@@ -26,7 +26,7 @@ const UserMenu = ({ isActive, toggler }) => {
         <span>{t("userMenuItems.profile")}</span>
       </NavLink>
 
-      <NavLink to="/cart" aria-label="Cart page">
+      <NavLink to="/order" aria-label="Order page">
         <SvgIcon name="cart" />
         <span>{t("userMenuItems.cart")}</span>
       </NavLink>

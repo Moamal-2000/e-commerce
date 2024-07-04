@@ -6,12 +6,10 @@ import { compareDataToObjValue } from "src/Functions/helper";
 import s from "./BuyButton.module.scss";
 
 const BuyButton = () => {
-  const {
-    loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
   const { selectedProduct, productQuantity, cartProducts } = useSelector(
     (state) => state.products
   );
+  const {loginInfo: { isSignIn }} = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -39,12 +37,10 @@ const BuyButton = () => {
     const clonedProduct = { ...selectedProduct };
     clonedProduct.quantity = productQuantity;
 
-    const addAction = addToArray({
+    dispatch({
       key: "cartProducts",
       value: clonedProduct,
     });
-
-    dispatch(addAction);
   }
 
   function showWarning(translateKey) {

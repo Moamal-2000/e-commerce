@@ -7,6 +7,7 @@ import FavoritePage from "../Components/FavoritePage/FavoritePage";
 import Home from "../Components/Home/Home";
 import LogIn from "../Components/LogIn/LogIn";
 import NotFoundPage from "../Components/NotFoundPage/NotFoundPage";
+import OrderPage from "../Components/OrderPage/OrderPage";
 import ProductDetailsPage from "../Components/ProductDetailsPage/ProductDetailsPage";
 import ProductsCategoryPage from "../Components/ProductsCategory/ProductsCategoryPage";
 import ProductsPage from "../Components/ProductsPage/ProductsPage";
@@ -25,6 +26,7 @@ export const ROUTES_CONFIG = [
   { path: "/wishlist", element: <WishList /> },
   { path: "/cart", element: <Cart /> },
   { path: "/checkout", element: <CheckoutPage /> },
+  { path: "/order", element: <OrderPage /> },
   { path: "/signup", element: <SignUp /> },
   { path: "/login", element: <LogIn /> },
   { path: "/profile", element: <AccountPage /> },
