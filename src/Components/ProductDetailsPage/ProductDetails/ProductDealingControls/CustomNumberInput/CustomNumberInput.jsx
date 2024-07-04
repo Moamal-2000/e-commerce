@@ -1,18 +1,29 @@
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { MAXIMUM_QUANTITY, MINIMUM_QUANTITY } from "src/Data/globalVariables";
+import { updateProductsState } from "src/Features/productsSlice";
 import s from "./CustomNumberInput.module.scss";
 
 const CustomNumberInput = () => {
-  const [quantity, setQuantity] = useState(1);
+  const { productQuantity } = useSelector((state) => state.products);
+  const dispatch = useDispatch();
 
   function increaseQuantity() {
-    if (quantity >= MAXIMUM_QUANTITY) return;
-    setQuantity((prevNumber) => +prevNumber + 1);
+    if (productQuantity >= MAXIMUM_QUANTITY) return;
+    updateQuantity(productQuantity + 1);
   }
 
   function decreaseQuantity() {
-    if (quantity <= MINIMUM_QUANTITY) return;
-    setQuantity((prevNumber) => +prevNumber - 1);
+    if (productQuantity <= MINIMUM_QUANTITY) return;
+    updateQuantity(productQuantity - 1);
+  }
+
+  function updateQuantity(value) {
+    dispatch(
+      updateProductsState({
+        key: "productQuantity",
+        value,
+      })
+    );
   }
 
   return (
@@ -28,7 +39,7 @@ const CustomNumberInput = () => {
       <input
         type="number"
         onChange={(e) => setQuantity(e.target.value)}
-        value={quantity}
+        value={productQuantity}
         min={1}
         max={1000}
       />

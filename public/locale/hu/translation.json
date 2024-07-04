@@ -526,7 +526,8 @@
     "signOutSuccess": "Kijelentkezett a fiókjából.",
     "pageRequiringSignIn": "Kérjük, jelentkezzen be, hogy meglátogassa ezt az oldalt.",
     "signInToPerformAction": "Be kell jelentkeznie, hogy végrehajtsa ezt a műveletet.",
-    "cartEmpty": "Kérjük, először adjon hozzá néhány tételt a kosarához."
+    "cartEmpty": "Kérjük, először adjon hozzá néhány tételt a kosarához.",
+    "productAlreadyInCart": "Ezt a terméket már hozzáadta a kosárhoz"
   },
 
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",

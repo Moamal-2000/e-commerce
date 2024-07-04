@@ -529,7 +529,8 @@
     "signOutSuccess": "アカウントからサインアウトしました.",
     "pageRequiringSignIn": "このページを訪れるにはログインしてください.",
     "signInToPerformAction": "このアクションを行うにはサインインする必要があります.",
-    "cartEmpty": "まずカートにアイテムを追加してください."
+    "cartEmpty": "まずカートにアイテムを追加してください.",
+    "productAlreadyInCart": "この商品はすでにカートに追加されています"
   },
 
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",

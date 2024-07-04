@@ -10,6 +10,8 @@ const initialState = productsDataLocal
       searchProducts: [],
       cartProducts: [],
       wishList: [],
+      productQuantity: 1,
+      selectedProduct: null,
     };
 
 const productsSlice = createSlice({

@@ -529,7 +529,8 @@
     "signOutSuccess": "Vous avez été déconnecté de votre compte.",
     "pageRequiringSignIn": "Veuillez vous connecter pour visiter cette page.",
     "signInToPerformAction": "Vous devez vous connecter pour effectuer cette action.",
-    "cartEmpty": "Veuillez d'abord ajouter des articles au panier."
+    "cartEmpty": "Veuillez d'abord ajouter des articles au panier.",
+    "productAlreadyInCart": "Vous avez déjà ajouté ce produit au panier"
   },
 
 
