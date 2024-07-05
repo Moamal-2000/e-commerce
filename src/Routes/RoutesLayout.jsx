@@ -7,7 +7,7 @@ import GlobalOverlay from "../Components/Shared/MiniComponents/GlobalOverlay/Glo
 import ScrollToTop from "../Components/Shared/MiniComponents/ScrollToTop/ScrollToTop";
 import SkipContentLink from "../Components/Shared/MiniComponents/SkipContentLink";
 import MobileNav from "../Components/Shared/MobileNav/MobileNav";
-import ToastAlert from "../Components/Shared/PopUps/ToastAlert";
+import ToastAlert from "../Components/Shared/PopUps/ToastAlert/ToastAlert";
 import useCurrentSkipLinkId from "../Hooks/App/useCurrentSkipLinkId";
 import useOnlineStatus from "../Hooks/Helper/useOnlineStatus";
 

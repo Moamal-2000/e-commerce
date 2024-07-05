@@ -16,7 +16,9 @@ const RemoveOrderProductBtn = ({ productId }) => {
   const lang = cookies.get("i18next");
   const { windowWidth } = useGetResizeWindow();
 
-  const [toolTipLeftPos, setToolTipLeftPos] = useState(cartProductToolTipPos(lang));
+  const [toolTipLeftPos, setToolTipLeftPos] = useState(
+    cartProductToolTipPos(lang)
+  );
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
   function updateToolTipPositions() {
@@ -53,6 +55,6 @@ const RemoveOrderProductBtn = ({ productId }) => {
 export default RemoveOrderProductBtn;
 
 function removeProduct(dispatch, productId) {
-  const removeAction = removeById({ key: "cartProducts", id: productId });
-  dispatch(removeAction);
+  // const removeAction = removeById({ key: "orderProducts", id: productId });
+  // dispatch(removeAction);
 }

@@ -2,47 +2,49 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TOAST_ALERT_DURATION_MS } from "src/Data/globalVariables";
 import { updateGlobalState } from "src/Features/globalSlice";
-import SvgIcon from "../MiniComponents/SvgIcon";
-import s from "./ToastAlert.module.scss";
+import SvgIcon from "../../MiniComponents/SvgIcon";
+import s from "./ToastConfirm.module.scss";
 
-const ToastAlert = () => {
+const ToastConfirm = () => {
   const {
     numberOfShowedAlerts,
-    isToastAlertActive,
-    toastAlertText,
-    toastAlertState,
+    isToastConfirmActive,
+    toastConfirmText,
+    toastConfirmState,
   } = useSelector((state) => state.global);
   const dispatch = useDispatch();
-  const { iconName, className } = toastState[toastAlertState];
-  const showClass = isToastAlertActive ? s.show : "";
+  const { iconName, className } = toastState[toastConfirmState];
+  const showClass = isToastConfirmActive ? s.show : "";
   let timerId;
 
-  function setToastAlertTimeout() {
+  function setToastConfirmTimeout() {
     if (!showClass) return;
 
     timerId = setTimeout(() => {
-      dispatch(updateGlobalState({ key: "isToastAlertActive", value: false }));
+      dispatch(
+        updateGlobalState({ key: "isToastConfirmActive", value: false })
+      );
     }, TOAST_ALERT_DURATION_MS);
   }
 
   useEffect(() => {
-    setToastAlertTimeout();
+    setToastConfirmTimeout();
     return () => clearTimeout(timerId);
-  }, [toastAlertState, toastAlertText, numberOfShowedAlerts]);
+  }, [toastConfirmState, toastConfirmText, numberOfShowedAlerts]);
 
   return (
-    <div className={`${s.toastAlert} ${className} ${showClass}`} dir="ltr">
+    <div className={`${s.toastConfirm} ${className} ${showClass}`} dir="ltr">
       <div className={s.iconHolder}>
         <div className={s.radialColor} />
         <SvgIcon name={iconName} />
       </div>
 
-      <p dir="ltr">{toastAlertText}</p>
+      <p dir="ltr">{toastConfirmText}</p>
     </div>
   );
 };
 
-export default ToastAlert;
+export default ToastConfirm;
 
 const toastState = {
   success: { iconName: "checked", className: s.success },
