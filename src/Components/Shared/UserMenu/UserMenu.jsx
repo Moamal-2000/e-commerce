@@ -7,8 +7,9 @@ import s from "./UserMenu.module.scss";
 import UserMenuItemWithCount from "./UserMenuItemWithCount";
 
 const UserMenu = ({ isActive, toggler }) => {
-  const { wishList } = useSelector((state) => state.products);
+  const { wishList, orderProducts } = useSelector((state) => state.products);
   const wishListLength = wishList.length;
+  const orderProductsLength = orderProducts.length;
   const activeClass = isActive ? s.active : "";
   const navigateTo = useNavigate();
   const { t } = useTranslation();
@@ -27,8 +28,13 @@ const UserMenu = ({ isActive, toggler }) => {
       </NavLink>
 
       <NavLink to="/order" aria-label="Order page">
-        <SvgIcon name="cart" />
-        <span>{t("userMenuItems.cart")}</span>
+        <UserMenuItemWithCount
+          props={{
+            iconName: "cart",
+            title: t("userMenuItems.cart"),
+            countLength: orderProductsLength,
+          }}
+        />
       </NavLink>
 
       <NavLink to="/cancellations" aria-label="Cancellations page">

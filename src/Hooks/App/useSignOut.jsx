@@ -10,6 +10,7 @@ const useSignOut = () => {
   const arraysToEmpty = [
     "favoritesProducts",
     "searchProducts",
+    "orderProducts",
     "cartProducts",
     "wishList",
   ];
