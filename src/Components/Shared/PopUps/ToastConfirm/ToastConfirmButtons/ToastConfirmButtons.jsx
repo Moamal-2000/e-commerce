@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { updateAlertState } from "src/Features/alertsSlice";
 import { removeByKeyName } from "src/Features/productsSlice";
@@ -6,6 +7,7 @@ import s from "./ToastConfirmButtons.module.scss";
 const ToastConfirmButtons = () => {
   const { removeOrderProduct } = useSelector((state) => state.products);
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   function closeConfirmToast() {
     dispatch(
@@ -35,10 +37,10 @@ const ToastConfirmButtons = () => {
   return (
     <div className={s.buttons}>
       <button type="button" onClick={handleConfirm}>
-        Confirm
+        {t("common.confirm")}
       </button>
       <button type="button" onClick={handleCancel}>
-        Cancel
+        {t("common.cancel")}
       </button>
     </div>
   );

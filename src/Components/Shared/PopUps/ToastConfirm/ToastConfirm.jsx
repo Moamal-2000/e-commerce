@@ -19,9 +19,9 @@ const ToastConfirm = () => {
         <SvgIcon name={iconName} />
       </div>
 
-      <p dir={textDirection}>{alertText}</p>
+        <p dir={textDirection}>{alertText}</p>
 
-      <ToastConfirmButtons />
+        <ToastConfirmButtons />
     </div>
   );
 };
