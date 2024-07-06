@@ -4,7 +4,7 @@ import s from "./OrderProduct.module.scss";
 import RemoveOrderProductBtn from "./RemoveOrderProductBtn";
 
 const OrderProduct = ({ data }) => {
-  const { img, name, shortName, afterDiscount, quantity, id } = data;
+  const { img, name, shortName, afterDiscount, quantity } = data;
   const priceAfterDiscount = afterDiscount.replaceAll(",", "");
   const subTotal = (quantity * priceAfterDiscount).toFixed(2);
   const { t } = useTranslation();

@@ -529,7 +529,8 @@
     "signInToPerformAction": "Be kell jelentkeznie, hogy végrehajtsa ezt a műveletet.",
     "cartEmpty": "Kérjük, először adjon hozzá néhány tételt a kosarához.",
     "productAlreadyInCart": "Ezt a terméket már hozzáadta a kosárhoz",
-    "productAlreadyInOrder": "Ezt a terméket már hozzáadta a rendelésekhez"
+    "productAlreadyInOrder": "Ezt a terméket már hozzáadta a rendelésekhez",
+    "removeOrderProduct": "Eltávolítja a {{translatedProduct}} a rendeléséből?"
   },
 
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",

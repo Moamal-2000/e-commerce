@@ -533,7 +533,8 @@
     "signInToPerformAction": "Вы должны войти, чтобы выполнить это действие.",
     "cartEmpty": "Пожалуйста, сначала добавьте товары в корзину.",
     "productAlreadyInCart": "Вы уже добавили этот продукт в корзину",
-    "productAlreadyInOrder": "Вы уже добавили этот продукт в заказы"
+    "productAlreadyInOrder": "Вы уже добавили этот продукт в заказы",
+    "removeOrderProduct": "Удалить {{translatedProduct}} из вашего заказа?"
   },
 
   "wishlist": "Избранное ({{numberOfWishlist}})",

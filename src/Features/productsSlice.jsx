@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { productsData } from "../Data/productsData";
 
 const productsDataLocal = localStorage.getItem("productsSliceData");
 
@@ -8,7 +9,7 @@ const initialState = productsDataLocal
       saveBillingInfoToLocal: false,
       favoritesProducts: [],
       searchProducts: [],
-      orderProducts: [],
+      orderProducts: [...productsData],
       cartProducts: [],
       wishList: [],
       productQuantity: 1,

@@ -532,7 +532,8 @@
     "signInToPerformAction": "Vous devez vous connecter pour effectuer cette action.",
     "cartEmpty": "Veuillez d'abord ajouter des articles au panier.",
     "productAlreadyInCart": "Vous avez déjà ajouté ce produit au panier",
-    "productAlreadyInOrder": "Vous avez déjà ajouté ce produit aux commandes"
+    "productAlreadyInOrder": "Vous avez déjà ajouté ce produit aux commandes",
+    "removeOrderProduct": "Retirer {{translatedProduct}} de votre commande ?"
   },
 
 

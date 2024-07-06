@@ -9,6 +9,7 @@ import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
+import { translateProduct } from "./OrderProduct";
 import s from "./RemoveOrderProductBtn.module.scss";
 
 const RemoveOrderProductBtn = ({ productName }) => {
@@ -42,7 +43,7 @@ const RemoveOrderProductBtn = ({ productName }) => {
       type="button"
       className={s.removeButton}
       aria-label="Remove product from cart"
-      onClick={() => showConfirmAlert(dispatch, productName)}
+      onClick={() => showConfirmAlert(dispatch, productName, t)}
     >
       <SvgIcon name="xMark" />
       <ToolTip
@@ -55,10 +56,18 @@ const RemoveOrderProductBtn = ({ productName }) => {
 };
 export default RemoveOrderProductBtn;
 
-function showConfirmAlert(dispatch, productName) {
+function showConfirmAlert(dispatch, productName, t) {
+  const translatedProduct = translateProduct({
+    productName,
+    translateMethod: t,
+    translateKey: "shortName",
+  });
+
   dispatch(
     showAlert({
-      alertText: `Remove ${productName} from your order?`,
+      alertText: t("toastAlert.removeOrderProduct", {
+        translatedProduct: translatedProduct,
+      }),
       alertState: "warning",
       alertType: "confirm",
     })
