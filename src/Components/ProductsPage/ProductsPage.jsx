@@ -3,26 +3,26 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productCardCustomizations } from "src/Data/staticData";
+import { updateLoadingState } from "src/Features/loadingSlice";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useUpdateLoadingState from "src/Hooks/App/useUpdateLoadingState";
-import { updateGlobalState } from "src/Features/globalSlice";
 import ExploreProducts from "../Home/ProductPoster/ExploreProducts";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import SkeletonCards from "../Shared/SkeletonLoaders/ProductCard/SkeletonCards";
 import s from "./ProductsPage.module.scss";
 
 const ProductsPage = () => {
-  const { loadingProductsPage } = useSelector((state) => state.global);
+  const { loadingProductsPage } = useSelector((state) => state.loading);
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
   useUpdateLoadingState({
     loadingState: loadingProductsPage,
     loadingKey: "loadingProductsPage",
-    actionMethod: updateGlobalState,
+    actionMethod: updateLoadingState,
     delays: SIMPLE_DELAYS,
     cleanFunction: () =>
-      dispatch(updateGlobalState({ key: "loadingProductsPage", value: true })),
+      dispatch(updateLoadingState({ key: "loadingProductsPage", value: true })),
   });
   useScrollOnMount(200);
 

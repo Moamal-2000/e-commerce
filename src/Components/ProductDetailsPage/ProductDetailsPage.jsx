@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productsData } from "src/Data/productsData";
-import { updateGlobalState } from "src/Features/globalSlice";
+import { updateLoadingState } from "src/Features/loadingSlice";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useUpdateLoadingOnSamePage from "src/Hooks/App/useUpdateLoadingOnSamePage";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
@@ -39,7 +39,7 @@ const ProductDetailsPage = () => {
 
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingProductDetails",
-    actionMethod: updateGlobalState,
+    actionMethod: updateLoadingState,
     delays: SIMPLE_DELAYS,
     dependencies: [PRODUCT_NAME],
   });

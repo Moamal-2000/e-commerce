@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productCardCustomizations } from "src/Data/staticData";
-import { updateGlobalState } from "src/Features/globalSlice";
+import { updateLoadingState } from "src/Features/loadingSlice";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useUpdateLoadingOnSamePage from "src/Hooks/App/useUpdateLoadingOnSamePage";
 import useGetSearchParam from "src/Hooks/Helper/useGetSearchParam";
@@ -15,7 +15,7 @@ import ProductsCategory from "./ProductsCategory";
 import s from "./ProductsCategoryPage.module.scss";
 
 const ProductsCategoryPage = () => {
-  const { loadingCategoryPage } = useSelector((state) => state.global);
+  const { loadingCategoryPage } = useSelector((state) => state.loading);
   const { t } = useTranslation();
   const categoryType = useGetSearchParam("type");
   const categoryTypeTrans = t(`categoriesData.${categoryType}`);
@@ -23,7 +23,7 @@ const ProductsCategoryPage = () => {
 
   useUpdateLoadingOnSamePage({
     loadingKey: "loadingCategoryPage",
-    actionMethod: updateGlobalState,
+    actionMethod: updateLoadingState,
     delays: SIMPLE_DELAYS,
     dependencies: [categoryType],
   });

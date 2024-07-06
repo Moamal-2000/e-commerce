@@ -34,7 +34,7 @@ const ProductCard = ({
   const noHoverClass = stopHover ? s.noHover : "";
   const hideDiscountClass = discount <= 0 || !showDiscount ? s.hide : "";
   const hideNewClass = shouldHideNewWord();
-  const { loadingProductDetails } = useSelector((state) => state.global);
+  const { loadingProductDetails } = useSelector((state) => state.loading);
   const navigateTo = useNavigate();
   const iconsData = {
     showFavIcon,

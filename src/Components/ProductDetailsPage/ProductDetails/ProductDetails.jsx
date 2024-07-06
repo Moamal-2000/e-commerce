@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { updateProductsState } from "src/Features/productsSlice";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
-import { updateProductsState } from "../../../Features/productsSlice";
 import SkeletonProductDetails from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductDetails";
 import ProductPreview from "../ProductPreview/ProductPreview";
 import ProductColorsSection from "./ProductColorsSection/ProductColorsSection";
@@ -12,8 +12,10 @@ import ProductFirstInfos from "./ProductFirstInfos/ProductFirstInfos";
 import ProductSizes from "./ProductSizes/ProductSizes";
 
 const ProductDetails = ({ productData }) => {
-  const { previewImg, isZoomInPreviewActive, loadingProductDetails } =
-    useSelector((state) => state.global);
+  const { loadingProductDetails } = useSelector((state) => state.loading);
+  const { previewImg, isZoomInPreviewActive } = useSelector(
+    (state) => state.global
+  );
   const dispatch = useDispatch();
   const zoomInImgRef = useRef();
   const isWebsiteOnline = useOnlineStatus();

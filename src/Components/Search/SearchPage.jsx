@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
-import { updateGlobalState } from "src/Features/globalSlice";
+import { updateLoadingState } from "src/Features/loadingSlice";
 import useUpdateLoadingState from "src/Hooks/App/useUpdateLoadingState";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
@@ -12,14 +12,14 @@ import SearchProducts from "./SearchProducts/SearchProducts";
 
 const SearchPage = () => {
   const { t } = useTranslation();
-  const { loadingSearchProducts } = useSelector((state) => state.global);
+  const { loadingSearchProducts } = useSelector((state) => state.loading);
   const { searchProducts } = useSelector((state) => state.products);
   const isWebsiteOnline = useOnlineStatus();
 
   useUpdateLoadingState({
     loadingState: loadingSearchProducts,
     loadingKey: "loadingSearchProducts",
-    actionMethod: updateGlobalState,
+    actionMethod: updateLoadingState,
     delays: SIMPLE_DELAYS,
     dependencies: [searchProducts],
   });

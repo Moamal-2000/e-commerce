@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
-import { updateGlobalState } from "src/Features/globalSlice";
+import { updateLoadingState } from "src/Features/loadingSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { searchByObjectKey } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
@@ -30,7 +30,7 @@ const SearchProductsInput = () => {
   }
 
   function updateSearchProducts() {
-    dispatch(updateGlobalState({ key: "loadingSearchProducts", value: true }));
+    dispatch(updateLoadingState({ key: "loadingSearchProducts", value: true }));
 
     const queryValue = searchRef.current || searchParams.get("query");
     const isEmptyQuery = queryValue?.trim()?.length === 0;
@@ -54,7 +54,7 @@ const SearchProductsInput = () => {
 
     return () => {
       dispatch(
-        updateGlobalState({ key: "loadingSearchProducts", value: true })
+        updateLoadingState({ key: "loadingSearchProducts", value: true })
       );
     };
   }, []);
