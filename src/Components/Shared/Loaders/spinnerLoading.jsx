@@ -1,3 +1,3 @@
-import s from "./spinnerLoading.module.scss";
-const spinnerLoading = () => <div className={s.loader} />;
-export default spinnerLoading;
+import s from "./SpinnerLoading.module.scss";
+const SpinnerLoading = () => <div className={s.loader} />;
+export default SpinnerLoading;

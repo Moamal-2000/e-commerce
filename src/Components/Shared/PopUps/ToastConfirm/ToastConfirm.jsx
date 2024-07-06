@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
-import { removeByKeyName } from "../../../../Features/productsSlice";
+import { removeByKeyName } from "src/Features/productsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./ToastConfirm.module.scss";
 
@@ -43,6 +43,7 @@ const ToastConfirm = () => {
       <div className={s.iconHolder}>
         <div className={s.radialColor} />
         <SvgIcon name={iconName} />
+        
       </div>
 
       <p dir="ltr">{toastConfirmText}</p>

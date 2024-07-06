@@ -9,7 +9,7 @@ import {
 } from "src/Functions/componentsFunctions";
 import { isEmailValid } from "src/Functions/helper";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
-import FadeInOutLoading from "../../Shared/Loaders/spinnerLoading";
+import SpinnerLoading from "../../Shared/Loaders/SpinnerLoading";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./CustomEmailInput.module.scss";
@@ -80,7 +80,7 @@ const CustomEmailInput = () => {
       <button aria-label="Send mail" type="submit">
         <div style={sendIconDirection}>
           {!loading && <SvgIcon name="vector" />}
-          {loading && <FadeInOutLoading />}
+          {loading && <SpinnerLoading />}
         </div>
 
         <ToolTip
