@@ -11,10 +11,15 @@ const initialState = {
   loadingSearchProducts: true,
   loadingProductsPage: true,
   previewImg: null,
+
   numberOfShowedAlerts: 0,
   isToastAlertActive: false,
   toastAlertText: "",
   toastAlertState: "error",
+
+  isToastConfirmActive: false,
+  toastConfirmText: "Are you sure?",
+  toastConfirmState: "warning",
 };
 
 const globalSlice = createSlice({
@@ -33,9 +38,18 @@ const globalSlice = createSlice({
       state.isToastAlertActive = true;
       state.numberOfShowedAlerts = ++state.numberOfShowedAlerts;
     },
+    showConfirm: (state, { payload: { confirmText, confirmState } }) => {
+      state.toastConfirmText = confirmText;
+      state.toastConfirmState = confirmState;
+      state.isToastConfirmActive = true;
+    },
   },
 });
 
-export const { updateGlobalState, showAlert, multiUpdateGlobalState } =
-  globalSlice.actions;
+export const {
+  updateGlobalState,
+  showAlert,
+  showConfirm,
+  multiUpdateGlobalState,
+} = globalSlice.actions;
 export default globalSlice.reducer;

@@ -109,6 +109,40 @@
   background-color: var(--white) !important;
 }
 
+.buttons {
+  margin-left: 20px;
+  margin-right: 6px;
+}
+
+.buttons>button {
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-size: .8rem;
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.buttons>button:first-of-type {
+  color: #0ee966;
+
+  &:hover {
+    color: #13f06b;
+    text-decoration: underline;
+  }
+}
+
+.buttons>button:last-of-type {
+  color: #ff4141;
+  margin-left: 14px;
+
+  &:hover {
+    color: #ff4848;
+    text-decoration: underline;
+  }
+}
+
 // Arabic styles
 [lang=ar] .toastConfirm {
   left: auto;

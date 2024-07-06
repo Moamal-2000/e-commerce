@@ -1,36 +1,42 @@
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TOAST_ALERT_DURATION_MS } from "src/Data/globalVariables";
 import { updateGlobalState } from "src/Features/globalSlice";
+import { removeByKeyName } from "../../../../Features/productsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./ToastConfirm.module.scss";
 
 const ToastConfirm = () => {
   const {
-    numberOfShowedAlerts,
     isToastConfirmActive,
     toastConfirmText,
     toastConfirmState,
   } = useSelector((state) => state.global);
+  const { removeOrderProduct } = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const { iconName, className } = toastState[toastConfirmState];
   const showClass = isToastConfirmActive ? s.show : "";
-  let timerId;
 
-  function setToastConfirmTimeout() {
-    if (!showClass) return;
-
-    timerId = setTimeout(() => {
-      dispatch(
-        updateGlobalState({ key: "isToastConfirmActive", value: false })
-      );
-    }, TOAST_ALERT_DURATION_MS);
+  function closeConfirmToast() {
+    dispatch(updateGlobalState({ key: "isToastConfirmActive", value: false }));
   }
 
-  useEffect(() => {
-    setToastConfirmTimeout();
-    return () => clearTimeout(timerId);
-  }, [toastConfirmState, toastConfirmText, numberOfShowedAlerts]);
+  function removeFromOrder() {
+    dispatch(
+      removeByKeyName({
+        dataKey: "orderProducts",
+        itemKey: "shortName",
+        keyValue: removeOrderProduct,
+      })
+    );
+  }
+
+  function handleConfirm() {
+    removeFromOrder();
+    closeConfirmToast();
+  }
+
+  function handleCancel() {
+    closeConfirmToast();
+  }
 
   return (
     <div className={`${s.toastConfirm} ${className} ${showClass}`} dir="ltr">
@@ -40,6 +46,15 @@ const ToastConfirm = () => {
       </div>
 
       <p dir="ltr">{toastConfirmText}</p>
+
+      <div className={s.buttons}>
+        <button type="button" onClick={handleConfirm}>
+          Confirm
+        </button>
+        <button type="button" onClick={handleCancel}>
+          Cancel
+        </button>
+      </div>
     </div>
   );
 };

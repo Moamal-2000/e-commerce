@@ -8,6 +8,7 @@ import ScrollToTop from "../Components/Shared/MiniComponents/ScrollToTop/ScrollT
 import SkipContentLink from "../Components/Shared/MiniComponents/SkipContentLink";
 import MobileNav from "../Components/Shared/MobileNav/MobileNav";
 import ToastAlert from "../Components/Shared/PopUps/ToastAlert/ToastAlert";
+import ToastConfirm from "../Components/Shared/PopUps/ToastConfirm/ToastConfirm";
 import useCurrentSkipLinkId from "../Hooks/App/useCurrentSkipLinkId";
 import useOnlineStatus from "../Hooks/Helper/useOnlineStatus";
 
@@ -27,6 +28,7 @@ const RoutesLayout = () => {
       <Footer />
       <ConnectionLabelAlert isOnline={isWebsiteOnline} />
       <ToastAlert />
+      <ToastConfirm />
     </div>
   );
 };

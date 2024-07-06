@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
-import { removeById } from "src/Features/productsSlice";
 import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
+import { showConfirm } from "../../../Features/globalSlice";
+import { updateProductsState } from "../../../Features/productsSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./RemoveOrderProductBtn.module.scss";
 
-const RemoveOrderProductBtn = ({ productId }) => {
+const RemoveOrderProductBtn = ({ productName }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const lang = cookies.get("i18next");
@@ -41,7 +42,7 @@ const RemoveOrderProductBtn = ({ productId }) => {
       type="button"
       className={s.removeButton}
       aria-label="Remove product from cart"
-      onClick={() => removeProduct(dispatch, productId)}
+      onClick={() => showConfirmAlert(dispatch, productName)}
     >
       <SvgIcon name="xMark" />
       <ToolTip
@@ -54,7 +55,15 @@ const RemoveOrderProductBtn = ({ productId }) => {
 };
 export default RemoveOrderProductBtn;
 
-function removeProduct(dispatch, productId) {
-  // const removeAction = removeById({ key: "orderProducts", id: productId });
-  // dispatch(removeAction);
+function showConfirmAlert(dispatch, productName) {
+  dispatch(
+    showConfirm({
+      confirmText: `Remove ${productName} from your order?`,
+      confirmState: "warning",
+    })
+  );
+
+  dispatch(
+    updateProductsState({ key: "removeOrderProduct", value: productName })
+  );
 }

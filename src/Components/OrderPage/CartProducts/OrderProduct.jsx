@@ -20,7 +20,7 @@ const OrderProduct = ({ data }) => {
       <td className={s.product}>
         <div className={s.imgHolder}>
           <img src={img} alt={shortName} />
-          <RemoveOrderProductBtn productId={id} />
+          <RemoveOrderProductBtn productName={shortName} />
         </div>
 
         <Link to={`/details?product=${name}`}>{translatedProductName}</Link>

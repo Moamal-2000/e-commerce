@@ -13,6 +13,7 @@ const initialState = productsDataLocal
       wishList: [],
       productQuantity: 1,
       selectedProduct: null,
+      removeOrderProduct: "",
     };
 
 const productsSlice = createSlice({
