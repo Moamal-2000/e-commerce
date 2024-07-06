@@ -4,12 +4,8 @@ const initialState = {
   isOverlayActive: false,
   isMobileMenuActive: false,
   isProfileMenuActive: false,
-  loadingCategoryPage: false,
   isSectionsMenuActive: false,
   isZoomInPreviewActive: false,
-  loadingProductDetails: false,
-  loadingSearchProducts: true,
-  loadingProductsPage: true,
   previewImg: null,
 };
 
