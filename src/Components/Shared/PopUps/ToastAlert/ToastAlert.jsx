@@ -1,34 +1,32 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TOAST_ALERT_DURATION_MS } from "src/Data/globalVariables";
-import { updateGlobalState } from "src/Features/globalSlice";
+import { updateAlertState } from "src/Features/alertsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./ToastAlert.module.scss";
 
 const ToastAlert = () => {
-  const {
-    numberOfShowedAlerts,
-    isToastAlertActive,
-    toastAlertText,
-    toastAlertState,
-  } = useSelector((state) => state.global);
+  const { alert } = useSelector((state) => state.alerts);
+  const { isAlertActive, alertText, alertState } = alert;
   const dispatch = useDispatch();
-  const { iconName, className } = toastState[toastAlertState];
-  const showClass = isToastAlertActive ? s.show : "";
+  const { iconName, className } = toastState[alertState];
+  const showClass = isAlertActive ? s.show : "";
   let timerId;
 
   function setToastAlertTimeout() {
     if (!showClass) return;
 
     timerId = setTimeout(() => {
-      dispatch(updateGlobalState({ key: "isToastAlertActive", value: false }));
+      dispatch(
+        updateAlertState({ key: "isAlertActive", value: false, type: "alert" })
+      );
     }, TOAST_ALERT_DURATION_MS);
   }
 
   useEffect(() => {
     setToastAlertTimeout();
     return () => clearTimeout(timerId);
-  }, [toastAlertState, toastAlertText, numberOfShowedAlerts]);
+  }, [alertState, alertText]);
 
   return (
     <div className={`${s.toastAlert} ${className} ${showClass}`} dir="ltr">
@@ -37,7 +35,7 @@ const ToastAlert = () => {
         <SvgIcon name={iconName} />
       </div>
 
-      <p dir="ltr">{toastAlertText}</p>
+      <p dir="ltr">{alertText}</p>
     </div>
   );
 };

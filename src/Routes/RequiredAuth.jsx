@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
 import { pagesRequireSignIn } from "../Data/globalVariables";
-import { showAlert } from "../Features/globalSlice";
+import { showAlert } from "../Features/alertsSlice";
 
 const RequiredAuth = ({ children }) => {
   const { loginInfo } = useSelector((state) => state.user);
@@ -25,7 +25,10 @@ const RequiredAuth = ({ children }) => {
   function loginFirstAlert() {
     const alertText = t("toastAlert.pageRequiringSignIn");
     const alertState = "warning";
-    setTimeout(() => dispatch(showAlert({ alertText, alertState })), 300);
+    setTimeout(
+      () => dispatch(showAlert({ alertText, alertState, alertType: "alert" })),
+      300
+    );
   }
 
   return children;

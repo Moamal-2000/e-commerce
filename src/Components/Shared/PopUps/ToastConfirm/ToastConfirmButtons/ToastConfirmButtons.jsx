@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { updateGlobalState } from "src/Features/globalSlice";
+import { updateAlertState } from "src/Features/alertsSlice";
 import { removeByKeyName } from "src/Features/productsSlice";
 import s from "./ToastConfirmButtons.module.scss";
 
@@ -8,7 +8,9 @@ const ToastConfirmButtons = () => {
   const dispatch = useDispatch();
 
   function closeConfirmToast() {
-    dispatch(updateGlobalState({ key: "isToastConfirmActive", value: false }));
+    dispatch(
+      updateAlertState({ key: "isAlertActive", value: false, type: "confirm" })
+    );
   }
 
   function removeFromOrder() {

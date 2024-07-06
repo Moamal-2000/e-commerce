@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { updateUserData } from "src/Features/userSlice";
 import {
   checkAreInputsValid,
@@ -73,5 +73,8 @@ function updateUserInfo(formRef, dispatch, t) {
 function updateUserInfoAlert(dispatch, t) {
   const alertText = t("toastAlert.accountInfoUpdated");
   const alertState = "success";
-  setTimeout(() => dispatch(showAlert({ alertText, alertState })), 300);
+  setTimeout(
+    () => dispatch(showAlert({ alertText, alertState, alertType: "alert" })),
+    300
+  );
 }

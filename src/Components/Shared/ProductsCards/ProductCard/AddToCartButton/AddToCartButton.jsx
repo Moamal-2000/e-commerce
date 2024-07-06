@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
 import { compareDataToObjValue, isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
@@ -50,6 +50,7 @@ const AddToCartButton = ({ product }) => {
       showAlert({
         alertText: t(`toastAlert.${translateKey}`),
         alertState: "warning",
+        alertType: "alert",
       })
     );
   }

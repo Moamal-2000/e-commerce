@@ -1,7 +1,7 @@
 import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { addToArray, removeById } from "src/Features/productsSlice";
 import { favIconToolTipLeftPos } from "src/Functions/componentsFunctions";
 import { isItemFound } from "src/Functions/helper";
@@ -10,7 +10,9 @@ import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardFavIcon.module.scss";
 
 const ProductCardFavIcon = ({ product, productId }) => {
-  const {loginInfo: { isSignIn }} = useSelector((state) => state.user);
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const { favoritesProducts } = useSelector((state) => state.products);
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -27,6 +29,7 @@ const ProductCardFavIcon = ({ product, productId }) => {
         showAlert({
           alertText: t("toastAlert.addToFavorite"),
           alertState: "warning",
+          alertType: "alert",
         })
       );
       return;

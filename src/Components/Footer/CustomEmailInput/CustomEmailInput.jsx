@@ -2,7 +2,7 @@ import cookies from "js-cookie";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import {
   sendToolTipLeftPos,
   sendingToolTipLeftPos,
@@ -59,7 +59,7 @@ const CustomEmailInput = () => {
     }
 
     setTimeout(() => {
-      dispatch(showAlert({ alertText, alertState }));
+      dispatch(showAlert({ alertText, alertState, alertType: "alert" }));
       setLoading(false);
     }, 3000);
   };

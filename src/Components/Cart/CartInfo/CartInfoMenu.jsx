@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { getSubTotal } from "src/Functions/helper";
 import s from "./CartInfoMenu.module.scss";
 
@@ -57,5 +57,5 @@ function handleCheckoutBtn(cartProducts, navigateTo, dispatch, t) {
 function showEmptyCartAlert(dispatch, t) {
   const alertText = t("toastAlert.cartEmpty");
   const alertState = "warning";
-  dispatch(showAlert({ alertText, alertState }));
+  dispatch(showAlert({ alertText, alertState, alertType: "alert" }));
 }

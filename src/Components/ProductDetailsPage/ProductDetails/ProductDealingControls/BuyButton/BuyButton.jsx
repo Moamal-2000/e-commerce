@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { addToArray } from "src/Features/productsSlice";
 import { compareDataToObjValue } from "src/Functions/helper";
 import s from "./BuyButton.module.scss";
@@ -62,6 +62,7 @@ const BuyButton = () => {
       showAlert({
         alertText: t(`toastAlert.${translateKey}`),
         alertState: "warning",
+        alertType: "alert",
       })
     );
   }

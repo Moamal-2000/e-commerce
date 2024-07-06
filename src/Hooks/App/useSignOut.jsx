@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { setEmptyArrays } from "src/Features/productsSlice";
 import { signOut } from "src/Features/userSlice";
 
@@ -26,6 +26,7 @@ const useSignOut = () => {
         showAlert({
           alertText: t("toastAlert.signOutSuccess"),
           alertState: "warning",
+          alertType: "alert",
         })
       );
     }, 500);

@@ -4,10 +4,10 @@ import s from "./ToastConfirm.module.scss";
 import ToastConfirmButtons from "./ToastConfirmButtons/ToastConfirmButtons";
 
 const ToastConfirm = () => {
-  const { isToastConfirmActive, toastConfirmText, toastConfirmState } =
-    useSelector((state) => state.global);
-  const { iconName, className } = toastState[toastConfirmState];
-  const showClass = isToastConfirmActive ? s.show : "";
+  const { confirm } = useSelector((state) => state.alerts);
+  const { isAlertActive, alertText, alertState } = confirm;
+  const { iconName, className } = toastState[alertState];
+  const showClass = isAlertActive ? s.show : "";
 
   return (
     <div className={`${s.toastConfirm} ${className} ${showClass}`} dir="ltr">
@@ -16,7 +16,7 @@ const ToastConfirm = () => {
         <SvgIcon name={iconName} />
       </div>
 
-      <p dir="ltr">{toastConfirmText}</p>
+      <p dir="ltr">{alertText}</p>
 
       <ToastConfirmButtons />
     </div>

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { newSignUp, setLoginData } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import {
@@ -59,7 +59,7 @@ const SignUpForm = () => {
     const alertText = t("toastAlert.loginFailed");
     const alertState = "error";
 
-    dispatch(showAlert({ alertText, alertState }));
+    dispatch(showAlert({ alertText, alertState, alertType: "alert" }));
   }
 
   return (
@@ -79,6 +79,6 @@ export function signInAlert(t, dispatch) {
   const alertState = "success";
 
   setTimeout(() => {
-    dispatch(showAlert({ alertText, alertState }));
+    dispatch(showAlert({ alertText, alertState, alertType: "alert" }));
   }, 1500);
 }

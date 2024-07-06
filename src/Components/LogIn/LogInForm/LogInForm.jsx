@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import { newSignUp } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
@@ -72,12 +72,15 @@ function logInAlert(dispatch, t) {
   const alertText = t("toastAlert.loginSuccess");
   const alertState = "success";
 
-  setTimeout(() => dispatch(showAlert({ alertText, alertState })), 1500);
+  setTimeout(
+    () => dispatch(showAlert({ alertText, alertState, alertType: "alert" })),
+    1500
+  );
 }
 
 function internetConnectionAlert(dispatch, t) {
   const alertText = t("toastAlert.loginFailed");
   const alertState = "error";
 
-  dispatch(showAlert({ alertText, alertState }));
+  dispatch(showAlert({ alertText, alertState, alertType: "alert" }));
 }

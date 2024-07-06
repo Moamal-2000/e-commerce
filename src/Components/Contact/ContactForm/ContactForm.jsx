@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { showAlert } from "src/Features/globalSlice";
+import { showAlert } from "src/Features/alertsSlice";
 import s from "./ContactForm.module.scss";
 
 const ContactForm = () => {
@@ -102,6 +102,7 @@ function showSentMsgAlert(dispatch, t) {
   const action = showAlert({
     alertText: t("toastAlert.messageSent"),
     alertState: "success",
+    alertType: "alert",
   });
 
   setTimeout(() => dispatch(action), 1200);
