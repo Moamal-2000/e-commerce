@@ -12,21 +12,12 @@ import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./RemoveOrderProductBtn.module.scss";
 
 const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
-  const { confirm } = useSelector((state) => state.alerts);
   const { removeOrderProduct } = useSelector((state) => state.products);
-  const { isAlertActive } = confirm;
+  const { isAlertActive } = useSelector((state) => state.alerts).confirm;
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
   const [lang] = useCurrentLang();
-
-  useEffect(() => {
-    const isNotSelectedProduct = removeOrderProduct !== productName;
-    if (!isAlertActive || isNotSelectedProduct) return;
-
-    showConfirmAlert(dispatch, productName, t, translatedProduct);
-  }, [lang]);
-
   const [toolTipLeftPos, setToolTipLeftPos] = useState(
     cartProductToolTipPos(lang)
   );
@@ -44,7 +35,12 @@ const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
   }
 
   useEffect(() => {
+    const isSelectedProduct = removeOrderProduct === productName;
+
     updateToolTipPositions();
+
+    if (isAlertActive && isSelectedProduct)
+      showConfirmAlert(dispatch, productName, t, translatedProduct);
   }, [windowWidth, lang]);
 
   return (
