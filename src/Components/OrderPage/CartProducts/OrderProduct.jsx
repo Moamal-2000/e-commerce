@@ -9,7 +9,7 @@ const OrderProduct = ({ data }) => {
   const subTotal = (quantity * priceAfterDiscount).toFixed(2);
   const { t } = useTranslation();
 
-  const translatedProductName = translateProduct({
+  const translatedProduct = translateProduct({
     productName: shortName,
     translateMethod: t,
     translateKey: "shortName",
@@ -20,10 +20,13 @@ const OrderProduct = ({ data }) => {
       <td className={s.product}>
         <div className={s.imgHolder}>
           <img src={img} alt={shortName} />
-          <RemoveOrderProductBtn productName={shortName} />
+          <RemoveOrderProductBtn
+            productName={shortName}
+            translatedProduct={translatedProduct}
+          />
         </div>
 
-        <Link to={`/details?product=${name}`}>{translatedProductName}</Link>
+        <Link to={`/details?product=${name}`}>{translatedProduct}</Link>
       </td>
 
       <td className={s.price}>${afterDiscount}</td>

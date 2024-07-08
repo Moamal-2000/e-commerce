@@ -9,10 +9,9 @@ import useCurrentLang from "src/Hooks/App/useCurrentLang";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
-import { translateProduct } from "./OrderProduct";
 import s from "./RemoveOrderProductBtn.module.scss";
 
-const RemoveOrderProductBtn = ({ productName }) => {
+const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
   const { confirm } = useSelector((state) => state.alerts);
   const { removeOrderProduct } = useSelector((state) => state.products);
   const { isAlertActive } = confirm;
@@ -20,11 +19,6 @@ const RemoveOrderProductBtn = ({ productName }) => {
   const { t } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
   const [lang] = useCurrentLang();
-  const translatedProduct = translateProduct({
-    productName,
-    translateMethod: t,
-    translateKey: "shortName",
-  });
 
   useEffect(() => {
     const isNotSelectedProduct = removeOrderProduct !== productName;
