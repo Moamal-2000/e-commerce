@@ -1,11 +1,15 @@
 .buttons {
   margin-left: 20px;
   margin-right: 6px;
+  display: flex;
+  align-items: center;
 }
 
 .buttons>button {
   border: none;
   border-radius: 5px;
+  width: fit-content;
+  text-wrap: nowrap;
   background-color: transparent;
   font-family: "Poppins";
   font-size: .8rem;
@@ -30,4 +34,9 @@
     color: #ff4848;
     text-decoration: underline;
   }
+}
+
+// Arabic styles
+[lang=ar] .buttons>button {
+  font-family: "Rubik";
 }
