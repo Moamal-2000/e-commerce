@@ -1,5 +1,3 @@
-import i18next from "i18next";
-import cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -7,6 +5,7 @@ import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { showAlert } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
+import useCurrentLang from "src/Hooks/App/useCurrentLang";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
@@ -15,29 +14,17 @@ import s from "./RemoveOrderProductBtn.module.scss";
 
 const RemoveOrderProductBtn = ({ productName }) => {
   const { confirm } = useSelector((state) => state.alerts);
-  const {removeOrderProduct} = useSelector((state) => state.products);
+  const { removeOrderProduct } = useSelector((state) => state.products);
   const { isAlertActive } = confirm;
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
-  const [lang, setLang] = useState(cookies.get("i18next") || "en");
+  const [lang] = useCurrentLang();
   const translatedProduct = translateProduct({
     productName,
     translateMethod: t,
     translateKey: "shortName",
   });
-
-  useEffect(() => {
-    const handleLanguageChange = (lng) => {
-      setLang(lng);
-    };
-
-    i18next.on("languageChanged", handleLanguageChange);
-
-    return () => {
-      i18next.off("languageChanged", handleLanguageChange);
-    };
-  }, []);
 
   useEffect(() => {
     const isNotSelectedProduct = removeOrderProduct !== productName;
