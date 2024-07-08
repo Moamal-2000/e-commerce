@@ -1,7 +1,8 @@
+import i18next from "i18next";
 import cookies from "js-cookie";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { showAlert } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
@@ -13,10 +14,37 @@ import { translateProduct } from "./OrderProduct";
 import s from "./RemoveOrderProductBtn.module.scss";
 
 const RemoveOrderProductBtn = ({ productName }) => {
+  const { confirm } = useSelector((state) => state.alerts);
+  const {removeOrderProduct} = useSelector((state) => state.products);
+  const { isAlertActive } = confirm;
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const lang = cookies.get("i18next");
   const { windowWidth } = useGetResizeWindow();
+  const [lang, setLang] = useState(cookies.get("i18next") || "en");
+  const translatedProduct = translateProduct({
+    productName,
+    translateMethod: t,
+    translateKey: "shortName",
+  });
+
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setLang(lng);
+    };
+
+    i18next.on("languageChanged", handleLanguageChange);
+
+    return () => {
+      i18next.off("languageChanged", handleLanguageChange);
+    };
+  }, []);
+
+  useEffect(() => {
+    const isNotSelectedProduct = removeOrderProduct !== productName;
+    if (!isAlertActive || isNotSelectedProduct) return;
+
+    showConfirmAlert(dispatch, productName, t, translatedProduct);
+  }, [lang]);
 
   const [toolTipLeftPos, setToolTipLeftPos] = useState(
     cartProductToolTipPos(lang)
@@ -43,7 +71,9 @@ const RemoveOrderProductBtn = ({ productName }) => {
       type="button"
       className={s.removeButton}
       aria-label="Remove product from cart"
-      onClick={() => showConfirmAlert(dispatch, productName, t)}
+      onClick={() =>
+        showConfirmAlert(dispatch, productName, t, translatedProduct)
+      }
     >
       <SvgIcon name="xMark" />
       <ToolTip
@@ -56,13 +86,7 @@ const RemoveOrderProductBtn = ({ productName }) => {
 };
 export default RemoveOrderProductBtn;
 
-function showConfirmAlert(dispatch, productName, t) {
-  const translatedProduct = translateProduct({
-    productName,
-    translateMethod: t,
-    translateKey: "shortName",
-  });
-
+function showConfirmAlert(dispatch, productName, t, translatedProduct) {
   dispatch(
     showAlert({
       alertText: t("toastAlert.removeOrderProduct", {

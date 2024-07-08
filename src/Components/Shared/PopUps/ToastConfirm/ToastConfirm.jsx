@@ -9,7 +9,7 @@ const ToastConfirm = () => {
   const { isAlertActive, alertText, alertState } = confirm;
   const { iconName, className } = toastState[alertState];
   const showClass = isAlertActive ? s.show : "";
-  const lang = cookies.get("i18next");
+  const lang = cookies.get("i18next") || "en";
   const textDirection = lang === "ar" ? "rtl" : "ltr";
 
   return (
@@ -19,9 +19,9 @@ const ToastConfirm = () => {
         <SvgIcon name={iconName} />
       </div>
 
-        <p dir={textDirection}>{alertText}</p>
+      <p dir={textDirection}>{alertText}</p>
 
-        <ToastConfirmButtons />
+      <ToastConfirmButtons />
     </div>
   );
 };
