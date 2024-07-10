@@ -8,8 +8,12 @@ import s from "./GlobalOverlay.module.scss";
 
 const GlobalOverlay = () => {
   const dispatch = useDispatch();
-  const { isOverlayActive, isMobileMenuActive, isProfileMenuActive } =
-    useSelector((state) => state.global);
+  const {
+    isOverlayActive,
+    isMobileMenuActive,
+    isProfileMenuActive,
+    isWhatDoIDoMenuActive,
+  } = useSelector((state) => state.global);
   const activeClass = isOverlayActive ? s.active : "";
 
   function handleOverlayClick(e) {
@@ -25,6 +29,10 @@ const GlobalOverlay = () => {
       dispatch(updateGlobalState({ key: "isMobileMenuActive", value: false }));
     if (isProfileMenuActive)
       dispatch(updateGlobalState({ key: "isProfileMenuActive", value: false }));
+    if (isWhatDoIDoMenuActive)
+      dispatch(
+        updateGlobalState({ key: "isWhatDoIDoMenuActive", value: false })
+      );
   }
 
   function toggleScrollbar() {

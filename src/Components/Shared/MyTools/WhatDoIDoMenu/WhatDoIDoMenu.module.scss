@@ -1,5 +1,46 @@
 @import "src/Styles/mixins";
 
 .menu {
-  
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  padding: 20px;
+  width: 600px;
+  height: 400px;
+  border-radius: 10px;
+  background-color: var(--very-dark-gray2);
+  color: var(--white);
+  z-index: 1001;
+  transition: opacity .2s;
+
+  &.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity .3s .3s;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  right: 19px;
+  top: 19px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.closeBtn:hover>svg {
+  fill: var(--white);
+}
+
+.closeBtn>svg {
+  fill: var(--medium-light-gray);
+  width: 24px;
+  height: 24px;
+  transition: fill .1s;
 }
