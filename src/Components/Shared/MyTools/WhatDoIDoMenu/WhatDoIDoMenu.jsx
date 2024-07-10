@@ -23,6 +23,10 @@ const WhatDoIDoMenu = () => {
       >
         <SvgIcon name="xMark" />
       </button>
+
+      <p className={s.title}></p>
+
+      <p className={s.description}>Still working on the menu.</p>
     </div>
   );
 };
