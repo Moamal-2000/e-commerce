@@ -1,8 +1,8 @@
 import SvgIcon from "../MiniComponents/SvgIcon";
 import ToolTip from "../MiniComponents/ToolTip";
-import s from "./WhatDoIDo.module.scss";
+import s from "./WhatDoIDoButton.module.scss";
 
-const WhatDoIDo = () => {
+const WhatDoIDoButton = () => {
   return (
     <button className={s.whatDoIDoBtn} type="button" aria-haspopup="true">
       <SvgIcon name="questionMark" />
@@ -10,4 +10,4 @@ const WhatDoIDo = () => {
     </button>
   );
 };
-export default WhatDoIDo;
+export default WhatDoIDoButton;

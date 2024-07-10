@@ -7,7 +7,7 @@ import GlobalOverlay from "../Components/Shared/MiniComponents/GlobalOverlay/Glo
 import ScrollToTop from "../Components/Shared/MiniComponents/ScrollToTop/ScrollToTop";
 import SkipContentLink from "../Components/Shared/MiniComponents/SkipContentLink";
 import MobileNav from "../Components/Shared/MobileNav/MobileNav";
-import WhatDoIDo from "../Components/Shared/MyTools/WhatDoIDo";
+import WhatDoIDoButton from "../Components/Shared/MyTools/WhatDoIDo";
 import ToastAlert from "../Components/Shared/PopUps/ToastAlert/ToastAlert";
 import ToastConfirm from "../Components/Shared/PopUps/ToastConfirm/ToastConfirm";
 import useCurrentSkipLinkId from "../Hooks/App/useCurrentSkipLinkId";
@@ -20,7 +20,7 @@ const RoutesLayout = () => {
   return (
     <div className="App" tabIndex="-1">
       <SkipContentLink scrollTo={skipLinkSectionId} />
-      <WhatDoIDo />
+      <WhatDoIDoButton />
       <FirstHeader />
       <Header />
       <MobileNav />
