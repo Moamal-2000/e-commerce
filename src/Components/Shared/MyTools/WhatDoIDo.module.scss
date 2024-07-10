@@ -1,0 +1,20 @@
+.whatDoIDoBtn {
+  background-color: var(--black);
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 5px 5px 0;
+  position: fixed;
+  left: 0;
+  top: 50vh;
+  z-index: 102;
+}
+
+.whatDoIDoBtn>svg {
+  fill: var(--white);
+  width: 20px;
+  height: 20px;
+}
