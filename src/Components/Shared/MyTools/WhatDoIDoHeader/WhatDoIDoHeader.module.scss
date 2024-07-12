@@ -1,0 +1,27 @@
+
+.header {
+  padding: 26px;
+  border-bottom: solid 2px #545454;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.closeBtn:hover>svg {
+  fill: var(--white);
+}
+
+.closeBtn>svg {
+  fill: var(--medium-light-gray);
+  width: 22px;
+  height: 22px;
+  transition: fill .1s;
+}
