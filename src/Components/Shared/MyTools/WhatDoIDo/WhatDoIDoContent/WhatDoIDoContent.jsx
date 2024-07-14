@@ -1,6 +1,6 @@
 import todoData from "src/Data/todoData";
+import WhatDoIDoList from "../WhatDoIDoList/WhatDoIDoList";
 import s from "./WhatDoIDoContent.module.scss";
-import WhatDoIDoList from "./WhatDoIDoList/WhatDoIDoList";
 
 const WhatDoIDoContent = () => {
   const { todo, workingOn, achieved } = todoData;

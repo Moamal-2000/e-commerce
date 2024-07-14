@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
-import SvgIcon from "../../MiniComponents/SvgIcon";
+import SvgIcon from "../../../MiniComponents/SvgIcon";
 import s from "./WhatDoIDoHeader.module.scss";
 
 const WhatDoIDoHeader = () => {

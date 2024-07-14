@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
-import SvgIcon from "../../MiniComponents/SvgIcon";
-import ToolTip from "../../MiniComponents/ToolTip";
+import SvgIcon from "../../../MiniComponents/SvgIcon";
+import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./WhatDoIDoButton.module.scss";
 
 const WhatDoIDoButton = () => {
