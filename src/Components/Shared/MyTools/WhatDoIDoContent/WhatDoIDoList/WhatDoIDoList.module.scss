@@ -1,0 +1,72 @@
+@import "src/Styles/mixins";
+
+.title {
+  color: #cdcdcd;
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 8px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+@include medium {
+  .title {
+    font-size: 1.1rem;
+  }
+}
+
+.title>span {
+  user-select: none;
+}
+
+@include medium {
+  .title>span {
+    font-size: .95rem;
+  }
+}
+
+.list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.list ul>li {
+  font-family: "Inter", sans-serif;
+  margin-left: 20px;
+  color: var(--white);
+  filter: drop-shadow(0 0 .5px var(--white));
+
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+@include medium {
+  .list ul>li {
+    font-size: .9rem;
+  }
+}
+
+@include small {
+  .list ul>li {
+    font-size: .8rem;
+  }
+}
+
+.list .checked>li {
+  text-decoration: line-through;
+  color: var(--medium-light-gray);
+  filter: drop-shadow(0 0 .5px var(--medium-light-gray));
+}
+
+:where(.title, .list li)::selection {
+  background-color: var(--white) !important;
+}
