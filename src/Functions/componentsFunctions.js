@@ -177,6 +177,24 @@ export function cartProductToolTipPos(lang) {
   return "-50px";
 }
 
+export function orderProductToolTipPos(lang) {
+  switch (lang) {
+    case "ru":
+      return "-66px";
+    case "ar":
+      return "58px";
+    case "fr":
+      return "-57px";
+    case "hu":
+      return "-57px";
+    case "ja":
+      return "-37px";
+    case "hi":
+      return "-45px";
+  }
+  return "-52px";
+}
+
 export function getElementWidth(element) {
   return element?.getBoundingClientRect()?.width;
 }
