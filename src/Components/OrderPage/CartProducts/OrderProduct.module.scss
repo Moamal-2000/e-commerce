@@ -27,6 +27,11 @@
   object-fit: contain;
 }
 
+.imgHolder:hover>button {
+  opacity: 1;
+  transition: opacity .2s .1s, left .4s, top .4s;
+}
+
 .product a {
   outline: none;
   color: var(--black);

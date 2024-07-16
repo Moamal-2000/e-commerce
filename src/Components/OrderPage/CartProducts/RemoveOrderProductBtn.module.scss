@@ -9,9 +9,11 @@
   align-items: center;
   justify-content: center;
   position: absolute;
+  left: -18px;
   top: 0;
-  left: -5px;
   cursor: pointer;
+  opacity: 0;
+  transition: opacity .2s, left .2s, top .2s;
 
   &:focus-visible [data-is-tooltip=true] {
     opacity: 1;
