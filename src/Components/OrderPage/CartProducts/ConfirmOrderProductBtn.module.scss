@@ -1,7 +1,7 @@
-.removeButton {
+.confirmButton {
   border: none;
   outline: none;
-  background-color: var(--tomato);
+  background-color: var(--green);
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 0;
+  top: calc(100% - 20px);
   left: -5px;
   cursor: pointer;
 
@@ -18,14 +18,14 @@
   }
 }
 
-.removeButton>svg {
+.confirmButton>svg {
   width: 12px;
   height: 12px;
   fill: var(--white)
 }
 
 // Arabic styles
-[lang=ar] .removeButton {
+[lang=ar] .confirmButton {
   left: auto;
   right: 0;
 }

@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import ConfirmOrderProductBtn from "./ConfirmOrderProductBtn";
 import s from "./OrderProduct.module.scss";
 import RemoveOrderProductBtn from "./RemoveOrderProductBtn";
 
@@ -21,6 +22,10 @@ const OrderProduct = ({ data }) => {
         <div className={s.imgHolder}>
           <img src={img} alt={shortName} />
           <RemoveOrderProductBtn
+            productName={shortName}
+            translatedProduct={translatedProduct}
+          />
+          <ConfirmOrderProductBtn
             productName={shortName}
             translatedProduct={translatedProduct}
           />

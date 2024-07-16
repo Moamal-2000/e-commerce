@@ -18,6 +18,13 @@
   height: fit-content;
   user-select: none;
   position: relative;
+  width: 56px;
+  height: 56px;
+  margin-right: 30px;
+}
+
+.imgHolder>img {
+  object-fit: contain;
 }
 
 .product a {
