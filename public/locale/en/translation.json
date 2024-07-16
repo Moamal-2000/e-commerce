@@ -536,7 +536,8 @@
     "cartEmpty": "Please add some items to cart first.",
     "productAlreadyInCart": "You have already added this product to cart",
     "productAlreadyInOrder": "You have already added this product to orders",
-    "removeOrderProduct": "Remove {{translatedProduct}} from your order?"
+    "removeOrderProduct": "Remove {{translatedProduct}} from your order?",
+    "confirmOrderProduct": "Did you receive {{translatedProduct}}?"
   },
 
   "wishlist": "Wishlist ({{numberOfWishlist}})",

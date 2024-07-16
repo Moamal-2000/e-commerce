@@ -536,7 +536,8 @@
     "cartEmpty": ".الرجاء إضافة بعض العناصر إلى السلة أولاً",
     "productAlreadyInCart": "لقد قمت بالفعل بإضافة هذا المنتج إلى السلة",
     "productAlreadyInOrder": "لقد قمت بالفعل بإضافة هذا المنتج إلى الطلبات",
-    "removeOrderProduct": "هل تريد إزالة {{translatedProduct}} من طلباتك؟"
+    "removeOrderProduct": "هل تريد إزالة {{translatedProduct}} من طلباتك؟",
+    "confirmOrderProduct": "هل استلمت {{translatedProduct}}؟"
   },
   "wishlist": "قائمة الرغبات ({{numberOfWishlist}})",
   "cashOnDelivery": "الدفع عند الاستلام",

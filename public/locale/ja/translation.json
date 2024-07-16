@@ -535,7 +535,8 @@
     "cartEmpty": "まずカートにアイテムを追加してください.",
     "productAlreadyInCart": "この商品はすでにカートに追加されています",
     "productAlreadyInOrder": "この商品はすでに注文に追加されています",
-    "removeOrderProduct": "注文から{{translatedProduct}}を削除しますか？"
+    "removeOrderProduct": "注文から{{translatedProduct}}を削除しますか？",
+    "confirmOrderProduct": "{{translatedProduct}}を受け取りましたか？"
   },
 
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",

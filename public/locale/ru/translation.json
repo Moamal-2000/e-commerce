@@ -536,7 +536,8 @@
     "cartEmpty": "Пожалуйста, сначала добавьте товары в корзину.",
     "productAlreadyInCart": "Вы уже добавили этот продукт в корзину",
     "productAlreadyInOrder": "Вы уже добавили этот продукт в заказы",
-    "removeOrderProduct": "Удалить {{translatedProduct}} из вашего заказа?"
+    "removeOrderProduct": "Удалить {{translatedProduct}} из вашего заказа?",
+    "confirmOrderProduct": "Вы получили {{translatedProduct}}?"
   },
 
   "wishlist": "Избранное ({{numberOfWishlist}})",

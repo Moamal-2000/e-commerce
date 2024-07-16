@@ -535,7 +535,8 @@
     "cartEmpty": "कृपया पहले कुछ आइटम कार्ट में जोड़ें.",
     "productAlreadyInCart": "आपने पहले ही इस उत्पाद को कार्ट में जोड़ लिया है",
     "productAlreadyInOrder": "आपने पहले ही इस उत्पाद को ऑर्डर में जोड़ लिया है",
-    "removeOrderProduct": "क्या आप अपने ऑर्डर से {{translatedProduct}} हटाना चाहते हैं?"
+    "removeOrderProduct": "क्या आप अपने ऑर्डर से {{translatedProduct}} हटाना चाहते हैं?",
+    "confirmOrderProduct": "क्या आपको {{translatedProduct}} प्राप्त हुआ?"
   },
 
   "wishlist": "इच्छा-सूची ({{numberOfWishlist}})",

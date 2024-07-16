@@ -532,7 +532,8 @@
     "cartEmpty": "Kérjük, először adjon hozzá néhány tételt a kosarához.",
     "productAlreadyInCart": "Ezt a terméket már hozzáadta a kosárhoz",
     "productAlreadyInOrder": "Ezt a terméket már hozzáadta a rendelésekhez",
-    "removeOrderProduct": "Eltávolítja a {{translatedProduct}} a rendeléséből?"
+    "removeOrderProduct": "Eltávolítja a {{translatedProduct}} a rendeléséből?",
+    "confirmOrderProduct": "Megkapta a(z) {{translatedProduct}}-t?"
   },
 
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",

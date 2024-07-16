@@ -66,7 +66,7 @@ export default ConfirmOrderProductBtn;
 function showConfirmAlert(dispatch, productName, t, translatedProduct) {
   dispatch(
     showAlert({
-      alertText: t("toastAlert.removeOrderProduct", {
+      alertText: t("toastAlert.confirmOrderProduct", {
         translatedProduct: translatedProduct,
       }),
       alertState: "warning",
