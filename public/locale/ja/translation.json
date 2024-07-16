@@ -410,7 +410,8 @@
     "scrollToTop": "トップにスクロール",
     "repoStarsForks": "ウェブサイトのリポジトリ",
     "searchButton": "検索",
-    "remove": "削除"
+    "remove": "削除",
+    "confirm": "確認"
   },
 
   "inputsPlaceholders": {

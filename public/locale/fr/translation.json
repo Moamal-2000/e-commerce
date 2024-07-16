@@ -410,7 +410,8 @@
     "scrollToTop": "Remonter en haut",
     "repoStarsForks": "dépôt du site web",
     "searchButton": "Rechercher",
-    "remove": "Supprimer"
+    "remove": "Supprimer",
+    "confirm": "Confirmer"
   },
 
   "inputsPlaceholders": {

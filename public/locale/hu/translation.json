@@ -408,7 +408,8 @@
     "scrollToTop": "Görgetés az oldal tetejére",
     "repoStarsForks": "a webhely tárolója",
     "searchButton": "Keresés",
-    "remove": "Eltávolítás"
+    "remove": "Eltávolítás",
+    "confirm": "Megerősít"
   },
 
   "inputsPlaceholders": {

@@ -410,7 +410,8 @@
     "scrollToTop": "शीर्ष पर स्क्रॉल करें",
     "repoStarsForks": "वेबसाइट की रिपॉज़िटरी",
     "searchButton": "खोजें",
-    "remove": "हटाएं"
+    "remove": "हटाएं",
+    "confirm": "पुष्टि करें"
   },
 
   "inputsPlaceholders": {

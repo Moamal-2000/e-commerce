@@ -411,7 +411,8 @@
     "scrollToTop": "пролистать наверх",
     "repoStarsForks": "репозиторий веб-сайта",
     "searchButton": "Поиск",
-    "remove": "Удалить"
+    "remove": "Удалить",
+    "confirm": "Подтвердить"
   },
 
   "inputsPlaceholders": {

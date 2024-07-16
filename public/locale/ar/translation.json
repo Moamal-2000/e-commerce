@@ -411,7 +411,8 @@
     "scrollToTop": "تنقل للأعلى",
     "repoStarsForks": "مستودع الموقع",
     "searchButton": "بحث",
-    "remove": "حذف"
+    "remove": "حذف",
+    "confirm": "تأكيد"
   },
 
   "inputsPlaceholders": {

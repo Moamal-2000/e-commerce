@@ -411,7 +411,8 @@
     "scrollToTop": "Scroll to top",
     "repoStarsForks": "website's repository",
     "searchButton": "Search",
-    "remove": "Remove"
+    "remove": "Remove",
+    "confirm": "Confirm"
   },
 
   "inputsPlaceholders": {
