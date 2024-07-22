@@ -9,11 +9,17 @@
   font-size: 1rem;
 }
 
-.nameMenu .active svg {
+.nameMenu>button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.nameMenu button.active svg {
   transform: rotate(90deg);
 }
 
-.nameMenu svg {
+.nameMenu button svg {
   width: 10px;
   height: 10px;
 }
