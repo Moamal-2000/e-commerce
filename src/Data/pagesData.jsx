@@ -56,6 +56,10 @@ export const PAGE_SECTIONS_ID = [
     pagePath: "/products",
   },
   {
+    sectionId: "order-page",
+    pagePath: "/order",
+  },
+  {
     sectionId: "notfound-page",
   },
 ];
