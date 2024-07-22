@@ -42,6 +42,7 @@ const CustomNumberInput = () => {
         value={productQuantity}
         min={1}
         max={1000}
+        aria-label="Product quantity input"
       />
 
       <button
