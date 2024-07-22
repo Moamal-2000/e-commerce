@@ -18,6 +18,7 @@ const WhatDoIDoButton = () => {
       onClick={openMenu}
       type="button"
       aria-haspopup="true"
+      aria-label="to-do list button"
     >
       <SvgIcon name="questionMark" />
       <ToolTip content="What i'm working on?" left="126px" top="50%" />

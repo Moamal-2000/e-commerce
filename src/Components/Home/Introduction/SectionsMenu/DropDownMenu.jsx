@@ -29,9 +29,10 @@ const DropDownMenu = ({ nameMenu, children }) => {
     <div {...dropDownMenuAttributes}>
       <div className={s.nameMenu}>
         <span>{nameMenu}</span>
-        <div className={activeClass} aria-label={ariaLabel}>
+
+        <button type="button" className={activeClass} aria-label={ariaLabel}>
           <SvgIcon name="chevronRight" />
-        </div>
+        </button>
       </div>
 
       <div className={`${s.menu} ${activeClass}`}>{children}</div>

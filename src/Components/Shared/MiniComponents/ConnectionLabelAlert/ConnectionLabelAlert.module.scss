@@ -19,7 +19,7 @@
 }
 
 .labelBody.active {
-  background-color: #2ba640;
+  background-color: var(--green);
   animation: hideLabelAnimation 1s 2s 1 forwards;
 }
 

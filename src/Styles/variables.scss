@@ -7,9 +7,9 @@
 }
 
 :root {
-  --swiper-pagination-bullet-inactive-opacity: .6;
-  --swiper-pagination-bullet-size: 10px;
-  --swiper-pagination-color: var(--tomato);
-  --swiper-pagination-bullet-horizontal-gap: 6px;
   --swiper-pagination-bullet-inactive-color: var(--very-light-gray);
+  --swiper-pagination-bullet-inactive-opacity: .6;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+  --swiper-pagination-bullet-size: 12px;
+  --swiper-pagination-color: var(--tomato);
 }

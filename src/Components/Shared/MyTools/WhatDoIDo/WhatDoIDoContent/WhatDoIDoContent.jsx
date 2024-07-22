@@ -6,7 +6,11 @@ const WhatDoIDoContent = () => {
   const { todo, workingOn, achieved } = todoData;
 
   return (
-    <section className={s.mainContent} role="menu">
+    <section
+      className={s.mainContent}
+      role="region"
+      aria-label="What Do I Do menu content"
+    >
       <WhatDoIDoList data={todo} title="To-Do List" icon="📒" />
       <WhatDoIDoList data={workingOn} title="Working on" icon="🌟" />
       <WhatDoIDoList
