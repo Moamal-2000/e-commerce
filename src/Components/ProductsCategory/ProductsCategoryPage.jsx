@@ -43,7 +43,7 @@ const ProductsCategoryPage = () => {
         <main className={s.categoryPage}>
           <PagesHistory history={["/", categoryTypeTrans]} />
 
-          <section className={s.categoryContent}>
+          <section className={s.categoryContent} id="category-page">
             {!loadingCategoryPage && isWebsiteOnline && (
               <ProductsCategory
                 categoryName={categoryType}

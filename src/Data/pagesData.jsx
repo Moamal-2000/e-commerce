@@ -60,6 +60,10 @@ export const PAGE_SECTIONS_ID = [
     pagePath: "/order",
   },
   {
+    sectionId: "category-page",
+    pagePath: "/category",
+  },
+  {
     sectionId: "notfound-page",
   },
 ];
