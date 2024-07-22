@@ -64,6 +64,7 @@ const SearchProductsInput = () => {
       className={s.searchContainer}
       onSubmit={handleSearchProducts}
       onClick={focusInput}
+      role="search"
     >
       <SearchInput searchRef={searchRef} />
 

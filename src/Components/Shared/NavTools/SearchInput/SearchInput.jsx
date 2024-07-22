@@ -16,7 +16,6 @@ const SearchInput = ({ searchRef }) => {
       placeholder={t("inputsPlaceholders.whatYouLookingFor")}
       onChange={handleSearchOnChange}
       aria-label="Search product input"
-      role="search"
     />
   );
 };

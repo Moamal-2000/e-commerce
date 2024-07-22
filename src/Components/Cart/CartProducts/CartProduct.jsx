@@ -20,7 +20,7 @@ const CartProduct = ({ data }) => {
     <tr className={s.productContainer}>
       <td className={s.product}>
         <div className={s.imgHolder}>
-          <img src={img} alt={shortName} />
+          <img src={img} alt={`${shortName} product`} />
           <RemoveCartProductBtn productId={id} />
         </div>
 
