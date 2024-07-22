@@ -8,7 +8,7 @@ const WhatDoIDoMenu = () => {
   const activeClass = isWhatDoIDoMenuActive ? s.active : "";
 
   return (
-    <div className={`${s.menu} ${activeClass}`} role="menu">
+    <div className={`${s.menu} ${activeClass}`}>
       <WhatDoIDoHeader />
       <WhatDoIDoContent />
     </div>

@@ -6,7 +6,7 @@ const WhatDoIDoContent = () => {
   const { todo, workingOn, achieved } = todoData;
 
   return (
-    <section className={s.mainContent}>
+    <section className={s.mainContent} role="menu">
       <WhatDoIDoList data={todo} title="To-Do List" icon="📒" />
       <WhatDoIDoList data={workingOn} title="Working on" icon="🌟" />
       <WhatDoIDoList

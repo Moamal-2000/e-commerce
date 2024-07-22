@@ -11,8 +11,10 @@ const DropDownMenu = ({ nameMenu, children }) => {
     className: s.dropDownMenu,
     onClick: handleToggleMenu,
     onFocus: openMenu,
+    role: "button",
     "aria-haspopup": "true",
     "aria-expanded": isMenuOpen,
+    "aria-label": ariaLabel,
   };
 
   function handleToggleMenu() {
@@ -32,9 +34,7 @@ const DropDownMenu = ({ nameMenu, children }) => {
         </div>
       </div>
 
-      <div className={`${s.menu} ${activeClass}`} role="menu">
-        {children}
-      </div>
+      <div className={`${s.menu} ${activeClass}`}>{children}</div>
     </div>
   );
 };

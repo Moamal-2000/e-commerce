@@ -4,7 +4,7 @@ const WhatDoIDoList = ({ data, title, icon, type }) => {
   const checkedClass = type === "checked" ? s.checked : "";
 
   return (
-    <div className={s.list}>
+    <div className={s.list} role="menuitem">
       <h2 className={s.title}>
         {title} <span className={s.icon}>{icon}</span>
       </h2>

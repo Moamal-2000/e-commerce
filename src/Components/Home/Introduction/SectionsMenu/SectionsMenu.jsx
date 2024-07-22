@@ -23,7 +23,7 @@ const SectionsMenu = () => {
 
       <aside className={`${s.sectionsMenu} ${activeClass}`}>
         <DropDownMenu nameMenu={t("sectionsMenu.womenFashion.title")}>
-          <ul className={s.dropDownMenu}>
+          <ul className={s.dropDownMenu} role="menu">
             {womenFashionMenuItems.map((item, index) => {
               const itemName = camelCase(item.name);
               const itemTrans = t(
@@ -31,7 +31,7 @@ const SectionsMenu = () => {
               );
 
               return (
-                <li key={`item-${index}`}>
+                <li key={`item-${index}`} role="menuitem">
                   <a href={item.url}>{itemTrans}</a>
                 </li>
               );
@@ -40,14 +40,14 @@ const SectionsMenu = () => {
         </DropDownMenu>
 
         <DropDownMenu nameMenu={t("sectionsMenu.menFashion.title")}>
-          <ul className={s.dropDownMenu}>
+          <ul className={s.dropDownMenu} role="menu">
             {menFashionMenuItems.map((item, index) => {
               const itemName = camelCase(item.name);
               const itemTrans = t(
                 "sectionsMenu.menFashion.menuItems." + itemName
               );
               return (
-                <li key={`item-${index}`}>
+                <li key={`item-${index}`} role="menuitem">
                   <a href={item.url}>{itemTrans}</a>
                 </li>
               );
