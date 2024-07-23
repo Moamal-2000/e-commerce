@@ -7,13 +7,14 @@ import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./NavLinksSideBar.module.scss";
 
 const NavLinksSideBar = () => {
-  const { loginInfo } = useSelector((state) => state.user);
-  const { isSignIn } = loginInfo;
+  const {
+    loginInfo: { isSignIn },
+  } = useSelector((state) => state.user);
   const { t } = useTranslation();
 
   return (
     <nav className={s.navLinks}>
-      <ul>
+      <ul role="menu">
         {mobileNavData.map(({ name, link, icon, requiteSignIn }, index) => {
           const shouldShow = requiteSignIn ? isSignIn : true;
           const currentPage =
@@ -22,7 +23,7 @@ const NavLinksSideBar = () => {
           if (!shouldShow) return null;
 
           return (
-            <li key={"mobile-nav-link-" + index}>
+            <li key={"mobile-nav-link-" + index} role="menuitem">
               <NavLink to={link} aria-current={currentPage}>
                 <SvgIcon name={icon} />
                 <span>{t(`mobileNav.${camelCase(name)}`)}</span>
