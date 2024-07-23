@@ -1,5 +1,4 @@
 .buttons {
-  -webkit-tap-highlight-color: transparent;
   margin-inline-start: 2px;
   display: flex;
   flex-direction: column;
@@ -8,6 +7,7 @@
 }
 
 .buttons>button {
+  -webkit-tap-highlight-color: transparent;
   display: block;
   border: none;
   outline: none;

@@ -10,8 +10,11 @@
   gap: 8px;
 }
 
-.navLinks ul li a {
+.navLinks ul li {
   -webkit-tap-highlight-color: transparent;
+}
+
+.navLinks ul li a {
   all: unset;
   color: var(--medium-light-gray);
   padding: 10px;
