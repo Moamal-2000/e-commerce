@@ -11,6 +11,7 @@
 }
 
 .navLinks ul li a {
+  -webkit-tap-highlight-color: transparent;
   all: unset;
   color: var(--medium-light-gray);
   padding: 10px;

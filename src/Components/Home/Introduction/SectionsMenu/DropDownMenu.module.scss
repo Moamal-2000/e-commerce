@@ -1,5 +1,9 @@
 @import "src/Styles/mixins";
 
+.dropDownMenu {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .nameMenu {
   display: flex;
   align-items: center;

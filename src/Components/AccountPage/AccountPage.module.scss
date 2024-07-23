@@ -16,6 +16,7 @@
 }
 
 .welcomeMessage>a {
+  -webkit-tap-highlight-color: transparent;
   outline: none;
   color: var(--dark-tomato);
   position: relative;

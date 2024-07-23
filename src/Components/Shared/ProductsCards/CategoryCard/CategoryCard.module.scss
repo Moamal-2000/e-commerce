@@ -1,6 +1,7 @@
 @import "src/Styles/mixins";
 
 .card {
+  -webkit-tap-highlight-color: transparent;
   border-radius: 4px;
   border: solid 1px #0000004D;
   outline: 2px solid transparent;
