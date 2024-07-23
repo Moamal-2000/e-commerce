@@ -10,6 +10,10 @@
   gap: 30px;
 }
 
+.nav ul>li {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @include medium {
   .nav ul {
     gap: 18px;

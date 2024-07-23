@@ -25,6 +25,7 @@ const NavTools = ({ showHeart = true, showCart = true, showUser = true }) => {
             title: t("navTools.favorite"),
           }}
         />
+
         <IconWithCount
           props={{
             visibility: showCart,

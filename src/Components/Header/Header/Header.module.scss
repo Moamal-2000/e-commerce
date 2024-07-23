@@ -47,6 +47,7 @@
 }
 
 .container h1>a {
+  -webkit-tap-highlight-color: transparent;
   outline: none;
   color: var(--black);
   position: relative;

@@ -1,6 +1,7 @@
 @import "src/Styles/mixins";
 
 .sectionsMenuButton {
+  -webkit-tap-highlight-color: transparent;
   position: absolute;
   left: 20px;
   top: 123px;

@@ -26,6 +26,7 @@
 }
 
 .input>button {
+  -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   border: none;
   cursor: pointer;

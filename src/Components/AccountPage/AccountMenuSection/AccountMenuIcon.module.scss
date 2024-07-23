@@ -1,6 +1,7 @@
 @import "src/Styles/mixins.scss";
 
 .profileSectionsButton {
+  -webkit-tap-highlight-color: transparent;
   position: absolute;
   left: 20px;
   top: 129px;

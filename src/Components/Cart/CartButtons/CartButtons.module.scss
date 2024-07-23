@@ -8,6 +8,7 @@
 }
 
 .buttons>:where(a, button) {
+  -webkit-tap-highlight-color: transparent;
   outline: none;
   padding: 16px 48px;
   border-radius: 4px;

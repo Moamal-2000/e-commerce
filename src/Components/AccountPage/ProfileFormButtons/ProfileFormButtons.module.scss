@@ -5,6 +5,7 @@
 }
 
 .buttons>a {
+  -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   outline: none;
   border: none;
@@ -29,6 +30,7 @@
 }
 
 .buttons>button {
+  -webkit-tap-highlight-color: transparent;
   outline: none;
   border: none;
   padding: 16px 48px;

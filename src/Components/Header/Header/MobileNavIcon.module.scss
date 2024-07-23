@@ -1,6 +1,7 @@
 @import "src/Styles/mixins.scss";
 
 .mobileNav {
+  -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   border: none;
   outline: none;
