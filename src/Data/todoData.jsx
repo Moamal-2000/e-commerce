@@ -1,5 +1,9 @@
 const todoData = {
-  todo: [],
+  todo: [
+    "Fix all mobile view issues",
+    "Add X mark for some menus",
+    "Change the UI of some popup menus",
+  ],
   workingOn: ["Build order page content"],
   achieved: [
     "Build order page",
