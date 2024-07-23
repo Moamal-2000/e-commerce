@@ -307,7 +307,13 @@ export const mobileNavData = [
   {
     name: "My Cart",
     link: "/cart",
-    icon: "bag",
+    icon: "cart3",
+    requiteSignIn: true,
+  },
+  {
+    name: "My Order",
+    link: "/order",
+    icon: "cart",
     requiteSignIn: true,
   },
   {
@@ -321,12 +327,6 @@ export const mobileNavData = [
     link: "/wishlist",
     icon: "heart",
     requiteSignIn: true,
-  },
-  {
-    name: "notification",
-    link: "/notification",
-    icon: "bell",
-    requiteSignIn: false,
   },
 ];
 
