@@ -116,6 +116,7 @@
 }
 
 .buttons>button {
+  -webkit-tap-highlight-color: transparent;
   border: none;
   border-radius: 5px;
   background-color: transparent;

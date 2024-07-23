@@ -1,6 +1,7 @@
 @import "src/Styles/mixins";
 
 .customInput {
+  -webkit-tap-highlight-color: transparent;
   display: inline-block;
   width: 22px;
   height: 22px;

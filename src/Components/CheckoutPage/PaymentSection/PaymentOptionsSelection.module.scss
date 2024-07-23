@@ -18,6 +18,7 @@
 }
 
 .input input {
+  -webkit-tap-highlight-color: transparent;
   accent-color: var(--black);
   min-width: 24px;
   min-height: 24px;

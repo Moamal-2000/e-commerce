@@ -20,7 +20,8 @@ const WhatDoIDoButton = () => {
       aria-haspopup="true"
       aria-label="to-do list button"
     >
-      <SvgIcon name="questionMark" />
+      {window.innerWidth}
+      {/* <SvgIcon name="questionMark" /> */}
       <ToolTip content="What i'm working on?" left="126px" top="50%" />
     </button>
   );
