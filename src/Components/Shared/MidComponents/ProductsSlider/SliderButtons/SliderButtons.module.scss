@@ -9,6 +9,7 @@
 }
 
 .sliderButtons>button {
+  -webkit-tap-highlight-color: transparent;
   width: 46px;
   height: 46px;
   background-color: var(--very-light-gray2);
