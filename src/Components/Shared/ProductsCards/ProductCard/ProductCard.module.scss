@@ -88,6 +88,14 @@
   transition: transform .4s .1s, opacity .2s .2s;
 }
 
+@include small {
+  .card [data-product-icons-hover] {
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform .4s .1s, opacity .2s .2s;
+  }
+}
+
 .card:has(:focus-visible) [data-product-icons-hover] {
   opacity: 1;
   transform: translateX(0);
@@ -97,6 +105,12 @@
 .card:hover [data-add-to-cart-button],
 .card.noHover [data-add-to-cart-button] {
   transform: translateY(0);
+}
+
+@include small {
+  .card [data-add-to-cart-button] {
+    transform: translateY(0);
+  }
 }
 
 // Arabic styles
