@@ -39,12 +39,13 @@ const CustomEmailInput = () => {
     : t("footer.section1.sendLabel");
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    if (loading) return;
-
-    emailRef.current.focus();
     const emailInput = e.target.querySelector("input");
-    if (isEmailValid(emailInput)) subscription();
+
+    e.preventDefault();
+    if (loading && !isEmailValid(emailInput)) return;
+
+    subscription();
+    emailRef.current.blur();
   };
 
   const subscription = () => {
