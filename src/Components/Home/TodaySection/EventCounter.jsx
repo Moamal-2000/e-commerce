@@ -1,4 +1,6 @@
+import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
+import { TIME_UNITS } from "src/Data/globalVariables";
 import useTimerDown from "src/Hooks/App/useTimerDown";
 import s from "./EventCounter.module.scss";
 
@@ -10,29 +12,17 @@ const EventCounter = ({ timeEvent, eventName }) => {
   });
 
   return (
-    <>
-      <div className={s.eventTimer}>
-        <div className={s.timeContainer}>
-          <div className={s.typeTime}>{t("common.days")}</div>
-          <div className={s.time}>{timeData.days}</div>
-        </div>
-        <span>:</span>
-        <div className={s.timeContainer}>
-          <div className={s.typeTime}>{t("common.hours")}</div>
-          <div className={s.time}>{timeData.hours}</div>
-        </div>
-        <span>:</span>
-        <div className={s.timeContainer}>
-          <div className={s.typeTime}>{t("common.minutes")}</div>
-          <div className={s.time}>{timeData.minutes}</div>
-        </div>
-        <span>:</span>
-        <div className={s.timeContainer}>
-          <div className={s.typeTime}>{t("common.seconds")}</div>
-          <div className={s.time}>{timeData.seconds}</div>
-        </div>
-      </div>
-    </>
+    <section className={s.eventTimer}>
+      {TIME_UNITS.map((unit, index) => (
+        <Fragment key={unit}>
+          {index !== 0 && <span>:</span>}
+          <div className={s.timeContainer}>
+            <span className={s.typeTime}>{t(`common.${unit}`)}</span>
+            <span className={s.time}>{timeData[unit]}</span>
+          </div>
+        </Fragment>
+      ))}
+    </section>
   );
 };
 export default EventCounter;

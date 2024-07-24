@@ -13,6 +13,7 @@ export const SCREEN_SIZES = {
   tablet: 768,
   mobile: 428,
 };
+export const TIME_UNITS = ["days", "hours", "minutes", "seconds"];
 export const UN_BUILT_PAGES = [
   "cancellations",
   "reviews",
