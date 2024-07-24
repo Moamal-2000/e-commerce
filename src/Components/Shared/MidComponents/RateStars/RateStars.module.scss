@@ -11,3 +11,8 @@
   height: 20px;
   object-fit: contain;
 }
+
+// Arabic styles
+[lang=ar] .stars>svg {
+  transform: rotateY(180deg);
+}
