@@ -51,6 +51,8 @@
 .favIcon .heartBackground {
   position: absolute;
   top: 17px;
+  right: calc(50% + -0.4px);
+  translate: 50% 0;
   border-style: solid;
   border-color: var(--heart-color) transparent transparent transparent;
   border-width: 7px;
