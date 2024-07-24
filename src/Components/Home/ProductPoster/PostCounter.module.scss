@@ -63,6 +63,12 @@
   scale: .85;
 }
 
+@include very-small {
+  .timeUnit>span:last-child {
+    scale: .7;
+  }
+}
+
 // Arabic styles
 [lang=ar] .postCounter {
   flex-direction: row-reverse;
