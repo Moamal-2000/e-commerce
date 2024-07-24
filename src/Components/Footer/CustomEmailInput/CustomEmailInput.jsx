@@ -65,7 +65,7 @@ const CustomEmailInput = () => {
   };
 
   return (
-    <form className={s.input} onSubmit={sendEmail}>
+    <form className={s.form} onSubmit={sendEmail}>
       <input
         type="email"
         placeholder={t("inputsPlaceholders.enterYourEmail")}

@@ -1,11 +1,11 @@
 @import "src/Styles/mixins";
 
-.input {
+.form {
   display: flex;
   align-items: center;
   border-radius: 4px;
   border: 1px solid var(--medium-light-gray);
-  width: 222px;
+  width: fit-content;
 
   &:has(:focus) {
     border-color: var(--white);
@@ -16,7 +16,7 @@
   }
 }
 
-.input>input {
+.form>input {
   outline: none;
   border: none;
   color: var(--medium-light-gray);
@@ -25,7 +25,7 @@
   padding-inline-start: 16px;
 }
 
-.input>button {
+.form>button {
   -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   border: none;
@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.input svg {
+.form svg {
   width: 22px;
   height: 22px;
 
@@ -43,12 +43,12 @@
   }
 }
 
-.input:has(:focus) svg {
+.form:has(:focus) svg {
   & path {
     stroke: var(--white);
   }
 }
 
-.input>input::selection {
+.form>input::selection {
   background-color: var(--white) !important;
 }
