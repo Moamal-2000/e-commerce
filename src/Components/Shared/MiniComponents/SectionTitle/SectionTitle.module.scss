@@ -46,3 +46,9 @@
     font-size: 1.5rem;
   }
 }
+
+// Arabic styles
+[lang=ar] .sectionTitle .event::before {
+  left: auto;
+  right: -36px;
+}
