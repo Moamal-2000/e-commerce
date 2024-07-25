@@ -26,7 +26,7 @@ const WishlistPageHeader = () => {
 
   return (
     <header className={s.header}>
-      <label htmlFor="wishlist">{t("wishlist", { numberOfWishlist })}</label>
+      <p>{t("wishlist", { numberOfWishlist })}</p>
 
       <button type="button" onClick={moveAllToCart}>
         {t("buttons.moveAllToBag")}
