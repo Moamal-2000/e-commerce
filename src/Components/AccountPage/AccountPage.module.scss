@@ -10,6 +10,14 @@
   justify-content: space-between;
 }
 
+@include small {
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
 .welcomeMessage {
   font-weight: 400;
   font-size: .875rem;
