@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import AccountMenuSection from "./AccountMenuSection/AccountMenuSection";
 import s from "./AccountPage.module.scss";
@@ -10,6 +11,8 @@ import EditProfileForm from "./EditProfileForm/EditProfileForm";
 const AccountPage = () => {
   const { loginInfo } = useSelector((state) => state.user);
   const { t } = useTranslation();
+
+  useScrollOnMount(0);
 
   return (
     <>

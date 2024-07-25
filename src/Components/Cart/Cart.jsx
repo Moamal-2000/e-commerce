@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./Cart.module.scss";
 import CartButtons from "./CartButtons/CartButtons";
@@ -9,6 +10,8 @@ import CartProducts from "./CartProducts/CartProducts";
 
 const Cart = () => {
   const { t } = useTranslation();
+
+  useScrollOnMount(200);
 
   return (
     <>

@@ -1,10 +1,13 @@
 import { useTranslation } from "react-i18next";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import OrderProducts from "./CartProducts/OrderProducts";
 import s from "./OrderPage.module.scss";
 
 const OrderPage = () => {
   const { t } = useTranslation();
+
+  useScrollOnMount(200);
 
   return (
     <div className="container">

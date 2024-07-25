@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./Contact.module.scss";
 import ContactCardInfo from "./ContactCardSection/ContactCardInfo";
@@ -7,6 +8,8 @@ import ContactForm from "./ContactForm/ContactForm";
 
 const Contact = () => {
   const { t } = useTranslation();
+
+  useScrollOnMount(0);
 
   return (
     <>

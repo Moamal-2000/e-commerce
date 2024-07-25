@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import FeaturedSectionFeatures from "../Home/FeaturedSection/FeaturedSectionFeatures";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./About.module.scss";
@@ -9,6 +10,8 @@ import OurMembersSection from "./OurMembersSection/OurMembersSection";
 
 const About = () => {
   const { t } = useTranslation();
+
+  useScrollOnMount(0);
 
   return (
     <>

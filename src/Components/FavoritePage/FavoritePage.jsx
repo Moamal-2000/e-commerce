@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import SectionTitle from "../Shared/MiniComponents/SectionTitle/SectionTitle";
 import ForYouProducts from "../WishList/ForYouProducts/ForYouProducts";
 import s from "./FavoritePage.module.scss";
@@ -9,6 +10,8 @@ import FavoriteProducts from "./FavoriteProducts/FavoriteProducts";
 
 const FavoritePage = () => {
   const { t } = useTranslation();
+
+  useScrollOnMount(200);
 
   return (
     <>
