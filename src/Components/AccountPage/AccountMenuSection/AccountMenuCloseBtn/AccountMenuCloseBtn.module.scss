@@ -1,0 +1,29 @@
+
+.closeBtn {
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.closeBtn:hover>svg {
+  fill: var(--brown);
+}
+
+.closeBtn>svg {
+  fill: var(--black);
+  width: 22px;
+  height: 22px;
+  transition: fill .1s;
+}
+
+// Arabic styles
+[lang=ar] .closeBtn {
+  right: auto;
+  left: 10px;
+}
