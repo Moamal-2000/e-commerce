@@ -62,3 +62,12 @@
     color: var(--white);
   }
 }
+
+// Arabic styles
+[lang=ar] .customNumberInput>button:first-child {
+  border-radius: 0 4px 4px 0;
+}
+
+[lang=ar] .customNumberInput>button:last-child {
+  border-radius: 4px 0 0 4px;
+}
