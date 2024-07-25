@@ -1,6 +1,6 @@
 @import "src/Styles/mixins";
 
-.slider {
+.ourMembersSection {
   width: 100%;
   display: flex;
   gap: 40px;
@@ -9,13 +9,13 @@
 }
 
 @include large {
-  .slider {
+  .ourMembersSection {
     gap: 20px;
   }
 }
 
 @include medium {
-  .slider {
+  .ourMembersSection {
     flex-direction: column;
     align-items: center;
     overflow: visible;
@@ -23,23 +23,29 @@
   }
 }
 
-.slider::-webkit-scrollbar {
+.ourMembersSection::-webkit-scrollbar {
   display: none;
 }
 
 // [Member Cards]
-.slider>* {
+.ourMembersSection>* {
   min-width: calc((100% / 3 - 40px) + (40px / 3));
 }
 
 @include medium {
-  .slider>* {
+  .ourMembersSection>* {
     width: 360px;
   }
 }
 
 @media (max-width: 500px) {
-  .slider>* {
+  .ourMembersSection>* {
     min-width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .ourMembersSection>* {
+    width: 320px;
   }
 }

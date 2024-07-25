@@ -1,7 +1,4 @@
-@import "src/Styles/mixins";
-
 .imgHolder {
-  height: 460px;
   border-radius: 4px;
   margin-bottom: 20px;
   user-select: none;
@@ -9,6 +6,10 @@
 
 .imgHolder>img {
   border-radius: inherit;
+}
+
+.info {
+  width: fit-content;
 }
 
 .info>b {

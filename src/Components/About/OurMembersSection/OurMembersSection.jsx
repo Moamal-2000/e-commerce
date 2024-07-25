@@ -4,7 +4,7 @@ import s from "./OurMembersSection.module.scss";
 
 const OurMembersSection = () => {
   return (
-    <section className={s.slider}>
+    <section className={s.ourMembersSection}>
       {ourMembersData.map((member) => (
         <MemberCard key={member.id} data={member} />
       ))}
