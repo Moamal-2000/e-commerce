@@ -9,7 +9,7 @@ const initialState = productsDataLocal
       saveBillingInfoToLocal: false,
       favoritesProducts: [],
       searchProducts: [],
-      orderProducts: [...productsData],
+      orderProducts: [],
       cartProducts: [],
       wishList: [],
       productQuantity: 1,

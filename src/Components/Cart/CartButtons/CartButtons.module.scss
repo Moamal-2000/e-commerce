@@ -4,13 +4,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 30px;
   margin: 20px 0 100px;
 }
 
 .buttons>:where(a, button) {
   -webkit-tap-highlight-color: transparent;
   outline: none;
+  height: 52px;
   padding: 16px 48px;
+  @include center-x-y;
   border-radius: 4px;
   color: var(--black);
   background-color: transparent;
@@ -38,6 +42,7 @@
 
 @include small {
   .buttons>:where(a, button) {
+    height: 42px;
     padding: 12px 30px;
     font-size: .9rem;
   }
