@@ -9,6 +9,34 @@
   overflow-y: auto;
 }
 
+@include large {
+  .sectionsMenu {
+    background-color: var(--white);
+    position: fixed;
+    left: -250%;
+    top: 0;
+    height: calc(100vh - (100vh - 100%));
+    max-height: none;
+    z-index: 1000;
+    padding: 18px;
+    padding-inline-end: 86px;
+    box-shadow: 0 0 20px -15px var(--black);
+    overflow-y: auto;
+    width: fit-content;
+    transition: left 1s ease;
+
+    &.active {
+      left: 0;
+    }
+  }
+}
+
+@include very-small {
+  .sectionsMenu {
+    width: 100%;
+  }
+}
+
 .sectionsMenu::-webkit-scrollbar {
   background-color: transparent;
   width: 6px !important;
@@ -34,27 +62,6 @@
 
     &:hover {
       background-color: #bdbdbd;
-    }
-  }
-}
-
-@include large {
-  .sectionsMenu {
-    position: fixed;
-    left: -250%;
-    top: 0;
-    height: calc(100vh - (100vh - 100%));
-    max-height: none;
-    background-color: var(--white);
-    z-index: 1000;
-    padding: 18px;
-    box-shadow: 0 0 20px -15px var(--black);
-    overflow-y: auto;
-    width: fit-content;
-    transition: left 1s ease;
-
-    &.active {
-      left: 0;
     }
   }
 }
