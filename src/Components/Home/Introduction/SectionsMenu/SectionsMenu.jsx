@@ -28,7 +28,7 @@ const SectionsMenu = () => {
       <aside className={`${s.sectionsMenu} ${activeClass}`}>
         {windowWidth <= SCREEN_SIZES.desktop && <SectionsMenuCloseBtn />}
 
-        <h2>Explore Our Collections</h2>
+        <h2>{t("sectionsMenu.title")}</h2>
 
         <DropDownMenu nameMenu={t("sectionsMenu.womenFashion.title")}>
           <ul className={s.dropDownMenu} role="menu">
