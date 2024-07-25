@@ -15,7 +15,7 @@ const FavoritePageHeader = () => {
 
   return (
     <header className={s.header}>
-      <label htmlFor="wishlist">{labelTrans}</label>
+      <p>{labelTrans}</p>
 
       <button
         type="button"

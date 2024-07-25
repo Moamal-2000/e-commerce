@@ -4,17 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 16px 30px;
   margin-bottom: 50px;
 }
 
-.header>label {
+.header>p {
   font-size: 1.25rem;
   text-wrap: nowrap;
 }
 
 @include small {
-  .header>label {
+  .header>p {
     font-size: 1rem;
   }
 }
