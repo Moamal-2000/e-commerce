@@ -325,7 +325,7 @@ export const mobileNavData = [
   {
     name: "wishlist",
     link: "/wishlist",
-    icon: "heart",
+    icon: "save",
     requiteSignIn: true,
   },
 ];
