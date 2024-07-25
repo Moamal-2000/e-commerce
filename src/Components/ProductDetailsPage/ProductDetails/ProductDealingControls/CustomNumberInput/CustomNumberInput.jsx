@@ -17,6 +17,11 @@ const CustomNumberInput = () => {
     updateQuantity(productQuantity - 1);
   }
 
+  function handleQuantityChange(e) {
+    const isNumber = !isNaN(parseInt(e.target.value));
+    if (isNumber) updateQuantity(+e.target.value);
+  }
+
   function updateQuantity(value) {
     dispatch(
       updateProductsState({
@@ -38,7 +43,7 @@ const CustomNumberInput = () => {
 
       <input
         type="number"
-        onChange={(e) => setQuantity(e.target.value)}
+        onChange={handleQuantityChange}
         value={productQuantity}
         min={1}
         max={1000}
