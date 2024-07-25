@@ -86,6 +86,12 @@
   }
 }
 
+@include small {
+  .wrapper>a {
+    font-size: .8rem;
+  }
+}
+
 // Multi-language styles
 :where([lang=hu], [lang=ja]) .wrapper>b {
   font-size: 5.4rem;
