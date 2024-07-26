@@ -27,6 +27,12 @@
   }
 }
 
+@media (max-width: 400px) {
+  .mobileMenu {
+    width: 100%;
+  }
+}
+
 .mobileMenu::-webkit-scrollbar {
   background-color: transparent;
   width: 8px;
