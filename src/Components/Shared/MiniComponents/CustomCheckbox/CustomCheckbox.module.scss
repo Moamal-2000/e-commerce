@@ -2,8 +2,8 @@
 
 .customInput {
   display: inline-block;
-  width: 22px;
   height: 22px;
+  min-width: 22px;
   border-radius: 4px;
   border: solid 1px var(--black);
   position: relative;

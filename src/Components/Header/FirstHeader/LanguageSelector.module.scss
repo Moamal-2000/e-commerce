@@ -24,12 +24,6 @@
   }
 }
 
-@include small {
-  .languageSelector {
-    margin-inline-end: 37px;
-  }
-}
-
 .languageSelector .currentOption {
   width: 100%;
   display: flex;
