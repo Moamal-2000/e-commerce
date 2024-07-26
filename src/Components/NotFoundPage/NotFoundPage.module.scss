@@ -63,6 +63,7 @@
 .wrapper>a {
   display: block;
   width: fit-content;
+  white-space: nowrap;
   background: var(--dark-red);
   color: var(--white);
   padding: 12px 48px;

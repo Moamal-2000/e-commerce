@@ -541,5 +541,6 @@
   "cashOnDelivery": "Utánvétel",
   "bank": "Bank",
   "billingDetails": "Számlázási adatok",
-  "skipToContent": "Ugrás a tartalomra"
+  "skipToContent": "Ugrás a tartalomra",
+  "whatImWorking": "Min dolgozom?"
 }

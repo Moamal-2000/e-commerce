@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
@@ -6,6 +7,7 @@ import s from "./WhatDoIDoButton.module.scss";
 
 const WhatDoIDoButton = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
 
   function openMenu() {
     dispatch(updateGlobalState({ key: "isWhatDoIDoMenuActive", value: true }));
@@ -21,7 +23,7 @@ const WhatDoIDoButton = () => {
       aria-label="to-do list button"
     >
       <SvgIcon name="questionMark" />
-      <ToolTip content="What i'm working on?" left="126px" top="50%" />
+      <ToolTip content={t("whatImWorking")} left="126px" top="50%" />
     </button>
   );
 };
