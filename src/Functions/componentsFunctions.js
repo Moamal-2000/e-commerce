@@ -195,6 +195,20 @@ export function orderProductToolTipPos(lang) {
   return "-52px";
 }
 
+export function whatDoIDoButtonToolTipPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "115px";
+    case "hu":
+      return "108px";
+    case "ja":
+      return "144px";
+    case "hi":
+      return "136px";
+  }
+  return "126px";
+}
+
 export function getElementWidth(element) {
   return element?.getBoundingClientRect()?.width;
 }
