@@ -66,6 +66,7 @@
 }
 
 .checkboxContainer>label {
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   padding-inline-start: 10px;
 }
