@@ -42,7 +42,7 @@ const CustomEmailInput = () => {
     const emailInput = e.target.querySelector("input");
 
     e.preventDefault();
-    if (loading && !isEmailValid(emailInput)) return;
+    if (loading || !isEmailValid(emailInput)) return;
 
     subscription();
     emailRef.current.blur();
