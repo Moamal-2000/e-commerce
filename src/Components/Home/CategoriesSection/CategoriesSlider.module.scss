@@ -38,6 +38,7 @@
   margin-bottom: 180px;
   position: relative;
   scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
 @include small {
