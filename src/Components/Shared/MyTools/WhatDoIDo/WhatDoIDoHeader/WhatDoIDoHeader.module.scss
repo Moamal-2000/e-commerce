@@ -12,10 +12,18 @@
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 4px 5px;
+  border-radius: 3px;
+  outline: dashed 2px transparent;
+  transition: outline-color .2s;
+
+  &:focus {
+    outline-color: var(--white);
+  }
 }
 
-.closeBtn:hover>svg {
+.closeBtn:hover>svg,
+.closeBtn:focus>svg {
   fill: var(--white);
 }
 
