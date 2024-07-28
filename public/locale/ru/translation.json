@@ -292,7 +292,8 @@
     "createAccount": "Создать аккаунт",
     "signUpWithGoogle": "Регистрация через Google",
     "login": "Войти",
-    "confirmReceiveAll": "Подтвердить получение всех"
+    "confirmReceiveAll": "Подтвердить получение всех",
+    "cancelAll": "Отменить все"
   },
 
   "aboutPage": {

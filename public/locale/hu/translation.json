@@ -290,7 +290,8 @@
     "createAccount": "Fiók létrehozása",
     "signUpWithGoogle": "Regisztráció a Google-lal",
     "login": "Bejelentkezés",
-    "confirmReceiveAll": "Minden átvételének megerősítése"
+    "confirmReceiveAll": "Minden átvételének megerősítése",
+    "cancelAll": "Mindent töröl"
   },
 
   "aboutPage": {

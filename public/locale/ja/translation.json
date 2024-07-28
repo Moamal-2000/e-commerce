@@ -291,7 +291,8 @@
     "createAccount": "アカウントを作成",
     "signUpWithGoogle": "Googleでサインアップ",
     "login": "ログイン",
-    "confirmReceiveAll": "すべて受け取ったことを確認する"
+    "confirmReceiveAll": "すべて受け取ったことを確認する",
+    "cancelAll": "すべてキャンセル"
   },
 
   "aboutPage": {

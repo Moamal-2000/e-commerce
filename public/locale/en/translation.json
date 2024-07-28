@@ -291,7 +291,8 @@
     "createAccount": "Create Account",
     "signUpWithGoogle": "Sign Up With Google",
     "login": "Log In",
-    "confirmReceiveAll": "Confirm receive all"
+    "confirmReceiveAll": "Confirm receive all",
+    "cancelAll": "Cancel all"
   },
 
   "aboutPage": {

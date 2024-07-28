@@ -55,7 +55,7 @@ const OrderPageButtons = () => {
       </button>
 
       <button type="button" onClick={handleCancelAll}>
-        Cancel all
+        {t("buttons.cancelAll")}
       </button>
     </div>
   );

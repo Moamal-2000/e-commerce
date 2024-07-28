@@ -292,7 +292,8 @@
     "createAccount": "إنشاء حساب",
     "signUpWithGoogle": "التسجيل باستخدام جوجل",
     "login": "تسجيل الدخول",
-    "confirmReceiveAll": "تأكيد استلام الكل"
+    "confirmReceiveAll": "تأكيد استلام الكل",
+    "cancelAll": "إلغاء الكل"
   },
 
   "aboutPage": {
