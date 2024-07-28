@@ -1,12 +1,14 @@
 import i18next from "i18next";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CLEAR_ORDER_PRODUCTS } from "src/Data/constants";
 import { showAlert, updateAlertState } from "src/Features/alertsSlice";
+import useUpdateEffect from "src/Hooks/Helper/useUpdateEffect";
 import s from "./OrderPageButtons.module.scss";
 
 const OrderPageButtons = () => {
+  const { isAlertActive } = useSelector((state) => state.alerts.confirm);
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const alertMsgKey = useRef("");
@@ -39,8 +41,8 @@ const OrderPageButtons = () => {
     );
   }
 
-  useEffect(() => {
-    showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
+  useUpdateEffect(() => {
+    if (isAlertActive) showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }, [i18next.language]);
 
   return (
@@ -48,6 +50,7 @@ const OrderPageButtons = () => {
       <button type="button" onClick={handleReceiveAll}>
         Confirm receive all
       </button>
+
       <button type="button" onClick={handleCancelAll}>
         Cancel all
       </button>
