@@ -1,3 +1,5 @@
+import i18next from "i18next";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { CLEAR_ORDER_PRODUCTS } from "src/Data/constants";
@@ -7,14 +9,16 @@ import s from "./OrderPageButtons.module.scss";
 const OrderPageButtons = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-
+  const alertMsgKey = useRef("");
 
   function handleReceiveAll() {
-    showConfirmAlert(t("toastAlert.receivedAllOrder"));
+    alertMsgKey.current = "receivedAllOrder";
+    showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }
 
   function handleCancelAll() {
-    showConfirmAlert(t("toastAlert.cancelAllOrder"));
+    alertMsgKey.current = "cancelAllOrder";
+    showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }
 
   function showConfirmAlert(alertText) {
@@ -34,6 +38,10 @@ const OrderPageButtons = () => {
       })
     );
   }
+
+  useEffect(() => {
+    showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
+  }, [i18next.language]);
 
   return (
     <div className={s.buttons}>
