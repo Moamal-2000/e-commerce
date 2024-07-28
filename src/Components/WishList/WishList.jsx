@@ -1,9 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
-import SectionTitle from "../Shared/MiniComponents/SectionTitle/SectionTitle";
-import ForYouProducts from "./ForYouProducts/ForYouProducts";
+import ForYouSection from "../Shared/Sections/ForYouSection/ForYouSection";
 import s from "./WishList.module.scss";
 import WishProducts from "./WishProducts/WishProducts";
 import WishlistPageHeader from "./WishlistPageHeader/WishlistPageHeader";
@@ -30,15 +28,7 @@ const WishList = () => {
             <WishProducts />
           </section>
 
-          <section className={s.forYou}>
-            <header>
-              <SectionTitle eventName={t("sectionTitles.forYou")} type={2} />
-
-              <Link to="/products">{t("buttons.seeAll")}</Link>
-            </header>
-
-            <ForYouProducts />
-          </section>
+          <ForYouSection />
         </main>
       </div>
     </>

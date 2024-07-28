@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
+import ForYouSection from "../Shared/Sections/ForYouSection/ForYouSection";
 import OrderProducts from "./CartProducts/OrderProducts";
 import s from "./OrderPage.module.scss";
 
@@ -18,6 +19,8 @@ const OrderPage = () => {
           <OrderProducts />
 
           <div className={s.wrapper}></div>
+
+          <ForYouSection />
         </div>
       </main>
     </div>

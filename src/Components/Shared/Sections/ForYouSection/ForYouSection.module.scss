@@ -1,0 +1,44 @@
+@import "src/Styles/mixins.scss";
+
+.forYou>header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  &>div>* {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0 !important;
+  }
+}
+
+.forYou>header>a {
+  background-color: transparent;
+  outline: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  border: 1px solid #00000080;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  font-weight: 500;
+  color: var(--black);
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    color: var(--white);
+    border-color: var(--very-dark-gray);
+    background-color: var(--very-dark-gray);
+  }
+
+  &:focus-visible {
+    outline-color: var(--very-dark-gray);
+  }
+}
+
+@include small {
+  .forYou>header>a {
+    padding: 12px 30px;
+    font-size: .9rem;
+  }
+}

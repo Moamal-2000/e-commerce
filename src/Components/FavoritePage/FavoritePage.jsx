@@ -1,9 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
-import SectionTitle from "../Shared/MiniComponents/SectionTitle/SectionTitle";
-import ForYouProducts from "../WishList/ForYouProducts/ForYouProducts";
+import ForYouSection from "../Shared/Sections/ForYouSection/ForYouSection";
 import s from "./FavoritePage.module.scss";
 import FavoritePageHeader from "./FavoritePageHeader/FavoritePageHeader";
 import FavoriteProducts from "./FavoriteProducts/FavoriteProducts";
@@ -31,15 +29,7 @@ const FavoritePage = () => {
             <FavoriteProducts />
           </section>
 
-          <section className={s.forYou}>
-            <header>
-              <SectionTitle eventName={t("sectionTitles.forYou")} type={2} />
-
-              <Link to="/products">{t("buttons.seeAll")}</Link>
-            </header>
-
-            <ForYouProducts />
-          </section>
+          <ForYouSection />
         </main>
       </div>
     </>
