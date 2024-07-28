@@ -9,16 +9,21 @@ import s from "./OrderPageButtons.module.scss";
 
 const OrderPageButtons = () => {
   const { isAlertActive } = useSelector((state) => state.alerts.confirm);
+  const { orderProducts } = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const alertMsgKey = useRef("");
 
   function handleReceiveAll() {
+    if (!orderProducts.length) return;
+
     alertMsgKey.current = "receivedAllOrder";
     showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }
 
   function handleCancelAll() {
+    if (!orderProducts.length) return;
+
     alertMsgKey.current = "cancelAllOrder";
     showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }
