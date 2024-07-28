@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { REMOVE_ORDER_PRODUCT } from "src/Data/constants";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
-import { showAlert } from "src/Features/alertsSlice";
+import { showAlert, updateAlertState } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
 import useCurrentLang from "src/Hooks/App/useCurrentLang";
@@ -34,13 +35,16 @@ const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
     setToolTipTopPos("50%");
   }
 
+  function showAlert() {
+    showConfirmAlert(dispatch, productName, t, translatedProduct);
+  }
+
   useEffect(() => {
     const isSelectedProduct = removeOrderProduct === productName;
 
     updateToolTipPositions();
 
-    if (isAlertActive && isSelectedProduct)
-      showConfirmAlert(dispatch, productName, t, translatedProduct);
+    if (isAlertActive && isSelectedProduct) showAlert();
   }, [windowWidth, lang]);
 
   return (
@@ -48,9 +52,7 @@ const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
       type="button"
       className={s.removeButton}
       aria-label="Remove product from cart"
-      onClick={() =>
-        showConfirmAlert(dispatch, productName, t, translatedProduct)
-      }
+      onClick={showAlert}
     >
       <SvgIcon name="xMark" />
       <ToolTip
@@ -71,6 +73,14 @@ function showConfirmAlert(dispatch, productName, t, translatedProduct) {
       }),
       alertState: "warning",
       alertType: "confirm",
+    })
+  );
+
+  dispatch(
+    updateAlertState({
+      type: "confirm",
+      key: "confirmPurpose",
+      value: REMOVE_ORDER_PRODUCT,
     })
   );
 

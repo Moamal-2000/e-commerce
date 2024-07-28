@@ -11,6 +11,7 @@ const initialState = {
     isAlertActive: false,
     alertText: "Are you sure?",
     alertState: "warning",
+    confirmPurpose: "",
   },
 };
 
@@ -23,7 +24,7 @@ const alertsSlice = createSlice({
       state[alertType].alertState = alertState;
       state[alertType].isAlertActive = true;
     },
-    updateAlertState: (state, { payload: { key, value, type } }) => {
+    updateAlertState: (state, { payload: { type, key, value } }) => {
       state[type][key] = value;
     },
   },

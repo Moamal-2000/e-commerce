@@ -4,12 +4,14 @@ import { useDispatch, useSelector } from "react-redux";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { showAlert } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
+import { orderProductToolTipPos } from "src/Functions/componentsFunctions";
 import useCurrentLang from "src/Hooks/App/useCurrentLang";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
+import { REMOVE_ORDER_PRODUCT } from "../../../Data/constants";
+import { updateAlertState } from "../../../Features/alertsSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ConfirmOrderProductBtn.module.scss";
-import { orderProductToolTipPos } from "src/Functions/componentsFunctions";
 
 const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
   const { removeOrderProduct } = useSelector((state) => state.products);
@@ -71,6 +73,14 @@ function showConfirmAlert(dispatch, productName, t, translatedProduct) {
       }),
       alertState: "warning",
       alertType: "confirm",
+    })
+  );
+
+  dispatch(
+    updateAlertState({
+      type: "confirm",
+      key: "confirmPurpose",
+      value: REMOVE_ORDER_PRODUCT,
     })
   );
 
