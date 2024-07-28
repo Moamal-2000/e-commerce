@@ -291,7 +291,8 @@
     "backToHome": "العودة إلى الصفحة الرئيسية",
     "createAccount": "إنشاء حساب",
     "signUpWithGoogle": "التسجيل باستخدام جوجل",
-    "login": "تسجيل الدخول"
+    "login": "تسجيل الدخول",
+    "confirmReceiveAll": "تأكيد استلام الكل"
   },
 
   "aboutPage": {

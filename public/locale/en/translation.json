@@ -290,7 +290,8 @@
     "backToHome": "Back to home page",
     "createAccount": "Create Account",
     "signUpWithGoogle": "Sign Up With Google",
-    "login": "Log In"
+    "login": "Log In",
+    "confirmReceiveAll": "Confirm receive all"
   },
 
   "aboutPage": {

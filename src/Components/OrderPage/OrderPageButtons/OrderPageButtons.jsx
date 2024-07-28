@@ -15,20 +15,18 @@ const OrderPageButtons = () => {
   const alertMsgKey = useRef("");
 
   function handleReceiveAll() {
-    if (!orderProducts.length) return;
-
     alertMsgKey.current = "receivedAllOrder";
     showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }
 
   function handleCancelAll() {
-    if (!orderProducts.length) return;
-
     alertMsgKey.current = "cancelAllOrder";
     showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }
 
   function showConfirmAlert(alertText) {
+    if (!orderProducts.length) return;
+
     dispatch(
       updateAlertState({
         type: "confirm",
@@ -53,7 +51,7 @@ const OrderPageButtons = () => {
   return (
     <div className={s.buttons}>
       <button type="button" onClick={handleReceiveAll}>
-        Confirm receive all
+        {t("buttons.confirmReceiveAll")}
       </button>
 
       <button type="button" onClick={handleCancelAll}>

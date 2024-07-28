@@ -290,7 +290,8 @@
     "backToHome": "ホームに戻る",
     "createAccount": "アカウントを作成",
     "signUpWithGoogle": "Googleでサインアップ",
-    "login": "ログイン"
+    "login": "ログイン",
+    "confirmReceiveAll": "すべて受け取ったことを確認する"
   },
 
   "aboutPage": {

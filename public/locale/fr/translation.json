@@ -290,7 +290,8 @@
     "backToHome": "Retour à la page d'accueil",
     "createAccount": "Créer un compte",
     "signUpWithGoogle": "S'inscrire avec Google",
-    "login": "Connexion"
+    "login": "Connexion",
+    "confirmReceiveAll": "Confirmer la réception de tous"
   },
 
   "aboutPage": {

@@ -291,7 +291,8 @@
     "backToHome": "Вернуться на главную страницу",
     "createAccount": "Создать аккаунт",
     "signUpWithGoogle": "Регистрация через Google",
-    "login": "Войти"
+    "login": "Войти",
+    "confirmReceiveAll": "Подтвердить получение всех"
   },
 
   "aboutPage": {

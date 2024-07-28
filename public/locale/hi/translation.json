@@ -290,7 +290,8 @@
     "backToHome": "होम पेज पर वापस जाएं",
     "createAccount": "खाता बनाएं",
     "signUpWithGoogle": "गूगल से साइन अप करें",
-    "login": "लॉग इन"
+    "login": "लॉग इन",
+    "confirmReceiveAll": "सभी प्राप्ति की पुष्टि करें"
   },
 
   "aboutPage": {

@@ -289,7 +289,8 @@
     "backToHome": "Vissza a kezdőlapra",
     "createAccount": "Fiók létrehozása",
     "signUpWithGoogle": "Regisztráció a Google-lal",
-    "login": "Bejelentkezés"
+    "login": "Bejelentkezés",
+    "confirmReceiveAll": "Minden átvételének megerősítése"
   },
 
   "aboutPage": {
