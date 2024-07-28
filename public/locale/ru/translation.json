@@ -539,7 +539,8 @@
     "productAlreadyInOrder": "Вы уже добавили этот продукт в заказы",
     "removeOrderProduct": "Удалить {{translatedProduct}} из вашего заказа?",
     "confirmOrderProduct": "Вы получили {{translatedProduct}}?",
-    "receivedAllOrder": "Вы получили все продукты?"
+    "receivedAllOrder": "Вы получили все продукты?",
+    "cancelAllOrder": "Вы уверены, что хотите отменить все заказы?"
   },
 
   "wishlist": "Избранное ({{numberOfWishlist}})",

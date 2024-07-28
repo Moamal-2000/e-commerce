@@ -538,7 +538,8 @@
     "productAlreadyInOrder": "Vous avez déjà ajouté ce produit aux commandes",
     "removeOrderProduct": "Retirer {{translatedProduct}} de votre commande ?",
     "confirmOrderProduct": "Avez-vous reçu {{translatedProduct}} ?",
-    "receivedAllOrder": "Avez-vous reçu tous les produits ?"
+    "receivedAllOrder": "Avez-vous reçu tous les produits ?",
+    "cancelAllOrder": "Êtes-vous sûr de vouloir annuler toutes les commandes ?"
   },
 
 

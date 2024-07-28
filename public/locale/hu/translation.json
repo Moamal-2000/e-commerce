@@ -535,7 +535,8 @@
     "productAlreadyInOrder": "Ezt a terméket már hozzáadta a rendelésekhez",
     "removeOrderProduct": "Eltávolítja a {{translatedProduct}} a rendeléséből?",
     "confirmOrderProduct": "Megkapta a(z) {{translatedProduct}}-t?",
-    "receivedAllOrder": "Megkapta az összes terméket?"
+    "receivedAllOrder": "Megkapta az összes terméket?",
+    "cancelAllOrder": "Biztosan törölni szeretné az összes rendelést?"
   },
 
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",

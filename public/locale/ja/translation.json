@@ -538,7 +538,8 @@
     "productAlreadyInOrder": "この商品はすでに注文に追加されています",
     "removeOrderProduct": "注文から{{translatedProduct}}を削除しますか？",
     "confirmOrderProduct": "{{translatedProduct}}を受け取りましたか？",
-    "receivedAllOrder": "すべての製品を受け取りましたか？"
+    "receivedAllOrder": "すべての製品を受け取りましたか？",
+    "cancelAllOrder": "すべての注文をキャンセルしてもよろしいですか？"
   },
 
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
