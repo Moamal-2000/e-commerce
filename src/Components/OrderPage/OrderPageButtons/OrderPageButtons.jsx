@@ -1,18 +1,28 @@
 import { useDispatch } from "react-redux";
-import { setEmptyArrays } from "../../../Features/productsSlice";
+import { CLEAR_ORDER_PRODUCTS } from "src/Data/constants";
+import { showAlert, updateAlertState } from "src/Features/alertsSlice";
 import s from "./OrderPageButtons.module.scss";
-import { showAlert } from "../../../Features/alertsSlice";
 
 const OrderPageButtons = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   function handleReceiveAll() {
-    showConfirmAlert()
+    showConfirmAlert();
   }
 
-  function handleCancelAll() {}
+  function handleCancelAll() {
+    showConfirmAlert();
+  }
 
   function showConfirmAlert() {
+    dispatch(
+      updateAlertState({
+        type: "confirm",
+        key: "confirmPurpose",
+        value: CLEAR_ORDER_PRODUCTS,
+      })
+    );
+
     dispatch(
       showAlert({
         alertText: "Are you sure?",
@@ -20,10 +30,6 @@ const OrderPageButtons = () => {
         alertType: "confirm",
       })
     );
-
-    // dispatch(
-    //   setEmptyArrays({ keys: {"orderProducts"} })
-    // );
   }
 
   return (

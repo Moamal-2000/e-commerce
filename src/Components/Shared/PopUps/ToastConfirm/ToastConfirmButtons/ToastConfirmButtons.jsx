@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { CLEAR_ORDER_PRODUCTS, REMOVE_ORDER_PRODUCT } from "src/Data/constants";
 import { updateAlertState } from "src/Features/alertsSlice";
-import { removeByKeyName } from "src/Features/productsSlice";
-import { REMOVE_ORDER_PRODUCT } from "../../../../../Data/constants";
+import { removeByKeyName, setEmptyArrays } from "src/Features/productsSlice";
 import s from "./ToastConfirmButtons.module.scss";
 
 const ToastConfirmButtons = () => {
@@ -15,9 +15,11 @@ const ToastConfirmButtons = () => {
     switch (confirmPurpose) {
       case REMOVE_ORDER_PRODUCT:
         removeFromOrder(dispatch, removeOrderProduct);
+      case CLEAR_ORDER_PRODUCTS:
+        removeAllOrder(dispatch);
     }
 
-    closeConfirmToast()
+    closeConfirmToast();
   }
 
   function handleCancel() {
@@ -51,4 +53,8 @@ function removeFromOrder(dispatch, removeOrderProduct) {
       keyValue: removeOrderProduct,
     })
   );
+}
+
+function removeAllOrder(dispatch) {
+  dispatch(setEmptyArrays({ keys: ["orderProducts"] }));
 }
