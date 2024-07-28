@@ -4,6 +4,7 @@ import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import ForYouSection from "../Shared/Sections/ForYouSection/ForYouSection";
 import OrderProducts from "./CartProducts/OrderProducts";
 import s from "./OrderPage.module.scss";
+import OrderPageButtons from "./OrderPageButtons/OrderPageButtons";
 
 const OrderPage = () => {
   const { t } = useTranslation();
@@ -17,9 +18,7 @@ const OrderPage = () => {
 
         <div className={s.pageComponents} id="order-page">
           <OrderProducts />
-
-          <div className={s.wrapper}></div>
-
+          <OrderPageButtons />
           <ForYouSection />
         </div>
       </main>

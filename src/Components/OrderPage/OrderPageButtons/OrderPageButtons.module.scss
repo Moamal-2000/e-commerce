@@ -1,0 +1,54 @@
+@import "src/Styles/mixins";
+
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px 30px;
+  margin: 20px 0 100px;
+}
+
+.buttons>:where(a, button) {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  height: 52px;
+  padding: 16px 48px;
+  @include center-x-y;
+  border-radius: 4px;
+  color: var(--black);
+  background-color: transparent;
+  border: 1px solid #00000080;
+  outline: 2px solid transparent;
+  outline-offset: -2px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color .1s, color .1s;
+
+  &:hover {
+    color: var(--white);
+    border-color: var(--very-dark-gray);
+    background-color: var(--very-dark-gray);
+  }
+
+  &:active {
+    scale: var(--button-active-scale);
+  }
+
+  &:focus-visible {
+    outline-color: var(--very-dark-gray);
+  }
+}
+
+@include small {
+  .buttons>:where(a, button) {
+    height: 42px;
+    padding: 12px 30px;
+    font-size: .9rem;
+  }
+
+  .buttons>a {
+    font-size: .8rem;
+  }
+}
