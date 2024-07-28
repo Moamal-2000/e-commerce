@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { CLEAR_ORDER_PRODUCTS } from "src/Data/constants";
 import { showAlert, updateAlertState } from "src/Features/alertsSlice";
@@ -5,16 +6,18 @@ import s from "./OrderPageButtons.module.scss";
 
 const OrderPageButtons = () => {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
+
 
   function handleReceiveAll() {
-    showConfirmAlert();
+    showConfirmAlert(t("toastAlert.receivedAllOrder"));
   }
 
   function handleCancelAll() {
-    showConfirmAlert();
+    showConfirmAlert(t("toastAlert.cancelAllOrder"));
   }
 
-  function showConfirmAlert() {
+  function showConfirmAlert(alertText) {
     dispatch(
       updateAlertState({
         type: "confirm",
@@ -25,7 +28,7 @@ const OrderPageButtons = () => {
 
     dispatch(
       showAlert({
-        alertText: "Are you sure?",
+        alertText,
         alertState: "warning",
         alertType: "confirm",
       })

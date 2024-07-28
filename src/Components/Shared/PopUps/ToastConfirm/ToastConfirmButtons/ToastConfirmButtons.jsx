@@ -22,10 +22,6 @@ const ToastConfirmButtons = () => {
     closeConfirmToast();
   }
 
-  function handleCancel() {
-    closeConfirmToast();
-  }
-
   function closeConfirmToast() {
     dispatch(
       updateAlertState({ key: "isAlertActive", value: false, type: "confirm" })
@@ -37,7 +33,7 @@ const ToastConfirmButtons = () => {
       <button type="button" onClick={handleConfirm}>
         {t("common.confirm")}
       </button>
-      <button type="button" onClick={handleCancel}>
+      <button type="button" onClick={closeConfirmToast}>
         {t("common.cancel")}
       </button>
     </div>

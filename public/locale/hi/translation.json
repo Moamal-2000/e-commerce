@@ -537,7 +537,8 @@
     "productAlreadyInCart": "आपने पहले ही इस उत्पाद को कार्ट में जोड़ लिया है",
     "productAlreadyInOrder": "आपने पहले ही इस उत्पाद को ऑर्डर में जोड़ लिया है",
     "removeOrderProduct": "क्या आप अपने ऑर्डर से {{translatedProduct}} हटाना चाहते हैं?",
-    "confirmOrderProduct": "क्या आपको {{translatedProduct}} प्राप्त हुआ?"
+    "confirmOrderProduct": "क्या आपको {{translatedProduct}} प्राप्त हुआ?",
+    "receivedAllOrder": "क्या आपको सभी उत्पाद प्राप्त हुए हैं?"
   },
 
   "wishlist": "इच्छा-सूची ({{numberOfWishlist}})",

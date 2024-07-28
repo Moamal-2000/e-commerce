@@ -538,7 +538,8 @@
     "productAlreadyInCart": "You have already added this product to cart",
     "productAlreadyInOrder": "You have already added this product to orders",
     "removeOrderProduct": "Remove {{translatedProduct}} from your order?",
-    "confirmOrderProduct": "Did you receive {{translatedProduct}}?"
+    "confirmOrderProduct": "Did you receive {{translatedProduct}}?",
+    "receivedAllOrder": "Have you received all the products?"
   },
 
   "wishlist": "Wishlist ({{numberOfWishlist}})",
