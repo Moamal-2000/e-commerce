@@ -43,10 +43,6 @@
   margin-left: 20px;
   color: var(--white);
   filter: drop-shadow(0 0 .5px var(--white));
-
-  &::first-letter {
-    text-transform: capitalize;
-  }
 }
 
 @include medium {

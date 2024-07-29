@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { productsData } from "../Data/productsData";
 
 const productsDataLocal = localStorage.getItem("productsSliceData");
 
