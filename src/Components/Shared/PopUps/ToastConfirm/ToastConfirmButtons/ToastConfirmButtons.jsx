@@ -15,8 +15,10 @@ const ToastConfirmButtons = () => {
     switch (confirmPurpose) {
       case REMOVE_ORDER_PRODUCT:
         removeFromOrder(dispatch, removeOrderProduct);
+        break;
       case CLEAR_ORDER_PRODUCTS:
         removeAllOrder(dispatch);
+        break;
     }
 
     closeConfirmToast();
