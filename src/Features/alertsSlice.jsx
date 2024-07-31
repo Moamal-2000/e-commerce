@@ -9,7 +9,7 @@ const initialState = {
 
   confirm: {
     isAlertActive: false,
-    alertText: "Are you sure?",
+    alertText: "",
     alertState: "warning",
     confirmPurpose: "",
   },

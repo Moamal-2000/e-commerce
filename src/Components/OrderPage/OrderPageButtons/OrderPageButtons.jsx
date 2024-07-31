@@ -8,7 +8,9 @@ import useUpdateEffect from "src/Hooks/Helper/useUpdateEffect";
 import s from "./OrderPageButtons.module.scss";
 
 const OrderPageButtons = () => {
-  const { isAlertActive } = useSelector((state) => state.alerts.confirm);
+  const { isAlertActive, confirmPurpose } = useSelector(
+    (state) => state.alerts.confirm
+  );
   const { orderProducts } = useSelector((state) => state.products);
   const dispatch = useDispatch();
   const { t } = useTranslation();
@@ -45,7 +47,11 @@ const OrderPageButtons = () => {
   }
 
   useUpdateEffect(() => {
-    if (isAlertActive) showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
+    if (!isAlertActive) return;
+    const isRemoveOrderProduct = confirmPurpose === CLEAR_ORDER_PRODUCTS;
+
+    if (isRemoveOrderProduct)
+      showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
   }, [i18next.language]);
 
   return (

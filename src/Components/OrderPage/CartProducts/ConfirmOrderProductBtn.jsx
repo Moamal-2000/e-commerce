@@ -1,21 +1,20 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { REMOVE_ORDER_PRODUCT } from "src/Data/constants";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
-import { showAlert } from "src/Features/alertsSlice";
+import { showAlert, updateAlertState } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { orderProductToolTipPos } from "src/Functions/componentsFunctions";
 import useCurrentLang from "src/Hooks/App/useCurrentLang";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
-import { REMOVE_ORDER_PRODUCT } from "../../../Data/constants";
-import { updateAlertState } from "../../../Features/alertsSlice";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ConfirmOrderProductBtn.module.scss";
 
 const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
   const { removeOrderProduct } = useSelector((state) => state.products);
-  const { isAlertActive } = useSelector((state) => state.alerts).confirm;
+  const { isAlertActive, confirmPurpose } = useSelector((state) => state.alerts).confirm;
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
@@ -36,12 +35,17 @@ const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
     setToolTipTopPos("50%");
   }
 
+  function handleConfirmBtnClick() {
+    showConfirmAlert(dispatch, productName, t, translatedProduct);
+  }
+
   useEffect(() => {
     const isSelectedProduct = removeOrderProduct === productName;
+    const isRemoveOrderProduct = confirmPurpose === REMOVE_ORDER_PRODUCT;
 
     updateToolTipPositions();
 
-    if (isAlertActive && isSelectedProduct)
+    if (isAlertActive && isSelectedProduct && isRemoveOrderProduct)
       showConfirmAlert(dispatch, productName, t, translatedProduct);
   }, [windowWidth, lang]);
 
@@ -50,9 +54,7 @@ const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
       type="button"
       className={s.confirmButton}
       aria-label="Confirm received product"
-      onClick={() =>
-        showConfirmAlert(dispatch, productName, t, translatedProduct)
-      }
+      onClick={handleConfirmBtnClick}
     >
       <SvgIcon name="checked" />
       <ToolTip

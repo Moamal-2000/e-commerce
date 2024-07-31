@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useSelector } from "react-redux";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./ToastConfirm.module.scss";
@@ -9,8 +9,7 @@ const ToastConfirm = () => {
   const { isAlertActive, alertText, alertState } = confirm;
   const { iconName, className } = toastState[alertState];
   const showClass = isAlertActive ? s.show : "";
-  const lang = cookies.get("i18next") || "en";
-  const textDirection = lang === "ar" ? "rtl" : "ltr";
+  const textDirection = i18next.language === "ar" ? "rtl" : "ltr";
 
   return (
     <div className={`${s.toastConfirm} ${className} ${showClass}`} dir="ltr">
