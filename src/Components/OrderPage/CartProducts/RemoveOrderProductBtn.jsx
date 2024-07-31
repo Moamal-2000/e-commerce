@@ -1,3 +1,4 @@
+import i18next from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,7 +7,6 @@ import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { showAlert, updateAlertState } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
-import useCurrentLang from "src/Hooks/App/useCurrentLang";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
@@ -18,9 +18,8 @@ const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
-  const [lang] = useCurrentLang();
   const [toolTipLeftPos, setToolTipLeftPos] = useState(
-    cartProductToolTipPos(lang)
+    cartProductToolTipPos(i18next.language)
   );
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
@@ -31,7 +30,7 @@ const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
       return;
     }
 
-    setToolTipLeftPos(cartProductToolTipPos(lang));
+    setToolTipLeftPos(cartProductToolTipPos(i18next.language));
     setToolTipTopPos("50%");
   }
 
@@ -45,7 +44,7 @@ const RemoveOrderProductBtn = ({ productName, translatedProduct }) => {
     updateToolTipPositions();
 
     if (isAlertActive && isSelectedProduct) showAlert();
-  }, [windowWidth, lang]);
+  }, [windowWidth, i18next.language]);
 
   return (
     <button

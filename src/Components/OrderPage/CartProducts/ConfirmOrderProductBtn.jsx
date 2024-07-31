@@ -1,3 +1,4 @@
+import i18next from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -6,21 +7,21 @@ import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { showAlert, updateAlertState } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { orderProductToolTipPos } from "src/Functions/componentsFunctions";
-import useCurrentLang from "src/Hooks/App/useCurrentLang";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./ConfirmOrderProductBtn.module.scss";
 
 const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
+  const { isAlertActive, confirmPurpose } = useSelector(
+    (state) => state.alerts
+  ).confirm;
   const { removeOrderProduct } = useSelector((state) => state.products);
-  const { isAlertActive, confirmPurpose } = useSelector((state) => state.alerts).confirm;
   const dispatch = useDispatch();
   const { t } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
-  const [lang] = useCurrentLang();
   const [toolTipLeftPos, setToolTipLeftPos] = useState(
-    orderProductToolTipPos(lang)
+    orderProductToolTipPos(i18next.language)
   );
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
@@ -31,7 +32,7 @@ const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
       return;
     }
 
-    setToolTipLeftPos(orderProductToolTipPos(lang));
+    setToolTipLeftPos(orderProductToolTipPos(i18next.language));
     setToolTipTopPos("50%");
   }
 
@@ -47,7 +48,7 @@ const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
 
     if (isAlertActive && isSelectedProduct && isRemoveOrderProduct)
       showConfirmAlert(dispatch, productName, t, translatedProduct);
-  }, [windowWidth, lang]);
+  }, [windowWidth, i18next.language]);
 
   return (
     <button

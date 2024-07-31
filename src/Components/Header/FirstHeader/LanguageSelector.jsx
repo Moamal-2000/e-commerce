@@ -1,5 +1,4 @@
-import i18n from "i18next";
-import cookies from "js-cookie";
+import { default as i18n, default as i18next } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "src/Data/staticData";
@@ -9,7 +8,7 @@ const LanguageSelector = () => {
   const { t } = useTranslation();
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);
   const currentLangRef = useRef();
-  const currLang = cookies.get("i18next") || "en";
+  const currLang = i18next.language || "en";
 
   function selectLanguage(index, langCode) {
     const currentFlagEle = currentLangRef.current.querySelector("img");

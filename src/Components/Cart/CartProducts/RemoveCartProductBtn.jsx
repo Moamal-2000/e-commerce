@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
@@ -13,10 +13,9 @@ import s from "./RemoveCartProductBtn.module.scss";
 const RemoveCartProductBtn = ({ productId }) => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const lang = cookies.get("i18next");
   const { windowWidth } = useGetResizeWindow();
 
-  const [toolTipLeftPos, setToolTipLeftPos] = useState(cartProductToolTipPos(lang));
+  const [toolTipLeftPos, setToolTipLeftPos] = useState(cartProductToolTipPos(i18next.language));
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
   function updateToolTipPositions() {
@@ -26,13 +25,13 @@ const RemoveCartProductBtn = ({ productId }) => {
       return;
     }
 
-    setToolTipLeftPos(cartProductToolTipPos(lang));
+    setToolTipLeftPos(cartProductToolTipPos(i18next.language));
     setToolTipTopPos("50%");
   }
 
   useEffect(() => {
     updateToolTipPositions();
-  }, [windowWidth, lang]);
+  }, [windowWidth, i18next.language]);
 
   return (
     <button

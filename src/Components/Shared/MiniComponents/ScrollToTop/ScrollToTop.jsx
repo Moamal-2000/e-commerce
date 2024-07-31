@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SCROLL_REQUIRED } from "src/Data/globalVariables";
@@ -12,8 +12,7 @@ import s from "./ScrollToTop.module.scss";
 const ScrollToTop = () => {
   const scrollTopButtonRef = useRef();
   const { t } = useTranslation();
-  const lang = cookies.get("i18next");
-  const leftToolTipPos = scrollToTopToolTipLeftPos(lang);
+  const leftToolTipPos = scrollToTopToolTipLeftPos(i18next.language);
 
   function handleScrollTopVisibility() {
     const classListMethod = window.scrollY < SCROLL_REQUIRED ? "add" : "remove";

@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useEffect, useState } from "react";
 import SvgIcon from "../SvgIcon";
 import s from "./ShowHidePassword.module.scss";
@@ -6,11 +6,10 @@ import s from "./ShowHidePassword.module.scss";
 const ShowHidePassword = ({ top = "40%", right = "8px" }) => {
   const [showPass, setShowPass] = useState(true);
   const [iconPosition, setIconPosition] = useState({ top, right });
-  const lang = cookies.get("i18next");
 
   useEffect(() => {
-    updateIconPosition(lang, right, setIconPosition);
-  }, [lang]);
+    updateIconPosition(i18next.language, right, setIconPosition);
+  }, [i18next.language]);
 
   return (
     <span

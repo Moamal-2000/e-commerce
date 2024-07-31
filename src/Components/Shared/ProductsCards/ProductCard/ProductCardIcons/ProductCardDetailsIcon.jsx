@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { detailsIconToolTipLeftPos } from "src/Functions/componentsFunctions";
@@ -8,8 +8,7 @@ import s from "./ProductCardDetailsIcon.module.scss";
 
 const ProductCardDetailsIcon = ({ navigateToProductDetails }) => {
   const { t } = useTranslation();
-  const lang = cookies.get("i18next");
-  const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(lang);
+  const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(i18next.language);
 
   return (
     <Link

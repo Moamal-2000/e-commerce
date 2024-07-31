@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/globalVariables";
 import { repoStarsForksToolTipLeftPos } from "src/Functions/componentsFunctions";
@@ -15,8 +15,7 @@ const RepoStarsForks = () => {
   const repoStars = websiteRepo?.stargazers_count;
   const repoForks = websiteRepo?.forks;
   const repoUrl = websiteRepo?.html_url;
-  const lang = cookies.get("i18next");
-  const leftToolTipPos = repoStarsForksToolTipLeftPos(lang);
+  const leftToolTipPos = repoStarsForksToolTipLeftPos(i18next.language);
 
   return (
     !isError && (

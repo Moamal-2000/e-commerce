@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
@@ -28,9 +28,8 @@ const CustomEmailInput = () => {
   };
 
   // Tooltip variables
-  const lang = cookies.get("i18next");
-  const sendIconToolTipLeftPos = sendToolTipLeftPos(lang);
-  const sendingIconToolTipLeftPos = sendingToolTipLeftPos(lang);
+  const sendIconToolTipLeftPos = sendToolTipLeftPos(i18next.language);
+  const sendingIconToolTipLeftPos = sendingToolTipLeftPos(i18next.language);
   const toolTipLeftPosition = loading
     ? sendingIconToolTipLeftPos
     : sendIconToolTipLeftPos;

@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
@@ -16,8 +16,9 @@ const ProductCardWishListIcon = ({ product, productId }) => {
   const { wishList } = useSelector((state) => state.products);
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const lang = cookies.get("i18next");
-  const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(lang);
+  const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(
+    i18next.language
+  );
   const isAddedToWishList = wishList?.find(
     (wishProduct) => wishProduct.id === productId
   );

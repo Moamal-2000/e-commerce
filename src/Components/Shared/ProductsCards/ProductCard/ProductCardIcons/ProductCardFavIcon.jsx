@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
@@ -16,8 +16,7 @@ const ProductCardFavIcon = ({ product, productId }) => {
   const { favoritesProducts } = useSelector((state) => state.products);
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const lang = cookies.get("i18next");
-  const favIconLeftToolTipPos = favIconToolTipLeftPos(lang);
+  const favIconLeftToolTipPos = favIconToolTipLeftPos(i18next.language);
   const isAddedToFavorites = favoritesProducts?.find(
     (favProduct) => favProduct.id === productId
   );

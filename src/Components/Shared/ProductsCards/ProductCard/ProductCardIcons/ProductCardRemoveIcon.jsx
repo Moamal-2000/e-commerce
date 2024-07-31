@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { removeById } from "src/Features/productsSlice";
@@ -10,8 +10,9 @@ import s from "./ProductCardRemoveIcon.module.scss";
 const ProductCardRemoveIcon = ({ removeFrom, productId }) => {
   const { t } = useTranslation();
   const dispatch = useDispatch();
-  const lang = cookies.get("i18next");
-  const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(lang);
+  const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(
+    i18next.language
+  );
 
   function removeProduct() {
     dispatch(removeById({ key: removeFrom, id: productId }));

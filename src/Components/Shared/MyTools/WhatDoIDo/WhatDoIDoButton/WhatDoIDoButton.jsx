@@ -1,4 +1,4 @@
-import cookies from "js-cookie";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
@@ -10,8 +10,7 @@ import s from "./WhatDoIDoButton.module.scss";
 const WhatDoIDoButton = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
-  const lang = cookies.get("i18next");
-  const toolTipLeftPosition = whatDoIDoButtonToolTipPos(lang);
+  const toolTipLeftPosition = whatDoIDoButtonToolTipPos(i18next.language);
 
   function openMenu() {
     dispatch(updateGlobalState({ key: "isWhatDoIDoMenuActive", value: true }));
