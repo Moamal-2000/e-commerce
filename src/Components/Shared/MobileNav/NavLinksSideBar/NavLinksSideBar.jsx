@@ -4,12 +4,15 @@ import { NavLink } from "react-router-dom";
 import { mobileNavData } from "src/Data/staticData";
 import { camelCase } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
+import IconWithCountAndLabel from "../../NavTools/IconWithCountAndLabel/IconWithCountAndLabel";
 import s from "./NavLinksSideBar.module.scss";
 
 const NavLinksSideBar = () => {
   const {
     loginInfo: { isSignIn },
   } = useSelector((state) => state.user);
+  const { favoritesProducts, orderProducts, cartProducts, wishList } =
+    useSelector((state) => state.products);
   const { t } = useTranslation();
 
   return (
@@ -26,11 +29,61 @@ const NavLinksSideBar = () => {
             <li key={"mobile-nav-link-" + index} role="menuitem">
               <NavLink to={link} aria-current={currentPage}>
                 <SvgIcon name={icon} />
-                <span>{t(`mobileNav.${camelCase(name)}`)}</span>
+                <span className={s.text}>
+                  {t(`mobileNav.${camelCase(name)}`)}
+                </span>
               </NavLink>
             </li>
           );
         })}
+
+        <li role="menuitem">
+          <IconWithCountAndLabel
+            props={{
+              iconName: "cart3",
+              visibility: isSignIn,
+              routePath: "/cart",
+              countLength: cartProducts.length,
+              text: t(`mobileNav.${camelCase("my cart")}`),
+            }}
+          />
+        </li>
+
+        <li role="menuitem">
+          <IconWithCountAndLabel
+            props={{
+              iconName: "cart",
+              visibility: isSignIn,
+              routePath: "/order",
+              countLength: orderProducts.length,
+              text: t(`mobileNav.${camelCase("my order")}`),
+            }}
+          />
+        </li>
+
+        <li role="menuitem">
+          <IconWithCountAndLabel
+            props={{
+              iconName: "heart",
+              visibility: isSignIn,
+              routePath: "/favorites",
+              countLength: favoritesProducts.length,
+              text: t(`mobileNav.${camelCase("favorite")}`),
+            }}
+          />
+        </li>
+
+        <li role="menuitem">
+          <IconWithCountAndLabel
+            props={{
+              iconName: "save",
+              visibility: isSignIn,
+              routePath: "/wishlist",
+              countLength: wishList.length,
+              text: t(`mobileNav.${camelCase("wishlist")}`),
+            }}
+          />
+        </li>
       </ul>
     </nav>
   );

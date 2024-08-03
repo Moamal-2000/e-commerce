@@ -16,7 +16,7 @@ const IconWithCount = ({
           {countLength > 0 && <span className={s.count}>{count}</span>}
         </div>
 
-        <ToolTip bottom="20px" left="50%" content={title} />
+        {title && <ToolTip bottom="20px" left="50%" content={title} />}
       </Link>
     )
   );

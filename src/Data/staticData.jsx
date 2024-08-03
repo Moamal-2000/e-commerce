@@ -304,30 +304,6 @@ export const mobileNavData = [
     icon: "user",
     requiteSignIn: true,
   },
-  {
-    name: "My Cart",
-    link: "/cart",
-    icon: "cart3",
-    requiteSignIn: true,
-  },
-  {
-    name: "My Order",
-    link: "/order",
-    icon: "cart",
-    requiteSignIn: true,
-  },
-  {
-    name: "Favorite",
-    link: "/favorites",
-    icon: "heart",
-    requiteSignIn: true,
-  },
-  {
-    name: "wishlist",
-    link: "/wishlist",
-    icon: "save",
-    requiteSignIn: true,
-  },
 ];
 
 export const womenFashionMenuItems = [

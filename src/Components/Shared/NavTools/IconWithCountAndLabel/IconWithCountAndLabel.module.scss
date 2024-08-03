@@ -1,0 +1,38 @@
+.wrapper {
+  width: inherit;
+  height: inherit;
+}
+
+.link svg {
+  width: inherit;
+  height: inherit;
+  fill: var(--black);
+  transition: fill .2s;
+}
+
+.count {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -1px;
+  background-color: var(--dark-tomato);
+  color: #fff;
+  border-radius: 50%;
+  font-size: .6rem;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  z-index: 2;
+  transform: scale(.6);
+}
+
+.text {
+  padding-inline-start: 16px;
+}
+
+.text::selection {
+  background-color: var(--white) !important;
+}

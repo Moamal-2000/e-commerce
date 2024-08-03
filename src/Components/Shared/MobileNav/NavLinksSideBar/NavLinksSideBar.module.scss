@@ -12,6 +12,7 @@
 
 .navLinks ul li {
   -webkit-tap-highlight-color: transparent;
+  position: relative;
 }
 
 .navLinks ul li a {
@@ -40,7 +41,7 @@
   }
 }
 
-.navLinks ul li a span {
+.navLinks .text {
   padding-inline-start: 16px;
 }
 
@@ -50,6 +51,6 @@
   height: 20px;
 }
 
-.navLinks ul li a span::selection {
+.navLinks .text::selection {
   background-color: var(--white) !important;
 }
