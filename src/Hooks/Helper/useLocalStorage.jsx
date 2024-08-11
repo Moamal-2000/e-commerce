@@ -2,7 +2,11 @@ const useLocalStorage = (keyName, data) => {
   const localData = localStorage.getItem(keyName);
   if (!data) return JSON.parse(localData);
 
-  localStorage.setItem(keyName, JSON.stringify(data));
+  setItemToLocalStorage(keyName, data);
   return JSON.parse(localData);
 };
 export default useLocalStorage;
+
+export function setItemToLocalStorage(key, data) {
+  localStorage.setItem(key, JSON.stringify(data));
+}

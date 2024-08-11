@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { setItemToLocalStorage } from "./useLocalStorage";
 
 const useFormData = ({
   initialValues,
@@ -22,15 +23,12 @@ const useFormData = ({
         [name]: value,
       };
 
-      if (storeInLocalStorage) storeValuesToLocalStorage(updatedValues);
+      if (storeInLocalStorage)
+        setItemToLocalStorage(localStorageKey, updatedValues);
       return updatedValues;
     };
 
     setValues(updateValues);
-  }
-
-  function storeValuesToLocalStorage(getValues) {
-    localStorage.setItem(localStorageKey, JSON.stringify(getValues));
   }
 
   const handleSubmit = (event) => {
