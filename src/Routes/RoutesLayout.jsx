@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import Footer from "../Components/Footer/Footer";
 import FirstHeader from "../Components/Header/FirstHeader/FirstHeader";
@@ -17,11 +18,12 @@ import useOnlineStatus from "../Hooks/Helper/useOnlineStatus";
 const RoutesLayout = () => {
   const skipLinkSectionId = useCurrentSkipLinkId();
   const isWebsiteOnline = useOnlineStatus();
+  const { showWhatDoIDoIcon } = useSelector((state) => state.global);
 
   return (
     <div className="App" tabIndex="-1">
       <SkipContentLink scrollTo={skipLinkSectionId} />
-      <WhatDoIDoButton />
+      {showWhatDoIDoIcon && <WhatDoIDoButton />}
       <WhatDoIDoMenu />
       <FirstHeader />
       <Header />

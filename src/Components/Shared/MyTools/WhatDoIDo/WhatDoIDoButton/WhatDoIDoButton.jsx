@@ -12,9 +12,17 @@ const WhatDoIDoButton = () => {
   const { t } = useTranslation();
   const toolTipLeftPosition = whatDoIDoButtonToolTipPos(i18next.language);
 
-  function openMenu() {
+  function openMenu(e) {
+    const isButtonTag = e.target.tagName === "BUTTON"
+
+    if (!isButtonTag) return
+
     dispatch(updateGlobalState({ key: "isWhatDoIDoMenuActive", value: true }));
     dispatch(updateGlobalState({ key: "isOverlayActive", value: true }));
+  }
+
+  function neverShowMenu() {
+    dispatch(updateGlobalState({ key: "showWhatDoIDoIcon", value: false }));
   }
 
   return (
@@ -25,6 +33,15 @@ const WhatDoIDoButton = () => {
       aria-haspopup="true"
       aria-label="to-do list button"
     >
+      <div
+        className={s.hideIcon}
+        data-is-tooltip="true"
+        onClick={neverShowMenu}
+      >
+        <SvgIcon name="xMark" />
+        <ToolTip content={t("tooltips.remove")} />
+      </div>
+
       <SvgIcon name="questionMark" />
       <ToolTip
         content={t("whatImWorking")}
