@@ -209,6 +209,22 @@ export function whatDoIDoButtonToolTipPos(lang) {
   return "126px";
 }
 
+export function hideWhatDoIDoButtonToolTipPos(lang) {
+  switch (lang) {
+    case "ar":
+      return "-61px";
+    case "fr":
+      return "147px";
+    case "hu":
+      return "108px";
+    case "ja":
+      return "90px";
+    case "hi":
+      return "101px";
+  }
+  return "98px";
+}
+
 export function getElementWidth(element) {
   return element?.getBoundingClientRect()?.width;
 }
