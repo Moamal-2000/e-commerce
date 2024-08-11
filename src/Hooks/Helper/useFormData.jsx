@@ -8,27 +8,21 @@ const useFormData = ({
   localStorageKey,
 }) => {
   const valuesLocal = localStorage.getItem(localStorageKey);
-  const setValuesFromLocal = valuesLocal && storeInLocalStorage;
+  const hasDataInLocal = valuesLocal && storeInLocalStorage;
 
   const [values, setValues] = useState(
-    setValuesFromLocal ? JSON.parse(valuesLocal) : initialValues
+    hasDataInLocal ? JSON.parse(valuesLocal) : initialValues
   );
 
   function handleChange(event) {
     const { name, value } = event.target;
 
-    const updateValues = (prevValues) => {
-      const updatedValues = {
-        ...prevValues,
-        [name]: value,
-      };
+    setValues((prevValues) => {
+      const values = { ...prevValues, [name]: value };
 
-      if (storeInLocalStorage)
-        setItemToLocalStorage(localStorageKey, updatedValues);
-      return updatedValues;
-    };
-
-    setValues(updateValues);
+      if (storeInLocalStorage) setItemToLocalStorage(localStorageKey, values);
+      return values;
+    });
   }
 
   const handleSubmit = (event) => {

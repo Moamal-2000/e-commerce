@@ -441,7 +441,7 @@
     "companyName": "Nom de l'entreprise",
     "streetAddress": "Adresse",
     "apartment": "Appartement, étage, etc. (facultatif)",
-    "townOrCity": "Ville",
+    "cityOrTown": "Ville",
     "phoneNumber": "Numéro de téléphone",
     "emailAddress": "Adresse e-mail",
     "saveThisInfo": "Enregistrer ces informations pour un paiement plus rapide la prochaine fois",

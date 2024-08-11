@@ -442,7 +442,7 @@
     "companyName": "Company Name",
     "streetAddress": "Street Address",
     "apartment": "Apartment, floor, etc. (optional)",
-    "townOrCity": "Town/City",
+    "cityOrTown": "Town/City",
     "phoneNumber": "Phone Number",
     "emailAddress": "Email Address",
     "saveThisInfo": "Save this information for faster check-out next time",

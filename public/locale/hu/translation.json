@@ -439,7 +439,7 @@
     "companyName": "Cégnév",
     "streetAddress": "Utca és házszám",
     "apartment": "Lakás, emelet stb. (opcionális)",
-    "townOrCity": "Város",
+    "cityOrTown": "Város",
     "phoneNumber": "Telefonszám",
     "emailAddress": "Email cím",
     "saveThisInfo": "Mentsd el az információkat a következő gyorsabb kijelentkezéshez",

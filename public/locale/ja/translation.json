@@ -441,7 +441,7 @@
     "companyName": "会社名",
     "streetAddress": "住所",
     "apartment": "アパート、階層など（オプション）",
-    "townOrCity": "市区町村",
+    "cityOrTown": "市区町村",
     "phoneNumber": "電話番号",
     "emailAddress": "メールアドレス",
     "saveThisInfo": "次回のチェックアウトが速くなるように、この情報を保存します",

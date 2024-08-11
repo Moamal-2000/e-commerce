@@ -413,9 +413,9 @@ export const billingInputsData = [
     id: uuid(),
   },
   {
-    translationKey: "townOrCity",
+    translationKey: "cityOrTown",
     label: "Town/City",
-    name: "city",
+    name: "cityOrTown",
     required: true,
     autoComplete: true,
     id: uuid(),

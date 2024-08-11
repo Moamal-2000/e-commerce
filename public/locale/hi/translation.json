@@ -441,7 +441,7 @@
     "companyName": "कंपनी का नाम",
     "streetAddress": "सड़क का पता",
     "apartment": "अपार्टमेंट, मंजिल, आदि (वैकल्पिक)",
-    "townOrCity": "शहर / शहर",
+    "cityOrTown": "शहर / शहर",
     "phoneNumber": "फोन नंबर",
     "emailAddress": "ईमेल पता",
     "saveThisInfo": "इस जानकारी को अगली बार तेज़ी से चेक-आउट के लिए सहेजें",
