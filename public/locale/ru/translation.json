@@ -415,7 +415,8 @@
     "repoStarsForks": "репозиторий веб-сайта",
     "searchButton": "Поиск",
     "remove": "Удалить",
-    "confirm": "Подтвердить"
+    "confirm": "Подтвердить",
+    "hidePermanent": "Навсегда скрыть эту кнопку."
   },
 
   "inputsPlaceholders": {

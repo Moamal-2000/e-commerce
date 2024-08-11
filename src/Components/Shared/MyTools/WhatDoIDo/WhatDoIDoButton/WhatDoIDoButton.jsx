@@ -40,7 +40,7 @@ const WhatDoIDoButton = () => {
         onClick={neverShowMenu}
       >
         <SvgIcon name="xMark" />
-        <ToolTip content={t("tooltips.remove")} />
+        <ToolTip content={t("tooltips.hidePermanent")} />
       </div>
 
       <SvgIcon name="questionMark" />

@@ -414,7 +414,8 @@
     "repoStarsForks": "वेबसाइट की रिपॉज़िटरी",
     "searchButton": "खोजें",
     "remove": "हटाएं",
-    "confirm": "पुष्टि करें"
+    "confirm": "पुष्टि करें",
+    "hidePermanent": "इस बटन को स्थायी रूप से छिपाएं।"
   },
 
   "inputsPlaceholders": {

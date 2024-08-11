@@ -412,7 +412,8 @@
     "repoStarsForks": "a webhely tárolója",
     "searchButton": "Keresés",
     "remove": "Eltávolítás",
-    "confirm": "Megerősít"
+    "confirm": "Megerősít",
+    "hidePermanent": "Véglegesen elrejti ezt a gombot."
   },
 
   "inputsPlaceholders": {

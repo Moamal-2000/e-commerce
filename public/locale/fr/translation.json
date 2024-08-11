@@ -414,7 +414,8 @@
     "repoStarsForks": "dépôt du site web",
     "searchButton": "Rechercher",
     "remove": "Supprimer",
-    "confirm": "Confirmer"
+    "confirm": "Confirmer",
+    "hidePermanent": "Masquer ce bouton de manière permanente."
   },
 
   "inputsPlaceholders": {

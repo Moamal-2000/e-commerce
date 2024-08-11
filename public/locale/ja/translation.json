@@ -414,7 +414,8 @@
     "repoStarsForks": "ウェブサイトのリポジトリ",
     "searchButton": "検索",
     "remove": "削除",
-    "confirm": "確認"
+    "confirm": "確認",
+    "hidePermanent": "このボタンを永久に隠す。"
   },
 
   "inputsPlaceholders": {

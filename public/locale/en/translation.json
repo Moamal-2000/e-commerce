@@ -415,7 +415,8 @@
     "repoStarsForks": "website's repository",
     "searchButton": "Search",
     "remove": "Remove",
-    "confirm": "Confirm"
+    "confirm": "Confirm",
+    "hidePermanent": "Permanently hide this button."
   },
 
   "inputsPlaceholders": {
