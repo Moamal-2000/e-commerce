@@ -51,7 +51,12 @@
 }
 
 // Arabic styles
-[lang=ar] .whatDoIDoBtn .hideIcon {
+[lang=ar] .whatDoIDoBtn {
   left: auto;
-  right: -18px;
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+[lang=ar] .whatDoIDoBtn .hideIcon {
+  right: 28px;
 }

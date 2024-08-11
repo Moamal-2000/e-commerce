@@ -198,7 +198,7 @@ export function orderProductToolTipPos(lang) {
 export function whatDoIDoButtonToolTipPos(lang) {
   switch (lang) {
     case "ar":
-      return "115px";
+      return "-74px";
     case "hu":
       return "108px";
     case "ja":
