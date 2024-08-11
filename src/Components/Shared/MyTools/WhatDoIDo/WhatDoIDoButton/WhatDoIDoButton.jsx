@@ -42,6 +42,8 @@ const WhatDoIDoButton = () => {
         className={s.hideIcon}
         data-is-tooltip="true"
         onClick={neverShowMenu}
+        aria-label={t("tooltips.hidePermanent")}
+        aria-haspopup="true"
       >
         <SvgIcon name="xMark" />
         <ToolTip
