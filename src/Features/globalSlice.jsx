@@ -7,7 +7,6 @@ const initialState = {
   isSectionsMenuActive: false,
   isZoomInPreviewActive: false,
   isWhatDoIDoMenuActive: false,
-  showWhatDoIDoIcon: true,
   previewImg: null,
 };
 

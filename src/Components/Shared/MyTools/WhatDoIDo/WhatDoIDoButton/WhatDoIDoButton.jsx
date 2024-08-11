@@ -2,6 +2,7 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { updateGlobalState } from "src/Features/globalSlice";
+import { updateStorageState } from "src/Features/storageSlice";
 import { whatDoIDoButtonToolTipPos } from "src/Functions/componentsFunctions";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
 import ToolTip from "../../../MiniComponents/ToolTip";
@@ -13,16 +14,16 @@ const WhatDoIDoButton = () => {
   const toolTipLeftPosition = whatDoIDoButtonToolTipPos(i18next.language);
 
   function openMenu(e) {
-    const isButtonTag = e.target.tagName === "BUTTON"
+    const isButtonTag = e.target.tagName === "BUTTON";
 
-    if (!isButtonTag) return
+    if (!isButtonTag) return;
 
     dispatch(updateGlobalState({ key: "isWhatDoIDoMenuActive", value: true }));
     dispatch(updateGlobalState({ key: "isOverlayActive", value: true }));
   }
 
   function neverShowMenu() {
-    dispatch(updateGlobalState({ key: "showWhatDoIDoIcon", value: false }));
+    dispatch(updateStorageState({ key: "showWhatDoIDoIcon", value: false }));
   }
 
   return (

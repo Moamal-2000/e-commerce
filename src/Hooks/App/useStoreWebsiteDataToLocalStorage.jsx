@@ -5,11 +5,12 @@ import { setItemToLocalStorage } from "../Helper/useLocalStorage";
 const useStoreWebsiteDataToLocalStorage = () => {
   const userData = useSelector((state) => state.user);
   const productsData = useSelector((state) => state.products);
-  const globalData = useSelector((state) => state.global);
+  const localStorageData = useSelector((state) => state.localStorage);
 
   useEffect(() => {
     setItemToLocalStorage("productsSliceData", productsData);
     setItemToLocalStorage("userSliceData", userData);
-  }, [userData, productsData]);
+    setItemToLocalStorage("storageSliceData", localStorageData);
+  }, [userData, productsData, localStorageData]);
 };
 export default useStoreWebsiteDataToLocalStorage;

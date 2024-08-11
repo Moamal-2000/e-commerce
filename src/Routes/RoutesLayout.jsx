@@ -18,7 +18,7 @@ import useOnlineStatus from "../Hooks/Helper/useOnlineStatus";
 const RoutesLayout = () => {
   const skipLinkSectionId = useCurrentSkipLinkId();
   const isWebsiteOnline = useOnlineStatus();
-  const { showWhatDoIDoIcon } = useSelector((state) => state.global);
+  const { showWhatDoIDoIcon } = useSelector((state) => state.localStorage);
 
   return (
     <div className="App" tabIndex="-1">
