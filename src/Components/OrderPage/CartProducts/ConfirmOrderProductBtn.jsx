@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -18,10 +17,10 @@ const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
   ).confirm;
   const { removeOrderProduct } = useSelector((state) => state.products);
   const dispatch = useDispatch();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
   const [toolTipLeftPos, setToolTipLeftPos] = useState(
-    orderProductToolTipPos(i18next.language)
+    orderProductToolTipPos(i18n.language)
   );
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
@@ -32,7 +31,7 @@ const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
       return;
     }
 
-    setToolTipLeftPos(orderProductToolTipPos(i18next.language));
+    setToolTipLeftPos(orderProductToolTipPos(i18n.language));
     setToolTipTopPos("50%");
   }
 
@@ -48,7 +47,7 @@ const ConfirmOrderProductBtn = ({ productName, translatedProduct }) => {
 
     if (isAlertActive && isSelectedProduct && isRemoveOrderProduct)
       showConfirmAlert(dispatch, productName, t, translatedProduct);
-  }, [windowWidth, i18next.language]);
+  }, [windowWidth, i18n.language]);
 
   return (
     <button

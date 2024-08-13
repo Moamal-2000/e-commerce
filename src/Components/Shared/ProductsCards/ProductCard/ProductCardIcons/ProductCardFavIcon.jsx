@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
@@ -14,9 +13,9 @@ const ProductCardFavIcon = ({ product, productId }) => {
     loginInfo: { isSignIn },
   } = useSelector((state) => state.user);
   const { favoritesProducts } = useSelector((state) => state.products);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
-  const favIconLeftToolTipPos = favIconToolTipLeftPos(i18next.language);
+  const favIconLeftToolTipPos = favIconToolTipLeftPos(i18n.language);
   const isAddedToFavorites = favoritesProducts?.find(
     (favProduct) => favProduct.id === productId
   );

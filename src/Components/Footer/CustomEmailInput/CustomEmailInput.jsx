@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
@@ -28,8 +27,8 @@ const CustomEmailInput = () => {
   };
 
   // Tooltip variables
-  const sendIconToolTipLeftPos = sendToolTipLeftPos(i18next.language);
-  const sendingIconToolTipLeftPos = sendingToolTipLeftPos(i18next.language);
+  const sendIconToolTipLeftPos = sendToolTipLeftPos(i18n.language);
+  const sendingIconToolTipLeftPos = sendingToolTipLeftPos(i18n.language);
   const toolTipLeftPosition = loading
     ? sendingIconToolTipLeftPos
     : sendIconToolTipLeftPos;

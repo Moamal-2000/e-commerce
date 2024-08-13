@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
@@ -12,10 +11,10 @@ import s from "./RemoveCartProductBtn.module.scss";
 
 const RemoveCartProductBtn = ({ productId }) => {
   const dispatch = useDispatch();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
 
-  const [toolTipLeftPos, setToolTipLeftPos] = useState(cartProductToolTipPos(i18next.language));
+  const [toolTipLeftPos, setToolTipLeftPos] = useState(cartProductToolTipPos(i18n.language));
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
   function updateToolTipPositions() {
@@ -25,13 +24,13 @@ const RemoveCartProductBtn = ({ productId }) => {
       return;
     }
 
-    setToolTipLeftPos(cartProductToolTipPos(i18next.language));
+    setToolTipLeftPos(cartProductToolTipPos(i18n.language));
     setToolTipTopPos("50%");
   }
 
   useEffect(() => {
     updateToolTipPositions();
-  }, [windowWidth, i18next.language]);
+  }, [windowWidth, i18n.language]);
 
   return (
     <button

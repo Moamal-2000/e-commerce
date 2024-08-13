@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SCROLL_REQUIRED } from "src/Data/globalVariables";
@@ -11,8 +10,8 @@ import s from "./ScrollToTop.module.scss";
 
 const ScrollToTop = () => {
   const scrollTopButtonRef = useRef();
-  const { t } = useTranslation();
-  const leftToolTipPos = scrollToTopToolTipLeftPos(i18next.language);
+  const { t, i18n } = useTranslation();
+  const leftToolTipPos = scrollToTopToolTipLeftPos(i18n.language);
 
   function handleScrollTopVisibility() {
     const classListMethod = window.scrollY < SCROLL_REQUIRED ? "add" : "remove";

@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,7 +12,7 @@ const OrderPageButtons = () => {
   );
   const { orderProducts } = useSelector((state) => state.products);
   const dispatch = useDispatch();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const alertMsgKey = useRef("");
 
   function handleReceiveAll() {
@@ -52,7 +51,7 @@ const OrderPageButtons = () => {
 
     if (isRemoveOrderProduct)
       showConfirmAlert(t(`toastAlert.${alertMsgKey.current}`));
-  }, [i18next.language]);
+  }, [i18n.language]);
 
   return (
     <div className={s.buttons}>

@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { detailsIconToolTipLeftPos } from "src/Functions/componentsFunctions";
@@ -7,8 +6,8 @@ import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardDetailsIcon.module.scss";
 
 const ProductCardDetailsIcon = ({ navigateToProductDetails }) => {
-  const { t } = useTranslation();
-  const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(i18next.language);
+  const { t, i18n } = useTranslation();
+  const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(i18n.language);
 
   return (
     <Link

@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/globalVariables";
 import { repoStarsForksToolTipLeftPos } from "src/Functions/componentsFunctions";
@@ -9,13 +8,13 @@ import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./RepoStarsForks.module.scss";
 
 const RepoStarsForks = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [reposData, isError] = useAsync(MY_REPOS_URL);
   const websiteRepo = getDataById(reposData, WEBSITE_REPO_ID);
   const repoStars = websiteRepo?.stargazers_count;
   const repoForks = websiteRepo?.forks;
   const repoUrl = websiteRepo?.html_url;
-  const leftToolTipPos = repoStarsForksToolTipLeftPos(i18next.language);
+  const leftToolTipPos = repoStarsForksToolTipLeftPos(i18n.language);
 
   return (
     !isError && (

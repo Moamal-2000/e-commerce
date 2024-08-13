@@ -1,4 +1,4 @@
-import i18next from "i18next";
+import i18n from "i18next";
 import { useEffect, useState } from "react";
 import SvgIcon from "../SvgIcon";
 import s from "./ShowHidePassword.module.scss";
@@ -8,8 +8,8 @@ const ShowHidePassword = ({ top = "40%", right = "8px" }) => {
   const [iconPosition, setIconPosition] = useState({ top, right });
 
   useEffect(() => {
-    updateIconPosition(i18next.language, right, setIconPosition);
-  }, [i18next.language]);
+    updateIconPosition(i18n.language, right, setIconPosition);
+  }, [i18n.language]);
 
   return (
     <span

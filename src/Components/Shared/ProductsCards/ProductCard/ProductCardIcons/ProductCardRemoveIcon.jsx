@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { removeById } from "src/Features/productsSlice";
@@ -8,11 +7,9 @@ import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardRemoveIcon.module.scss";
 
 const ProductCardRemoveIcon = ({ removeFrom, productId }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
-  const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(
-    i18next.language
-  );
+  const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(i18n.language);
 
   function removeProduct() {
     dispatch(removeById({ key: removeFrom, id: productId }));

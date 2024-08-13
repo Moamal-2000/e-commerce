@@ -1,4 +1,3 @@
-import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
@@ -14,11 +13,9 @@ const ProductCardWishListIcon = ({ product, productId }) => {
     loginInfo: { isSignIn },
   } = useSelector((state) => state.user);
   const { wishList } = useSelector((state) => state.products);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
-  const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(
-    i18next.language
-  );
+  const wishlistIconLeftToolTipPos = wishlistIconToolTipLeftPos(i18n.language);
   const isAddedToWishList = wishList?.find(
     (wishProduct) => wishProduct.id === productId
   );

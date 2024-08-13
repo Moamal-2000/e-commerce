@@ -1,4 +1,4 @@
-import i18next from "i18next";
+import i18n from "i18next";
 import { useSelector } from "react-redux";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./ToastConfirm.module.scss";
@@ -9,7 +9,7 @@ const ToastConfirm = () => {
   const { isAlertActive, alertText, alertState } = confirm;
   const { iconName, className } = toastState[alertState];
   const showClass = isAlertActive ? s.show : "";
-  const textDirection = i18next.language === "ar" ? "rtl" : "ltr";
+  const textDirection = i18n.language === "ar" ? "rtl" : "ltr";
 
   return (
     <div className={`${s.toastConfirm} ${className} ${showClass}`} dir="ltr">
