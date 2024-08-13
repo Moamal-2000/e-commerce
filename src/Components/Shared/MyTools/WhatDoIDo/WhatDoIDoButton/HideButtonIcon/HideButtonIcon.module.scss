@@ -1,0 +1,36 @@
+@import "src/Styles/mixins";
+
+
+.hideIcon {
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  outline: none;
+  background-color: var(--tomato);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -6px;
+  top: -6px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .2s, left .2s, top .2s;
+
+  &:focus-visible [data-is-tooltip=true] {
+    opacity: 1;
+  }
+}
+
+.hideIcon>svg {
+  width: 12px;
+  height: 12px;
+  fill: var(--white)
+}
+
+// Arabic styles
+[lang=ar] .hideIcon {
+  right: 28px;
+}

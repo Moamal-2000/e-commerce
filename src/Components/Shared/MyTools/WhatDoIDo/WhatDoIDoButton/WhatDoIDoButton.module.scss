@@ -21,42 +21,9 @@
   pointer-events: none;
 }
 
-.whatDoIDoBtn .hideIcon {
-  -webkit-tap-highlight-color: transparent;
-  border: none;
-  outline: none;
-  background-color: var(--tomato);
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: -6px;
-  top: -6px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity .2s, left .2s, top .2s;
-
-  &:focus-visible [data-is-tooltip=true] {
-    opacity: 1;
-  }
-}
-
-.whatDoIDoBtn .hideIcon>svg {
-  width: 12px;
-  height: 12px;
-  fill: var(--white)
-}
-
 // Arabic styles
 [lang=ar] .whatDoIDoBtn {
   left: auto;
   right: 0;
   border-radius: 5px 0 0 5px;
-}
-
-[lang=ar] .whatDoIDoBtn .hideIcon {
-  right: 28px;
 }
