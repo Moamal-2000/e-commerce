@@ -30,6 +30,8 @@ const WhatDoIDoButton = () => {
     dispatch(updateStorageState({ key: "showWhatDoIDoIcon", value: false }));
   }
 
+  //! create component for className={s.hideIcon}
+
   return (
     <button
       className={s.whatDoIDoBtn}
