@@ -39,7 +39,7 @@ const productsSlice = createSlice({
     setEmptyArrays: (state, { payload: { keys } }) => {
       for (let i = 0; i < keys.length; i++) state[keys[i]] = [];
     },
-    transferData: (state, { payload: { from, to } }) => {
+    transferProducts: (state, { payload: { from, to } }) => {
       state[to] = state[to].concat(state[from]);
       state[from] = [];
     },
@@ -52,6 +52,6 @@ export const {
   removeById,
   removeByKeyName,
   setEmptyArrays,
-  transferData,
+  transferProducts,
 } = productsSlice.actions;
 export default productsSlice.reducer;
