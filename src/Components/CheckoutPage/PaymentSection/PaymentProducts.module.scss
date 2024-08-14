@@ -1,3 +1,5 @@
+@import "src/Styles/mixins";
+
 .products {
   margin-bottom: 30px;
   display: flex;
@@ -39,4 +41,10 @@
 .hasNoProducts {
   color: var(--dark-gray);
   font-weight: 300;
+}
+
+@include very-small {
+  [lang] .hasNoProducts {
+    font-size: .9rem;
+  }
 }
