@@ -543,7 +543,8 @@
     "removeOrderProduct": "Удалить {{translatedProduct}} из вашего заказа?",
     "confirmOrderProduct": "Вы получили {{translatedProduct}}?",
     "receivedAllOrder": "Вы получили все продукты?",
-    "cancelAllOrder": "Вы уверены, что хотите отменить все заказы?"
+    "cancelAllOrder": "Вы уверены, что хотите отменить все заказы?",
+    "checkoutSuccess": "Спасибо за ваш заказ! Мы сразу же начнем его обработку."
   },
 
   "wishlist": "Избранное ({{numberOfWishlist}})",

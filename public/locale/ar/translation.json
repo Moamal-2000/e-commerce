@@ -543,7 +543,8 @@
     "removeOrderProduct": "هل تريد إزالة {{translatedProduct}} من طلباتك؟",
     "confirmOrderProduct": "هل استلمت {{translatedProduct}}؟",
     "receivedAllOrder": "هل استلمت جميع المنتجات؟",
-    "cancelAllOrder": "هل أنت متأكد من إلغاء جميع الطلبات؟"
+    "cancelAllOrder": "هل أنت متأكد من إلغاء جميع الطلبات؟",
+    "checkoutSuccess": "شكرًا لتسوقك معنا! سوف يتم تجهيز طلبك وسنعلمك عند الشحن"
   },
   "wishlist": "قائمة الرغبات ({{numberOfWishlist}})",
   "cashOnDelivery": "الدفع عند الاستلام",

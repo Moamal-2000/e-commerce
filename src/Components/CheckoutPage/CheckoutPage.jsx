@@ -64,7 +64,7 @@ const CheckoutPage = () => {
     dispatch(
       showAlert({
         alertState: "success",
-        alertText: "Test",
+        alertText: t("toastAlert.checkoutSuccess"),
         alertType: "alert",
       })
     );

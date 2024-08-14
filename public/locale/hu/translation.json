@@ -539,7 +539,8 @@
     "removeOrderProduct": "Eltávolítja a {{translatedProduct}} a rendeléséből?",
     "confirmOrderProduct": "Megkapta a(z) {{translatedProduct}}-t?",
     "receivedAllOrder": "Megkapta az összes terméket?",
-    "cancelAllOrder": "Biztosan törölni szeretné az összes rendelést?"
+    "cancelAllOrder": "Biztosan törölni szeretné az összes rendelést?",
+    "checkoutSuccess": "Köszönjük a rendelését! Azonnal elkezdjük feldolgozni."
   },
 
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",

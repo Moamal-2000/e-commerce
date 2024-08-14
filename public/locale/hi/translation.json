@@ -542,7 +542,8 @@
     "removeOrderProduct": "क्या आप अपने ऑर्डर से {{translatedProduct}} हटाना चाहते हैं?",
     "confirmOrderProduct": "क्या आपको {{translatedProduct}} प्राप्त हुआ?",
     "receivedAllOrder": "क्या आपको सभी उत्पाद प्राप्त हुए हैं?",
-    "cancelAllOrder": "क्या आप निश्चित रूप से सभी ऑर्डर रद्द करना चाहते हैं?"
+    "cancelAllOrder": "क्या आप निश्चित रूप से सभी ऑर्डर रद्द करना चाहते हैं?",
+    "checkoutSuccess": "आपके ऑर्डर के लिए धन्यवाद! हम तुरंत इसे संसाधित करना शुरू करेंगे।"
   },
 
   "wishlist": "इच्छा-सूची ({{numberOfWishlist}})",

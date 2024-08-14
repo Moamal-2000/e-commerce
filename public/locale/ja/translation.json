@@ -542,7 +542,8 @@
     "removeOrderProduct": "注文から{{translatedProduct}}を削除しますか？",
     "confirmOrderProduct": "{{translatedProduct}}を受け取りましたか？",
     "receivedAllOrder": "すべての製品を受け取りましたか？",
-    "cancelAllOrder": "すべての注文をキャンセルしてもよろしいですか？"
+    "cancelAllOrder": "すべての注文をキャンセルしてもよろしいですか？",
+    "checkoutSuccess": "ご注文ありがとうございます！すぐに処理を開始します。"
   },
 
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
