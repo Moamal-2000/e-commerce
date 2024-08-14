@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
-import { transferData } from "src/Features/productsSlice";
+import { useSelector } from "react-redux";
 import AddCoupon from "../../Cart/CartInfo/AddCoupon";
 import PaymentCalculation from "./PaymentCalculation";
 import PaymentOptionsSelection from "./PaymentOptionsSelection";
@@ -10,11 +9,6 @@ import s from "./PaymentSection.module.scss";
 const PaymentSection = () => {
   const { cartProducts } = useSelector((state) => state.products);
   const { t } = useTranslation();
-  const dispatch = useDispatch();
-
-  function handleOrderProducts() {
-    dispatch(transferData({ from: "cartProducts", to: "orderProducts" }));
-  }
 
   return (
     <section className={s.paymentSection}>
@@ -23,11 +17,7 @@ const PaymentSection = () => {
       <PaymentOptionsSelection />
       <AddCoupon />
 
-      <button
-        type="submit"
-        className={s.submitPaymentButton}
-        onClick={handleOrderProducts}
-      >
+      <button type="submit" className={s.submitPaymentButton}>
         {t("buttons.placeOrder")}
       </button>
     </section>
