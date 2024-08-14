@@ -513,6 +513,10 @@
     }
   },
 
+  "checkoutPage": {
+    "hasNoProducts": "आपकी गाड़ी वर्तमान में खाली है।"
+  },
+
   "userMenuItems": {
     "profile": "मेरे खाते का प्रबंधन करें",
     "cart": "मेरा आदेश",

@@ -510,6 +510,10 @@
     }
   },
 
+  "checkoutPage": {
+    "hasNoProducts": "A kosara jelenleg üres."
+  },
+
   "userMenuItems": {
     "profile": "Fiókom kezelése",
     "cart": "Rendelésem",

@@ -513,6 +513,10 @@
     }
   },
 
+  "checkoutPage": {
+    "hasNoProducts": "Votre panier est actuellement vide."
+  },
+
   "userMenuItems": {
     "profile": "Gérer mon compte",
     "cart": "Ma commande",

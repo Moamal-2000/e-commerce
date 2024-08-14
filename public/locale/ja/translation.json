@@ -513,6 +513,10 @@
     }
   },
 
+  "checkoutPage": {
+    "hasNoProducts": "カートは現在空です。"
+  },
+
   "userMenuItems": {
     "profile": "マイアカウントの管理",
     "cart": "私の注文",

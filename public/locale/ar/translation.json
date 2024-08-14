@@ -514,6 +514,10 @@
     }
   },
 
+  "checkoutPage": {
+    "hasNoProducts": "سلة التسوق الخاصة بك فارغة حاليًا."
+  },
+
   "userMenuItems": {
     "profile": "إدارة حسابي",
     "cart": "طلباتي",
