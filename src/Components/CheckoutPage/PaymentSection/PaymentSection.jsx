@@ -12,7 +12,7 @@ const PaymentSection = () => {
 
   return (
     <section className={s.paymentSection}>
-      <PaymentProducts data={cartProducts} />
+      <PaymentProducts products={cartProducts} />
       <PaymentCalculation />
       <PaymentOptionsSelection />
       <AddCoupon />

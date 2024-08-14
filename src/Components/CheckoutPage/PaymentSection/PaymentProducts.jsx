@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { translateProduct } from "../../Cart/CartProducts/CartProduct";
 import s from "./PaymentProducts.module.scss";
 
-const PaymentProducts = ({ data }) => {
+const PaymentProducts = ({ products }) => {
+  const hasProducts = products.length > 0;
   const { t } = useTranslation();
 
   return (
     <div className={s.products}>
-      {data.map(({ img, name, shortName, afterDiscount, id }) => (
+      {products.map(({ img, name, shortName, afterDiscount, id }) => (
         <Link to={`/details?product=${name}`} key={id} className={s.product}>
           <div className={s.wrapper}>
             <img src={img} alt={shortName} />
@@ -25,6 +26,10 @@ const PaymentProducts = ({ data }) => {
           <span className={s.price}>${afterDiscount}</span>
         </Link>
       ))}
+
+      {!hasProducts && (
+        <p className={s.hasNoProducts}>{t("checkoutPage.hasNoProducts")}</p>
+      )}
     </div>
   );
 };

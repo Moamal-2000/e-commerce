@@ -514,6 +514,10 @@
     }
   },
 
+  "checkoutPage": {
+    "hasNoProducts": "Your cart is currently empty."
+  },
+
   "userMenuItems": {
     "profile": "Manage My Account",
     "cart": "My Order",
