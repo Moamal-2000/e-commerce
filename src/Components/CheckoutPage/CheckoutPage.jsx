@@ -40,26 +40,34 @@ const CheckoutPage = () => {
     },
   ];
 
-  function handleSubmitPayment(e) {
-    const isCartEmpty = cartProducts.length === 0;
-    const isInputFocused = document.activeElement.tagName === "INPUT";
+  function handleSubmitPayment(event) {
     const isCheckboxFocused = document.activeElement.id === "save-info";
+    const isInputFocused = document.activeElement.tagName === "INPUT";
+    const isCartEmpty = cartProducts.length === 0;
 
-    e.preventDefault();
+    event.preventDefault();
     if (isInputFocused && isCheckboxFocused) return;
     if (!saveBillingInfoToLocal) localStorage.removeItem("billingInfo");
 
     if (isCartEmpty) {
-      dispatch(
-        showAlert({
-          alertState: "warning",
-          alertText: t("toastAlert.cartEmpty"),
-          alertType: "alert",
-        })
-      );
+      showEmptyCartAlert();
       return;
     }
 
+    finalizeOrder();
+  }
+
+  function showEmptyCartAlert() {
+    dispatch(
+      showAlert({
+        alertState: "warning",
+        alertText: t("toastAlert.cartEmpty"),
+        alertType: "alert",
+      })
+    );
+  }
+
+  function finalizeOrder() {
     dispatch(transferProducts({ from: "cartProducts", to: "orderProducts" }));
     dispatch(
       showAlert({
