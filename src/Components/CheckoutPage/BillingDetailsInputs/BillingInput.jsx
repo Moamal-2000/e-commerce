@@ -24,9 +24,11 @@ const BillingInput = ({ inputData }) => {
     autoComplete: autoComplete ? "on" : "off",
   };
 
+  const redStarClass = required ? s.redStar : "";
+
   return (
     <div className={s.input}>
-      <label htmlFor={name} className={required ? s.redStarLabel : ""}>
+      <label htmlFor={name} className={redStarClass}>
         {label}
       </label>
       <input {...inputAttributes} />

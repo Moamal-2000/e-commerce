@@ -25,6 +25,7 @@ import {
   indiaFlag,
   japanFlag,
 } from "../Assets/Images/Images";
+import { regexPatterns } from "./globalVariables";
 
 export const introductionSliderData = [
   {
@@ -428,6 +429,7 @@ export const billingInputsData = [
     type: "tel",
     autoComplete: true,
     id: uuid(),
+    regex: regexPatterns.iraqiPhone,
   },
   {
     translationKey: "email",
@@ -437,5 +439,6 @@ export const billingInputsData = [
     type: "email",
     autoComplete: true,
     id: uuid(),
+    regex: regexPatterns.email,
   },
 ];

@@ -1,4 +1,5 @@
 import { SCREEN_SIZES } from "../Data/globalVariables";
+import { billingInputsData } from "../Data/staticData";
 
 export function simpleValidationCheck(inputs) {
   let isFormValid = false;
@@ -248,4 +249,47 @@ export function getScrollSliderValue(sliderEle) {
   }
 
   return sliderItemEleWidth;
+}
+
+export function showInvalidInputAlert(event) {
+  const form = new FormData(event.target);
+  const inputs = event.target.querySelectorAll("input");
+  let index = 0;
+
+  for (const [key, value] of form.entries()) {
+    const regex = billingInputsData[index]?.regex;
+    const isValid = regex ? regex.test(value) : true;
+
+    inputs[index].style.cssText = ``;
+
+    if (!isValid) {
+      inputs[index].style.cssText = `
+      border-color: var(--red);
+      background-color: #ffdada;
+      `;
+
+      inputs[index].focus();
+      break;
+    }
+
+    index++;
+  }
+}
+
+export function isCheckoutFormValid(event) {
+  const form = new FormData(event.target);
+  let hasInvalidInput = false;
+  let index = 0;
+
+  for (const [key, value] of form.entries()) {
+    const regex = billingInputsData[index]?.regex;
+    const isValid = regex ? regex.test(value) : true;
+    if (!isValid) {
+      hasInvalidInput = true;
+      break;
+    }
+    index++;
+  }
+
+  return !hasInvalidInput;
 }
