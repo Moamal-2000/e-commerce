@@ -58,35 +58,11 @@ const CheckoutPage = () => {
     if (!isFormValid) return;
 
     if (isCartEmpty) {
-      showEmptyCartAlert();
+      showEmptyCartAlert(dispatch, t);
       return;
     }
 
-    finalizeOrder();
-  }
-
-  function showEmptyCartAlert() {
-    dispatch(
-      showAlert({
-        alertState: "warning",
-        alertText: t("toastAlert.cartEmpty"),
-        alertType: "alert",
-      })
-    );
-  }
-
-  function finalizeOrder() {
-    dispatch(transferProducts({ from: "cartProducts", to: "orderProducts" }));
-
-    setTimeout(() => {
-      dispatch(
-        showAlert({
-          alertState: "success",
-          alertText: t("toastAlert.checkoutSuccess"),
-          alertType: "alert",
-        })
-      );
-    }, 600);
+    finalizeOrder(dispatch, t);
   }
 
   return (
@@ -117,3 +93,27 @@ const CheckoutPage = () => {
   );
 };
 export default CheckoutPage;
+
+function showEmptyCartAlert(dispatch, t) {
+  dispatch(
+    showAlert({
+      alertState: "warning",
+      alertText: t("toastAlert.cartEmpty"),
+      alertType: "alert",
+    })
+  );
+}
+
+function finalizeOrder(dispatch, t) {
+  dispatch(transferProducts({ from: "cartProducts", to: "orderProducts" }));
+
+  setTimeout(() => {
+    dispatch(
+      showAlert({
+        alertState: "success",
+        alertText: t("toastAlert.checkoutSuccess"),
+        alertType: "alert",
+      })
+    );
+  }, 600);
+}
