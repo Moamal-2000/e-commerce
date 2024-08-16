@@ -77,13 +77,16 @@ const CheckoutPage = () => {
 
   function finalizeOrder() {
     dispatch(transferProducts({ from: "cartProducts", to: "orderProducts" }));
-    dispatch(
-      showAlert({
-        alertState: "success",
-        alertText: t("toastAlert.checkoutSuccess"),
-        alertType: "alert",
-      })
-    );
+
+    setTimeout(() => {
+      dispatch(
+        showAlert({
+          alertState: "success",
+          alertText: t("toastAlert.checkoutSuccess"),
+          alertType: "alert",
+        })
+      );
+    }, 600);
   }
 
   return (
