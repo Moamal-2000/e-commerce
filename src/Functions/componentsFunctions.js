@@ -293,3 +293,5 @@ export function isCheckoutFormValid(event) {
 
   return !hasInvalidInput;
 }
+
+export const blurInputs = (inputs) => inputs.forEach((input) => input.blur());

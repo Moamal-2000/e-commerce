@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
 import { transferProducts } from "src/Features/productsSlice";
 import {
+  blurInputs,
   isCheckoutFormValid,
   showInvalidInputAlert,
 } from "src/Functions/componentsFunctions";
@@ -47,10 +48,12 @@ const CheckoutPage = () => {
   function handleSubmitPayment(event) {
     const isCheckboxFocused = document.activeElement.id === "save-info";
     const isInputFocused = document.activeElement.tagName === "INPUT";
+    const inputs = event.target.querySelectorAll("input");
     const isCartEmpty = cartProducts.length === 0;
     const isFormValid = isCheckoutFormValid(event);
 
     event.preventDefault();
+    blurInputs(inputs);
     showInvalidInputAlert(event);
     if (!saveBillingInfoToLocal) localStorage.removeItem("billingInfo");
 
