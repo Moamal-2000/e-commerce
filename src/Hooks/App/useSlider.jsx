@@ -6,6 +6,9 @@ const useSlider = (sliderRef) => {
   const isSliderClicked = useRef(false);
 
   function handlePrevBtn(e) {
+    const isFirstSlide = sliderRef.current.scrollLeft === 0;
+    if (isFirstSlide) return;
+
     buttonEffect(e);
 
     if (!isSliderClicked.current) isSliderClicked.current = true;
@@ -16,6 +19,8 @@ const useSlider = (sliderRef) => {
   }
 
   function handleNextBtn(e) {
+    if (isLastSlide(sliderRef)) return;
+
     buttonEffect(e);
 
     if (!isSliderClicked.current) isSliderClicked.current = true;
@@ -28,3 +33,10 @@ const useSlider = (sliderRef) => {
   return { isSliderClicked, handleNextBtn, handlePrevBtn };
 };
 export default useSlider;
+
+export function isLastSlide(sliderRef) {
+  const sliderEle = sliderRef.current;
+  return (
+    sliderEle.scrollWidth - sliderEle.clientWidth - sliderEle.scrollLeft < 2
+  );
+}
