@@ -17,7 +17,7 @@ const ProductsSlider = ({ filterFun = () => productsData, customization }) => {
         handlePrevBtn={handlePrevBtn}
       />
 
-      <div className={s.productsSlider} ref={sliderRef}>
+      <div className={s.productsSlider} ref={sliderRef} dir="ltr">
         {filteredProducts.map((product) => (
           <ProductCard
             product={product}

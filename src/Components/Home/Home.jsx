@@ -29,7 +29,7 @@ const Home = () => {
           <div className={s.introductionContainer}>
             <SectionsMenu />
 
-            <div className={s.line}></div>
+            <div className={s.line} />
 
             <MainSlider />
           </div>
