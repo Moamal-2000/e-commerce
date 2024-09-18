@@ -39,6 +39,7 @@
   position: relative;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  padding: 0 1px;
 }
 
 @include small {
