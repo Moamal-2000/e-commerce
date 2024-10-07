@@ -15,7 +15,7 @@ const ForYouSection = () => {
         <Link to="/products">{t("buttons.seeAll")}</Link>
       </header>
 
-      <ForYouProducts />
+      <ForYouProducts loading="lazy" />
     </section>
   );
 };
