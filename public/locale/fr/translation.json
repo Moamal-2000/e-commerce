@@ -455,7 +455,8 @@
     "enterDetails": "Entrez vos détails ci-dessous",
     "login": "Se connecter à Exclusive",
     "forgotPassword": "Mot de passe oublié ?",
-    "alreadyHaveAcc": "Vous avez déjà un compte ?"
+    "alreadyHaveAcc": "Vous avez déjà un compte ?",
+    "dontHaveAcc": "Vous n'avez pas de compte ?"
   },
 
   "favoritePage": {

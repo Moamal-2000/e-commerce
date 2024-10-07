@@ -456,7 +456,8 @@
     "enterDetails": "Введите введите свои данные",
     "login": "Авторизоваться",
     "forgotPassword": "Забыли пароль?",
-    "alreadyHaveAcc": "У вас уже есть аккаунт?"
+    "alreadyHaveAcc": "У вас уже есть аккаунт?",
+    "dontHaveAcc": "У вас нет аккаунта?"
   },
 
   "favoritePage": {

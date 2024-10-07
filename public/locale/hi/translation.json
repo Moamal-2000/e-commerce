@@ -455,7 +455,8 @@
     "enterDetails": "नीचे अपना विवरण दर्ज करें",
     "login": "एक्सक्लूसिव में लॉग इन करें",
     "forgotPassword": "पासवर्ड भूल गए?",
-    "alreadyHaveAcc": "पहले से ही खाता है?"
+    "alreadyHaveAcc": "पहले से ही खाता है?",
+    "dontHaveAcc": "क्या आपके पास खाता नहीं है?"
   },
 
   "favoritePage": {

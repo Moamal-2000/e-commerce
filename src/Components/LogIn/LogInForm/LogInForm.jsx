@@ -57,8 +57,8 @@ const LogInForm = () => {
       </div>
 
       <p className={s.signUpMessage}>
-        <span>don't you have an account? </span>
-        <Link to="/signup">Sign up!</Link>
+        <span>{t("loginSignUpPage.dontHaveAcc")}</span>
+        <Link to="/signup">{t("nav.signUp")}</Link>
       </p>
     </form>
   );

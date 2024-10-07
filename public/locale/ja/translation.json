@@ -455,7 +455,8 @@
     "enterDetails": "以下に詳細を入力してください",
     "login": "Exclusiveにログインする",
     "forgotPassword": "パスワードをお忘れですか？",
-    "alreadyHaveAcc": "すでにアカウントをお持ちですか？"
+    "alreadyHaveAcc": "すでにアカウントをお持ちですか？",
+    "dontHaveAcc": "アカウントを持っていませんか？"
   },
 
   "favoritePage": {

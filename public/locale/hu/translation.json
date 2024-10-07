@@ -453,7 +453,8 @@
     "enterDetails": "Írd be az adataidat lentebb",
     "login": "Bejelentkezés az Exclusive webhelyre",
     "forgotPassword": "Elfelejtett jelszó?",
-    "alreadyHaveAcc": "Már van fiókod?"
+    "alreadyHaveAcc": "Már van fiókod?",
+    "dontHaveAcc": "Nincs fiókja?"
   },
 
   "favoritePage": {

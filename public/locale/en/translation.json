@@ -456,7 +456,8 @@
     "enterDetails": "Enter your details below",
     "login": "Log in to Exclusive",
     "forgotPassword": "Forgot password?",
-    "alreadyHaveAcc": "Already have an account?"
+    "alreadyHaveAcc": "Already have an account?",
+    "dontHaveAcc" :"don't you have an account? "
   },
 
   "favoritePage": {

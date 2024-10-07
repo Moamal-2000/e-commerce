@@ -456,7 +456,8 @@
     "enterDetails": "ادخل بياناتك تحت",
     "login": "تسجيل الدخول",
     "forgotPassword": "هل نسيت كلمة السر؟",
-    "alreadyHaveAcc": "لديك حساب بالفعل؟"
+    "alreadyHaveAcc": "لديك حساب بالفعل؟",
+    "dontHaveAcc": "ألا تملك حسابًا؟"
   },
 
   "favoritePage": {
