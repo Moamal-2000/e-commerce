@@ -21,7 +21,7 @@ const NotFoundPage = () => {
   const backToHomeText = t("buttons.backToHome");
   const historyText = t("history.404Error");
 
-  useScrollOnMount(160);
+  useScrollOnMount(190);
 
   return (
     <>

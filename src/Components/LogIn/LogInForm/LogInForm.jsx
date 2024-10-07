@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { showAlert } from "src/Features/alertsSlice";
 import { newSignUp } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
@@ -54,6 +55,11 @@ const LogInForm = () => {
         </button>
         <a href="#">{t("loginSignUpPage.forgotPassword")}</a>
       </div>
+
+      <p className={s.signUpMessage}>
+        <span>don't you have an account? </span>
+        <Link to="/signup">Sign up!</Link>
+      </p>
     </form>
   );
 };
