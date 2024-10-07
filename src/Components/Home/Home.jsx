@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
+import { productImg1 } from "../../Assets/Images/Images";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import FeaturedSectionFeatures from "./FeaturedSection/FeaturedSectionFeatures";
@@ -22,6 +23,7 @@ const Home = () => {
           name="description"
           content="Your ultimate destination for effortless online shopping. Discover curated collections, easily add items to your cart and wishlist,and enjoy detailed product descriptions with captivating previews. Experience convenience like never before with our intuitive interface. Shop smarter with us today."
         />
+        <link ref="preload" as="image" type="image/webp" href={productImg1} />
       </Helmet>
 
       <main className={s.home}>
