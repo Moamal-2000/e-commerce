@@ -15,7 +15,7 @@ const SearchInput = ({ searchRef }) => {
       autoComplete="off"
       placeholder={t("inputsPlaceholders.whatYouLookingFor")}
       onChange={handleSearchOnChange}
-      aria-label="Search product input"
+      aria-label="Search product field"
     />
   );
 };
