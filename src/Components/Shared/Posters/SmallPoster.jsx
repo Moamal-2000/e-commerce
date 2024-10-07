@@ -7,7 +7,7 @@ const SmallPoster = ({ title, description, posterUrl }) => {
 
   return (
     <div className={s.smallPoster} dir="ltr">
-      <img src={posterUrl} alt="product's poster" />
+      <img src={posterUrl} alt="product's poster" loading="lazy" />
       <div className={s.content}>
         <b>{title}</b>
         <p>{description}</p>

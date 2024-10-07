@@ -20,6 +20,7 @@ const FeaturedSectionFeatures = () => {
             title={t(`${featuresTransData}.title`)}
             description={t(`${featuresTransData}.description`)}
             key={id}
+            loading="lazy"
           />
         );
       })}

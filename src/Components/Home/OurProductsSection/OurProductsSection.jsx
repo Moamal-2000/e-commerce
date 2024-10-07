@@ -21,6 +21,7 @@ const OurProductsSection = () => {
       <ExploreProducts
         numOfProducts={7}
         customization={productCardCustomizations.ourProducts}
+        loading="lazy"
       />
 
       <Link to="/products" className={s.viewProductsBtn}>

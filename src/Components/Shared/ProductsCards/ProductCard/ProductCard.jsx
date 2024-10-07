@@ -19,6 +19,7 @@ const ProductCard = ({
     showColors: false,
   },
   removeFrom,
+  loading = "eager",
 }) => {
   const { name, discount, img, id, addedDate } = product;
   const {
@@ -62,6 +63,7 @@ const ProductCard = ({
             src={img}
             alt={name}
             aria-label={name}
+            loading={loading}
             onClick={navigateToProductDetails}
           />
         </div>

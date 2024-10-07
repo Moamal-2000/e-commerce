@@ -22,7 +22,7 @@ const ThisMonthSection = () => {
         </Link>
       </div>
 
-      <ProductsSlider filterFun={filterThisMonthProducts} />
+      <ProductsSlider filterFun={filterThisMonthProducts} loading="lazy" />
     </section>
   );
 };
