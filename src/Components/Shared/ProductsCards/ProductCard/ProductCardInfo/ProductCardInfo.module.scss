@@ -56,3 +56,8 @@
   margin-top: 10px;
   margin-inline-start: 3px;
 }
+
+// Arabic styles
+[lang=ar] .productInfo {
+  direction: rtl;
+}

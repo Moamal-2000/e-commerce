@@ -115,6 +115,10 @@
 }
 
 // Arabic styles
+[lang=ar] .card {
+  align-items: flex-end;
+}
+
 [lang=ar] .layerContent {
   direction: ltr;
 }
