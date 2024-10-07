@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
+import { productImg1 } from "src/Assets/Images/Images";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
-import { productImg1 } from "../../Assets/Images/Images";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
 import FeaturedSectionFeatures from "./FeaturedSection/FeaturedSectionFeatures";
