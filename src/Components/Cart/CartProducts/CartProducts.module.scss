@@ -91,3 +91,9 @@
     @include center-x-y;
   }
 }
+
+@include very-small {
+  .cartProducts tbody tr td {
+    justify-content: flex-start;
+  }
+}

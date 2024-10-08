@@ -13,6 +13,12 @@
   width: 260px !important;
 }
 
+@include very-small {
+  .product {
+    width: 100% !important;
+  }
+}
+
 .imgHolder {
   width: fit-content;
   height: fit-content;
@@ -24,6 +30,7 @@
   outline: none;
   color: var(--black);
   transition: color .1s;
+  text-wrap: balance;
 
   &:hover {
     color: var(--dark-gray);
@@ -37,9 +44,4 @@
 .product img {
   width: 54px;
   margin-inline-end: 20px;
-}
-
-// Arabic styles
-[lang=ar] .product {
-  justify-content: space-between;
 }
