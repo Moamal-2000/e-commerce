@@ -112,6 +112,15 @@
   align-self: flex-end;
 }
 
+@include small {
+  .buttons {
+    align-self: normal;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+}
+
 .buttons>button {
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -138,6 +147,7 @@
 @include small {
   .buttons>button[type=reset] {
     font-size: .9rem;
+    margin-inline-end: 0;
   }
 }
 
