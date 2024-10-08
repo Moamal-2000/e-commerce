@@ -44,8 +44,8 @@
   }
 }
 
-@media (max-width: 400px) {
+@include very-small {
   .ourMembersSection>* {
-    width: 320px;
+    width: 100%;
   }
 }
