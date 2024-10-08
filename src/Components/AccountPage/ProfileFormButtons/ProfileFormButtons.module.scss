@@ -4,6 +4,15 @@
   align-self: flex-end;
 }
 
+@include very-small {
+  .buttons {
+    align-self: normal;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}
+
 .buttons>a {
   -webkit-tap-highlight-color: transparent;
   background-color: transparent;
@@ -51,7 +60,7 @@
 
 @include medium {
   .buttons>button {
-    padding: 12px 34px;
+    padding: 12px 30px;
     font-size: .9rem;
   }
 }
