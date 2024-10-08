@@ -13,6 +13,14 @@
   }
 }
 
+@include very-small {
+  .forYou>header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+}
+
 .forYou>header>a {
   background-color: transparent;
   outline: none;
@@ -40,5 +48,12 @@
   .forYou>header>a {
     padding: 12px 30px;
     font-size: .9rem;
+  }
+}
+
+@include very-small {
+  .forYou>header>a {
+    width: 100%;
+    text-align: center;
   }
 }
