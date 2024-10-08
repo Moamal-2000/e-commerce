@@ -8,6 +8,12 @@
   position: relative;
 }
 
+@include very-small {
+  .slide {
+    justify-content: center;
+  }
+}
+
 .slide img {
   width: 250px;
   height: 100%;

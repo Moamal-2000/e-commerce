@@ -52,3 +52,8 @@
 .form>input::selection {
   background-color: var(--white) !important;
 }
+
+// Arabic styles
+[lang=ar] .form {
+  direction: rtl;
+}

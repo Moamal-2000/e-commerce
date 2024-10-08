@@ -52,3 +52,9 @@
     background: var(--tomato);
   }
 }
+
+@include very-small {
+  .viewProductsBtn {
+    padding: 12px 24px;
+  }
+}

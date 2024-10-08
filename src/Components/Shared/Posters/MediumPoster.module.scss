@@ -123,3 +123,9 @@
   padding: 14px;
   width: 280px;
 }
+
+@include small {
+  [lang=ar] .content {
+    width: 100%;
+  }
+}

@@ -1,12 +1,14 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
+import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { showAlert } from "src/Features/alertsSlice";
 import {
   sendToolTipLeftPos,
   sendingToolTipLeftPos,
 } from "src/Functions/componentsFunctions";
 import { isEmailValid } from "src/Functions/helper";
+import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import SpinnerLoading from "../../Shared/Loaders/SpinnerLoading";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
@@ -16,6 +18,7 @@ import s from "./CustomEmailInput.module.scss";
 const CustomEmailInput = () => {
   const dispatch = useDispatch();
   const { t, i18n } = useTranslation();
+  const { windowWidth } = useGetResizeWindow();
 
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
@@ -27,12 +30,24 @@ const CustomEmailInput = () => {
   };
 
   // Tooltip variables
-  const sendIconToolTipLeftPos = sendToolTipLeftPos(i18n.language);
-  const sendingIconToolTipLeftPos = sendingToolTipLeftPos(i18n.language);
+  const sendIconToolTipTopPos =
+    windowWidth <= SCREEN_SIZES.mobile ? "-13px" : "50%";
+
+  const sendIconToolTipLeftPos =
+    windowWidth <= SCREEN_SIZES.mobile
+      ? "50%"
+      : sendToolTipLeftPos(i18n.language);
+
+  const sendingIconToolTipLeftPos =
+    windowWidth <= SCREEN_SIZES.mobile
+      ? "50%"
+      : sendingToolTipLeftPos(i18n.language);
+
   const toolTipLeftPosition = loading
     ? sendingIconToolTipLeftPos
     : sendIconToolTipLeftPos;
-  const toolTipTextTrans = loading
+
+  const toolTipTextNoun = loading
     ? t("footer.section1.sendingLabel")
     : t("footer.section1.sendLabel");
 
@@ -83,9 +98,9 @@ const CustomEmailInput = () => {
         </div>
 
         <ToolTip
-          top="50%"
+          top={sendIconToolTipTopPos}
           left={toolTipLeftPosition}
-          content={toolTipTextTrans}
+          content={toolTipTextNoun}
         />
       </button>
     </form>
