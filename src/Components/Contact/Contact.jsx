@@ -9,7 +9,7 @@ import ContactForm from "./ContactForm/ContactForm";
 const Contact = () => {
   const { t } = useTranslation();
 
-  useScrollOnMount(0);
+  useScrollOnMount();
 
   return (
     <>

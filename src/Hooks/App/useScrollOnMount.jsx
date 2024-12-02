@@ -1,11 +1,8 @@
 import { useEffect } from "react";
 
-const useScrollOnMount = (scrollY = 0) => {
-  const scrollBehavior = "instant";
-
+const useScrollOnMount = (top = 0, left = 0, behavior = "instant") => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: scrollBehavior });
-    window.scrollTo({ top: scrollY, behavior: scrollBehavior });
+    window.scrollTo({ top, left, behavior });
   }, []);
 };
 export default useScrollOnMount;

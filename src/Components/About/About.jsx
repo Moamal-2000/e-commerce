@@ -12,7 +12,7 @@ import OurMembersSection from "./OurMembersSection/OurMembersSection";
 const About = () => {
   const { t } = useTranslation();
 
-  useScrollOnMount(0);
+  useScrollOnMount();
 
   return (
     <>

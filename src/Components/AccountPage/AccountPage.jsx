@@ -12,7 +12,7 @@ const AccountPage = () => {
   const { loginInfo } = useSelector((state) => state.user);
   const { t } = useTranslation();
 
-  useScrollOnMount(0);
+  useScrollOnMount();
 
   return (
     <>
