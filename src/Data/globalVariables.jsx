@@ -57,7 +57,7 @@ export const regexPatterns = {
   email: /^[0-9a-zA-Z._]+@[a-z]+\.[a-z]+$/,
   price: /\B(?=(\d{3})+(?!\d))/g,
   words: /([-]|\s?&\s|'s[-&]?)/g,
-  iraqiPhone: /^\d{11}$/
+  iraqiPhone: /^\d{11}$/,
 };
 
 export const DEFAULT_LOGIN_DATA = {
@@ -84,3 +84,11 @@ export const NAV_PROPS = {
     showUser: false,
   },
 };
+
+export const arraysToEmpty = [
+  "favoritesProducts",
+  "searchProducts",
+  "orderProducts",
+  "cartProducts",
+  "wishList",
+];
