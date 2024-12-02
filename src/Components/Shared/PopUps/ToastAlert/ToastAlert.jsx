@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { TOAST_ALERT_DURATION_MS } from "src/Data/globalVariables";
 import { updateAlertState } from "src/Features/alertsSlice";
@@ -11,12 +11,12 @@ const ToastAlert = () => {
   const dispatch = useDispatch();
   const { iconName, className } = toastState[alertState];
   const showClass = isAlertActive ? s.show : "";
-  let timerId;
+  const debounceId = useRef();
 
   function setToastAlertTimeout() {
     if (!showClass) return;
 
-    timerId = setTimeout(() => {
+    debounceId.current = setTimeout(() => {
       dispatch(
         updateAlertState({ key: "isAlertActive", value: false, type: "alert" })
       );
@@ -25,7 +25,7 @@ const ToastAlert = () => {
 
   useEffect(() => {
     setToastAlertTimeout();
-    return () => clearTimeout(timerId);
+    return () => clearTimeout(debounceId.current);
   }, [alertState, alertText]);
 
   return (

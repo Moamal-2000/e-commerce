@@ -22,7 +22,7 @@ const useSignOut = () => {
 
 export default useSignOut;
 
-function showSignOutAlert(dispatch, t, delay = 500) {
+export function showSignOutAlert(dispatch, t, delay = 500) {
   setTimeout(() => {
     dispatch(
       showAlert({

@@ -27,7 +27,7 @@ const useTimerDown = (
   const [timeData, setTimeData] = useState(getTimeObj(timeOrTimeLocal));
   const [isTimerDone, setIsTimerDone] = useState(false);
   const isMounted = useRef(false);
-  let timerId;
+  const debounceId = useRef();
 
   function useEffectTimeUpdater() {
     if (time <= -1000) {
@@ -35,7 +35,7 @@ const useTimerDown = (
       return;
     }
 
-    timerId = setTimeout(() => {
+    debounceId.current = setTimeout(() => {
       setTime(time - 1000);
 
       if (formattedTime) {
@@ -49,7 +49,7 @@ const useTimerDown = (
     }, 1000);
 
     return () => {
-      clearTimeout(timerId);
+      clearTimeout(debounceId.current);
     };
   }
 

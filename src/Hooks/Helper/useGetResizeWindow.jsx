@@ -1,17 +1,19 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const useGetResizeWindow = () => {
   const [sizes, setSizes] = useState({
     windowWidth: innerWidth,
     windowHeight: innerHeight,
   });
-  let timerId;
+  const debounceId = useRef();
+
+  console.log(sizes);
 
   useEffect(() => {
     function handleResize() {
-      clearTimeout(timerId);
+      clearTimeout(debounceId.current);
 
-      timerId = setTimeout(() => {
+      debounceId.current = setTimeout(() => {
         setSizes({
           windowWidth: innerWidth,
           windowHeight: innerHeight,

@@ -12,9 +12,9 @@ const ConnectionLabelAlert = ({ isOnline }) => {
     : t("connectionLabel.noInternetAvailable");
 
   function updateInternetStatus() {
-    let timerId;
-    timerId = setTimeout(() => setIsOfflineState(!isOnline), 3000);
-    return () => clearTimeout(timerId);
+    let debounceId;
+    debounceId = setTimeout(() => setIsOfflineState(!isOnline), 3000);
+    return () => clearTimeout(debounceId);
   }
 
   useEffect(() => {

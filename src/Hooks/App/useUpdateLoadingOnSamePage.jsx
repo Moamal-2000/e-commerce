@@ -11,13 +11,13 @@ const useUpdateLoadingOnSamePage = ({
   actionMethod,
 }) => {
   const dispatch = useDispatch();
-  const timerId = useRef(null);
+  const debounceId = useRef();
   let randomDelay = getRandomItem(delays);
 
   function updateLoadingState() {
     dispatch(actionMethod({ key: loadingKey, value: true }));
 
-    timerId.current = setTimeout(() => {
+    debounceId.current = setTimeout(() => {
       dispatch(actionMethod({ key: loadingKey, value: false }));
     }, randomDelay);
 
@@ -28,7 +28,7 @@ const useUpdateLoadingOnSamePage = ({
     updateLoadingState();
 
     return () => {
-      clearTimeout(timerId.current);
+      clearTimeout(debounceId.current);
       if (cleanFunction) cleanFunction();
     };
   }
