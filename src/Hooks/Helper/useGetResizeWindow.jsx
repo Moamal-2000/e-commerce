@@ -7,8 +7,6 @@ const useGetResizeWindow = () => {
   });
   const debounceId = useRef();
 
-  console.log(sizes);
-
   useEffect(() => {
     function handleResize() {
       clearTimeout(debounceId.current);
