@@ -4,7 +4,6 @@ import formsSlice from "../Features/formsSlice";
 import globalSlice from "../Features/globalSlice";
 import loadingSlice from "../Features/loadingSlice";
 import productsSlice from "../Features/productsSlice";
-import storageSlice from "../Features/storageSlice";
 import userSlice from "../Features/userSlice";
 
 export const store = configureStore({
@@ -15,6 +14,5 @@ export const store = configureStore({
     forms: formsSlice,
     alerts: alertsSlice,
     loading: loadingSlice,
-    localStorage: storageSlice,
   },
 });
