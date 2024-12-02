@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Navigate } from "react-router-dom";
 import { updateProductsState } from "src/Features/productsSlice";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import SkeletonProductDetails from "../../Shared/SkeletonLoaders/DetailsPage/SkeletonProductDetails";
@@ -12,6 +13,8 @@ import ProductFirstInfos from "./ProductFirstInfos/ProductFirstInfos";
 import ProductSizes from "./ProductSizes/ProductSizes";
 
 const ProductDetails = ({ productData }) => {
+  if (!productData) return <Navigate to="product-not-found" />;
+
   const { loadingProductDetails } = useSelector((state) => state.loading);
   const { previewImg, isZoomInPreviewActive } = useSelector(
     (state) => state.global
