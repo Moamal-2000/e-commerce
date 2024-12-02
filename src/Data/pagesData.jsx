@@ -1,69 +1,69 @@
 export const PAGE_SECTIONS_ID = [
   {
-    sectionId: "todays-section",
-    pagePath: "/",
+    id: "todays-section",
+    path: "/",
   },
   {
-    sectionId: "account-page",
-    pagePath: "/profile",
+    id: "account-page",
+    path: "/profile",
   },
   {
-    sectionId: "details-page",
-    pagePath: "/details/",
+    id: "details-page",
+    path: "/details/",
   },
   {
-    sectionId: "cart-page",
-    pagePath: "/cart",
+    id: "cart-page",
+    path: "/cart",
   },
   {
-    sectionId: "wishlist-page",
-    pagePath: "/wishlist",
+    id: "wishlist-page",
+    path: "/wishlist",
   },
   {
-    sectionId: "login-page",
-    pagePath: "/login",
+    id: "login-page",
+    path: "/login",
   },
   {
-    sectionId: "signup-page",
-    pagePath: "/signup",
+    id: "signup-page",
+    path: "/signup",
   },
   {
-    sectionId: "about-page",
-    pagePath: "/about",
+    id: "about-page",
+    path: "/about",
   },
   {
-    sectionId: "contact-page",
-    pagePath: "/contact",
+    id: "contact-page",
+    path: "/contact",
   },
   {
-    sectionId: "checkout-page",
-    pagePath: "/checkout",
+    id: "checkout-page",
+    path: "/checkout",
   },
   {
-    sectionId: "favorite-page",
-    pagePath: "/favorites",
+    id: "favorite-page",
+    path: "/favorites",
   },
   {
-    sectionId: "search-page",
-    pagePath: "/search",
+    id: "search-page",
+    path: "/search",
   },
   {
-    sectionId: "details-section",
-    pagePath: "/details",
+    id: "details-section",
+    path: "/details",
   },
   {
-    sectionId: "products-section",
-    pagePath: "/products",
+    id: "products-section",
+    path: "/products",
   },
   {
-    sectionId: "order-page",
-    pagePath: "/order",
+    id: "order-page",
+    path: "/order",
   },
   {
-    sectionId: "category-page",
-    pagePath: "/category",
+    id: "category-page",
+    path: "/category",
   },
   {
-    sectionId: "notfound-page",
+    id: "notfound-page",
   },
 ];

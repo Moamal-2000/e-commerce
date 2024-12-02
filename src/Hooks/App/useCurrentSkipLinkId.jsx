@@ -4,16 +4,14 @@ import { PAGE_SECTIONS_ID } from "src/Data/pagesData";
 const useCurrentSkipLinkId = () => {
   const { pathname } = useLocation();
 
-  function findSectionLinkIdByPath() {
-    return PAGE_SECTIONS_ID.find(
-      (sectionData) => sectionData.pagePath === pathname
-    )?.sectionId;
-  }
+  const sectionId = findSectionLinkIdByPath(pathname);
+  const notFoundSectionId = PAGE_SECTIONS_ID.at(-1)?.id;
 
-  const sectionId = findSectionLinkIdByPath();
-  const defaultSectionId =
-    PAGE_SECTIONS_ID[PAGE_SECTIONS_ID.length - 1].sectionId;
-
-  return sectionId || defaultSectionId;
+  return sectionId || notFoundSectionId;
 };
 export default useCurrentSkipLinkId;
+
+export function findSectionLinkIdByPath(pathname) {
+  const sectionData = PAGE_SECTIONS_ID.find(({ path }) => path === pathname);
+  return sectionData?.id;
+}
