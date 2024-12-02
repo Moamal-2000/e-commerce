@@ -66,3 +66,21 @@ export const DEFAULT_LOGIN_DATA = {
   password: "random-password1234",
   isSignIn: true,
 };
+
+export const NAV_PROPS = {
+  signIn: {
+    showHeart: true,
+    showCart: true,
+    showUser: true,
+  },
+  notSignIn: {
+    showHeart: false,
+    showCart: false,
+    showUser: false,
+  },
+  signUpPage: {
+    showHeart: false,
+    showCart: false,
+    showUser: false,
+  },
+};
