@@ -2,7 +2,17 @@
 
 // Variables
 const CACHE_NAME = "e-commerce-v8";
-const ASSETS = ["/", "/index.html"];
+const ASSETS = [
+  "/",
+  "/index.html",
+  "/locale/en/translation.json",
+  "/locale/ar/translation.json",
+  "/locale/fr/translation.json",
+  "/locale/hl/translation.json",
+  "/locale/hu/translation.json",
+  "/locale/ja/translation.json",
+  "/locale/ru/translation.json",
+];
 
 // Functions
 async function cacheAssets() {
