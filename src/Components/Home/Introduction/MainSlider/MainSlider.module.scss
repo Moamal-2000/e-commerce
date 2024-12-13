@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .mainSlider {
   width: 82%;
@@ -6,14 +6,14 @@
   user-select: none;
 }
 
-@include large {
+@include m.large {
   .mainSlider {
     width: 100%;
     margin-bottom: 40px;
   }
 }
 
-@include medium {
+@include m.medium {
   .mainSlider {
     height: 300px;
   }

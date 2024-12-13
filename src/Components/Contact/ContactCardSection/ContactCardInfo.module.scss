@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .contactInfo {
   width: 340px;
@@ -7,13 +7,13 @@
   box-shadow: 0 1px 13px 0 #0000000D;
 }
 
-@include very-small {
+@include m.very-small {
   .contactInfo {
     padding: 40px 20px 51px;
   }
 }
 
-@include medium {
+@include m.medium {
   .contactInfo {
     width: 100%;
   }

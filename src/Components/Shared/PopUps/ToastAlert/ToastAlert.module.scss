@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .toastAlert {
   background-color: #242C32;
@@ -16,7 +16,7 @@
   transition: bottom .3s ease;
 }
 
-@include small {
+@include m.small {
   .toastAlert {
     width: calc(100vw - (100% - 100vw));
     left: 0;
@@ -28,7 +28,7 @@
   bottom: 20px;
 }
 
-@include small {
+@include m.small {
   .toastAlert.show {
     bottom: 0;
   }
@@ -63,7 +63,7 @@
   width: 28px;
   height: 28px;
   aspect-ratio: 1/1;
-  @include center-x-y;
+  @include m.center-x-y;
   border-radius: 50%;
   margin: 0 10px;
   position: relative;
@@ -74,7 +74,7 @@
   background-color: #f04248;
   width: 38px;
   height: 38px;
-  @include center-x-y;
+  @include m.center-x-y;
   border-radius: 50%;
   border: solid 7px #463947;
 }
@@ -117,7 +117,7 @@
   width: auto;
 }
 
-@include small {
+@include m.small {
   [lang=ar] .toastAlert {
     width: 100vw;
     justify-content: space-between;
@@ -125,19 +125,19 @@
   }
 }
 
-@include small {
+@include m.small {
   [lang=ar] .iconHolder {
     left: 20px;
   }
 }
 
-@include very-small {
+@include m.very-small {
   [lang=ar] .iconHolder {
     left: 10px;
   }
 }
 
-@include small {
+@include m.small {
   [lang=ar] .toastAlert>p {
     direction: rtl;
   }

@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .appInfo {
   display: flex;
@@ -59,7 +59,7 @@
   -moz-filter: grayscale(1);
   -ms-filter: grayscale(1);
   -o-filter: grayscale(1);
-  @include center-x-y;
+  @include m.center-x-y;
   position: relative;
 
   &:focus-visible {

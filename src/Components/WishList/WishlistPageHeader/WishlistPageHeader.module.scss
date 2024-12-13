@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .header {
   display: flex;
@@ -14,7 +14,7 @@
   text-wrap: nowrap;
 }
 
-@include small {
+@include m.small {
   .header>p {
     font-size: 1rem;
   }
@@ -43,7 +43,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .header>button {
     padding: 12px 20px;
     font-size: .9rem;

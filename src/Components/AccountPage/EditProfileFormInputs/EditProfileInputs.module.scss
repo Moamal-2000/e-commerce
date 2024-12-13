@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .inputs {
   display: flex;
@@ -13,7 +13,7 @@
   gap: 20px 40px;
 }
 
-@include large {
+@include m.large {
   .wrapper {
     gap: 20px;
   }

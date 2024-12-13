@@ -1,23 +1,23 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .billingDetailsSection {
   max-width: 470px;
 }
 
-@include medium {
+@include m.medium {
   .billingDetailsSection {
     max-width: 360px;
   }
 }
 
-@include medium {
+@include m.medium {
   .billingDetailsSection {
     max-width: 80vw;
     width: 80vw;
   }
 }
 
-@include small {
+@include m.small {
   .billingDetailsSection {
     max-width: 100%;
     width: 100%;

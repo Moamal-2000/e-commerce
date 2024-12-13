@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .copyRights {
   width: fit-content;
@@ -6,7 +6,7 @@
   line-height: 24px;
 }
 
-@include small {
+@include m.small {
   .copyRights {
     font-size: .9rem;
   }

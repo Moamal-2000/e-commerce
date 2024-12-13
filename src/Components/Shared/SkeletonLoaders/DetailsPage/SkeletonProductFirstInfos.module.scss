@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .productName {
   display: block;
@@ -15,7 +15,7 @@
   margin: 10px 0;
 }
 
-@include very-small {
+@include m.very-small {
   .rateAndReviews {
     flex-direction: column;
   }
@@ -62,7 +62,7 @@
   }
 }
 
-@include large {
+@include m.large {
   .description {
     max-width: 800px;
   }

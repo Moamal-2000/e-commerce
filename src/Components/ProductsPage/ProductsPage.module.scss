@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .productsPage {
   margin: var(--page-margin);
@@ -22,7 +22,7 @@
   }
 }
 
-@include medium {
+@include m.medium {
   .SkeletonCards {
     grid-template-columns: repeat(2, 1fr);
   }

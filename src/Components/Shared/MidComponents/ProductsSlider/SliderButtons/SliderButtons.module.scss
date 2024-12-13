@@ -1,4 +1,4 @@
-@import "src/Styles/mixins.scss";
+@use "src/Styles/mixins" as m;
 
 .sliderButtons {
   display: flex;
@@ -48,7 +48,7 @@
   direction: ltr;
 }
 
-@include small {
+@include m.small {
   [lang=ar] .sliderButtons {
     justify-content: flex-end;
   }

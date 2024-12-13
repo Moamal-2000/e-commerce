@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .forYouProducts {
   display: grid;
@@ -13,25 +13,25 @@
   }
 }
 
-@include large {
+@include m.large {
   .forYouProducts {
     grid-template-columns: repeat(2, 322px);
   }
 }
 
-@include small {
+@include m.small {
   .forYouProducts {
     grid-template-columns: 1fr;
   }
 }
 
-@include large {
+@include m.large {
   .forYouProducts>* {
     width: 322px;
   }
 }
 
-@include small {
+@include m.small {
   .forYouProducts>* {
     width: 322px;
   }

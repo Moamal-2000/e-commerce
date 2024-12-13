@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .searchContainer {
   background-color: var(--secondary-white);
@@ -78,7 +78,7 @@
   direction: rtl;
 }
 
-@include medium {
+@include m.medium {
   [lang=ar] .searchContainer {
     padding: 6px 12px 6px 18px;
     width: 190px;
@@ -86,7 +86,7 @@
 }
 
 // Hungarian styles
-@include medium {
+@include m.medium {
   [lang=hu] .searchContainer {
     padding: 6px 12px 6px 18px;
     width: 220px;

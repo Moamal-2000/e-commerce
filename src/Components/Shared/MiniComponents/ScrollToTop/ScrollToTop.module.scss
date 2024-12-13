@@ -1,4 +1,4 @@
-@import '../../../../Styles/mixins.scss';
+@use '../../../../Styles/mixins.scss' as m;
 
 .scrollTopButton {
   -webkit-tap-highlight-color: transparent;
@@ -33,7 +33,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .scrollTopButton {
     display: none;
   }

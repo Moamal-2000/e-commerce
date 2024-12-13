@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .sliderButtons {
   display: flex;
@@ -12,7 +12,7 @@
   width: 46px;
   height: 46px;
   background-color: var(--very-light-gray2);
-  @include center-x-y;
+  @include m.center-x-y;
   border-radius: 50%;
   border: none;
   position: relative;
@@ -42,7 +42,7 @@
   padding: 0 1px;
 }
 
-@include small {
+@include m.small {
   .categoriesSlider {
     margin-bottom: 100px;
   }
@@ -65,13 +65,13 @@
   }
 }
 
-@include large {
+@include m.large {
   .categoriesSlider>* {
     width: calc(((100% / 4) - 30px) + (30px / 4));
   }
 }
 
-@include medium {
+@include m.medium {
   .categoriesSlider>* {
     width: calc(((100% / 3) - 30px) + (30px / 3));
   }

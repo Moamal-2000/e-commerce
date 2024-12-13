@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .aboutPage {
   margin: var(--page-margin);
@@ -9,7 +9,7 @@
   margin-inline-start: calc(15% / 2);
 }
 
-@include medium {
+@include m.medium {
   .container {
     margin: 0 auto;
   }

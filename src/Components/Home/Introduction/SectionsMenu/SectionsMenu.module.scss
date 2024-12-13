@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .sectionsMenu {
   width: 250px;
@@ -9,7 +9,7 @@
   overflow-y: auto;
 }
 
-@include large {
+@include m.large {
   .sectionsMenu {
     background-color: var(--white);
     position: fixed;
@@ -31,7 +31,7 @@
   }
 }
 
-@include very-small {
+@include m.very-small {
   .sectionsMenu {
     width: 100%;
   }
@@ -51,7 +51,7 @@
   }
 }
 
-@include large {
+@include m.large {
   .sectionsMenu::-webkit-scrollbar {
     width: 8px !important;
   }

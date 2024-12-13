@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .contactForm {
   flex: 1;
@@ -10,13 +10,13 @@
   flex-direction: column;
 }
 
-@include medium {
+@include m.medium {
   .contactForm {
     width: 100%;
   }
 }
 
-@include very-small {
+@include m.very-small {
   .contactForm {
     padding: 40px 20px;
   }
@@ -34,19 +34,19 @@
   gap: 20px;
 }
 
-@include large {
+@include m.large {
   .wrapper {
     flex-direction: column;
   }
 }
 
-@include medium {
+@include m.medium {
   .wrapper {
     flex-direction: row;
   }
 }
 
-@include small {
+@include m.small {
   .wrapper {
     flex-direction: column;
   }
@@ -112,7 +112,7 @@
   align-self: flex-end;
 }
 
-@include small {
+@include m.small {
   .buttons {
     align-self: normal;
     display: flex;
@@ -144,7 +144,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .buttons>button[type=reset] {
     font-size: .9rem;
     margin-inline-end: 0;
@@ -173,7 +173,7 @@
   }
 }
 
-@include medium {
+@include m.medium {
   .buttons>button[type=submit] {
     padding: 12px 32px;
     font-size: .9rem;

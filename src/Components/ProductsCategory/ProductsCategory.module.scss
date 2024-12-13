@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .products {
   display: grid;
@@ -13,7 +13,7 @@
   }
 }
 
-@include medium {
+@include m.medium {
   .products {
     grid-template-columns: repeat(2, 1fr);
   }

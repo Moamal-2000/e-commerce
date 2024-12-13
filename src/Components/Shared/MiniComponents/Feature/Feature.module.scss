@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .feature {
   display: flex;
@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-@include medium {
+@include m.medium {
   .feature>b {
     margin-top: 20px;
   }

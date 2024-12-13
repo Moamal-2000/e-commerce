@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .skeletonDetailsSection {
   user-select: none;
@@ -10,7 +10,7 @@
   z-index: 20;
 }
 
-@include large {
+@include m.large {
   .skeletonDetailsSection {
     height: auto;
     flex-direction: column;
@@ -18,7 +18,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .skeletonDetailsSection {
     gap: 40px;
   }
@@ -39,7 +39,7 @@
   left: -2px;
 }
 
-@include large {
+@include m.large {
   .skeletonDetailsSection .details {
     width: 100%;
   }

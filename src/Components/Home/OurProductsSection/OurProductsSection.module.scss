@@ -1,10 +1,10 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .ourProductsSection {
   margin-bottom: 170px;
 }
 
-@include small {
+@include m.small {
   .ourProductsSection {
     margin-bottom: 100px;
   }
@@ -16,7 +16,7 @@
   margin-bottom: 40px;
 }
 
-@include small {
+@include m.small {
   .wrapper {
     flex-direction: column;
     gap: 0;
@@ -55,7 +55,7 @@
   }
 }
 
-@include very-small {
+@include m.very-small {
   .viewProductsBtn {
     padding: 12px 24px;
   }

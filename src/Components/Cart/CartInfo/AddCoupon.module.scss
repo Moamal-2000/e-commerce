@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .couponContainer {
   display: flex;
@@ -6,14 +6,14 @@
   gap: 20px;
 }
 
-@include large {
+@include m.large {
   .couponContainer {
     width: 300px;
     flex-direction: column;
   }
 }
 
-@include small {
+@include m.small {
   .couponContainer {
     width: 100%;
   }
@@ -34,13 +34,13 @@
   }
 }
 
-@include large {
+@include m.large {
   .couponContainer>input {
     width: 100%;
   }
 }
 
-@include small {
+@include m.small {
   .couponContainer>input {
     font-size: .8rem;
     padding: 12px 20px;
@@ -83,13 +83,13 @@
   }
 }
 
-@include large {
+@include m.large {
   .couponContainer>button {
     width: 100%;
   }
 }
 
-@include small {
+@include m.small {
   .couponContainer>button {
     font-size: .8rem;
     padding: 12px 20px;

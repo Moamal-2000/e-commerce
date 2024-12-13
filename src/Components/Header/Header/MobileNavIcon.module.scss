@@ -1,4 +1,4 @@
-@import "src/Styles/mixins.scss";
+@use "src/Styles/mixins" as m;
 
 .mobileNav {
   -webkit-tap-highlight-color: transparent;
@@ -17,7 +17,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .mobileNav {
     display: block;
   }

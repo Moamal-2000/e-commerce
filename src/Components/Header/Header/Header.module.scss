@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .header {
   padding: 4px 14px 18px 14px;
@@ -6,13 +6,13 @@
   border-bottom: 1px var(--medium-light-gray) solid;
 }
 
-@include medium {
+@include m.medium {
   .header {
     padding: 10px 0 14px 10px;
   }
 }
 
-@include small {
+@include m.small {
   .header {
     padding: 10px 0 14px 50px;
   }
@@ -26,13 +26,13 @@
   grid-template-columns: 26% 1fr;
 }
 
-@include large {
+@include m.large {
   .container {
     grid-template-columns: unset;
   }
 }
 
-@include small {
+@include m.small {
   .container {
     display: flex;
     align-items: center;
@@ -82,13 +82,13 @@
   justify-content: space-between;
 }
 
-@include medium {
+@include m.medium {
   .headerContent {
     margin-top: 10px;
   }
 }
 
-@include small {
+@include m.small {
   .headerContent {
     display: none;
   }
@@ -101,14 +101,14 @@
   }
 }
 
-@include large {
+@include m.large {
   :where([lang=ar], [lang=ja]) .container {
     grid-template-columns: unset;
   }
 }
 
 // Japanese styles
-@include medium {
+@include m.medium {
   [lang=ja] .headerContent {
     flex-direction: column;
     align-items: flex-start;
@@ -127,7 +127,7 @@
   grid-template-columns: 17% 1fr;
 }
 
-@include large {
+@include m.large {
   [lang=hu] .container {
     grid-template-columns: unset;
   }

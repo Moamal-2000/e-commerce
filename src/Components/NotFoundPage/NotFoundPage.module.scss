@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .notFoundPage {
   margin-top: 60px;
@@ -18,19 +18,19 @@
   text-align: center;
 }
 
-@include large {
+@include m.large {
   .wrapper>b {
     font-size: 6rem;
   }
 }
 
-@include medium {
+@include m.medium {
   .wrapper>b {
     font-size: 5rem;
   }
 }
 
-@include small {
+@include m.small {
   .wrapper>b {
     font-size: 4rem;
   }
@@ -47,7 +47,7 @@
   line-height: 24px;
 }
 
-@include small {
+@include m.small {
   .wrapper>p {
     margin: 20px 0 40px 0;
     text-align: center;
@@ -87,7 +87,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .wrapper>a {
     font-size: .8rem;
   }
@@ -98,25 +98,25 @@
   font-size: 5.4rem;
 }
 
-@include large {
+@include m.large {
   :where([lang=hu], [lang=ja]) .wrapper>b {
     font-size: 4.5rem;
   }
 }
 
-@include medium {
+@include m.medium {
   :where([lang=hu], [lang=ja]) .wrapper>b {
     font-size: 3.8rem;
   }
 }
 
-@include small {
+@include m.small {
   :where([lang=hu], [lang=ja]) .wrapper>b {
     font-size: 2rem;
   }
 }
 
-@include very-small {
+@include m.very-small {
   :where([lang=hu], [lang=ja]) .wrapper>b {
     font-size: 1.4rem;
   }

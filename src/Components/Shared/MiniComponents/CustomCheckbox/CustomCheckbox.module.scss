@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .customInput {
   display: inline-block;
@@ -71,7 +71,7 @@
   padding-inline-start: 10px;
 }
 
-@include small {
+@include m.small {
   .checkboxContainer>label {
     font-size: .8rem;
   }

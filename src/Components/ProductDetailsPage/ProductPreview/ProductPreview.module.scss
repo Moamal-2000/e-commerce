@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .images {
   display: flex;
@@ -28,17 +28,17 @@
   }
 }
 
-@include large {
+@include m.large {
   .previewImgHolder {
     height: 500px;
     max-height: 500px;
     min-height: 500px;
     // max-height: 500px;
-    @include center-x-y;
+    @include m.center-x-y;
   }
 }
 
-@include small {
+@include m.small {
   .previewImgHolder {
     width: 100%;
     overflow: hidden;

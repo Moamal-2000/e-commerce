@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .productName {
   font: 600 1.5rem/24px "Inter", sans-serif;
@@ -12,7 +12,7 @@
   margin: 10px 0;
 }
 
-@include very-small {
+@include m.very-small {
   .rateAndReviews {
     flex-direction: column;
   }
@@ -33,7 +33,7 @@
   border-right: solid 2px var(--dark-gray);
 }
 
-@include very-small {
+@include m.very-small {
   .verticalLine {
     display: none;
   }
@@ -57,7 +57,7 @@
   max-width: 400px;
 }
 
-@include large {
+@include m.large {
   .description {
     max-width: 800px;
   }

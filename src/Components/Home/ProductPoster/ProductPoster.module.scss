@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .productPoster {
   background-color: var(--black);
@@ -7,14 +7,14 @@
   margin-bottom: 80px;
 }
 
-@include large {
+@include m.large {
   .productPoster {
     flex-direction: column-reverse;
     padding: 64px 50px;
   }
 }
 
-@include small {
+@include m.small {
   .productPoster {
     padding: 42px 26px;
   }
@@ -39,7 +39,7 @@
   max-width: 520px;
 }
 
-@include small {
+@include m.small {
   .content>h2 {
     font-size: 2.2rem;
     line-height: 40px;
@@ -117,7 +117,7 @@
   object-fit: contain;
 }
 
-@include large {
+@include m.large {
   .productHolder {
     margin: 0 auto;
 

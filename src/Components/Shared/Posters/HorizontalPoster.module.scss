@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .HorPoster {
   width: 100%;
@@ -15,7 +15,7 @@
   background-color: #0D0D0D;
 }
 
-@include small {
+@include m.small {
   .HorPoster {
     padding-top: 30px;
   }
@@ -64,7 +64,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .shopNow {
     font-size: .9rem;
   }

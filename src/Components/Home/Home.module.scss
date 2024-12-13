@@ -1,11 +1,11 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .container {
   width: var(--container-width);
   margin: 0 auto;
 }
 
-@include small {
+@include m.small {
   .container {
     width: var(--container-mobile-width);
   }
@@ -17,13 +17,13 @@
   margin-bottom: 140px;
 }
 
-@include large {
+@include m.large {
   .introductionContainer {
     flex-direction: column-reverse;
   }
 }
 
-@include small {
+@include m.small {
   .introductionContainer {
     margin-bottom: 80px;
   }
@@ -39,7 +39,7 @@
   user-select: none;
 }
 
-@include large {
+@include m.large {
   .line {
     display: none;
   }

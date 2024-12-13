@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .sectionsMenuButton {
   -webkit-tap-highlight-color: transparent;
@@ -22,19 +22,19 @@
   }
 }
 
-@include large {
+@include m.large {
   .sectionsMenuButton {
     display: block;
   }
 }
 
-@include medium {
+@include m.medium {
   .sectionsMenuButton {
     top: 129px;
   }
 }
 
-@include very-small {
+@include m.very-small {
   .sectionsMenuButton {
     left: 10px;
   }
@@ -50,7 +50,7 @@
   top: 120px;
 }
 
-@include medium {
+@include m.medium {
   [lang=ar] .sectionsMenuButton {
     top: 126px;
   }

@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .heroSection {
   display: flex;
@@ -7,7 +7,7 @@
   margin-top: 40px;
 }
 
-@include medium {
+@include m.medium {
   .heroSection {
     flex-direction: column;
   }
@@ -18,19 +18,19 @@
   min-width: 500px;
 }
 
-@include large {
+@include m.large {
   .content {
     min-width: auto;
   }
 }
 
-@include medium {
+@include m.medium {
   .content {
     width: 630px;
   }
 }
 
-@include small {
+@include m.small {
   .content {
     width: 100%;
   }
@@ -43,14 +43,14 @@
   margin-bottom: 40px;
 }
 
-@include large {
+@include m.large {
   .content>h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
   }
 }
 
-@include small {
+@include m.small {
   .content>h2 {
     font-size: 2rem;
   }
@@ -64,7 +64,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .content>p {
     font-size: .9rem;
   }
@@ -77,14 +77,14 @@
   user-select: none;
 }
 
-@include medium {
+@include m.medium {
   .imgHolder {
     max-width: 630px;
     height: auto;
   }
 }
 
-@include small {
+@include m.small {
   .imgHolder {
     max-width: 100%;
   }

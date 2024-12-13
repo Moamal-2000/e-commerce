@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .form {
   max-width: 371px;
@@ -6,7 +6,7 @@
   margin: 0 120px;
 }
 
-@include medium {
+@include m.medium {
   .form {
     margin: 0;
     width: 100%;
@@ -25,7 +25,7 @@
   width: max-content;
 }
 
-@include small {
+@include m.small {
   .form>h2 {
     font-size: 1.8rem;
   }

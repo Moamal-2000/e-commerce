@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .signUpPage {
   margin-top: 75px;
@@ -10,13 +10,13 @@
   align-items: center;
 }
 
-@include large {
+@include m.large {
   .container {
     flex-direction: column-reverse;
   }
 }
 
-@include medium {
+@include m.medium {
   .container {
     width: 94%;
     margin: 0 auto;
@@ -31,7 +31,7 @@
   border-radius: 0 4px 4px 0;
 }
 
-@include large {
+@include m.large {
   .imgHolder {
     max-width: 400px;
     max-height: none;

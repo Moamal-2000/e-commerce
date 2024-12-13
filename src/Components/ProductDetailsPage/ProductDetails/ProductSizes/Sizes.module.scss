@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .sizesWrapper {
   display: flex;
@@ -20,7 +20,7 @@
   border-radius: 4px;
   user-select: none;
   cursor: pointer;
-  @include center-x-y;
+  @include m.center-x-y;
 
   &:not(.active):hover {
     background-color: rgba(180, 4, 4, .85);

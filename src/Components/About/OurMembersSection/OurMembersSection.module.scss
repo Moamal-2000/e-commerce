@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .ourMembersSection {
   width: 100%;
@@ -8,13 +8,13 @@
   padding-bottom: 10px;
 }
 
-@include large {
+@include m.large {
   .ourMembersSection {
     gap: 20px;
   }
 }
 
-@include medium {
+@include m.medium {
   .ourMembersSection {
     flex-direction: column;
     align-items: center;
@@ -32,7 +32,7 @@
   min-width: calc((100% / 3 - 40px) + (40px / 3));
 }
 
-@include medium {
+@include m.medium {
   .ourMembersSection>* {
     width: 360px;
   }
@@ -44,7 +44,7 @@
   }
 }
 
-@include very-small {
+@include m.very-small {
   .ourMembersSection>* {
     width: 100%;
   }

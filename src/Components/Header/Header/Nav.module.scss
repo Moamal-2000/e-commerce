@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .nav {
   user-select: none;
@@ -14,7 +14,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-@include medium {
+@include m.medium {
   .nav ul {
     gap: 18px;
 
@@ -65,28 +65,28 @@
 }
 
 // Arabic styles
-@include medium {
+@include m.medium {
   [lang=ar] .nav ul {
     gap: 14px;
   }
 }
 
 // French styles
-@include medium {
+@include m.medium {
   [lang=fr] .nav ul {
     gap: 12px;
   }
 }
 
 // Hungarian styles
-@include medium {
+@include m.medium {
   [lang=hu] .nav ul {
     gap: 12px;
   }
 }
 
 // Russian styles
-@include medium {
+@include m.medium {
   [lang=ru] .nav ul {
     gap: 12px;
   }

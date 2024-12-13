@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .images {
   display: flex;
@@ -12,7 +12,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .images {
     width: 100%;
   }
@@ -38,14 +38,14 @@
   }
 }
 
-@include small {
+@include m.small {
   .otherImages {
     max-width: 100%;
   }
 }
 
 .otherImages .image {
-  @include center-x-y;
+  @include m.center-x-y;
   aspect-ratio: 1/1;
   width: 125px;
   cursor: pointer;
@@ -67,12 +67,12 @@
   flex: 1;
 }
 
-@include large {
+@include m.large {
   .previewImgHolder {
     height: 500px;
     max-height: 500px;
     min-height: 500px;
-    @include center-x-y;
+    @include m.center-x-y;
   }
 }
 
@@ -84,7 +84,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .previewImgHolder {
     width: 100%;
   }

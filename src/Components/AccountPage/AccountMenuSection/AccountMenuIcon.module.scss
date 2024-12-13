@@ -1,4 +1,4 @@
-@import "src/Styles/mixins.scss";
+@use "src/Styles/mixins" as m;
 
 .profileSectionsButton {
   -webkit-tap-highlight-color: transparent;
@@ -18,13 +18,13 @@
   }
 }
 
-@include small {
+@include m.small {
   .profileSectionsButton {
     display: block;
   }
 }
 
-@include very-small {
+@include m.very-small {
   .profileSectionsButton {
     left: 10px;
   }

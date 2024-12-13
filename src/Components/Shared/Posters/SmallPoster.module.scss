@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .smallPoster {
   background-color: var(--black);
@@ -18,14 +18,14 @@
   background-origin: content-box;
 }
 
-@include small {
+@include m.small {
   .smallPoster {
     padding-top: 30px;
     width: 100%;
   }
 }
 
-@include very-small {
+@include m.very-small {
   .smallPoster {
     padding: 20px 20px 0;
   }
@@ -113,7 +113,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .shopNow {
     font-size: .9rem;
   }

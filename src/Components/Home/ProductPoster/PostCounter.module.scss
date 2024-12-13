@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .postCounter {
   display: flex;
@@ -8,7 +8,7 @@
   gap: 24px;
 }
 
-@include small {
+@include m.small {
   .postCounter {
     gap: 10px;
   }
@@ -20,7 +20,7 @@
   background-color: var(--white);
   border-radius: 50%;
   flex-direction: column;
-  @include center-x-y;
+  @include m.center-x-y;
   user-select: none;
 }
 
@@ -31,7 +31,7 @@
   }
 }
 
-@include very-small {
+@include m.very-small {
   .timeUnit {
     width: 58px;
     height: 58px;
@@ -52,7 +52,7 @@
   font-weight: 600;
 }
 
-@include small {
+@include m.small {
   .timeUnit>span:first-child {
     font-size: .9rem;
   }
@@ -63,7 +63,7 @@
   scale: .85;
 }
 
-@include very-small {
+@include m.very-small {
   .timeUnit>span:last-child {
     scale: .7;
   }

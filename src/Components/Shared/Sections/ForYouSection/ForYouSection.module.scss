@@ -1,4 +1,4 @@
-@import "src/Styles/mixins.scss";
+@use "src/Styles/mixins" as m;
 
 .forYou>header {
   display: flex;
@@ -13,7 +13,7 @@
   }
 }
 
-@include very-small {
+@include m.very-small {
   .forYou>header {
     flex-direction: column;
     align-items: flex-start;
@@ -44,14 +44,14 @@
   }
 }
 
-@include small {
+@include m.small {
   .forYou>header>a {
     padding: 12px 30px;
     font-size: .9rem;
   }
 }
 
-@include very-small {
+@include m.very-small {
   .forYou>header>a {
     width: 100%;
     text-align: center;

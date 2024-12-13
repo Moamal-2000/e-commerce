@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .header {
   background-color: var(--black);
@@ -17,13 +17,13 @@
   grid-template-columns: 22% 1fr;
 }
 
-@include large {
+@include m.large {
   .container {
     grid-template-columns: 0 1fr;
   }
 }
 
-@include small {
+@include m.small {
   .container {
     width: var(--container-mobile-width);
   }
@@ -35,7 +35,7 @@
   justify-content: space-between;
 }
 
-@include small {
+@include m.small {
   .headerContent {
     justify-content: flex-end;
   }
@@ -45,13 +45,13 @@
   color: var(--secondary-white);
 }
 
-@include medium {
+@include m.medium {
   .discount {
     font-size: .8rem;
   }
 }
 
-@include small {
+@include m.small {
   .discount {
     display: none;
   }
@@ -108,7 +108,7 @@
   font-size: .95rem;
 }
 
-@include medium {
+@include m.medium {
   [lang=fr] .discount {
     font-size: .8rem;
   }

@@ -1,18 +1,18 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .paymentSection {
   max-width: 483px;
   flex: 1;
 }
 
-@include medium {
+@include m.medium {
   .paymentSection {
     max-width: 80vw;
     width: 80vw;
   }
 }
 
-@include small {
+@include m.small {
   .paymentSection {
     max-width: 100%;
     width: 100%;
@@ -48,7 +48,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .submitPaymentButton {
     font-size: .8rem;
     width: 100%;

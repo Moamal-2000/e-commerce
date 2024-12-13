@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .mobileMenu {
   background-color: var(--very-dark-gray);
@@ -21,7 +21,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .mobileMenu {
     padding-inline-end: 100px;
   }

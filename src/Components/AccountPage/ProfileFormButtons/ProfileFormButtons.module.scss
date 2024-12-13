@@ -1,10 +1,10 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .buttons {
   align-self: flex-end;
 }
 
-@include very-small {
+@include m.very-small {
   .buttons {
     align-self: normal;
     display: flex;
@@ -32,7 +32,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .buttons>a {
     font-size: .9rem;
   }
@@ -58,7 +58,7 @@
   }
 }
 
-@include medium {
+@include m.medium {
   .buttons>button {
     padding: 12px 30px;
     font-size: .9rem;

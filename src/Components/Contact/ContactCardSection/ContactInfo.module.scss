@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .headerContent {
   display: flex;
@@ -11,7 +11,7 @@
   width: 40px;
   height: 40px;
   background-color: var(--dark-tomato);
-  @include center-x-y;
+  @include m.center-x-y;
   border-radius: 50%;
 }
 

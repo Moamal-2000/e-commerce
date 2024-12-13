@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .sectionTitle .event {
   color: var(--dark-tomato);
@@ -14,7 +14,7 @@
   font-weight: 500;
 }
 
-@include small {
+@include m.small {
   .sectionTitle .event {
     font-size: .9rem;
   }
@@ -41,7 +41,7 @@
   max-width: 400px;
 }
 
-@include small {
+@include m.small {
   .sectionTitle b {
     font-size: 1.5rem;
   }

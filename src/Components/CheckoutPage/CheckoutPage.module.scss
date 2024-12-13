@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .checkoutPage {
   margin: 60px 0 160px;
@@ -14,13 +14,13 @@
   gap: 80px;
 }
 
-@include medium {
+@include m.medium {
   .checkoutPageContent {
     gap: 40px;
   }
 }
 
-@include small {
+@include m.small {
   .checkoutPageContent {
     flex-direction: column;
     justify-content: flex-start;

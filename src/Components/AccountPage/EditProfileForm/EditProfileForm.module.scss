@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .profileForm {
   box-shadow: 0 1px 13px 0 #0000000D;
@@ -9,13 +9,13 @@
   flex-direction: column;
 }
 
-@include medium {
+@include m.medium {
   .profileForm {
     padding: 30px;
   }
 }
 
-@include small {
+@include m.small {
   .profileForm {
     padding: 20px;
   }

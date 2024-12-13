@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .favoritePage {
   margin: var(--page-margin);
@@ -45,7 +45,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .forYou>header>a {
     padding: 12px 30px;
     font-size: .9rem;

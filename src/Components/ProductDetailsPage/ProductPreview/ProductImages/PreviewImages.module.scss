@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .otherImages {
   display: flex;
@@ -15,7 +15,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .otherImages {
     max-width: 100%;
   }

@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .detailsSection {
   display: flex;
@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-@include large {
+@include m.large {
   .detailsSection {
     height: auto;
     flex-direction: column;
@@ -16,7 +16,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .detailsSection {
     gap: 40px;
   }
@@ -27,7 +27,7 @@
   position: relative;
 }
 
-@include large {
+@include m.large {
   .details {
     width: 100%;
   }
@@ -54,7 +54,7 @@
   }
 }
 
-@include large {
+@include m.large {
   .zoomInPreview {
     top: -725px;
     left: 50%;
@@ -66,7 +66,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .zoomInPreview {
     display: none;
   }
@@ -89,7 +89,7 @@
   margin: 28px 0;
 }
 
-@include large {
+@include m.large {
   .horizontalLine {
     max-width: 100%;
     min-width: auto;
@@ -101,7 +101,7 @@
   flex-direction: row-reverse;
 }
 
-@include large {
+@include m.large {
   [dir=rtl] .detailsSection {
     height: auto;
     flex-direction: column;

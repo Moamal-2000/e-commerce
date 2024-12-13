@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .menuSection {
   max-width: 300px;
@@ -20,7 +20,7 @@
   z-index: 1000;
 }
 
-@include very-small {
+@include m.very-small {
   .menuSection.mobile {
     max-width: 100%;
     width: 100%;

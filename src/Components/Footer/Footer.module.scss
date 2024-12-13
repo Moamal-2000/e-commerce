@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .footer {
   background-color: var(--black);
@@ -7,7 +7,7 @@
   position: relative;
 }
 
-@include medium {
+@include m.medium {
   .footer {
     padding: 60px 0;
   }
@@ -27,7 +27,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .sections {
     justify-content: center;
   }

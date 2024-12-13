@@ -1,6 +1,6 @@
-@import "./variables.scss";
-@import "./colors.scss";
-@import "./mixins.scss";
+@use "./variables" as v;
+@use "./colors" as c;
+@use "./mixins" as m;
 @import "./fonts.css";
 
 * {
@@ -52,7 +52,7 @@ body::-webkit-scrollbar-thumb:active {
   margin: 0 auto;
 }
 
-@include medium {
+@include m.medium {
   .container {
     width: var(--container-mobile-width);
   }
@@ -128,7 +128,7 @@ main {
   opacity: 0;
   z-index: 9;
   pointer-events: none;
-  @include center-x-y;
+  @include m.center-x-y;
   transition: opacity .1s ease;
 }
 

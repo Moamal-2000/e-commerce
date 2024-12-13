@@ -1,4 +1,4 @@
-@import "src/Styles/mixins";
+@use "src/Styles/mixins" as m;
 
 .buttons {
   display: flex;
@@ -14,7 +14,7 @@
   outline: none;
   height: 52px;
   padding: 16px 48px;
-  @include center-x-y;
+  @include m.center-x-y;
   border-radius: 4px;
   color: var(--black);
   background-color: transparent;
@@ -40,7 +40,7 @@
   }
 }
 
-@include small {
+@include m.small {
   .buttons>:where(a, button) {
     height: 42px;
     padding: 12px 30px;
