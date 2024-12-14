@@ -10,7 +10,7 @@ const PaymentCards = () => {
     <div className={s.images}>
       {paymentCards.map(({ img, alt, link, id }) => (
         <a key={id} href={link} target="_blank">
-          <img src={img} alt={alt + "image"} />
+          <img src={img} alt={alt + " image"} />
           {isLaptopScreen && <ToolTip left="50%" top="46px" content={alt} />}
         </a>
       ))}
