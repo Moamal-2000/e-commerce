@@ -1,7 +1,7 @@
 "use strict";
 
 // Variables
-const CACHE_NAME = "e-commerce-v8";
+const CACHE_NAME = "e-commerce-v9";
 const ASSETS = [
   "/",
   "/index.html",
@@ -18,6 +18,8 @@ const ASSETS = [
 async function cacheAssets() {
   const cache = await caches.open(CACHE_NAME);
   await cache.addAll(ASSETS);
+
+  clearOldCaches();
 }
 
 async function handleFetchAndCache(request) {
@@ -59,32 +61,31 @@ async function updateCachedAssets() {
       })
     );
 
-    const cacheKeys = await caches.keys();
-    await Promise.all(
-      cacheKeys
-        .filter((key) => key !== CACHE_NAME)
-        .map((key) => caches.delete(key))
-    );
-
     return responses;
   } catch (error) {
     console.error("Failed to update cache:", error);
   }
 }
 
-function handleFetchEvent(event) {
-  const isGetMethod = event.request.method === "GET";
+async function clearOldCaches() {
+  const cacheKeys = await caches.keys();
 
-  event.respondWith(handleFetchAndCache(event.request));
-
-  if (isGetMethod) {
-    event.waitUntil(updateCachedAssets());
-  }
+  await Promise.all(
+    cacheKeys
+      .filter((key) => key !== CACHE_NAME)
+      .map((key) => caches.delete(key))
+  );
 }
 
 // Events
-self.addEventListener("install", (event) => event.waitUntil(cacheAssets()));
-self.addEventListener("activate", (event) =>
-  event.waitUntil(updateCachedAssets())
-);
-self.addEventListener("fetch", handleFetchEvent);
+self.addEventListener("install", (event) => {
+  event.waitUntil(cacheAssets());
+});
+
+self.addEventListener("activate", (event) => {
+  event.waitUntil(updateCachedAssets());
+});
+
+self.addEventListener("fetch", (event) => {
+  event.respondWith(handleFetchAndCache(event.request));
+});
