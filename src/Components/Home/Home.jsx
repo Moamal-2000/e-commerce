@@ -1,5 +1,4 @@
 import { Helmet } from "react-helmet-async";
-import { productImg1 } from "src/Assets/Images/Images";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import CategoriesSection from "./CategoriesSection/CategoriesSection";
 import FeaturedSection from "./FeaturedSection/FeaturedSection";
@@ -27,8 +26,7 @@ const Home = () => {
           ref="preload"
           as="image"
           type="image/webp"
-          href={productImg1}
-          crossorigin="anonymous"
+          href="../../Assets/Images/introduction-product1.webp"
         />
       </Helmet>
 
