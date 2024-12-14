@@ -23,7 +23,13 @@ const Home = () => {
           name="description"
           content="Your ultimate destination for effortless online shopping. Discover curated collections, easily add items to your cart and wishlist,and enjoy detailed product descriptions with captivating previews. Experience convenience like never before with our intuitive interface. Shop smarter with us today."
         />
-        <link ref="preload" as="image" type="image/webp" href={productImg1} />
+        <link
+          ref="preload"
+          as="image"
+          type="image/webp"
+          href={productImg1}
+          crossorigin="anonymous"
+        />
       </Helmet>
 
       <main className={s.home}>
