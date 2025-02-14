@@ -26,11 +26,9 @@
     "react-i18next": "^15.4.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
-    "react-uuid": "^2.0.0",
     "router-dom": "^3.0.1",
     "sass": "^1.85.0",
     "swiper": "^11.2.3",
-    "uuid": "^11.0.5",
     "web-vitals": "^4.2.4"
   },
   "devDependencies": {

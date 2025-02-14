@@ -15,7 +15,6 @@ import {
   usaFlag,
   visaCard,
 } from "src/Assets/Images/Images";
-import { v4 as uuid } from "uuid";
 import {
   car,
   correctSign,
@@ -33,21 +32,21 @@ export const introductionSliderData = [
     productImg: productImg1,
     logoImg: appleLogo,
     discountText: "Up to 10% off Voucher",
-    id: uuid(),
+    id: 1,
   },
   {
     productName: "Canon EOS 5D MkII",
     productImg: productImg2,
     logoImg: canonLogo,
     discountText: "Up to 30% off Voucher",
-    id: uuid(),
+    id: 2,
   },
   {
     productName: "MacBook Pro 16",
     productImg: productImg3,
     logoImg: appleLogo,
     discountText: "Up to 15% off Voucher",
-    id: uuid(),
+    id: 3,
   },
 ];
 
@@ -55,52 +54,52 @@ export const categoriesData = [
   {
     iconName: "mobile",
     title: "Phones",
-    id: uuid(),
+    id: 1,
   },
   {
     iconName: "computer",
     title: "Computers",
-    id: uuid(),
+    id: 2,
   },
   {
     iconName: "smartWatch",
     title: "SmartWatch",
-    id: uuid(),
+    id: 3,
   },
   {
     iconName: "camera",
     title: "Camera",
-    id: uuid(),
+    id: 4,
   },
   {
     iconName: "headphone",
     title: "HeadPhones",
-    id: uuid(),
+    id: 5,
   },
   {
     iconName: "gamepad",
     title: "Gaming",
-    id: uuid(),
+    id: 6,
   },
   {
     iconName: "furniture",
     title: "Furniture",
-    id: uuid(),
+    id: 7,
   },
   {
     iconName: "shirt",
     title: "Clothes",
-    id: uuid(),
+    id: 8,
   },
   {
     iconName: "dogHand",
     title: "Animal",
-    id: uuid(),
+    id: 9,
   },
   {
     iconName: "makeup",
     title: "makeup",
-    id: uuid(),
+    id: 10,
   },
 ];
 
@@ -110,28 +109,28 @@ export const aboutCardsInfo = [
     number: "10.5k",
     text: "Sallers active our site",
     translationKey: "aboutCardsInfo1",
-    id: uuid(),
+    id: 1,
   },
   {
     iconName: "dollarSign",
     number: "33k",
     text: "Mopnthly Produduct Sale",
     translationKey: "aboutCardsInfo2",
-    id: uuid(),
+    id: 2,
   },
   {
     iconName: "shoppingBag",
     number: "45.5k",
     text: "Customer active in our site",
     translationKey: "aboutCardsInfo3",
-    id: uuid(),
+    id: 3,
   },
   {
     iconName: "moneyBag",
     number: "25k",
     text: "Anual gross sale in our site",
     translationKey: "aboutCardsInfo4",
-    id: uuid(),
+    id: 4,
   },
 ];
 
@@ -145,7 +144,7 @@ export const ourMembersData = [
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",
     },
-    id: uuid(),
+    id: 1,
   },
 
   {
@@ -157,7 +156,7 @@ export const ourMembersData = [
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",
     },
-    id: uuid(),
+    id: 2,
   },
 
   {
@@ -169,7 +168,7 @@ export const ourMembersData = [
       instagram: "https://www.instagram.com/",
       linkedin: "https://www.linkedin.com/",
     },
-    id: uuid(),
+    id: 3,
   },
 ];
 
@@ -178,25 +177,25 @@ export const paymentCards = [
     img: bkashCard,
     alt: "Bkash card",
     link: "https://www.bkash.com/en/products-services/visa-card-to-bkash",
-    id: uuid(),
+    id: 1,
   },
   {
     img: visaCard,
     alt: "Visa card",
     link: "https://usa.visa.com/pay-with-visa/find-card/apply-credit-card",
-    id: uuid(),
+    id: 2,
   },
   {
     img: mastercard,
     alt: "Mastercard",
     link: "https://www.mastercard.us/en-us.html",
-    id: uuid(),
+    id: 3,
   },
   {
     img: nagadCard,
     alt: "Nagad card",
     link: "https://www.nagad.com.bd/services/?service=add-money-from-card",
-    id: uuid(),
+    id: 4,
   },
 ];
 
@@ -206,49 +205,49 @@ export const LANGUAGES = [
     flag: usaFlag,
     flagName: "USA",
     code: "en",
-    id: uuid(),
+    id: 1,
   },
   {
     lang: "Russian",
     flag: russiaFlag,
     flagName: "Russia",
     code: "ru",
-    id: uuid(),
+    id: 2,
   },
   {
     lang: "Arabic",
     flag: saudiFlag,
     flagName: "Saudi Arabia",
     code: "ar",
-    id: uuid(),
+    id: 3,
   },
   {
     lang: "French",
     flag: franceFlag,
     flagName: "France",
     code: "fr",
-    id: uuid(),
+    id: 4,
   },
   {
     lang: "hungarian",
     flag: hungaryFlag,
     flagName: "Hungary",
     code: "hu",
-    id: uuid(),
+    id: 5,
   },
   {
     lang: "Japanese",
     flag: japanFlag,
     flagName: "Japan",
     code: "ja",
-    id: uuid(),
+    id: 6,
   },
   {
     lang: "Hindi",
     flag: indiaFlag,
     flagName: "India",
     code: "hi",
-    id: uuid(),
+    id: 7,
   },
 ];
 
@@ -338,25 +337,25 @@ export const mySocialMedia = [
     name: "Facebook",
     link: "https://www.facebook.com/MoamalAlaa109",
     icon: "facebook",
-    id: uuid(),
+    id: 1,
   },
   {
     name: "Twitter",
     link: "https://twitter.com/MoamalAlaa7",
     icon: "twitter",
-    id: uuid(),
+    id: 2,
   },
   {
     name: "Instagram",
     link: "https://www.instagram.com/kubislav23/",
     icon: "instagram",
-    id: uuid(),
+    id: 3,
   },
   {
     name: "Linkedin",
     link: "https://www.linkedin.com/in/moamal-alaa-a4bb15237/",
     icon: "linkedin",
-    id: uuid(),
+    id: 4,
   },
 ];
 
@@ -366,21 +365,21 @@ export const featuresSectionData = [
     iconAlt: "Car",
     title: "FREE AND FAST DELIVERY",
     description: "Free delivery for all orders over $140",
-    id: uuid(),
+    id: 1,
   },
   {
     iconImg: headphone,
     iconAlt: "Headphone",
     title: "24/7 CUSTOMER SERVICE",
     description: "Friendly 24/7 customer support",
-    id: uuid(),
+    id: 2,
   },
   {
     iconImg: correctSign,
     iconAlt: "Correct sign",
     title: "MONEY BACK GUARANTEE",
     description: "We return money within 30 days",
-    id: uuid(),
+    id: 3,
   },
 ];
 
@@ -390,13 +389,13 @@ export const billingInputsData = [
     label: "First Name",
     name: "firstName",
     required: true,
-    id: uuid(),
+    id: 1,
   },
   {
     translationKey: "companyName",
     label: "Company Name",
     name: "companyName",
-    id: uuid(),
+    id: 2,
   },
   {
     translationKey: "streetAddress",
@@ -404,14 +403,14 @@ export const billingInputsData = [
     name: "streetAddress",
     required: true,
     autoComplete: true,
-    id: uuid(),
+    id: 3,
   },
   {
     translationKey: "apartment",
     label: "Apartment, floor, etc. (optional)",
     name: "address",
     autoComplete: true,
-    id: uuid(),
+    id: 4,
   },
   {
     translationKey: "cityOrTown",
@@ -419,7 +418,7 @@ export const billingInputsData = [
     name: "cityOrTown",
     required: true,
     autoComplete: true,
-    id: uuid(),
+    id: 5,
   },
   {
     translationKey: "phoneNumber",
@@ -428,7 +427,7 @@ export const billingInputsData = [
     required: true,
     type: "tel",
     autoComplete: true,
-    id: uuid(),
+    id: 6,
     regex: regexPatterns.iraqiPhone,
   },
   {
@@ -438,7 +437,7 @@ export const billingInputsData = [
     required: true,
     type: "email",
     autoComplete: true,
-    id: uuid(),
+    id: 7,
     regex: regexPatterns.email,
   },
 ];

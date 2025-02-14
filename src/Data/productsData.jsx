@@ -65,7 +65,6 @@ import {
   wiredKeyboardThum3,
 } from "src/Assets/Products/ProductImgs";
 import { setAfterDiscountKey, setFormattedPrice } from "src/Functions/helper";
-import { v4 as uuid } from "uuid";
 
 export const productsData = [
   {
@@ -99,7 +98,7 @@ export const productsData = [
     votes: 88,
     quantity: 1,
     sold: 105,
-    id: uuid(),
+    id: 1,
   },
 
   {
@@ -132,7 +131,7 @@ export const productsData = [
     votes: 75,
     quantity: 1,
     sold: 210,
-    id: uuid(),
+    id: 2,
   },
 
   {
@@ -165,7 +164,7 @@ export const productsData = [
     quantity: 1,
     votes: 99,
     sold: 463,
-    id: uuid(),
+    id: 3,
   },
 
   {
@@ -209,7 +208,7 @@ export const productsData = [
     votes: 99,
     quantity: 1,
     sold: 211,
-    id: uuid(),
+    id: 4,
   },
 
   {
@@ -245,7 +244,7 @@ export const productsData = [
     votes: 65,
     quantity: 1,
     sold: 1405,
-    id: uuid(),
+    id: 5,
   },
 
   {
@@ -281,7 +280,7 @@ export const productsData = [
     votes: 159,
     quantity: 1,
     sold: 1533,
-    id: uuid(),
+    id: 6,
   },
 
   {
@@ -313,7 +312,7 @@ export const productsData = [
     votes: 190,
     quantity: 1,
     sold: 2522,
-    id: uuid(),
+    id: 7,
   },
 
   {
@@ -344,7 +343,7 @@ export const productsData = [
     votes: 201,
     quantity: 1,
     sold: 1602,
-    id: uuid(),
+    id: 8,
   },
 
   {
@@ -380,7 +379,7 @@ export const productsData = [
     votes: 35,
     quantity: 1,
     sold: 59,
-    id: uuid(),
+    id: 9,
   },
 
   {
@@ -412,7 +411,7 @@ export const productsData = [
     votes: 94,
     quantity: 1,
     sold: 83,
-    id: uuid(),
+    id: 10,
   },
 
   {
@@ -444,7 +443,7 @@ export const productsData = [
     votes: 1049,
     quantity: 1,
     sold: 1792,
-    id: uuid(),
+    id: 11,
   },
 
   {
@@ -475,7 +474,7 @@ export const productsData = [
     votes: 325,
     quantity: 1,
     sold: 100,
-    id: uuid(),
+    id: 12,
   },
 
   {
@@ -510,7 +509,7 @@ export const productsData = [
     votes: 22,
     quantity: 1,
     sold: 100,
-    id: uuid(),
+    id: 13,
   },
 
   {
@@ -546,7 +545,7 @@ export const productsData = [
     votes: 145,
     quantity: 1,
     sold: 100,
-    id: uuid(),
+    id: 14,
   },
 
   {
@@ -578,7 +577,7 @@ export const productsData = [
     votes: 64,
     quantity: 1,
     sold: 100,
-    id: uuid(),
+    id: 15,
   },
 
   {
@@ -623,7 +622,7 @@ export const productsData = [
     votes: 55,
     quantity: 1,
     sold: 100,
-    id: uuid(),
+    id: 16,
   },
 ];
 
