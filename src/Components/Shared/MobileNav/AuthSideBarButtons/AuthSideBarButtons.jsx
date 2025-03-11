@@ -6,26 +6,33 @@ import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./AuthSideBarButtons.module.scss";
 
 const AuthSideBarButtons = () => {
+  const { isMobileMenuActive } = useSelector((state) => state.global);
   const { loginInfo } = useSelector((state) => state.user);
-  const { isSignIn } = loginInfo;
   const handleSignOut = useSignOut();
   const { t } = useTranslation();
 
   return (
     <>
-      {isSignIn && (
+      {loginInfo.isSignIn && (
         <button
           className={s.signOutButton}
           type="button"
           onClick={handleSignOut}
+          aria-hidden={!isMobileMenuActive}
+          tabIndex={isMobileMenuActive ? 0 : -1}
         >
           <SvgIcon name="boxArrowRight" />
           <span>{t("mobileNav.signOut")}</span>
         </button>
       )}
 
-      {!isSignIn && (
-        <Link to="/signup" className={s.signOutButton}>
+      {!loginInfo.isSignIn && (
+        <Link
+          to="/signup"
+          className={s.signOutButton}
+          aria-hidden={!isMobileMenuActive}
+          tabIndex={isMobileMenuActive ? 0 : -1}
+        >
           <SvgIcon name="boxArrowRight" />
           <span>{t("mobileNav.signIn")}</span>
         </Link>

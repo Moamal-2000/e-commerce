@@ -8,9 +8,8 @@ import IconWithCountAndLabel from "../../NavTools/IconWithCountAndLabel/IconWith
 import s from "./NavLinksSideBar.module.scss";
 
 const NavLinksSideBar = () => {
-  const {
-    loginInfo: { isSignIn },
-  } = useSelector((state) => state.user);
+  const { isMobileMenuActive } = useSelector((state) => state.global);
+  const { loginInfo } = useSelector((state) => state.user);
   const { favoritesProducts, orderProducts, cartProducts, wishList } =
     useSelector((state) => state.products);
   const { t } = useTranslation();
@@ -19,7 +18,7 @@ const NavLinksSideBar = () => {
     <nav className={s.navLinks}>
       <ul role="menu">
         {mobileNavData.map(({ name, link, icon, requiteSignIn }, index) => {
-          const shouldShow = requiteSignIn ? isSignIn : true;
+          const shouldShow = requiteSignIn ? loginInfo.isSignIn : true;
           const currentPage =
             window.location.pathname === link ? "page" : undefined;
 
@@ -27,7 +26,12 @@ const NavLinksSideBar = () => {
 
           return (
             <li key={"mobile-nav-link-" + index} role="menuitem">
-              <NavLink to={link} aria-current={currentPage}>
+              <NavLink
+                to={link}
+                aria-current={currentPage}
+                aria-hidden={!isMobileMenuActive}
+                tabIndex={isMobileMenuActive ? 0 : -1}
+              >
                 <SvgIcon name={icon} />
                 <span className={s.text}>
                   {t(`mobileNav.${camelCase(name)}`)}
@@ -41,7 +45,7 @@ const NavLinksSideBar = () => {
           <IconWithCountAndLabel
             props={{
               iconName: "cart3",
-              visibility: isSignIn,
+              visibility: loginInfo.isSignIn,
               routePath: "/cart",
               countLength: cartProducts.length,
               text: t(`mobileNav.${camelCase("my cart")}`),
@@ -53,7 +57,7 @@ const NavLinksSideBar = () => {
           <IconWithCountAndLabel
             props={{
               iconName: "cart",
-              visibility: isSignIn,
+              visibility: loginInfo.isSignIn,
               routePath: "/order",
               countLength: orderProducts.length,
               text: t(`mobileNav.${camelCase("my order")}`),
@@ -65,7 +69,7 @@ const NavLinksSideBar = () => {
           <IconWithCountAndLabel
             props={{
               iconName: "heart",
-              visibility: isSignIn,
+              visibility: loginInfo.isSignIn,
               routePath: "/favorites",
               countLength: favoritesProducts.length,
               text: t(`mobileNav.${camelCase("favorite")}`),
@@ -77,7 +81,7 @@ const NavLinksSideBar = () => {
           <IconWithCountAndLabel
             props={{
               iconName: "save",
-              visibility: isSignIn,
+              visibility: loginInfo.isSignIn,
               routePath: "/wishlist",
               countLength: wishList.length,
               text: t(`mobileNav.${camelCase("wishlist")}`),
