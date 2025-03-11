@@ -43,7 +43,9 @@ const GlobalOverlay = () => {
 
   return (
     <div
-      tabIndex="0"
+      aria-label="Overlay closed"
+      aria-hidden={!isMobileMenuActive}
+      tabIndex={isMobileMenuActive ? 0 : -1}
       className={`${s.overlay} ${activeClass}`}
       onClick={handleOverlayClick}
       onKeyUp={handleOverlayClick}
