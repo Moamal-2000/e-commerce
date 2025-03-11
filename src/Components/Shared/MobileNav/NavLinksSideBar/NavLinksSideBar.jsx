@@ -49,6 +49,8 @@ const NavLinksSideBar = () => {
               routePath: "/cart",
               countLength: cartProducts.length,
               text: t(`mobileNav.${camelCase("my cart")}`),
+              ariaHidden: !isMobileMenuActive,
+              tabIndex: isMobileMenuActive ? 0 : -1,
             }}
           />
         </li>
@@ -61,6 +63,8 @@ const NavLinksSideBar = () => {
               routePath: "/order",
               countLength: orderProducts.length,
               text: t(`mobileNav.${camelCase("my order")}`),
+              ariaHidden: !isMobileMenuActive,
+              tabIndex: isMobileMenuActive ? 0 : -1,
             }}
           />
         </li>
@@ -73,6 +77,8 @@ const NavLinksSideBar = () => {
               routePath: "/favorites",
               countLength: favoritesProducts.length,
               text: t(`mobileNav.${camelCase("favorite")}`),
+              ariaHidden: !isMobileMenuActive,
+              tabIndex: isMobileMenuActive ? 0 : -1,
             }}
           />
         </li>
@@ -85,6 +91,8 @@ const NavLinksSideBar = () => {
               routePath: "/wishlist",
               countLength: wishList.length,
               text: t(`mobileNav.${camelCase("wishlist")}`),
+              ariaHidden: !isMobileMenuActive,
+              tabIndex: isMobileMenuActive ? 0 : -1,
             }}
           />
         </li>
