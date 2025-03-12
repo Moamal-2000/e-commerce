@@ -306,6 +306,44 @@ export const mobileNavData = [
   },
 ];
 
+export const getRestMobileNavData = ({
+  cartProducts,
+  orderProducts,
+  favoritesProducts,
+  wishList,
+}) => {
+  return [
+    {
+      iconName: "cart3",
+      routePath: "/cart",
+      text: "my cart",
+      countLength: cartProducts.length,
+      id: mobileNavData.length + 1,
+    },
+    {
+      iconName: "cart",
+      routePath: "/order",
+      text: "my order",
+      countLength: orderProducts.length,
+      id: mobileNavData.length + 2,
+    },
+    {
+      iconName: "heart",
+      routePath: "/favorites",
+      text: "favorite",
+      countLength: favoritesProducts.length,
+      id: mobileNavData.length + 3,
+    },
+    {
+      iconName: "save",
+      routePath: "/wishlist",
+      text: "wishlist",
+      countLength: wishList.length,
+      id: mobileNavData.length + 4,
+    },
+  ];
+};
+
 export const womenFashionMenuItems = [
   { name: "Elegant Dress", url: "/#" },
   { name: "Chic Blouse", url: "/#" },
