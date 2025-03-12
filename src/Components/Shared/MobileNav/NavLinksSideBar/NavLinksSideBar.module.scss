@@ -2,6 +2,7 @@
   position: relative;
   left: -10px;
   min-height: 310px;
+  user-select: none;
 }
 
 .navLinks ul {
@@ -49,8 +50,4 @@
   fill: var(--white);
   width: 20px;
   height: 20px;
-}
-
-.navLinks .text::selection {
-  background-color: var(--white) !important;
 }

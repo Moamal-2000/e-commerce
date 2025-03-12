@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { mobileNavData } from "src/Data/staticData";
 import s from "./NavLinksSideBar.module.scss";
-import RestNavLinks from "./RestNavLinks/RestNavLinks";
+import RestNavLinks from "./RestNavLinks";
 import SideBarLink from "./SideBarLink/SideBarLink";
 
 const NavLinksSideBar = () => {

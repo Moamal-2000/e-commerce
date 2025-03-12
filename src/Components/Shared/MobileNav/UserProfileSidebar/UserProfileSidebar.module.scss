@@ -24,9 +24,11 @@
 .userInfo p {
   color: var(--medium-light-gray);
   margin: 20px 0 50px;
+  user-select: none;
 }
 
 .userInfo p .userName {
+  user-select: initial;
   display: block;
   color: var(--white);
   margin-top: 4px;
@@ -42,6 +44,6 @@
   }
 }
 
-.userInfo p::selection {
+.userInfo p .userName::selection {
   background-color: var(--white) !important;
 }

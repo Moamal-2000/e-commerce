@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { getRestMobileNavData } from "src/Data/staticData";
 import { camelCase } from "src/Functions/helper";
-import IconWithCountAndLabel from "../../../NavTools/IconWithCountAndLabel/IconWithCountAndLabel";
+import IconWithCountAndLabel from "../../NavTools/IconWithCountAndLabel/IconWithCountAndLabel";
 
 const RestNavLinks = () => {
   const { isMobileMenuActive } = useSelector((state) => state.global);

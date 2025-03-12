@@ -1,5 +1,6 @@
 .signOutButton {
   all: unset;
+  user-select: none;
   -webkit-tap-highlight-color: transparent;
   color: var(--medium-light-gray);
   padding: 10px;
