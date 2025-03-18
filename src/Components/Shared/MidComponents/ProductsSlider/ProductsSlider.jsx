@@ -1,6 +1,8 @@
 import { useRef } from "react";
 import { productsData } from "src/Data/productsData";
+import { shouldDisplaySliderButtons } from "src/Functions/conditions";
 import useSlider from "src/Hooks/App/useSlider";
+import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import ProductCard from "../../ProductsCards/ProductCard/ProductCard";
 import s from "./ProductsSlider.module.scss";
 import SliderButtons from "./SliderButtons/SliderButtons";
@@ -13,11 +15,16 @@ const ProductsSlider = ({
   const filteredProducts = filterFun();
   const sliderRef = useRef();
   const { handleNextBtn, handlePrevBtn } = useSlider(sliderRef);
-  const hasProducts = filteredProducts.length > 0;
+  const { windowWidth } = useGetResizeWindow();
+
+  const shouldDisplayButtons = shouldDisplaySliderButtons(
+    windowWidth,
+    filteredProducts
+  );
 
   return (
     <>
-      {hasProducts && (
+      {shouldDisplayButtons && (
         <SliderButtons
           handleNextBtn={handleNextBtn}
           handlePrevBtn={handlePrevBtn}
