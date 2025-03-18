@@ -1,10 +1,23 @@
+import { useRef, useState } from "react";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { paymentCards } from "src/Data/staticData";
+import useEventListener from "src/Hooks/Helper/useEventListener";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
 import s from "./PaymentCards.module.scss";
 
 const PaymentCards = () => {
-  const isLaptopScreen = window.innerWidth >= SCREEN_SIZES.laptop;
+  const [isLaptopScreen, setIsLaptopScreen] = useState(
+    window.innerWidth >= SCREEN_SIZES.laptop
+  );
+  const debounceId = useRef(null);
+
+  useEventListener(window, "resize", () => {
+    clearTimeout(debounceId.current);
+
+    debounceId.current = setTimeout(() => {
+      setIsLaptopScreen(window.innerWidth >= SCREEN_SIZES.laptop);
+    }, 100);
+  });
 
   return (
     <div className={s.images}>

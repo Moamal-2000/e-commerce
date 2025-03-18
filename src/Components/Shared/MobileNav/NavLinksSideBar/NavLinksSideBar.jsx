@@ -31,5 +31,3 @@ const NavLinksSideBar = () => {
   );
 };
 export default NavLinksSideBar;
-
-//TODO: make data to iterate on <IconWithCountAndLabel /> components
