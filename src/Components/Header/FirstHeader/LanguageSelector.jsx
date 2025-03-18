@@ -5,9 +5,9 @@ import { LANGUAGES } from "src/Data/staticData";
 import s from "./LanguageSelector.module.scss";
 
 const LanguageSelector = () => {
-  const { t } = useTranslation();
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);
   const currentLangRef = useRef();
+  const { t } = useTranslation();
   const currLang = i18next.language || "en";
 
   function selectLanguage(index, langCode) {
@@ -39,8 +39,8 @@ const LanguageSelector = () => {
     setIsLangMenuActive((prevState) => !prevState);
   }
 
-  function openLanguageMenu() {
-    setIsLangMenuActive(true);
+  function displayLanguageMenu(openMenu = true) {
+    setIsLangMenuActive(openMenu);
   }
 
   useEffect(() => {
@@ -55,7 +55,8 @@ const LanguageSelector = () => {
     <div
       className={s.languageSelector}
       onClick={toggleLanguageMenu}
-      onFocus={openLanguageMenu}
+      onFocus={displayLanguageMenu}
+      onBlur={() => displayLanguageMenu(false)}
       aria-haspopup="true"
     >
       <div className={s.currentOption} ref={currentLangRef}>
