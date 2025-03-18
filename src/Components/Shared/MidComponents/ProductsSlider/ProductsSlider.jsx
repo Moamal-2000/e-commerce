@@ -13,13 +13,16 @@ const ProductsSlider = ({
   const filteredProducts = filterFun();
   const sliderRef = useRef();
   const { handleNextBtn, handlePrevBtn } = useSlider(sliderRef);
+  const hasProducts = filteredProducts.length > 0;
 
   return (
     <>
-      <SliderButtons
-        handleNextBtn={handleNextBtn}
-        handlePrevBtn={handlePrevBtn}
-      />
+      {hasProducts && (
+        <SliderButtons
+          handleNextBtn={handleNextBtn}
+          handlePrevBtn={handlePrevBtn}
+        />
+      )}
 
       <div className={s.productsSlider} ref={sliderRef} dir="ltr">
         {filteredProducts.map((product) => (
