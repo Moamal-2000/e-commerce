@@ -3,7 +3,6 @@
     "saleMessage": "全ての水着の夏のセールと無料のエクスプレス配送 - 50％オフ！",
     "shopNow": "今すぐショップ"
   },
-
   "languageSelector": {
     "english": "英語",
     "russian": "ロシア語",
@@ -13,7 +12,6 @@
     "hungarian": "ハンガリー語",
     "hindi": "ヒンディー語"
   },
-
   "nav": {
     "home": "ホーム",
     "contact": "お問い合わせ",
@@ -21,17 +19,14 @@
     "profile": "プロフィール",
     "signUp": "サインアップ"
   },
-
   "navTools": {
     "favorite": "お気に入り",
     "cart": "カート",
     "userMenu": "ユーザーメニュー"
   },
-
   "homeSlider": {
     "title": "最大30％オフのバウチャー"
   },
-
   "products": {
     "PS5Gamepad": {
       "shortName": "PS5ゲームパッド",
@@ -130,7 +125,6 @@
       "description": "キルトサテンジャケットで外出コレクションをアップグレードします。プレミアムサテン生地で作られたこのジャケットは、キルティングデザインが特徴で、スタイルと機能を簡単に組み合わせます。要素に立ち向かうか、町を歩くかに関係なく、その豪華なテクスチャと洗練されたシルエットは、どんなワードローブにも柔軟な追加です。退屈なアウターウェアにさようならを言い、キルトサテンジャケットで無駄なスタイルにハローを言います。"
     }
   },
-
   "productCard": {
     "buttonText": {
       "addToCart": "カートに追加",
@@ -143,7 +137,6 @@
       "favorite": "お気に入り"
     }
   },
-
   "detailsPage": {
     "productRate": "商品の評価は5つ星中{{rate}}です",
     "reviews": "({{votes}} レビュー)",
@@ -161,7 +154,6 @@
     },
     "relatedItems": "関連商品"
   },
-
   "common": {
     "facebook": "フェイスブック",
     "twitter": "ツイッター",
@@ -180,7 +172,6 @@
     "backTo": "戻る",
     "home": "ホームページ"
   },
-
   "history": {
     "account": "アカウント",
     "products": "製品",
@@ -190,7 +181,6 @@
     "404Error": "404 エラー",
     "orders": "注文"
   },
-
   "footer": {
     "section1": {
       "subscribe": "購読",
@@ -227,7 +217,6 @@
       "codedBy": "コーディング:"
     }
   },
-
   "sectionsMenu": {
     "title": "私たちのコレクションを探索する",
     "womenFashion": {
@@ -260,7 +249,6 @@
       "healthBeauty": "健康と美容"
     }
   },
-
   "mobileNav": {
     "profile": "プロフィール",
     "home": "ホーム",
@@ -273,7 +261,6 @@
     "signOut": "サインアウト",
     "hey": "こんにちは"
   },
-
   "buttons": {
     "viewAllProducts": "すべての製品を見る",
     "buyNow": "今すぐ購入",
@@ -294,12 +281,11 @@
     "confirmReceiveAll": "すべて受け取ったことを確認する",
     "cancelAll": "すべてキャンセル"
   },
-
   "aboutPage": {
     "heroSection": {
       "heading": "私たちの物語",
-      "paragraphOne": "2024年に設立されたExclusiveは、イラクの主要なオンラインショッピングマーケットプレイスであり、全国の顧客にサービスを提供しています。パーソナライズされたマーケティング、先進的なデータ分析、および包括的なサービスソリューションに重点を置いて、Exclusiveは10,500以上の販売者と300のブランドをサポートし、全国で300万人の顧客にリーチしています。",
-      "paragraphTwo": "Exclusiveは、100万以上の商品を取り揃えた広範なセレクションを提供しており、顧客の多様なニーズに応えるために絶えず拡大しています。エレクトロニクスからファッション、家庭用品から美容製品まで、Exclusiveは幅広いカテゴリを提供しています。",
+      "paragraphOne": "2024年に設立されたE-commercewは、イラクの主要なオンラインショッピングマーケットプレイスであり、全国の顧客にサービスを提供しています。パーソナライズされたマーケティング、先進的なデータ分析、および包括的なサービスソリューションに重点を置いて、E-commercewは10,500以上の販売者と300のブランドをサポートし、全国で300万人の顧客にリーチしています。",
+      "paragraphTwo": "E-commercewは、100万以上の商品を取り揃えた広範なセレクションを提供しており、顧客の多様なニーズに応えるために絶えず拡大しています。エレクトロニクスからファッション、家庭用品から美容製品まで、E-commercewは幅広いカテゴリを提供しています。",
       "imageAlt": "買い物をして幸せな2人の若い女性"
     },
     "cardInfo": {
@@ -340,7 +326,6 @@
       }
     }
   },
-
   "sectionTitles": {
     "todaysSection": {
       "title": "今日の",
@@ -364,7 +349,6 @@
     },
     "forYou": "あなたにぴったり"
   },
-
   "categoriesData": {
     "phones": "電話",
     "computers": "コンピューター",
@@ -377,19 +361,16 @@
     "animal": "動物",
     "makeup": "メイク"
   },
-
   "productPoster": {
     "title": "カテゴリー",
     "subTitle": "あなたの音楽体験を向上させる"
   },
-
   "notFoundPage": {
     "tabTitle": "ページが見つかりません",
     "description": "訪問したページが見つかりませんでした。ホームページに移動することができます。",
     "notBuiltTabTitle": "ページが作成されていません",
     "notBuiltDescription": "申し訳ありませんが、お探しのページはまだ作成されていません。"
   },
-
   "featuredSection": {
     "mediumPoster": {
       "title": "プレイステーション5",
@@ -408,7 +389,6 @@
       "description": "GUCCI INTENSE OUD EDP"
     }
   },
-
   "tooltips": {
     "scrollToTop": "トップにスクロール",
     "repoStarsForks": "ウェブサイトのリポジトリ",
@@ -417,7 +397,6 @@
     "confirm": "確認",
     "hidePermanent": "このボタンを永久に隠す。"
   },
-
   "inputsPlaceholders": {
     "whatYouLookingFor": "何をお探しですか？",
     "enterYourEmail": "メールアドレスを入力してください",
@@ -434,7 +413,6 @@
     "emailOrPhone": "メールアドレスまたは電話番号",
     "password": "パスワード"
   },
-
   "inputsLabels": {
     "firstName": "名",
     "lastName": "姓",
@@ -449,25 +427,21 @@
     "passwordChanges": "パスワードの変更",
     "address": "住所"
   },
-
   "loginSignUpPage": {
     "createAccount": "アカウントを作成する",
     "enterDetails": "以下に詳細を入力してください",
-    "login": "Exclusiveにログインする",
+    "login": "E-commercewにログインする",
     "forgotPassword": "パスワードをお忘れですか？",
     "alreadyHaveAcc": "すでにアカウントをお持ちですか？",
     "dontHaveAcc": "アカウントを持っていませんか？"
   },
-
   "favoritePage": {
     "title": "お気に入り（{{numberOfProducts}}）"
   },
-
   "connectionLabel": {
     "restoredInternet": "接続が復旧しました",
     "noInternetAvailable": "インターネット接続が利用できません。"
   },
-
   "contactPage": {
     "contactInfoCard": {
       "phoneSection": {
@@ -483,7 +457,6 @@
       }
     }
   },
-
   "accountPage": {
     "editProfile": "プロフィールを編集する",
     "accountMenuSection": {
@@ -496,7 +469,6 @@
       "cancellations": "キャンセル"
     }
   },
-
   "cartPage": {
     "productsTable": {
       "product": "商品",
@@ -513,11 +485,9 @@
       "processToCheckout": "チェックアウトへ進む"
     }
   },
-
   "checkoutPage": {
     "hasNoProducts": "カートは現在空です。"
   },
-
   "userMenuItems": {
     "profile": "マイアカウントの管理",
     "cart": "私の注文",
@@ -526,7 +496,6 @@
     "wishlist": "ほしい物リスト",
     "logout": "ログアウト"
   },
-
   "toastAlert": {
     "accountInfoUpdated": "アカウント情報が更新されました。.",
     "messageSent": "メッセージをありがとうございます！すぐにご連絡いたします.",
@@ -550,7 +519,6 @@
     "cancelAllOrder": "すべての注文をキャンセルしてもよろしいですか？",
     "checkoutSuccess": "ご注文ありがとうございます！すぐに処理を開始します。"
   },
-
   "wishlist": "ウィッシュリスト（{{numberOfWishlist}}）",
   "cashOnDelivery": "代金引換",
   "bank": "銀行",

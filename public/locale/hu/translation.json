@@ -3,7 +3,6 @@
     "saleMessage": "Nyári Akció Minden Fürdőruhára és Ingyenes Expressz Szállítás - 50% kedvezmény!",
     "shopNow": "Vásárolj Most"
   },
-
   "languageSelector": {
     "english": "angol",
     "russian": "orosz",
@@ -13,7 +12,6 @@
     "hungarian": "magyar",
     "hindi": "hindi"
   },
-
   "nav": {
     "home": "Kezdőlap",
     "contact": "Kapcsolat",
@@ -21,17 +19,14 @@
     "profile": "Profil",
     "signUp": "Regisztráció"
   },
-
   "navTools": {
     "favorite": "Kedvencek",
     "cart": "Kosár",
     "userMenu": "Felhasználói menü"
   },
-
   "homeSlider": {
     "title": "30% kedvezmény Kuponra"
   },
-
   "products": {
     "PS5Gamepad": {
       "shortName": "PS5 Vezérlő",
@@ -130,7 +125,6 @@
       "description": "Dobd fel a külső ruhatáradat a Steppelt Selyem Kabáttal. Prémium selyem anyagból készült és steppelt kialakítással, ez a kabát könnyedén ötvözi a stílust és a funkcionalitást. Legyen szó az elemekkel való küzdelemről vagy a városban való barangolásról, luxus textúrája és letisztult sziluettje sokoldalúvá teszi bármelyik gardrób alapdarabjává. Búcsúzz el a unalmas külső ruházattól és üdvözöld a könnyed stílust a Steppelt Selyem Kabáttal."
     }
   },
-
   "productCard": {
     "buttonText": {
       "addToCart": "Kosárba",
@@ -143,7 +137,6 @@
       "favorite": "Kedvenc"
     }
   },
-
   "detailsPage": {
     "productRate": "A termék értékelése {{rate}} az 5 csillagból",
     "reviews": "({{votes}} vélemény)",
@@ -161,7 +154,6 @@
     },
     "relatedItems": "Kapcsolódó Tételek"
   },
-
   "common": {
     "facebook": "Facebook",
     "twitter": "Twitter",
@@ -180,7 +172,6 @@
     "backTo": "Vissza a",
     "home": "Kezdőlap"
   },
-
   "history": {
     "account": "Fiók",
     "products": "Termékek",
@@ -190,7 +181,6 @@
     "404Error": "404 Hiba",
     "orders": "rendelések"
   },
-
   "footer": {
     "section1": {
       "subscribe": "Feliratkozás",
@@ -227,7 +217,6 @@
       "codedBy": "és kódolta"
     }
   },
-
   "sectionsMenu": {
     "title": "Fedezze fel a kollekcióinkat",
     "womenFashion": {
@@ -272,7 +261,6 @@
     "signOut": "Kijelentkezés",
     "hey": "Hé"
   },
-
   "buttons": {
     "viewAllProducts": "Összes termék megtekintése",
     "buyNow": "Vásárlás most",
@@ -293,12 +281,11 @@
     "confirmReceiveAll": "Minden átvételének megerősítése",
     "cancelAll": "Mindent töröl"
   },
-
   "aboutPage": {
     "heroSection": {
       "heading": "Mi történetünk",
-      "paragraphOne": "2024-ben indították el, az Exclusive Irak vezető online vásárlási piactere, amely országosan szolgálja ki az ügyfeleket. Az egyénre szabott marketingre, a fejlett adat-elemzésekre és az átfogó szolgáltatási megoldásokra összpontosítva az Exclusive több mint 10 500 eladót és 300 márkát támogat, és 3 millió ügyfelet ér el az egész országban.",
-      "paragraphTwo": "Az Exclusive több mint 1 millió termékből álló széles választékot kínál, amely folyamatosan bővül, hogy megfeleljen az ügyfelek sokféle igényének. Az elektronikától a divatig, a háztartási cikkektől a szépségápolási termékekig az Exclusive számos kategóriát kínál, amelyek közül választhat.",
+      "paragraphOne": "2024-ben indították el, az E-commercew Irak vezető online vásárlási piactere, amely országosan szolgálja ki az ügyfeleket. Az egyénre szabott marketingre, a fejlett adat-elemzésekre és az átfogó szolgáltatási megoldásokra összpontosítva az E-commercew több mint 10 500 eladót és 300 márkát támogat, és 3 millió ügyfelet ér el az egész országban.",
+      "paragraphTwo": "Az E-commercew több mint 1 millió termékből álló széles választékot kínál, amely folyamatosan bővül, hogy megfeleljen az ügyfelek sokféle igényének. Az elektronikától a divatig, a háztartási cikkektől a szépségápolási termékekig az E-commercew számos kategóriát kínál, amelyek közül választhat.",
       "imageAlt": "két boldog fiatal nő vásárol"
     },
     "cardInfo": {
@@ -339,7 +326,6 @@
       }
     }
   },
-
   "sectionTitles": {
     "todaysSection": {
       "title": "Mai",
@@ -363,7 +349,6 @@
     },
     "forYou": "Csak neked"
   },
-
   "categoriesData": {
     "phones": "Telefonok",
     "computers": "Számítógépek",
@@ -380,14 +365,12 @@
     "title": "Kategóriák",
     "subTitle": "Fokozza a zenei élményét"
   },
-
   "notFoundPage": {
     "tabTitle": "Az oldal nem található",
     "description": "A látogatott oldal nem található. Léphet vissza a kezdőlapra.",
     "notBuiltTabTitle": "Az oldal nincs elkészítve",
     "notBuiltDescription": "Sajnáljuk, az oldalt, amelyet keres, még nem készítették el."
   },
-
   "featuredSection": {
     "mediumPoster": {
       "title": "PlayStation 5",
@@ -406,7 +389,6 @@
       "description": "GUCCI INTENSE OUD EDP"
     }
   },
-
   "tooltips": {
     "scrollToTop": "Görgetés az oldal tetejére",
     "repoStarsForks": "a webhely tárolója",
@@ -415,7 +397,6 @@
     "confirm": "Megerősít",
     "hidePermanent": "Véglegesen elrejti ezt a gombot."
   },
-
   "inputsPlaceholders": {
     "whatYouLookingFor": "Mit keresel?",
     "enterYourEmail": "Írd be az email címed",
@@ -432,7 +413,6 @@
     "emailOrPhone": "Email vagy telefonszám",
     "password": "Jelszó"
   },
-
   "inputsLabels": {
     "firstName": "Keresztnév",
     "lastName": "Vezetéknév",
@@ -447,20 +427,17 @@
     "passwordChanges": "Jelszó módosítása",
     "address": "Cím"
   },
-
   "loginSignUpPage": {
     "createAccount": "Fiók létrehozása",
     "enterDetails": "Írd be az adataidat lentebb",
-    "login": "Bejelentkezés az Exclusive webhelyre",
+    "login": "Bejelentkezés az E-commercew webhelyre",
     "forgotPassword": "Elfelejtett jelszó?",
     "alreadyHaveAcc": "Már van fiókod?",
     "dontHaveAcc": "Nincs fiókja?"
   },
-
   "favoritePage": {
     "title": "Kedvencek ({{numberOfProducts}})"
   },
-
   "connectionLabel": {
     "restoredInternet": "A kapcsolat helyreállt",
     "noInternetAvailable": "Nincs internetkapcsolat."
@@ -480,7 +457,6 @@
       }
     }
   },
-
   "accountPage": {
     "editProfile": "Profil szerkesztése",
     "accountMenuSection": {
@@ -493,7 +469,6 @@
       "cancellations": "Lemondásaim"
     }
   },
-
   "cartPage": {
     "productsTable": {
       "product": "Termék",
@@ -510,11 +485,9 @@
       "processToCheckout": "Folyamat a pénztárhoz"
     }
   },
-
   "checkoutPage": {
     "hasNoProducts": "A kosara jelenleg üres."
   },
-
   "userMenuItems": {
     "profile": "Fiókom kezelése",
     "cart": "Rendelésem",
@@ -523,7 +496,6 @@
     "wishlist": "Kívánságlistám",
     "logout": "Kijelentkezés"
   },
-
   "toastAlert": {
     "accountInfoUpdated": "A fiók információi frissítve.",
     "messageSent": "Köszönjük üzenetét! Hamarosan válaszolunk.",
@@ -547,7 +519,6 @@
     "cancelAllOrder": "Biztosan törölni szeretné az összes rendelést?",
     "checkoutSuccess": "Köszönjük a rendelését! Azonnal elkezdjük feldolgozni."
   },
-
   "wishlist": "Kívánságlista ({{numberOfWishlist}})",
   "cashOnDelivery": "Utánvétel",
   "bank": "Bank",

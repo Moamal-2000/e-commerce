@@ -3,7 +3,6 @@
     "saleMessage": "Vente d'été pour tous les maillots de bain et livraison express gratuite - 50% de réduction !",
     "shopNow": "Achetez maintenant"
   },
-
   "languageSelector": {
     "english": "Anglais",
     "russian": "Russe",
@@ -13,7 +12,6 @@
     "hungarian": "Hongrois",
     "hindi": "Hindi"
   },
-
   "nav": {
     "home": "Accueil",
     "contact": "Contact",
@@ -21,17 +19,14 @@
     "profile": "Profil",
     "signUp": "S'inscrire"
   },
-
   "navTools": {
     "favorite": "Favoris",
     "cart": "Panier",
     "userMenu": "Menu utilisateur"
   },
-
   "homeSlider": {
     "title": "Jusqu'à 30% de réduction sur le bon d'achat"
   },
-
   "products": {
     "PS5Gamepad": {
       "shortName": "Manette PS5",
@@ -130,7 +125,6 @@
       "description": "Rehaussez votre collection de vêtements d'extérieur avec la veste matelassée en satin. Fabriquée à partir de tissu satiné de qualité supérieure et dotée d'un design matelassé, cette veste allie style et fonctionnalité avec facilité. Que vous affrontiez les éléments ou sortiez en ville, sa texture luxueuse et sa silhouette élégante en font un ajout polyvalent à toute garde-robe. Dites adieu aux vêtements d'extérieur ennuyeux et bonjour au style sans effort avec la veste matelassée en satin."
     }
   },
-
   "productCard": {
     "buttonText": {
       "addToCart": "Ajouter au panier",
@@ -143,7 +137,6 @@
       "favorite": "Favori"
     }
   },
-
   "detailsPage": {
     "productRate": "La note du produit est {{rate}} sur 5 étoiles",
     "reviews": "({{votes}} Avis)",
@@ -161,7 +154,6 @@
     },
     "relatedItems": "Articles associés"
   },
-
   "common": {
     "facebook": "Facebook",
     "twitter": "Twitter",
@@ -180,7 +172,6 @@
     "backTo": "Retour à",
     "home": "Page d'accueil"
   },
-
   "history": {
     "account": "Compte",
     "products": "Produits",
@@ -190,7 +181,6 @@
     "404Error": "Erreur 404",
     "orders": "commandes"
   },
-
   "footer": {
     "section1": {
       "subscribe": "S'abonner",
@@ -227,7 +217,6 @@
       "codedBy": "et codé par"
     }
   },
-
   "sectionsMenu": {
     "title": "Découvrez nos collections",
     "womenFashion": {
@@ -260,7 +249,6 @@
       "healthBeauty": "Santé et beauté"
     }
   },
-
   "mobileNav": {
     "profile": "Profil",
     "home": "Accueil",
@@ -273,7 +261,6 @@
     "signOut": "Déconnexion",
     "hey": "Salut"
   },
-
   "buttons": {
     "viewAllProducts": "Voir tous les produits",
     "buyNow": "Acheter maintenant",
@@ -294,12 +281,11 @@
     "confirmReceiveAll": "Confirmer la réception de tous",
     "cancelAll": "Tout annuler"
   },
-
   "aboutPage": {
     "heroSection": {
       "heading": "Notre histoire",
-      "paragraphOne": "Lancé en 2024, Exclusive est la principale place de marché en ligne d'Irak, servant des clients à l'échelle nationale. Avec un fort accent sur le marketing personnalisé, l'analyse de données avancée et des solutions de service complètes, Exclusive soutient plus de 10 500 vendeurs et 300 marques, atteignant 3 millions de clients à travers le pays.",
-      "paragraphTwo": "Exclusive offre une vaste sélection de plus d'un million de produits, en expansion constante pour répondre aux besoins diversifiés de ses clients. Des électroniques à la mode, et des articles pour la maison aux produits de beauté, Exclusive propose un large éventail de catégories à choisir.",
+      "paragraphOne": "Lancé en 2024, E-commercew est la principale place de marché en ligne d'Irak, servant des clients à l'échelle nationale. Avec un fort accent sur le marketing personnalisé, l'analyse de données avancée et des solutions de service complètes, E-commercew soutient plus de 10 500 vendeurs et 300 marques, atteignant 3 millions de clients à travers le pays.",
+      "paragraphTwo": "E-commercew offre une vaste sélection de plus d'un million de produits, en expansion constante pour répondre aux besoins diversifiés de ses clients. Des électroniques à la mode, et des articles pour la maison aux produits de beauté, E-commercew propose un large éventail de catégories à choisir.",
       "imageAlt": "deux jeunes femmes heureuses de faire du shopping"
     },
     "cardInfo": {
@@ -340,7 +326,6 @@
       }
     }
   },
-
   "sectionTitles": {
     "todaysSection": {
       "title": "Les offres du jour",
@@ -364,7 +349,6 @@
     },
     "forYou": "Juste pour vous"
   },
-
   "categoriesData": {
     "phones": "Téléphones",
     "computers": "Ordinateurs",
@@ -377,19 +361,16 @@
     "animal": "Animaux",
     "makeup": "Maquillage"
   },
-
   "productPoster": {
     "title": "Catégories",
     "subTitle": "Améliorez votre expérience musicale"
   },
-
   "notFoundPage": {
     "tabTitle": "Page non trouvée",
     "description": "La page que vous avez visitée n'a pas été trouvée. Vous pouvez aller à la page d'accueil.",
     "notBuiltTabTitle": "Page non construite",
     "notBuiltDescription": "Désolé, la page que vous recherchez n'est pas encore construite."
   },
-
   "featuredSection": {
     "mediumPoster": {
       "title": "PlayStation 5",
@@ -408,7 +389,6 @@
       "description": "GUCCI INTENSE OUD EDP"
     }
   },
-
   "tooltips": {
     "scrollToTop": "Remonter en haut",
     "repoStarsForks": "dépôt du site web",
@@ -417,7 +397,6 @@
     "confirm": "Confirmer",
     "hidePermanent": "Masquer ce bouton de manière permanente."
   },
-
   "inputsPlaceholders": {
     "whatYouLookingFor": "Que recherchez-vous ?",
     "enterYourEmail": "Entrez votre e-mail",
@@ -434,7 +413,6 @@
     "emailOrPhone": "E-mail ou numéro de téléphone",
     "password": "Mot de passe"
   },
-
   "inputsLabels": {
     "firstName": "Prénom",
     "lastName": "Nom de famille",
@@ -449,25 +427,21 @@
     "passwordChanges": "Changements de mot de passe",
     "address": "Adresse"
   },
-
   "loginSignUpPage": {
     "createAccount": "Créer un compte",
     "enterDetails": "Entrez vos détails ci-dessous",
-    "login": "Se connecter à Exclusive",
+    "login": "Se connecter à E-commercew",
     "forgotPassword": "Mot de passe oublié ?",
     "alreadyHaveAcc": "Vous avez déjà un compte ?",
     "dontHaveAcc": "Vous n'avez pas de compte ?"
   },
-
   "favoritePage": {
     "title": "Favoris ({{numberOfProducts}})"
   },
-
   "connectionLabel": {
     "restoredInternet": "La connexion a été rétablie",
     "noInternetAvailable": "Aucune connexion Internet disponible."
   },
-
   "contactPage": {
     "contactInfoCard": {
       "phoneSection": {
@@ -483,7 +457,6 @@
       }
     }
   },
-
   "accountPage": {
     "editProfile": "Modifier votre profil",
     "accountMenuSection": {
@@ -496,7 +469,6 @@
       "cancellations": "Mes annulations"
     }
   },
-
   "cartPage": {
     "productsTable": {
       "product": "Produit",
@@ -513,11 +485,9 @@
       "processToCheckout": "Passer à la caisse"
     }
   },
-
   "checkoutPage": {
     "hasNoProducts": "Votre panier est actuellement vide."
   },
-
   "userMenuItems": {
     "profile": "Gérer mon compte",
     "cart": "Ma commande",
@@ -526,11 +496,10 @@
     "wishlist": "Liste de souhaits",
     "logout": "Se déconnecter"
   },
-
   "toastAlert": {
     "accountInfoUpdated": "Les informations du compte ont été mises à jour.",
     "messageSent": "Merci pour votre message ! Nous vous répondrons sous peu",
-    "subscriptionSuccess": "Vous vous êtes abonné aux offres exclusives!",
+    "subscriptionSuccess": "Vous vous êtes abonné aux offres E-commercews!",
     "subscriptionFailed": "Échec de l'abonnement. Veuillez vérifier votre connexion Internet.",
     "loginSuccess": "Vous êtes connecté avec succès. Bienvenue!",
     "loginFailed": "Échec de la connexion. Veuillez vérifier votre connexion Internet.",
@@ -550,8 +519,6 @@
     "cancelAllOrder": "Êtes-vous sûr de vouloir annuler toutes les commandes ?",
     "checkoutSuccess": "Merci pour votre commande ! Nous allons commencer à la traiter immédiatement."
   },
-
-
   "wishlist": "Liste de souhaits ({{numberOfWishlist}})",
   "cashOnDelivery": "Paiement à la livraison",
   "bank": "Banque",
