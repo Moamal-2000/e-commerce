@@ -256,7 +256,7 @@ export function showInvalidInputAlert(event) {
   const inputs = event.target.querySelectorAll("input");
   let index = 0;
 
-  for (const [key, value] of form.entries()) {
+  for (const [, value] of form.entries()) {
     const regex = billingInputsData[index]?.regex;
     const isValid = regex ? regex.test(value) : true;
 
@@ -281,7 +281,7 @@ export function isCheckoutFormValid(event) {
   let hasInvalidInput = false;
   let index = 0;
 
-  for (const [key, value] of form.entries()) {
+  for (const [, value] of form.entries()) {
     const regex = billingInputsData[index]?.regex;
     const isValid = regex ? regex.test(value) : true;
     if (!isValid) {
