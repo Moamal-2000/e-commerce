@@ -7,21 +7,22 @@ export function hasDecimalPart(num) {
 }
 
 export function getTimeObj(milliseconds) {
-  const totalSeconds = Math.floor(milliseconds / 1000),
-    totalMinutes = Math.floor(totalSeconds / 60),
-    totalHours = Math.floor(totalMinutes / 60),
-    days = Math.floor(totalHours / 24),
-    seconds = Math.floor(totalSeconds % 60),
-    minutes = Math.floor(totalMinutes % 60),
-    hours = Math.floor(totalHours % 24),
-    timeObj = {
-      days,
-      hours,
-      minutes,
-      seconds,
-      milliseconds,
-    };
-  return { ...timeObj };
+  const totalSeconds = Math.floor(milliseconds / 1000);
+  const totalMinutes = Math.floor(totalSeconds / 60);
+  const totalHours = Math.floor(totalMinutes / 60);
+
+  const days = Math.floor(totalHours / 24);
+  const hours = totalHours % 24;
+  const minutes = totalMinutes % 60;
+  const seconds = totalSeconds % 60;
+
+  return {
+    days,
+    hours,
+    minutes,
+    seconds,
+    milliseconds,
+  };
 }
 
 export function getTimeInMilliseconds(days, hours, minutes, seconds) {
