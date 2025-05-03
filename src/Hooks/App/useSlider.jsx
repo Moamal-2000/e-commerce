@@ -6,7 +6,8 @@ const useSlider = (sliderRef) => {
   const isSliderClicked = useRef(false);
 
   function handlePrevBtn(e) {
-    const isFirstSlide = sliderRef.current.scrollLeft === 0;
+    const isFirstSlide = sliderRef.current.scrollLeft <= 1;
+
     if (isFirstSlide) return;
 
     buttonEffect(e);
