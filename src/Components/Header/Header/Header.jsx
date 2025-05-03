@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { WEBSITE_NAME } from "src/Data/constants";
 import useNavToolsProps from "src/Hooks/App/useNavToolsProps";
 import NavTools from "../../Shared/MidComponents/NavTools/NavTools";
 import s from "./Header.module.scss";
@@ -12,7 +13,7 @@ const Header = () => {
     <header className={s.header} dir="ltr">
       <div className={s.container}>
         <h1>
-          <Link to="/">Exclusive</Link>
+          <Link to="/">{WEBSITE_NAME}</Link>
         </h1>
 
         <div className={s.headerContent}>

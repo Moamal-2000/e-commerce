@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { CONTACT_EMAILS, WEBSITE_NAME } from "src/Data/constants";
 import CopyRightsText from "./CopyRightsText/CopyRightsText";
 import CustomEmailInput from "./CustomEmailInput/CustomEmailInput";
 import s from "./Footer.module.scss";
@@ -16,7 +17,7 @@ const Footer = () => {
         <section className={s.sections}>
           <section className={s.section1}>
             <b>
-              <Link to="/">Exclusive</Link>
+              <Link to="/">{WEBSITE_NAME}</Link>
             </b>
             <span>{t(`${section}1.subscribe`)}</span>
             <p>{t(`${section}1.getOffer`)}</p>
@@ -30,7 +31,9 @@ const Footer = () => {
             <ul>
               <li>{t(`${section}2.address`)}</li>
               <li>
-                <a href="mailto:exclusive@gmail.com">exclusive@gmail.com</a>
+                <a href={`mailto:${CONTACT_EMAILS.gmail}`}>
+                  {CONTACT_EMAILS.gmail}
+                </a>
               </li>
               <li>
                 <a href="tel:+88015-88888-9999">+88015-88888-9999</a>

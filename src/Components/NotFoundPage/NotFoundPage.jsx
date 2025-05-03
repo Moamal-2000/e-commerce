@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
+import { WEBSITE_NAME } from "src/Data/constants";
 import { UN_BUILT_PAGES } from "src/Data/globalVariables";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
@@ -29,7 +30,7 @@ const NotFoundPage = () => {
         <title>{tabTitleText}</title>
         <meta
           name="description"
-          content="Oops! The page you're looking for on Exclusive couldn't be found. Return to our homepage to continue browsing our wide selection of products."
+          content={`Oops! The page you\`re looking for on ${WEBSITE_NAME} couldn\`t be found. Return to our homepage to continue browsing our wide selection of products.`}
         />
       </Helmet>
 

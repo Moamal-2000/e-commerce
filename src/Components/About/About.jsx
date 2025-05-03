@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { womenShopping } from "src/Assets/Images/Images";
+import { WEBSITE_NAME } from "src/Data/constants";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import FeaturedSectionFeatures from "../Home/FeaturedSection/FeaturedSectionFeatures";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
@@ -20,7 +21,7 @@ const About = () => {
         <title>About</title>
         <meta
           name="description"
-          content="About us, Launched in 2015, Exclusive is South Asia’s premier online shopping marketplace, offering over 1 million products from 10,500 sellers and 300 brands to 3 million customers in Bangladesh."
+          content={`${WEBSITE_NAME} is South Asia’s leading e-commerce platform since 2015, offering 1M+ products from 10,500 sellers and 300 brands in Bangladesh.`}
         />
         <link ref="preload" as="image" type="image/webp" href={womenShopping} />
       </Helmet>

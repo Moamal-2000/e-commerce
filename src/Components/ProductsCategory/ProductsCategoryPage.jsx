@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { WEBSITE_NAME } from "src/Data/constants";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productCardCustomizations } from "src/Data/staticData";
 import { updateLoadingState } from "src/Features/loadingSlice";
@@ -35,7 +36,7 @@ const ProductsCategoryPage = () => {
         <title>{categoryType}</title>
         <meta
           name="description"
-          content="Discover a wide range of products categorized for easy browsing on Exclusive. Explore our extensive selection by category or type to find exactly what you're looking for."
+          content={`Discover a wide range of products categorized for easy browsing on ${WEBSITE_NAME}. Explore our extensive selection by category or type to find exactly what you're looking for.`}
         />
       </Helmet>
 

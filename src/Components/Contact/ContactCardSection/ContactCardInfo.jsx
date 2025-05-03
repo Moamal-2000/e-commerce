@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { CONTACT_EMAILS } from "src/Data/constants";
 import s from "./ContactCardInfo.module.scss";
 import ContactInfo from "./ContactInfo";
 
@@ -30,12 +31,16 @@ const ContactInfoCard = () => {
         <p>{fillOutTrans}</p>
         <p>
           {customersEmailTrans + ": "}
-          <a href="mailto:customer@exclusive.com">customer@exclusive.com</a>
+          <a href={`mailto:${CONTACT_EMAILS.customers}`}>
+            {CONTACT_EMAILS.customers}
+          </a>
         </p>
 
         <p>
           {supportEmailTrans + ": "}
-          <a href="mailto:support@exclusive.com">support@exclusive.com</a>
+          <a href={`mailto:${CONTACT_EMAILS.support}`}>
+            {CONTACT_EMAILS.support}
+          </a>
         </p>
       </ContactInfo>
     </section>

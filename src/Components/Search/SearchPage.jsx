@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import { WEBSITE_NAME } from "src/Data/constants";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { updateLoadingState } from "src/Features/loadingSlice";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
@@ -32,7 +33,7 @@ const SearchPage = () => {
         <title>Search</title>
         <meta
           name="description"
-          content="Find what you're looking for quickly and easily on Exclusive's search page. Enter the product name or keywords to discover a wide range of options tailored to your preferences."
+          content={`Find what you\`re looking for quickly and easily on ${WEBSITE_NAME}\`s search page. Enter the product name or keywords to discover a wide range of options tailored to your preferences.`}
         />
       </Helmet>
 

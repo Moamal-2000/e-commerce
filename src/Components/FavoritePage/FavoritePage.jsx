@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { WEBSITE_NAME } from "src/Data/constants";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import ForYouSection from "../Shared/Sections/ForYouSection/ForYouSection";
 import s from "./FavoritePage.module.scss";
@@ -17,7 +18,7 @@ const FavoritePage = () => {
         <title>Favorite</title>
         <meta
           name="description"
-          content="Save and manage your favorite products on Exclusive. Create a personalized wishlist to easily access and purchase your preferred items anytime."
+          content={`Save and manage your favorite products on ${WEBSITE_NAME}. Create a personalized wishlist to easily access and purchase your preferred items anytime.`}
         />
       </Helmet>
 

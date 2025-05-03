@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import { WEBSITE_NAME } from "src/Data/constants";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./Cart.module.scss";
@@ -19,7 +20,7 @@ const Cart = () => {
         <title>Cart</title>
         <meta
           name="description"
-          content="Review and manage your selected items in the Exclusive cart. Add products, apply coupons, and proceed to checkout for a seamless shopping experience."
+          content={`Review and manage your selected items in the ${WEBSITE_NAME} cart. Add products, apply coupons, and proceed to checkout for a seamless shopping experience.`}
         />
       </Helmet>
 

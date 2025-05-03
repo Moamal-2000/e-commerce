@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { WEBSITE_NAME } from "src/Data/constants";
 import { showAlert } from "src/Features/alertsSlice";
 import { transferProducts } from "src/Features/productsSlice";
 import {
@@ -74,7 +75,7 @@ const CheckoutPage = () => {
         <title>Checkout</title>
         <meta
           name="description"
-          content="Complete your purchase on Exclusive by reviewing your cart, adding your shipping details, and choosing payment options such as cash or bank card for a smooth checkout experience."
+          content={`Complete your purchase on ${WEBSITE_NAME} by reviewing your cart, adding your shipping details, and choosing payment options such as cash or bank card for a smooth checkout experience.`}
         />
       </Helmet>
 

@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
+import { WEBSITE_NAME } from "src/Data/constants";
 import { SIMPLE_DELAYS } from "src/Data/globalVariables";
 import { productCardCustomizations } from "src/Data/staticData";
 import { updateLoadingState } from "src/Features/loadingSlice";
@@ -33,7 +34,7 @@ const ProductsPage = () => {
         <link ref="preconnect" href="https://api.github.com/" />
         <meta
           name="description"
-          content="Explore the entire collection of products available on Exclusive. From fashion to electronics, browse our comprehensive catalog to find the perfect items for your needs."
+          content={`Explore the entire collection of products available on ${WEBSITE_NAME}. From fashion to electronics, browse our comprehensive catalog to find the perfect items for your needs.`}
         />
       </Helmet>
 
