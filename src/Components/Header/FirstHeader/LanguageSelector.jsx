@@ -2,13 +2,22 @@ import { default as i18n, default as i18next } from "i18next";
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "src/Data/staticData";
+import useEventListener from "src/Hooks/Helper/useEventListener";
 import s from "./LanguageSelector.module.scss";
 
 const LanguageSelector = () => {
   const [isLangMenuActive, setIsLangMenuActive] = useState(false);
   const currentLangRef = useRef();
+  const langSelectorRef = useRef();
   const { t } = useTranslation();
   const currLang = i18next.language || "en";
+
+  useEventListener(document, "click", (event) => {
+    const isLangMenuClicked = langSelectorRef?.current.contains(event.target);
+    if (isLangMenuClicked) return;
+
+    setIsLangMenuActive(false);
+  });
 
   function selectLanguage(index, langCode) {
     const currentFlagEle = currentLangRef.current.querySelector("img");
@@ -58,6 +67,7 @@ const LanguageSelector = () => {
       onFocus={displayLanguageMenu}
       onBlur={() => displayLanguageMenu(false)}
       aria-haspopup="true"
+      ref={langSelectorRef}
     >
       <div className={s.currentOption} ref={currentLangRef}>
         <span aria-live="polite" />
