@@ -41,14 +41,14 @@ export function getTimeInMilliseconds(days, hours, minutes, seconds) {
 
 export function getFormattedTime(time) {
   return {
-    days: padStart(time.days),
-    hours: padStart(time.hours),
-    minutes: padStart(time.minutes),
-    seconds: padStart(time.seconds),
+    days: formatTwoDigits(time.days),
+    hours: formatTwoDigits(time.hours),
+    minutes: formatTwoDigits(time.minutes),
+    seconds: formatTwoDigits(time.seconds),
   };
 }
 
-export const padStart = (num) => `${num}`.padStart(2, "0");
+export const formatTwoDigits = (num) => String(num).padStart(2, "0");
 
 export function compareDataToObjValue(data, obj, key) {
   const filteredData = data.filter((dataObj) => dataObj[key] === obj[key]);
