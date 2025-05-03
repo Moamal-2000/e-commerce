@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { coloredStar, uncoloredStar } from "src/Assets/Images/Images";
-import { isDecimalNumber } from "src/Functions/helper";
+import { hasDecimalPart } from "src/Functions/helper";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./RateStars.module.scss";
 
@@ -35,7 +35,7 @@ function getRateStars(rate, maximumStars = 5) {
       return <img key={key} src={coloredStar} alt="star" />;
     }
 
-    if (isDecimalNumber(rate) && !isHalfStarRendered) {
+    if (hasDecimalPart(rate) && !isHalfStarRendered) {
       isHalfStarRendered = true;
       return <SvgIcon name="halfStar" key={key} />;
     }

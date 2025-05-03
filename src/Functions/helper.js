@@ -1,9 +1,9 @@
 import { SCREEN_SIZES, regexPatterns } from "../Data/globalVariables";
 import { isCurrentPassValid, isNewPasswordValid } from "./conditions";
 
-export function isDecimalNumber(number) {
-  let singleNumber = Math.floor(number);
-  return singleNumber !== number;
+export function hasDecimalPart(num) {
+  const integerPart = Math.floor(num);
+  return num !== integerPart;
 }
 
 export function getTimeObj(milliseconds) {
