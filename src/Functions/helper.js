@@ -25,16 +25,17 @@ export function getTimeObj(milliseconds) {
 }
 
 export function getTimeInMilliseconds(days, hours, minutes, seconds) {
-  const millisecondsPerSecond = 1000,
-    millisecondsPerMinute = millisecondsPerSecond * 60,
-    millisecondsPerHour = millisecondsPerMinute * 60,
-    millisecondsPerDay = millisecondsPerHour * 24,
-    totalMilliseconds =
-      days * millisecondsPerDay +
-      hours * millisecondsPerHour +
-      minutes * millisecondsPerMinute +
-      seconds * millisecondsPerSecond;
-  return totalMilliseconds;
+  const msPerSec = 1000;
+  const msPerMin = msPerSec * 60;
+  const msPerHour = msPerMin * 60;
+  const msPerDay = msPerHour * 24;
+
+  return (
+    days * msPerDay +
+    hours * msPerHour +
+    minutes * msPerMin +
+    seconds * msPerSec
+  );
 }
 
 export function getFormattedTime(time) {
