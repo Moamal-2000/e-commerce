@@ -63,9 +63,12 @@ export function checkDateBeforeMonthToPresent(getDate) {
 }
 
 export function capitalize(str) {
-  const firstCapitalLetter = str?.slice(0, 1).toUpperCase();
-  const restSmallLetters = str?.slice(1, str.length).toLowerCase();
-  return firstCapitalLetter + restSmallLetters;
+  str = String(str);
+
+  const firstChar = str[0].toUpperCase();
+  const rest = str.slice(1).toLowerCase();
+
+  return firstChar + rest;
 }
 
 export function camelCase(str) {
