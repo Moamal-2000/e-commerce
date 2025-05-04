@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
 import { addToArray } from "src/Features/productsSlice";
-import { compareDataToObjValue } from "src/Functions/helper";
+import { compareDataByObjValue } from "src/Functions/helper";
 import s from "./BuyButton.module.scss";
 
 const BuyButton = () => {
@@ -15,13 +15,13 @@ const BuyButton = () => {
   const { t } = useTranslation();
 
   function handleBuyProduct() {
-    const isAlreadyAddedToCart = compareDataToObjValue(
+    const isAlreadyAddedToCart = compareDataByObjValue(
       cartProducts,
       selectedProduct,
       "shortName"
     );
 
-    const isAlreadyAddedToOrder = compareDataToObjValue(
+    const isAlreadyAddedToOrder = compareDataByObjValue(
       orderProducts,
       selectedProduct,
       "shortName"

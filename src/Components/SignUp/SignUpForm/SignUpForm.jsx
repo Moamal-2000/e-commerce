@@ -4,7 +4,7 @@ import { showAlert } from "src/Features/alertsSlice";
 import { newSignUp, setLoginData } from "src/Features/userSlice";
 import { simpleValidationCheck } from "src/Functions/componentsFunctions";
 import {
-  compareDataToObjValue,
+  compareDataByObjValue,
   getUniqueArrayByObjectKey,
 } from "src/Functions/helper";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
@@ -31,7 +31,7 @@ const SignUpForm = () => {
     const isFormValid = simpleValidationCheck(inputs);
 
     if (isFormValid) {
-      const isUserAlreadySignedUp = compareDataToObjValue(
+      const isUserAlreadySignedUp = compareDataByObjValue(
         signedUpUsers,
         formData,
         "emailOrPhone"

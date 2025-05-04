@@ -50,7 +50,7 @@ export function getFormattedTime(time) {
 
 export const formatTwoDigits = (num) => String(num).padStart(2, "0");
 
-export function compareDataToObjValue(data, obj, key) {
+export function compareDataByObjValue(data, obj, key) {
   const filteredData = data.filter((dataObj) => dataObj[key] === obj[key]);
   return filteredData.length > 0;
 }

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
-import { compareDataToObjValue, isItemFound } from "src/Functions/helper";
+import { compareDataByObjValue, isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 
@@ -31,7 +31,7 @@ const AddToCartButton = ({ product }) => {
       return;
     }
 
-    const isAlreadyAddedToOrder = compareDataToObjValue(
+    const isAlreadyAddedToOrder = compareDataByObjValue(
       orderProducts,
       product,
       "shortName"
