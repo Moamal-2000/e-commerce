@@ -65,19 +65,25 @@ export function checkDateBeforeMonthToPresent(getDate) {
 export function capitalize(str) {
   str = String(str);
 
-  const firstChar = str[0].toUpperCase();
-  const rest = str.slice(1).toLowerCase();
+  const firstChar = str[0]?.toUpperCase();
+  const rest = str.slice(1)?.toLowerCase();
 
   return firstChar + rest;
 }
 
 export function camelCase(str) {
-  const regex = regexPatterns.words;
-  const words = str.toLowerCase().replace(regex, " ").split(" ");
-  const camelCasedWords = words.map((word, index) =>
-    index !== 0 ? capitalize(word) : word
+  const wordSeparatorRegex = regexPatterns.words;
+  const words = String(str)
+    .toLowerCase()
+    .replace(wordSeparatorRegex, " ")
+    .trim()
+    .split(/\s+/);
+
+  const camelCased = words.map((word, index) =>
+    index === 0 ? word : capitalize(word)
   );
-  return camelCasedWords.join("");
+
+  return camelCased.join("");
 }
 
 export function updateClassOnCondition(
