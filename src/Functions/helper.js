@@ -96,13 +96,14 @@ export function updateClassOnCondition(
 }
 
 export function checkEmptyInputs({ exceptions, formRef }) {
-  const formEle = formRef.current;
-  const inputs = formEle.querySelectorAll("input");
+  const formElement = formRef.current;
+  const inputElements = formElement.querySelectorAll("input");
 
-  inputs.forEach((input) => {
+  inputElements.forEach((input) => {
     const isExceptionInput = exceptions.includes(input.name);
-    const isGraterThan2 = input.value.length > 2;
-    updateClassOnCondition(input, isExceptionInput || isGraterThan2);
+    const isValidInput = input.value.length > 2;
+
+    updateClassOnCondition(input, isExceptionInput || isValidInput);
   });
 }
 
