@@ -91,8 +91,8 @@ export function updateClassOnCondition(
   condition,
   className = "invalid"
 ) {
-  const methodName = condition ? "remove" : "add";
-  input.classList[methodName](className);
+  if (!input?.classList) return;
+  input.classList.toggle(className, !condition);
 }
 
 export function checkEmptyInputs({ exceptions, formRef }) {
