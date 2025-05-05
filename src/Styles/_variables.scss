@@ -1,9 +1,15 @@
 :root {
-  --container-width: 85%;
+  --container-width: 1600px;
   --container-mobile-width: 94%;
   --page-margin: 60px 0 100px;
   --button-active-scale: .991;
   --outline-transition: outline .25s cubic-bezier(.645, .045, .355, 1);
+}
+
+@media (max-width: 1800px) {
+  :root {
+    --container-width: 90%;
+  }
 }
 
 :root {
