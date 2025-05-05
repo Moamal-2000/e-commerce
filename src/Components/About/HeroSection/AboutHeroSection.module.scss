@@ -14,8 +14,14 @@
 }
 
 .content {
-  width: 525px;
+  width: 720px;
   min-width: 500px;
+}
+
+@media (max-width: 1600px) {
+  .content {
+    width: 525px;
+  }
 }
 
 @include m.large {
@@ -72,13 +78,31 @@
 
 .imgHolder {
   flex-grow: 1;
-  width: 700px;
-  height: 708px;
+  aspect-ratio: 22/16;
   user-select: none;
+}
+
+@media (max-width: 1500px) {
+  .imgHolder {
+    aspect-ratio: 26/20;
+  }
+}
+
+@media (max-width: 1300px) {
+  .imgHolder {
+    aspect-ratio: 16/20;
+  }
+}
+
+@include m.large {
+  .imgHolder {
+    aspect-ratio: 16/18;
+  }
 }
 
 @include m.medium {
   .imgHolder {
+    aspect-ratio: unset;
     max-width: 630px;
     height: auto;
   }
@@ -87,5 +111,12 @@
 @include m.small {
   .imgHolder {
     max-width: 100%;
+    aspect-ratio: 22/20;
+  }
+}
+
+@include m.very-small {
+  .imgHolder {
+    aspect-ratio: 20/24;
   }
 }

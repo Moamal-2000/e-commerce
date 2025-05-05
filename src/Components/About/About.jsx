@@ -29,9 +29,6 @@ const About = () => {
       <main className={s.aboutPage}>
         <div className="container">
           <PagesHistory history={["/", t("nav.about")]} />
-        </div>
-
-        <div className={s.container} id="about-page">
           <AboutHeroSection />
         </div>
 

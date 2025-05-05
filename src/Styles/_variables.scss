@@ -12,6 +12,12 @@
   }
 }
 
+@media (max-width: 1300px) {
+  :root {
+    --container-width: 85%;
+  }
+}
+
 :root {
   --swiper-pagination-bullet-inactive-color: var(--very-light-gray);
   --swiper-pagination-bullet-inactive-opacity: .6;

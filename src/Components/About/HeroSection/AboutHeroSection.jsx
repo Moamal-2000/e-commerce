@@ -15,7 +15,12 @@ const AboutHeroSection = () => {
       </section>
 
       <div className={s.imgHolder}>
-        <img src={womenShopping} alt={t("aboutPage.heroSection.imageAlt")} />
+        <img
+          src={womenShopping}
+          alt={t("aboutPage.heroSection.imageAlt")}
+          width="700"
+          height="700"
+        />
       </div>
     </section>
   );
