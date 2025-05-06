@@ -10,7 +10,7 @@ const SideBarLink = ({ name, link, icon, currentPage }) => {
   const { t } = useTranslation();
 
   return (
-    <li role="menuitem" className={s.listItemLink}>
+    <li className={s.listItemLink}>
       <NavLink
         to={link}
         aria-current={currentPage}

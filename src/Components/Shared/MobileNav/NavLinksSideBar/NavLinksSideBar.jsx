@@ -9,7 +9,7 @@ const NavLinksSideBar = () => {
 
   return (
     <nav className={s.navLinks}>
-      <ul role="menu">
+      <ul>
         {mobileNavData.map(({ name, link, icon, requiteSignIn }, index) => {
           const shouldShow = requiteSignIn ? loginInfo.isSignIn : true;
           const currentPage =

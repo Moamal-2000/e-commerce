@@ -20,7 +20,7 @@ const RestNavLinks = () => {
 
   return restMobileNavData.map(
     ({ iconName, routePath, countLength, text, id }) => (
-      <li role="menuitem" key={"mobile-nav-link-" + id}>
+      <li key={"mobile-nav-link-" + id}>
         <IconWithCountAndLabel
           props={{
             iconName: iconName,
