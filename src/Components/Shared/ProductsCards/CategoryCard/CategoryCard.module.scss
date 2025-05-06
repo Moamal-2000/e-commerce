@@ -45,7 +45,7 @@
 }
 
 .card:not(:focus-visible):hover svg[data-stroke-hover] {
-  & :where(path, line) {
+  & :where(path, line, circle, rect) {
     stroke: var(--white);
   }
 }
