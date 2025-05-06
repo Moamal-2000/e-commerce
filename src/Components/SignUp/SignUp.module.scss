@@ -8,6 +8,8 @@
 .container {
   display: flex;
   align-items: center;
+  width: var(--container-width);
+  margin: 0 auto;
 }
 
 @include m.large {
@@ -33,9 +35,9 @@
 
 @include m.large {
   .imgHolder {
-    max-width: 400px;
+    max-width: 371px;
     max-height: none;
-    width: 400px;
+    width: 371px;
     height: auto;
     margin-top: 50px;
   }

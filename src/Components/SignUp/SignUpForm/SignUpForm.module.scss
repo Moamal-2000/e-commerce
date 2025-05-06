@@ -6,6 +6,12 @@
   margin: 0 120px;
 }
 
+@media (max-width: 1300px) {
+  .form {
+    margin: 0 60px;
+  }
+}
+
 @include m.medium {
   .form {
     margin: 0;

@@ -63,7 +63,7 @@ const SignUpForm = () => {
   }
 
   return (
-    <form action="GET" className={s.form} onSubmit={signUp}>
+    <form action="POST" className={s.form} onSubmit={signUp}>
       <h2>{t("loginSignUpPage.createAccount")}</h2>
       <p>{t("loginSignUpPage.enterDetails")}</p>
 

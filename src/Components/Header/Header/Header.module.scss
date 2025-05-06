@@ -19,7 +19,7 @@
 }
 
 .container {
-  width: calc(var(--container-width) + 2%);
+  width: var(--container-width);
   margin: 0 auto;
   display: grid;
   align-items: center;
