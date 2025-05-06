@@ -6,6 +6,12 @@
   margin: 0 120px;
 }
 
+@media (max-width: 1300px) {
+  .form {
+    margin: 0 60px;
+  }
+}
+
 @include m.medium {
   .form {
     margin: 0;
@@ -16,6 +22,7 @@
 @media (max-width: 500px) {
   .form {
     max-width: none;
+    width: 100%;
   }
 }
 
@@ -23,11 +30,18 @@
   font: 500 2.25rem/38px "Inter", sans-serif;
   letter-spacing: .04rem;
   width: 331px;
+  text-wrap: balance;
 }
 
 @include m.small {
   .form>h2 {
     font-size: 1.8rem;
+  }
+}
+
+@include m.very-small {
+  .form>h2 {
+    width: 100%;
   }
 }
 
@@ -40,6 +54,15 @@
   align-items: center;
   justify-content: space-between;
   margin: 40px 0 20px;
+}
+
+@include m.very-small {
+  .buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
 }
 
 .loginBtn {
@@ -65,6 +88,12 @@
   }
 }
 
+@include m.very-small {
+  .loginBtn {
+    width: 100%;
+  }
+}
+
 .buttons>a {
   -webkit-tap-highlight-color: transparent;
   outline: none;
@@ -82,6 +111,14 @@
   align-items: center;
   width: fit-content;
   margin: 40px auto 0;
+}
+
+@include m.very-small {
+  .signUpMessage {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
 }
 
 .signUpMessage>span {
