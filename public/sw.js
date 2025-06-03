@@ -1,17 +1,13 @@
 "use strict";
 
+import { getTranslationPaths } from "../src/Functions/helper";
+
 // Variables
 const CACHE_NAME = "e-commerce-v9";
 const ASSETS = [
   "/",
   "/index.html",
-  "/locale/en/translation.json",
-  "/locale/ar/translation.json",
-  "/locale/fr/translation.json",
-  "/locale/hl/translation.json",
-  "/locale/hu/translation.json",
-  "/locale/ja/translation.json",
-  "/locale/ru/translation.json",
+  ...getTranslationPaths(["en", "ar", "fr", "hl", "hu", "ja", "ru"]),
 ];
 
 // Functions

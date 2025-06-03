@@ -211,3 +211,7 @@ export function isMobileScreenWidth() {
 export function isEmailValid(emailInput) {
   return regexPatterns.email.test(emailInput.value);
 }
+
+export function getTranslationPaths(languages) {
+  return languages.map(lang => `/locale/${lang}/translation.json`)
+}
