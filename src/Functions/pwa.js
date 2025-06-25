@@ -1,4 +1,4 @@
-function handleUpdateFound(registration, setShowNotification) {
+export function handleUpdateFound(registration, setShowNotification) {
   const newWorker = registration.installing;
   if (!newWorker) return;
 
