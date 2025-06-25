@@ -213,5 +213,9 @@ export function isEmailValid(emailInput) {
 }
 
 export function getTranslationPaths(languages) {
-  return languages.map(lang => `/locale/${lang}/translation.json`)
+  return languages.map((lang) => `/locale/${lang}/translation.json`);
+}
+
+export function refreshPage() {
+  window.location.reload();
 }
