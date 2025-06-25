@@ -20,7 +20,7 @@ const RoutesLayout = () => {
   return (
     <div className="App" tabIndex="-1">
       <SkipContentLink scrollTo={skipLinkSectionId} />
-      <UpdateNotification />
+      {/* <UpdateNotification /> */}
       <FirstHeader />
       <Header />
       <MobileNav />
