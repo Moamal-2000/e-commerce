@@ -6,7 +6,7 @@ import ConnectionLabelAlert from "../Components/Shared/MiniComponents/Connection
 import GlobalOverlay from "../Components/Shared/MiniComponents/GlobalOverlay/GlobalOverlay";
 import ScrollToTop from "../Components/Shared/MiniComponents/ScrollToTop/ScrollToTop";
 import SkipContentLink from "../Components/Shared/MiniComponents/SkipContentLink";
-import VersionNotification from "../Components/Shared/MiniComponents/VersionNotification/UpdateNotification";
+import UpdateNotification from "../Components/Shared/MiniComponents/UpdateNotification/UpdateNotification";
 import MobileNav from "../Components/Shared/MobileNav/MobileNav";
 import ToastAlert from "../Components/Shared/PopUps/ToastAlert/ToastAlert";
 import ToastConfirm from "../Components/Shared/PopUps/ToastConfirm/ToastConfirm";
@@ -20,6 +20,7 @@ const RoutesLayout = () => {
   return (
     <div className="App" tabIndex="-1">
       <SkipContentLink scrollTo={skipLinkSectionId} />
+      <UpdateNotification />
       <FirstHeader />
       <Header />
       <MobileNav />
@@ -30,7 +31,6 @@ const RoutesLayout = () => {
       <ConnectionLabelAlert isOnline={isWebsiteOnline} />
       <ToastAlert />
       <ToastConfirm />
-      <VersionNotification />
     </div>
   );
 };
