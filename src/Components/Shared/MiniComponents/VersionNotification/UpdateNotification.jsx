@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { IS_PRODUCTION } from "src/Data/constants";
 import { refreshPage } from "src/Functions/helper";
 import s from "./UpdateNotification.module.scss";
 
@@ -37,7 +38,8 @@ const UpdateNotification = () => {
 export default UpdateNotification;
 
 async function registerSWWithUpdate(setShowNotification) {
-  if (!("serviceWorker" in navigator)) return;
+  const isReadToRegister = navigator?.serviceWorker && IS_PRODUCTION;
+  if (!isReadToRegister) return;
 
   try {
     const registration = await navigator.serviceWorker.register("/sw.js", {

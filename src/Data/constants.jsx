@@ -6,3 +6,4 @@ export const CONTACT_EMAILS = {
   sales: `sales@${WEBSITE_NAME.toLowerCase()}.com`,
   gmail: `${WEBSITE_NAME.toLowerCase()}@gmail.com`,
 };
+export const IS_PRODUCTION = process.env.NODE_ENV === "production";
