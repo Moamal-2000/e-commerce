@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
 import { addToArray } from "src/Features/productsSlice";
-import { compareDataByObjValue } from "src/Functions/helper";
+import { compareDataByObjValue } from "src/Functions/conditions";
 import s from "./BuyButton.module.scss";
 
 const BuyButton = () => {

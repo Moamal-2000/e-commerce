@@ -8,7 +8,7 @@ import {
   checkEmailValidation,
   checkEmptyInputs,
   checkPasswordInputs,
-} from "src/Functions/helper";
+} from "src/Functions/validation";
 import EditProfileInputs from "../EditProfileFormInputs/EditProfileInputs";
 import ProfileFormButtons from "../ProfileFormButtons/ProfileFormButtons";
 import s from "./EditProfileForm.module.scss";

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { getRestMobileNavData } from "src/Data/staticData";
-import { camelCase } from "src/Functions/helper";
+import { camelCase } from "src/Functions/formatting";
 import IconWithCountAndLabel from "../../NavTools/IconWithCountAndLabel/IconWithCountAndLabel";
 
 const RestNavLinks = () => {

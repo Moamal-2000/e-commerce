@@ -1,4 +1,3 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
@@ -7,7 +6,7 @@ import {
   otherSectionsMenuItems,
   womenFashionMenuItems,
 } from "src/Data/staticData";
-import { camelCase } from "src/Functions/helper";
+import { camelCase } from "src/Functions/formatting";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import DropDownMenu from "./DropDownMenu";
 import OtherSections from "./OtherSections";

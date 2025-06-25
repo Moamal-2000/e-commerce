@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { SCROLL_REQUIRED } from "src/Data/globalVariables";
-import { scrollToTopToolTipLeftPos } from "src/Functions/componentsFunctions";
-import { scrollToTop } from "src/Functions/helper";
+import { scrollToTop } from "src/Functions/componentsFunctions";
+import { scrollToTopToolTipLeftPos } from "src/Functions/tooltipPositions";
 import useEventListener from "src/Hooks/Helper/useEventListener";
 import SvgIcon from "../SvgIcon";
 import ToolTip from "../ToolTip";

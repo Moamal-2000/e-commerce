@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { featuresSectionData } from "src/Data/staticData";
-import { camelCase } from "src/Functions/helper";
+import { camelCase } from "src/Functions/formatting";
 import Feature from "../../Shared/MiniComponents/Feature/Feature";
 import s from "./FeaturedSectionFeatures.module.scss";
 

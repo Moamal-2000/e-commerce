@@ -5,7 +5,7 @@ import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { productsData } from "src/Data/productsData";
 import { updateLoadingState } from "src/Features/loadingSlice";
 import { updateProductsState } from "src/Features/productsSlice";
-import { searchByObjectKey } from "src/Functions/helper";
+import { searchByObjectKey } from "src/Functions/search";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import SearchInput from "./SearchInput";
 import s from "./SearchProductsInput.module.scss";

@@ -1,14 +1,4 @@
-export function isCurrentPassValid(currentPassInp, userPassword) {
-  const isCorrectPassword = currentPassInp.value === userPassword;
-  const isEmptyField = currentPassInp.value.length === 0;
-  return isCorrectPassword || isEmptyField;
-}
-
-export function isNewPasswordValid(newPasswordInput) {
-  const isGraterThan8Chars = newPasswordInput.value.length >= 8;
-  const isEmptyField = newPasswordInput.value.length === 0;
-  return isGraterThan8Chars || isEmptyField;
-}
+import { SCREEN_SIZES } from "../Data/globalVariables.jsx";
 
 export function shouldDisplaySliderButtons(windowWidth, products) {
   const displayRules = [
@@ -24,4 +14,29 @@ export function shouldDisplaySliderButtons(windowWidth, products) {
   );
 
   return shouldDisplay;
+}
+
+export function hasDecimalPart(num) {
+  const integerPart = Math.floor(num);
+  return num !== integerPart;
+}
+
+export function compareDataByObjValue(data, obj, key) {
+  const filteredData = data.filter((dataObj) => dataObj[key] === obj[key]);
+  return filteredData.length > 0;
+}
+
+export function isMobileScreenWidth() {
+  const mobileMediaQuery = `(max-width: ${SCREEN_SIZES.mobile}px)`;
+  const isMobileDevice = window.matchMedia(mobileMediaQuery).matches;
+  return isMobileDevice;
+}
+
+export function updateClassOnCondition(
+  input,
+  condition,
+  className = "invalid"
+) {
+  if (!input?.classList) return;
+  input.classList.toggle(className, !condition);
 }

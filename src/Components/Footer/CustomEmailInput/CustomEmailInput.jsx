@@ -6,8 +6,8 @@ import { showAlert } from "src/Features/alertsSlice";
 import {
   sendToolTipLeftPos,
   sendingToolTipLeftPos,
-} from "src/Functions/componentsFunctions";
-import { isEmailValid } from "src/Functions/helper";
+} from "src/Functions/tooltipPositions";
+import { isEmailValid } from "src/Functions/validation";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import SpinnerLoading from "../../Shared/Loaders/SpinnerLoading";

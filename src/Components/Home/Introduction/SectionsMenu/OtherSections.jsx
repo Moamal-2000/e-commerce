@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { camelCase } from "src/Functions/helper";
+import { camelCase } from "src/Functions/formatting";
 
 const OtherSections = ({ data }) => {
   const { t } = useTranslation();

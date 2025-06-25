@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { camelCase } from "src/Functions/helper";
+import { camelCase } from "src/Functions/formatting";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
 import s from "./SideBarLink.module.scss";
 

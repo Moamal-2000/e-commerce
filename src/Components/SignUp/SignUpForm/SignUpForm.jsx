@@ -2,11 +2,9 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
 import { newSignUp, setLoginData } from "src/Features/userSlice";
-import { simpleValidationCheck } from "src/Functions/componentsFunctions";
-import {
-  compareDataByObjValue,
-  getUniqueArrayByObjectKey,
-} from "src/Functions/helper";
+import { compareDataByObjValue } from "src/Functions/conditions";
+import { getUniqueArrayByObjectKey } from "src/Functions/helper";
+import { simpleValidationCheck } from "src/Functions/validation";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import SignUpButtons from "./SignUpButtons/SignUpButtons";
 import s from "./SignUpForm.module.scss";

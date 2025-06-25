@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { coloredStar, uncoloredStar } from "src/Assets/Images/Images";
-import { hasDecimalPart } from "src/Functions/helper";
+import { hasDecimalPart } from "src/Functions/conditions";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./RateStars.module.scss";
 

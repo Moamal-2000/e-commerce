@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { showAlert } from "src/Features/alertsSlice";
 import { newSignUp } from "src/Features/userSlice";
-import { simpleValidationCheck } from "src/Functions/componentsFunctions";
+import { simpleValidationCheck } from "src/Functions/validation";
 import useOnlineStatus from "src/Hooks/Helper/useOnlineStatus";
 import s from "./LogInForm.module.scss";
 import LogInFormInputs from "./LogInFormInputs/LogInFormInputs";

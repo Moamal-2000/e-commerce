@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
-import { camelCase } from "src/Functions/helper";
+import { camelCase } from "src/Functions/formatting";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./CategoryCard.module.scss";
 

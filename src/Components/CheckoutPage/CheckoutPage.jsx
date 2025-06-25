@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { WEBSITE_NAME } from "src/Data/constants";
 import { showAlert } from "src/Features/alertsSlice";
 import { transferProducts } from "src/Features/productsSlice";
+import { blurInputs } from "src/Functions/componentsFunctions";
 import {
-  blurInputs,
   isCheckoutFormValid,
   showInvalidInputAlert,
-} from "src/Functions/componentsFunctions";
+} from "src/Functions/validation";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import useFormData from "src/Hooks/Helper/useFormData";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";

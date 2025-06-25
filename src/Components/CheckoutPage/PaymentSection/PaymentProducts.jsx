@@ -23,7 +23,7 @@ const PaymentProducts = ({ products }) => {
             </span>
           </div>
 
-          <span className={s.price}>${afterDiscount}</span>
+          <span className={s.price}>{afterDiscount}</span>
         </Link>
       ))}
 

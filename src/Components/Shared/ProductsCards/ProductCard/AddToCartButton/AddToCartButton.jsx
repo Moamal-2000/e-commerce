@@ -3,7 +3,8 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { showAlert } from "src/Features/alertsSlice";
 import { addToArray, removeByKeyName } from "src/Features/productsSlice";
-import { compareDataByObjValue, isItemFound } from "src/Functions/helper";
+import { compareDataByObjValue } from "src/Functions/conditions";
+import { isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 

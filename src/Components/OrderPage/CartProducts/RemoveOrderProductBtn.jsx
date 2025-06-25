@@ -5,7 +5,7 @@ import { REMOVE_ORDER_PRODUCT } from "src/Data/constants";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { showAlert, updateAlertState } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
-import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
+import { cartProductToolTipPos } from "src/Functions/tooltipPositions";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";

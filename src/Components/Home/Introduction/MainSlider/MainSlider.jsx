@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { DEFAULT_SWIPER_SPEED } from "src/Data/globalVariables";
-import { isMobileScreenWidth } from "src/Functions/helper";
+import { isMobileScreenWidth } from "src/Functions/conditions";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";

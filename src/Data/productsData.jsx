@@ -64,7 +64,10 @@ import {
   wiredKeyboardThum2,
   wiredKeyboardThum3,
 } from "src/Assets/Products/ProductImgs";
-import { setAfterDiscountKey, setFormattedPrice } from "src/Functions/helper";
+import {
+  setAfterDiscountKey,
+  setFormattedPrice,
+} from "src/Functions/formatting";
 
 export const productsData = [
   {

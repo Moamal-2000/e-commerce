@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { camelCase } from "src/Functions/helper";
+import { camelCase } from "src/Functions/formatting";
 import s from "./MemberCard.module.scss";
 import SocialMedia from "./memberCardComponents/SocialMedia";
 

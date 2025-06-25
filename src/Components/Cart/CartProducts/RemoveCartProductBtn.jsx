@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { SCREEN_SIZES } from "src/Data/globalVariables";
 import { removeById } from "src/Features/productsSlice";
-import { cartProductToolTipPos } from "src/Functions/componentsFunctions";
+import { cartProductToolTipPos } from "src/Functions/tooltipPositions";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
@@ -14,7 +14,9 @@ const RemoveCartProductBtn = ({ productId }) => {
   const { t, i18n } = useTranslation();
   const { windowWidth } = useGetResizeWindow();
 
-  const [toolTipLeftPos, setToolTipLeftPos] = useState(cartProductToolTipPos(i18n.language));
+  const [toolTipLeftPos, setToolTipLeftPos] = useState(
+    cartProductToolTipPos(i18n.language)
+  );
   const [toolTipTopPos, setToolTipTopPos] = useState("50%");
 
   function updateToolTipPositions() {

@@ -2,12 +2,12 @@ import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { showAlert } from "src/Features/alertsSlice";
-import { getSubTotal } from "src/Functions/helper";
+import { getSubTotal, formatePrice } from "src/Functions/formatting";
 import s from "./CartInfoMenu.module.scss";
 
 const CartInfoMenu = () => {
   const { cartProducts } = useSelector((state) => state.products);
-  const subTotal = getSubTotal(cartProducts);
+  const subTotal = formatePrice(getSubTotal(cartProducts));
   const { t } = useTranslation();
   const cartInfo = "cartPage.cartInfoMenu";
   const navigateTo = useNavigate();
@@ -20,7 +20,7 @@ const CartInfoMenu = () => {
       <div className={s.content}>
         <div className={s.item}>
           <span>{t(`${cartInfo}.subTotal`)}:</span>
-          <span aria-label={`Subtotal ${subTotal}`}>${subTotal}</span>
+          <span aria-label={`Subtotal ${subTotal}`}>{subTotal}</span>
         </div>
 
         <div className={s.item}>
@@ -32,7 +32,7 @@ const CartInfoMenu = () => {
 
         <div className={s.item}>
           <span>{t(`${cartInfo}.total`)}:</span>
-          <span aria-label={`Total ${subTotal}`}>${subTotal}</span>
+          <span aria-label={`Total ${subTotal}`}>{subTotal}</span>
         </div>
       </div>
 

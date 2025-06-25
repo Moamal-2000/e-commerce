@@ -1,13 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { formatePrice, getNumericPrice } from "src/Functions/formatting";
 import ConfirmOrderProductBtn from "./ConfirmOrderProductBtn";
 import s from "./OrderProduct.module.scss";
 import RemoveOrderProductBtn from "./RemoveOrderProductBtn";
 
 const OrderProduct = ({ data }) => {
   const { img, name, shortName, afterDiscount, quantity } = data;
-  const priceAfterDiscount = afterDiscount.replaceAll(",", "");
-  const subTotal = (quantity * priceAfterDiscount).toFixed(2);
+  const priceAfterDiscount = getNumericPrice(afterDiscount);
+  const subTotal = formatePrice((quantity * priceAfterDiscount).toFixed(2));
   const { t } = useTranslation();
 
   const translatedProduct = translateProduct({
@@ -34,11 +35,11 @@ const OrderProduct = ({ data }) => {
         <Link to={`/details?product=${name}`}>{translatedProduct}</Link>
       </td>
 
-      <td className={s.price}>${afterDiscount}</td>
+      <td className={s.price}>{afterDiscount}</td>
 
       <td>{quantity}</td>
 
-      <td>${subTotal}</td>
+      <td>{subTotal}</td>
     </tr>
   );
 };
