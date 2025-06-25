@@ -75,21 +75,13 @@ async function clearOldCaches() {
 
 // Events
 self.addEventListener("install", (event) => {
-  self.skipWaiting();
   event.waitUntil(cacheAssets());
 });
 
 self.addEventListener("activate", (event) => {
-  clients.claim();
   event.waitUntil(updateCachedAssets());
 });
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(handleFetchAndCache(event.request));
-});
-
-self.addEventListener("message", (event) => {
-  if (event.data.action === "skipWaiting") {
-    self.skipWaiting();
-  }
 });
