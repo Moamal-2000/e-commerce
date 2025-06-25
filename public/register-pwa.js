@@ -1,13 +1,12 @@
 import { IS_PRODUCTION } from "../src/Data/constants";
+import { registerServiceWorker } from "../src/Functions/helper";
 
 export async function register() {
   const isReadToRegister = navigator?.serviceWorker && IS_PRODUCTION;
   if (!isReadToRegister) return;
 
   try {
-    const registration = await navigator.serviceWorker.register("./sw.js", {
-      type: "module",
-    });
+    const registration = await registerServiceWorker();
 
     return registration;
   } catch (e) {

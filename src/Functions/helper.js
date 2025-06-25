@@ -219,3 +219,9 @@ export function getTranslationPaths(languages) {
 export function refreshPage() {
   window.location.reload();
 }
+
+export async function registerServiceWorker() {
+  if (!navigator?.serviceWorker) return "serviceWorker is not supported";
+
+  navigator.serviceWorker.register("/sw.js", { type: "module" });
+}

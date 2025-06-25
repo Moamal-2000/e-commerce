@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { IS_PRODUCTION } from "src/Data/constants";
-import { refreshPage } from "src/Functions/helper";
+import { refreshPage, registerServiceWorker } from "src/Functions/helper";
 import s from "./UpdateNotification.module.scss";
 
 const UpdateNotification = () => {
@@ -21,7 +21,7 @@ const UpdateNotification = () => {
     showNotification && (
       <div className={s.notification} role="alert">
         <div className={s.content}>
-          <span>A new version is available!</span>
+          <p>A new version is available!</p>
           <button
             onClick={handleRefreshPage}
             className={s.refreshButton}
@@ -42,10 +42,7 @@ async function registerSWWithUpdate(setShowNotification) {
   if (!isReadToRegister) return;
 
   try {
-    const registration = await navigator.serviceWorker.register("/sw.js", {
-      type: "module",
-    });
-
+    const registration = await registerServiceWorker();
     if (registration.waiting) setShowNotification(true);
 
     registration.addEventListener("updatefound", () =>
