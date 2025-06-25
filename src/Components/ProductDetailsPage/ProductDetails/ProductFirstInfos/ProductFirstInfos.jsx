@@ -33,8 +33,8 @@ const ProductFirstInfos = ({ productData }) => {
         <span className={s.greenText}>{t("detailsPage.inStock")}</span>
       </div>
 
-      <span className={s.price} aria-label={`Price: $${price}`}>
-        ${price}
+      <span className={s.price} aria-label={`Price: ${price}`}>
+        {price}
       </span>
 
       <p className={s.description}>{translatedDescription}</p>

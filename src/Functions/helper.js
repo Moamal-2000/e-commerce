@@ -143,8 +143,13 @@ export function getDiscountedPrice(originalPrice, discountPercentage) {
   return discountedPrice.toFixed(2);
 }
 
-export const formatePrice = (price) =>
-  `${price}`.replace(regexPatterns.price, ",");
+export function formatePrice(price) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2,
+  }).format(price);
+}
 
 export function setAfterDiscountKey(product) {
   const discountedPrice = getDiscountedPrice(product.price, product.discount);
