@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { refreshWithNewVersion } from "src/Functions/pwa";
-import { registerSWWithUpdate } from "../../../../../public/register-pwa";
 import s from "./UpdateNotification.module.scss";
 
 const UpdateNotification = () => {
   const [showNotification, setShowNotification] = useState(false);
 
-  useEffect(() => {
-    registerSWWithUpdate(setShowNotification);
-  }, []);
+  // useEffect(() => {
+  //   registerSWWithUpdate(setShowNotification);
+  // }, []);
 
   return (
     showNotification && (
