@@ -1,5 +1,5 @@
-import { IS_PRODUCTION } from "./Data/constants";
-import { registerServiceWorker } from "./Functions/pwa";
+import { IS_PRODUCTION } from "../src/Data/constants";
+import { registerServiceWorker } from "../src/Functions/pwa";
 
 export async function register() {
   const isReadToRegister = navigator?.serviceWorker && IS_PRODUCTION;
