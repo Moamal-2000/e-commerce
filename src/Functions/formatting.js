@@ -15,7 +15,7 @@ export function formatePrice(price) {
 }
 
 export function getNumericPrice(num) {
-  return +num.replaceAll(",", "").replace("$", "");
+  return +num.replace(/,|\$/g, "");
 }
 
 export const formatTwoDigits = (num) => String(num).padStart(2, "0");
