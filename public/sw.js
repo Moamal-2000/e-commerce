@@ -1,14 +1,8 @@
 "use strict";
 
-import { getTranslationPaths } from "../src/Functions/helper";
-
 // Variables
 const CACHE_NAME = "e-commerce-v9";
-const ASSETS = [
-  "/",
-  "/index.html",
-  ...getTranslationPaths(["en", "ar", "fr", "hl", "hu", "ja", "ru"]),
-];
+const ASSETS = ["/", "/index.html"];
 
 // Functions
 async function cacheAssets() {
@@ -82,6 +76,6 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(updateCachedAssets());
 });
 
-self.addEventListener("fetch", (event) => {
+self.addEventListener("fetch", async (event) => {
   event.respondWith(handleFetchAndCache(event.request));
 });

@@ -1,9 +1,7 @@
 export async function register() {
   if ("serviceWorker" in navigator) {
     try {
-      const registration = await navigator.serviceWorker.register("./sw.js", {
-        type: "module",
-      });
+      const registration = await navigator.serviceWorker.register("./sw.js");
 
       console.log("registered", registration);
     } catch (e) {
