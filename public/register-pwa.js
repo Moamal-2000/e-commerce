@@ -8,7 +8,6 @@ export async function registerSWWithUpdate(setShowNotification) {
   try {
     const registration = await navigator.serviceWorker.register("/sw.js");
 
-    console.log("registration", registration);
     if (registration.waiting) setShowNotification(true);
 
     registration.addEventListener("updatefound", () =>

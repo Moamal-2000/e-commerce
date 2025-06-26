@@ -1,7 +1,7 @@
 "use strict";
 
 // Variables
-const CACHE_NAME = "e-commerce-v10";
+const CACHE_NAME = "e-commerce-v11";
 const ASSETS = [
   "/",
   "/index.html",
@@ -88,7 +88,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(updateCachedAssets());
 });
 
-self.addEventListener("fetch", async (event) => {
+self.addEventListener("fetch", (event) => {
   event.respondWith(handleFetchAndCache(event.request));
 });
 
