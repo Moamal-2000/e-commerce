@@ -1,3 +1,5 @@
+import { refreshPage } from "./helper";
+
 export function handleUpdateFound(registration, setShowNotification) {
   const newWorker = registration.installing;
   if (!newWorker) return;

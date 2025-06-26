@@ -1,8 +1,18 @@
 "use strict";
 
 // Variables
-const CACHE_NAME = "e-commerce-v9";
-const ASSETS = ["/", "/index.html"];
+const CACHE_NAME = "e-commerce-v10";
+const ASSETS = [
+  "/",
+  "/index.html",
+  "/locale/en/translation.json",
+  "/locale/ar/translation.json",
+  "/locale/fr/translation.json",
+  "/locale/hl/translation.json",
+  "/locale/hu/translation.json",
+  "/locale/ja/translation.json",
+  "/locale/ru/translation.json",
+];
 
 // Functions
 async function cacheAssets() {
@@ -69,13 +79,19 @@ async function clearOldCaches() {
 
 // Events
 self.addEventListener("install", (event) => {
+  self.skipWaiting();
   event.waitUntil(cacheAssets());
 });
 
 self.addEventListener("activate", (event) => {
+  clients.claim();
   event.waitUntil(updateCachedAssets());
 });
 
 self.addEventListener("fetch", async (event) => {
   event.respondWith(handleFetchAndCache(event.request));
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data.action === "skipWaiting") self.skipWaiting();
 });
