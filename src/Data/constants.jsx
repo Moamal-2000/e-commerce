@@ -7,3 +7,4 @@ export const CONTACT_EMAILS = {
   gmail: `${WEBSITE_NAME.toLowerCase()}@gmail.com`,
 };
 export const IS_PRODUCTION = process.env.NODE_ENV === "production";
+export const DEFAULT_THROTTLE_DELAY = 600;

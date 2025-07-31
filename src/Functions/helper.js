@@ -1,3 +1,5 @@
+import { DEFAULT_THROTTLE_DELAY } from "../Data/constants";
+
 export function getRandomItem(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
@@ -27,4 +29,18 @@ export function refreshPage() {
 
 export function getDataById(arr, id) {
   return arr?.find((item) => item?.id === id);
+}
+
+export function throttle(callback, delay = DEFAULT_THROTTLE_DELAY) {
+  let lastCall = 0;
+
+  return (...args) => {
+    const now = Date.now();
+    const shouldCall = now - lastCall >= delay;
+
+    if (!shouldCall) return;
+
+    lastCall = now;
+    callback.apply(this, args);
+  };
 }
