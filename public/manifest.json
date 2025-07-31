@@ -11,42 +11,42 @@
   "background_color": "#181818",
   "icons": [
     {
-      "src": "/android-chrome-192x192.webp",
+      "src": "/assets/PWA/android-chrome-192x192.webp",
       "sizes": "192x192",
       "type": "image/webp"
     },
     {
-      "src": "/android-chrome-512x512.webp",
+      "src": "/assets/PWA/android-chrome-512x512.webp",
       "sizes": "512x512",
       "type": "image/webp"
     },
     {
-      "src": "/apple-touch-icon.webp",
+      "src": "/assets/PWA/apple-touch-icon.webp",
       "sizes": "180x180",
       "type": "image/webp"
     },
     {
-      "src": "/android-chrome-512x512.webp",
+      "src": "/assets/PWA/android-chrome-512x512.webp",
       "sizes": "512x512",
       "type": "image/webp",
       "purpose": "maskable"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/assets/PWA/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
   "screenshots": [
     {
-      "src": "/install-pwa-image.webp",
+      "src": "/assets/PWA/install-pwa-image.webp",
       "sizes": "1897x861",
       "type": "image/webp",
       "form_factor": "wide",
       "label": "Wonder Widgets"
     },
     {
-      "src": "/install-pwa-mobile.webp",
+      "src": "/assets/PWA/install-pwa-mobile.webp",
       "sizes": "462x728",
       "type": "image/webp",
       "form_factor": "narrow",
