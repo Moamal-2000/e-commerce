@@ -14,30 +14,30 @@
     "@reduxjs/toolkit": "^2.8.2",
     "autoprefixer": "^10.4.21",
     "axios": "^1.11.0",
-    "i18next": "^25.3.1",
+    "i18next": "^25.3.2",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
     "postcss": "^8.5.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.5",
-    "react-i18next": "^15.6.0",
+    "react-i18next": "^15.6.1",
     "react-redux": "^9.2.0",
-    "react-router-dom": "^7.6.3",
+    "react-router-dom": "^7.7.1",
     "router-dom": "^3.0.3",
     "sass": "^1.89.2",
     "swiper": "^11.2.10",
     "web-vitals": "^5.0.3"
   },
   "devDependencies": {
-    "@types/react": "^19.1.8",
-    "@types/react-dom": "^19.1.6",
-    "@vitejs/plugin-react-swc": "^3.10.2",
-    "eslint": "^9.30.1",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react-swc": "^3.11.0",
+    "eslint": "^9.32.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "npm-check-updates": "^18.0.2",
-    "vite": "^7.0.3"
+    "vite": "^7.0.6"
   }
 }
