@@ -1,0 +1,49 @@
+@mixin fade-in-on-hover {
+  @keyframes fade-in-on-hover {
+    0% {
+      opacity: .8;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin fade-slide-up {
+  @keyframes fade-slide-up {
+    from {
+      translate: -50% 100%;
+      opacity: 0;
+    }
+
+    to {
+      translate: -50% 0;
+      opacity: 1;
+    }
+  }
+}
+
+@mixin spin {
+  @keyframes spin {
+    100% {
+      rotate: 360deg;
+    }
+  }
+}
+
+@mixin slide-label-down {
+  @keyframes slide-label-down {
+    to {
+      bottom: -60px;
+    }
+  }
+}
+
+@mixin skeleton-wave {
+  @keyframes skeleton-wave {
+    to {
+      background-position: 500px 0;
+    }
+  }
+}

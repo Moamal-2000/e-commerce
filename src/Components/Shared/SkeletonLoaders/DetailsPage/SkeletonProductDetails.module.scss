@@ -1,4 +1,6 @@
 @use "src/Styles/mixins" as m;
+@use "src/Styles/keyframes" as keyframe;
+@include keyframe.skeleton-wave;
 
 .skeletonDetailsSection {
   user-select: none;
@@ -27,7 +29,7 @@
 .skeletonDetailsSection *:empty {
   background: var(--skeleton-color1);
   background-position: -500px 0;
-  animation: skeletonShine 1.4s linear infinite normal;
+  animation: skeleton-wave 1.4s linear infinite normal;
   background-image: linear-gradient(110deg, var(--skeleton-color1) 0%, var(--skeleton-color2) 20%, var(--skeleton-color1) 40%, var(--skeleton-color1) 100%);
   background-repeat: no-repeat;
   background-size: 400px 100%;
@@ -126,10 +128,4 @@
   height: 45px;
   border-radius: 5px;
   margin-inline-start: 20px;
-}
-
-@keyframes skeletonShine {
-  to {
-    background-position: 500px 0;
-  }
 }

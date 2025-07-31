@@ -1,4 +1,6 @@
 @use "src/Styles/mixins" as m;
+@use "src/Styles/keyframes" as keyframe;
+@include keyframe.fade-in-on-hover;
 
 .header {
   background-color: var(--black);
@@ -78,17 +80,7 @@
   }
 
   &:hover {
-    animation: opacity 1s 1 forwards;
-  }
-}
-
-@keyframes opacity {
-  0% {
-    opacity: .8;
-  }
-
-  100% {
-    opacity: 1;
+    animation: fade-in-on-hover 1s 1 forwards;
   }
 }
 

@@ -1,3 +1,6 @@
+@use "src/Styles/keyframes" as keyframe;
+@include keyframe.slide-label-down;
+
 .labelBody {
   width: calc(100vw - (100% - 100vw));
   background-color: #212121;
@@ -20,11 +23,5 @@
 
 .labelBody.active {
   background-color: var(--green);
-  animation: hideLabelAnimation 1s 2s 1 forwards;
-}
-
-@keyframes hideLabelAnimation {
-  to {
-    bottom: -60px;
-  }
+  animation: slide-label-down 1s 2s 1 forwards;
 }

@@ -1,14 +1,17 @@
+@use "src/Styles/keyframes" as keyframe;
+@include keyframe.fade-slide-up;
+
 .notification {
   position: fixed;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  translate: -50% 100%;
   z-index: 1200;
   background-color: var(--very-dark-gray);
   padding: 12px 20px;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  animation: slideUp 0.3s ease-out;
+  animation: fade-slide-up .3s ease-out forwards;
 }
 
 .content {
@@ -36,17 +39,5 @@
 
   &:active {
     background-color: var(--very-light-gray2);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translate(-50%, 100%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translate(-50%, 0);
-    opacity: 1;
   }
 }
