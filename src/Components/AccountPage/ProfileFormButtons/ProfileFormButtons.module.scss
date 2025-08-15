@@ -21,6 +21,7 @@
   padding: 4px;
   margin-inline-end: 16px;
   color: var(--black);
+  user-select: none;
 
   &:hover {
     color: var(--tomato);

@@ -23,6 +23,7 @@
   outline-offset: -2px;
   font-size: 1rem;
   font-weight: 500;
+  user-select: none;
   transition: background-color .1s, color .1s;
 
   &:hover {

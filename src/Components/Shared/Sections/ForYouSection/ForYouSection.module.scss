@@ -31,6 +31,7 @@
   outline-offset: -2px;
   font-weight: 500;
   color: var(--black);
+  user-select: none;
   transition: background-color .1s, color .1s;
 
   &:hover {

@@ -40,6 +40,7 @@
   font-weight: 500;
   outline: solid 2px transparent;
   outline-offset: -2px;
+  user-select: none;
   transition: background .2s;
 
   &:focus-visible {

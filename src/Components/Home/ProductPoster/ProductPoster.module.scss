@@ -68,6 +68,7 @@
   border: none;
   outline: solid 2px transparent;
   outline-offset: -2px;
+  user-select: none;
   transition: background-color .2s;
 
   &:hover {
