@@ -1,4 +1,4 @@
-import { regexPatterns } from "../Data/constants";
+import { REGEX_PATTERNS } from "../Data/constants";
 import { billingInputsData } from "../Data/staticData";
 import { updateClassOnCondition } from "./conditions";
 
@@ -7,7 +7,7 @@ export function checkAreInputsValid(inputs) {
 }
 
 export function checkEmailValidation(emailInput) {
-  const isEmailValid = regexPatterns.email.test(emailInput.value);
+  const isEmailValid = REGEX_PATTERNS.email.test(emailInput.value);
   updateClassOnCondition(emailInput, isEmailValid);
 }
 
@@ -50,7 +50,7 @@ export function checkEmptyInputs({ exceptions, formRef }) {
 }
 
 export function isEmailValid(emailInput) {
-  return regexPatterns.email.test(emailInput.value);
+  return REGEX_PATTERNS.email.test(emailInput.value);
 }
 
 export function simpleValidationCheck(inputs) {

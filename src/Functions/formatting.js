@@ -1,4 +1,4 @@
-import { regexPatterns } from "../Data/constants";
+import { REGEX_PATTERNS } from "../Data/constants";
 
 export function getDiscountedPrice(originalPrice, discountPercentage) {
   const discountAmount = (originalPrice * discountPercentage) / 100;
@@ -30,7 +30,7 @@ export function capitalize(str) {
 }
 
 export function camelCase(str) {
-  const wordSeparatorRegex = regexPatterns.words;
+  const wordSeparatorRegex = REGEX_PATTERNS.words;
   const words = String(str)
     .toLowerCase()
     .replace(wordSeparatorRegex, " ")
