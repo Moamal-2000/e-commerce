@@ -43,7 +43,7 @@ const UserMenu = ({ isActive, toggler }) => {
       </NavLink>
 
       <NavLink to="/reviews" aria-label="Reviews page">
-        <SvgIcon name="solidStar" />
+        <SvgIcon name="star" />
         <span>{t("userMenuItems.reviews")}</span>
       </NavLink>
 
