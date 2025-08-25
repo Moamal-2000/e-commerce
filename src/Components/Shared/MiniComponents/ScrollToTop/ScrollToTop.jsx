@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { SCROLL_REQUIRED } from "src/Data/globalVariables";
+import { SCROLL_REQUIRED } from "src/Data/constants";
 import { scrollToTop } from "src/Functions/componentsFunctions";
 import { scrollToTopToolTipLeftPos } from "src/Functions/tooltipPositions";
 import useEventListener from "src/Hooks/Helper/useEventListener";

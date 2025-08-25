@@ -1,4 +1,4 @@
-import { regexPatterns } from "../Data/globalVariables";
+import { regexPatterns } from "../Data/constants";
 
 export function getDiscountedPrice(originalPrice, discountPercentage) {
   const discountAmount = (originalPrice * discountPercentage) / 100;

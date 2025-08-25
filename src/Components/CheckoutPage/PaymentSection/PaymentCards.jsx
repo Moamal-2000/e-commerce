@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { SCREEN_SIZES } from "src/Data/globalVariables";
+import { SCREEN_SIZES } from "src/Data/constants";
 import { paymentCards } from "src/Data/staticData";
 import useEventListener from "src/Hooks/Helper/useEventListener";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";

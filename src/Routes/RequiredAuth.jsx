@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { Navigate, useLocation } from "react-router-dom";
-import { pagesRequireSignIn } from "../Data/globalVariables";
+import { pagesRequireSignIn } from "../Data/constants";
 import { showAlert } from "../Features/alertsSlice";
 
 const RequiredAuth = ({ children }) => {

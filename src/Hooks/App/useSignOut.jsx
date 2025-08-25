@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { arraysToEmpty } from "src/Data/globalVariables";
+import { arraysToEmpty } from "src/Data/constants";
 import { showAlert } from "src/Features/alertsSlice";
 import { setEmptyArrays } from "src/Features/productsSlice";
 import { signOut } from "src/Features/userSlice";

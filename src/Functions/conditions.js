@@ -1,4 +1,4 @@
-import { SCREEN_SIZES } from "../Data/globalVariables.jsx";
+import { SCREEN_SIZES } from "../Data/constants.jsx";
 
 export function shouldDisplaySliderButtons(windowWidth, products) {
   const displayRules = [

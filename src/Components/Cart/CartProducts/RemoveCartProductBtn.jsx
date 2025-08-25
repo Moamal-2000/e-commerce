@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { SCREEN_SIZES } from "src/Data/globalVariables";
+import { SCREEN_SIZES } from "src/Data/constants";
 import { removeById } from "src/Features/productsSlice";
 import { cartProductToolTipPos } from "src/Functions/tooltipPositions";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";

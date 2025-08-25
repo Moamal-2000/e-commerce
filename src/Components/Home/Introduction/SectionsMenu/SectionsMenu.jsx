@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import { SCREEN_SIZES } from "src/Data/globalVariables";
+import { SCREEN_SIZES } from "src/Data/constants";
 import {
   menFashionMenuItems,
   otherSectionsMenuItems,

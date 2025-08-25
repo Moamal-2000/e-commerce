@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
-import { NAV_PROPS } from "src/Data/globalVariables";
+import { NAV_PROPS } from "src/Data/constants";
 
 const useNavToolsProps = () => {
   const [navToolsProps, setNavToolsProps] = useState({});

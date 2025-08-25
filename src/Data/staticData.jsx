@@ -24,7 +24,7 @@ import {
   indiaFlag,
   japanFlag,
 } from "../Assets/Images/Images";
-import { regexPatterns } from "./globalVariables";
+import { regexPatterns } from "./constants";
 
 export const introductionSliderData = [
   {

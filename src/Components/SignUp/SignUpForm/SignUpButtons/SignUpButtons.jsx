@@ -2,7 +2,7 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { googleIcon } from "src/Assets/Images/Images";
-import { DEFAULT_LOGIN_DATA } from "src/Data/globalVariables";
+import { DEFAULT_LOGIN_DATA } from "src/Data/constants";
 import { setLoginData } from "src/Features/userSlice";
 import { openSignWithGooglePopUp } from "../../SignUpWithGoogle/SignUpWithGooglePopup";
 import { signInAlert } from "../SignUpForm";

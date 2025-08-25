@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { SCREEN_SIZES } from "src/Data/globalVariables";
+import { SCREEN_SIZES } from "src/Data/constants";
 import useGetResizeWindow from "src/Hooks/Helper/useGetResizeWindow";
 import AccountMenuCloseBtn from "./AccountMenuCloseBtn/AccountMenuCloseBtn";
 import AccountMenuIcon from "./AccountMenuIcon";

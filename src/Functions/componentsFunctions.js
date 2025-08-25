@@ -1,5 +1,4 @@
-import { SLIDER_GAP } from "../Data/constants";
-import { SCREEN_SIZES } from "../Data/globalVariables";
+import { SCREEN_SIZES, SLIDER_GAP } from "../Data/constants";
 
 const { desktop, laptop } = SCREEN_SIZES;
 

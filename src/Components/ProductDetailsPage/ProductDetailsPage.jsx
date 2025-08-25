@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import { WEBSITE_NAME } from "src/Data/constants";
-import { SIMPLE_DELAYS } from "src/Data/globalVariables";
+import { SIMPLE_DELAYS, WEBSITE_NAME } from "src/Data/constants";
 import { productsData } from "src/Data/productsData";
 import { updateLoadingState } from "src/Features/loadingSlice";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { PRODUCT_SIZES } from "src/Data/globalVariables";
+import { PRODUCT_SIZES } from "src/Data/constants";
 import s from "./Sizes.module.scss";
 
 const Sizes = ({ sizes }) => {

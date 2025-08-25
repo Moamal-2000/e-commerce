@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
-import { WEBSITE_NAME } from "src/Data/constants";
-import { UN_BUILT_PAGES } from "src/Data/globalVariables";
+import { UN_BUILT_PAGES, WEBSITE_NAME } from "src/Data/constants";
 import useScrollOnMount from "src/Hooks/App/useScrollOnMount";
 import PagesHistory from "../Shared/MiniComponents/PagesHistory/PagesHistory";
 import s from "./NotFoundPage.module.scss";

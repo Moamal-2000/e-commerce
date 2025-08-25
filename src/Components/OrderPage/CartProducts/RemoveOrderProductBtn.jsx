@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { REMOVE_ORDER_PRODUCT } from "src/Data/constants";
-import { SCREEN_SIZES } from "src/Data/globalVariables";
+import { REMOVE_ORDER_PRODUCT, SCREEN_SIZES } from "src/Data/constants";
 import { showAlert, updateAlertState } from "src/Features/alertsSlice";
 import { updateProductsState } from "src/Features/productsSlice";
 import { cartProductToolTipPos } from "src/Functions/tooltipPositions";

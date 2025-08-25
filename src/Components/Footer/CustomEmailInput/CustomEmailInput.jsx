@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
-import { SCREEN_SIZES } from "src/Data/globalVariables";
+import { SCREEN_SIZES } from "src/Data/constants";
 import { showAlert } from "src/Features/alertsSlice";
 import {
   sendToolTipLeftPos,

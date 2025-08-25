@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { TOAST_ALERT_DURATION_MS } from "src/Data/globalVariables";
+import { TOAST_ALERT_DURATION_MS } from "src/Data/constants";
 import { updateAlertState } from "src/Features/alertsSlice";
 import SvgIcon from "../../MiniComponents/SvgIcon";
 import s from "./ToastAlert.module.scss";

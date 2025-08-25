@@ -1,4 +1,4 @@
-import { regexPatterns } from "../Data/globalVariables";
+import { regexPatterns } from "../Data/constants";
 import { billingInputsData } from "../Data/staticData";
 import { updateClassOnCondition } from "./conditions";
 

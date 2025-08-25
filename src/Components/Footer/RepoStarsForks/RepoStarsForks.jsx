@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/globalVariables";
-import { repoStarsForksToolTipLeftPos } from "src/Functions/tooltipPositions";
+import { MY_REPOS_URL, WEBSITE_REPO_ID } from "src/Data/constants";
 import { getDataById } from "src/Functions/helper";
+import { repoStarsForksToolTipLeftPos } from "src/Functions/tooltipPositions";
 import useAsync from "src/Hooks/Helper/useAsync";
 import SvgIcon from "../../Shared/MiniComponents/SvgIcon";
 import ToolTip from "../../Shared/MiniComponents/ToolTip";
