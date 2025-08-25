@@ -1,3 +1,4 @@
+import { SLIDER_GAP } from "../Data/constants";
 import { SCREEN_SIZES } from "../Data/globalVariables";
 
 const { desktop, laptop } = SCREEN_SIZES;
@@ -7,9 +8,8 @@ export function getElementWidth(element) {
 }
 
 export function getScrollSliderValue(sliderEle) {
-  const GAP = 30;
   const sliderItemEle = sliderEle.children[0];
-  const sliderItemEleWidth = getElementWidth(sliderItemEle) + GAP;
+  const sliderItemEleWidth = getElementWidth(sliderItemEle) + SLIDER_GAP;
 
   if (window.innerWidth >= desktop + 300) {
     return sliderItemEleWidth * 4;
