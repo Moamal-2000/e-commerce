@@ -14,17 +14,20 @@ const ShowHidePassword = ({ top = "40%", right = "8px" }) => {
   return (
     <span
       className={s.iconHolder}
-      onClick={(e) => toggleShowPass(e, showPass, setShowPass)}
+      onClick={(event) =>
+        togglePasswordVisibility(event, showPass, setShowPass)
+      }
       style={iconPosition}
     >
       <SvgIcon name={showPass ? "eye" : "eyeSlash"} />
     </span>
   );
 };
+
 export default ShowHidePassword;
 
-function toggleShowPass(e, showPass, setShowPass) {
-  const inputWrapperEle = e.currentTarget.parentElement;
+function togglePasswordVisibility(event, showPass, setShowPass) {
+  const inputWrapperEle = event.currentTarget.parentElement;
   const inputEle = inputWrapperEle.querySelector("input");
 
   inputEle.type = inputEle?.type === "password" ? "text" : "password";
