@@ -7,23 +7,23 @@ export function getElementWidth(element) {
   return element?.getBoundingClientRect()?.width;
 }
 
-export function getScrollSliderValue(sliderEle) {
-  const sliderItemEle = sliderEle.children[0];
-  const sliderItemEleWidth = getElementWidth(sliderItemEle) + SLIDER_GAP;
+export function getScrollSliderValue(sliderElement) {
+  const sliderItem = sliderElement.children[0];
+  const sliderItemWidth = getElementWidth(sliderItem) + SLIDER_GAP;
 
   if (window.innerWidth >= desktop + 300) {
-    return sliderItemEleWidth * 4;
+    return sliderItemWidth * 4;
   }
 
   if (window.innerWidth >= desktop + 100) {
-    return sliderItemEleWidth * 3;
+    return sliderItemWidth * 3;
   }
 
   if (window.innerWidth >= laptop) {
-    return sliderItemEleWidth * 2;
+    return sliderItemWidth * 2;
   }
 
-  return sliderItemEleWidth;
+  return sliderItemWidth;
 }
 
 export const blurInputs = (inputs) => inputs.forEach((input) => input.blur());
