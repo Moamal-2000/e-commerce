@@ -8,7 +8,7 @@ const ShowHidePassword = ({ top = "40%", right = "8px" }) => {
   const [iconPosition, setIconPosition] = useState({ top, right });
 
   useEffect(() => {
-    updateIconPosition(i18n.language, right, setIconPosition);
+    setIconPositionByLanguage(i18n.language, right, setIconPosition);
   }, [i18n.language]);
 
   return (
@@ -34,10 +34,11 @@ function togglePasswordVisibility(event, showPass, setShowPass) {
   setShowPass(!showPass);
 }
 
-function updateIconPosition(lang, right, setIconPosition) {
+function setIconPositionByLanguage(lang, right, setIconPosition) {
   if (lang === "ar") {
     setIconPosition({ top, right: "unset", left: right });
     return;
   }
+
   setIconPosition({ top, left: "unset", right });
 }
