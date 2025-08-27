@@ -16,31 +16,31 @@ const RepoStarsForks = () => {
   const repoUrl = websiteRepo?.html_url;
   const leftToolTipPos = repoStarsForksToolTipLeftPos(i18n.language);
 
+  if (isError) return null;
+
   return (
-    !isError && (
-      <a
-        href={repoUrl}
-        target="_blank"
-        className={s.repoStarsForks}
-        aria-label="Website's repository"
-      >
-        <div className={s.wrapper}>
-          <SvgIcon name="star" />
-          <span className={s.number}>{repoStars}</span>
-        </div>
+    <a
+      href={repoUrl}
+      target="_blank"
+      className={s.repoStarsForks}
+      aria-label="Website's repository"
+    >
+      <div className={s.wrapper}>
+        <SvgIcon name="star" />
+        <span className={s.number}>{repoStars}</span>
+      </div>
 
-        <div className={s.wrapper}>
-          <SvgIcon name="codeFork" />
-          <span className={s.number}>{repoForks}</span>
-        </div>
+      <div className={s.wrapper}>
+        <SvgIcon name="codeFork" />
+        <span className={s.number}>{repoForks}</span>
+      </div>
 
-        <ToolTip
-          bottom="40px"
-          left={leftToolTipPos}
-          content={t("tooltips.repoStarsForks")}
-        />
-      </a>
-    )
+      <ToolTip
+        bottom="40px"
+        left={leftToolTipPos}
+        content={t("tooltips.repoStarsForks")}
+      />
+    </a>
   );
 };
 export default RepoStarsForks;
