@@ -24,7 +24,6 @@
     "react-i18next": "^15.6.1",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.8.0",
-    "router-dom": "^3.0.3",
     "sass": "^1.90.0",
     "swiper": "^11.2.10",
     "web-vitals": "^5.1.0"
