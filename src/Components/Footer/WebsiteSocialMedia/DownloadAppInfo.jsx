@@ -51,7 +51,12 @@ const DownloadAppInfo = () => {
           const nameTrans = t(`common.${item.name.toLowerCase()}`);
 
           return (
-            <a href={item.link} target="_blank" title={nameTrans} key={item.id}>
+            <a
+              href={item.link}
+              target="_blank"
+              key={item.id}
+              aria-label={nameTrans}
+            >
               <SvgIcon name={item.icon} />
               <ToolTip left="50%" top="48px" content={nameTrans} />
             </a>
