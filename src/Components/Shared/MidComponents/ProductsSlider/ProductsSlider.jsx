@@ -13,6 +13,7 @@ const ProductsSlider = ({
   loading,
   skipToId,
   skipLinkTitle,
+  buttonsMarginBottom,
 }) => {
   const filteredProducts = filterFun();
   const sliderRef = useRef();
@@ -34,6 +35,7 @@ const ProductsSlider = ({
           skipToId={skipToId}
           skipLinkTitle={skipLinkTitle}
           setIsSkipButtonClicked={setIsSkipButtonClicked}
+          buttonsMarginBottom={buttonsMarginBottom}
         />
       )}
 

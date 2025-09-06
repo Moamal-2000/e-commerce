@@ -26,6 +26,7 @@ const RelatedItemsSection = ({ productType, currentProduct }) => {
         filterFun={getProductsByRelatedType}
         skipToId="#footer-website-name-link"
         skipLinkTitle="Skip related products section"
+        buttonsMarginBottom="0"
       />
     </section>
   );
