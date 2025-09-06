@@ -9,18 +9,21 @@ const SliderButtons = ({
   skipLinkTitle,
   setIsSkipButtonClicked,
   buttonsMarginBottom,
+  displaySkipLink = true,
 }) => {
   return (
     <div
       className={s.sliderButtons}
       style={{ marginBottom: buttonsMarginBottom }}
     >
-      <ProductSliderSkipLink
-        href={skipToId}
-        setIsSkipButtonClicked={setIsSkipButtonClicked}
-      >
-        {skipLinkTitle}
-      </ProductSliderSkipLink>
+      {displaySkipLink && (
+        <ProductSliderSkipLink
+          href={skipToId}
+          setIsSkipButtonClicked={setIsSkipButtonClicked}
+        >
+          {skipLinkTitle}
+        </ProductSliderSkipLink>
+      )}
 
       <button
         type="button"

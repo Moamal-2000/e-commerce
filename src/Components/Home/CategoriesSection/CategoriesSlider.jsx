@@ -14,6 +14,7 @@ const CategoriesSlider = () => {
       <SliderButtons
         handlePrevBtn={handlePrevBtn}
         handleNextBtn={handleNextBtn}
+        displaySkipLink={false}
       />
 
       <div className={s.categoriesSlider} ref={sliderRef}>
