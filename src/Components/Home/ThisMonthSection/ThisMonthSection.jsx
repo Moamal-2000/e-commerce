@@ -22,7 +22,12 @@ const ThisMonthSection = () => {
         </Link>
       </div>
 
-      <ProductsSlider filterFun={filterThisMonthProducts} loading="lazy" />
+      <ProductsSlider
+        filterFun={filterThisMonthProducts}
+        loading="lazy"
+        skipToId="#poster-buy-now"
+        skipLinkTitle="Skip best selling products section"
+      />
     </section>
   );
 };

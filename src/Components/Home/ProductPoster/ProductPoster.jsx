@@ -13,7 +13,7 @@ const ProductPoster = () => {
         <span>{t("productPoster.title")}</span>
         <h2>{t("productPoster.subTitle")}</h2>
         <PostCounter />
-        <Link to="/products">{t("buttons.buyNow")}!</Link>
+        <Link to="/products" id="poster-buy-now">{t("buttons.buyNow")}!</Link>
       </div>
 
       <div className={s.productHolder}>
