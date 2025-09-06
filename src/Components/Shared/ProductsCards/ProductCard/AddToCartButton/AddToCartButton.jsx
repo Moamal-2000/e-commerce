@@ -8,7 +8,7 @@ import { isItemFound } from "src/Functions/helper";
 import SvgIcon from "../../../MiniComponents/SvgIcon";
 import s from "./AddToCartButton.module.scss";
 
-const AddToCartButton = ({ product }) => {
+const AddToCartButton = ({ product, tabIndex }) => {
   const { t } = useTranslation();
   const { cartProducts, orderProducts } = useSelector(
     (state) => state.products
@@ -79,6 +79,7 @@ const AddToCartButton = ({ product }) => {
       className={`${s.addToCartBtn} ${s.addToCartButton}`}
       onClick={handleCartButton}
       aria-label={buttonText}
+      tabIndex={tabIndex}
       data-add-to-cart-button
     >
       <SvgIcon name={iconNameState} />

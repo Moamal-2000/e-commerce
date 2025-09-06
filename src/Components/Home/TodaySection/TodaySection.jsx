@@ -20,9 +20,18 @@ const TodaySection = () => {
         <EventCounter eventName="flash-sales" timeEvent="3 23 19 56" />
       </div>
 
-      <ProductsSlider filterFun={filterFlashSalesProducts} loading="lazy" />
+      <ProductsSlider
+        filterFun={filterFlashSalesProducts}
+        loading="lazy"
+        skipToId="#view-all-today's-products"
+        skipLinkTitle={"Skip Today's products"}
+      />
 
-      <Link to="/products" className={s.viewProductsBtn}>
+      <Link
+        to="/products"
+        className={s.viewProductsBtn}
+        id="view-all-today's-products"
+      >
         {t("buttons.viewAllProducts")}
       </Link>
     </section>

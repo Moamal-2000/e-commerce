@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { productsData } from "src/Data/productsData";
 import { shouldDisplaySliderButtons } from "src/Functions/conditions";
 import useSlider from "src/Hooks/App/useSlider";
@@ -11,11 +11,14 @@ const ProductsSlider = ({
   filterFun = () => productsData,
   customization,
   loading,
+  skipToId,
+  skipLinkTitle,
 }) => {
   const filteredProducts = filterFun();
   const sliderRef = useRef();
   const { handleNextBtn, handlePrevBtn } = useSlider(sliderRef);
   const { windowWidth } = useGetResizeWindow();
+  const [isSkipButtonClicked, setIsSkipButtonClicked] = useState(false);
 
   const shouldDisplayButtons = shouldDisplaySliderButtons(
     windowWidth,
@@ -28,16 +31,20 @@ const ProductsSlider = ({
         <SliderButtons
           handleNextBtn={handleNextBtn}
           handlePrevBtn={handlePrevBtn}
+          skipToId={skipToId}
+          skipLinkTitle={skipLinkTitle}
+          setIsSkipButtonClicked={setIsSkipButtonClicked}
         />
       )}
 
-      <div className={s.productsSlider} ref={sliderRef} dir="ltr">
+      <div className={s.productsSlider} ref={sliderRef} dir="ltr" tabIndex="-1">
         {filteredProducts.map((product) => (
           <ProductCard
             product={product}
             key={product.id}
             customization={customization}
             loading={loading}
+            tabIndex={isSkipButtonClicked ? -1 : 0}
           />
         ))}
       </div>

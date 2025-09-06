@@ -10,25 +10,39 @@ const ProductCardIcons = ({
   navigateToProductDetails,
   product,
   removeFrom,
+  tabIndex,
 }) => {
   return (
     <div className={s.icons} data-product-icons-hover>
       {showFavIcon && (
-        <ProductCardFavIcon product={product} productId={productId} />
+        <ProductCardFavIcon
+          product={product}
+          productId={productId}
+          tabIndex={tabIndex}
+        />
       )}
 
       {showDetailsIcon && (
         <ProductCardDetailsIcon
           navigateToProductDetails={navigateToProductDetails}
+          tabIndex={tabIndex}
         />
       )}
 
       {showRemoveIcon && (
-        <ProductCardRemoveIcon productId={productId} removeFrom={removeFrom} />
+        <ProductCardRemoveIcon
+          productId={productId}
+          removeFrom={removeFrom}
+          tabIndex={tabIndex}
+        />
       )}
 
       {showWishList && (
-        <ProductCardWishListIcon product={product} productId={productId} />
+        <ProductCardWishListIcon
+          product={product}
+          productId={productId}
+          tabIndex={tabIndex}
+        />
       )}
     </div>
   );

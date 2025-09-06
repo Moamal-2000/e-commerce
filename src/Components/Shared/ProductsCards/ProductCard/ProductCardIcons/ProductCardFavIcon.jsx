@@ -8,7 +8,7 @@ import SvgIcon from "../../../MiniComponents/SvgIcon";
 import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardFavIcon.module.scss";
 
-const ProductCardFavIcon = ({ product, productId }) => {
+const ProductCardFavIcon = ({ product, productId, tabIndex }) => {
   const {
     loginInfo: { isSignIn },
   } = useSelector((state) => state.user);
@@ -57,6 +57,7 @@ const ProductCardFavIcon = ({ product, productId }) => {
       className={`${s.iconHolder} ${s.favIcon} ${activeClass}`}
       onClick={addProductToFavorite}
       aria-label={t("productCard.icons.favorite")}
+      tabIndex={tabIndex}
     >
       <div className={s.heartBackground} />
 

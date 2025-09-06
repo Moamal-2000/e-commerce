@@ -5,7 +5,7 @@ import SvgIcon from "../../../MiniComponents/SvgIcon";
 import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardDetailsIcon.module.scss";
 
-const ProductCardDetailsIcon = ({ navigateToProductDetails }) => {
+const ProductCardDetailsIcon = ({ navigateToProductDetails, tabIndex }) => {
   const { t, i18n } = useTranslation();
   const detailsIconLeftToolTipPos = detailsIconToolTipLeftPos(i18n.language);
 
@@ -14,6 +14,7 @@ const ProductCardDetailsIcon = ({ navigateToProductDetails }) => {
       onClick={navigateToProductDetails}
       className={`${s.iconHolder} ${s.detailsIcon}`}
       aria-label={t("productCard.icons.details")}
+      tabIndex={tabIndex}
     >
       <SvgIcon name="eye" />
       <ToolTip

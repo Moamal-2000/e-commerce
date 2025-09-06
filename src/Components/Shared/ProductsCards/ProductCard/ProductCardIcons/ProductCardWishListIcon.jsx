@@ -8,7 +8,7 @@ import SvgIcon from "../../../MiniComponents/SvgIcon";
 import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardWishListIcon.module.scss";
 
-const ProductCardWishListIcon = ({ product, productId }) => {
+const ProductCardWishListIcon = ({ product, productId, tabIndex }) => {
   const {
     loginInfo: { isSignIn },
   } = useSelector((state) => state.user);
@@ -57,6 +57,7 @@ const ProductCardWishListIcon = ({ product, productId }) => {
       className={`${s.iconHolder} ${s.wishListIcon} ${activeClass}`}
       onClick={addProductToWishList}
       aria-label="Add to wishlist"
+      tabIndex={tabIndex}
     >
       <SvgIcon name="save" />
       <ToolTip

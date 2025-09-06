@@ -2,7 +2,7 @@ import { useState } from "react";
 import ToolTip from "../ToolTip";
 import s from "./ProductColors.module.scss";
 
-const ProductColors = ({ colors, showToolTip = false }) => {
+const ProductColors = ({ colors, showToolTip = false, tabIndex }) => {
   const [activeColorIndex, setActiveColorIndex] = useState(0);
 
   function choiceProductColor(index) {
@@ -21,6 +21,7 @@ const ProductColors = ({ colors, showToolTip = false }) => {
         style={styles}
         onClick={() => choiceProductColor(index)}
         aria-label={name + " color"}
+        tabIndex={tabIndex}
       >
         {showToolTip && (
           <ToolTip left="50%" top="40px" content={name + " color"} />

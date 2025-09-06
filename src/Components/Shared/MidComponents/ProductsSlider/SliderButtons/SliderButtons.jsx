@@ -1,12 +1,27 @@
 import SvgIcon from "../../../MiniComponents/SvgIcon";
+import ProductSliderSkipLink from "./ProductSliderSkipLink/ProductSliderSkipLink";
 import s from "./SliderButtons.module.scss";
 
-const SliderButtons = ({ handleNextBtn, handlePrevBtn }) => {
+const SliderButtons = ({
+  handleNextBtn,
+  handlePrevBtn,
+  skipToId,
+  skipLinkTitle,
+  setIsSkipButtonClicked,
+}) => {
   return (
     <div className={s.sliderButtons}>
+      <ProductSliderSkipLink
+        href={skipToId}
+        setIsSkipButtonClicked={setIsSkipButtonClicked}
+      >
+        {skipLinkTitle}
+      </ProductSliderSkipLink>
+
       <button
         type="button"
         onClick={handlePrevBtn}
+        onFocus={() => setIsSkipButtonClicked(false)}
         aria-label="Previous button for slider"
       >
         <SvgIcon name="arrowLeftShort" />
@@ -15,6 +30,7 @@ const SliderButtons = ({ handleNextBtn, handlePrevBtn }) => {
       <button
         type="button"
         onClick={handleNextBtn}
+        onFocus={() => setIsSkipButtonClicked(false)}
         aria-label="Next button for slider"
       >
         <SvgIcon name="arrowRightShort" />

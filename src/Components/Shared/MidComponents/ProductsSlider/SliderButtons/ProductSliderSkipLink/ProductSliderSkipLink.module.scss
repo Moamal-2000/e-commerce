@@ -1,0 +1,21 @@
+.skipLink {
+  position: absolute;
+  right: -28px;
+  bottom: 0;
+  color: var(--white);
+  background-color: var(--blue);
+  background-color: var(--orange-degree2);
+  padding: 15px 30px;
+  outline: 2px dashed var(--orange-degree2);
+  outline-offset: 0;
+  border-radius: 6px;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: translate .4s ease, opacity .4s .1s ease;
+
+  &:focus {
+    translate: 0 86px;
+    opacity: 1;
+  }
+}

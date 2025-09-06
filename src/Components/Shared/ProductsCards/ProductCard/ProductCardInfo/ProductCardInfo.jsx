@@ -4,7 +4,12 @@ import RateStars from "../../../MidComponents/RateStars/RateStars";
 import ProductColors from "../../../MiniComponents/ProductColors/ProductColors";
 import s from "./ProductCardInfo.module.scss";
 
-const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
+const ProductCardInfo = ({
+  product,
+  tabIndex,
+  showColors,
+  navigateToProductDetails,
+}) => {
   const { shortName, price, discount, afterDiscount, rate, votes, colors } =
     product;
   const { t } = useTranslation();
@@ -18,7 +23,11 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
   return (
     <section className={s.productInfo}>
       <strong className={s.productName}>
-        <a href="#" onClick={() => navigateToProductDetails()}>
+        <a
+          href="#"
+          onClick={() => navigateToProductDetails()}
+          tabIndex={tabIndex}
+        >
           {translatedProductName}
         </a>
       </strong>
@@ -35,7 +44,7 @@ const ProductCardInfo = ({ product, showColors, navigateToProductDetails }) => {
 
       {showColors && (
         <div className={s.colors}>
-          <ProductColors colors={colors} />
+          <ProductColors colors={colors} tabIndex={tabIndex} />
         </div>
       )}
     </section>

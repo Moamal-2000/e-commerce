@@ -20,6 +20,7 @@ const ProductCard = ({
   },
   removeFrom,
   loading = "eager",
+  tabIndex,
 }) => {
   const { name, discount, img, id, addedDate } = product;
   const {
@@ -83,13 +84,19 @@ const ProductCard = ({
             navigateToProductDetails={navigateToProductDetails}
             product={product}
             removeFrom={removeFrom}
+            tabIndex={tabIndex}
           />
-          <AddToCartButton hoverDataAttribute={true} product={product} />
+          <AddToCartButton
+            hoverDataAttribute={true}
+            product={product}
+            tabIndex={tabIndex}
+          />
         </div>
       </div>
 
       <ProductCardInfo
         product={product}
+        tabIndex={tabIndex}
         showColors={showColors}
         navigateToProductDetails={navigateToProductDetails}
       />

@@ -6,7 +6,7 @@ import SvgIcon from "../../../MiniComponents/SvgIcon";
 import ToolTip from "../../../MiniComponents/ToolTip";
 import s from "./ProductCardRemoveIcon.module.scss";
 
-const ProductCardRemoveIcon = ({ removeFrom, productId }) => {
+const ProductCardRemoveIcon = ({ removeFrom, productId, tabIndex }) => {
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
   const trashcanIconLeftToolTipPos = trashcanIconToolTipLeftPos(i18n.language);
@@ -21,6 +21,7 @@ const ProductCardRemoveIcon = ({ removeFrom, productId }) => {
       className={`${s.iconHolder} ${s.removeIcon}`}
       aria-label={`Remove from ${removeFrom}`}
       onClick={removeProduct}
+      tabIndex={tabIndex}
     >
       <SvgIcon name="trashCan" />
       <ToolTip
