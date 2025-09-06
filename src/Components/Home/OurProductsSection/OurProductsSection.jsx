@@ -21,8 +21,9 @@ const OurProductsSection = () => {
         />
 
         <ProductSliderSkipLink
-          href="#view-our-products"
           setIsSkipButtonClicked={setIsSkipButtonClicked}
+          href="#view-our-products"
+          right="0"
         >
           Skip our products
         </ProductSliderSkipLink>
