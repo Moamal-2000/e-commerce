@@ -24,7 +24,7 @@ const TodaySection = () => {
         filterFun={filterFlashSalesProducts}
         loading="lazy"
         skipToId="#view-all-today's-products"
-        skipLinkTitle={"Skip Today's products"}
+        skipLinkTitle="Skip flash sales products section"
       />
 
       <Link
