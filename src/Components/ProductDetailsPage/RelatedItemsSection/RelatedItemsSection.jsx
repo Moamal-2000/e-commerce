@@ -22,7 +22,11 @@ const RelatedItemsSection = ({ productType, currentProduct }) => {
 
       {!hasRelatedProducts && <p>No related items were found.</p>}
 
-      <ProductsSlider filterFun={getProductsByRelatedType} />
+      <ProductsSlider
+        filterFun={getProductsByRelatedType}
+        skipToId="#footer-website-name-link"
+        skipLinkTitle="Skip related products section"
+      />
     </section>
   );
 };

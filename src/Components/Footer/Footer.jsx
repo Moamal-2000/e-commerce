@@ -17,7 +17,9 @@ const Footer = () => {
         <section className={s.sections}>
           <section className={s.section1}>
             <b>
-              <Link to="/">{WEBSITE_NAME}</Link>
+              <Link to="/" id="footer-website-name-link">
+                {WEBSITE_NAME}
+              </Link>
             </b>
             <span>{t(`${section}1.subscribe`)}</span>
             <p>{t(`${section}1.getOffer`)}</p>
