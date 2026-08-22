@@ -1,7 +1,7 @@
 "use strict";
 
 // Variables
-const CACHE_NAME = "e-commerce-v14.4.1";
+const CACHE_NAME = "e-commerce-v14.4.w";
 const ASSETS = [
   "/",
   "/index.html",
